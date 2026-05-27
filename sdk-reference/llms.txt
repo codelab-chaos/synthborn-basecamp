@@ -1,0 +1,832 @@
+# Hytale Server SDK Reference
+
+> Flat index of public SDK types by package. Each entry shows the class declaration (kind, extends, implements) so you can pick which file to read for full method signatures.
+
+Source: `javap -protected` over the Hytale server jar. Excludes package-private classes and inner classes. FQCNs are shortened to leaf names for readability.
+
+Regenerate per-package files + this index: `node tools/sdk/extract-sdk-reference.js` (slow — re-reads the jar)
+Regenerate this index only:               `node tools/sdk/build-sdk-llms-txt.js` (fast — reads existing .md files)
+
+## How to use this file
+
+- Grep for the class name or interface you need: `grep ClassName llms.txt`
+- The package heading above each match tells you which `.md` file to read for method signatures.
+- Class entries are listed in jar/javap order within each package; packages in extractor order (lifecycle → commands → world → components → modules → npc → protocol).
+
+## com.hypixel.hytale.component
+*ComponentType, Ref, Store — entity-component primitives* — [`com.hypixel.hytale.component.md`](./com.hypixel.hytale.component.md) (27)
+
+- `AddReason` — final class AddReason extends Enum<AddReason>
+- `Archetype` — class Archetype<ECS_TYPE> implements Query<ECS_TYPE>
+- `ArchetypeChunk` — class ArchetypeChunk<ECS_TYPE>
+- `CommandBuffer` — class CommandBuffer<ECS_TYPE> implements ComponentAccessor<ECS_TYPE>
+- `Component` — interface Component<ECS_TYPE> extends Cloneable
+- `ComponentAccessor` — interface ComponentAccessor<ECS_TYPE>
+- `ComponentRegistration` — final class ComponentRegistration<ECS_TYPE, T extends Component<ECS_TYPE>> extends Record
+- `ComponentRegistry` — class ComponentRegistry<ECS_TYPE> implements IComponentRegistry<ECS_TYPE>
+- `ComponentRegistryProxy` — class ComponentRegistryProxy<ECS_TYPE> implements IComponentRegistry<ECS_TYPE>
+- `ComponentType` — class ComponentType<ECS_TYPE, T extends Component<ECS_TYPE>> implements Comparable<ComponentType<ECS_TYPE, ?>>, Query<ECS_TYPE>
+- `DisableProcessingAssert` — interface DisableProcessingAssert
+- `EmptyResourceStorage` — class EmptyResourceStorage implements IResourceStorage
+- `Holder` — class Holder<ECS_TYPE>
+- `IComponentRegistry` — interface IComponentRegistry<ECS_TYPE>
+- `IResourceStorage` — interface IResourceStorage
+- `NonSerialized` — class NonSerialized<ECS_TYPE> implements Component<ECS_TYPE>
+- `NonTicking` — class NonTicking<ECS_TYPE> implements Component<ECS_TYPE>
+- `ReadWriteQuery` — class ReadWriteQuery<ECS_TYPE> implements ReadWriteArchetypeQuery<ECS_TYPE>
+- `Ref` — class Ref<ECS_TYPE>
+- `RemoveReason` — final class RemoveReason extends Enum<RemoveReason>
+- `Resource` — interface Resource<ECS_TYPE> extends Cloneable
+- `ResourceRegistration` — final class ResourceRegistration<ECS_TYPE, T extends Resource<ECS_TYPE>> extends Record
+- `ResourceType` — class ResourceType<ECS_TYPE, T extends Resource<ECS_TYPE>> implements Comparable<ResourceType<ECS_TYPE, ?>>
+- `Store` — class Store<ECS_TYPE> implements ComponentAccessor<ECS_TYPE>
+- `SystemGroup` — class SystemGroup<ECS_TYPE> implements Comparable<SystemGroup<ECS_TYPE>>
+- `SystemType` — class SystemType<ECS_TYPE, T extends ISystem<ECS_TYPE>> implements Comparable<SystemType<ECS_TYPE, ?>>
+- `WeakComponentReference` — class WeakComponentReference<ECS_TYPE, T extends Component<ECS_TYPE>>
+
+## com.hypixel.hytale.protocol
+*Wire types — FormattedMessage, PlayerSkin, etc.* — [`com.hypixel.hytale.protocol.md`](./com.hypixel.hytale.protocol.md) (428)
+
+- `AOECircleSelector` — class AOECircleSelector extends Selector
+- `AOECylinderSelector` — class AOECylinderSelector extends Selector
+- `AbilityEffects` — class AbilityEffects
+- `AccumulationMode` — final class AccumulationMode extends Enum<AccumulationMode>
+- `ActiveAnimationsUpdate` — class ActiveAnimationsUpdate extends ComponentUpdate
+- `AmbienceFX` — class AmbienceFX
+- `AmbienceFXAltitude` — final class AmbienceFXAltitude extends Enum<AmbienceFXAltitude>
+- `AmbienceFXAmbientBed` — class AmbienceFXAmbientBed
+- `AmbienceFXBlockSoundSet` — class AmbienceFXBlockSoundSet
+- `AmbienceFXConditions` — class AmbienceFXConditions
+- `AmbienceFXPhysicalMaterial` — class AmbienceFXPhysicalMaterial
+- `AmbienceFXSound` — class AmbienceFXSound
+- `AmbienceFXSoundEffect` — class AmbienceFXSoundEffect
+- `AmbienceFXSoundPlay3D` — final class AmbienceFXSoundPlay3D extends Enum<AmbienceFXSoundPlay3D>
+- `AmbienceStateWrite` — class AmbienceStateWrite
+- `AmbienceTransitionSpeed` — final class AmbienceTransitionSpeed extends Enum<AmbienceTransitionSpeed>
+- `AngledDamage` — class AngledDamage
+- `AngledWielding` — class AngledWielding
+- `Animation` — class Animation
+- `AnimationSet` — class AnimationSet
+- `AnimationSlot` — final class AnimationSlot extends Enum<AnimationSlot>
+- `ApplicationEffects` — class ApplicationEffects
+- `AppliedForce` — class AppliedForce
+- `ApplyEffectInteraction` — class ApplyEffectInteraction extends SimpleInteraction
+- `ApplyForceInteraction` — class ApplyForceInteraction extends SimpleInteraction
+- `ApplyForceState` — final class ApplyForceState extends Enum<ApplyForceState>
+- `ApplyLookType` — final class ApplyLookType extends Enum<ApplyLookType>
+- `ApplyMovementType` — final class ApplyMovementType extends Enum<ApplyMovementType>
+- `Asset` — class Asset
+- `AssetIconProperties` — class AssetIconProperties
+- `AttachedToType` — final class AttachedToType extends Enum<AttachedToType>
+- `AudioCategory` — class AudioCategory
+- `AudioState` — class AudioState
+- `AudioStateAuthority` — final class AudioStateAuthority extends Enum<AudioStateAuthority>
+- `AudioUpdate` — class AudioUpdate extends ComponentUpdate
+- `BarBeatDuration` — class BarBeatDuration
+- `BarBeatPosition` — class BarBeatPosition
+- `Bench` — class Bench
+- `BenchRequirement` — class BenchRequirement
+- `BenchTierLevel` — class BenchTierLevel
+- `BenchType` — final class BenchType extends Enum<BenchType>
+- `BenchUpgradeRequirement` — class BenchUpgradeRequirement
+- `BlockBreaking` — class BlockBreaking
+- `BlockBreakingDecal` — class BlockBreakingDecal
+- `BlockConditionInteraction` — class BlockConditionInteraction extends SimpleBlockInteraction
+- `BlockFace` — final class BlockFace extends Enum<BlockFace>
+- `BlockFaceSupport` — class BlockFaceSupport
+- `BlockFlags` — class BlockFlags
+- `BlockGathering` — class BlockGathering
+- `BlockGroup` — class BlockGroup
+- `BlockIdMatcher` — class BlockIdMatcher
+- `BlockMatcher` — class BlockMatcher
+- `BlockMaterial` — final class BlockMaterial extends Enum<BlockMaterial>
+- `BlockMount` — class BlockMount
+- `BlockMountType` — final class BlockMountType extends Enum<BlockMountType>
+- `BlockMovementSettings` — class BlockMovementSettings
+- `BlockNeighbor` — final class BlockNeighbor extends Enum<BlockNeighbor>
+- `BlockParticleEvent` — final class BlockParticleEvent extends Enum<BlockParticleEvent>
+- `BlockParticleSet` — class BlockParticleSet
+- `BlockPlacementRotationMode` — final class BlockPlacementRotationMode extends Enum<BlockPlacementRotationMode>
+- `BlockPlacementSettings` — class BlockPlacementSettings
+- `BlockPosition` — class BlockPosition
+- `BlockPreviewVisibility` — final class BlockPreviewVisibility extends Enum<BlockPreviewVisibility>
+- `BlockRotation` — class BlockRotation
+- `BlockSelectorToolData` — class BlockSelectorToolData
+- `BlockSet` — class BlockSet
+- `BlockSoundEvent` — final class BlockSoundEvent extends Enum<BlockSoundEvent>
+- `BlockSoundSet` — class BlockSoundSet
+- `BlockSupportsRequiredForType` — final class BlockSupportsRequiredForType extends Enum<BlockSupportsRequiredForType>
+- `BlockTextures` — class BlockTextures
+- `BlockType` — class BlockType
+- `BlockUpdate` — class BlockUpdate extends ComponentUpdate
+- `BoolParamValue` — class BoolParamValue extends ParamValue
+- `BreakBlockInteraction` — class BreakBlockInteraction extends SimpleBlockInteraction
+- `BuilderToolInteraction` — class BuilderToolInteraction extends SimpleInteraction
+- `CachedPacket` — final class CachedPacket<T extends ToClientPacket> implements ToClientPacket, AutoCloseable
+- `CalculationType` — final class CalculationType extends Enum<CalculationType>
+- `CameraActionType` — final class CameraActionType extends Enum<CameraActionType>
+- `CameraAxis` — class CameraAxis
+- `CameraInteraction` — class CameraInteraction extends SimpleInteraction
+- `CameraNode` — final class CameraNode extends Enum<CameraNode>
+- `CameraPerspectiveType` — final class CameraPerspectiveType extends Enum<CameraPerspectiveType>
+- `CameraSettings` — class CameraSettings
+- `CameraShake` — class CameraShake
+- `CameraShakeConfig` — class CameraShakeConfig
+- `CanMoveType` — final class CanMoveType extends Enum<CanMoveType>
+- `CancelChainInteraction` — class CancelChainInteraction extends SimpleInteraction
+- `ChainFlagInteraction` — class ChainFlagInteraction extends SimpleInteraction
+- `ChainingInteraction` — class ChainingInteraction extends Interaction
+- `ChangeActiveSlotInteraction` — class ChangeActiveSlotInteraction extends Interaction
+- `ChangeBlockInteraction` — class ChangeBlockInteraction extends SimpleBlockInteraction
+- `ChangeStatBehaviour` — final class ChangeStatBehaviour extends Enum<ChangeStatBehaviour>
+- `ChangeStatInteraction` — class ChangeStatInteraction extends SimpleInteraction
+- `ChangeStateInteraction` — class ChangeStateInteraction extends SimpleBlockInteraction
+- `ChangeVelocityType` — final class ChangeVelocityType extends Enum<ChangeVelocityType>
+- `ChargingDelay` — class ChargingDelay
+- `ChargingInteraction` — class ChargingInteraction extends Interaction
+- `ClampConfig` — class ClampConfig
+- `ClearEntityEffectInteraction` — class ClearEntityEffectInteraction extends SimpleInteraction
+- `ClickType` — final class ClickType extends Enum<ClickType>
+- `ClientCameraView` — final class ClientCameraView extends Enum<ClientCameraView>
+- `Cloud` — class Cloud
+- `CollisionType` — final class CollisionType extends Enum<CollisionType>
+- `Color` — class Color
+- `ColorAlpha` — class ColorAlpha
+- `ColorLight` — class ColorLight
+- `CombatTextEntityUIAnimationEventType` — final class CombatTextEntityUIAnimationEventType extends Enum<CombatTextEntityUIAnimationEventType>
+- `CombatTextEntityUIComponentAnimationEvent` — class CombatTextEntityUIComponentAnimationEvent
+- `CombatTextUpdate` — class CombatTextUpdate extends ComponentUpdate
+- `ComponentUpdate` — abstract class ComponentUpdate
+- `ComponentUpdateType` — final class ComponentUpdateType extends Enum<ComponentUpdateType>
+- `ConditionInteraction` — class ConditionInteraction extends SimpleInteraction
+- `ConditionalBlockSound` — class ConditionalBlockSound
+- `ConnectedBlockRuleSet` — class ConnectedBlockRuleSet
+- `ConnectedBlockRuleSetType` — final class ConnectedBlockRuleSetType extends Enum<ConnectedBlockRuleSetType>
+- `CooldownConditionInteraction` — class CooldownConditionInteraction extends SimpleInteraction
+- `Cosmetic` — final class Cosmetic extends Enum<Cosmetic>
+- `CraftingRecipe` — class CraftingRecipe
+- `CurveType` — final class CurveType extends Enum<CurveType>
+- `DamageCause` — class DamageCause
+- `DamageData` — class DamageData
+- `DamageEffects` — class DamageEffects
+- `DamageEntityInteraction` — class DamageEntityInteraction extends Interaction
+- `DamageEntry` — class DamageEntry
+- `DebugFlags` — final class DebugFlags extends Enum<DebugFlags>
+- `DebugShape` — final class DebugShape extends Enum<DebugShape>
+- `DeployableConfig` — class DeployableConfig
+- `DetailBox` — class DetailBox
+- `Direction` — class Direction
+- `DoubleParamValue` — class DoubleParamValue extends ParamValue
+- `DrawType` — final class DrawType extends Enum<DrawType>
+- `DurabilityConditionInteraction` — class DurabilityConditionInteraction extends SimpleInteraction
+- `DurabilityOperator` — final class DurabilityOperator extends Enum<DurabilityOperator>
+- `DynamicLightUpdate` — class DynamicLightUpdate extends ComponentUpdate
+- `EasingConfig` — class EasingConfig
+- `EasingType` — final class EasingType extends Enum<EasingType>
+- `Edge` — class Edge
+- `EffectConditionInteraction` — class EffectConditionInteraction extends SimpleInteraction
+- `EffectDirection` — final class EffectDirection extends Enum<EffectDirection>
+- `EffectOp` — final class EffectOp extends Enum<EffectOp>
+- `EmitShape` — final class EmitShape extends Enum<EmitShape>
+- `EntityEffect` — class EntityEffect
+- `EntityEffectUpdate` — class EntityEffectUpdate
+- `EntityEffectsUpdate` — class EntityEffectsUpdate extends ComponentUpdate
+- `EntityMatcher` — class EntityMatcher
+- `EntityMatcherType` — final class EntityMatcherType extends Enum<EntityMatcherType>
+- `EntityPart` — final class EntityPart extends Enum<EntityPart>
+- `EntityStatEffects` — class EntityStatEffects
+- `EntityStatOnHit` — class EntityStatOnHit
+- `EntityStatOp` — final class EntityStatOp extends Enum<EntityStatOp>
+- `EntityStatResetBehavior` — final class EntityStatResetBehavior extends Enum<EntityStatResetBehavior>
+- `EntityStatType` — class EntityStatType
+- `EntityStatUpdate` — class EntityStatUpdate
+- `EntityStatsUpdate` — class EntityStatsUpdate extends ComponentUpdate
+- `EntityUIComponent` — class EntityUIComponent
+- `EntityUIType` — final class EntityUIType extends Enum<EntityUIType>
+- `EntityUpdate` — class EntityUpdate
+- `EqualizerEffect` — class EqualizerEffect
+- `EquipmentUpdate` — class EquipmentUpdate extends ComponentUpdate
+- `ExtraResources` — class ExtraResources
+- `FXRenderMode` — final class FXRenderMode extends Enum<FXRenderMode>
+- `FadeCurve` — final class FadeCurve extends Enum<FadeCurve>
+- `FailOnType` — final class FailOnType extends Enum<FailOnType>
+- `FirstClickInteraction` — class FirstClickInteraction extends Interaction
+- `FloatRange` — class FloatRange
+- `Fluid` — class Fluid
+- `FluidDrawType` — final class FluidDrawType extends Enum<FluidDrawType>
+- `FluidFX` — class FluidFX
+- `FluidFXMovementSettings` — class FluidFXMovementSettings
+- `FluidFog` — final class FluidFog extends Enum<FluidFog>
+- `FluidParticle` — class FluidParticle
+- `FogOptions` — class FogOptions
+- `ForkedChainId` — class ForkedChainId
+- `FormattedMessage` — class FormattedMessage
+- `FormattedMessageImage` — class FormattedMessageImage
+- `GameMode` — final class GameMode extends Enum<GameMode>
+- `HalfFloatPosition` — class HalfFloatPosition
+- `Harvesting` — class Harvesting
+- `HitEntity` — class HitEntity
+- `Hitbox` — class Hitbox
+- `HitboxCollisionConfig` — class HitboxCollisionConfig
+- `HitboxCollisionUpdate` — class HitboxCollisionUpdate extends ComponentUpdate
+- `HorizontalMusicContainer` — class HorizontalMusicContainer extends MusicContainer
+- `HorizontalSelector` — class HorizontalSelector extends Selector
+- `HorizontalSelectorDirection` — final class HorizontalSelectorDirection extends Enum<HorizontalSelectorDirection>
+- `HostAddress` — class HostAddress
+- `IncrementCooldownInteraction` — class IncrementCooldownInteraction extends SimpleInteraction
+- `InitialVelocity` — class InitialVelocity
+- `InstantData` — class InstantData
+- `IntParamValue` — class IntParamValue extends ParamValue
+- `IntangibleUpdate` — class IntangibleUpdate extends ComponentUpdate
+- `InteractableUpdate` — class InteractableUpdate extends ComponentUpdate
+- `Interaction` — abstract class Interaction
+- `InteractionCamera` — class InteractionCamera
+- `InteractionCameraSettings` — class InteractionCameraSettings
+- `InteractionChainData` — class InteractionChainData
+- `InteractionConfiguration` — class InteractionConfiguration
+- `InteractionCooldown` — class InteractionCooldown
+- `InteractionEffects` — class InteractionEffects
+- `InteractionPriority` — class InteractionPriority
+- `InteractionRules` — class InteractionRules
+- `InteractionSettings` — class InteractionSettings
+- `InteractionState` — final class InteractionState extends Enum<InteractionState>
+- `InteractionSyncData` — class InteractionSyncData
+- `InteractionTarget` — final class InteractionTarget extends Enum<InteractionTarget>
+- `InteractionType` — final class InteractionType extends Enum<InteractionType>
+- `InteractionsUpdate` — class InteractionsUpdate extends ComponentUpdate
+- `IntersectionHighlight` — class IntersectionHighlight
+- `InventoryActionType` — final class InventoryActionType extends Enum<InventoryActionType>
+- `InventorySection` — class InventorySection
+- `InvulnerableUpdate` — class InvulnerableUpdate extends ComponentUpdate
+- `ItemAnimation` — class ItemAnimation
+- `ItemAppearanceCondition` — class ItemAppearanceCondition
+- `ItemArmor` — class ItemArmor
+- `ItemArmorSlot` — final class ItemArmorSlot extends Enum<ItemArmorSlot>
+- `ItemBase` — class ItemBase
+- `ItemCategory` — class ItemCategory
+- `ItemEntityConfig` — class ItemEntityConfig
+- `ItemGlider` — class ItemGlider
+- `ItemGridInfoDisplayMode` — final class ItemGridInfoDisplayMode extends Enum<ItemGridInfoDisplayMode>
+- `ItemHudUI` — class ItemHudUI
+- `ItemHudUIType` — final class ItemHudUIType extends Enum<ItemHudUIType>
+- `ItemLibrary` — class ItemLibrary
+- `ItemPlayerAnimations` — class ItemPlayerAnimations
+- `ItemPullbackConfiguration` — class ItemPullbackConfiguration
+- `ItemQuality` — class ItemQuality
+- `ItemQuantity` — class ItemQuantity
+- `ItemResourceType` — class ItemResourceType
+- `ItemReticle` — class ItemReticle
+- `ItemReticleClientEvent` — final class ItemReticleClientEvent extends Enum<ItemReticleClientEvent>
+- `ItemReticleConfig` — class ItemReticleConfig
+- `ItemSoundEvent` — final class ItemSoundEvent extends Enum<ItemSoundEvent>
+- `ItemSoundSet` — class ItemSoundSet
+- `ItemTool` — class ItemTool
+- `ItemToolSpec` — class ItemToolSpec
+- `ItemTranslationProperties` — class ItemTranslationProperties
+- `ItemUpdate` — class ItemUpdate extends ComponentUpdate
+- `ItemUtility` — class ItemUtility
+- `ItemWeapon` — class ItemWeapon
+- `ItemWithAllMetadata` — class ItemWithAllMetadata
+- `LayerPlacement` — class LayerPlacement
+- `LongParamValue` — class LongParamValue extends ParamValue
+- `LoopOption` — final class LoopOption extends Enum<LoopOption>
+- `Match` — final class Match extends Enum<Match>
+- `MaterialQuantity` — class MaterialQuantity
+- `MemoriesConditionInteraction` — class MemoriesConditionInteraction extends Interaction
+- `Model` — class Model
+- `ModelAttachment` — class ModelAttachment
+- `ModelDisplay` — class ModelDisplay
+- `ModelOverride` — class ModelOverride
+- `ModelParticle` — class ModelParticle
+- `ModelTexture` — class ModelTexture
+- `ModelTrail` — class ModelTrail
+- `ModelTransform` — class ModelTransform
+- `ModelUpdate` — class ModelUpdate extends ComponentUpdate
+- `ModelVFX` — class ModelVFX
+- `Modifier` — class Modifier
+- `ModifierTarget` — final class ModifierTarget extends Enum<ModifierTarget>
+- `ModifyInventoryInteraction` — class ModifyInventoryInteraction extends SimpleInteraction
+- `MountController` — final class MountController extends Enum<MountController>
+- `MountedUpdate` — class MountedUpdate extends ComponentUpdate
+- `MouseButtonEvent` — class MouseButtonEvent
+- `MouseButtonState` — final class MouseButtonState extends Enum<MouseButtonState>
+- `MouseButtonType` — final class MouseButtonType extends Enum<MouseButtonType>
+- `MouseInputTargetType` — final class MouseInputTargetType extends Enum<MouseInputTargetType>
+- `MouseInputType` — final class MouseInputType extends Enum<MouseInputType>
+- `MouseMotionEvent` — class MouseMotionEvent
+- `MovementConditionInteraction` — class MovementConditionInteraction extends SimpleInteraction
+- `MovementDirection` — final class MovementDirection extends Enum<MovementDirection>
+- `MovementEffects` — class MovementEffects
+- `MovementForceRotationType` — final class MovementForceRotationType extends Enum<MovementForceRotationType>
+- `MovementSettings` — class MovementSettings
+- `MovementStates` — class MovementStates
+- `MovementStatesUpdate` — class MovementStatesUpdate extends ComponentUpdate
+- `MovementType` — final class MovementType extends Enum<MovementType>
+- `MusicContainer` — abstract class MusicContainer
+- `MusicTransitionType` — final class MusicTransitionType extends Enum<MusicTransitionType>
+- `NameplateUpdate` — class NameplateUpdate extends ComponentUpdate
+- `NearFar` — class NearFar
+- `NetworkChannel` — final class NetworkChannel extends Enum<NetworkChannel>
+- `NewSpawnUpdate` — class NewSpawnUpdate extends ComponentUpdate
+- `NoiseConfig` — class NoiseConfig
+- `NoiseType` — final class NoiseType extends Enum<NoiseType>
+- `Objective` — class Objective
+- `ObjectiveTask` — class ObjectiveTask
+- `OffsetNoise` — class OffsetNoise
+- `Opacity` — final class Opacity extends Enum<Opacity>
+- `OverlapBehavior` — final class OverlapBehavior extends Enum<OverlapBehavior>
+- `Packet` — interface Packet
+- `PacketRegistry` — final class PacketRegistry
+- `ParallelInteraction` — class ParallelInteraction extends Interaction
+- `ParamValue` — abstract class ParamValue
+- `Particle` — class Particle
+- `ParticleAnimationFrame` — class ParticleAnimationFrame
+- `ParticleAttractor` — class ParticleAttractor
+- `ParticleCollision` — class ParticleCollision
+- `ParticleCollisionAction` — final class ParticleCollisionAction extends Enum<ParticleCollisionAction>
+- `ParticleCollisionBlockType` — final class ParticleCollisionBlockType extends Enum<ParticleCollisionBlockType>
+- `ParticleRotationInfluence` — final class ParticleRotationInfluence extends Enum<ParticleRotationInfluence>
+- `ParticleScaleRatioConstraint` — final class ParticleScaleRatioConstraint extends Enum<ParticleScaleRatioConstraint>
+- `ParticleSpawner` — class ParticleSpawner
+- `ParticleSpawnerGroup` — class ParticleSpawnerGroup
+- `ParticleSystem` — class ParticleSystem
+- `ParticleUVOption` — final class ParticleUVOption extends Enum<ParticleUVOption>
+- `Phobia` — final class Phobia extends Enum<Phobia>
+- `PhysicalMaterial` — class PhysicalMaterial
+- `PhysicsConfig` — class PhysicsConfig
+- `PhysicsType` — final class PhysicsType extends Enum<PhysicsType>
+- `PickBlockInteraction` — class PickBlockInteraction extends SimpleBlockInteraction
+- `PickupLocation` — final class PickupLocation extends Enum<PickupLocation>
+- `PlaceBlockInteraction` — class PlaceBlockInteraction extends SimpleInteraction
+- `PlayerSkin` — class PlayerSkin
+- `PlayerSkinUpdate` — class PlayerSkinUpdate extends ComponentUpdate
+- `Position` — class Position
+- `PositionDistanceOffsetType` — final class PositionDistanceOffsetType extends Enum<PositionDistanceOffsetType>
+- `PositionType` — final class PositionType extends Enum<PositionType>
+- `PredictionUpdate` — class PredictionUpdate extends ComponentUpdate
+- `PrioritySlot` — final class PrioritySlot extends Enum<PrioritySlot>
+- `ProjectileConfig` — class ProjectileConfig
+- `ProjectileInteraction` — class ProjectileInteraction extends SimpleInteraction
+- `PropUpdate` — class PropUpdate extends ComponentUpdate
+- `ProtocolEmote` — class ProtocolEmote
+- `ProtocolSettings` — final class ProtocolSettings
+- `RailConfig` — class RailConfig
+- `RailPoint` — class RailPoint
+- `RandomMode` — final class RandomMode extends Enum<RandomMode>
+- `RandomMusicContainer` — class RandomMusicContainer extends MusicContainer
+- `RandomRotation` — final class RandomRotation extends Enum<RandomRotation>
+- `Range` — class Range
+- `RangeVector2f` — class RangeVector2f
+- `RangeVector3f` — class RangeVector3f
+- `Rangeb` — class Rangeb
+- `Rangef` — class Rangef
+- `RaycastMode` — final class RaycastMode extends Enum<RaycastMode>
+- `RaycastSelector` — class RaycastSelector extends Selector
+- `RemoveEntityInteraction` — class RemoveEntityInteraction extends SimpleInteraction
+- `RepeatInteraction` — class RepeatInteraction extends SimpleInteraction
+- `ReplaceInteraction` — class ReplaceInteraction extends Interaction
+- `RepulsionConfig` — class RepulsionConfig
+- `RepulsionUpdate` — class RepulsionUpdate extends ComponentUpdate
+- `RequiredBlockFaceSupport` — class RequiredBlockFaceSupport
+- `ResetCooldownInteraction` — class ResetCooldownInteraction extends SimpleInteraction
+- `ResistanceCalculationType` — final class ResistanceCalculationType extends Enum<ResistanceCalculationType>
+- `ResistanceModifier` — class ResistanceModifier
+- `ResourceType` — class ResourceType
+- `RespondToHitUpdate` — class RespondToHitUpdate extends ComponentUpdate
+- `ReverbEffect` — class ReverbEffect
+- `RoofConnectedBlockRuleSet` — class RoofConnectedBlockRuleSet
+- `RoofState` — final class RoofState extends Enum<RoofState>
+- `RootInteraction` — class RootInteraction
+- `RootInteractionSettings` — class RootInteractionSettings
+- `Rotation` — final class Rotation extends Enum<Rotation>
+- `RotationMode` — final class RotationMode extends Enum<RotationMode>
+- `RotationNoise` — class RotationNoise
+- `RotationType` — final class RotationType extends Enum<RotationType>
+- `RunRootInteraction` — class RunRootInteraction extends SimpleInteraction
+- `SavedMovementStates` — class SavedMovementStates
+- `SegmentMusicContainer` — class SegmentMusicContainer extends MusicContainer
+- `SelectInteraction` — class SelectInteraction extends SimpleInteraction
+- `SelectedHitEntity` — class SelectedHitEntity
+- `Selector` — abstract class Selector
+- `SequenceMusicContainer` — class SequenceMusicContainer extends MusicContainer
+- `SerialInteraction` — class SerialInteraction extends Interaction
+- `ServerCameraSettings` — class ServerCameraSettings
+- `ShaderType` — final class ShaderType extends Enum<ShaderType>
+- `ShadingMode` — final class ShadingMode extends Enum<ShadingMode>
+- `ShelterType` — final class ShelterType extends Enum<ShelterType>
+- `SimpleBlockInteraction` — class SimpleBlockInteraction extends SimpleInteraction
+- `SimpleInteraction` — class SimpleInteraction extends Interaction
+- `SingleTrackMusicContainer` — class SingleTrackMusicContainer extends MusicContainer
+- `Size` — class Size
+- `SmartMoveType` — final class SmartMoveType extends Enum<SmartMoveType>
+- `SoftBlock` — class SoftBlock
+- `SoftParticle` — final class SoftParticle extends Enum<SoftParticle>
+- `SoundCategory` — final class SoundCategory extends Enum<SoundCategory>
+- `SoundEvent` — class SoundEvent
+- `SoundEventLayer` — class SoundEventLayer
+- `SoundEventLayerRandomSettings` — class SoundEventLayerRandomSettings
+- `SoundSet` — class SoundSet
+- `SpaceSize` — final class SpaceSize extends Enum<SpaceSize>
+- `SpawnDeployableFromRaycastInteraction` — class SpawnDeployableFromRaycastInteraction extends SimpleInteraction
+- `StabSelector` — class StabSelector extends Selector
+- `StairConnectedBlockRuleSet` — class StairConnectedBlockRuleSet
+- `StateBinding` — class StateBinding
+- `StateDelta` — class StateDelta
+- `StateTransition` — class StateTransition
+- `StatsConditionInteraction` — class StatsConditionInteraction extends SimpleInteraction
+- `StringParamValue` — class StringParamValue extends ParamValue
+- `SubCategoryDefinition` — class SubCategoryDefinition
+- `SupportMatch` — final class SupportMatch extends Enum<SupportMatch>
+- `SurfaceType` — final class SurfaceType extends Enum<SurfaceType>
+- `SwitchTo` — final class SwitchTo extends Enum<SwitchTo>
+- `SyncPoint` — final class SyncPoint extends Enum<SyncPoint>
+- `TagPattern` — class TagPattern
+- `TagPatternType` — final class TagPatternType extends Enum<TagPatternType>
+- `TargetedDamage` — class TargetedDamage
+- `TeleportAck` — class TeleportAck
+- `TempoSettings` — class TempoSettings
+- `Tint` — class Tint
+- `ToClientPacket` — interface ToClientPacket extends Packet
+- `ToServerPacket` — interface ToServerPacket extends Packet
+- `ToggleGliderInteraction` — class ToggleGliderInteraction extends SimpleInteraction
+- `Trail` — class Trail
+- `Transform` — class Transform
+- `TransformUpdate` — class TransformUpdate extends ComponentUpdate
+- `TriggerCooldownInteraction` — class TriggerCooldownInteraction extends SimpleInteraction
+- `UIComponentsUpdate` — class UIComponentsUpdate extends ComponentUpdate
+- `UVMotion` — class UVMotion
+- `UVMotionCurveType` — final class UVMotionCurveType extends Enum<UVMotionCurveType>
+- `UpdateType` — final class UpdateType extends Enum<UpdateType>
+- `UseBlockInteraction` — class UseBlockInteraction extends SimpleBlockInteraction
+- `UseEntityInteraction` — class UseEntityInteraction extends SimpleInteraction
+- `ValueType` — final class ValueType extends Enum<ValueType>
+- `VariantRotation` — final class VariantRotation extends Enum<VariantRotation>
+- `Vector2i` — class Vector2i
+- `Vector3d` — class Vector3d
+- `Vector3i` — class Vector3i
+- `VelocityConfig` — class VelocityConfig
+- `VelocityThresholdStyle` — final class VelocityThresholdStyle extends Enum<VelocityThresholdStyle>
+- `ViewBobbing` — class ViewBobbing
+- `WaitForDataFrom` — final class WaitForDataFrom extends Enum<WaitForDataFrom>
+- `Weather` — class Weather
+- `WeatherParticle` — class WeatherParticle
+- `WieldingInteraction` — class WieldingInteraction extends ChargingInteraction
+- `WiggleWeights` — class WiggleWeights
+- `WorldEnvironment` — class WorldEnvironment
+- `WorldInteraction` — class WorldInteraction
+- `WorldParticle` — class WorldParticle
+
+## com.hypixel.hytale.server.core.command.system.basecommands
+*Abstract base classes for player/world/async commands* — [`com.hypixel.hytale.server.core.command.system.basecommands.md`](./com.hypixel.hytale.server.core.command.system.basecommands.md) (10)
+
+- `AbstractAsyncCommand` — abstract class AbstractAsyncCommand extends AbstractCommand
+- `AbstractAsyncPlayerCommand` — abstract class AbstractAsyncPlayerCommand extends AbstractAsyncCommand
+- `AbstractAsyncWorldCommand` — abstract class AbstractAsyncWorldCommand extends AbstractAsyncCommand
+- `AbstractCommandCollection` — abstract class AbstractCommandCollection extends AbstractAsyncCommand
+- `AbstractPlayerCommand` — abstract class AbstractPlayerCommand extends AbstractAsyncCommand
+- `AbstractTargetEntityCommand` — abstract class AbstractTargetEntityCommand extends AbstractAsyncCommand
+- `AbstractTargetPlayerCommand` — abstract class AbstractTargetPlayerCommand extends AbstractAsyncCommand
+- `AbstractTargetPlayersCommand` — abstract class AbstractTargetPlayersCommand extends AbstractAsyncCommand
+- `AbstractWorldCommand` — abstract class AbstractWorldCommand extends AbstractAsyncCommand
+- `CommandBase` — abstract class CommandBase extends AbstractCommand
+
+## com.hypixel.hytale.server.core.command.system
+*Command interface, sender, context, registry* — [`com.hypixel.hytale.server.core.command.system.md`](./com.hypixel.hytale.server.core.command.system.md) (14)
+
+- `AbbreviationMap` — class AbbreviationMap<Value>
+- `AbstractCommand` — abstract class AbstractCommand
+- `CommandContext` — final class CommandContext
+- `CommandManager` — class CommandManager implements CommandOwner
+- `CommandOwner` — interface CommandOwner
+- `CommandRegistration` — class CommandRegistration extends Registration
+- `CommandRegistry` — class CommandRegistry extends Registry<CommandRegistration>
+- `CommandSender` — interface CommandSender extends IMessageReceiver,PermissionHolder
+- `CommandUtil` — class CommandUtil
+- `CommandValidationResults` — class CommandValidationResults extends ValidationResults
+- `MatchResult` — class MatchResult implements Comparable<MatchResult>
+- `ParseResult` — class ParseResult
+- `ParserContext` — class ParserContext
+- `Tokenizer` — class Tokenizer
+
+## com.hypixel.hytale.server.core.inventory.container
+*Container abstractions (ItemStackItemContainer, etc.)* — [`com.hypixel.hytale.server.core.inventory.container.md`](./com.hypixel.hytale.server.core.inventory.container.md) (15)
+
+- `CombinedItemContainer` — class CombinedItemContainer extends ItemContainer
+- `DelegateItemContainer` — class DelegateItemContainer<T extends ItemContainer> extends ItemContainer
+- `EmptyItemContainer` — class EmptyItemContainer extends ItemContainer
+- `FetchedItemContainer` — class FetchedItemContainer extends ItemContainer
+- `InternalContainerUtilItemStack` — class InternalContainerUtilItemStack
+- `InternalContainerUtilMaterial` — class InternalContainerUtilMaterial
+- `InternalContainerUtilResource` — class InternalContainerUtilResource
+- `InternalContainerUtilTag` — class InternalContainerUtilTag
+- `ItemContainer` — abstract class ItemContainer
+- `ItemContainerUtil` — class ItemContainerUtil
+- `ItemStackItemContainer` — class ItemStackItemContainer extends ItemContainer
+- `SimpleItemContainer` — class SimpleItemContainer extends ItemContainer
+- `SlotReplacementFunction` — interface SlotReplacementFunction
+- `SortType` — final class SortType extends Enum<SortType>
+- `TestRemoveItemSlotResult` — class TestRemoveItemSlotResult
+
+## com.hypixel.hytale.server.core.inventory
+*ItemStack and inventory primitives* — [`com.hypixel.hytale.server.core.inventory.md`](./com.hypixel.hytale.server.core.inventory.md) (9)
+
+- `ActiveSlotInventoryComponent` — abstract class ActiveSlotInventoryComponent extends InventoryComponent
+- `Inventory` — class Inventory
+- `InventoryComponent` — abstract class InventoryComponent implements Component<EntityStore>
+- `InventorySystems` — class InventorySystems
+- `InventoryUtils` — class InventoryUtils
+- `ItemContext` — class ItemContext
+- `ItemStack` — class ItemStack implements NetworkSerializable<ItemWithAllMetadata>
+- `MaterialQuantity` — class MaterialQuantity implements NetworkSerializable<MaterialQuantity>
+- `ResourceQuantity` — class ResourceQuantity
+
+## com.hypixel.hytale.server.core.inventory.transaction
+*Inventory transaction types* — [`com.hypixel.hytale.server.core.inventory.transaction.md`](./com.hypixel.hytale.server.core.inventory.transaction.md) (15)
+
+- `ActionType` — final class ActionType extends Enum<ActionType>
+- `ClearTransaction` — class ClearTransaction implements Transaction
+- `ItemStackSlotTransaction` — class ItemStackSlotTransaction extends SlotTransaction
+- `ItemStackTransaction` — class ItemStackTransaction implements Transaction
+- `ListTransaction` — class ListTransaction<T extends Transaction> implements Transaction
+- `MaterialSlotTransaction` — class MaterialSlotTransaction extends SlotTransaction
+- `MaterialTransaction` — class MaterialTransaction extends ListTransaction<MaterialSlotTransaction>
+- `MoveTransaction` — class MoveTransaction<T extends Transaction> implements Transaction
+- `MoveType` — final class MoveType extends Enum<MoveType>
+- `ResourceSlotTransaction` — class ResourceSlotTransaction extends SlotTransaction
+- `ResourceTransaction` — class ResourceTransaction extends ListTransaction<ResourceSlotTransaction>
+- `SlotTransaction` — class SlotTransaction implements Transaction
+- `TagSlotTransaction` — class TagSlotTransaction extends SlotTransaction
+- `TagTransaction` — class TagTransaction extends ListTransaction<TagSlotTransaction>
+- `Transaction` — interface Transaction
+
+## com.hypixel.hytale.server.core.modules.block
+*Block module — block placement, removal, runtime queries* — [`com.hypixel.hytale.server.core.modules.block.md`](./com.hypixel.hytale.server.core.modules.block.md) (3)
+
+- `BlockEntity` — class BlockEntity
+- `BlockModule` — class BlockModule extends JavaPlugin
+- `BlockReplaceEvent` — class BlockReplaceEvent extends EcsEvent
+
+## com.hypixel.hytale.server.core.modules.blockhealth
+*Block health / damage / breaking* — [`com.hypixel.hytale.server.core.modules.blockhealth.md`](./com.hypixel.hytale.server.core.modules.blockhealth.md) (4)
+
+- `BlockHealth` — class BlockHealth implements Cloneable
+- `BlockHealthChunk` — class BlockHealthChunk implements Component<ChunkStore>
+- `BlockHealthModule` — class BlockHealthModule extends JavaPlugin
+- `FragileBlock` — class FragileBlock implements Cloneable
+
+## com.hypixel.hytale.server.core.modules.blockset
+*BlockSet registry and operations* — [`com.hypixel.hytale.server.core.modules.blockset.md`](./com.hypixel.hytale.server.core.modules.blockset.md) (2)
+
+- `BlockSetLookupTable` — class BlockSetLookupTable
+- `BlockSetModule` — class BlockSetModule extends JavaPlugin
+
+## com.hypixel.hytale.server.core.modules.collision
+*Collision detection module* — [`com.hypixel.hytale.server.core.modules.collision.md`](./com.hypixel.hytale.server.core.modules.collision.md) (28)
+
+- `BasicCollisionData` — class BasicCollisionData
+- `BlockCollisionData` — class BlockCollisionData extends BoxCollisionData
+- `BlockCollisionProvider` — class BlockCollisionProvider implements BoxBlockIterator$BoxIterationConsumer
+- `BlockContactData` — class BlockContactData
+- `BlockData` — class BlockData
+- `BlockDataProvider` — class BlockDataProvider extends BlockData
+- `BlockTracker` — class BlockTracker implements IBlockTracker
+- `BoxBlockIntersectionEvaluator` — class BoxBlockIntersectionEvaluator extends BlockContactData implements IBlockCollisionEvaluator
+- `BoxCollisionData` — class BoxCollisionData extends BasicCollisionData
+- `CharacterCollisionData` — class CharacterCollisionData extends BasicCollisionData
+- `CollisionConfig` — class CollisionConfig
+- `CollisionDataArray` — class CollisionDataArray<T>
+- `CollisionFilter` — interface CollisionFilter<D, T>
+- `CollisionMaterial` — class CollisionMaterial
+- `CollisionMath` — class CollisionMath
+- `CollisionModule` — class CollisionModule extends JavaPlugin
+- `CollisionModuleConfig` — class CollisionModuleConfig
+- `CollisionResult` — class CollisionResult implements BoxBlockIterator$BoxIterationConsumer
+- `CollisionTracker` — class CollisionTracker extends BlockTracker
+- `EntityCollisionProvider` — class EntityCollisionProvider
+- `EntityContactData` — class EntityContactData
+- `EntityRefCollisionProvider` — class EntityRefCollisionProvider
+- `IBlockCollisionConsumer` — interface IBlockCollisionConsumer
+- `IBlockCollisionEvaluator` — interface IBlockCollisionEvaluator
+- `IBlockTracker` — interface IBlockTracker
+- `MovingBoxBoxCollisionEvaluator` — class MovingBoxBoxCollisionEvaluator extends BlockContactData implements IBlockCollisionEvaluator
+- `TangiableEntitySpatialSystem` — class TangiableEntitySpatialSystem extends SpatialSystem<EntityStore>
+- `WorldUtil` — final class WorldUtil
+
+## com.hypixel.hytale.server.core.modules.entity.component
+*Built-in entity components (TransformComponent, etc.)* — [`com.hypixel.hytale.server.core.modules.entity.component.md`](./com.hypixel.hytale.server.core.modules.entity.component.md) (31)
+
+- `ActiveAnimationComponent` — class ActiveAnimationComponent implements Component<EntityStore>
+- `AudioComponent` — class AudioComponent implements Component<EntityStore>
+- `BoundingBox` — class BoundingBox implements Component<EntityStore>
+- `BreathingComponent` — class BreathingComponent implements Component<EntityStore>
+- `CachedStatsComponent` — class CachedStatsComponent implements Component<EntityStore>
+- `CollisionResultComponent` — class CollisionResultComponent implements Component<EntityStore>
+- `DisplayNameComponent` — class DisplayNameComponent implements Component<EntityStore>
+- `DynamicLight` — class DynamicLight implements Component<EntityStore>
+- `EntityScaleComponent` — class EntityScaleComponent implements Component<EntityStore>
+- `FromPrefab` — class FromPrefab implements Component<EntityStore>
+- `FromPrefabInstance` — class FromPrefabInstance implements Component<EntityStore>
+- `FromWorldGen` — class FromWorldGen implements Component<EntityStore>
+- `HeadRotation` — class HeadRotation implements Component<EntityStore>
+- `HiddenFromAdventurePlayers` — class HiddenFromAdventurePlayers implements Component<EntityStore>
+- `Intangible` — class Intangible implements Component<EntityStore>
+- `Interactable` — class Interactable implements Component<EntityStore>
+- `Invulnerable` — class Invulnerable implements Component<EntityStore>
+- `ModelComponent` — class ModelComponent implements Component<EntityStore>
+- `MovementAudioComponent` — class MovementAudioComponent implements Component<EntityStore>
+- `NPCMarkerComponent` — class NPCMarkerComponent implements Component<EntityStore>
+- `NewSpawnComponent` — class NewSpawnComponent implements Component<EntityStore>
+- `PersistentDisplayName` — class PersistentDisplayName implements Component<EntityStore>
+- `PersistentDynamicLight` — class PersistentDynamicLight implements Component<EntityStore>
+- `PersistentModel` — class PersistentModel implements Component<EntityStore>
+- `PositionDataComponent` — class PositionDataComponent implements Component<EntityStore>
+- `PropComponent` — class PropComponent implements Component<EntityStore>
+- `RespondToHit` — class RespondToHit implements Component<EntityStore>
+- `RotateObjectComponent` — class RotateObjectComponent implements Component<EntityStore>
+- `SnapshotBuffer` — class SnapshotBuffer implements Component<EntityStore>
+- `TransformComponent` — class TransformComponent implements Component<EntityStore>
+- `WorldGenId` — class WorldGenId implements Component<EntityStore>
+
+## com.hypixel.hytale.server.core.modules.entity.item
+*ItemComponent, PickupItemComponent — dropped-item entities* — [`com.hypixel.hytale.server.core.modules.entity.item.md`](./com.hypixel.hytale.server.core.modules.entity.item.md) (10)
+
+- `ItemComponent` — class ItemComponent implements Component<EntityStore>
+- `ItemMergeSystem` — class ItemMergeSystem extends EntityTickingSystem<EntityStore>
+- `ItemPhysicsComponent` — class ItemPhysicsComponent implements Component<EntityStore>
+- `ItemPhysicsSystem` — class ItemPhysicsSystem extends EntityTickingSystem<EntityStore>
+- `ItemPrePhysicsSystem` — class ItemPrePhysicsSystem extends EntityTickingSystem<EntityStore>
+- `ItemSystems` — class ItemSystems
+- `PickupItemComponent` — class PickupItemComponent implements Component<EntityStore>
+- `PickupItemSystem` — class PickupItemSystem extends EntityTickingSystem<EntityStore>
+- `PreventItemMerging` — class PreventItemMerging implements Component<EntityStore>
+- `PreventPickup` — class PreventPickup implements Component<EntityStore>
+
+## com.hypixel.hytale.server.core.modules.interaction
+*Player/entity interaction events and handlers* — [`com.hypixel.hytale.server.core.modules.interaction.md`](./com.hypixel.hytale.server.core.modules.interaction.md) (7)
+
+- `BlockHarvestUtils` — class BlockHarvestUtils
+- `BlockInteractionUtils` — class BlockInteractionUtils
+- `BlockPlaceUtils` — class BlockPlaceUtils
+- `IInteractionSimulationHandler` — interface IInteractionSimulationHandler
+- `InteractionModule` — class InteractionModule extends JavaPlugin
+- `InteractionSimulationHandler` — class InteractionSimulationHandler implements IInteractionSimulationHandler
+- `Interactions` — class Interactions implements Component<EntityStore>
+
+## com.hypixel.hytale.server.core.modules.item
+*Item module + item-related commands* — [`com.hypixel.hytale.server.core.modules.item.md`](./com.hypixel.hytale.server.core.modules.item.md) (6)
+
+- `CraftingRecipePacketGenerator` — class CraftingRecipePacketGenerator extends AssetPacketGenerator<String, CraftingRecipe, DefaultAssetMap<String, CraftingRecipe>>
+- `ItemModule` — class ItemModule extends JavaPlugin
+- `ItemPacketGenerator` — class ItemPacketGenerator extends AssetPacketGenerator<String, Item, DefaultAssetMap<String, Item>>
+- `ItemQualityPacketGenerator` — class ItemQualityPacketGenerator extends SimpleAssetPacketGenerator<String, ItemQuality, IndexedLookupTableAssetMap<String, ItemQuality>>
+- `ItemReticleConfigPacketGenerator` — class ItemReticleConfigPacketGenerator extends SimpleAssetPacketGenerator<String, ItemReticleConfig, IndexedLookupTableAssetMap<String, ItemReticleConfig>>
+- `RecipePacketGenerator` — class RecipePacketGenerator extends AssetPacketGenerator<String, CraftingRecipe, DefaultAssetMap<String, CraftingRecipe>>
+
+## com.hypixel.hytale.server.core.modules.physics
+*Physics module — velocity, gravity, knockback* — [`com.hypixel.hytale.server.core.modules.physics.md`](./com.hypixel.hytale.server.core.modules.physics.md) (2)
+
+- `RestingSupport` — class RestingSupport
+- `SimplePhysicsProvider` — class SimplePhysicsProvider implements IBlockCollisionConsumer
+
+## com.hypixel.hytale.server.core.modules.projectile
+*Projectile module — arrows, thrown items, ballistics* — [`com.hypixel.hytale.server.core.modules.projectile.md`](./com.hypixel.hytale.server.core.modules.projectile.md) (1)
+
+- `ProjectileModule` — class ProjectileModule extends JavaPlugin
+
+## com.hypixel.hytale.server.core.modules.time
+*World time / day-night / scheduling primitives* — [`com.hypixel.hytale.server.core.modules.time.md`](./com.hypixel.hytale.server.core.modules.time.md) (6)
+
+- `TimeModule` — class TimeModule extends JavaPlugin
+- `TimePacketSystem` — class TimePacketSystem extends DelayedSystem<EntityStore>
+- `TimeResource` — class TimeResource implements Resource<EntityStore>
+- `TimeSystem` — class TimeSystem extends TickingSystem<EntityStore>
+- `WorldTimeResource` — class WorldTimeResource implements Resource<EntityStore>
+- `WorldTimeSystems` — class WorldTimeSystems
+
+## com.hypixel.hytale.server.core.plugin
+*JavaPlugin base class + plugin lifecycle/init* — [`com.hypixel.hytale.server.core.plugin.md`](./com.hypixel.hytale.server.core.plugin.md) (10)
+
+- `JavaPlugin` — abstract class JavaPlugin extends PluginBase
+- `JavaPluginInit` — class JavaPluginInit extends PluginInit
+- `MissingPluginDependencyException` — class MissingPluginDependencyException extends RuntimeException
+- `PluginBase` — abstract class PluginBase implements CommandOwner
+- `PluginClassLoader` — class PluginClassLoader extends java.net.URLClassLoader
+- `PluginInit` — class PluginInit
+- `PluginListPageManager` — class PluginListPageManager
+- `PluginManager` — class PluginManager
+- `PluginState` — final class PluginState extends Enum<PluginState>
+- `PluginType` — final class PluginType extends Enum<PluginType>
+
+## com.hypixel.hytale.server.core.universe
+*Universe and PlayerRef entry points* — [`com.hypixel.hytale.server.core.universe.md`](./com.hypixel.hytale.server.core.universe.md) (4)
+
+- `PlayerRef` — class PlayerRef implements Component<EntityStore>, MetricProvider, CommandSender, PermissionHolder
+- `StorageManager` — class StorageManager
+- `Universe` — class Universe extends JavaPlugin implements IMessageReceiver,MetricProvider
+- `WorldLoadCancelledException` — class WorldLoadCancelledException extends RuntimeException
+
+## com.hypixel.hytale.server.core.universe.world.events
+*World/chunk/event subscription types* — [`com.hypixel.hytale.server.core.universe.world.events.md`](./com.hypixel.hytale.server.core.universe.world.events.md) (7)
+
+- `AddWorldEvent` — class AddWorldEvent extends WorldEvent implements ICancellable
+- `AllWorldsLoadedEvent` — class AllWorldsLoadedEvent implements IEvent<Void>
+- `ChunkEvent` — abstract class ChunkEvent implements IEvent<String>
+- `ChunkPreLoadProcessEvent` — class ChunkPreLoadProcessEvent extends ChunkEvent implements IProcessedEvent
+- `RemoveWorldEvent` — class RemoveWorldEvent extends WorldEvent implements ICancellable
+- `StartWorldEvent` — class StartWorldEvent extends WorldEvent
+- `WorldEvent` — abstract class WorldEvent implements IEvent<String>
+
+## com.hypixel.hytale.server.core.universe.world
+*World runtime context* — [`com.hypixel.hytale.server.core.universe.world.md`](./com.hypixel.hytale.server.core.universe.world.md) (16)
+
+- `ClientEffectWorldSettings` — class ClientEffectWorldSettings
+- `IWorldChunks` — interface IWorldChunks extends IChunkAccessorSync<WorldChunk>, IWorldChunksAsync
+- `IWorldChunksAsync` — interface IWorldChunksAsync
+- `ParticleUtil` — class ParticleUtil
+- `PlaceBlockSettings` — class PlaceBlockSettings
+- `PlayerUtil` — class PlayerUtil
+- `SetBlockSettings` — class SetBlockSettings
+- `SoundUtil` — class SoundUtil
+- `SpawnUtil` — final class SpawnUtil
+- `ValidationOption` — final class ValidationOption extends Enum<ValidationOption>
+- `World` — class World extends TickingThread implements concurrent.Executor, ExecutorMetricsRegistry$ExecutorMetric, ChunkAccessor<WorldChunk>, IWorldChunks, IMessageReceiver
+- `WorldConfig` — class WorldConfig
+- `WorldConfigProvider` — interface WorldConfigProvider
+- `WorldMapTracker` — class WorldMapTracker implements Tickable
+- `WorldNotificationHandler` — class WorldNotificationHandler
+- `WorldProvider` — interface WorldProvider
+
+## com.hypixel.hytale.server.core.universe.world.storage
+*EntityStore and entity-component access* — [`com.hypixel.hytale.server.core.universe.world.storage.md`](./com.hypixel.hytale.server.core.universe.world.storage.md) (7)
+
+- `BufferChunkLoader` — abstract class BufferChunkLoader implements IChunkLoader
+- `BufferChunkSaver` — abstract class BufferChunkSaver implements IChunkSaver
+- `ChunkStore` — class ChunkStore implements WorldProvider
+- `EntityStore` — class EntityStore implements WorldProvider
+- `GetChunkFlags` — class GetChunkFlags
+- `IChunkLoader` — interface IChunkLoader extends java.io.Closeable
+- `IChunkSaver` — interface IChunkSaver extends java.io.Closeable
+
+## com.hypixel.hytale.server.npc.corecomponents
+*Built-in NPC components used by roles* — [`com.hypixel.hytale.server.npc.corecomponents.md`](./com.hypixel.hytale.server.npc.corecomponents.md) (14)
+
+- `ActionBase` — abstract class ActionBase extends AnnotatedComponentBase implements Action
+- `ActionWithDelay` — abstract class ActionWithDelay extends ActionBase
+- `AnnotatedComponentBase` — abstract class AnnotatedComponentBase implements IAnnotatedComponent
+- `BlockTarget` — class BlockTarget
+- `BodyMotionBase` — abstract class BodyMotionBase extends MotionBase implements BodyMotion
+- `EntityFilterBase` — abstract class EntityFilterBase extends AnnotatedComponentBase implements IEntityFilter
+- `HeadMotionBase` — abstract class HeadMotionBase extends MotionBase implements HeadMotion
+- `IEntityFilter` — interface IEntityFilter extends RoleStateChange,IAnnotatedComponent
+- `ISensorEntityCollector` — interface ISensorEntityCollector extends RoleStateChange
+- `ISensorEntityPrioritiser` — interface ISensorEntityPrioritiser extends RoleStateChange
+- `MotionBase` — abstract class MotionBase extends AnnotatedComponentBase implements Motion
+- `SensorBase` — abstract class SensorBase extends AnnotatedComponentBase implements Sensor
+- `SensorWithEntityFilters` — abstract class SensorWithEntityFilters extends SensorBase implements IAnnotatedComponentCollection
+- `WeightedAction` — class WeightedAction extends AnnotatedComponentBase implements Action
+
+## com.hypixel.hytale.server.npc.instructions
+*Role JSON instruction structures* — [`com.hypixel.hytale.server.npc.instructions.md`](./com.hypixel.hytale.server.npc.instructions.md) (10)
+
+- `Action` — interface Action extends RoleStateChange,IAnnotatedComponent,IComponentExecutionControl
+- `ActionList` — class ActionList
+- `BodyMotion` — interface BodyMotion extends Motion
+- `HeadMotion` — interface HeadMotion extends Motion
+- `Instruction` — class Instruction implements RoleStateChange,IAnnotatedComponentCollection
+- `InstructionRandomized` — class InstructionRandomized extends Instruction
+- `Motion` — interface Motion extends RoleStateChange,IAnnotatedComponent
+- `NullSensor` — class NullSensor implements Sensor
+- `RoleStateChange` — interface RoleStateChange
+- `Sensor` — interface Sensor extends RoleStateChange,IAnnotatedComponent,IComponentExecutionControl
+
+## com.hypixel.hytale.server.npc
+*NPCPlugin, NPCEntity, role base classes* — [`com.hypixel.hytale.server.npc.md`](./com.hypixel.hytale.server.npc.md) (2)
+
+- `AllNPCsLoadedEvent` — class AllNPCsLoadedEvent implements IEvent<Void>
+- `NPCPlugin` — class NPCPlugin extends JavaPlugin
+
+## com.hypixel.hytale.server.npc.role
+*Role data and active-role types* — [`com.hypixel.hytale.server.npc.role.md`](./com.hypixel.hytale.server.npc.role.md) (5)
+
+- `Role` — class Role implements IAnnotatedComponentCollection
+- `RoleDebugDisplay` — class RoleDebugDisplay
+- `RoleDebugFlags` — final class RoleDebugFlags extends Enum<RoleDebugFlags> implements function.Supplier<String>
+- `RoleUtils` — class RoleUtils
+- `SpawnEffect` — interface SpawnEffect
+
+## com.hypixel.hytale.server.npc.sensorinfo
+*Sensor base classes + PositionProvider, Feature* — [`com.hypixel.hytale.server.npc.sensorinfo.md`](./com.hypixel.hytale.server.npc.sensorinfo.md) (13)
+
+- `BlockCollisionProvider` — class BlockCollisionProvider extends InfoProviderBase
+- `CachedPositionProvider` — class CachedPositionProvider extends PositionProvider
+- `EntityCollisionProvider` — class EntityCollisionProvider extends InfoProviderBase
+- `EntityPositionProvider` — class EntityPositionProvider extends PositionProvider
+- `ExtraInfoProvider` — interface ExtraInfoProvider
+- `IPathProvider` — interface IPathProvider extends ExtraInfoProvider
+- `IPositionProvider` — interface IPositionProvider
+- `InfoProvider` — interface InfoProvider
+- `InfoProviderBase` — abstract class InfoProviderBase implements InfoProvider
+- `PathProvider` — class PathProvider implements IPathProvider
+- `PositionProvider` — class PositionProvider extends InfoProviderBase implements IPositionProvider
+- `ValueWrappedInfoProvider` — class ValueWrappedInfoProvider implements InfoProvider
+- `WrappedInfoProvider` — class WrappedInfoProvider implements InfoProvider
