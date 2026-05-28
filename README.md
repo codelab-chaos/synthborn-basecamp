@@ -4,12 +4,14 @@ This root `docs/` folder is intentionally shared across the current prototype wo
 
 Right now multiple mods, plus shared tooling and reference material, depend on the same research notes:
 
-- `mods/SynthNPCs`
+- `mods/SynthUnits`
 - `mods/SynthRCON`
 - root-level `tools/`
 - root-level `_references/`
 - root-level `_Assets/` (local unpacked Hytale assets; see [`hytale-assets-toc.md`](hytale-assets-toc.md))
 - [`hytale-survival-progression.md`](hytale-survival-progression.md), which records starter survival/tool progression so NPC planning does not confuse combat gear, tools, benches, and later tiers
+
+New community docs are mirrored under `_references/hytale-modding-site/content/docs/en`. For SynthUnits, start with the official/custom NPC role docs, `guides/npc-workings`, `guides/plugin/Interactable-NPCs.mdx`, ECS notes, server event references, and plugin guides for spawning/persistent data.
 
 Keeping broad Hytale notes, patch notes, API references, and cross-mod research here avoids duplicating the same material inside each mod while the project is still in MVP/prototype mode.
 

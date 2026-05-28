@@ -1,13 +1,13 @@
 # Hytale Survival Progression Reference
 
-This note captures the progression assumptions SynthNPCs should use when choosing tools, recipes, and next tasks. It exists because raw recipe lookup is not enough: a recipe index can tell us that an item exists, but it does not tell us whether that item belongs to starter survival progression, a later workbench tier, combat gear, or salvage.
+This note captures the progression assumptions SynthUnits should use when choosing tools, recipes, and next tasks. It exists because raw recipe lookup is not enough: a recipe index can tell us that an item exists, but it does not tell us whether that item belongs to starter survival progression, a later workbench tier, combat gear, or salvage.
 
 Source data:
 
 - `_Assets/Server/Item/**`
 - `docs/recipes/recipes.txt`
 - `docs/recipes/recipes.json`
-- runtime catalog dumps under `mods/SynthNPCs/catalog/`
+- runtime catalog dumps under `mods/SynthUnits/catalog/`
 
 ## Key Rule
 
@@ -81,7 +81,7 @@ For planning, this means:
 3. If crafting, satisfy the correct bench and material tier first.
 4. Never choose combat weapons just because their names contain "axe".
 
-## SynthNPCs Planning Implications
+## SynthUnits Planning Implications
 
 For the storage bootstrap path, the corrected flow is:
 

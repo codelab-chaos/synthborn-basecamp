@@ -1269,7 +1269,7 @@ The last two rows matter: HyCitizens already ships primitive versions of "rememb
 
 ### 23.4 What we still own — the synthetic NPC
 
-This is the answer to "create our own npc/citizen": a **`SynthNpc`** is our identity object that binds a HyCitizens body (by id) to synth-owned behavior. HyCitizens has no concept of any of this, so it remains 100% ours:
+This is the answer to "create our own npc/citizen": a **`SynthUnit`** is our identity object that binds a HyCitizens body (by id) to synth-owned behavior. HyCitizens has no concept of any of this, so it remains 100% ours:
 
 - arbitrary **per-player facts / memory** (not just the binary first-interaction flag),
 - **reputation / sentiment** as a numeric/enum scale,
@@ -1371,4 +1371,4 @@ Make `EngineDriver` the literal pivot of the product and **ship `HyCitizensEngin
 
 > **The behavior layer is the product. The body is a swappable backend.** Prove the whole synthetic loop on HyCitizens' bodies now; earn the right to own bodies later only if there's a concrete reason to.
 
-Concretely, I'd revise the roadmap so Milestone 1 becomes "implement `HyCitizensEngineDriver` + the side-car `SynthNpc` store" (small), and the original self-owned body work moves behind the feasibility gate as an optional later track. Everything from Milestone 2 onward (content, memory, dialogue, effects, commands, scenarios) is unchanged.
+Concretely, I'd revise the roadmap so Milestone 1 becomes "implement `HyCitizensEngineDriver` + the side-car `SynthUnit` store" (small), and the original self-owned body work moves behind the feasibility gate as an optional later track. Everything from Milestone 2 onward (content, memory, dialogue, effects, commands, scenarios) is unchanged.

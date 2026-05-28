@@ -39,7 +39,7 @@ This keeps the NPC "brain" small. The village is smart; individuals are believab
 ## Core Object Model
 
 ```java
-package com.ccnef.synthnpcs.sim;
+package com.codelabchaos.synthunits.sim;
 
 import java.time.Instant;
 import java.util.*;
@@ -172,7 +172,7 @@ public record Personality(
 The Erenshor lesson is that coordination feels intelligent even when the pieces are simple. A job board prevents every farmer from scanning every crop every tick.
 
 ```java
-package com.ccnef.synthnpcs.sim;
+package com.codelabchaos.synthunits.sim;
 
 import java.time.Instant;
 import java.util.*;
@@ -290,7 +290,7 @@ Example job payload:
 This is the server-side village brain. It should tick slowly, e.g. every 1-5 seconds for job generation and resource scoring, not every NPC tick.
 
 ```java
-package com.ccnef.synthnpcs.sim;
+package com.codelabchaos.synthunits.sim;
 
 import java.time.Instant;
 import java.util.*;
@@ -399,9 +399,9 @@ public final class ResourceLedger {
 The exact component registration mechanics should follow the current server API. The shape matters more than the syntax here: persist identity and simulation state separately from the Role JSON.
 
 ```java
-package com.ccnef.synthnpcs.components;
+package com.codelabchaos.synthunits.components;
 
-import com.ccnef.synthnpcs.sim.*;
+import com.codelabchaos.synthunits.sim.*;
 import java.util.UUID;
 
 public final class SynthCitizenComponent {
@@ -607,9 +607,9 @@ This is a proposed role asset pattern. The built-in `Template_Citizen.json` show
 The Role JSON chooses "execute claimed job." Java owns the reliable job FSM.
 
 ```java
-package com.ccnef.synthnpcs.jobs;
+package com.codelabchaos.synthunits.jobs;
 
-import com.ccnef.synthnpcs.sim.*;
+import com.codelabchaos.synthunits.sim.*;
 
 public final class FarmerJobExecutor implements JobExecutor {
     @Override
@@ -681,9 +681,9 @@ public final class FarmerJobExecutor implements JobExecutor {
 Supporting interfaces:
 
 ```java
-package com.ccnef.synthnpcs.jobs;
+package com.codelabchaos.synthunits.jobs;
 
-import com.ccnef.synthnpcs.sim.*;
+import com.codelabchaos.synthunits.sim.*;
 
 public interface JobExecutor {
     JobStepResult step(JobContext ctx, SettlementJob job);
@@ -752,7 +752,7 @@ public interface SimMemoryAccess {
 These are the Java primitives the JSON would reference. Exact inheritance/registration depends on the Hytale element API, but the concept is stable:
 
 ```java
-package com.ccnef.synthnpcs.ai;
+package com.codelabchaos.synthunits.ai;
 
 public final class SynthNeedThresholdSensor {
     public String need;
@@ -900,9 +900,9 @@ Defender differs mostly by allowed jobs and combat defaults. Let Hytale's combat
 Erenshor-style SimPlayers can sit above the settlement layer. They are "citizens who adventure."
 
 ```java
-package com.ccnef.synthnpcs.party;
+package com.codelabchaos.synthunits.party;
 
-import com.ccnef.synthnpcs.sim.*;
+import com.codelabchaos.synthunits.sim.*;
 import java.util.*;
 
 public enum PartyRole {
@@ -1015,7 +1015,7 @@ public final class DialogueSelector {
 When a settlement is unloaded or no players are nearby, stop expensive pathing and run a coarse tick. This is the Erenshor move: the world advances without needing every action animated.
 
 ```java
-package com.ccnef.synthnpcs.sim;
+package com.codelabchaos.synthunits.sim;
 
 import java.time.Duration;
 import java.time.Instant;
