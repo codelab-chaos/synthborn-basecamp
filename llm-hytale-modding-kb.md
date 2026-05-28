@@ -11,7 +11,7 @@ Single-file, token-dense, capability-indexed reference for Hytale **server-side*
 
 | Tag | Meaning |
 |---|---|
-| ✓ | Verified against compiling code in this repo (`HyCitizens/`, `NPCTrading/`, `mods/SynthNPCs/`) |
+| ✓ | Verified against compiling code in this repo (`HyCitizens/`, `NPCTrading/`, `mods/SynthUnits/`) |
 | 📘 | From official Hypixel post / `release.server.docs.hytale.com` Javadoc |
 | 🌐 | Community docs (`hytale-docs.pages.dev`, `hytalecharts.com`) — may drift |
 | ? | Observed / inferred, not source-confirmed |
@@ -29,7 +29,7 @@ When ✓ and 🌐 disagree, trust ✓. If something you need isn't here, **read 
 4. **Off-thread for blocking I/O** (HTTP/LLM/disk). Use `HytaleServer.SCHEDULED_EXECUTOR` or `registerAsync`, then hop back via `world.execute`. ✓📘
 5. **`ServerVersion` in `manifest.json` must equality-match the server build string** (not a range). Pin the Gradle dep to the same string. ✓
 6. **Every `Ref<EntityStore>` access must check `ref.isValid()`** — entities despawn/unload at any time. ✓
-7. **Don't drive NPC motion by writing `TransformComponent` position.** Animations/facing break. Use the native `Walk` motion controller + `BodyMotion` (Role JSON) and expose intent through a custom sensor. ✓ (SynthNPCs discovery)
+7. **Don't drive NPC motion by writing `TransformComponent` position.** Animations/facing break. Use the native `Walk` motion controller + `BodyMotion` (Role JSON) and expose intent through a custom sensor. ✓ (SynthUnits discovery)
 
 ---
 
@@ -92,7 +92,7 @@ Event catalog (🌐 — confirm in decompiled source before depending on exact s
 | Despawn entity | `store.removeEntity(ref, RemoveReason.REMOVE)` (world thread) | ✓ | `CitizensManager.despawnCitizenNPC*` |
 | Add raw entity | `store.addEntity(holder, AddReason.SPAWN)` | 🌐 | [04](./hytale-mod-quickref/04-ecs.md) |
 | Iterate by component | `store.forEachChunk(T.getComponentType(), (chunk, cmdBuf) -> ...)` | 🌐 | [04](./hytale-mod-quickref/04-ecs.md) |
-| Persist custom data on entity | Custom `Component<EntityStore>` + codec registration | ✓ | `mods/SynthNPCs/SynthIdentityComponent`, `SynthBehaviorComponent` |
+| Persist custom data on entity | Custom `Component<EntityStore>` + codec registration | ✓ | `mods/SynthUnits/SynthIdentityComponent`, `SynthBehaviorComponent` |
 
 Verified component types (each has static `getComponentType()`): `ModelComponent`, `PersistentModel`, `PlayerSkinComponent`, `UUIDComponent`, `TransformComponent`, plus stats via `EntityStatsModule.get().getEntityStatMapComponentType()`. ✓
 
@@ -106,8 +106,8 @@ Verified component types (each has static `getComponentType()`): `ModelComponent
 | Swap role at runtime | `RoleChangeSystem.requestRoleChange(...)` | ✓📘 | `com.hypixel.hytale.server.npc.systems.RoleChangeSystem` |
 | Define a role | JSON at `<asset-pack>/Server/NPC/Roles/<Name>.json` | ✓ | `HyCitizens/.../Template_Citizen.json` |
 | Inherit a role | `"Reference": "Template_Citizen"` in JSON | ✓ | `RoleGenerator.java:359` |
-| Walk an NPC (native) | Role JSON: `Walk` motion controller + `BodyMotion: Find`, target via custom sensor | ✓ | `mods/SynthNPCs/Synth_Base.json`, `SynthMoveTarget` sensor |
-| Teleport (debug only) | Write `TransformComponent` position directly — **breaks animation/facing**, use for debug only | ✓ | `mods/SynthNPCs/mod-dev-discoveries.md` |
+| Walk an NPC (native) | Role JSON: `Walk` motion controller + `BodyMotion: Find`, target via custom sensor | ✓ | `mods/SynthUnits/Synth_Base.json`, `SynthMoveTarget` sensor |
+| Teleport (debug only) | Write `TransformComponent` position directly — **breaks animation/facing**, use for debug only | ✓ | `mods/SynthUnits/mod-dev-discoveries.md` |
 | Debug visualize AI | `/npc debug set VisAiming\|VisMarkedTargets\|VisSensorRanges\|VisLeashPosition\|VisFlock` | 📘 | [09](./hytale-mod-quickref/09-verified-api-cheatsheet.md) |
 
 ### Skins & models
@@ -165,9 +165,9 @@ Slot capacities: Hotbar=9, Storage=36, Armor=4, Utility=4, Tools=23, Backpack=va
 
 | Want to... | Use | Status | Source |
 |---|---|---|---|
-| Drive server from outside game | RCON, default port `25575` | ✓ | `mods/SynthNPCs/mod-dev-discoveries.md` |
+| Drive server from outside game | RCON, default port `25575` | ✓ | `mods/SynthUnits/mod-dev-discoveries.md` |
 | Unit-test plain Java | JUnit 5 (`junit-bom:5.10.0`, already in build) | ✓ | repo build files |
-| Test Hytale-world behavior | Manual / external harness — **don't unit-test Hytale-facing behavior** | ✓ | `mods/SynthNPCs/mod-dev-discoveries.md` |
+| Test Hytale-world behavior | Manual / external harness — **don't unit-test Hytale-facing behavior** | ✓ | `mods/SynthUnits/mod-dev-discoveries.md` |
 
 ### Known not-yet-confirmed / unsupported
 
@@ -345,7 +345,7 @@ Tutorial starter states: `Idle`, `Sleep`, `Eat`, `Alerted`, `Combat`, `ReturnHom
 
 - **Role JSON drives:** movement, animation, sensor evaluation, instruction selection, anything visible/physical.
 - **Plugin tick drives:** writing *intent* to components (move target, role assignment, carried-resource counts), cleaning up state on arrival, coarse decisions a sensor can't easily express.
-- **Wrong pattern (don't):** plugin tick that walks the entity by incrementing `TransformComponent.position`. Looks like teleport-spam, no facing/animation. (SynthNPCs spike confirmed this.)
+- **Wrong pattern (don't):** plugin tick that walks the entity by incrementing `TransformComponent.position`. Looks like teleport-spam, no facing/animation. (SynthUnits spike confirmed this.)
 
 ---
 
@@ -360,14 +360,14 @@ Tutorial starter states: `Idle`, `Sleep`, `Eat`, `Alerted`, `Combat`, `ReturnHom
 | Role not registered | `getIndex` → `Integer.MIN_VALUE` | Bundle the role asset first; retry after asset load | repo |
 | Wrong thread | Corruption / crash | Wrap in `world.execute(...)` | [08](./hytale-mod-quickref/08-messaging-and-threading.md) |
 | Stale `Ref` after async hop | NPE or silent miss | Re-check `ref.isValid()` after every async boundary | repo-wide |
-| `ServerVersion: "*"` or omitted | `SEVERE … targeting different server version` (fatal soon) | Pin to exact server build; bump Gradle dep + manifest together | `SynthNPCs` |
+| `ServerVersion: "*"` or omitted | `SEVERE … targeting different server version` (fatal soon) | Pin to exact server build; bump Gradle dep + manifest together | `SynthUnits` |
 | Mutating store mid-`forEachChunk` | Undefined behavior | Use the `commandBuffer` arg for deferred add/remove | 🌐 [04](./hytale-mod-quickref/04-ecs.md) |
 | `.get()`/`.join()` on world thread | Hangs world | All blocking I/O off-thread; return via `whenComplete` + `world.execute` | repo-wide |
 | Mutating `ItemStack` in place | No-op | `withX(...)` returns a new instance — capture it | [07](./hytale-mod-quickref/07-inventory-and-items.md) |
 | Touching other plugins from `setup()` | Sees null/empty | Do cross-plugin work in `start()` | [02](./hytale-mod-quickref/02-server-plugins.md) |
-| Driving motion by writing `TransformComponent` | Teleport-spam, no facing/anim | Native `Walk` motion + intent component + sensor | `mods/SynthNPCs/mod-dev-discoveries.md` |
-| Command name hides instant vs walked | User confusion | Distinct verbs: `teleporthere` (instant), `walk` (visible) | `mods/SynthNPCs/mod-dev-discoveries.md` |
-| Over-testing Hytale-facing behavior | Slow iteration | Unit-test pure Java only; runtime/manual for world behavior | `mods/SynthNPCs/mod-dev-discoveries.md` |
+| Driving motion by writing `TransformComponent` | Teleport-spam, no facing/anim | Native `Walk` motion + intent component + sensor | `mods/SynthUnits/mod-dev-discoveries.md` |
+| Command name hides instant vs walked | User confusion | Distinct verbs: `teleporthere` (instant), `walk` (visible) | `mods/SynthUnits/mod-dev-discoveries.md` |
+| Over-testing Hytale-facing behavior | Slow iteration | Unit-test pure Java only; runtime/manual for world behavior | `mods/SynthUnits/mod-dev-discoveries.md` |
 
 ---
 
@@ -403,7 +403,7 @@ The `builtin.*` packages are Hypixel's own implementations — read them to see 
 - **Deeper prose docs** (same numbering as the capability sections): [hytale-mod-quickref/](./hytale-mod-quickref/) — `01`-overview, `02`-plugins, `03`-events, `04`-ecs, `05`-roles/AI, `06`-spawn recipe, `07`-inventory, `08`-threading, `09`-API cheatsheet, `10`-references.
 - **Verified call sites** in `_references/sample-mods/` (HyCitizens, NPCTrading) — ground truth for "does this API exist".
 - **API handbooks (raw decompiled / Javadoc mirror):** `_references/hytale-api-handbooks/`.
-- **Project work using this KB:** [SynthNPCs/](../mods/SynthNPCs/) — see `sprint-board.md`, `capabilities.md`, and especially `mod-dev-discoveries.md` for sharp-edge field notes.
+- **Project work using this KB:** [SynthUnits/](../mods/SynthUnits/) — see `sprint-board.md`, `capabilities.md`, and especially `mod-dev-discoveries.md` for sharp-edge field notes.
 
 ---
 

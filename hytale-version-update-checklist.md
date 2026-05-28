@@ -14,12 +14,12 @@ Do not treat "the old jars still load" as the full compatibility check. Loading 
 Update these together:
 
 - Hytale launcher/server install used by `tools/server/start-server.js`.
-- `mods/SynthNPCs/build.gradle.kts` dependency:
+- `mods/SynthUnits/build.gradle.kts` dependency:
   - `compileOnly("com.hypixel.hytale:Server:<version>")`
 - `mods/SynthRCON/build.gradle.kts` dependency:
   - `compileOnly("com.hypixel.hytale:Server:<version>")`
 - Each mod manifest compatibility range:
-  - `mods/SynthNPCs/src/main/resources/manifest.json`
+  - `mods/SynthUnits/src/main/resources/manifest.json`
   - `mods/SynthRCON/src/main/resources/manifest.json`
 - Saved patch notes or release notes in root `docs/`.
 
@@ -29,7 +29,7 @@ The manifest `ServerVersion` range does not always need to narrow for a patch re
 
 Smoke-test these after every server update:
 
-- Plugin loading for both `SynthNPCs` and `SynthRCON`.
+- Plugin loading for both `SynthUnits` and `SynthRCON`.
 - RCON health and command dispatch.
 - NPC role registration/validation for `Synth_Base`.
 - Chunk loader persistence and ticking state.
@@ -51,7 +51,7 @@ cd mods/SynthRCON
 .\gradlew.bat build
 .\gradlew.bat deploy
 
-cd ..\SynthNPCs
+cd ..\SynthUnits
 .\gradlew.bat build
 .\gradlew.bat deploy
 
@@ -67,7 +67,7 @@ node tools/server/start-server.js --background --save "C:\Users\ccnef\AppData\Ro
 7. Run the smoke test:
 
 ```powershell
-node tools/smoke/synthnpcs-smoke.js
+node tools/smoke/synthunits-smoke.js
 ```
 
 The smoke test expects the server and SynthRCON to already be running. If it fails at `RCON health` with a connection-refused error, start the server first:
@@ -79,7 +79,7 @@ node tools/server/start-server.js --background --save "C:\Users\ccnef\AppData\Ro
 Use this variant after changing Gradle dependencies:
 
 ```powershell
-node tools/smoke/synthnpcs-smoke.js --build --deploy
+node tools/smoke/synthunits-smoke.js --build --deploy
 ```
 
 ## Expected Smoke Results

@@ -24,16 +24,16 @@ The unpacked asset tree is not the same thing as the loaded server registry. For
 /synth catalog dump blocks rubble
 ```
 
-Catalog dumps are written by the SynthNPCs plugin to:
+Catalog dumps are written by the SynthUnits plugin to:
 
 ```text
-mods/SynthNPCsData/catalog/
+mods/SynthUnitsData/catalog/
 ```
 
-Useful catalog snapshots can be copied back into the SynthNPCs repo at:
+Useful catalog snapshots can be copied back into the SynthUnits repo at:
 
 ```text
-mods/SynthNPCs/catalog/
+mods/SynthUnits/catalog/
 ```
 
 The block dump includes the numeric runtime block id from `BlockType.getAssetMap()` plus the string `BlockType.getId()`. The item dump includes registered item ids and whether each item has a placeable block type.
@@ -102,7 +102,7 @@ The block dump includes the numeric runtime block id from `BlockType.getAssetMap
 
 ## Gatherer Resources
 
-Current SynthNPCs gatherer scope is intentionally narrow:
+Current SynthUnits gatherer scope is intentionally narrow:
 
 | Natural resource | Current ids to inspect |
 | --- | --- |

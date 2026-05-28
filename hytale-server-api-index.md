@@ -124,7 +124,7 @@ Known SDK lesson:
 
 See:
 
-- `mods/SynthNPCs/mod-dev-discoveries.md`
+- `mods/SynthUnits/mod-dev-discoveries.md`
 
 ## NPC Role JSON Debugging
 
@@ -140,4 +140,4 @@ When a synth/NPC role does not register:
 1. Search `_references/` for examples.
 2. Use `tools/sdk/list-hytale-server-api.ps1` to find nearby classes.
 3. Use `javap` to inspect exact constructors/methods.
-4. Record reusable SDK gotchas in `mods/SynthNPCs/mod-dev-discoveries.md`.
+4. Record reusable SDK gotchas in `mods/SynthUnits/mod-dev-discoveries.md`.
