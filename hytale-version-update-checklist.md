@@ -1,6 +1,6 @@
 # Hytale Version Update Checklist
 
-Use this when moving the workspace to a new Hytale server/client hotfix, such as `0.5.1`.
+Use this when moving the workspace to a new Hytale server/client hotfix, such as `0.5.2`.
 
 The core routine is:
 
