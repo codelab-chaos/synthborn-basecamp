@@ -9,6 +9,9 @@ module.exports = (env, argv) => {
 
   return {
     entry: path.join(projectRoot, "src/index.tsx"),
+    externals: {
+      three: "THREE",
+    },
     output: {
       path: galleryRoot,
       filename: isProd ? "assets/[name].[contenthash:8].js" : "assets/[name].js",
@@ -70,11 +73,6 @@ module.exports = (env, argv) => {
           vendor: {
             test: /[\\/]node_modules[\\/](react|react-dom|antd|@ant-design|rc-)/,
             name: "vendor",
-            chunks: "all",
-          },
-          three: {
-            test: /[\\/]node_modules[\\/]three[\\/]/,
-            name: "three",
             chunks: "all",
           },
         },

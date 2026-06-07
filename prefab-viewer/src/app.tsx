@@ -1,5 +1,6 @@
 import { ConfigProvider, Flex, Layout, Spin, theme, Typography } from "antd";
-import { useState } from "react";
+import { useLayoutEffect, useState } from "react";
+import { resetGalleryVisibilityLayout } from "./hooks/use-element-visibility";
 import { PrefabFilters } from "./components/prefab-filters";
 import { PrefabGalleryGrid } from "./components/prefab-gallery-grid";
 import { PrefabGalleryToolbar } from "./components/prefab-gallery-toolbar";
@@ -16,6 +17,11 @@ export function App() {
   const [drawerEntry, setDrawerEntry] = useState<PrefabEntry | null>(null);
 
   const filter = usePrefabFilter(manifest?.entries ?? []);
+
+  useLayoutEffect(() => {
+    window.scrollTo({ top: 0, behavior: "auto" });
+    resetGalleryVisibilityLayout();
+  }, [filter.state.page]);
 
   if (loading) {
     return (
@@ -60,14 +66,15 @@ export function App() {
             Prefab Preview Gallery
           </Typography.Title>
           <Typography.Paragraph type="secondary" style={{ margin: "4px 0 0" }}>
-            Generated {generatedAt} · {manifest.entries.length} prefabs · {manifest.previewMode} ·{" "}
-            {manifest.assetsRoot}
+            Generated {generatedAt} · {manifest.entries.length} prefabs
           </Typography.Paragraph>
           <div style={{ marginTop: 16 }}>
             <PrefabFilters
               query={filter.state.query}
               tags={filter.state.tags}
+              entries={manifest.entries}
               tagList={manifest.tagList}
+              tagTree={manifest.tagTree}
               onQueryChange={filter.setQuery}
               onTagsChange={filter.setTags}
             />
@@ -86,8 +93,8 @@ export function App() {
         <Content className="gallery-main">
           <PrefabGalleryGrid
             entries={filter.pageEntries}
-            page={filter.state.page}
-            pageSize={filter.state.pageSize}
+            activeTags={filter.state.tags}
+            onTagSelect={filter.addTag}
             onExpand={setDrawerEntry}
           />
         </Content>

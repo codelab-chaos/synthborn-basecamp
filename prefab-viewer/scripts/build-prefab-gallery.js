@@ -4,7 +4,7 @@
  *
  * Output layout (default ../../docs/prefab-gallery):
  *   manifest.json
- *   data/<source-folder>/<prefab-stem>.json
+ *   data/<source-folder>/<prefab-stem>.vox
  *
  * Run alone or via `npm run build:data` / `npm run build` in tools/prefab-viewer.
  */
@@ -17,7 +17,7 @@ const {
   getBounds,
   safeStem,
 } = require("./render-prefab-views.js");
-const { buildVoxelPayload, rgbToHex } = require("./library/voxel-payload.js");
+const { encodeVoxelFileV3, rgbToHex } = require("./library/voxel-payload.js");
 const { formatPrefabLabel } = require("./library/prefab-label.js");
 
 const REPO_ROOT = path.resolve(__dirname, "../../..");
@@ -146,11 +146,29 @@ function sourceLabel(resolved) {
 
 function buildPrefabTags(source, relativeDir) {
   const parts = relativeDir === "." ? [] : relativeDir.split(path.sep).map(safeStem).filter(Boolean);
-  if (source.label === "Vanilla _Assets") return parts.length ? [parts[0]] : [];
+  if (source.label === "Vanilla _Assets") return parts;
   if (source.label.startsWith("Creator Prefab Mods/")) {
     return [source.label.slice("Creator Prefab Mods/".length)];
   }
   return source.label ? [source.label] : [];
+}
+
+function buildTagTree(entries) {
+  const tree = {};
+  for (const entry of entries) {
+    const tags = entry.tags || [];
+    for (let i = 0; i < tags.length - 1; i++) {
+      const parent = tags[i];
+      const child = tags[i + 1];
+      if (!tree[parent]) tree[parent] = new Set();
+      tree[parent].add(child);
+    }
+  }
+  const sorted = {};
+  for (const [parent, children] of Object.entries(tree)) {
+    sorted[parent] = Array.from(children).sort((a, b) => a.localeCompare(b));
+  }
+  return sorted;
 }
 
 function collectPrefabs(dir, out) {
@@ -191,8 +209,8 @@ function renderPrefab(source, prefabPath, options) {
   fs.mkdirSync(dataOutDir, { recursive: true });
 
   const materials = collectMaterials(blocks, options.assetIndex);
-  const voxelPath = path.join(dataOutDir, `${stem}.json`);
-  fs.writeFileSync(voxelPath, JSON.stringify(buildVoxelPayload(blocks, bounds, materials)), "utf8");
+  const voxelPath = path.join(dataOutDir, `${stem}.vox`);
+  fs.writeFileSync(voxelPath, encodeVoxelFileV3(blocks, bounds));
 
   const prefabPathLabel = folderParts.join(" / ") || "root";
   const tags = buildPrefabTags(source, relativeDir);
@@ -291,7 +309,10 @@ function collectMaterials(blocks, assetIndex) {
 }
 
 function writeManifest(outRoot, entries, meta) {
-  const tagList = Array.from(new Set(entries.flatMap((entry) => entry.tags || []))).sort((a, b) => a.localeCompare(b));
+  const tagList = Array.from(
+    new Set(entries.map((entry) => entry.tags?.[0]).filter(Boolean)),
+  ).sort((a, b) => a.localeCompare(b));
+  const tagTree = buildTagTree(entries);
   const groups = Array.from(new Set(entries.map((entry) => entry.sourceGroup))).sort((a, b) => a.localeCompare(b));
   const manifestPath = path.join(outRoot, "manifest.json");
   const fd = fs.openSync(manifestPath, "w");
@@ -303,6 +324,7 @@ function writeManifest(outRoot, entries, meta) {
     write(JSON.stringify(entries[i]));
   }
   write(`],"tagList":${JSON.stringify(tagList)}`);
+  write(`,"tagTree":${JSON.stringify(tagTree)}`);
   write(`,"groups":${JSON.stringify(groups)}`);
   write(`,"generatedAt":${JSON.stringify(meta.generatedAt.toISOString())}`);
   write(`,"assetsRoot":${JSON.stringify(meta.assetsRoot)}`);

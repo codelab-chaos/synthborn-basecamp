@@ -20,7 +20,7 @@ tools/prefab-viewer/
 
 Output lands in `docs/prefab-gallery/`:
 
-- `manifest.json` + `data/**` from `scripts/build-prefab-gallery.js`
+- `manifest.json` + `data/**/*.vox` from `scripts/build-prefab-gallery.js` (PXV3 binary voxel blobs)
 - `index.html` + `assets/**` from Webpack
 
 ## Commands
@@ -51,4 +51,16 @@ Output path is **`docs/prefab-gallery/`** at the repo root. Ignore `tools/docs/p
 
 `npm run dev` writes bundles into `docs/prefab-gallery/` next to ~8k voxel JSON files. Webpack is configured to **not** file-watch that data directory (watching it can balloon a Node process into many GB on Windows). After `npm run build:data`, refresh the browser — the dev server does not watch `manifest.json` or `data/**`.
 
-`npm run build:data` streams a compact `manifest.json` (~8 MB) instead of pretty-printing the full catalog in one `JSON.stringify` call.
+`npm run build:data` streams a compact `manifest.json` (~6 MB) and writes per-prefab **`.vox`** files (PXV3 binary: uint8 coords, 4–5 bytes/voxel, materials only in manifest).
+
+### PXV3 `.vox` format
+
+| Section | Bytes |
+|---------|-------|
+| Magic | `PXV3` |
+| Stride | `4` (palette ≤256) or `5` (wider palette) |
+| Size | `uint8` × 3 |
+| Palette | `uint16` count + RGB triplets |
+| Voxels | `uint32` count + packed records |
+
+Legacy `.json` v2 payloads still load in the browser during migration.

@@ -1,96 +1,58 @@
 import * as THREE from "three";
 import type { UnpackedVoxels, ViewerOptions, VoxelViewer } from "./types";
 
-const VOXEL_RECORD_BYTES = 8;
-const ISO_AZIMUTH = Math.PI / 4;
-const ISO_ELEVATION = Math.PI / 4;
+const CAMERA_AZIMUTH = 0;
+const CAMERA_ELEVATION = Math.PI / 4;
 const HOME_ROTATION_X = 0;
 const HOME_ROTATION_Y = 0;
 
-function placeCornerCamera(camera: THREE.PerspectiveCamera, maxDim: number) {
+function placePreviewCamera(camera: THREE.PerspectiveCamera, maxDim: number) {
   const radius = maxDim * 2.35;
-  const horiz = radius * Math.cos(ISO_ELEVATION);
-  const x = horiz * Math.sin(ISO_AZIMUTH);
-  const z = horiz * Math.cos(ISO_AZIMUTH);
-  const y = radius * Math.sin(ISO_ELEVATION);
+  const horiz = radius * Math.cos(CAMERA_ELEVATION);
+  const x = horiz * Math.sin(CAMERA_AZIMUTH);
+  const z = horiz * Math.cos(CAMERA_AZIMUTH);
+  const y = radius * Math.sin(CAMERA_ELEVATION);
   camera.position.set(x, y, z);
   camera.lookAt(0, 0, 0);
 }
 
-export function unpackVoxels(payload: Record<string, unknown>): UnpackedVoxels {
-  if (payload.v === 2 && typeof payload.d === "string") {
-    const binary = atob(payload.d);
-    const stride =
-      binary.length % VOXEL_RECORD_BYTES === 0 && binary.length % 7 !== 0
-        ? VOXEL_RECORD_BYTES
-        : 7;
-    const voxels: number[] = [];
-    for (let off = 0; off < binary.length; off += stride) {
-      const byte = (index: number) => binary.charCodeAt(off + index);
-      voxels.push(
-        byte(0) | (byte(1) << 8),
-        byte(2) | (byte(3) << 8),
-        byte(4) | (byte(5) << 8),
-        stride === VOXEL_RECORD_BYTES ? byte(6) | (byte(7) << 8) : byte(6),
-      );
-    }
-    return {
-      size: payload.s as number[],
-      palette: payload.p as number[][],
-      voxels,
-      materials: (payload.materials as unknown[]) || [],
-    };
-  }
+export { unpackVoxelsJson as unpackVoxels } from "./load-voxel-payload";
 
-  if (Array.isArray(payload.voxels) && Array.isArray(payload.palette)) {
-    const palette = (payload.palette as Array<number[] | string>).map((entry) => {
-      if (Array.isArray(entry)) return entry;
-      const hex = String(entry).replace("#", "");
-      return [
-        Number.parseInt(hex.slice(0, 2), 16),
-        Number.parseInt(hex.slice(2, 4), 16),
-        Number.parseInt(hex.slice(4, 6), 16),
-      ];
-    });
-    return {
-      size: payload.size as number[],
-      palette,
-      voxels: payload.voxels as number[],
-      materials: (payload.materials as unknown[]) || [],
-    };
-  }
-
-  throw new Error("Unsupported voxel payload");
-}
-
-function liftPreviewRgb(rgb: number[]) {
-  const gain = 1.08;
-  const lift = 12;
+function enrichPreviewRgb(rgb: number[]) {
+  const saturation = 1.18;
+  const contrast = 1.06;
+  const midpoint = 128;
+  const r = rgb[0];
+  const g = rgb[1];
+  const b = rgb[2];
+  const lum = 0.299 * r + 0.587 * g + 0.114 * b;
+  const saturate = (channel: number) => {
+    const vivid = lum + (channel - lum) * saturation;
+    return midpoint + (vivid - midpoint) * contrast;
+  };
   return [
-    Math.min(255, Math.round(rgb[0] * gain + lift)),
-    Math.min(255, Math.round(rgb[1] * gain + lift)),
-    Math.min(255, Math.round(rgb[2] * gain + lift)),
+    Math.max(0, Math.min(255, Math.round(saturate(r)))),
+    Math.max(0, Math.min(255, Math.round(saturate(g)))),
+    Math.max(0, Math.min(255, Math.round(saturate(b)))),
   ];
 }
 
 function installPreviewLighting(scene: THREE.Scene) {
-  const hemi = new THREE.HemisphereLight(0xdce8f5, 0x8a8078, 0.9);
-  const ambient = new THREE.AmbientLight(0xf4f6fa, 0.32);
-  const key = new THREE.DirectionalLight(0xfff4e8, 0.58);
+  const hemi = new THREE.HemisphereLight(0xb8c6dc, 0x4a443c, 0.48);
+  const key = new THREE.DirectionalLight(0xfff0dc, 0.78);
   key.position.set(7, 11, 5);
-  const fill = new THREE.DirectionalLight(0xc8d8ef, 0.3);
+  const fill = new THREE.DirectionalLight(0x8ea0b8, 0.12);
   fill.position.set(-6, 5, -5);
-  const rim = new THREE.DirectionalLight(0xffffff, 0.16);
+  const rim = new THREE.DirectionalLight(0xffffff, 0.3);
   rim.position.set(-1, 7, 9);
-  scene.add(hemi, ambient, key, fill, rim);
+  scene.add(hemi, key, fill, rim);
 }
 
 function configureRenderer(renderer: THREE.WebGLRenderer) {
   renderer.setClearColor(0x000000, 0);
   renderer.premultipliedAlpha = false;
   renderer.outputColorSpace = THREE.SRGBColorSpace;
-  renderer.toneMapping = THREE.ACESFilmicToneMapping;
-  renderer.toneMappingExposure = 1.12;
+  renderer.toneMapping = THREE.NoToneMapping;
 }
 
 function setInstanceColor(
@@ -110,6 +72,7 @@ export function createViewer(container: HTMLElement, options: ViewerOptions = {}
   const renderer = new THREE.WebGLRenderer({
     antialias: options.antialias !== false,
     alpha: true,
+    preserveDrawingBuffer: options.preserveDrawingBuffer === true,
   });
   configureRenderer(renderer);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, options.maxPixelRatio || 2));
@@ -127,11 +90,35 @@ export function createViewer(container: HTMLElement, options: ViewerOptions = {}
   const flickGain = 1.25;
   const slowThreshold = 0.0012;
   const friction = 0.94;
-  const springStrength = 0.1;
-  const springDamping = 0.82;
+  const returnDurationMs = 420;
   const tiltClamp = 1.1;
+  const wheelZoomGain = 0.0012;
+  const panGain = 0.012;
+  const minZoomFactor = 1e-4;
 
+  const homeDirection = new THREE.Vector3();
+  const panTarget = new THREE.Vector3();
+  const cameraScratch = new THREE.Vector3();
+  const panRight = new THREE.Vector3();
+  const panUp = new THREE.Vector3();
+
+  let homeDistance = 10;
+  let zoomFactor = 1;
+  let panX = 0;
+  let panY = 0;
   let dragging = false;
+  let middleDragging = false;
+  let returningRotation = false;
+  let returningZoom = false;
+  let returningPan = false;
+  let returnStartX = 0;
+  let returnStartY = 0;
+  let returnStartZoom = 1;
+  let returnStartPanX = 0;
+  let returnStartPanY = 0;
+  let rotationReturnStartAt = 0;
+  let zoomReturnStartAt = 0;
+  let panReturnStartAt = 0;
   let lastX = 0;
   let lastY = 0;
   let lastMoveAt = 0;
@@ -141,6 +128,7 @@ export function createViewer(container: HTMLElement, options: ViewerOptions = {}
   let disposed = false;
   let currentPayload: UnpackedVoxels | null = null;
   let pointerId: number | null = null;
+  let middlePointerId: number | null = null;
   let windowDragBound = false;
 
   function isInsideCanvas(clientX: number, clientY: number) {
@@ -171,15 +159,132 @@ export function createViewer(container: HTMLElement, options: ViewerOptions = {}
   function setDraggingUi(active: boolean) {
     for (const el of [renderer.domElement, container]) {
       el.classList.toggle("is-dragging", active);
-      el.style.cursor = active ? "grabbing" : "grab";
+      el.style.cursor = active ? "grabbing" : middleDragging ? "move" : "grab";
     }
-    if (!active) document.body.style.cursor = "";
+    if (!active && !middleDragging) document.body.style.cursor = "";
+  }
+
+  function setMiddleDragUi(active: boolean) {
+    for (const el of [renderer.domElement, container]) {
+      el.classList.toggle("is-dragging", active);
+      el.style.cursor = active ? "move" : dragging ? "grabbing" : "grab";
+    }
+    if (!active && !dragging) document.body.style.cursor = "";
+  }
+
+  function updatePanAxes() {
+    const worldUp = new THREE.Vector3(0, 1, 0);
+    panRight.crossVectors(worldUp, homeDirection);
+    if (panRight.lengthSq() < 1e-6) panRight.set(1, 0, 0);
+    panRight.normalize();
+    panUp.crossVectors(homeDirection, panRight).normalize();
+  }
+
+  function applyCameraView() {
+    updatePanAxes();
+    panTarget.set(0, 0, 0);
+    panTarget.addScaledVector(panRight, panX);
+    panTarget.addScaledVector(panUp, panY);
+    cameraScratch.copy(homeDirection).multiplyScalar(homeDistance * zoomFactor);
+    camera.position.copy(panTarget).add(cameraScratch);
+    camera.lookAt(panTarget);
+  }
+
+  function captureHomeCamera() {
+    cameraScratch.copy(camera.position);
+    homeDistance = cameraScratch.length();
+    homeDirection.copy(cameraScratch).normalize();
+    zoomFactor = 1;
+    panX = 0;
+    panY = 0;
+    applyCameraView();
   }
 
   function setHomeRotation() {
     root.rotation.set(homeX, homeY, 0);
     velX = 0;
     velY = 0;
+    returningRotation = false;
+  }
+
+  function setHomeZoom() {
+    zoomFactor = 1;
+    applyCameraView();
+    returningZoom = false;
+  }
+
+  function setHomePan() {
+    panX = 0;
+    panY = 0;
+    applyCameraView();
+    returningPan = false;
+  }
+
+  function setHomeCamera() {
+    setHomeZoom();
+    setHomePan();
+  }
+
+  function setHomeView() {
+    setHomeRotation();
+    setHomeCamera();
+  }
+
+  function easeInCubic(t: number) {
+    return t * t * t;
+  }
+
+  function startRotationReturnTween() {
+    returningRotation = true;
+    returnStartX = root.rotation.x;
+    returnStartY = root.rotation.y;
+    rotationReturnStartAt = performance.now();
+    velX = 0;
+    velY = 0;
+  }
+
+  function startZoomReturnTween() {
+    if (Math.abs(zoomFactor - 1) < 0.001) return;
+    returningZoom = true;
+    returnStartZoom = zoomFactor;
+    zoomReturnStartAt = performance.now();
+  }
+
+  function startPanReturnTween() {
+    if (Math.abs(panX) < 0.001 && Math.abs(panY) < 0.001) return;
+    returningPan = true;
+    returnStartPanX = panX;
+    returnStartPanY = panY;
+    panReturnStartAt = performance.now();
+  }
+
+  function stepReturnTweens() {
+    const now = performance.now();
+
+    if (returningRotation) {
+      const t = Math.min(1, (now - rotationReturnStartAt) / returnDurationMs);
+      const eased = easeInCubic(t);
+      root.rotation.x = returnStartX + (homeX - returnStartX) * eased;
+      root.rotation.y = returnStartY + (homeY - returnStartY) * eased;
+      if (t >= 1) setHomeRotation();
+    }
+
+    if (returningZoom) {
+      const t = Math.min(1, (now - zoomReturnStartAt) / returnDurationMs);
+      const eased = easeInCubic(t);
+      zoomFactor = returnStartZoom + (1 - returnStartZoom) * eased;
+      applyCameraView();
+      if (t >= 1) setHomeZoom();
+    }
+
+    if (returningPan) {
+      const t = Math.min(1, (now - panReturnStartAt) / returnDurationMs);
+      const eased = easeInCubic(t);
+      panX = returnStartPanX + (0 - returnStartPanX) * eased;
+      panY = returnStartPanY + (0 - returnStartPanY) * eased;
+      applyCameraView();
+      if (t >= 1) setHomePan();
+    }
   }
 
   function resize() {
@@ -192,36 +297,26 @@ export function createViewer(container: HTMLElement, options: ViewerOptions = {}
   }
 
   function stepPhysics() {
-    if (dragging) return;
+    if (dragging || middleDragging) return;
 
-    const speed = Math.hypot(velX, velY);
-    if (speed > slowThreshold) {
-      root.rotation.x += velX;
-      root.rotation.y += velY;
-      root.rotation.x = Math.max(-tiltClamp, Math.min(tiltClamp, root.rotation.x));
-      velX *= friction;
-      velY *= friction;
-      return;
+    if (returningRotation || returningZoom || returningPan) {
+      stepReturnTweens();
     }
 
-    if (!springHome) {
+    if (springHome) return;
+
+    const speed = Math.hypot(velX, velY);
+    if (speed <= slowThreshold) {
       velX = 0;
       velY = 0;
       return;
     }
 
-    const dx = homeX - root.rotation.x;
-    const dy = homeY - root.rotation.y;
-    if (Math.abs(dx) < 0.001 && Math.abs(dy) < 0.001 && speed < 0.00008) {
-      setHomeRotation();
-      return;
-    }
-
-    velX = velX * springDamping + dx * springStrength;
-    velY = velY * springDamping + dy * springStrength;
     root.rotation.x += velX;
     root.rotation.y += velY;
     root.rotation.x = Math.max(-tiltClamp, Math.min(tiltClamp, root.rotation.x));
+    velX *= friction;
+    velY *= friction;
   }
 
   function animate() {
@@ -253,6 +348,11 @@ export function createViewer(container: HTMLElement, options: ViewerOptions = {}
     pointerId = null;
     setDraggingUi(false);
     unbindWindowDrag();
+    if (springHome) {
+      startRotationReturnTween();
+      return;
+    }
+
     const flick = Math.hypot(velX, velY);
     if (flick < slowThreshold * 2) {
       velX = 0;
@@ -263,8 +363,55 @@ export function createViewer(container: HTMLElement, options: ViewerOptions = {}
     }
   }
 
+  function applyMiddleDragDelta(clientX: number, clientY: number) {
+    const deltaX = clientX - lastX;
+    const deltaY = clientY - lastY;
+    const panScale = homeDistance * 0.004;
+    panX += deltaX * panGain * panScale;
+    panY -= deltaY * panGain * panScale;
+    applyCameraView();
+    lastX = clientX;
+    lastY = clientY;
+  }
+
+  function applyWheelZoom(deltaY: number) {
+    const zoomDelta = Math.exp(-deltaY * wheelZoomGain);
+    zoomFactor = Math.max(minZoomFactor, zoomFactor * zoomDelta);
+    applyCameraView();
+  }
+
+  function onWheel(event: WheelEvent) {
+    if (!dragging) return;
+    event.preventDefault();
+    returningZoom = false;
+    applyWheelZoom(event.deltaY);
+  }
+
+  function endMiddleDrag(event: PointerEvent | null, force = false) {
+    if (!middleDragging) return;
+    if (!force && middlePointerId != null && event && event.pointerId !== middlePointerId) return;
+    middleDragging = false;
+    middlePointerId = null;
+    setMiddleDragUi(false);
+    if (!dragging) unbindWindowDrag();
+    startPanReturnTween();
+  }
+
   function onPointerDown(event: PointerEvent) {
+    if (event.button === 1) {
+      event.preventDefault();
+      returningPan = false;
+      middleDragging = true;
+      middlePointerId = event.pointerId;
+      lastX = event.clientX;
+      lastY = event.clientY;
+      setMiddleDragUi(true);
+      bindWindowDrag();
+      return;
+    }
     if (event.button !== 0) return;
+    returningRotation = false;
+    returningZoom = false;
     dragging = true;
     pointerId = event.pointerId;
     lastX = event.clientX;
@@ -278,6 +425,14 @@ export function createViewer(container: HTMLElement, options: ViewerOptions = {}
   }
 
   function onWindowPointerMove(event: PointerEvent) {
+    if (middleDragging && event.pointerId === middlePointerId) {
+      if (!isInsideCanvas(event.clientX, event.clientY)) {
+        endMiddleDrag(event, true);
+        return;
+      }
+      applyMiddleDragDelta(event.clientX, event.clientY);
+      return;
+    }
     if (!dragging || event.pointerId !== pointerId) return;
     if (!isInsideCanvas(event.clientX, event.clientY)) {
       endDrag(event, true);
@@ -287,36 +442,57 @@ export function createViewer(container: HTMLElement, options: ViewerOptions = {}
   }
 
   function onWindowPointerUp(event: PointerEvent) {
+    if (middleDragging && event.pointerId === middlePointerId) {
+      endMiddleDrag(event, true);
+      return;
+    }
     if (!dragging || event.pointerId !== pointerId) return;
     endDrag(event, true);
   }
 
-  function onWindowMouseUp() {
+  function onWindowMouseUp(event: MouseEvent) {
+    if (event.button === 1 && middleDragging) {
+      endMiddleDrag(null, true);
+      return;
+    }
     if (dragging) endDrag(null, true);
   }
 
   function onWindowBlur() {
+    if (middleDragging) endMiddleDrag(null, true);
     if (dragging) endDrag(null, true);
   }
 
   function onCanvasPointerLeave(event: PointerEvent) {
+    if (middleDragging && event.pointerId === middlePointerId) {
+      endMiddleDrag(event, true);
+      return;
+    }
     if (!dragging || event.pointerId !== pointerId) return;
     endDrag(event, true);
   }
 
   renderer.domElement.addEventListener("pointerdown", onPointerDown);
+  renderer.domElement.addEventListener("wheel", onWheel, { passive: false });
+  renderer.domElement.addEventListener("auxclick", (event) => {
+    if (event.button === 1) event.preventDefault();
+  });
   renderer.domElement.addEventListener("pointerleave", onCanvasPointerLeave);
   renderer.domElement.style.cursor = "grab";
   window.addEventListener("resize", resize);
   animate();
 
   return {
-    load(rawPayload: unknown) {
-      currentPayload = unpackVoxels(rawPayload as Record<string, unknown>);
+    load(payload: UnpackedVoxels) {
+      currentPayload = payload;
       root.clear();
 
       const geom = new THREE.BoxGeometry(1, 1, 1);
-      const mat = new THREE.MeshLambertMaterial({ color: 0xffffff });
+      const mat = new THREE.MeshPhongMaterial({
+        color: 0xffffff,
+        shininess: 24,
+        specular: 0x1a1a1a,
+      });
       const voxelCount = currentPayload.voxels.length / 4;
       const mesh = new THREE.InstancedMesh(geom, mat, voxelCount);
       const matrix = new THREE.Matrix4();
@@ -328,7 +504,7 @@ export function createViewer(container: HTMLElement, options: ViewerOptions = {}
         const y = currentPayload.voxels[i + 1];
         const z = currentPayload.voxels[i + 2];
         const pi = currentPayload.voxels[i + 3];
-        const rgb = liftPreviewRgb(currentPayload.palette[pi] || [145, 145, 145]);
+        const rgb = enrichPreviewRgb(currentPayload.palette[pi] || [145, 145, 145]);
         matrix.makeTranslation(
           x - currentPayload.size[0] / 2,
           y - currentPayload.size[1] / 2,
@@ -344,8 +520,9 @@ export function createViewer(container: HTMLElement, options: ViewerOptions = {}
       root.add(mesh);
 
       const maxDim = Math.max(currentPayload.size[0], currentPayload.size[1], currentPayload.size[2]);
-      placeCornerCamera(camera, maxDim);
-      setHomeRotation();
+      placePreviewCamera(camera, maxDim);
+      captureHomeCamera();
+      setHomeView();
       resize();
     },
     applySlices(top: number, side: number) {
@@ -361,7 +538,7 @@ export function createViewer(container: HTMLElement, options: ViewerOptions = {}
         const z = payload.voxels[i + 2];
         const pi = payload.voxels[i + 3];
         if (y > top || x > side) continue;
-        const rgb = liftPreviewRgb(payload.palette[pi] || [145, 145, 145]);
+        const rgb = enrichPreviewRgb(payload.palette[pi] || [145, 145, 145]);
         matrix.makeTranslation(
           x - payload.size[0] / 2,
           y - payload.size[1] / 2,
@@ -378,12 +555,38 @@ export function createViewer(container: HTMLElement, options: ViewerOptions = {}
     getPayload() {
       return currentPayload;
     },
+    captureSnapshot(target) {
+      if (disposed) return false;
+
+      renderer.render(scene, camera);
+      const source = renderer.domElement;
+      const rect = source.getBoundingClientRect();
+      const width = Math.max(1, Math.floor(rect.width));
+      const height = Math.max(1, Math.floor(rect.height));
+      target.width = width;
+      target.height = height;
+
+      const context = target.getContext("2d");
+      if (!context) return false;
+
+      try {
+        context.drawImage(source, 0, 0, width, height);
+        return true;
+      } catch {
+        return false;
+      }
+    },
     dispose() {
       disposed = true;
       cancelAnimationFrame(frameId);
+      endMiddleDrag(null, true);
       endDrag(null, true);
       unbindWindowDrag();
+      const canvas = renderer.domElement;
+      canvas.style.opacity = "0";
+      canvas.style.pointerEvents = "none";
       renderer.domElement.removeEventListener("pointerdown", onPointerDown);
+      renderer.domElement.removeEventListener("wheel", onWheel);
       renderer.domElement.removeEventListener("pointerleave", onCanvasPointerLeave);
       window.removeEventListener("resize", resize);
       root.traverse((child) => {
@@ -396,70 +599,9 @@ export function createViewer(container: HTMLElement, options: ViewerOptions = {}
         }
       });
       renderer.dispose();
-      if (renderer.domElement.parentNode === container) {
-        container.removeChild(renderer.domElement);
+      if (canvas.parentNode === container) {
+        container.removeChild(canvas);
       }
-    },
-  };
-}
-
-export function createPreviewPool(maxActive = 10) {
-  const active = new Map<HTMLElement, { viewer: VoxelViewer; voxelUrl: string }>();
-  const loadGeneration = new Map<HTMLElement, number>();
-
-  function disposeOldest() {
-    if (active.size < maxActive) return;
-    const oldest = active.keys().next().value as HTMLElement;
-    const entry = active.get(oldest);
-    if (entry) entry.viewer.dispose();
-    active.delete(oldest);
-  }
-
-  function bumpGeneration(container: HTMLElement) {
-    loadGeneration.set(container, (loadGeneration.get(container) ?? 0) + 1);
-  }
-
-  return {
-    async mount(container: HTMLElement, voxelUrl: string) {
-      const existing = active.get(container);
-      if (existing?.voxelUrl === voxelUrl) return existing.viewer;
-      if (existing) {
-        existing.viewer.dispose();
-        active.delete(container);
-      }
-
-      disposeOldest();
-      bumpGeneration(container);
-      const generation = loadGeneration.get(container)!;
-
-      const payload = await fetch(voxelUrl).then((response) => response.json());
-      if (loadGeneration.get(container) !== generation) return null;
-
-      const viewer = createViewer(container, {
-        interaction: "springIso",
-        maxPixelRatio: 1.5,
-      });
-      viewer.load(payload);
-      if (loadGeneration.get(container) !== generation) {
-        viewer.dispose();
-        return null;
-      }
-
-      active.set(container, { viewer, voxelUrl });
-      return viewer;
-    },
-    release(container: HTMLElement) {
-      bumpGeneration(container);
-      const entry = active.get(container);
-      if (entry) {
-        entry.viewer.dispose();
-        active.delete(container);
-      }
-    },
-    disposeAll() {
-      for (const entry of active.values()) entry.viewer.dispose();
-      active.clear();
-      loadGeneration.clear();
     },
   };
 }

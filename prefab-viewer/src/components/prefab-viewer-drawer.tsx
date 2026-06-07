@@ -1,5 +1,6 @@
 import { Drawer, Slider, Typography } from "antd";
 import { useEffect, useRef, useState } from "react";
+import { loadVoxelPayload } from "../library/load-voxel-payload";
 import { createViewer } from "../library/prefab-voxel-viewer";
 import type { PrefabEntry, VoxelViewer } from "../library/types";
 
@@ -27,8 +28,7 @@ export function PrefabViewerDrawer({ entry, open, onClose }: PrefabViewerDrawerP
       viewerRef.current = createViewer(host, { interaction: "free" });
     }
 
-    fetch(entry.voxelData)
-      .then((response) => response.json())
+    loadVoxelPayload(entry.voxelData)
       .then((payload) => {
         if (cancelled || !viewerRef.current) return;
         viewerRef.current.load(payload);

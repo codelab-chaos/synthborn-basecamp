@@ -1,13 +1,17 @@
 /*
  * Compact hue-only voxel payloads for prefab gallery previews.
- * Colors come from sampled asset metadata or hashed block-name hues — not textures.
+ * v2: JSON + base64 uint16 records (legacy)
+ * v3: raw PXV3 binary (.vox) — uint8 coords, 4–5 bytes/voxel, no embedded materials
  */
+
+const VOXEL_RECORD_BYTES = 8;
+const VOXEL_FILE_MAGIC = "PXV3";
 
 function rgbToHex(rgb) {
   return `#${rgb.map((v) => Math.max(0, Math.min(255, v | 0)).toString(16).padStart(2, "0")).join("")}`;
 }
 
-function buildVoxelPayload(blocks, bounds, materials) {
+function packBlocks(blocks, bounds) {
   const palette = [];
   const paletteIndex = new Map();
   const packed = [];
@@ -29,18 +33,21 @@ function buildVoxelPayload(blocks, bounds, materials) {
     );
   }
 
+  return { palette, packed };
+}
+
+function buildVoxelPayload(blocks, bounds, materials) {
+  const { palette, packed } = packBlocks(blocks, bounds);
   return {
     v: 2,
     s: [bounds.sizeX, bounds.sizeY, bounds.sizeZ],
     p: palette,
-    d: packVoxels(packed),
+    d: packVoxelsUint16(packed),
     materials: materials.map((m) => [m.name, m.count, m.color]),
   };
 }
 
-const VOXEL_RECORD_BYTES = 8;
-
-function packVoxels(flat) {
+function packVoxelsUint16(flat) {
   const count = flat.length / 4;
   const buf = Buffer.alloc(count * VOXEL_RECORD_BYTES);
   let off = 0;
@@ -55,6 +62,82 @@ function packVoxels(flat) {
     off += 2;
   }
   return buf.toString("base64");
+}
+
+function encodeVoxelFileV3(blocks, bounds) {
+  const { palette, packed } = packBlocks(blocks, bounds);
+  const voxelCount = packed.length / 4;
+  const widePalette = palette.length > 256;
+  const stride = widePalette ? 5 : 4;
+
+  if (bounds.sizeX > 255 || bounds.sizeY > 255 || bounds.sizeZ > 255) {
+    throw new Error(`prefab bounds exceed uint8 coords: ${bounds.sizeX}x${bounds.sizeY}x${bounds.sizeZ}`);
+  }
+
+  const buf = Buffer.alloc(10 + palette.length * 3 + 4 + voxelCount * stride);
+  buf.write(VOXEL_FILE_MAGIC, 0);
+  buf.writeUInt8(stride, 4);
+  buf.writeUInt8(bounds.sizeX, 5);
+  buf.writeUInt8(bounds.sizeY, 6);
+  buf.writeUInt8(bounds.sizeZ, 7);
+  buf.writeUInt16LE(palette.length, 8);
+
+  let off = 10;
+  for (const rgb of palette) {
+    buf.writeUInt8(rgb[0], off++);
+    buf.writeUInt8(rgb[1], off++);
+    buf.writeUInt8(rgb[2], off++);
+  }
+
+  buf.writeUInt32LE(voxelCount, off);
+  off += 4;
+
+  for (let i = 0; i < packed.length; i += 4) {
+    buf.writeUInt8(packed[i], off++);
+    buf.writeUInt8(packed[i + 1], off++);
+    buf.writeUInt8(packed[i + 2], off++);
+    if (widePalette) {
+      buf.writeUInt16LE(packed[i + 3], off);
+      off += 2;
+    } else {
+      buf.writeUInt8(packed[i + 3], off++);
+    }
+  }
+
+  return buf;
+}
+
+function decodeVoxelFileV3(buffer) {
+  const bytes = Buffer.isBuffer(buffer) ? buffer : Buffer.from(buffer);
+  if (bytes.length < 14 || bytes.toString("ascii", 0, 4) !== VOXEL_FILE_MAGIC) {
+    throw new Error("Unsupported voxel file");
+  }
+
+  const stride = bytes.readUInt8(4);
+  const size = [bytes.readUInt8(5), bytes.readUInt8(6), bytes.readUInt8(7)];
+  const paletteCount = bytes.readUInt16LE(8);
+  let off = 10;
+  const palette = [];
+
+  for (let i = 0; i < paletteCount; i++) {
+    palette.push([bytes.readUInt8(off), bytes.readUInt8(off + 1), bytes.readUInt8(off + 2)]);
+    off += 3;
+  }
+
+  const voxelCount = bytes.readUInt32LE(off);
+  off += 4;
+  const voxels = [];
+
+  for (let i = 0; i < voxelCount; i++) {
+    const x = bytes.readUInt8(off++);
+    const y = bytes.readUInt8(off++);
+    const z = bytes.readUInt8(off++);
+    const pi = stride === 5 ? bytes.readUInt16LE(off) : bytes.readUInt8(off);
+    off += stride === 5 ? 2 : 1;
+    voxels.push(x, y, z, pi);
+  }
+
+  return { size, palette, voxels, materials: [] };
 }
 
 function unpackVoxels(payload) {
@@ -104,6 +187,8 @@ function unpackVoxels(payload) {
 module.exports = {
   rgbToHex,
   buildVoxelPayload,
-  packVoxels,
+  encodeVoxelFileV3,
+  decodeVoxelFileV3,
+  packVoxels: packVoxelsUint16,
   unpackVoxels,
 };
