@@ -1,0 +1,123 @@
+:root {
+  --preview-bg: linear-gradient(180deg, #7a8088 0%, #666c74 52%, #565c64 100%);
+}
+
+body {
+  margin: 0;
+}
+
+.gallery-shell {
+  min-height: 100vh;
+}
+
+.gallery-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: auto !important;
+  line-height: inherit !important;
+  padding: 16px 24px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+.gallery-toolbar {
+  width: 100%;
+}
+
+.gallery-main {
+  padding: 16px 24px 32px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+.prefab-card .ant-card-head {
+  min-height: auto;
+}
+
+.prefab-card__meta {
+  display: grid;
+  gap: 2px;
+  padding: 0 12px 10px;
+}
+
+.prefab-card__id,
+.prefab-card__path {
+  display: block;
+  font-size: 12px;
+}
+
+.prefab-card__preview-wrap {
+  position: relative;
+  min-height: 240px;
+  background: var(--preview-bg);
+}
+
+.prefab-card__view-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  padding: 7px 9px;
+  background: rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+}
+
+.prefab-card__view-label .ant-btn {
+  pointer-events: auto;
+}
+
+.prefab-card__preview {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 240px;
+  background: transparent;
+  cursor: grab;
+  touch-action: none;
+}
+
+.prefab-card__preview.is-dragging,
+.drawer-viewer.is-dragging,
+.drawer-viewer canvas.is-dragging {
+  cursor: grabbing;
+}
+
+.prefab-card__preview canvas,
+.drawer-viewer canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.material-strip {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 10px 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.drawer-viewer {
+  width: 100%;
+  height: 360px;
+  min-height: 360px;
+  background: var(--preview-bg);
+  touch-action: none;
+}
+
+.drawer-controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 820px) {
+  .drawer-controls {
+    grid-template-columns: 1fr;
+  }
+}
