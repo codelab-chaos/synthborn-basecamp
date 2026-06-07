@@ -16,9 +16,12 @@ export type PrefabEntry = {
   materials: PrefabMaterial[];
 };
 
+export type TagTree = Record<string, string[]>;
+
 export type GalleryManifest = {
   entries: PrefabEntry[];
   tagList: string[];
+  tagTree?: TagTree;
   groups: string[];
   generatedAt: string;
   assetsRoot: string;
@@ -36,13 +39,15 @@ export type ViewerOptions = {
   interaction?: "springIso" | "free";
   antialias?: boolean;
   maxPixelRatio?: number;
+  preserveDrawingBuffer?: boolean;
   tiltX?: number;
   tiltY?: number;
 };
 
 export type VoxelViewer = {
-  load: (rawPayload: unknown) => void;
+  load: (payload: UnpackedVoxels) => void;
   applySlices: (top: number, side: number) => void;
   getPayload: () => UnpackedVoxels | null;
+  captureSnapshot: (target: HTMLCanvasElement) => boolean;
   dispose: () => void;
 };

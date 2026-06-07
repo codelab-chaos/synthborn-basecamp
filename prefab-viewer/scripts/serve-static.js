@@ -14,6 +14,7 @@ const types = {
   ".json": "application/json; charset=utf-8",
   ".png": "image/png",
   ".css": "text/css; charset=utf-8",
+  ".vox": "application/octet-stream",
 };
 
 http.createServer((req, res) => {

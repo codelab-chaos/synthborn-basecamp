@@ -1,25 +1,54 @@
 import { Form, Input, Select } from "antd";
+import { useMemo } from "react";
 import { formatPrefabLabel } from "../library/format-prefab-label";
+import {
+  buildTagTree,
+  rootTagList,
+  visibleTagOptions,
+  type TagTree,
+} from "../library/tag-hierarchy";
+import type { PrefabEntry } from "../library/types";
 
 type PrefabFiltersProps = {
   query: string;
   tags: string[];
+  entries: PrefabEntry[];
   tagList: string[];
+  tagTree?: TagTree;
   onQueryChange: (value: string) => void;
   onTagsChange: (value: string[]) => void;
 };
 
-export function PrefabFilters({
-  query,
-  tags,
-  tagList,
-  onQueryChange,
-  onTagsChange,
-}: PrefabFiltersProps) {
-  const tagOptions = tagList.map((value) => ({
+function toSelectOptions(values: string[]) {
+  return values.map((value) => ({
     value,
     label: formatPrefabLabel(value),
   }));
+}
+
+export function PrefabFilters({
+  query,
+  tags,
+  entries,
+  tagList,
+  tagTree,
+  onQueryChange,
+  onTagsChange,
+}: PrefabFiltersProps) {
+  const roots = useMemo(() => rootTagList(entries, tagList), [entries, tagList]);
+  const tree = useMemo(() => tagTree ?? buildTagTree(entries), [entries, tagTree]);
+  const { roots: parentTags, subfolders } = useMemo(
+    () => visibleTagOptions(roots, tree, tags),
+    [roots, tree, tags],
+  );
+
+  const selectOptions = useMemo(() => {
+    const grouped = [{ label: "Categories", options: toSelectOptions(parentTags) }];
+    if (subfolders.length) {
+      grouped.push({ label: "Subfolders", options: toSelectOptions(subfolders) });
+    }
+    return grouped;
+  }, [parentTags, subfolders]);
 
   return (
     <Form
@@ -45,10 +74,10 @@ export function PrefabFilters({
           mode="multiple"
           allowClear
           showSearch
-          placeholder="All tags"
+          placeholder="All categories"
           value={tags}
           onChange={onTagsChange}
-          options={tagOptions}
+          options={selectOptions}
           optionFilterProp="label"
           maxTagCount="responsive"
           style={{ width: "100%" }}

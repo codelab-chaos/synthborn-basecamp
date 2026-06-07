@@ -44,10 +44,31 @@ body {
   padding: 0 12px 10px;
 }
 
-.prefab-card__id,
+.prefab-card__id {
+  display: block;
+  font-size: 12px;
+}
+
 .prefab-card__path {
   display: block;
   font-size: 12px;
+  line-height: 1.45;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.prefab-path__sep,
+.prefab-path__static {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.prefab-path__link {
+  font-size: 12px;
+}
+
+.prefab-path__link.is-active {
+  font-weight: 600;
 }
 
 .prefab-card__preview-wrap {
@@ -72,6 +93,7 @@ body {
 }
 
 .prefab-card__preview {
+  position: relative;
   display: block;
   width: 100%;
   height: 100%;
@@ -81,13 +103,54 @@ body {
   touch-action: none;
 }
 
+.prefab-card__preview .preview-snapshot,
+.prefab-card__preview .preview-canvas-host {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.prefab-card__preview .preview-snapshot {
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.prefab-card__preview .preview-snapshot.is-active {
+  opacity: 1;
+}
+
+.prefab-card__preview .preview-canvas-host {
+  z-index: 2;
+  background: var(--preview-bg);
+}
+
+.prefab-card__preview.preview-queued {
+  opacity: 0.85;
+}
+
+.prefab-card__preview .preview-status {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  pointer-events: none;
+  text-transform: uppercase;
+}
+
 .prefab-card__preview.is-dragging,
 .drawer-viewer.is-dragging,
 .drawer-viewer canvas.is-dragging {
   cursor: grabbing;
 }
 
-.prefab-card__preview canvas,
+.prefab-card__preview .preview-canvas-host canvas,
 .drawer-viewer canvas {
   display: block;
   width: 100%;

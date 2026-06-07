@@ -1,28 +1,26 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import {
+  readGalleryFilterState,
+  writeGalleryFilterState,
+  type FilterState,
+} from "../library/gallery-filter-state";
 import { formatPrefabLabel } from "../library/format-prefab-label";
+import { entryMatchesTags, entryTagPath } from "../library/tag-hierarchy";
 import type { PrefabEntry } from "../library/types";
 
-export type FilterState = {
-  query: string;
-  tags: string[];
-  page: number;
-  pageSize: number;
-};
-
-const defaultState: FilterState = {
-  query: "",
-  tags: [],
-  page: 1,
-  pageSize: 10,
-};
+export type { FilterState };
 
 export function usePrefabFilter(entries: PrefabEntry[]) {
-  const [state, setState] = useState<FilterState>(defaultState);
+  const [state, setState] = useState<FilterState>(readGalleryFilterState);
+
+  useEffect(() => {
+    writeGalleryFilterState(state);
+  }, [state]);
 
   const filtered = useMemo(() => {
     const query = state.query.trim().toLowerCase();
     return entries.filter((entry) => {
-      const entryTags = entry.tags || [];
+      const entryTags = entryTagPath(entry);
       const haystack = [
         entry.label,
         entry.id,
@@ -37,8 +35,7 @@ export function usePrefabFilter(entries: PrefabEntry[]) {
         .toLowerCase();
 
       const matchesQuery = !query || haystack.includes(query);
-      const matchesTags =
-        state.tags.length === 0 || state.tags.some((tag) => entryTags.includes(tag));
+      const matchesTags = entryMatchesTags(entry, state.tags);
       return matchesQuery && matchesTags;
     });
   }, [entries, state.query, state.tags]);
@@ -65,6 +62,11 @@ export function usePrefabFilter(entries: PrefabEntry[]) {
     totalPages,
     setQuery: (query: string) => update({ query }),
     setTags: (tags: string[]) => update({ tags }),
+    addTag: (tag: string) =>
+      setState((prev) => {
+        if (prev.tags.includes(tag)) return prev;
+        return { ...prev, tags: [...prev.tags, tag], page: 1 };
+      }),
     setPage: (page: number) => update({ page }),
     setPageSize: (pageSize: number) => update({ pageSize }),
   };

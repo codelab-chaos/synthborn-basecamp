@@ -1,50 +1,135 @@
-import { useEffect, useRef } from "react";
-import { getPreviewPool } from "../library/preview-pool";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { useElementVisibility } from "../hooks/use-element-visibility";
+import { getElementViewportPriority } from "../library/get-element-viewport-priority";
+import { createViewer } from "../library/prefab-voxel-viewer";
+import { loadVoxelPayload } from "../library/load-voxel-payload";
+import { registerWebglPreviewSlotClient } from "../library/webgl-preview-slots";
+import type { VoxelViewer } from "../library/types";
 
 type VoxelPreviewProps = {
   voxelData: string;
-  pageSize: number;
   className?: string;
 };
 
-export function VoxelPreview({ voxelData, pageSize, className }: VoxelPreviewProps) {
-  const hostRef = useRef<HTMLDivElement | null>(null);
+export function VoxelPreview({ voxelData, className }: VoxelPreviewProps) {
+  const rootRef = useRef<HTMLDivElement | null>(null);
+  const canvasHostRef = useRef<HTMLDivElement | null>(null);
+  const snapshotRef = useRef<HTMLCanvasElement | null>(null);
+  const [host, setHost] = useState<HTMLDivElement | null>(null);
+  const visible = useElementVisibility(host);
+  const [queued, setQueued] = useState(false);
+
+  const setRootRef = useCallback((node: HTMLDivElement | null) => {
+    rootRef.current = node;
+    setHost(node);
+  }, []);
+
+  const showSnapshot = useCallback(() => {
+    snapshotRef.current?.classList.add("is-active");
+  }, []);
+
+  const hideSnapshot = useCallback(() => {
+    snapshotRef.current?.classList.remove("is-active");
+  }, []);
 
   useEffect(() => {
-    const host = hostRef.current;
-    if (!host) return;
+    const canvasHost = canvasHostRef.current;
+    if (!canvasHost || !visible) {
+      setQueued(false);
+      return;
+    }
 
     let cancelled = false;
-    const pool = getPreviewPool(pageSize);
+    let viewer: VoxelViewer | null = null;
+    let mounting = false;
+    let mountGeneration = 0;
+    let slotGranted = false;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const entry = entries[0];
-        if (!entry || cancelled) return;
-
-        if (entry.isIntersecting) {
-          if (host.textContent) host.textContent = "";
-          pool
-            .mount(host, voxelData)
-            .catch((err: Error) => {
-              if (!cancelled) host.textContent = "Preview unavailable";
-              console.error(voxelData, err);
-            });
-        } else {
-          pool.release(host);
+    const teardown = () => {
+      if (viewer && snapshotRef.current) {
+        if (viewer.captureSnapshot(snapshotRef.current)) {
+          showSnapshot();
         }
+      }
+      viewer?.dispose();
+      viewer = null;
+      canvasHost.textContent = "";
+    };
+
+    const mount = async () => {
+      if (cancelled || viewer || mounting || !slotGranted || !canvasHostRef.current) return;
+
+      mounting = true;
+      setQueued(false);
+      const generation = ++mountGeneration;
+      canvasHost.textContent = "";
+
+      try {
+        const payload = await loadVoxelPayload(voxelData);
+        if (cancelled || !slotGranted || generation !== mountGeneration || !canvasHostRef.current) {
+          teardown();
+          return;
+        }
+
+        viewer = createViewer(canvasHost, {
+          interaction: "springIso",
+          maxPixelRatio: 1.5,
+          preserveDrawingBuffer: true,
+        });
+        viewer.load(payload);
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            if (!cancelled && viewer) hideSnapshot();
+          });
+        });
+      } catch (err) {
+        teardown();
+        if (!cancelled && canvasHostRef.current) {
+          canvasHostRef.current.textContent = "Preview unavailable";
+        }
+        console.error(voxelData, err);
+      } finally {
+        mounting = false;
+      }
+    };
+
+    const unregister = registerWebglPreviewSlotClient(
+      () => {
+        const target =
+          rootRef.current?.closest<HTMLElement>(".prefab-card__preview-wrap") ?? rootRef.current;
+        return target ? getElementViewportPriority(target) : Number.POSITIVE_INFINITY;
       },
-      { rootMargin: "120px" },
+      () => {
+        slotGranted = true;
+        setQueued(false);
+        void mount();
+      },
+      () => {
+        slotGranted = false;
+        mountGeneration += 1;
+        setQueued(true);
+        teardown();
+      },
     );
 
-    observer.observe(host);
+    if (!slotGranted) setQueued(true);
 
     return () => {
       cancelled = true;
-      observer.disconnect();
-      pool.release(host);
+      mountGeneration += 1;
+      unregister();
+      teardown();
+      setQueued(false);
     };
-  }, [pageSize, voxelData]);
+  }, [visible, voxelData, hideSnapshot, showSnapshot]);
 
-  return <div ref={hostRef} className={className} />;
+  const classNames = [className, queued ? "preview-queued" : ""].filter(Boolean).join(" ");
+
+  return (
+    <div ref={setRootRef} className={classNames}>
+      <canvas ref={snapshotRef} className="preview-snapshot" aria-hidden="true" />
+      <div ref={canvasHostRef} className="preview-canvas-host" />
+      {queued ? <span className="preview-status">Loading preview…</span> : null}
+    </div>
+  );
 }
