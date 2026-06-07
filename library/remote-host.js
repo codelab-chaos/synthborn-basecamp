@@ -8,9 +8,11 @@ const { spawnSync } = require("node:child_process");
 const REPO_ROOT = path.resolve(__dirname, "..", "..");
 const IS_WINDOWS = process.platform === "win32";
 
+/** Later files override earlier keys. Root remote-host.env is the canonical config. */
 const ENV_FILES = [
   path.join(REPO_ROOT, "mods", "SynthOverseer", "remote-host.env"),
   path.join(REPO_ROOT, "mods", "SynthUnits", "remote-host.env"),
+  path.join(REPO_ROOT, "remote-host.env"),
 ];
 
 const REMOTE_ENV_KEYS = [
@@ -21,6 +23,7 @@ const REMOTE_ENV_KEYS = [
   "HYTALE_REMOTE_INSTALL",
   "HYTALE_REMOTE_SSH",
   "SYNTH_RCON_HOST",
+  "SYNTH_WORLDVIEW_URL",
 ];
 
 const SAVE_RCON_PORTS = {
@@ -302,6 +305,21 @@ function resolveRconPort(saveName, cliPort) {
   return dev.rconPort || resolveSaveRconPort(saveName) || Number(process.env.SYNTH_RCON_PORT) || 25576;
 }
 
+/**
+ * HTTP base URL for SynthWorldview (or other Mac-hosted HTTP services).
+ * Priority: WORLDVIEW_URL > SYNTH_WORLDVIEW_URL > http://SYNTH_RCON_HOST:port (remote) > localhost.
+ */
+function resolveWorldviewUrl(port = 5960) {
+  if (process.env.WORLDVIEW_URL) return process.env.WORLDVIEW_URL;
+  if (process.env.SYNTH_WORLDVIEW_URL) return process.env.SYNTH_WORLDVIEW_URL;
+  configureRemoteHost();
+  if (isRemoteEnabled() && process.env.SYNTH_RCON_HOST) {
+    const host = process.env.SYNTH_RCON_HOST.replace(/^https?:\/\//, "").split(":")[0];
+    return `http://${host}:${port}`;
+  }
+  return `http://127.0.0.1:${port}`;
+}
+
 function remoteRepoHasStartScript() {
   configureRemoteHost({ remote: true });
   const repo = remoteRepoShellPath();
@@ -334,7 +352,7 @@ function remoteStartServerDirect(saveName, options = {}) {
     bindPort ? `if [ "${skipPortCheck}" != "true" ] && lsof -i UDP:${bindPort} >/dev/null 2>&1; then echo "UDP port ${bindPort} already in use"; exit 1; fi` : null,
     'mkdir -p "$SAVE/logs"',
     'cd "$SAVE"',
-    `nohup "$JAVA" -Xms${minRam}G -Xmx${maxRam}G -Dsynthrcon.host=0.0.0.0 -Dsynthrcon.port=${rconPort} -jar "$JAR" --assets "$ASSETS" --auth-mode authenticated --bind "$BIND" >>"$SAVE/logs/dev-server.out" 2>&1 & echo $! > "$SAVE/.dev-server.pid"`,
+    `nohup "$JAVA" -Xms${minRam}G -Xmx${maxRam}G -Dsynthrcon.host=0.0.0.0 -Dsynthrcon.port=${rconPort} -Dsynthrcon.allowRemote=true -Dsynthworldview.http.host=0.0.0.0 -jar "$JAR" --assets "$ASSETS" --auth-mode authenticated --bind "$BIND" >>"$SAVE/logs/dev-server.out" 2>&1 & echo $! > "$SAVE/.dev-server.pid"`,
     'echo "started detached pid=$(cat "$SAVE/.dev-server.pid")"',
   ].filter(Boolean).join(" && ");
 
@@ -547,8 +565,11 @@ function findFatJar(modDir) {
 }
 
 function gradleTask(modDir, task) {
-  const gradlewCmd = IS_WINDOWS ? ".\\gradlew.bat" : "./gradlew";
-  runChecked(`gradle ${task}`, gradlewCmd, [task], { cwd: modDir });
+  if (IS_WINDOWS) {
+    runChecked(`gradle ${task}`, "cmd.exe", ["/d", "/s", "/c", ".\\gradlew.bat", task], { cwd: modDir });
+    return;
+  }
+  runChecked(`gradle ${task}`, "./gradlew", [task], { cwd: modDir });
 }
 
 function deployModLocal(modDir, task = "deploy") {
@@ -643,6 +664,7 @@ module.exports = {
   resolveSaveRconPort,
   resolveRconHost,
   resolveRconPort,
+  resolveWorldviewUrl,
   remoteServerHealth,
   waitForRemoteHealth,
   remoteStopServer,
