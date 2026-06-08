@@ -1,6 +1,25 @@
-# Recipe Tools
+# Recipe / Game-Data Tools
 
-Helpers for working with Hytale item recipe data from `_Assets`.
+Helpers for working with Hytale recipe **and loot** data from `_Assets`.
+
+## Query (start here)
+
+`gamedata.js` is the fast multi-criteria search over the generated indexes — use it
+instead of grepping the giant `docs/recipes/*.md` files or fanning out file reads:
+
+```powershell
+node tools/recipes/gamedata.js bench Campfire          # what cooks at a fire pit
+node tools/recipes/gamedata.js make Weapon_Sword_Copper # transitive craft tree + raw inputs
+node tools/recipes/gamedata.js source Ingredient_Hide_Light # every way to obtain it (craft + drop)
+node tools/recipes/gamedata.js drops Plant_Bush         # resolved loot table (expected + chance)
+node tools/recipes/gamedata.js uses Ingredient_Bar_Copper
+node tools/recipes/gamedata.js find Tannery             # fuzzy id search
+```
+
+Commands: `find | recipe | make | uses | bench | drops | source`. Ids accept
+substrings, `*globs*`, or `/regex/` (case-insensitive). Add `--json` for machine output.
+It reads `docs/recipes/recipes.json` + `docs/recipes/loot.json` — regenerate those with
+the two extractors below if `_Assets` changed.
 
 ## Extract Recipes
 
@@ -14,6 +33,20 @@ Outputs:
 
 - `docs/recipes/recipes.txt`
 - `docs/recipes/recipes.json`
+
+## Extract Loot
+
+Regenerate the normalized drop/loot index from `_Assets/Server/Drops/` (named
+drop-lists) and `_Assets/Server/Item/Items/` (block `BlockType.Gathering`):
+
+```powershell
+node tools/recipes/extract-loot.js
+```
+
+Outputs (resolved drop-lists + expected count + chance, with a reverse `byItem` index):
+
+- `docs/recipes/loot.txt`
+- `docs/recipes/loot.json`
 
 ## Build Tech Trees
 

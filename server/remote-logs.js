@@ -19,7 +19,7 @@ const {
 } = require("../library/remote-host");
 
 const DEFAULT_AUTH_PATTERN = "auth|authorization|device/verify|user_code|serverAuthUnavailable|Mutual authentication|Token Source|Credential storage";
-const DEFAULT_BOOT_PATTERN = "Booting up HytaleServer|Hytale Server Booted|Authentication mode|Authentication successful|No server tokens configured|Enabled plugin|SynthRCON listening|SynthOverseer setup complete|SynthWorldview started|SEVERE|ERROR";
+const DEFAULT_BOOT_PATTERN = "Booting up HytaleServer|Hytale Server Booted|Authentication mode|Authentication successful|No server tokens configured|Enabled plugin|SynthRCON listening|SynthOverseer setup complete|SynthTerrascape started|SEVERE|ERROR";
 
 function usage() {
   console.log(`Usage:

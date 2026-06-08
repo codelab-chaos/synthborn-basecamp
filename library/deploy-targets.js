@@ -40,11 +40,11 @@ const TARGETS = {
     ],
     smokeScript: path.join("tools", "smoke", "synthunits-smoke.js"),
   },
-  worldview: {
+  terrascape: {
     save: "synth-worldview-mvp",
     modules: [
       { name: "SynthRCON" },
-      { name: "SynthWorldview" },
+      { name: "SynthTerrascape" },
     ],
   },
 };
@@ -69,6 +69,7 @@ Options:
   --max-ram <GB>      Max RAM for restart/start.
   --min-ram <GB>      Min RAM for restart/start.
   --skip-running-check
+  --clear-cache       After deploy, run /terrascape clearcache (terrascape only; mesh work).
   --help, -h          Show this help.
 `);
 }
@@ -85,6 +86,7 @@ function parseArgs(argv) {
     maxRamGB: null,
     minRamGB: null,
     skipRunningCheck: false,
+    clearCache: false,
   };
 
   for (let i = 0; i < argv.length; i += 1) {
@@ -122,6 +124,9 @@ function parseArgs(argv) {
       case "--skip-running-check":
         opts.skipRunningCheck = true;
         break;
+      case "--clear-cache":
+        opts.clearCache = true;
+        break;
       case "--local":
       case "--remote":
         break;
@@ -151,7 +156,9 @@ function targetByName(name) {
 }
 
 function modDir(moduleName) {
-  return path.join(REPO_ROOT, "mods", moduleName);
+  // Until mods/SynthWorldview is renamed to mods/SynthTerrascape on disk.
+  const dirName = moduleName === "SynthTerrascape" ? "SynthWorldview" : moduleName;
+  return path.join(REPO_ROOT, "mods", dirName);
 }
 
 function runChecked(label, command, args, options = {}) {
@@ -271,6 +278,15 @@ function verifyTarget(target) {
   runNodeTool("RCON health", path.join("tools", "rcon", "synth-rcon.js"), ["--save", target.save, "--health"]);
 }
 
+function clearTerrascapeServerCache(saveName) {
+  console.log(`\n== clear SynthTerrascape server cache (${saveName})`);
+  runNodeTool(
+    "terrascape clearcache",
+    path.join("tools", "rcon", "synth-rcon.js"),
+    ["--save", saveName, "terrascape", "clearcache"],
+  );
+}
+
 function smokeTarget(target, opts) {
   if (!target.smokeScript) {
     throw new Error(`Target ${opts.targetName} has no smoke script`);
@@ -282,9 +298,9 @@ function smokeTarget(target, opts) {
 }
 
 function testTarget(target, opts) {
-  if (opts.targetName === "worldview") {
-    runChecked("SynthWorldview npm test", process.platform === "win32" ? "npm.cmd" : "npm", ["test"], {
-      cwd: modDir("SynthWorldview"),
+  if (opts.targetName === "terrascape") {
+    runChecked("SynthTerrascape npm test", process.platform === "win32" ? "npm.cmd" : "npm", ["test"], {
+      cwd: modDir("SynthTerrascape"),
     });
     return;
   }
@@ -337,6 +353,13 @@ function runDeployCli(argv, options = {}) {
   }
   if (opts.smoke) smokeTarget(target, opts);
   if (opts.test) testTarget(target, opts);
+
+  if (opts.clearCache) {
+    if (opts.targetName !== "terrascape") {
+      throw new Error("--clear-cache is only supported for the terrascape deploy target");
+    }
+    clearTerrascapeServerCache(target.save);
+  }
 }
 
 function remoteFlagOptions(argv) {
