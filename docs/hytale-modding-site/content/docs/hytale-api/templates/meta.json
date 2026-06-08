@@ -1,6 +1,0 @@
-{
-  "title": "Template for Hytale API Documentation",
-  "description": "Template for documenting Hytale's API.",
-  "pages": ["class.mdx"],
-  "icon": "Package"
-}
