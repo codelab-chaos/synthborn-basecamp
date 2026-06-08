@@ -1,0 +1,21 @@
+Group {
+    LayoutMode: Center;
+
+    Group #MenuContainer {
+        Anchor: (Width: 400, Height: 200);
+        Background: (Color: #333333(0.9));
+        LayoutMode: Top;
+        Padding: (Full: 20);
+
+        Label #Title {
+            Style: (FontSize: 24, TextColor: #FFFFFF, HorizontalAlignment: Center);
+            Text: "Simple Menu";
+        }
+
+        Label #Subtitle {
+            Anchor: (Top: 20);
+            Style: (FontSize: 16, TextColor: #AAAAAA, HorizontalAlignment: Center);
+            Text: "Press ESC to close";
+        }
+    }
+}
