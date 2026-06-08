@@ -1,0 +1,90 @@
+---
+title: Informações sobre o código do servidor
+description: Slikey compartilhou algumas informações sobre o código do servidor em 15/12/2025. Este documento abrange os principais pontos e os tópicos dessa discussão.
+---
+
+<Callout type="info" title="Nota">
+    As informações a seguir baseiam-se em observações compartilhadas pelo Diretor Técnico Slikey, em 15 de dezembro de 2025, no servidor de Discord do Hytale. Ele fornece uma visão geral da arquitetura do código do servidor e das capacidades dos plugins.
+
+    Este documento é composto principalmente por falas do próprio Slikey, com poucas observações adicionais. A ideia é manter o que foi dito em vez de mudar as palavras e o contexto.
+</Callout>
+
+# Código-fonte do servidor
+
+O servidor será lançado como fonte compartilhada. Teremos acesso ao código-fonte sem qualquer ofuscação e com todos os seus comentários.
+
+### Licença
+
+A licença permite o uso para quaisquer coisas **relacionadas ao Hytale**, desde que você não use o servidor e/ou código-fonte para criar seu próprio jogo ou vender os algoritmos deles.
+
+# Sistema de permissão
+
+Após ser questionado no servidor Hytale Modding, o Arquiteto Chefe Zero respondeu:
+
+É bastante básico, por isso não espere muito, mas sim, temos um sistema de permissões integrado. Também suporta a implementação do seu próprio back-end. Ex.: se você quisesse armazená-lo em um banco de dados.
+
+![Premission Source Snippet](/assets/premission-system.png)
+
+# Implementação da geração de mundo
+
+O bloco de texto a seguir é diretamente do Arquiteto Chefe Zero:
+
+Você pode implementar uma geração de mundo personalizada em um plugin de forma super fácil. Portanto, caso deseje uma lógica de geração de terreno completamente nova, você pode implementá-la via plugin e definir que o mundo a utilize. Já existem sistemas para carregar os prefabs e os códigos nos geradores atuais que podem ser reaproveitados, mas ainda não temos APIs específicas para os detalhes internos da geração.
+
+```java
+public interface IWorldGenProvider {
+    BuilderCodecMapCodec<IWorldGenProvider> CODEC = new BuilderCodecMapCodec<>("Type", true);
+
+    IWorldGen getGenerator() throws WorldGenLoadException;
+}
+```
+
+```java
+public interface IWorldGen {
+    @Nullable
+    WorldGenTimingsCollector getTimings();
+
+    CompletableFuture<GeneratedChunk> generate(int seed, long index, int x, int z, LongPredicate stillNeeded);
+
+    @Deprecated
+    Transform[] getSpawnPoints(int seed);
+
+    @Nonnull
+    default ISpawnProvider getDefaultSpawnProvider(int seed) {
+        return new FitToHeightMapSpawnProvider(new IndividualSpawnProvider(getSpawnPoints(seed)));
+    }
+
+    default void shutdown() {}
+}
+```
+
+# Trechos de código do servidor
+
+Alguns trechos de código de um plugin que eles criaram também foram compartilhados. Os trechos a seguir são citações diretas do diretor técnico Slikey:
+
+## Plugin BlockSpawner
+
+Deixarei aqui alguns trechos de código para um plugin simples chamado “BlockSpawner”. Ele se transformará em um bloco “aleatório” quando colocado no mundo com base nas regras configuradas.
+
+Há mais código nesta aqui, mas ele serve para mostrar como funciona o sistema de recursos e a estrutura do plugin. Perceba que o sistema de recursos define "Codecs" que são usados para serializar e desserializar dados. Ao usá-los, podemos gerar esquemas.
+Digamos que você se conecte a um servidor e abra o editor de assets: o servidor enviará esses esquemas. Portanto, cada tipo de recurso definido no lado do servidor, até mesmo os seus próprios, agora se tornam parte do editor de recursos no cliente. Não é necessário fazer nada, apenas aproveite a interface do editor para criar os recursos que você mesmo definiu.
+
+![Block Spawner Code 1](/assets/blockspawner-code-1.png)
+![Block Spawner Code 2](/assets/blockspawner-code-2.png)
+![Block Spawner Code 3](/assets/blockspawner-code-3.png)
+![Block Spawner Manifest](/assets/blockspawner-manifest.png)
+
+> Acredito que essa parte também mostra um pouco como usamos as constantes para armazenar algumas chaves de idioma. — Slikey
+> (referente à imagem abaixo)
+
+![Constants to store Language Keys](/assets/constants.png)
+
+> Você pode personalizar completamente o provedor de armazenamento de chunks. Por exemplo, criamos um que é apenas vazio, onde ele não carrega nenhum chunk do disco. Você poderia adicionar um `MySQLChunkStorageProvider` e ele poderia ler os dados de um banco de dados. O mesmo vale para a geração de mundo, a qual você pode simplesmente implementar esta interface para criar um gerador de mundo.
+
+![Chunks 1](/assets/chunks-1.png)
+![Chunks 2](/assets/chunks-2.png)
+![Chunks 3](/assets/chunks-3.png)
+
+> Digo, aqui estão todas as armas definidas, você me diz e obviamente descobrirá limitações, mas acho que há muito espaço para fazer mudanças. Essas coisas são difíceis, na verdade, ainda há muita qualidade de vida para ser implementada aqui.
+
+![Weapons 1](/assets/weapons-1.png)

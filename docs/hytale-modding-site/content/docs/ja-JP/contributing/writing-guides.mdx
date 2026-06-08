@@ -1,0 +1,139 @@
+---
+title: 執筆ガイド
+---
+
+## ガイドファイルの作成
+
+ガイドの作成を始めるには、.mdx拡張子のファイルを作成し、 content/docs/enディレクトリ内に配置してください。どの記事にガイドを作成するかによって、フォルダの配置が決まってます。
+
+もしJavaの基本的なガイドを作りたいなら、content/docs/en/guides/java-basicsに配置します。 既存のフォルダ構成から適切な場所を判断してください。
+
+<Callout>
+    すでに同じ記事がある場合、サイトの「Edit On GitHub」ボタンを押すと該当フォルダに直接移動し、編集することができます。
+</Callout>
+
+## Frontmatter
+
+Frontmatter はガイドのメタデータで、Webサイトにガイドをどう表示するかを指示します。 これはファイルの一番上、'---'で挟まれている部分に記述する必要があります。
+
+例
+
+```mdx
+---
+title: "Java Basics"
+description: "Learn the basics of Java programming."
+authors:
+    - name: "Your Name"
+      url: "https://yourwebsite.com"
+icon: YourIcon 
+---
+```
+
+ご覧の通りガイドの詳細を記述するだけでOKです。 リンクしたいURLが無い場合は、その行を削除してください。 authors（著者）の記載は任意ですが、明記することを推奨しています。
+
+Frontmatter の文法は例と同じフォーマットで揃えてください。
+
+## コンテンツ構造
+
+ガイドの中身は、読み手が理解しやすいように整った構造にしてください。 そのためのヒントをいくつか紹介します。
+
+- **導入**：トピックの概要と読み手が何を学べるかを説明しましょう。
+- **前提条件**：ガイドを読み進める前に必要な環境や事前知識をリストアップしましょう。
+- **段階的な指示**：ガイドの内容を複数の手順として小分けにしましょう。 見出しと小見出しを使用して情報を整理します。
+- **コード例**：重要なポイントを示すコードスニペットを入れてください。 それぞれの例を使用して、詳細に説明をするようにしましょう。
+- **結論**：要点をまとめ、読み手の学習意欲を出させるようにしましょう。
+
+記事が大きくなりそうな場合は、複数のページに分けることで読み手も理解しやすくなります。 誰も、文字の塊のような長文を一気に読みたいとは思いません。
+
+ガイドを作成する際には、読み手がどのように利用するかを考慮する必要があります。多くの人は、内容を詳細に読むよりも、流し読みをしています。 そのため、情報を複数のページに分割し、読み手にとって情報がシンプルなように見せる方が効果的です。 また、箇条書き、番号付きリスト、その他の書式設定の手法を活用して、読みやすくすることも考えてみてください。
+
+## 書式設定
+
+ガイドの書式設定には[Markdown](https://www.markdownguide.org/)を使用しています。 以下に留意すべきポイントをいくつか紹介します。
+
+- 見出し (`#`, `##`, `###`) を使用して内容を整理できます。
+- 箇条書きと番号付きリストを使用するとわかりやすくなります。
+- コードスニペットにはコードブロック (\`\`\`) を使用できます。
+- リンクを添付して、他のガイドや外部リソースを参照できます。
+
+これらは、ほとんどのドキュメントサイトや、Discord などのSNSプラットフォームでよく使われる書式です。
+
+### Links
+
+Everyone knows what a link is. However, there is a difference between linking to an external resource and linking to an internal one.
+
+In general, in Markdown they are written like this: `[Your Text](Your link)`
+
+#### External
+
+Nothing to explain, just `https://example.com`.
+
+#### Internal
+
+You cannot use regular links here. Let's say your link to another guide is `https://hytalemodding.dev/en/docs/quick-start`.
+You can't write it like that because you are not only referring to the page but also to the language, which is not correct.
+Instead, type `./quick-start` which is correct and links to the page in the user's language.
+
+**Accessing files**
+
+- **Current Folder**: `./`
+- **Folder above**: `../` as many times as this folder is higher in the hierarchy.
+
+## Icons
+
+If you want to add an icon for your page then you should use [Lucide](https://lucide.dev/).
+
+1. Go to the [site](https://lucide.dev/) and find an icon you like.
+2. Once you have selected an icon, click on it, then click "See in action"
+3. Next, click on "React" which we are using. You will only need the text in the curly brackets on the first line.
+4. Next, simply paste `icon: YourIcon` into Frontmatter.
+
+## Callout
+
+重要な情報やヒントを強調するために、吹き出しを作成することもできます。 以下の構文を使用してください。
+
+```mdx
+<Callout>
+    This is a callout message.
+</Callout>
+```
+
+<Callout>
+    これは吹き出しのメッセージです。
+</Callout>
+
+属性`type`を追加することで、吹き出しの色を変更できます 例
+
+```mdx
+<Callout type="info">
+    This is an info callout.
+</Callout>
+```
+
+利用可能なtypeは次のとおりです。`info` `warning` `error`  `success`
+
+## Difficulty levels
+
+These are types of callouts, they are optional, they show how complex your page can be.
+There are 3 main levels of complexity.
+
+<Callout type="lvl_beginner">
+    Use `lvl_beginner`. This page contains information for those who are starting out with modding.
+</Callout>
+
+<Callout type="lvl_intermediate">
+    Use `lvl_intermediate`. This page contains information for those who want to deepen their knowledge.
+</Callout>
+
+<Callout type="lvl_advanced">
+   Use `lvl_advanced`. This page contains information for those who already know how to make quality mods, and contains something additional.
+</Callout>
+
+Their usage is the same as in callout, but we would advise not to change the title. Inside,
+you write why your page is classified as this level and what the user should know.
+
+## 終わりに
+
+これで完了です！ あなたはすでにガイド作成のプロです。 完璧な英語である必要はありません。誰かに説明するようなイメージでガイドを書いてください。必要であればフェードバックや助けを求めることもできます。
+
+楽しい執筆ライフを！

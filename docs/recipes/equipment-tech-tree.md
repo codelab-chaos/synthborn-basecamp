@@ -1,0 +1,10454 @@
+# Equipment Tech Tree
+
+> Generated 2026-05-27T22:25:14.670Z from `docs/recipes/recipes.json`.
+
+This file is generated. Regenerate with:
+
+```powershell
+node tools/recipes/build-dependency-tree.js
+```
+
+The generator uses the asset-derived recipe index and prefers non-salvage crafting/processing recipes by default. `(type)` means a resource-type input such as any matching log, rock, or rubble item.
+
+Required craft benches are included as dependency branches when the bench requirement maps to a craftable `Bench_*` item. Free fieldcraft recipes do not add bench branches.
+
+Targets: 188
+
+## Aggregate Raw Or Unresolved Inputs
+
+- 19x Bench_Armory
+- 25x Crystal_Shards(type)
+- 8x Fruits(type)
+- 41x Ingredient_Bar_Bronze
+- 220x Ingredient_Bone_Fragment
+- 55x Ingredient_Fabric_Scrap_Cindercloth
+- 201x Ingredient_Fabric_Scrap_Cotton
+- 229x Ingredient_Fabric_Scrap_Linen
+- 55x Ingredient_Fabric_Scrap_Shadoweave
+- 3x Ingredient_Fabric_Scrap_Stormsilk
+- 51x Ingredient_Fabric_Scrap_Wool
+- 9x Ingredient_Feathers_Dark
+- 7407x Ingredient_Fibre
+- 20x Ingredient_Fire_Essence
+- 150x Ingredient_Hide_Heavy
+- 1352x Ingredient_Hide_Light
+- 79x Ingredient_Hide_Medium
+- 47x Ingredient_Hide_Storm
+- 50x Ingredient_Ice_Essence
+- 17500x Ingredient_Life_Essence
+- 10x Ingredient_Poop
+- 8x Ingredient_Powder_Boom
+- 230x Ingredient_Sac_Venom
+- 24x Ingredient_Stick
+- 2x Ingredient_Tree_Sap
+- 281x Ingredient_Void_Essence
+- 5x Ingredient_Voidheart
+- 187x Ore_Adamantite
+- 171x Ore_Cobalt
+- 252x Ore_Copper
+- 118x Ore_Gold
+- 182x Ore_Iron
+- 126x Ore_Mithril
+- 16x Ore_Silver
+- 204x Ore_Thorium
+- 67x Plant_Crop_Cotton_Item
+- 10x Plant_Crop_Health2
+- 10x Plant_Crop_Health3
+- 10x Plant_Crop_Wheat_Item
+- 126x Plant_Fruit_Berries_Red
+- 60x Plant_Petals_Blood
+- 1x Rock_Gem_Ruby
+- 1x Rock_Gem_Sapphire
+- 40x Rock_Ice
+- 16545x Rock(type)
+- 3x Rubble_Stone
+- 15x Rubble(type)
+- 10x Sands(type)
+- 10x Vegetables(type)
+- 14x Wood_All(type)
+- 10x Wood_Azure_Trunk
+- 22754x Wood_Trunk(type)
+
+## Trees
+
+### Armor_Adamantite_Chest
+
+Raw/unresolved inputs:
+- 7x Ingredient_Fabric_Scrap_Cindercloth
+- 8x Ingredient_Hide_Heavy
+- 24x Ingredient_Hide_Light
+- 28x Ore_Adamantite
+- 2x Ore_Copper
+- 326x Rock(type)
+- 394x Wood_Trunk(type)
+
+- Armor_Adamantite_Chest (bench=Crafting[Armor_Bench,Armor_Chest]; 3s)
+  - needs 28x Ingredient_Bar_Adamantite
+    - Ingredient_Bar_Adamantite (bench=Processing[Furnace]; 20s)
+      - needs 1x Ore_Adamantite
+        - Ore_Adamantite (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 8x Ingredient_Leather_Heavy
+    - Ingredient_Leather_Heavy (bench=Processing[Tannery]; 40s)
+      - needs 1x Ingredient_Hide_Heavy
+        - Ingredient_Hide_Heavy (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 7x Ingredient_Fabric_Scrap_Cindercloth
+    - Ingredient_Fabric_Scrap_Cindercloth (raw/unknown)
+  - requires bench 1x Bench_Armour
+    - Bench_Armour (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Armor_Adamantite_Hands
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fabric_Scrap_Cindercloth
+- 4x Ingredient_Hide_Heavy
+- 12x Ingredient_Hide_Light
+- 12x Ore_Adamantite
+- 2x Ore_Copper
+- 158x Rock(type)
+- 194x Wood_Trunk(type)
+
+- Armor_Adamantite_Hands (bench=Crafting[Armor_Bench,Armor_Hands]; 3s)
+  - needs 12x Ingredient_Bar_Adamantite
+    - Ingredient_Bar_Adamantite (bench=Processing[Furnace]; 20s)
+      - needs 1x Ore_Adamantite
+        - Ore_Adamantite (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 4x Ingredient_Leather_Heavy
+    - Ingredient_Leather_Heavy (bench=Processing[Tannery]; 40s)
+      - needs 1x Ingredient_Hide_Heavy
+        - Ingredient_Hide_Heavy (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Cindercloth
+    - Ingredient_Fabric_Scrap_Cindercloth (raw/unknown)
+  - requires bench 1x Bench_Armour
+    - Bench_Armour (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Armor_Adamantite_Head
+
+Raw/unresolved inputs:
+- 4x Ingredient_Fabric_Scrap_Cindercloth
+- 5x Ingredient_Hide_Heavy
+- 15x Ingredient_Hide_Light
+- 15x Ore_Adamantite
+- 2x Ore_Copper
+- 191x Rock(type)
+- 234x Wood_Trunk(type)
+
+- Armor_Adamantite_Head (bench=Crafting[Armor_Bench,Armor_Head]; 3s)
+  - needs 15x Ingredient_Bar_Adamantite
+    - Ingredient_Bar_Adamantite (bench=Processing[Furnace]; 20s)
+      - needs 1x Ore_Adamantite
+        - Ore_Adamantite (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 5x Ingredient_Leather_Heavy
+    - Ingredient_Leather_Heavy (bench=Processing[Tannery]; 40s)
+      - needs 1x Ingredient_Hide_Heavy
+        - Ingredient_Hide_Heavy (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 4x Ingredient_Fabric_Scrap_Cindercloth
+    - Ingredient_Fabric_Scrap_Cindercloth (raw/unknown)
+  - requires bench 1x Bench_Armour
+    - Bench_Armour (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Armor_Adamantite_Legs
+
+Raw/unresolved inputs:
+- 6x Ingredient_Fabric_Scrap_Cindercloth
+- 7x Ingredient_Hide_Heavy
+- 21x Ingredient_Hide_Light
+- 22x Ore_Adamantite
+- 2x Ore_Copper
+- 266x Rock(type)
+- 324x Wood_Trunk(type)
+
+- Armor_Adamantite_Legs (bench=Crafting[Armor_Bench,Armor_Legs]; 3s)
+  - needs 22x Ingredient_Bar_Adamantite
+    - Ingredient_Bar_Adamantite (bench=Processing[Furnace]; 20s)
+      - needs 1x Ore_Adamantite
+        - Ore_Adamantite (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 7x Ingredient_Leather_Heavy
+    - Ingredient_Leather_Heavy (bench=Processing[Tannery]; 40s)
+      - needs 1x Ingredient_Hide_Heavy
+        - Ingredient_Hide_Heavy (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 6x Ingredient_Fabric_Scrap_Cindercloth
+    - Ingredient_Fabric_Scrap_Cindercloth (raw/unknown)
+  - requires bench 1x Bench_Armour
+    - Bench_Armour (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Armor_Bronze_Chest
+
+Raw/unresolved inputs:
+- 6x Ingredient_Bar_Bronze
+- 8x Ingredient_Hide_Light
+- 12x Rock(type)
+- 22x Wood_Trunk(type)
+
+- Armor_Bronze_Chest (bench=Crafting[TODO,Armor_Chest]; 2s; knowledge-required)
+  - needs 6x Ingredient_Bar_Bronze
+    - Ingredient_Bar_Bronze (raw/unknown)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 2x Ingredient_Leather_Light
+    - Ingredient_Leather_Light (bench=Processing[Tannery]; 20s)
+      - needs 1x Ingredient_Hide_Light
+        - Ingredient_Hide_Light (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Bronze_Hands
+
+Raw/unresolved inputs:
+- 2x Ingredient_Bar_Bronze
+- 8x Ingredient_Hide_Light
+- 12x Rock(type)
+- 21x Wood_Trunk(type)
+
+- Armor_Bronze_Hands (bench=Crafting[TODO,Armor_Hands]; 2s; knowledge-required)
+  - needs 2x Ingredient_Bar_Bronze
+    - Ingredient_Bar_Bronze (raw/unknown)
+  - needs 1x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 2x Ingredient_Leather_Light
+    - Ingredient_Leather_Light (bench=Processing[Tannery]; 20s)
+      - needs 1x Ingredient_Hide_Light
+        - Ingredient_Hide_Light (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Bronze_Head
+
+Raw/unresolved inputs:
+- 3x Ingredient_Bar_Bronze
+- 8x Ingredient_Hide_Light
+- 12x Rock(type)
+- 22x Wood_Trunk(type)
+
+- Armor_Bronze_Head (bench=Crafting[TODO,Armor_Head]; 2s; knowledge-required)
+  - needs 3x Ingredient_Bar_Bronze
+    - Ingredient_Bar_Bronze (raw/unknown)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 2x Ingredient_Leather_Light
+    - Ingredient_Leather_Light (bench=Processing[Tannery]; 20s)
+      - needs 1x Ingredient_Hide_Light
+        - Ingredient_Hide_Light (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Bronze_Legs
+
+Raw/unresolved inputs:
+- 4x Ingredient_Bar_Bronze
+- 12x Ingredient_Hide_Light
+- 18x Rock(type)
+- 32x Wood_Trunk(type)
+
+- Armor_Bronze_Legs (bench=Crafting[TODO,Armor_Legs]; 2s; knowledge-required)
+  - needs 4x Ingredient_Bar_Bronze
+    - Ingredient_Bar_Bronze (raw/unknown)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 3x Ingredient_Leather_Light
+    - Ingredient_Leather_Light (bench=Processing[Tannery]; 20s)
+      - needs 1x Ingredient_Hide_Light
+        - Ingredient_Hide_Light (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Bronze_Ornate_Chest
+
+Raw/unresolved inputs:
+- 6x Ingredient_Bar_Bronze
+- 6x Ingredient_Hide_Light
+- 2x Ingredient_Hide_Medium
+- 12x Rock(type)
+- 22x Wood_Trunk(type)
+
+- Armor_Bronze_Ornate_Chest (bench=Crafting[TODO,Armor_Chest]; 2s; knowledge-required)
+  - needs 6x Ingredient_Bar_Bronze
+    - Ingredient_Bar_Bronze (raw/unknown)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 2x Ingredient_Leather_Medium
+    - Ingredient_Leather_Medium (bench=Processing[Tannery]; 30s)
+      - needs 1x Ingredient_Hide_Medium
+        - Ingredient_Hide_Medium (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Bronze_Ornate_Hands
+
+Raw/unresolved inputs:
+- 2x Ingredient_Bar_Bronze
+- 6x Ingredient_Hide_Light
+- 2x Ingredient_Hide_Medium
+- 12x Rock(type)
+- 21x Wood_Trunk(type)
+
+- Armor_Bronze_Ornate_Hands (bench=Crafting[TODO,Armor_Hands]; 2s; knowledge-required)
+  - needs 2x Ingredient_Bar_Bronze
+    - Ingredient_Bar_Bronze (raw/unknown)
+  - needs 1x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 2x Ingredient_Leather_Medium
+    - Ingredient_Leather_Medium (bench=Processing[Tannery]; 30s)
+      - needs 1x Ingredient_Hide_Medium
+        - Ingredient_Hide_Medium (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Bronze_Ornate_Head
+
+Raw/unresolved inputs:
+- 3x Ingredient_Bar_Bronze
+- 6x Ingredient_Hide_Light
+- 2x Ingredient_Hide_Medium
+- 12x Rock(type)
+- 22x Wood_Trunk(type)
+
+- Armor_Bronze_Ornate_Head (bench=Crafting[TODO,Armor_Head]; 2s; knowledge-required)
+  - needs 3x Ingredient_Bar_Bronze
+    - Ingredient_Bar_Bronze (raw/unknown)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 2x Ingredient_Leather_Medium
+    - Ingredient_Leather_Medium (bench=Processing[Tannery]; 30s)
+      - needs 1x Ingredient_Hide_Medium
+        - Ingredient_Hide_Medium (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Cloth_Cindercloth_Chest
+
+Raw/unresolved inputs:
+- 18x Ingredient_Fabric_Scrap_Cotton
+- 2x Ore_Adamantite
+- 6x Plant_Crop_Cotton_Item
+- 18x Rock(type)
+- 52x Wood_Trunk(type)
+
+- Armor_Cloth_Cindercloth_Chest (bench=Crafting[TODO,Armor_Chest]; 2s)
+  - needs 6x Ingredient_Bolt_Cindercloth
+    - Ingredient_Bolt_Cindercloth (bench=Crafting[Loombench])
+      - needs 1x Plant_Crop_Cotton_Item
+        - Plant_Crop_Cotton_Item (raw/unknown)
+      - requires bench 1x Bench_Loom
+        - Bench_Loom
+          - needs 5x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Ingredient_Fabric_Scrap_Cotton
+            - Ingredient_Fabric_Scrap_Cotton (raw/unknown)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 2x Ingredient_Bar_Adamantite
+    - Ingredient_Bar_Adamantite (bench=Processing[Furnace]; 20s)
+      - needs 1x Ore_Adamantite
+        - Ore_Adamantite (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Cloth_Cindercloth_Hands
+
+Raw/unresolved inputs:
+- 6x Ingredient_Fabric_Scrap_Cotton
+- 2x Ore_Adamantite
+- 2x Plant_Crop_Cotton_Item
+- 18x Rock(type)
+- 31x Wood_Trunk(type)
+
+- Armor_Cloth_Cindercloth_Hands (bench=Crafting[TODO,Armor_Hands]; 2s)
+  - needs 2x Ingredient_Bolt_Cindercloth
+    - Ingredient_Bolt_Cindercloth (bench=Crafting[Loombench])
+      - needs 1x Plant_Crop_Cotton_Item
+        - Plant_Crop_Cotton_Item (raw/unknown)
+      - requires bench 1x Bench_Loom
+        - Bench_Loom
+          - needs 5x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Ingredient_Fabric_Scrap_Cotton
+            - Ingredient_Fabric_Scrap_Cotton (raw/unknown)
+  - needs 1x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 2x Ingredient_Bar_Adamantite
+    - Ingredient_Bar_Adamantite (bench=Processing[Furnace]; 20s)
+      - needs 1x Ore_Adamantite
+        - Ore_Adamantite (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Cloth_Cindercloth_Head
+
+Raw/unresolved inputs:
+- 9x Ingredient_Fabric_Scrap_Cotton
+- 2x Ore_Adamantite
+- 3x Plant_Crop_Cotton_Item
+- 18x Rock(type)
+- 37x Wood_Trunk(type)
+
+- Armor_Cloth_Cindercloth_Head (bench=Crafting[TODO,Armor_Head]; 2s)
+  - needs 3x Ingredient_Bolt_Cindercloth
+    - Ingredient_Bolt_Cindercloth (bench=Crafting[Loombench])
+      - needs 1x Plant_Crop_Cotton_Item
+        - Plant_Crop_Cotton_Item (raw/unknown)
+      - requires bench 1x Bench_Loom
+        - Bench_Loom
+          - needs 5x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Ingredient_Fabric_Scrap_Cotton
+            - Ingredient_Fabric_Scrap_Cotton (raw/unknown)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 2x Ingredient_Bar_Adamantite
+    - Ingredient_Bar_Adamantite (bench=Processing[Furnace]; 20s)
+      - needs 1x Ore_Adamantite
+        - Ore_Adamantite (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Cloth_Cindercloth_Legs
+
+Raw/unresolved inputs:
+- 12x Ingredient_Fabric_Scrap_Cotton
+- 3x Ore_Adamantite
+- 4x Plant_Crop_Cotton_Item
+- 27x Rock(type)
+- 52x Wood_Trunk(type)
+
+- Armor_Cloth_Cindercloth_Legs (bench=Crafting[TODO,Armor_Legs]; 2s)
+  - needs 4x Ingredient_Bolt_Cindercloth
+    - Ingredient_Bolt_Cindercloth (bench=Crafting[Loombench])
+      - needs 1x Plant_Crop_Cotton_Item
+        - Plant_Crop_Cotton_Item (raw/unknown)
+      - requires bench 1x Bench_Loom
+        - Bench_Loom
+          - needs 5x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Ingredient_Fabric_Scrap_Cotton
+            - Ingredient_Fabric_Scrap_Cotton (raw/unknown)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 3x Ingredient_Bar_Adamantite
+    - Ingredient_Bar_Adamantite (bench=Processing[Furnace]; 20s)
+      - needs 1x Ore_Adamantite
+        - Ore_Adamantite (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Cloth_Cotton_Chest
+
+Raw/unresolved inputs:
+- 18x Ingredient_Fabric_Scrap_Cotton
+- 2x Ore_Thorium
+- 6x Plant_Crop_Cotton_Item
+- 18x Rock(type)
+- 52x Wood_Trunk(type)
+
+- Armor_Cloth_Cotton_Chest (bench=Crafting[TODO,Armor_Chest]; 2s)
+  - needs 6x Ingredient_Bolt_Cotton
+    - Ingredient_Bolt_Cotton (bench=Crafting[Loombench])
+      - needs 1x Plant_Crop_Cotton_Item
+        - Plant_Crop_Cotton_Item (raw/unknown)
+      - requires bench 1x Bench_Loom
+        - Bench_Loom
+          - needs 5x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Ingredient_Fabric_Scrap_Cotton
+            - Ingredient_Fabric_Scrap_Cotton (raw/unknown)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 2x Ingredient_Bar_Thorium
+    - Ingredient_Bar_Thorium (bench=Processing[Furnace]; 18s)
+      - needs 1x Ore_Thorium
+        - Ore_Thorium (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Cloth_Cotton_Hands
+
+Raw/unresolved inputs:
+- 6x Ingredient_Fabric_Scrap_Cotton
+- 2x Ore_Thorium
+- 2x Plant_Crop_Cotton_Item
+- 18x Rock(type)
+- 31x Wood_Trunk(type)
+
+- Armor_Cloth_Cotton_Hands (bench=Crafting[TODO,Armor_Hands]; 2s)
+  - needs 2x Ingredient_Bolt_Cotton
+    - Ingredient_Bolt_Cotton (bench=Crafting[Loombench])
+      - needs 1x Plant_Crop_Cotton_Item
+        - Plant_Crop_Cotton_Item (raw/unknown)
+      - requires bench 1x Bench_Loom
+        - Bench_Loom
+          - needs 5x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Ingredient_Fabric_Scrap_Cotton
+            - Ingredient_Fabric_Scrap_Cotton (raw/unknown)
+  - needs 1x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 2x Ingredient_Bar_Thorium
+    - Ingredient_Bar_Thorium (bench=Processing[Furnace]; 18s)
+      - needs 1x Ore_Thorium
+        - Ore_Thorium (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Cloth_Cotton_Head
+
+Raw/unresolved inputs:
+- 9x Ingredient_Fabric_Scrap_Cotton
+- 2x Ore_Thorium
+- 3x Plant_Crop_Cotton_Item
+- 18x Rock(type)
+- 37x Wood_Trunk(type)
+
+- Armor_Cloth_Cotton_Head (bench=Crafting[TODO,Armor_Head]; 2s)
+  - needs 3x Ingredient_Bolt_Cotton
+    - Ingredient_Bolt_Cotton (bench=Crafting[Loombench])
+      - needs 1x Plant_Crop_Cotton_Item
+        - Plant_Crop_Cotton_Item (raw/unknown)
+      - requires bench 1x Bench_Loom
+        - Bench_Loom
+          - needs 5x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Ingredient_Fabric_Scrap_Cotton
+            - Ingredient_Fabric_Scrap_Cotton (raw/unknown)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 2x Ingredient_Bar_Thorium
+    - Ingredient_Bar_Thorium (bench=Processing[Furnace]; 18s)
+      - needs 1x Ore_Thorium
+        - Ore_Thorium (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Cloth_Cotton_Legs
+
+Raw/unresolved inputs:
+- 12x Ingredient_Fabric_Scrap_Cotton
+- 3x Ore_Thorium
+- 4x Plant_Crop_Cotton_Item
+- 27x Rock(type)
+- 52x Wood_Trunk(type)
+
+- Armor_Cloth_Cotton_Legs (bench=Crafting[TODO,Armor_Legs]; 2s)
+  - needs 4x Ingredient_Bolt_Cotton
+    - Ingredient_Bolt_Cotton (bench=Crafting[Loombench])
+      - needs 1x Plant_Crop_Cotton_Item
+        - Plant_Crop_Cotton_Item (raw/unknown)
+      - requires bench 1x Bench_Loom
+        - Bench_Loom
+          - needs 5x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Ingredient_Fabric_Scrap_Cotton
+            - Ingredient_Fabric_Scrap_Cotton (raw/unknown)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 3x Ingredient_Bar_Thorium
+    - Ingredient_Bar_Thorium (bench=Processing[Furnace]; 18s)
+      - needs 1x Ore_Thorium
+        - Ore_Thorium (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Cloth_Linen_Chest
+
+Raw/unresolved inputs:
+- 18x Ingredient_Fabric_Scrap_Cotton
+- 2x Ore_Iron
+- 6x Plant_Crop_Cotton_Item
+- 18x Rock(type)
+- 52x Wood_Trunk(type)
+
+- Armor_Cloth_Linen_Chest (bench=Crafting[TODO,Armor_Chest]; 2s)
+  - needs 6x Ingredient_Bolt_Linen
+    - Ingredient_Bolt_Linen (bench=Crafting[Loombench])
+      - needs 1x Plant_Crop_Cotton_Item
+        - Plant_Crop_Cotton_Item (raw/unknown)
+      - requires bench 1x Bench_Loom
+        - Bench_Loom
+          - needs 5x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Ingredient_Fabric_Scrap_Cotton
+            - Ingredient_Fabric_Scrap_Cotton (raw/unknown)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 2x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Cloth_Linen_Hands
+
+Raw/unresolved inputs:
+- 6x Ingredient_Fabric_Scrap_Cotton
+- 2x Ore_Iron
+- 2x Plant_Crop_Cotton_Item
+- 18x Rock(type)
+- 31x Wood_Trunk(type)
+
+- Armor_Cloth_Linen_Hands (bench=Crafting[TODO,Armor_Hands]; 2s)
+  - needs 2x Ingredient_Bolt_Linen
+    - Ingredient_Bolt_Linen (bench=Crafting[Loombench])
+      - needs 1x Plant_Crop_Cotton_Item
+        - Plant_Crop_Cotton_Item (raw/unknown)
+      - requires bench 1x Bench_Loom
+        - Bench_Loom
+          - needs 5x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Ingredient_Fabric_Scrap_Cotton
+            - Ingredient_Fabric_Scrap_Cotton (raw/unknown)
+  - needs 1x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 2x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Cloth_Linen_Head
+
+Raw/unresolved inputs:
+- 9x Ingredient_Fabric_Scrap_Cotton
+- 2x Ore_Iron
+- 3x Plant_Crop_Cotton_Item
+- 18x Rock(type)
+- 37x Wood_Trunk(type)
+
+- Armor_Cloth_Linen_Head (bench=Crafting[TODO,Armor_Head]; 2s)
+  - needs 3x Ingredient_Bolt_Linen
+    - Ingredient_Bolt_Linen (bench=Crafting[Loombench])
+      - needs 1x Plant_Crop_Cotton_Item
+        - Plant_Crop_Cotton_Item (raw/unknown)
+      - requires bench 1x Bench_Loom
+        - Bench_Loom
+          - needs 5x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Ingredient_Fabric_Scrap_Cotton
+            - Ingredient_Fabric_Scrap_Cotton (raw/unknown)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 2x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Cloth_Linen_Legs
+
+Raw/unresolved inputs:
+- 12x Ingredient_Fabric_Scrap_Cotton
+- 3x Ore_Iron
+- 4x Plant_Crop_Cotton_Item
+- 27x Rock(type)
+- 52x Wood_Trunk(type)
+
+- Armor_Cloth_Linen_Legs (bench=Crafting[TODO,Armor_Legs]; 2s)
+  - needs 4x Ingredient_Bolt_Linen
+    - Ingredient_Bolt_Linen (bench=Crafting[Loombench])
+      - needs 1x Plant_Crop_Cotton_Item
+        - Plant_Crop_Cotton_Item (raw/unknown)
+      - requires bench 1x Bench_Loom
+        - Bench_Loom
+          - needs 5x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Ingredient_Fabric_Scrap_Cotton
+            - Ingredient_Fabric_Scrap_Cotton (raw/unknown)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 3x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Cloth_Silk_Chest
+
+Raw/unresolved inputs:
+- 18x Ingredient_Fabric_Scrap_Cotton
+- 2x Ore_Cobalt
+- 6x Plant_Crop_Cotton_Item
+- 18x Rock(type)
+- 52x Wood_Trunk(type)
+
+- Armor_Cloth_Silk_Chest (bench=Crafting[TODO,Armor_Chest]; 2s)
+  - needs 6x Ingredient_Bolt_Silk
+    - Ingredient_Bolt_Silk (bench=Crafting[Loombench])
+      - needs 1x Plant_Crop_Cotton_Item
+        - Plant_Crop_Cotton_Item (raw/unknown)
+      - requires bench 1x Bench_Loom
+        - Bench_Loom
+          - needs 5x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Ingredient_Fabric_Scrap_Cotton
+            - Ingredient_Fabric_Scrap_Cotton (raw/unknown)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 2x Ingredient_Bar_Cobalt
+    - Ingredient_Bar_Cobalt (bench=Processing[Furnace]; 18s)
+      - needs 1x Ore_Cobalt
+        - Ore_Cobalt (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Cloth_Silk_Hands
+
+Raw/unresolved inputs:
+- 6x Ingredient_Fabric_Scrap_Cotton
+- 2x Ore_Cobalt
+- 2x Plant_Crop_Cotton_Item
+- 18x Rock(type)
+- 31x Wood_Trunk(type)
+
+- Armor_Cloth_Silk_Hands (bench=Crafting[TODO,Armor_Hands]; 2s)
+  - needs 2x Ingredient_Bolt_Silk
+    - Ingredient_Bolt_Silk (bench=Crafting[Loombench])
+      - needs 1x Plant_Crop_Cotton_Item
+        - Plant_Crop_Cotton_Item (raw/unknown)
+      - requires bench 1x Bench_Loom
+        - Bench_Loom
+          - needs 5x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Ingredient_Fabric_Scrap_Cotton
+            - Ingredient_Fabric_Scrap_Cotton (raw/unknown)
+  - needs 1x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 2x Ingredient_Bar_Cobalt
+    - Ingredient_Bar_Cobalt (bench=Processing[Furnace]; 18s)
+      - needs 1x Ore_Cobalt
+        - Ore_Cobalt (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Cloth_Silk_Head
+
+Raw/unresolved inputs:
+- 9x Ingredient_Fabric_Scrap_Cotton
+- 2x Ore_Cobalt
+- 3x Plant_Crop_Cotton_Item
+- 18x Rock(type)
+- 37x Wood_Trunk(type)
+
+- Armor_Cloth_Silk_Head (bench=Crafting[TODO,Armor_Head]; 2s)
+  - needs 3x Ingredient_Bolt_Silk
+    - Ingredient_Bolt_Silk (bench=Crafting[Loombench])
+      - needs 1x Plant_Crop_Cotton_Item
+        - Plant_Crop_Cotton_Item (raw/unknown)
+      - requires bench 1x Bench_Loom
+        - Bench_Loom
+          - needs 5x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Ingredient_Fabric_Scrap_Cotton
+            - Ingredient_Fabric_Scrap_Cotton (raw/unknown)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 2x Ingredient_Bar_Cobalt
+    - Ingredient_Bar_Cobalt (bench=Processing[Furnace]; 18s)
+      - needs 1x Ore_Cobalt
+        - Ore_Cobalt (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Cloth_Silk_Legs
+
+Raw/unresolved inputs:
+- 12x Ingredient_Fabric_Scrap_Cotton
+- 3x Ore_Cobalt
+- 4x Plant_Crop_Cotton_Item
+- 27x Rock(type)
+- 52x Wood_Trunk(type)
+
+- Armor_Cloth_Silk_Legs (bench=Crafting[TODO,Armor_Legs]; 2s)
+  - needs 4x Ingredient_Bolt_Silk
+    - Ingredient_Bolt_Silk (bench=Crafting[Loombench])
+      - needs 1x Plant_Crop_Cotton_Item
+        - Plant_Crop_Cotton_Item (raw/unknown)
+      - requires bench 1x Bench_Loom
+        - Bench_Loom
+          - needs 5x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Ingredient_Fabric_Scrap_Cotton
+            - Ingredient_Fabric_Scrap_Cotton (raw/unknown)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 3x Ingredient_Bar_Cobalt
+    - Ingredient_Bar_Cobalt (bench=Processing[Furnace]; 18s)
+      - needs 1x Ore_Cobalt
+        - Ore_Cobalt (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Cloth_Wool_Chest
+
+Raw/unresolved inputs:
+- 6x Ingredient_Fabric_Scrap_Wool
+- 2x Ore_Copper
+- 60x Rock(type)
+- 82x Wood_Trunk(type)
+
+- Armor_Cloth_Wool_Chest (bench=Crafting[TODO,Armor_Chest]; 2s)
+  - needs 6x Ingredient_Bolt_Wool
+    - Ingredient_Bolt_Wool (bench=Crafting[Furniture_Bench,Furniture_Textiles])
+      - needs 1x Ingredient_Fabric_Scrap_Wool
+        - Ingredient_Fabric_Scrap_Wool (raw/unknown)
+      - requires bench 1x Bench_Furniture
+        - Bench_Furniture (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 4x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 2x Ingredient_Bar_Copper
+    - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+      - needs 1x Ore_Copper
+        - Ore_Copper (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Cloth_Wool_Hands
+
+Raw/unresolved inputs:
+- 2x Ingredient_Fabric_Scrap_Wool
+- 2x Ore_Copper
+- 32x Rock(type)
+- 41x Wood_Trunk(type)
+
+- Armor_Cloth_Wool_Hands (bench=Crafting[TODO,Armor_Hands]; 2s)
+  - needs 2x Ingredient_Bolt_Wool
+    - Ingredient_Bolt_Wool (bench=Crafting[Furniture_Bench,Furniture_Textiles])
+      - needs 1x Ingredient_Fabric_Scrap_Wool
+        - Ingredient_Fabric_Scrap_Wool (raw/unknown)
+      - requires bench 1x Bench_Furniture
+        - Bench_Furniture (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 4x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 1x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 2x Ingredient_Bar_Copper
+    - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+      - needs 1x Ore_Copper
+        - Ore_Copper (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Cloth_Wool_Head
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fabric_Scrap_Wool
+- 2x Ore_Copper
+- 39x Rock(type)
+- 52x Wood_Trunk(type)
+
+- Armor_Cloth_Wool_Head (bench=Crafting[TODO,Armor_Head]; 2s)
+  - needs 3x Ingredient_Bolt_Wool
+    - Ingredient_Bolt_Wool (bench=Crafting[Furniture_Bench,Furniture_Textiles])
+      - needs 1x Ingredient_Fabric_Scrap_Wool
+        - Ingredient_Fabric_Scrap_Wool (raw/unknown)
+      - requires bench 1x Bench_Furniture
+        - Bench_Furniture (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 4x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 2x Ingredient_Bar_Copper
+    - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+      - needs 1x Ore_Copper
+        - Ore_Copper (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Cloth_Wool_Legs
+
+Raw/unresolved inputs:
+- 4x Ingredient_Fabric_Scrap_Wool
+- 3x Ore_Copper
+- 55x Rock(type)
+- 72x Wood_Trunk(type)
+
+- Armor_Cloth_Wool_Legs (bench=Crafting[TODO,Armor_Legs]; 2s)
+  - needs 4x Ingredient_Bolt_Wool
+    - Ingredient_Bolt_Wool (bench=Crafting[Furniture_Bench,Furniture_Textiles])
+      - needs 1x Ingredient_Fabric_Scrap_Wool
+        - Ingredient_Fabric_Scrap_Wool (raw/unknown)
+      - requires bench 1x Bench_Furniture
+        - Bench_Furniture (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 4x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 3x Ingredient_Bar_Copper
+    - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+      - needs 1x Ore_Copper
+        - Ore_Copper (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Cobalt_Chest
+
+Raw/unresolved inputs:
+- 7x Ingredient_Fabric_Scrap_Shadoweave
+- 7x Ingredient_Hide_Heavy
+- 21x Ingredient_Hide_Light
+- 24x Ore_Cobalt
+- 2x Ore_Copper
+- 284x Rock(type)
+- 344x Wood_Trunk(type)
+
+- Armor_Cobalt_Chest (bench=Crafting[Armor_Bench,Armor_Chest]; 3s)
+  - needs 24x Ingredient_Bar_Cobalt
+    - Ingredient_Bar_Cobalt (bench=Processing[Furnace]; 18s)
+      - needs 1x Ore_Cobalt
+        - Ore_Cobalt (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 7x Ingredient_Leather_Heavy
+    - Ingredient_Leather_Heavy (bench=Processing[Tannery]; 40s)
+      - needs 1x Ingredient_Hide_Heavy
+        - Ingredient_Hide_Heavy (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 7x Ingredient_Fabric_Scrap_Shadoweave
+    - Ingredient_Fabric_Scrap_Shadoweave (raw/unknown)
+  - requires bench 1x Bench_Armour
+    - Bench_Armour (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Armor_Cobalt_Hands
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fabric_Scrap_Shadoweave
+- 3x Ingredient_Hide_Heavy
+- 9x Ingredient_Hide_Light
+- 8x Ore_Cobalt
+- 2x Ore_Copper
+- 116x Rock(type)
+- 144x Wood_Trunk(type)
+
+- Armor_Cobalt_Hands (bench=Crafting[Armor_Bench,Armor_Hands]; 3s)
+  - needs 8x Ingredient_Bar_Cobalt
+    - Ingredient_Bar_Cobalt (bench=Processing[Furnace]; 18s)
+      - needs 1x Ore_Cobalt
+        - Ore_Cobalt (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Leather_Heavy
+    - Ingredient_Leather_Heavy (bench=Processing[Tannery]; 40s)
+      - needs 1x Ingredient_Hide_Heavy
+        - Ingredient_Hide_Heavy (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Shadoweave
+    - Ingredient_Fabric_Scrap_Shadoweave (raw/unknown)
+  - requires bench 1x Bench_Armour
+    - Bench_Armour (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Armor_Cobalt_Head
+
+Raw/unresolved inputs:
+- 4x Ingredient_Fabric_Scrap_Shadoweave
+- 4x Ingredient_Hide_Heavy
+- 12x Ingredient_Hide_Light
+- 12x Ore_Cobalt
+- 2x Ore_Copper
+- 158x Rock(type)
+- 194x Wood_Trunk(type)
+
+- Armor_Cobalt_Head (bench=Crafting[Armor_Bench,Armor_Head]; 3s)
+  - needs 12x Ingredient_Bar_Cobalt
+    - Ingredient_Bar_Cobalt (bench=Processing[Furnace]; 18s)
+      - needs 1x Ore_Cobalt
+        - Ore_Cobalt (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 4x Ingredient_Leather_Heavy
+    - Ingredient_Leather_Heavy (bench=Processing[Tannery]; 40s)
+      - needs 1x Ingredient_Hide_Heavy
+        - Ingredient_Hide_Heavy (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 4x Ingredient_Fabric_Scrap_Shadoweave
+    - Ingredient_Fabric_Scrap_Shadoweave (raw/unknown)
+  - requires bench 1x Bench_Armour
+    - Bench_Armour (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Armor_Cobalt_Legs
+
+Raw/unresolved inputs:
+- 6x Ingredient_Fabric_Scrap_Shadoweave
+- 6x Ingredient_Hide_Heavy
+- 18x Ingredient_Hide_Light
+- 18x Ore_Cobalt
+- 2x Ore_Copper
+- 224x Rock(type)
+- 274x Wood_Trunk(type)
+
+- Armor_Cobalt_Legs (bench=Crafting[Armor_Bench,Armor_Legs]; 3s)
+  - needs 18x Ingredient_Bar_Cobalt
+    - Ingredient_Bar_Cobalt (bench=Processing[Furnace]; 18s)
+      - needs 1x Ore_Cobalt
+        - Ore_Cobalt (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 6x Ingredient_Leather_Heavy
+    - Ingredient_Leather_Heavy (bench=Processing[Tannery]; 40s)
+      - needs 1x Ingredient_Hide_Heavy
+        - Ingredient_Hide_Heavy (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 6x Ingredient_Fabric_Scrap_Shadoweave
+    - Ingredient_Fabric_Scrap_Shadoweave (raw/unknown)
+  - requires bench 1x Bench_Armour
+    - Bench_Armour (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Armor_Copper_Chest
+
+Raw/unresolved inputs:
+- 4x Ingredient_Fibre
+- 13x Ore_Copper
+- 125x Rock(type)
+- 144x Wood_Trunk(type)
+
+- Armor_Copper_Chest (bench=Crafting[Armor_Bench,Armor_Chest]; 3s)
+  - needs 11x Ingredient_Bar_Copper
+    - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+      - needs 1x Ore_Copper
+        - Ore_Copper (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 4x Ingredient_Fibre
+    - Ingredient_Fibre (raw/unknown)
+  - requires bench 1x Bench_Armour
+    - Bench_Armour (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Armor_Copper_Hands
+
+Raw/unresolved inputs:
+- 1x Ingredient_Fibre
+- 7x Ore_Copper
+- 71x Rock(type)
+- 84x Wood_Trunk(type)
+
+- Armor_Copper_Hands (bench=Crafting[Armor_Bench,Armor_Hands]; 3s)
+  - needs 5x Ingredient_Bar_Copper
+    - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+      - needs 1x Ore_Copper
+        - Ore_Copper (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 1x Ingredient_Fibre
+    - Ingredient_Fibre (raw/unknown)
+  - requires bench 1x Bench_Armour
+    - Bench_Armour (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Armor_Copper_Head
+
+Raw/unresolved inputs:
+- 2x Ingredient_Fibre
+- 8x Ore_Copper
+- 80x Rock(type)
+- 94x Wood_Trunk(type)
+
+- Armor_Copper_Head (bench=Crafting[Armor_Bench,Armor_Head]; 3s)
+  - needs 6x Ingredient_Bar_Copper
+    - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+      - needs 1x Ore_Copper
+        - Ore_Copper (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 2x Ingredient_Fibre
+    - Ingredient_Fibre (raw/unknown)
+  - requires bench 1x Bench_Armour
+    - Bench_Armour (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Armor_Copper_Legs
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fibre
+- 11x Ore_Copper
+- 107x Rock(type)
+- 124x Wood_Trunk(type)
+
+- Armor_Copper_Legs (bench=Crafting[Armor_Bench,Armor_Legs]; 3s)
+  - needs 9x Ingredient_Bar_Copper
+    - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+      - needs 1x Ore_Copper
+        - Ore_Copper (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fibre
+    - Ingredient_Fibre (raw/unknown)
+  - requires bench 1x Bench_Armour
+    - Bench_Armour (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Armor_Iron_Chest
+
+Raw/unresolved inputs:
+- 6x Ingredient_Fabric_Scrap_Linen
+- 28x Ingredient_Hide_Light
+- 2x Ore_Copper
+- 16x Ore_Iron
+- 212x Rock(type)
+- 264x Wood_Trunk(type)
+
+- Armor_Iron_Chest (bench=Crafting[Armor_Bench,Armor_Chest]; 3s)
+  - needs 16x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 7x Ingredient_Leather_Light
+    - Ingredient_Leather_Light (bench=Processing[Tannery]; 20s)
+      - needs 1x Ingredient_Hide_Light
+        - Ingredient_Hide_Light (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 6x Ingredient_Fabric_Scrap_Linen
+    - Ingredient_Fabric_Scrap_Linen (raw/unknown)
+  - requires bench 1x Bench_Armour
+    - Bench_Armour (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Armor_Iron_Hands
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fabric_Scrap_Linen
+- 12x Ingredient_Hide_Light
+- 2x Ore_Copper
+- 7x Ore_Iron
+- 107x Rock(type)
+- 134x Wood_Trunk(type)
+
+- Armor_Iron_Hands (bench=Crafting[Armor_Bench,Armor_Hands]; 3s)
+  - needs 7x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Leather_Light
+    - Ingredient_Leather_Light (bench=Processing[Tannery]; 20s)
+      - needs 1x Ingredient_Hide_Light
+        - Ingredient_Hide_Light (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Linen
+    - Ingredient_Fabric_Scrap_Linen (raw/unknown)
+  - requires bench 1x Bench_Armour
+    - Bench_Armour (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Armor_Iron_Head
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fabric_Scrap_Linen
+- 16x Ingredient_Hide_Light
+- 2x Ore_Copper
+- 9x Ore_Iron
+- 131x Rock(type)
+- 164x Wood_Trunk(type)
+
+- Armor_Iron_Head (bench=Crafting[Armor_Bench,Armor_Head]; 3s)
+  - needs 9x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 4x Ingredient_Leather_Light
+    - Ingredient_Leather_Light (bench=Processing[Tannery]; 20s)
+      - needs 1x Ingredient_Hide_Light
+        - Ingredient_Hide_Light (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Linen
+    - Ingredient_Fabric_Scrap_Linen (raw/unknown)
+  - requires bench 1x Bench_Armour
+    - Bench_Armour (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Armor_Iron_Legs
+
+Raw/unresolved inputs:
+- 4x Ingredient_Fabric_Scrap_Linen
+- 24x Ingredient_Hide_Light
+- 2x Ore_Copper
+- 13x Ore_Iron
+- 179x Rock(type)
+- 224x Wood_Trunk(type)
+
+- Armor_Iron_Legs (bench=Crafting[Armor_Bench,Armor_Legs]; 3s)
+  - needs 13x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 6x Ingredient_Leather_Light
+    - Ingredient_Leather_Light (bench=Processing[Tannery]; 20s)
+      - needs 1x Ingredient_Hide_Light
+        - Ingredient_Hide_Light (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 4x Ingredient_Fabric_Scrap_Linen
+    - Ingredient_Fabric_Scrap_Linen (raw/unknown)
+  - requires bench 1x Bench_Armour
+    - Bench_Armour (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Armor_Leather_Heavy_Chest
+
+Raw/unresolved inputs:
+- 2x Ingredient_Fabric_Scrap_Wool
+- 6x Ingredient_Hide_Heavy
+- 18x Ingredient_Hide_Light
+- 50x Rock(type)
+- 82x Wood_Trunk(type)
+
+- Armor_Leather_Heavy_Chest (bench=Crafting[TODO,Armor_Chest]; 2s)
+  - needs 6x Ingredient_Leather_Heavy
+    - Ingredient_Leather_Heavy (bench=Processing[Tannery]; 40s)
+      - needs 1x Ingredient_Hide_Heavy
+        - Ingredient_Hide_Heavy (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 2x Ingredient_Bolt_Wool
+    - Ingredient_Bolt_Wool (bench=Crafting[Furniture_Bench,Furniture_Textiles])
+      - needs 1x Ingredient_Fabric_Scrap_Wool
+        - Ingredient_Fabric_Scrap_Wool (raw/unknown)
+      - requires bench 1x Bench_Furniture
+        - Bench_Furniture (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 4x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Leather_Heavy_Hands
+
+Raw/unresolved inputs:
+- 2x Ingredient_Fabric_Scrap_Wool
+- 2x Ingredient_Hide_Heavy
+- 6x Ingredient_Hide_Light
+- 26x Rock(type)
+- 41x Wood_Trunk(type)
+
+- Armor_Leather_Heavy_Hands (bench=Crafting[TODO,Armor_Hands]; 2s)
+  - needs 2x Ingredient_Leather_Heavy
+    - Ingredient_Leather_Heavy (bench=Processing[Tannery]; 40s)
+      - needs 1x Ingredient_Hide_Heavy
+        - Ingredient_Hide_Heavy (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 1x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 2x Ingredient_Bolt_Wool
+    - Ingredient_Bolt_Wool (bench=Crafting[Furniture_Bench,Furniture_Textiles])
+      - needs 1x Ingredient_Fabric_Scrap_Wool
+        - Ingredient_Fabric_Scrap_Wool (raw/unknown)
+      - requires bench 1x Bench_Furniture
+        - Bench_Furniture (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 4x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Leather_Heavy_Head
+
+Raw/unresolved inputs:
+- 2x Ingredient_Fabric_Scrap_Wool
+- 3x Ingredient_Hide_Heavy
+- 9x Ingredient_Hide_Light
+- 32x Rock(type)
+- 52x Wood_Trunk(type)
+
+- Armor_Leather_Heavy_Head (bench=Crafting[TODO,Armor_Head]; 2s)
+  - needs 3x Ingredient_Leather_Heavy
+    - Ingredient_Leather_Heavy (bench=Processing[Tannery]; 40s)
+      - needs 1x Ingredient_Hide_Heavy
+        - Ingredient_Hide_Heavy (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 2x Ingredient_Bolt_Wool
+    - Ingredient_Bolt_Wool (bench=Crafting[Furniture_Bench,Furniture_Textiles])
+      - needs 1x Ingredient_Fabric_Scrap_Wool
+        - Ingredient_Fabric_Scrap_Wool (raw/unknown)
+      - requires bench 1x Bench_Furniture
+        - Bench_Furniture (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 4x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Leather_Heavy_Legs
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fabric_Scrap_Wool
+- 4x Ingredient_Hide_Heavy
+- 12x Ingredient_Hide_Light
+- 45x Rock(type)
+- 72x Wood_Trunk(type)
+
+- Armor_Leather_Heavy_Legs (bench=Crafting[TODO,Armor_Legs]; 2s)
+  - needs 4x Ingredient_Leather_Heavy
+    - Ingredient_Leather_Heavy (bench=Processing[Tannery]; 40s)
+      - needs 1x Ingredient_Hide_Heavy
+        - Ingredient_Hide_Heavy (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 3x Ingredient_Bolt_Wool
+    - Ingredient_Bolt_Wool (bench=Crafting[Furniture_Bench,Furniture_Textiles])
+      - needs 1x Ingredient_Fabric_Scrap_Wool
+        - Ingredient_Fabric_Scrap_Wool (raw/unknown)
+      - requires bench 1x Bench_Furniture
+        - Bench_Furniture (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 4x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Leather_Light_Chest
+
+Raw/unresolved inputs:
+- 2x Ingredient_Fabric_Scrap_Wool
+- 24x Ingredient_Hide_Light
+- 50x Rock(type)
+- 82x Wood_Trunk(type)
+
+- Armor_Leather_Light_Chest (bench=Crafting[TODO,Armor_Chest]; 2s)
+  - needs 6x Ingredient_Leather_Light
+    - Ingredient_Leather_Light (bench=Processing[Tannery]; 20s)
+      - needs 1x Ingredient_Hide_Light
+        - Ingredient_Hide_Light (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 2x Ingredient_Bolt_Wool
+    - Ingredient_Bolt_Wool (bench=Crafting[Furniture_Bench,Furniture_Textiles])
+      - needs 1x Ingredient_Fabric_Scrap_Wool
+        - Ingredient_Fabric_Scrap_Wool (raw/unknown)
+      - requires bench 1x Bench_Furniture
+        - Bench_Furniture (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 4x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Leather_Light_Hands
+
+Raw/unresolved inputs:
+- 2x Ingredient_Fabric_Scrap_Wool
+- 8x Ingredient_Hide_Light
+- 26x Rock(type)
+- 41x Wood_Trunk(type)
+
+- Armor_Leather_Light_Hands (bench=Crafting[TODO,Armor_Hands]; 2s)
+  - needs 2x Ingredient_Leather_Light
+    - Ingredient_Leather_Light (bench=Processing[Tannery]; 20s)
+      - needs 1x Ingredient_Hide_Light
+        - Ingredient_Hide_Light (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 1x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 2x Ingredient_Bolt_Wool
+    - Ingredient_Bolt_Wool (bench=Crafting[Furniture_Bench,Furniture_Textiles])
+      - needs 1x Ingredient_Fabric_Scrap_Wool
+        - Ingredient_Fabric_Scrap_Wool (raw/unknown)
+      - requires bench 1x Bench_Furniture
+        - Bench_Furniture (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 4x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Leather_Light_Head
+
+Raw/unresolved inputs:
+- 2x Ingredient_Fabric_Scrap_Wool
+- 12x Ingredient_Hide_Light
+- 32x Rock(type)
+- 52x Wood_Trunk(type)
+
+- Armor_Leather_Light_Head (bench=Crafting[TODO,Armor_Head]; 2s)
+  - needs 3x Ingredient_Leather_Light
+    - Ingredient_Leather_Light (bench=Processing[Tannery]; 20s)
+      - needs 1x Ingredient_Hide_Light
+        - Ingredient_Hide_Light (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 2x Ingredient_Bolt_Wool
+    - Ingredient_Bolt_Wool (bench=Crafting[Furniture_Bench,Furniture_Textiles])
+      - needs 1x Ingredient_Fabric_Scrap_Wool
+        - Ingredient_Fabric_Scrap_Wool (raw/unknown)
+      - requires bench 1x Bench_Furniture
+        - Bench_Furniture (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 4x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Leather_Light_Legs
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fabric_Scrap_Wool
+- 16x Ingredient_Hide_Light
+- 45x Rock(type)
+- 72x Wood_Trunk(type)
+
+- Armor_Leather_Light_Legs (bench=Crafting[TODO,Armor_Legs]; 2s)
+  - needs 4x Ingredient_Leather_Light
+    - Ingredient_Leather_Light (bench=Processing[Tannery]; 20s)
+      - needs 1x Ingredient_Hide_Light
+        - Ingredient_Hide_Light (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 3x Ingredient_Bolt_Wool
+    - Ingredient_Bolt_Wool (bench=Crafting[Furniture_Bench,Furniture_Textiles])
+      - needs 1x Ingredient_Fabric_Scrap_Wool
+        - Ingredient_Fabric_Scrap_Wool (raw/unknown)
+      - requires bench 1x Bench_Furniture
+        - Bench_Furniture (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 4x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Leather_Medium_Chest
+
+Raw/unresolved inputs:
+- 2x Ingredient_Fabric_Scrap_Wool
+- 18x Ingredient_Hide_Light
+- 6x Ingredient_Hide_Medium
+- 50x Rock(type)
+- 82x Wood_Trunk(type)
+
+- Armor_Leather_Medium_Chest (bench=Crafting[TODO,Armor_Chest]; 2s)
+  - needs 6x Ingredient_Leather_Medium
+    - Ingredient_Leather_Medium (bench=Processing[Tannery]; 30s)
+      - needs 1x Ingredient_Hide_Medium
+        - Ingredient_Hide_Medium (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 2x Ingredient_Bolt_Wool
+    - Ingredient_Bolt_Wool (bench=Crafting[Furniture_Bench,Furniture_Textiles])
+      - needs 1x Ingredient_Fabric_Scrap_Wool
+        - Ingredient_Fabric_Scrap_Wool (raw/unknown)
+      - requires bench 1x Bench_Furniture
+        - Bench_Furniture (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 4x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Leather_Medium_Hands
+
+Raw/unresolved inputs:
+- 2x Ingredient_Fabric_Scrap_Wool
+- 6x Ingredient_Hide_Light
+- 2x Ingredient_Hide_Medium
+- 26x Rock(type)
+- 41x Wood_Trunk(type)
+
+- Armor_Leather_Medium_Hands (bench=Crafting[TODO,Armor_Hands]; 2s)
+  - needs 2x Ingredient_Leather_Medium
+    - Ingredient_Leather_Medium (bench=Processing[Tannery]; 30s)
+      - needs 1x Ingredient_Hide_Medium
+        - Ingredient_Hide_Medium (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 1x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 2x Ingredient_Bolt_Wool
+    - Ingredient_Bolt_Wool (bench=Crafting[Furniture_Bench,Furniture_Textiles])
+      - needs 1x Ingredient_Fabric_Scrap_Wool
+        - Ingredient_Fabric_Scrap_Wool (raw/unknown)
+      - requires bench 1x Bench_Furniture
+        - Bench_Furniture (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 4x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Leather_Medium_Head
+
+Raw/unresolved inputs:
+- 2x Ingredient_Fabric_Scrap_Wool
+- 9x Ingredient_Hide_Light
+- 3x Ingredient_Hide_Medium
+- 32x Rock(type)
+- 52x Wood_Trunk(type)
+
+- Armor_Leather_Medium_Head (bench=Crafting[TODO,Armor_Head]; 2s)
+  - needs 3x Ingredient_Leather_Medium
+    - Ingredient_Leather_Medium (bench=Processing[Tannery]; 30s)
+      - needs 1x Ingredient_Hide_Medium
+        - Ingredient_Hide_Medium (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 2x Ingredient_Bolt_Wool
+    - Ingredient_Bolt_Wool (bench=Crafting[Furniture_Bench,Furniture_Textiles])
+      - needs 1x Ingredient_Fabric_Scrap_Wool
+        - Ingredient_Fabric_Scrap_Wool (raw/unknown)
+      - requires bench 1x Bench_Furniture
+        - Bench_Furniture (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 4x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Leather_Medium_Legs
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fabric_Scrap_Wool
+- 12x Ingredient_Hide_Light
+- 4x Ingredient_Hide_Medium
+- 45x Rock(type)
+- 72x Wood_Trunk(type)
+
+- Armor_Leather_Medium_Legs (bench=Crafting[TODO,Armor_Legs]; 2s)
+  - needs 4x Ingredient_Leather_Medium
+    - Ingredient_Leather_Medium (bench=Processing[Tannery]; 30s)
+      - needs 1x Ingredient_Hide_Medium
+        - Ingredient_Hide_Medium (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 3x Ingredient_Bolt_Wool
+    - Ingredient_Bolt_Wool (bench=Crafting[Furniture_Bench,Furniture_Textiles])
+      - needs 1x Ingredient_Fabric_Scrap_Wool
+        - Ingredient_Fabric_Scrap_Wool (raw/unknown)
+      - requires bench 1x Bench_Furniture
+        - Bench_Furniture (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 4x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Leather_Raven_Chest
+
+Raw/unresolved inputs:
+- 6x Ingredient_Fabric_Scrap_Cotton
+- 3x Ingredient_Feathers_Dark
+- 6x Ingredient_Hide_Heavy
+- 18x Ingredient_Hide_Light
+- 2x Plant_Crop_Cotton_Item
+- 36x Rock(type)
+- 70x Wood_Trunk(type)
+
+- Armor_Leather_Raven_Chest (bench=Crafting[TODO,Armor_Chest]; 2s; knowledge-required)
+  - needs 6x Ingredient_Leather_Heavy
+    - Ingredient_Leather_Heavy (bench=Processing[Tannery]; 40s)
+      - needs 1x Ingredient_Hide_Heavy
+        - Ingredient_Hide_Heavy (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Feathers_Dark
+    - Ingredient_Feathers_Dark (raw/unknown)
+  - needs 2x Ingredient_Bolt_Cotton
+    - Ingredient_Bolt_Cotton (bench=Crafting[Loombench])
+      - needs 1x Plant_Crop_Cotton_Item
+        - Plant_Crop_Cotton_Item (raw/unknown)
+      - requires bench 1x Bench_Loom
+        - Bench_Loom
+          - needs 5x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Ingredient_Fabric_Scrap_Cotton
+            - Ingredient_Fabric_Scrap_Cotton (raw/unknown)
+
+### Armor_Leather_Raven_Hands
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fabric_Scrap_Cotton
+- 1x Ingredient_Feathers_Dark
+- 2x Ingredient_Hide_Heavy
+- 6x Ingredient_Hide_Light
+- 1x Plant_Crop_Cotton_Item
+- 12x Rock(type)
+- 25x Wood_Trunk(type)
+
+- Armor_Leather_Raven_Hands (bench=Crafting[TODO,Armor_Hands]; 2s; knowledge-required)
+  - needs 2x Ingredient_Leather_Heavy
+    - Ingredient_Leather_Heavy (bench=Processing[Tannery]; 40s)
+      - needs 1x Ingredient_Hide_Heavy
+        - Ingredient_Hide_Heavy (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 1x Ingredient_Feathers_Dark
+    - Ingredient_Feathers_Dark (raw/unknown)
+  - needs 1x Ingredient_Bolt_Cotton
+    - Ingredient_Bolt_Cotton (bench=Crafting[Loombench])
+      - needs 1x Plant_Crop_Cotton_Item
+        - Plant_Crop_Cotton_Item (raw/unknown)
+      - requires bench 1x Bench_Loom
+        - Bench_Loom
+          - needs 5x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Ingredient_Fabric_Scrap_Cotton
+            - Ingredient_Fabric_Scrap_Cotton (raw/unknown)
+
+### Armor_Leather_Raven_Head
+
+Raw/unresolved inputs:
+- 6x Ingredient_Fabric_Scrap_Cotton
+- 2x Ingredient_Feathers_Dark
+- 3x Ingredient_Hide_Heavy
+- 9x Ingredient_Hide_Light
+- 2x Plant_Crop_Cotton_Item
+- 18x Rock(type)
+- 40x Wood_Trunk(type)
+
+- Armor_Leather_Raven_Head (bench=Crafting[TODO,Armor_Head]; 2s; knowledge-required)
+  - needs 3x Ingredient_Leather_Heavy
+    - Ingredient_Leather_Heavy (bench=Processing[Tannery]; 40s)
+      - needs 1x Ingredient_Hide_Heavy
+        - Ingredient_Hide_Heavy (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 2x Ingredient_Feathers_Dark
+    - Ingredient_Feathers_Dark (raw/unknown)
+  - needs 2x Ingredient_Bolt_Cotton
+    - Ingredient_Bolt_Cotton (bench=Crafting[Loombench])
+      - needs 1x Plant_Crop_Cotton_Item
+        - Plant_Crop_Cotton_Item (raw/unknown)
+      - requires bench 1x Bench_Loom
+        - Bench_Loom
+          - needs 5x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Ingredient_Fabric_Scrap_Cotton
+            - Ingredient_Fabric_Scrap_Cotton (raw/unknown)
+
+### Armor_Leather_Raven_Legs
+
+Raw/unresolved inputs:
+- 6x Ingredient_Fabric_Scrap_Cotton
+- 3x Ingredient_Feathers_Dark
+- 4x Ingredient_Hide_Heavy
+- 12x Ingredient_Hide_Light
+- 2x Plant_Crop_Cotton_Item
+- 24x Rock(type)
+- 50x Wood_Trunk(type)
+
+- Armor_Leather_Raven_Legs (bench=Crafting[TODO,Armor_Legs]; 2s; knowledge-required)
+  - needs 4x Ingredient_Leather_Heavy
+    - Ingredient_Leather_Heavy (bench=Processing[Tannery]; 40s)
+      - needs 1x Ingredient_Hide_Heavy
+        - Ingredient_Hide_Heavy (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Feathers_Dark
+    - Ingredient_Feathers_Dark (raw/unknown)
+  - needs 2x Ingredient_Bolt_Cotton
+    - Ingredient_Bolt_Cotton (bench=Crafting[Loombench])
+      - needs 1x Plant_Crop_Cotton_Item
+        - Plant_Crop_Cotton_Item (raw/unknown)
+      - requires bench 1x Bench_Loom
+        - Bench_Loom
+          - needs 5x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Ingredient_Fabric_Scrap_Cotton
+            - Ingredient_Fabric_Scrap_Cotton (raw/unknown)
+
+### Armor_Leather_Soft_Chest
+
+Raw/unresolved inputs:
+- 2x Ingredient_Fabric_Scrap_Wool
+- 24x Ingredient_Hide_Light
+- 50x Rock(type)
+- 82x Wood_Trunk(type)
+
+- Armor_Leather_Soft_Chest (bench=Crafting[TODO,Armor_Chest]; 2s)
+  - needs 6x Ingredient_Leather_Light
+    - Ingredient_Leather_Light (bench=Processing[Tannery]; 20s)
+      - needs 1x Ingredient_Hide_Light
+        - Ingredient_Hide_Light (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 2x Ingredient_Bolt_Wool
+    - Ingredient_Bolt_Wool (bench=Crafting[Furniture_Bench,Furniture_Textiles])
+      - needs 1x Ingredient_Fabric_Scrap_Wool
+        - Ingredient_Fabric_Scrap_Wool (raw/unknown)
+      - requires bench 1x Bench_Furniture
+        - Bench_Furniture (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 4x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Leather_Soft_Hands
+
+Raw/unresolved inputs:
+- 2x Ingredient_Fabric_Scrap_Wool
+- 8x Ingredient_Hide_Light
+- 26x Rock(type)
+- 41x Wood_Trunk(type)
+
+- Armor_Leather_Soft_Hands (bench=Crafting[TODO,Armor_Hands]; 2s)
+  - needs 2x Ingredient_Leather_Light
+    - Ingredient_Leather_Light (bench=Processing[Tannery]; 20s)
+      - needs 1x Ingredient_Hide_Light
+        - Ingredient_Hide_Light (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 1x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 2x Ingredient_Bolt_Wool
+    - Ingredient_Bolt_Wool (bench=Crafting[Furniture_Bench,Furniture_Textiles])
+      - needs 1x Ingredient_Fabric_Scrap_Wool
+        - Ingredient_Fabric_Scrap_Wool (raw/unknown)
+      - requires bench 1x Bench_Furniture
+        - Bench_Furniture (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 4x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Leather_Soft_Head
+
+Raw/unresolved inputs:
+- 2x Ingredient_Fabric_Scrap_Wool
+- 12x Ingredient_Hide_Light
+- 32x Rock(type)
+- 52x Wood_Trunk(type)
+
+- Armor_Leather_Soft_Head (bench=Crafting[TODO,Armor_Head]; 2s)
+  - needs 3x Ingredient_Leather_Light
+    - Ingredient_Leather_Light (bench=Processing[Tannery]; 20s)
+      - needs 1x Ingredient_Hide_Light
+        - Ingredient_Hide_Light (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 2x Ingredient_Bolt_Wool
+    - Ingredient_Bolt_Wool (bench=Crafting[Furniture_Bench,Furniture_Textiles])
+      - needs 1x Ingredient_Fabric_Scrap_Wool
+        - Ingredient_Fabric_Scrap_Wool (raw/unknown)
+      - requires bench 1x Bench_Furniture
+        - Bench_Furniture (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 4x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Leather_Soft_Legs
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fabric_Scrap_Wool
+- 16x Ingredient_Hide_Light
+- 45x Rock(type)
+- 72x Wood_Trunk(type)
+
+- Armor_Leather_Soft_Legs (bench=Crafting[TODO,Armor_Legs]; 2s)
+  - needs 4x Ingredient_Leather_Light
+    - Ingredient_Leather_Light (bench=Processing[Tannery]; 20s)
+      - needs 1x Ingredient_Hide_Light
+        - Ingredient_Hide_Light (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 3x Ingredient_Bolt_Wool
+    - Ingredient_Bolt_Wool (bench=Crafting[Furniture_Bench,Furniture_Textiles])
+      - needs 1x Ingredient_Fabric_Scrap_Wool
+        - Ingredient_Fabric_Scrap_Wool (raw/unknown)
+      - requires bench 1x Bench_Furniture
+        - Bench_Furniture (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 4x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Mithril_Chest
+
+Raw/unresolved inputs:
+- 24x Ingredient_Hide_Light
+- 8x Ingredient_Hide_Storm
+- 80x Ingredient_Void_Essence
+- 2x Ore_Copper
+- 24x Ore_Mithril
+- 290x Rock(type)
+- 354x Wood_Trunk(type)
+
+- Armor_Mithril_Chest (bench=Crafting[Armor_Bench,Armor_Chest]; 3s)
+  - needs 24x Ingredient_Bar_Mithril
+    - Ingredient_Bar_Mithril (bench=Processing[Furnace]; 30s)
+      - needs 1x Ore_Mithril
+        - Ore_Mithril (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 8x Ingredient_Leather_Storm
+    - Ingredient_Leather_Storm (bench=Processing[Tannery]; 60s)
+      - needs 1x Ingredient_Hide_Storm
+        - Ingredient_Hide_Storm (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 80x Ingredient_Void_Essence
+    - Ingredient_Void_Essence (raw/unknown)
+  - requires bench 1x Bench_Armour
+    - Bench_Armour (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Armor_Mithril_Hands
+
+Raw/unresolved inputs:
+- 6x Ingredient_Hide_Light
+- 2x Ingredient_Hide_Storm
+- 20x Ingredient_Void_Essence
+- 2x Ore_Copper
+- 8x Ore_Mithril
+- 110x Rock(type)
+- 134x Wood_Trunk(type)
+
+- Armor_Mithril_Hands (bench=Crafting[Armor_Bench,Armor_Hands]; 3s)
+  - needs 8x Ingredient_Bar_Mithril
+    - Ingredient_Bar_Mithril (bench=Processing[Furnace]; 30s)
+      - needs 1x Ore_Mithril
+        - Ore_Mithril (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 2x Ingredient_Leather_Storm
+    - Ingredient_Leather_Storm (bench=Processing[Tannery]; 60s)
+      - needs 1x Ingredient_Hide_Storm
+        - Ingredient_Hide_Storm (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 20x Ingredient_Void_Essence
+    - Ingredient_Void_Essence (raw/unknown)
+  - requires bench 1x Bench_Armour
+    - Bench_Armour (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Armor_Mithril_Head
+
+Raw/unresolved inputs:
+- 12x Ingredient_Hide_Light
+- 4x Ingredient_Hide_Storm
+- 40x Ingredient_Void_Essence
+- 2x Ore_Copper
+- 12x Ore_Mithril
+- 158x Rock(type)
+- 194x Wood_Trunk(type)
+
+- Armor_Mithril_Head (bench=Crafting[Armor_Bench,Armor_Head]; 3s)
+  - needs 12x Ingredient_Bar_Mithril
+    - Ingredient_Bar_Mithril (bench=Processing[Furnace]; 30s)
+      - needs 1x Ore_Mithril
+        - Ore_Mithril (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 4x Ingredient_Leather_Storm
+    - Ingredient_Leather_Storm (bench=Processing[Tannery]; 60s)
+      - needs 1x Ingredient_Hide_Storm
+        - Ingredient_Hide_Storm (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 40x Ingredient_Void_Essence
+    - Ingredient_Void_Essence (raw/unknown)
+  - requires bench 1x Bench_Armour
+    - Bench_Armour (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Armor_Mithril_Legs
+
+Raw/unresolved inputs:
+- 18x Ingredient_Hide_Light
+- 6x Ingredient_Hide_Storm
+- 60x Ingredient_Void_Essence
+- 2x Ore_Copper
+- 18x Ore_Mithril
+- 224x Rock(type)
+- 274x Wood_Trunk(type)
+
+- Armor_Mithril_Legs (bench=Crafting[Armor_Bench,Armor_Legs]; 3s)
+  - needs 18x Ingredient_Bar_Mithril
+    - Ingredient_Bar_Mithril (bench=Processing[Furnace]; 30s)
+      - needs 1x Ore_Mithril
+        - Ore_Mithril (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 6x Ingredient_Leather_Storm
+    - Ingredient_Leather_Storm (bench=Processing[Tannery]; 60s)
+      - needs 1x Ingredient_Hide_Storm
+        - Ingredient_Hide_Storm (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 60x Ingredient_Void_Essence
+    - Ingredient_Void_Essence (raw/unknown)
+  - requires bench 1x Bench_Armour
+    - Bench_Armour (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Armor_Steel_Ancient_Chest
+
+Raw/unresolved inputs:
+- 6x Ingredient_Bar_Bronze
+- 8x Ingredient_Hide_Light
+- 12x Rock(type)
+- 22x Wood_Trunk(type)
+
+- Armor_Steel_Ancient_Chest (bench=Crafting[TODO,Armor_Chest]; 2s; knowledge-required)
+  - needs 6x Ingredient_Bar_Bronze
+    - Ingredient_Bar_Bronze (raw/unknown)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 2x Ingredient_Leather_Light
+    - Ingredient_Leather_Light (bench=Processing[Tannery]; 20s)
+      - needs 1x Ingredient_Hide_Light
+        - Ingredient_Hide_Light (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Steel_Ancient_Hands
+
+Raw/unresolved inputs:
+- 2x Ingredient_Bar_Bronze
+- 8x Ingredient_Hide_Light
+- 12x Rock(type)
+- 21x Wood_Trunk(type)
+
+- Armor_Steel_Ancient_Hands (bench=Crafting[TODO,Armor_Hands]; 2s; knowledge-required)
+  - needs 2x Ingredient_Bar_Bronze
+    - Ingredient_Bar_Bronze (raw/unknown)
+  - needs 1x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 2x Ingredient_Leather_Light
+    - Ingredient_Leather_Light (bench=Processing[Tannery]; 20s)
+      - needs 1x Ingredient_Hide_Light
+        - Ingredient_Hide_Light (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Steel_Ancient_Head
+
+Raw/unresolved inputs:
+- 3x Ingredient_Bar_Bronze
+- 8x Ingredient_Hide_Light
+- 12x Rock(type)
+- 22x Wood_Trunk(type)
+
+- Armor_Steel_Ancient_Head (bench=Crafting[TODO,Armor_Head]; 2s; knowledge-required)
+  - needs 3x Ingredient_Bar_Bronze
+    - Ingredient_Bar_Bronze (raw/unknown)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 2x Ingredient_Leather_Light
+    - Ingredient_Leather_Light (bench=Processing[Tannery]; 20s)
+      - needs 1x Ingredient_Hide_Light
+        - Ingredient_Hide_Light (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Steel_Ancient_Legs
+
+Raw/unresolved inputs:
+- 4x Ingredient_Bar_Bronze
+- 12x Ingredient_Hide_Light
+- 18x Rock(type)
+- 32x Wood_Trunk(type)
+
+- Armor_Steel_Ancient_Legs (bench=Crafting[TODO,Armor_Legs]; 2s; knowledge-required)
+  - needs 4x Ingredient_Bar_Bronze
+    - Ingredient_Bar_Bronze (raw/unknown)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 3x Ingredient_Leather_Light
+    - Ingredient_Leather_Light (bench=Processing[Tannery]; 20s)
+      - needs 1x Ingredient_Hide_Light
+        - Ingredient_Hide_Light (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Armor_Thorium_Chest
+
+Raw/unresolved inputs:
+- 7x Ingredient_Fabric_Scrap_Linen
+- 21x Ingredient_Hide_Light
+- 7x Ingredient_Hide_Medium
+- 4x Ingredient_Sac_Venom
+- 2x Ore_Copper
+- 20x Ore_Thorium
+- 248x Rock(type)
+- 304x Wood_Trunk(type)
+
+- Armor_Thorium_Chest (bench=Crafting[Armor_Bench,Armor_Chest]; 3s)
+  - needs 20x Ingredient_Bar_Thorium
+    - Ingredient_Bar_Thorium (bench=Processing[Furnace]; 18s)
+      - needs 1x Ore_Thorium
+        - Ore_Thorium (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 7x Ingredient_Leather_Medium
+    - Ingredient_Leather_Medium (bench=Processing[Tannery]; 30s)
+      - needs 1x Ingredient_Hide_Medium
+        - Ingredient_Hide_Medium (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 7x Ingredient_Fabric_Scrap_Linen
+    - Ingredient_Fabric_Scrap_Linen (raw/unknown)
+  - needs 4x Ingredient_Sac_Venom
+    - Ingredient_Sac_Venom (raw/unknown)
+  - requires bench 1x Bench_Armour
+    - Bench_Armour (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Armor_Thorium_Hands
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fabric_Scrap_Linen
+- 9x Ingredient_Hide_Light
+- 3x Ingredient_Hide_Medium
+- 1x Ingredient_Sac_Venom
+- 2x Ore_Copper
+- 9x Ore_Thorium
+- 125x Rock(type)
+- 154x Wood_Trunk(type)
+
+- Armor_Thorium_Hands (bench=Crafting[Armor_Bench,Armor_Hands]; 3s)
+  - needs 9x Ingredient_Bar_Thorium
+    - Ingredient_Bar_Thorium (bench=Processing[Furnace]; 18s)
+      - needs 1x Ore_Thorium
+        - Ore_Thorium (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Leather_Medium
+    - Ingredient_Leather_Medium (bench=Processing[Tannery]; 30s)
+      - needs 1x Ingredient_Hide_Medium
+        - Ingredient_Hide_Medium (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Linen
+    - Ingredient_Fabric_Scrap_Linen (raw/unknown)
+  - needs 1x Ingredient_Sac_Venom
+    - Ingredient_Sac_Venom (raw/unknown)
+  - requires bench 1x Bench_Armour
+    - Bench_Armour (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Armor_Thorium_Head
+
+Raw/unresolved inputs:
+- 4x Ingredient_Fabric_Scrap_Linen
+- 12x Ingredient_Hide_Light
+- 4x Ingredient_Hide_Medium
+- 2x Ingredient_Sac_Venom
+- 2x Ore_Copper
+- 11x Ore_Thorium
+- 149x Rock(type)
+- 184x Wood_Trunk(type)
+
+- Armor_Thorium_Head (bench=Crafting[Armor_Bench,Armor_Head]; 3s)
+  - needs 11x Ingredient_Bar_Thorium
+    - Ingredient_Bar_Thorium (bench=Processing[Furnace]; 18s)
+      - needs 1x Ore_Thorium
+        - Ore_Thorium (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 4x Ingredient_Leather_Medium
+    - Ingredient_Leather_Medium (bench=Processing[Tannery]; 30s)
+      - needs 1x Ingredient_Hide_Medium
+        - Ingredient_Hide_Medium (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 4x Ingredient_Fabric_Scrap_Linen
+    - Ingredient_Fabric_Scrap_Linen (raw/unknown)
+  - needs 2x Ingredient_Sac_Venom
+    - Ingredient_Sac_Venom (raw/unknown)
+  - requires bench 1x Bench_Armour
+    - Bench_Armour (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Armor_Thorium_Legs
+
+Raw/unresolved inputs:
+- 6x Ingredient_Fabric_Scrap_Linen
+- 18x Ingredient_Hide_Light
+- 6x Ingredient_Hide_Medium
+- 3x Ingredient_Sac_Venom
+- 2x Ore_Copper
+- 15x Ore_Thorium
+- 197x Rock(type)
+- 244x Wood_Trunk(type)
+
+- Armor_Thorium_Legs (bench=Crafting[Armor_Bench,Armor_Legs]; 3s)
+  - needs 15x Ingredient_Bar_Thorium
+    - Ingredient_Bar_Thorium (bench=Processing[Furnace]; 18s)
+      - needs 1x Ore_Thorium
+        - Ore_Thorium (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 6x Ingredient_Leather_Medium
+    - Ingredient_Leather_Medium (bench=Processing[Tannery]; 30s)
+      - needs 1x Ingredient_Hide_Medium
+        - Ingredient_Hide_Medium (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 6x Ingredient_Fabric_Scrap_Linen
+    - Ingredient_Fabric_Scrap_Linen (raw/unknown)
+  - needs 3x Ingredient_Sac_Venom
+    - Ingredient_Sac_Venom (raw/unknown)
+  - requires bench 1x Bench_Armour
+    - Bench_Armour (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Armor_Wood_Chest
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fibre
+- 15x Wood_Trunk(type)
+
+- Armor_Wood_Chest
+  - needs 3x Ingredient_Fibre
+    - Ingredient_Fibre (raw/unknown)
+  - needs 15x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+
+### Armor_Wood_Hands
+
+Raw/unresolved inputs:
+- 2x Ingredient_Fibre
+- 2x Wood_Trunk(type)
+
+- Armor_Wood_Hands
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 2x Ingredient_Fibre
+    - Ingredient_Fibre (raw/unknown)
+
+### Armor_Wood_Head
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fibre
+- 3x Wood_Trunk(type)
+
+- Armor_Wood_Head
+  - needs 3x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 3x Ingredient_Fibre
+    - Ingredient_Fibre (raw/unknown)
+
+### Armor_Wood_Legs
+
+Raw/unresolved inputs:
+- 5x Ingredient_Fibre
+- 3x Wood_Trunk(type)
+
+- Armor_Wood_Legs
+  - needs 3x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 5x Ingredient_Fibre
+    - Ingredient_Fibre (raw/unknown)
+
+### Tool_Capture_Crate
+
+Raw/unresolved inputs:
+- 2020x Ingredient_Fibre
+- 5000x Ingredient_Life_Essence
+- 303x Rock(type)
+- 4x Wood_All(type)
+- 1010x Wood_Trunk(type)
+
+- Tool_Capture_Crate (bench=Crafting[Farmingbench,Farming]; 2s)
+  - needs 4x Wood_All(type)
+    - Wood_All(type) (raw/unknown)
+  - needs 50x Ingredient_Life_Essence
+    - Ingredient_Life_Essence (recipe=Ingredient_Life_Essence_100; bench=Crafting[Farmingbench,Essence])
+      - needs 1x Ingredient_Life_Essence_Concentrated
+        - Ingredient_Life_Essence_Concentrated (bench=Crafting[Farmingbench,Essence])
+          - needs 100x Ingredient_Life_Essence
+            - Ingredient_Life_Essence (cycle)
+          - requires bench 1x Bench_Farming
+            - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 20x Ingredient_Fibre
+                - Ingredient_Fibre (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_Farming
+        - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 20x Ingredient_Fibre
+            - Ingredient_Fibre (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Tool_Feedbag
+
+Raw/unresolved inputs:
+- 5x Fruits(type)
+- 420x Ingredient_Fibre
+- 1000x Ingredient_Life_Essence
+- 10x Plant_Crop_Wheat_Item
+- 63x Rock(type)
+- 5x Vegetables(type)
+- 210x Wood_Trunk(type)
+
+- Tool_Feedbag (bench=Crafting[Farmingbench,Farming]; 4s)
+  - needs 10x Plant_Crop_Wheat_Item
+    - Plant_Crop_Wheat_Item (raw/unknown)
+  - needs 5x Vegetables(type)
+    - Vegetables(type) (raw/unknown)
+  - needs 5x Fruits(type)
+    - Fruits(type) (raw/unknown)
+  - needs 10x Ingredient_Life_Essence
+    - Ingredient_Life_Essence (recipe=Ingredient_Life_Essence_100; bench=Crafting[Farmingbench,Essence])
+      - needs 1x Ingredient_Life_Essence_Concentrated
+        - Ingredient_Life_Essence_Concentrated (bench=Crafting[Farmingbench,Essence])
+          - needs 100x Ingredient_Life_Essence
+            - Ingredient_Life_Essence (cycle)
+          - requires bench 1x Bench_Farming
+            - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 20x Ingredient_Fibre
+                - Ingredient_Fibre (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_Farming
+        - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 20x Ingredient_Fibre
+            - Ingredient_Fibre (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Tool_Fertilizer
+
+Raw/unresolved inputs:
+- 420x Ingredient_Fibre
+- 1000x Ingredient_Life_Essence
+- 10x Ingredient_Poop
+- 63x Rock(type)
+- 5x Vegetables(type)
+- 210x Wood_Trunk(type)
+
+- Tool_Fertilizer (bench=Crafting[Farmingbench,Farming]; 4s)
+  - needs 10x Ingredient_Poop
+    - Ingredient_Poop (raw/unknown)
+  - needs 10x Ingredient_Life_Essence
+    - Ingredient_Life_Essence (recipe=Ingredient_Life_Essence_100; bench=Crafting[Farmingbench,Essence])
+      - needs 1x Ingredient_Life_Essence_Concentrated
+        - Ingredient_Life_Essence_Concentrated (bench=Crafting[Farmingbench,Essence])
+          - needs 100x Ingredient_Life_Essence
+            - Ingredient_Life_Essence (cycle)
+          - requires bench 1x Bench_Farming
+            - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 20x Ingredient_Fibre
+                - Ingredient_Fibre (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_Farming
+        - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 20x Ingredient_Fibre
+            - Ingredient_Fibre (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 5x Vegetables(type)
+    - Vegetables(type) (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Tool_Fertilizer_Crystal
+
+Raw/unresolved inputs:
+- 25x Crystal_Shards(type)
+- 10x Ingredient_Bone_Fragment
+- 10x Ingredient_Sac_Venom
+- 1x Ingredient_Void_Essence
+- 5x Ore_Gold
+- 68x Rock(type)
+- 54x Wood_Trunk(type)
+
+- Tool_Fertilizer_Crystal (bench=Crafting[Alchemybench,Alchemy_Seeds])
+  - needs 25x Crystal_Shards(type)
+    - Crystal_Shards(type) (raw/unknown)
+  - needs 1x Ingredient_Void_Essence
+    - Ingredient_Void_Essence (raw/unknown)
+  - requires bench 1x Bench_Alchemy
+    - Bench_Alchemy (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 20x Rock(type)
+        - Rock(type) (raw/unknown)
+      - needs 5x Ingredient_Bar_Gold
+        - Ingredient_Bar_Gold (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Gold
+            - Ore_Gold (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Ingredient_Sac_Venom
+        - Ingredient_Sac_Venom (raw/unknown)
+      - needs 10x Ingredient_Bone_Fragment
+        - Ingredient_Bone_Fragment (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Tool_Fishing_Trap
+
+Raw/unresolved inputs:
+- 2040x Ingredient_Fibre
+- 5000x Ingredient_Life_Essence
+- 1x Ore_Iron
+- 312x Rock(type)
+- 10x Wood_All(type)
+- 1020x Wood_Trunk(type)
+
+- Tool_Fishing_Trap (bench=Crafting[Farmingbench,Farming]; 5s)
+  - needs 10x Wood_All(type)
+    - Wood_All(type) (raw/unknown)
+  - needs 50x Ingredient_Life_Essence
+    - Ingredient_Life_Essence (recipe=Ingredient_Life_Essence_100; bench=Crafting[Farmingbench,Essence])
+      - needs 1x Ingredient_Life_Essence_Concentrated
+        - Ingredient_Life_Essence_Concentrated (bench=Crafting[Farmingbench,Essence])
+          - needs 100x Ingredient_Life_Essence
+            - Ingredient_Life_Essence (cycle)
+          - requires bench 1x Bench_Farming
+            - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 20x Ingredient_Fibre
+                - Ingredient_Fibre (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_Farming
+        - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 20x Ingredient_Fibre
+            - Ingredient_Fibre (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 20x Ingredient_Fibre
+    - Ingredient_Fibre (raw/unknown)
+  - needs 1x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Tool_Hammer_Crude
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fibre
+- 3x Ingredient_Stick
+- 3x Rock(type)
+- 2x Rubble(type)
+- 4x Wood_Trunk(type)
+
+- Tool_Hammer_Crude (bench=Crafting[Workbench,Workbench_Tools]; 1s)
+  - needs 2x Rubble(type)
+    - Rubble(type) (raw/unknown)
+  - needs 3x Ingredient_Fibre
+    - Ingredient_Fibre (raw/unknown)
+  - needs 3x Ingredient_Stick
+    - Ingredient_Stick (raw/unknown)
+  - requires bench 1x Bench_WorkBench
+    - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+      - needs 4x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 3x Rock(type)
+        - Rock(type) (raw/unknown)
+
+### Tool_Hammer_Iron
+
+Raw/unresolved inputs:
+- 2x Ingredient_Fabric_Scrap_Linen
+- 12x Ingredient_Hide_Light
+- 6x Ore_Iron
+- 75x Rock(type)
+- 94x Wood_Trunk(type)
+
+- Tool_Hammer_Iron (bench=Crafting[Workbench,Workbench_Tools]; 3.5s)
+  - needs 6x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Leather_Light
+    - Ingredient_Leather_Light (bench=Processing[Tannery]; 20s)
+      - needs 1x Ingredient_Hide_Light
+        - Ingredient_Hide_Light (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 2x Ingredient_Fabric_Scrap_Linen
+    - Ingredient_Fabric_Scrap_Linen (raw/unknown)
+  - requires bench 1x Bench_WorkBench
+    - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+      - needs 4x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 3x Rock(type)
+        - Rock(type) (raw/unknown)
+
+### Tool_Hatchet_Adamantite
+
+Raw/unresolved inputs:
+- 4x Ingredient_Fabric_Scrap_Cindercloth
+- 3x Ingredient_Hide_Heavy
+- 9x Ingredient_Hide_Light
+- 8x Ore_Adamantite
+- 93x Rock(type)
+- 114x Wood_Trunk(type)
+
+- Tool_Hatchet_Adamantite (bench=Crafting[Workbench,Workbench_Tools]; 4.5s)
+  - needs 8x Ingredient_Bar_Adamantite
+    - Ingredient_Bar_Adamantite (bench=Processing[Furnace]; 20s)
+      - needs 1x Ore_Adamantite
+        - Ore_Adamantite (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Leather_Heavy
+    - Ingredient_Leather_Heavy (bench=Processing[Tannery]; 40s)
+      - needs 1x Ingredient_Hide_Heavy
+        - Ingredient_Hide_Heavy (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 4x Ingredient_Fabric_Scrap_Cindercloth
+    - Ingredient_Fabric_Scrap_Cindercloth (raw/unknown)
+  - requires bench 1x Bench_WorkBench
+    - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+      - needs 4x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 3x Rock(type)
+        - Rock(type) (raw/unknown)
+
+### Tool_Hatchet_Cobalt
+
+Raw/unresolved inputs:
+- 4x Ingredient_Fabric_Scrap_Shadoweave
+- 2x Ingredient_Hide_Heavy
+- 6x Ingredient_Hide_Light
+- 7x Ore_Cobalt
+- 78x Rock(type)
+- 94x Wood_Trunk(type)
+
+- Tool_Hatchet_Cobalt (bench=Crafting[Workbench,Workbench_Tools]; 4s)
+  - needs 7x Ingredient_Bar_Cobalt
+    - Ingredient_Bar_Cobalt (bench=Processing[Furnace]; 18s)
+      - needs 1x Ore_Cobalt
+        - Ore_Cobalt (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 2x Ingredient_Leather_Heavy
+    - Ingredient_Leather_Heavy (bench=Processing[Tannery]; 40s)
+      - needs 1x Ingredient_Hide_Heavy
+        - Ingredient_Hide_Heavy (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 4x Ingredient_Fabric_Scrap_Shadoweave
+    - Ingredient_Fabric_Scrap_Shadoweave (raw/unknown)
+  - requires bench 1x Bench_WorkBench
+    - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+      - needs 4x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 3x Rock(type)
+        - Rock(type) (raw/unknown)
+
+### Tool_Hatchet_Copper
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fibre
+- 3x Ore_Copper
+- 30x Rock(type)
+- 40x Wood_Trunk(type)
+
+- Tool_Hatchet_Copper (bench=Crafting[Workbench,Workbench_Tools]; 3s)
+  - needs 3x Ingredient_Bar_Copper
+    - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+      - needs 1x Ore_Copper
+        - Ore_Copper (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 6x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 3x Ingredient_Fibre
+    - Ingredient_Fibre (raw/unknown)
+  - requires bench 1x Bench_WorkBench
+    - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+      - needs 4x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 3x Rock(type)
+        - Rock(type) (raw/unknown)
+
+### Tool_Hatchet_Crude
+
+Raw/unresolved inputs:
+- 2x Ingredient_Fibre
+- 2x Ingredient_Stick
+- 2x Rubble(type)
+
+- Tool_Hatchet_Crude (bench=Crafting[Fieldcraft,Tools] or Crafting[Workbench,Workbench_Tools]; 0s)
+  - needs 2x Rubble(type)
+    - Rubble(type) (raw/unknown)
+  - needs 2x Ingredient_Fibre
+    - Ingredient_Fibre (raw/unknown)
+  - needs 2x Ingredient_Stick
+    - Ingredient_Stick (raw/unknown)
+
+### Tool_Hatchet_Iron
+
+Raw/unresolved inputs:
+- 2x Ingredient_Fabric_Scrap_Linen
+- 8x Ingredient_Hide_Light
+- 5x Ore_Iron
+- 60x Rock(type)
+- 74x Wood_Trunk(type)
+
+- Tool_Hatchet_Iron (bench=Crafting[Workbench,Workbench_Tools]; 3.5s)
+  - needs 5x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 2x Ingredient_Leather_Light
+    - Ingredient_Leather_Light (bench=Processing[Tannery]; 20s)
+      - needs 1x Ingredient_Hide_Light
+        - Ingredient_Hide_Light (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 2x Ingredient_Fabric_Scrap_Linen
+    - Ingredient_Fabric_Scrap_Linen (raw/unknown)
+  - requires bench 1x Bench_WorkBench
+    - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+      - needs 4x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 3x Rock(type)
+        - Rock(type) (raw/unknown)
+
+### Tool_Hatchet_Mithril
+
+Raw/unresolved inputs:
+- 12x Ingredient_Hide_Light
+- 4x Ingredient_Hide_Storm
+- 9x Ore_Mithril
+- 108x Rock(type)
+- 134x Wood_Trunk(type)
+
+- Tool_Hatchet_Mithril (bench=Crafting[Workbench,Workbench_Tools]; 5s)
+  - needs 9x Ingredient_Bar_Mithril
+    - Ingredient_Bar_Mithril (bench=Processing[Furnace]; 30s)
+      - needs 1x Ore_Mithril
+        - Ore_Mithril (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 4x Ingredient_Leather_Storm
+    - Ingredient_Leather_Storm (bench=Processing[Tannery]; 60s)
+      - needs 1x Ingredient_Hide_Storm
+        - Ingredient_Hide_Storm (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_WorkBench
+    - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+      - needs 4x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 3x Rock(type)
+        - Rock(type) (raw/unknown)
+
+### Tool_Hatchet_Thorium
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fabric_Scrap_Linen
+- 6x Ingredient_Hide_Light
+- 2x Ingredient_Hide_Medium
+- 6x Ore_Thorium
+- 69x Rock(type)
+- 84x Wood_Trunk(type)
+
+- Tool_Hatchet_Thorium (bench=Crafting[Workbench,Workbench_Tools]; 4s)
+  - needs 6x Ingredient_Bar_Thorium
+    - Ingredient_Bar_Thorium (bench=Processing[Furnace]; 18s)
+      - needs 1x Ore_Thorium
+        - Ore_Thorium (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 2x Ingredient_Leather_Medium
+    - Ingredient_Leather_Medium (bench=Processing[Tannery]; 30s)
+      - needs 1x Ingredient_Hide_Medium
+        - Ingredient_Hide_Medium (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Linen
+    - Ingredient_Fabric_Scrap_Linen (raw/unknown)
+  - requires bench 1x Bench_WorkBench
+    - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+      - needs 4x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 3x Rock(type)
+        - Rock(type) (raw/unknown)
+
+### Tool_Hoe_Copper
+
+Raw/unresolved inputs:
+- 20x Ingredient_Fibre
+- 3x Ore_Copper
+- 30x Rock(type)
+- 44x Wood_Trunk(type)
+
+- Tool_Hoe_Copper (bench=Crafting[Farmingbench,Farming]; 1.5s)
+  - needs 4x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 3x Ingredient_Bar_Copper
+    - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+      - needs 1x Ore_Copper
+        - Ore_Copper (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Tool_Hoe_Crude
+
+Raw/unresolved inputs:
+- 20x Ingredient_Fibre
+- 6x Rock(type)
+- 14x Wood_Trunk(type)
+
+- Tool_Hoe_Crude (bench=Crafting[Farmingbench,Farming]; 0s)
+  - needs 4x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 3x Rock(type)
+    - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Tool_Hoe_Iron
+
+Raw/unresolved inputs:
+- 20x Ingredient_Fibre
+- 3x Ore_Iron
+- 30x Rock(type)
+- 44x Wood_Trunk(type)
+
+- Tool_Hoe_Iron (bench=Crafting[Farmingbench,Farming]; 2.5s)
+  - needs 4x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 3x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Tool_Hoe_Thorium
+
+Raw/unresolved inputs:
+- 20x Ingredient_Fibre
+- 3x Ore_Thorium
+- 30x Rock(type)
+- 44x Wood_Trunk(type)
+
+- Tool_Hoe_Thorium (bench=Crafting[Farmingbench,Farming]; 2.5s)
+  - needs 4x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 3x Ingredient_Bar_Thorium
+    - Ingredient_Bar_Thorium (bench=Processing[Furnace]; 18s)
+      - needs 1x Ore_Thorium
+        - Ore_Thorium (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Tool_Pickaxe_Adamantite
+
+Raw/unresolved inputs:
+- 4x Ingredient_Fabric_Scrap_Cindercloth
+- 3x Ingredient_Hide_Heavy
+- 9x Ingredient_Hide_Light
+- 8x Ore_Adamantite
+- 93x Rock(type)
+- 114x Wood_Trunk(type)
+
+- Tool_Pickaxe_Adamantite (bench=Crafting[Workbench,Workbench_Tools]; 4.5s)
+  - needs 8x Ingredient_Bar_Adamantite
+    - Ingredient_Bar_Adamantite (bench=Processing[Furnace]; 20s)
+      - needs 1x Ore_Adamantite
+        - Ore_Adamantite (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Leather_Heavy
+    - Ingredient_Leather_Heavy (bench=Processing[Tannery]; 40s)
+      - needs 1x Ingredient_Hide_Heavy
+        - Ingredient_Hide_Heavy (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 4x Ingredient_Fabric_Scrap_Cindercloth
+    - Ingredient_Fabric_Scrap_Cindercloth (raw/unknown)
+  - requires bench 1x Bench_WorkBench
+    - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+      - needs 4x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 3x Rock(type)
+        - Rock(type) (raw/unknown)
+
+### Tool_Pickaxe_Cobalt
+
+Raw/unresolved inputs:
+- 4x Ingredient_Fabric_Scrap_Shadoweave
+- 2x Ingredient_Hide_Heavy
+- 6x Ingredient_Hide_Light
+- 7x Ore_Cobalt
+- 78x Rock(type)
+- 94x Wood_Trunk(type)
+
+- Tool_Pickaxe_Cobalt (bench=Crafting[Workbench,Workbench_Tools]; 4s)
+  - needs 7x Ingredient_Bar_Cobalt
+    - Ingredient_Bar_Cobalt (bench=Processing[Furnace]; 18s)
+      - needs 1x Ore_Cobalt
+        - Ore_Cobalt (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 2x Ingredient_Leather_Heavy
+    - Ingredient_Leather_Heavy (bench=Processing[Tannery]; 40s)
+      - needs 1x Ingredient_Hide_Heavy
+        - Ingredient_Hide_Heavy (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 4x Ingredient_Fabric_Scrap_Shadoweave
+    - Ingredient_Fabric_Scrap_Shadoweave (raw/unknown)
+  - requires bench 1x Bench_WorkBench
+    - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+      - needs 4x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 3x Rock(type)
+        - Rock(type) (raw/unknown)
+
+### Tool_Pickaxe_Copper
+
+Raw/unresolved inputs:
+- 1x Ingredient_Fibre
+- 3x Ore_Copper
+- 30x Rock(type)
+- 40x Wood_Trunk(type)
+
+- Tool_Pickaxe_Copper (bench=Crafting[Workbench,Workbench_Tools]; 3s)
+  - needs 3x Ingredient_Bar_Copper
+    - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+      - needs 1x Ore_Copper
+        - Ore_Copper (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 6x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 1x Ingredient_Fibre
+    - Ingredient_Fibre (raw/unknown)
+  - requires bench 1x Bench_WorkBench
+    - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+      - needs 4x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 3x Rock(type)
+        - Rock(type) (raw/unknown)
+
+### Tool_Pickaxe_Crude
+
+Raw/unresolved inputs:
+- 2x Ingredient_Fibre
+- 2x Ingredient_Stick
+- 2x Rubble(type)
+
+- Tool_Pickaxe_Crude (bench=Crafting[Fieldcraft,Tools] or Crafting[Workbench,Workbench_Tools]; 0s)
+  - needs 2x Rubble(type)
+    - Rubble(type) (raw/unknown)
+  - needs 2x Ingredient_Fibre
+    - Ingredient_Fibre (raw/unknown)
+  - needs 2x Ingredient_Stick
+    - Ingredient_Stick (raw/unknown)
+
+### Tool_Pickaxe_Iron
+
+Raw/unresolved inputs:
+- 2x Ingredient_Fabric_Scrap_Linen
+- 8x Ingredient_Hide_Light
+- 5x Ore_Iron
+- 60x Rock(type)
+- 74x Wood_Trunk(type)
+
+- Tool_Pickaxe_Iron (bench=Crafting[Workbench,Workbench_Tools]; 3.5s)
+  - needs 5x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 2x Ingredient_Leather_Light
+    - Ingredient_Leather_Light (bench=Processing[Tannery]; 20s)
+      - needs 1x Ingredient_Hide_Light
+        - Ingredient_Hide_Light (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 2x Ingredient_Fabric_Scrap_Linen
+    - Ingredient_Fabric_Scrap_Linen (raw/unknown)
+  - requires bench 1x Bench_WorkBench
+    - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+      - needs 4x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 3x Rock(type)
+        - Rock(type) (raw/unknown)
+
+### Tool_Pickaxe_Mithril
+
+Raw/unresolved inputs:
+- 12x Ingredient_Hide_Light
+- 4x Ingredient_Hide_Storm
+- 9x Ore_Mithril
+- 108x Rock(type)
+- 134x Wood_Trunk(type)
+
+- Tool_Pickaxe_Mithril (bench=Crafting[Workbench,Workbench_Tools]; 5s)
+  - needs 9x Ingredient_Bar_Mithril
+    - Ingredient_Bar_Mithril (bench=Processing[Furnace]; 30s)
+      - needs 1x Ore_Mithril
+        - Ore_Mithril (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 4x Ingredient_Leather_Storm
+    - Ingredient_Leather_Storm (bench=Processing[Tannery]; 60s)
+      - needs 1x Ingredient_Hide_Storm
+        - Ingredient_Hide_Storm (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_WorkBench
+    - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+      - needs 4x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 3x Rock(type)
+        - Rock(type) (raw/unknown)
+
+### Tool_Pickaxe_Thorium
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fabric_Scrap_Linen
+- 6x Ingredient_Hide_Light
+- 2x Ingredient_Hide_Medium
+- 6x Ore_Thorium
+- 69x Rock(type)
+- 84x Wood_Trunk(type)
+
+- Tool_Pickaxe_Thorium (bench=Crafting[Workbench,Workbench_Tools]; 4s)
+  - needs 6x Ingredient_Bar_Thorium
+    - Ingredient_Bar_Thorium (bench=Processing[Furnace]; 18s)
+      - needs 1x Ore_Thorium
+        - Ore_Thorium (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 2x Ingredient_Leather_Medium
+    - Ingredient_Leather_Medium (bench=Processing[Tannery]; 30s)
+      - needs 1x Ingredient_Hide_Medium
+        - Ingredient_Hide_Medium (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Linen
+    - Ingredient_Fabric_Scrap_Linen (raw/unknown)
+  - requires bench 1x Bench_WorkBench
+    - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+      - needs 4x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 3x Rock(type)
+        - Rock(type) (raw/unknown)
+
+### Tool_Repair_Kit_Iron
+
+Raw/unresolved inputs:
+- 2x Ingredient_Fabric_Scrap_Linen
+- 4x Ingredient_Hide_Light
+- 1x Ore_Iron
+- 18x Rock(type)
+- 24x Wood_Trunk(type)
+
+- Tool_Repair_Kit_Iron (bench=Crafting[Workbench,Workbench_Tools]; 1s)
+  - needs 2x Ingredient_Fabric_Scrap_Linen
+    - Ingredient_Fabric_Scrap_Linen (raw/unknown)
+  - needs 1x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 1x Ingredient_Leather_Light
+    - Ingredient_Leather_Light (bench=Processing[Tannery]; 20s)
+      - needs 1x Ingredient_Hide_Light
+        - Ingredient_Hide_Light (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_WorkBench
+    - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+      - needs 4x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 3x Rock(type)
+        - Rock(type) (raw/unknown)
+
+### Tool_Shears_Basic
+
+Raw/unresolved inputs:
+- 20x Ingredient_Fibre
+- 1x Ore_Iron
+- 12x Rock(type)
+- 20x Wood_Trunk(type)
+
+- Tool_Shears_Basic (bench=Crafting[Farmingbench,Farming]; 2s)
+  - needs 1x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Tool_Shovel_Iron
+
+Raw/unresolved inputs:
+- 2x Ingredient_Fabric_Scrap_Linen
+- 12x Ingredient_Hide_Light
+- 6x Ore_Iron
+- 75x Rock(type)
+- 94x Wood_Trunk(type)
+
+- Tool_Shovel_Iron (bench=Crafting[Workbench,Workbench_Tools]; 3.5s)
+  - needs 6x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Leather_Light
+    - Ingredient_Leather_Light (bench=Processing[Tannery]; 20s)
+      - needs 1x Ingredient_Hide_Light
+        - Ingredient_Hide_Light (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 2x Ingredient_Fabric_Scrap_Linen
+    - Ingredient_Fabric_Scrap_Linen (raw/unknown)
+  - requires bench 1x Bench_WorkBench
+    - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+      - needs 4x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 3x Rock(type)
+        - Rock(type) (raw/unknown)
+
+### Tool_Sickle_Copper
+
+Raw/unresolved inputs:
+- 20x Ingredient_Fibre
+- 1x Ore_Copper
+- 12x Rock(type)
+- 22x Wood_Trunk(type)
+
+- Tool_Sickle_Copper (bench=Crafting[Farmingbench,Farming]; 1.5s)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 1x Ingredient_Bar_Copper
+    - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+      - needs 1x Ore_Copper
+        - Ore_Copper (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Tool_Sickle_Crude
+
+Raw/unresolved inputs:
+- 20x Ingredient_Fibre
+- 4x Rock(type)
+- 12x Wood_Trunk(type)
+
+- Tool_Sickle_Crude (bench=Crafting[Farmingbench,Farming]; 1.5s)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 1x Rock(type)
+    - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Tool_Sickle_Iron
+
+Raw/unresolved inputs:
+- 20x Ingredient_Fibre
+- 2x Ore_Iron
+- 21x Rock(type)
+- 32x Wood_Trunk(type)
+
+- Tool_Sickle_Iron (bench=Crafting[Farmingbench,Farming]; 1.5s)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 2x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Tool_Trap_Bait
+
+Raw/unresolved inputs:
+- 3x Fruits(type)
+- 220x Ingredient_Fibre
+- 500x Ingredient_Life_Essence
+- 33x Rock(type)
+- 110x Wood_Trunk(type)
+
+- Tool_Trap_Bait (bench=Crafting[Farmingbench,Farming]; 1s)
+  - needs 3x Fruits(type)
+    - Fruits(type) (raw/unknown)
+  - needs 5x Ingredient_Life_Essence
+    - Ingredient_Life_Essence (recipe=Ingredient_Life_Essence_100; bench=Crafting[Farmingbench,Essence])
+      - needs 1x Ingredient_Life_Essence_Concentrated
+        - Ingredient_Life_Essence_Concentrated (bench=Crafting[Farmingbench,Essence])
+          - needs 100x Ingredient_Life_Essence
+            - Ingredient_Life_Essence (cycle)
+          - requires bench 1x Bench_Farming
+            - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 20x Ingredient_Fibre
+                - Ingredient_Fibre (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_Farming
+        - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 20x Ingredient_Fibre
+            - Ingredient_Fibre (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Tool_Watering_Can
+
+Raw/unresolved inputs:
+- 20x Ingredient_Fibre
+- 3x Ore_Iron
+- 30x Rock(type)
+- 40x Wood_Trunk(type)
+
+- Tool_Watering_Can (bench=Crafting[Farmingbench,Farming]; 1s)
+  - needs 3x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Arrow_Crude
+
+Raw/unresolved inputs:
+- 4x Ingredient_Stick
+- 2x Ore_Copper
+- 29x Rock(type)
+- 1x Rubble(type)
+- 38x Wood_Trunk(type)
+
+- Weapon_Arrow_Crude (bench=Crafting[Workbench,Workbench_Survival] or Crafting[Weapon_Bench,Weapon_Bow]; 0s)
+  - needs 4x Ingredient_Stick
+    - Ingredient_Stick (raw/unknown)
+  - needs 1x Rubble(type)
+    - Rubble(type) (raw/unknown)
+  - requires bench 1x Bench_WorkBench
+    - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+      - needs 4x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 3x Rock(type)
+        - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Axe_Adamantite
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fabric_Scrap_Cindercloth
+- 4x Ingredient_Hide_Heavy
+- 12x Ingredient_Hide_Light
+- 4x Ore_Adamantite
+- 2x Ore_Copper
+- 86x Rock(type)
+- 114x Wood_Trunk(type)
+
+- Weapon_Axe_Adamantite (bench=Crafting[Weapon_Bench,Weapon_Axe]; 4.5s)
+  - needs 4x Ingredient_Bar_Adamantite
+    - Ingredient_Bar_Adamantite (bench=Processing[Furnace]; 20s)
+      - needs 1x Ore_Adamantite
+        - Ore_Adamantite (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Cindercloth
+    - Ingredient_Fabric_Scrap_Cindercloth (raw/unknown)
+  - needs 4x Ingredient_Leather_Heavy
+    - Ingredient_Leather_Heavy (bench=Processing[Tannery]; 40s)
+      - needs 1x Ingredient_Hide_Heavy
+        - Ingredient_Hide_Heavy (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Axe_Cobalt
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fabric_Scrap_Shadoweave
+- 4x Ingredient_Hide_Heavy
+- 12x Ingredient_Hide_Light
+- 4x Ore_Cobalt
+- 2x Ore_Copper
+- 86x Rock(type)
+- 114x Wood_Trunk(type)
+
+- Weapon_Axe_Cobalt (bench=Crafting[Weapon_Bench,Weapon_Axe]; 4s)
+  - needs 4x Ingredient_Bar_Cobalt
+    - Ingredient_Bar_Cobalt (bench=Processing[Furnace]; 18s)
+      - needs 1x Ore_Cobalt
+        - Ore_Cobalt (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Shadoweave
+    - Ingredient_Fabric_Scrap_Shadoweave (raw/unknown)
+  - needs 4x Ingredient_Leather_Heavy
+    - Ingredient_Leather_Heavy (bench=Processing[Tannery]; 40s)
+      - needs 1x Ingredient_Hide_Heavy
+        - Ingredient_Hide_Heavy (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Axe_Copper
+
+Raw/unresolved inputs:
+- 4x Ingredient_Fibre
+- 6x Ore_Copper
+- 62x Rock(type)
+- 76x Wood_Trunk(type)
+
+- Weapon_Axe_Copper (bench=Crafting[Weapon_Bench,Weapon_Axe]; 3s)
+  - needs 4x Ingredient_Bar_Copper
+    - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+      - needs 1x Ore_Copper
+        - Ore_Copper (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 4x Ingredient_Fibre
+    - Ingredient_Fibre (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Axe_Crude
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fibre
+- 2x Ingredient_Stick
+- 2x Ingredient_Tree_Sap
+- 3x Rubble_Stone
+
+- Weapon_Axe_Crude (3s)
+  - needs 2x Ingredient_Stick
+    - Ingredient_Stick (raw/unknown)
+  - needs 3x Rubble_Stone
+    - Rubble_Stone (raw/unknown)
+  - needs 3x Ingredient_Fibre
+    - Ingredient_Fibre (raw/unknown)
+  - needs 2x Ingredient_Tree_Sap
+    - Ingredient_Tree_Sap (raw/unknown)
+
+### Weapon_Axe_Iron
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fabric_Scrap_Linen
+- 16x Ingredient_Hide_Light
+- 2x Ore_Copper
+- 4x Ore_Iron
+- 86x Rock(type)
+- 114x Wood_Trunk(type)
+
+- Weapon_Axe_Iron (bench=Crafting[Weapon_Bench,Weapon_Axe]; 3.5s)
+  - needs 4x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Linen
+    - Ingredient_Fabric_Scrap_Linen (raw/unknown)
+  - needs 4x Ingredient_Leather_Light
+    - Ingredient_Leather_Light (bench=Processing[Tannery]; 20s)
+      - needs 1x Ingredient_Hide_Light
+        - Ingredient_Hide_Light (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Axe_Stone_Trork
+
+Raw/unresolved inputs:
+- 1x Bench_Armory
+- 4x Ingredient_Hide_Light
+- 2x Ore_Copper
+- 38x Rock(type)
+- 46x Wood_Trunk(type)
+
+- Weapon_Axe_Stone_Trork (bench=DiagramCrafting[Armory,Weapons.Axe] or Crafting[Weapon_Bench,Weapon_Axe])
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 6x Rock(type)
+    - Rock(type) (raw/unknown)
+  - needs 1x Ingredient_Leather_Light
+    - Ingredient_Leather_Light (bench=Processing[Tannery]; 20s)
+      - needs 1x Ingredient_Hide_Light
+        - Ingredient_Hide_Light (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Armory
+    - Bench_Armory (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Axe_Thorium
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fabric_Scrap_Linen
+- 12x Ingredient_Hide_Light
+- 4x Ingredient_Hide_Medium
+- 2x Ore_Copper
+- 4x Ore_Thorium
+- 86x Rock(type)
+- 114x Wood_Trunk(type)
+
+- Weapon_Axe_Thorium (bench=Crafting[Weapon_Bench,Weapon_Axe]; 4s)
+  - needs 4x Ingredient_Bar_Thorium
+    - Ingredient_Bar_Thorium (bench=Processing[Furnace]; 18s)
+      - needs 1x Ore_Thorium
+        - Ore_Thorium (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Linen
+    - Ingredient_Fabric_Scrap_Linen (raw/unknown)
+  - needs 4x Ingredient_Leather_Medium
+    - Ingredient_Leather_Medium (bench=Processing[Tannery]; 30s)
+      - needs 1x Ingredient_Hide_Medium
+        - Ingredient_Hide_Medium (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Axe_Tribal
+
+Raw/unresolved inputs:
+- 16x Ingredient_Hide_Light
+- 4x Ore_Iron
+- 60x Rock(type)
+- 82x Wood_Trunk(type)
+
+- Weapon_Axe_Tribal
+  - needs 4x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 4x Ingredient_Leather_Light
+    - Ingredient_Leather_Light (bench=Processing[Tannery]; 20s)
+      - needs 1x Ingredient_Hide_Light
+        - Ingredient_Hide_Light (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Weapon_Battleaxe_Adamantite
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fabric_Scrap_Cindercloth
+- 5x Ingredient_Hide_Heavy
+- 15x Ingredient_Hide_Light
+- 16x Ore_Adamantite
+- 2x Ore_Copper
+- 200x Rock(type)
+- 244x Wood_Trunk(type)
+
+- Weapon_Battleaxe_Adamantite (bench=Crafting[Weapon_Bench,Weapon_Battleaxe]; 4.5s)
+  - needs 16x Ingredient_Bar_Adamantite
+    - Ingredient_Bar_Adamantite (bench=Processing[Furnace]; 20s)
+      - needs 1x Ore_Adamantite
+        - Ore_Adamantite (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 5x Ingredient_Leather_Heavy
+    - Ingredient_Leather_Heavy (bench=Processing[Tannery]; 40s)
+      - needs 1x Ingredient_Hide_Heavy
+        - Ingredient_Hide_Heavy (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Cindercloth
+    - Ingredient_Fabric_Scrap_Cindercloth (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Battleaxe_Cobalt
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fabric_Scrap_Shadoweave
+- 4x Ingredient_Hide_Heavy
+- 12x Ingredient_Hide_Light
+- 14x Ore_Cobalt
+- 2x Ore_Copper
+- 176x Rock(type)
+- 214x Wood_Trunk(type)
+
+- Weapon_Battleaxe_Cobalt (bench=Crafting[Weapon_Bench,Weapon_Battleaxe]; 4s)
+  - needs 14x Ingredient_Bar_Cobalt
+    - Ingredient_Bar_Cobalt (bench=Processing[Furnace]; 18s)
+      - needs 1x Ore_Cobalt
+        - Ore_Cobalt (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 4x Ingredient_Leather_Heavy
+    - Ingredient_Leather_Heavy (bench=Processing[Tannery]; 40s)
+      - needs 1x Ingredient_Hide_Heavy
+        - Ingredient_Hide_Heavy (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Shadoweave
+    - Ingredient_Fabric_Scrap_Shadoweave (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Battleaxe_Copper
+
+Raw/unresolved inputs:
+- 4x Ingredient_Fibre
+- 8x Ore_Copper
+- 80x Rock(type)
+- 100x Wood_Trunk(type)
+
+- Weapon_Battleaxe_Copper (bench=Crafting[Weapon_Bench,Weapon_Battleaxe]; 3s)
+  - needs 6x Ingredient_Bar_Copper
+    - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+      - needs 1x Ore_Copper
+        - Ore_Copper (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 6x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 4x Ingredient_Fibre
+    - Ingredient_Fibre (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Battleaxe_Crude
+
+Raw/unresolved inputs:
+- 4x Ingredient_Fibre
+- 9x Rock(type)
+- 7x Wood_Trunk(type)
+
+- Weapon_Battleaxe_Crude (bench=Crafting[Workbench,Workbench_Survival]; 0s)
+  - needs 6x Rock(type)
+    - Rock(type) (raw/unknown)
+  - needs 3x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 4x Ingredient_Fibre
+    - Ingredient_Fibre (raw/unknown)
+  - requires bench 1x Bench_WorkBench
+    - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+      - needs 4x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 3x Rock(type)
+        - Rock(type) (raw/unknown)
+
+### Weapon_Battleaxe_Iron
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fabric_Scrap_Linen
+- 16x Ingredient_Hide_Light
+- 2x Ore_Copper
+- 10x Ore_Iron
+- 140x Rock(type)
+- 174x Wood_Trunk(type)
+
+- Weapon_Battleaxe_Iron (bench=Crafting[Weapon_Bench,Weapon_Battleaxe]; 3.5s)
+  - needs 10x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 4x Ingredient_Leather_Light
+    - Ingredient_Leather_Light (bench=Processing[Tannery]; 20s)
+      - needs 1x Ingredient_Hide_Light
+        - Ingredient_Hide_Light (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Linen
+    - Ingredient_Fabric_Scrap_Linen (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Battleaxe_Mithril
+
+Raw/unresolved inputs:
+- 12x Ingredient_Hide_Light
+- 4x Ingredient_Hide_Storm
+- 1x Ingredient_Voidheart
+- 2x Ore_Copper
+- 10x Ore_Mithril
+- 140x Rock(type)
+- 174x Wood_Trunk(type)
+
+- Weapon_Battleaxe_Mithril (bench=Crafting[Weapon_Bench,Weapon_Battleaxe]; 5s)
+  - needs 10x Ingredient_Bar_Mithril
+    - Ingredient_Bar_Mithril (bench=Processing[Furnace]; 30s)
+      - needs 1x Ore_Mithril
+        - Ore_Mithril (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 4x Ingredient_Leather_Storm
+    - Ingredient_Leather_Storm (bench=Processing[Tannery]; 60s)
+      - needs 1x Ingredient_Hide_Storm
+        - Ingredient_Hide_Storm (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 1x Ingredient_Voidheart
+    - Ingredient_Voidheart (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Battleaxe_Thorium
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fabric_Scrap_Linen
+- 12x Ingredient_Hide_Light
+- 4x Ingredient_Hide_Medium
+- 2x Ore_Copper
+- 12x Ore_Thorium
+- 158x Rock(type)
+- 194x Wood_Trunk(type)
+
+- Weapon_Battleaxe_Thorium (bench=Crafting[Weapon_Bench,Weapon_Battleaxe]; 4s)
+  - needs 12x Ingredient_Bar_Thorium
+    - Ingredient_Bar_Thorium (bench=Processing[Furnace]; 18s)
+      - needs 1x Ore_Thorium
+        - Ore_Thorium (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 4x Ingredient_Leather_Medium
+    - Ingredient_Leather_Medium (bench=Processing[Tannery]; 30s)
+      - needs 1x Ingredient_Hide_Medium
+        - Ingredient_Hide_Medium (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Linen
+    - Ingredient_Fabric_Scrap_Linen (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Battleaxe_Tribal
+
+Raw/unresolved inputs:
+- 16x Ingredient_Hide_Light
+- 6x Ore_Iron
+- 78x Rock(type)
+- 103x Wood_Trunk(type)
+
+- Weapon_Battleaxe_Tribal
+  - needs 6x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 4x Ingredient_Leather_Light
+    - Ingredient_Leather_Light (bench=Processing[Tannery]; 20s)
+      - needs 1x Ingredient_Hide_Light
+        - Ingredient_Hide_Light (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Weapon_Blowgun_Tribal
+
+Raw/unresolved inputs:
+- 6x Ingredient_Fibre
+- 16x Ingredient_Hide_Light
+- 10x Ore_Iron
+- 114x Rock(type)
+- 144x Wood_Trunk(type)
+
+- Weapon_Blowgun_Tribal
+  - needs 4x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 6x Ingredient_Fibre
+    - Ingredient_Fibre (raw/unknown)
+  - needs 4x Ingredient_Leather_Light
+    - Ingredient_Leather_Light (bench=Processing[Tannery]; 20s)
+      - needs 1x Ingredient_Hide_Light
+        - Ingredient_Hide_Light (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 10x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Weapon_Bomb_Fire
+
+Raw/unresolved inputs:
+- 6x Ingredient_Powder_Boom
+- 2x Ore_Iron
+- 18x Rock(type)
+- 20x Wood_Trunk(type)
+
+- Weapon_Bomb_Fire
+  - needs 6x Ingredient_Powder_Boom
+    - Ingredient_Powder_Boom (raw/unknown)
+  - needs 2x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Weapon_Bomb_Popberry
+
+Raw/unresolved inputs:
+- 10x Ingredient_Bone_Fragment
+- 4x Ingredient_Fibre
+- 2x Ingredient_Powder_Boom
+- 10x Ingredient_Sac_Venom
+- 5x Ore_Gold
+- 6x Plant_Fruit_Berries_Red
+- 68x Rock(type)
+- 54x Wood_Trunk(type)
+
+- Weapon_Bomb_Popberry (bench=Crafting[Alchemybench,Alchemy_Bombs]; 0.5s)
+  - needs 6x Plant_Fruit_Berries_Red
+    - Plant_Fruit_Berries_Red (raw/unknown)
+  - needs 2x Ingredient_Powder_Boom
+    - Ingredient_Powder_Boom (raw/unknown)
+  - needs 4x Ingredient_Fibre
+    - Ingredient_Fibre (raw/unknown)
+  - requires bench 1x Bench_Alchemy
+    - Bench_Alchemy (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 20x Rock(type)
+        - Rock(type) (raw/unknown)
+      - needs 5x Ingredient_Bar_Gold
+        - Ingredient_Bar_Gold (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Gold
+            - Ore_Gold (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Ingredient_Sac_Venom
+        - Ingredient_Sac_Venom (raw/unknown)
+      - needs 10x Ingredient_Bone_Fragment
+        - Ingredient_Bone_Fragment (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Club_Adamantite
+
+Raw/unresolved inputs:
+- 1x Bench_Armory
+- 3x Ingredient_Fabric_Scrap_Cindercloth
+- 4x Ingredient_Hide_Heavy
+- 12x Ingredient_Hide_Light
+- 4x Ore_Adamantite
+- 2x Ore_Copper
+- 86x Rock(type)
+- 114x Wood_Trunk(type)
+
+- Weapon_Club_Adamantite (bench=DiagramCrafting[Armory,Weapons.Club] or Crafting[Weapon_Bench,Weapon_Club]; 4.5s)
+  - needs 4x Ingredient_Bar_Adamantite
+    - Ingredient_Bar_Adamantite (bench=Processing[Furnace]; 20s)
+      - needs 1x Ore_Adamantite
+        - Ore_Adamantite (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Cindercloth
+    - Ingredient_Fabric_Scrap_Cindercloth (raw/unknown)
+  - needs 4x Ingredient_Leather_Heavy
+    - Ingredient_Leather_Heavy (bench=Processing[Tannery]; 40s)
+      - needs 1x Ingredient_Hide_Heavy
+        - Ingredient_Hide_Heavy (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Armory
+    - Bench_Armory (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Club_Cobalt
+
+Raw/unresolved inputs:
+- 1x Bench_Armory
+- 3x Ingredient_Fabric_Scrap_Shadoweave
+- 4x Ingredient_Hide_Heavy
+- 12x Ingredient_Hide_Light
+- 4x Ore_Cobalt
+- 2x Ore_Copper
+- 86x Rock(type)
+- 114x Wood_Trunk(type)
+
+- Weapon_Club_Cobalt (bench=DiagramCrafting[Armory,Weapons.Club] or Crafting[Weapon_Bench,Weapon_Club]; 4s)
+  - needs 4x Ingredient_Bar_Cobalt
+    - Ingredient_Bar_Cobalt (bench=Processing[Furnace]; 18s)
+      - needs 1x Ore_Cobalt
+        - Ore_Cobalt (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Shadoweave
+    - Ingredient_Fabric_Scrap_Shadoweave (raw/unknown)
+  - needs 4x Ingredient_Leather_Heavy
+    - Ingredient_Leather_Heavy (bench=Processing[Tannery]; 40s)
+      - needs 1x Ingredient_Hide_Heavy
+        - Ingredient_Hide_Heavy (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Armory
+    - Bench_Armory (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Club_Copper
+
+Raw/unresolved inputs:
+- 1x Bench_Armory
+- 2x Ingredient_Fibre
+- 6x Ore_Copper
+- 62x Rock(type)
+- 80x Wood_Trunk(type)
+
+- Weapon_Club_Copper (bench=DiagramCrafting[Armory,Weapons.Club] or Crafting[Weapon_Bench,Weapon_Club]; 3s)
+  - needs 4x Ingredient_Bar_Copper
+    - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+      - needs 1x Ore_Copper
+        - Ore_Copper (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 6x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 2x Ingredient_Fibre
+    - Ingredient_Fibre (raw/unknown)
+  - requires bench 1x Bench_Armory
+    - Bench_Armory (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Club_Iron
+
+Raw/unresolved inputs:
+- 1x Bench_Armory
+- 3x Ingredient_Fabric_Scrap_Linen
+- 16x Ingredient_Hide_Light
+- 2x Ore_Copper
+- 4x Ore_Iron
+- 86x Rock(type)
+- 114x Wood_Trunk(type)
+
+- Weapon_Club_Iron (bench=DiagramCrafting[Armory,Weapons.Club] or Crafting[Weapon_Bench,Weapon_Club]; 3.5s)
+  - needs 4x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Linen
+    - Ingredient_Fabric_Scrap_Linen (raw/unknown)
+  - needs 4x Ingredient_Leather_Light
+    - Ingredient_Leather_Light (bench=Processing[Tannery]; 20s)
+      - needs 1x Ingredient_Hide_Light
+        - Ingredient_Hide_Light (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Armory
+    - Bench_Armory (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Club_Thorium
+
+Raw/unresolved inputs:
+- 1x Bench_Armory
+- 3x Ingredient_Fabric_Scrap_Linen
+- 12x Ingredient_Hide_Light
+- 4x Ingredient_Hide_Medium
+- 2x Ore_Copper
+- 4x Ore_Thorium
+- 86x Rock(type)
+- 114x Wood_Trunk(type)
+
+- Weapon_Club_Thorium (bench=DiagramCrafting[Armory,Weapons.Club] or Crafting[Weapon_Bench,Weapon_Club]; 4s)
+  - needs 4x Ingredient_Bar_Thorium
+    - Ingredient_Bar_Thorium (bench=Processing[Furnace]; 18s)
+      - needs 1x Ore_Thorium
+        - Ore_Thorium (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Linen
+    - Ingredient_Fabric_Scrap_Linen (raw/unknown)
+  - needs 4x Ingredient_Leather_Medium
+    - Ingredient_Leather_Medium (bench=Processing[Tannery]; 30s)
+      - needs 1x Ingredient_Hide_Medium
+        - Ingredient_Hide_Medium (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Armory
+    - Bench_Armory (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Club_Tribal
+
+Raw/unresolved inputs:
+- 16x Ingredient_Hide_Light
+- 4x Ore_Iron
+- 60x Rock(type)
+- 86x Wood_Trunk(type)
+
+- Weapon_Club_Tribal
+  - needs 4x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 6x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 4x Ingredient_Leather_Light
+    - Ingredient_Leather_Light (bench=Processing[Tannery]; 20s)
+      - needs 1x Ingredient_Hide_Light
+        - Ingredient_Hide_Light (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Weapon_Crossbow_Iron
+
+Raw/unresolved inputs:
+- 1x Bench_Armory
+- 3x Ingredient_Fabric_Scrap_Linen
+- 16x Ingredient_Hide_Light
+- 2x Ore_Copper
+- 6x Ore_Iron
+- 104x Rock(type)
+- 134x Wood_Trunk(type)
+
+- Weapon_Crossbow_Iron (bench=Crafting[Weapon_Bench,Weapon_Bow] or DiagramCrafting[Armory,Weapons.Bow]; 3.5s)
+  - needs 3x Ingredient_Fabric_Scrap_Linen
+    - Ingredient_Fabric_Scrap_Linen (raw/unknown)
+  - needs 4x Ingredient_Leather_Light
+    - Ingredient_Leather_Light (bench=Processing[Tannery]; 20s)
+      - needs 1x Ingredient_Hide_Light
+        - Ingredient_Hide_Light (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 6x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Armory
+    - Bench_Armory (raw/unknown)
+
+### Weapon_Daggers_Adamantite
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fabric_Scrap_Cindercloth
+- 3x Ingredient_Hide_Heavy
+- 9x Ingredient_Hide_Light
+- 9x Ore_Adamantite
+- 2x Ore_Copper
+- 125x Rock(type)
+- 154x Wood_Trunk(type)
+
+- Weapon_Daggers_Adamantite (bench=Crafting[Weapon_Bench,Weapon_Daggers]; 4.5s)
+  - needs 9x Ingredient_Bar_Adamantite
+    - Ingredient_Bar_Adamantite (bench=Processing[Furnace]; 20s)
+      - needs 1x Ore_Adamantite
+        - Ore_Adamantite (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Leather_Heavy
+    - Ingredient_Leather_Heavy (bench=Processing[Tannery]; 40s)
+      - needs 1x Ingredient_Hide_Heavy
+        - Ingredient_Hide_Heavy (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Cindercloth
+    - Ingredient_Fabric_Scrap_Cindercloth (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Daggers_Cobalt
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fabric_Scrap_Shadoweave
+- 2x Ingredient_Hide_Heavy
+- 6x Ingredient_Hide_Light
+- 8x Ore_Cobalt
+- 2x Ore_Copper
+- 110x Rock(type)
+- 134x Wood_Trunk(type)
+
+- Weapon_Daggers_Cobalt (bench=Crafting[Weapon_Bench,Weapon_Daggers]; 4s)
+  - needs 8x Ingredient_Bar_Cobalt
+    - Ingredient_Bar_Cobalt (bench=Processing[Furnace]; 18s)
+      - needs 1x Ore_Cobalt
+        - Ore_Cobalt (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 2x Ingredient_Leather_Heavy
+    - Ingredient_Leather_Heavy (bench=Processing[Tannery]; 40s)
+      - needs 1x Ingredient_Hide_Heavy
+        - Ingredient_Hide_Heavy (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Shadoweave
+    - Ingredient_Fabric_Scrap_Shadoweave (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Daggers_Copper
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fibre
+- 6x Ore_Copper
+- 62x Rock(type)
+- 77x Wood_Trunk(type)
+
+- Weapon_Daggers_Copper (bench=Crafting[Weapon_Bench,Weapon_Daggers]; 3s)
+  - needs 3x Ingredient_Fibre
+    - Ingredient_Fibre (raw/unknown)
+  - needs 3x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 4x Ingredient_Bar_Copper
+    - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+      - needs 1x Ore_Copper
+        - Ore_Copper (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Daggers_Crude
+
+Raw/unresolved inputs:
+- 2x Ingredient_Fibre
+- 2x Ingredient_Stick
+- 3x Rock(type)
+- 3x Rubble(type)
+- 4x Wood_Trunk(type)
+
+- Weapon_Daggers_Crude (bench=Crafting[Workbench,Workbench_Survival]; 0s)
+  - needs 3x Rubble(type)
+    - Rubble(type) (raw/unknown)
+  - needs 2x Ingredient_Fibre
+    - Ingredient_Fibre (raw/unknown)
+  - needs 2x Ingredient_Stick
+    - Ingredient_Stick (raw/unknown)
+  - requires bench 1x Bench_WorkBench
+    - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+      - needs 4x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 3x Rock(type)
+        - Rock(type) (raw/unknown)
+
+### Weapon_Daggers_Iron
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fabric_Scrap_Linen
+- 8x Ingredient_Hide_Light
+- 2x Ore_Copper
+- 4x Ore_Iron
+- 74x Rock(type)
+- 94x Wood_Trunk(type)
+
+- Weapon_Daggers_Iron (bench=Crafting[Weapon_Bench,Weapon_Daggers]; 3.5s)
+  - needs 4x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 2x Ingredient_Leather_Light
+    - Ingredient_Leather_Light (bench=Processing[Tannery]; 20s)
+      - needs 1x Ingredient_Hide_Light
+        - Ingredient_Hide_Light (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Linen
+    - Ingredient_Fabric_Scrap_Linen (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Daggers_Mithril
+
+Raw/unresolved inputs:
+- 9x Ingredient_Hide_Light
+- 3x Ingredient_Hide_Storm
+- 1x Ingredient_Voidheart
+- 2x Ore_Copper
+- 10x Ore_Mithril
+- 134x Rock(type)
+- 164x Wood_Trunk(type)
+
+- Weapon_Daggers_Mithril (bench=Crafting[Weapon_Bench,Weapon_Daggers]; 5s)
+  - needs 10x Ingredient_Bar_Mithril
+    - Ingredient_Bar_Mithril (bench=Processing[Furnace]; 30s)
+      - needs 1x Ore_Mithril
+        - Ore_Mithril (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Leather_Storm
+    - Ingredient_Leather_Storm (bench=Processing[Tannery]; 60s)
+      - needs 1x Ingredient_Hide_Storm
+        - Ingredient_Hide_Storm (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 1x Ingredient_Voidheart
+    - Ingredient_Voidheart (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Daggers_Thorium
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fabric_Scrap_Linen
+- 6x Ingredient_Hide_Light
+- 2x Ingredient_Hide_Medium
+- 2x Ore_Copper
+- 6x Ore_Thorium
+- 92x Rock(type)
+- 114x Wood_Trunk(type)
+
+- Weapon_Daggers_Thorium (bench=Crafting[Weapon_Bench,Weapon_Daggers]; 4s)
+  - needs 6x Ingredient_Bar_Thorium
+    - Ingredient_Bar_Thorium (bench=Processing[Furnace]; 18s)
+      - needs 1x Ore_Thorium
+        - Ore_Thorium (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 2x Ingredient_Leather_Medium
+    - Ingredient_Leather_Medium (bench=Processing[Tannery]; 30s)
+      - needs 1x Ingredient_Hide_Medium
+        - Ingredient_Hide_Medium (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Linen
+    - Ingredient_Fabric_Scrap_Linen (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Dart_Tribal
+
+Raw/unresolved inputs:
+- 1x Ore_Iron
+- 9x Rock(type)
+- 11x Wood_Trunk(type)
+
+- Weapon_Dart_Tribal
+  - needs 1x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 1x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+
+### Weapon_Deployable_Healing_Totem
+
+Raw/unresolved inputs:
+- 200x Ingredient_Bone_Fragment
+- 30x Ingredient_Fabric_Scrap_Linen
+- 2000x Ingredient_Fibre
+- 5000x Ingredient_Life_Essence
+- 200x Ingredient_Sac_Venom
+- 20x Ingredient_Void_Essence
+- 100x Ore_Gold
+- 30x Ore_Thorium
+- 10x Plant_Crop_Health2
+- 10x Plant_Crop_Health3
+- 120x Plant_Fruit_Berries_Red
+- 60x Plant_Petals_Blood
+- 2023x Rock(type)
+- 10x Sands(type)
+- 2484x Wood_Trunk(type)
+
+- Weapon_Deployable_Healing_Totem (bench=Crafting[Arcanebench,Arcane_Misc]; 3s)
+  - needs 50x Ingredient_Life_Essence
+    - Ingredient_Life_Essence (recipe=Ingredient_Life_Essence_100; bench=Crafting[Farmingbench,Essence])
+      - needs 1x Ingredient_Life_Essence_Concentrated
+        - Ingredient_Life_Essence_Concentrated (bench=Crafting[Farmingbench,Essence])
+          - needs 100x Ingredient_Life_Essence
+            - Ingredient_Life_Essence (cycle)
+          - requires bench 1x Bench_Farming
+            - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 20x Ingredient_Fibre
+                - Ingredient_Fibre (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_Farming
+        - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 20x Ingredient_Fibre
+            - Ingredient_Fibre (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 20x Ingredient_Bar_Thorium
+    - Ingredient_Bar_Thorium (bench=Processing[Furnace]; 18s)
+      - needs 1x Ore_Thorium
+        - Ore_Thorium (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 10x Potion_Health_Greater
+    - Potion_Health_Greater (bench=Crafting[Alchemybench,Alchemy_Potions]; 1s)
+      - needs 1x Potion_Health
+        - Potion_Health (bench=Crafting[Alchemybench,Alchemy_Potions]; 1s)
+          - needs 1x Potion_Empty
+            - Potion_Empty (bench=Processing[Furnace]; 10s)
+              - needs 1x Sands(type)
+                - Sands(type) (raw/unknown)
+              - requires bench 1x Bench_Furnace
+                - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+                  - needs 6x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 6x Rock(type)
+                    - Rock(type) (raw/unknown)
+                  - requires bench 1x Bench_WorkBench
+                    - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                      - needs 4x Wood_Trunk(type)
+                        - Wood_Trunk(type) (raw/unknown)
+                      - needs 3x Rock(type)
+                        - Rock(type) (raw/unknown)
+          - needs 12x Plant_Fruit_Berries_Red
+            - Plant_Fruit_Berries_Red (raw/unknown)
+          - needs 6x Plant_Petals_Blood
+            - Plant_Petals_Blood (raw/unknown)
+          - needs 1x Plant_Crop_Health2
+            - Plant_Crop_Health2 (raw/unknown)
+          - requires bench 1x Bench_Alchemy
+            - Bench_Alchemy (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 20x Rock(type)
+                - Rock(type) (raw/unknown)
+              - needs 5x Ingredient_Bar_Gold
+                - Ingredient_Bar_Gold (bench=Processing[Furnace]; 10s)
+                  - needs 1x Ore_Gold
+                    - Ore_Gold (raw/unknown)
+                  - requires bench 1x Bench_Furnace
+                    - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+                      - needs 6x Wood_Trunk(type)
+                        - Wood_Trunk(type) (raw/unknown)
+                      - needs 6x Rock(type)
+                        - Rock(type) (raw/unknown)
+                      - requires bench 1x Bench_WorkBench
+                        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                          - needs 4x Wood_Trunk(type)
+                            - Wood_Trunk(type) (raw/unknown)
+                          - needs 3x Rock(type)
+                            - Rock(type) (raw/unknown)
+              - needs 10x Ingredient_Sac_Venom
+                - Ingredient_Sac_Venom (raw/unknown)
+              - needs 10x Ingredient_Bone_Fragment
+                - Ingredient_Bone_Fragment (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 1x Plant_Crop_Health3
+        - Plant_Crop_Health3 (raw/unknown)
+      - requires bench 1x Bench_Alchemy
+        - Bench_Alchemy (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 20x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 5x Ingredient_Bar_Gold
+            - Ingredient_Bar_Gold (bench=Processing[Furnace]; 10s)
+              - needs 1x Ore_Gold
+                - Ore_Gold (raw/unknown)
+              - requires bench 1x Bench_Furnace
+                - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+                  - needs 6x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 6x Rock(type)
+                    - Rock(type) (raw/unknown)
+                  - requires bench 1x Bench_WorkBench
+                    - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                      - needs 4x Wood_Trunk(type)
+                        - Wood_Trunk(type) (raw/unknown)
+                      - needs 3x Rock(type)
+                        - Rock(type) (raw/unknown)
+          - needs 10x Ingredient_Sac_Venom
+            - Ingredient_Sac_Venom (raw/unknown)
+          - needs 10x Ingredient_Bone_Fragment
+            - Ingredient_Bone_Fragment (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Arcane
+    - Bench_Arcane (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 10x Ingredient_Bar_Thorium
+        - Ingredient_Bar_Thorium (bench=Processing[Furnace]; 18s)
+          - needs 1x Ore_Thorium
+            - Ore_Thorium (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 30x Ingredient_Fabric_Scrap_Linen
+        - Ingredient_Fabric_Scrap_Linen (raw/unknown)
+      - needs 20x Ingredient_Void_Essence
+        - Ingredient_Void_Essence (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Deployable_Slowness_Totem
+
+Raw/unresolved inputs:
+- 30x Ingredient_Fabric_Scrap_Linen
+- 30x Ingredient_Ice_Essence
+- 20x Ingredient_Void_Essence
+- 10x Ore_Cobalt
+- 10x Ore_Thorium
+- 40x Rock_Ice
+- 183x Rock(type)
+- 204x Wood_Trunk(type)
+
+- Weapon_Deployable_Slowness_Totem (bench=Crafting[Arcanebench,Arcane_Misc]; 3s)
+  - needs 30x Ingredient_Ice_Essence
+    - Ingredient_Ice_Essence (raw/unknown)
+  - needs 10x Ingredient_Bar_Cobalt
+    - Ingredient_Bar_Cobalt (bench=Processing[Furnace]; 18s)
+      - needs 1x Ore_Cobalt
+        - Ore_Cobalt (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 40x Rock_Ice
+    - Rock_Ice (raw/unknown)
+  - requires bench 1x Bench_Arcane
+    - Bench_Arcane (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 10x Ingredient_Bar_Thorium
+        - Ingredient_Bar_Thorium (bench=Processing[Furnace]; 18s)
+          - needs 1x Ore_Thorium
+            - Ore_Thorium (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 30x Ingredient_Fabric_Scrap_Linen
+        - Ingredient_Fabric_Scrap_Linen (raw/unknown)
+      - needs 20x Ingredient_Void_Essence
+        - Ingredient_Void_Essence (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Longsword_Adamantite
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fabric_Scrap_Cindercloth
+- 4x Ingredient_Hide_Heavy
+- 12x Ingredient_Hide_Light
+- 6x Ore_Adamantite
+- 2x Ore_Copper
+- 104x Rock(type)
+- 134x Wood_Trunk(type)
+
+- Weapon_Longsword_Adamantite (bench=Crafting[Weapon_Bench,Weapon_Longsword]; 4.5s)
+  - needs 6x Ingredient_Bar_Adamantite
+    - Ingredient_Bar_Adamantite (bench=Processing[Furnace]; 20s)
+      - needs 1x Ore_Adamantite
+        - Ore_Adamantite (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Cindercloth
+    - Ingredient_Fabric_Scrap_Cindercloth (raw/unknown)
+  - needs 4x Ingredient_Leather_Heavy
+    - Ingredient_Leather_Heavy (bench=Processing[Tannery]; 40s)
+      - needs 1x Ingredient_Hide_Heavy
+        - Ingredient_Hide_Heavy (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Longsword_Cobalt
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fabric_Scrap_Shadoweave
+- 4x Ingredient_Hide_Heavy
+- 12x Ingredient_Hide_Light
+- 6x Ore_Cobalt
+- 2x Ore_Copper
+- 104x Rock(type)
+- 134x Wood_Trunk(type)
+
+- Weapon_Longsword_Cobalt (bench=Crafting[Weapon_Bench,Weapon_Longsword]; 4s)
+  - needs 6x Ingredient_Bar_Cobalt
+    - Ingredient_Bar_Cobalt (bench=Processing[Furnace]; 18s)
+      - needs 1x Ore_Cobalt
+        - Ore_Cobalt (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Shadoweave
+    - Ingredient_Fabric_Scrap_Shadoweave (raw/unknown)
+  - needs 4x Ingredient_Leather_Heavy
+    - Ingredient_Leather_Heavy (bench=Processing[Tannery]; 40s)
+      - needs 1x Ingredient_Hide_Heavy
+        - Ingredient_Hide_Heavy (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Longsword_Copper
+
+Raw/unresolved inputs:
+- 4x Ingredient_Fibre
+- 8x Ore_Copper
+- 80x Rock(type)
+- 96x Wood_Trunk(type)
+
+- Weapon_Longsword_Copper (bench=Crafting[Weapon_Bench,Weapon_Longsword]; 3s)
+  - needs 6x Ingredient_Bar_Copper
+    - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+      - needs 1x Ore_Copper
+        - Ore_Copper (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 4x Ingredient_Fibre
+    - Ingredient_Fibre (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Longsword_Crude
+
+Raw/unresolved inputs:
+- 4x Ingredient_Fibre
+- 2x Ore_Copper
+- 32x Rock(type)
+- 36x Wood_Trunk(type)
+
+- Weapon_Longsword_Crude (bench=Crafting[Weapon_Bench,Weapon_Longsword]; 3s)
+  - needs 6x Rock(type)
+    - Rock(type) (raw/unknown)
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 4x Ingredient_Fibre
+    - Ingredient_Fibre (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Longsword_Iron
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fabric_Scrap_Linen
+- 16x Ingredient_Hide_Light
+- 2x Ore_Copper
+- 6x Ore_Iron
+- 104x Rock(type)
+- 134x Wood_Trunk(type)
+
+- Weapon_Longsword_Iron (bench=Crafting[Weapon_Bench,Weapon_Longsword]; 3.5s)
+  - needs 6x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Linen
+    - Ingredient_Fabric_Scrap_Linen (raw/unknown)
+  - needs 4x Ingredient_Leather_Light
+    - Ingredient_Leather_Light (bench=Processing[Tannery]; 20s)
+      - needs 1x Ingredient_Hide_Light
+        - Ingredient_Hide_Light (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Longsword_Scarab
+
+Raw/unresolved inputs:
+- 1x Bench_Armory
+- 12x Ingredient_Hide_Light
+- 4x Ingredient_Hide_Medium
+- 2x Ore_Copper
+- 8x Ore_Iron
+- 122x Rock(type)
+- 160x Wood_Trunk(type)
+
+- Weapon_Longsword_Scarab (bench=DiagramCrafting[Armory,Weapons.Longsword] or Crafting[Weapon_Bench,Weapon_Longsword]; 4s)
+  - needs 8x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 6x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 4x Ingredient_Leather_Medium
+    - Ingredient_Leather_Medium (bench=Processing[Tannery]; 30s)
+      - needs 1x Ingredient_Hide_Medium
+        - Ingredient_Hide_Medium (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Armory
+    - Bench_Armory (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Longsword_Thorium
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fabric_Scrap_Linen
+- 12x Ingredient_Hide_Light
+- 4x Ingredient_Hide_Medium
+- 2x Ore_Copper
+- 6x Ore_Thorium
+- 104x Rock(type)
+- 134x Wood_Trunk(type)
+
+- Weapon_Longsword_Thorium (bench=Crafting[Weapon_Bench,Weapon_Longsword]; 4s)
+  - needs 6x Ingredient_Bar_Thorium
+    - Ingredient_Bar_Thorium (bench=Processing[Furnace]; 18s)
+      - needs 1x Ore_Thorium
+        - Ore_Thorium (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Linen
+    - Ingredient_Fabric_Scrap_Linen (raw/unknown)
+  - needs 4x Ingredient_Leather_Medium
+    - Ingredient_Leather_Medium (bench=Processing[Tannery]; 30s)
+      - needs 1x Ingredient_Hide_Medium
+        - Ingredient_Hide_Medium (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Mace_Adamantite
+
+Raw/unresolved inputs:
+- 1x Bench_Armory
+- 3x Ingredient_Fabric_Scrap_Cindercloth
+- 5x Ingredient_Hide_Heavy
+- 15x Ingredient_Hide_Light
+- 16x Ore_Adamantite
+- 2x Ore_Copper
+- 200x Rock(type)
+- 244x Wood_Trunk(type)
+
+- Weapon_Mace_Adamantite (bench=Crafting[Weapon_Bench,Weapon_Mace] or DiagramCrafting[Armory,Weapons.Mace]; 4.5s)
+  - needs 16x Ingredient_Bar_Adamantite
+    - Ingredient_Bar_Adamantite (bench=Processing[Furnace]; 20s)
+      - needs 1x Ore_Adamantite
+        - Ore_Adamantite (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 5x Ingredient_Leather_Heavy
+    - Ingredient_Leather_Heavy (bench=Processing[Tannery]; 40s)
+      - needs 1x Ingredient_Hide_Heavy
+        - Ingredient_Hide_Heavy (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Cindercloth
+    - Ingredient_Fabric_Scrap_Cindercloth (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Armory
+    - Bench_Armory (raw/unknown)
+
+### Weapon_Mace_Cobalt
+
+Raw/unresolved inputs:
+- 1x Bench_Armory
+- 3x Ingredient_Fabric_Scrap_Shadoweave
+- 4x Ingredient_Hide_Heavy
+- 12x Ingredient_Hide_Light
+- 14x Ore_Cobalt
+- 2x Ore_Copper
+- 176x Rock(type)
+- 214x Wood_Trunk(type)
+
+- Weapon_Mace_Cobalt (bench=Crafting[Weapon_Bench,Weapon_Mace] or DiagramCrafting[Armory,Weapons.Mace]; 4s)
+  - needs 14x Ingredient_Bar_Cobalt
+    - Ingredient_Bar_Cobalt (bench=Processing[Furnace]; 18s)
+      - needs 1x Ore_Cobalt
+        - Ore_Cobalt (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 4x Ingredient_Leather_Heavy
+    - Ingredient_Leather_Heavy (bench=Processing[Tannery]; 40s)
+      - needs 1x Ingredient_Hide_Heavy
+        - Ingredient_Hide_Heavy (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Shadoweave
+    - Ingredient_Fabric_Scrap_Shadoweave (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Armory
+    - Bench_Armory (raw/unknown)
+
+### Weapon_Mace_Copper
+
+Raw/unresolved inputs:
+- 1x Bench_Armory
+- 2x Ingredient_Fibre
+- 8x Ore_Copper
+- 80x Rock(type)
+- 104x Wood_Trunk(type)
+
+- Weapon_Mace_Copper (bench=Crafting[Weapon_Bench,Weapon_Mace] or DiagramCrafting[Armory,Weapons.Mace]; 3s)
+  - needs 6x Ingredient_Bar_Copper
+    - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+      - needs 1x Ore_Copper
+        - Ore_Copper (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 10x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 2x Ingredient_Fibre
+    - Ingredient_Fibre (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Armory
+    - Bench_Armory (raw/unknown)
+
+### Weapon_Mace_Crude
+
+Raw/unresolved inputs:
+- 4x Ingredient_Fibre
+- 9x Rock(type)
+- 7x Wood_Trunk(type)
+
+- Weapon_Mace_Crude (bench=Crafting[Workbench,Workbench_Survival]; 0s)
+  - needs 6x Rock(type)
+    - Rock(type) (raw/unknown)
+  - needs 3x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 4x Ingredient_Fibre
+    - Ingredient_Fibre (raw/unknown)
+  - requires bench 1x Bench_WorkBench
+    - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+      - needs 4x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 3x Rock(type)
+        - Rock(type) (raw/unknown)
+
+### Weapon_Mace_Iron
+
+Raw/unresolved inputs:
+- 1x Bench_Armory
+- 3x Ingredient_Fabric_Scrap_Linen
+- 16x Ingredient_Hide_Light
+- 2x Ore_Copper
+- 10x Ore_Iron
+- 140x Rock(type)
+- 174x Wood_Trunk(type)
+
+- Weapon_Mace_Iron (bench=Crafting[Weapon_Bench,Weapon_Mace] or DiagramCrafting[Armory,Weapons.Mace]; 3.5s)
+  - needs 10x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 4x Ingredient_Leather_Light
+    - Ingredient_Leather_Light (bench=Processing[Tannery]; 20s)
+      - needs 1x Ingredient_Hide_Light
+        - Ingredient_Hide_Light (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Linen
+    - Ingredient_Fabric_Scrap_Linen (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Armory
+    - Bench_Armory (raw/unknown)
+
+### Weapon_Mace_Mithril
+
+Raw/unresolved inputs:
+- 12x Ingredient_Hide_Light
+- 4x Ingredient_Hide_Storm
+- 1x Ingredient_Voidheart
+- 2x Ore_Copper
+- 10x Ore_Mithril
+- 140x Rock(type)
+- 174x Wood_Trunk(type)
+
+- Weapon_Mace_Mithril (bench=Crafting[Weapon_Bench,Weapon_Mace]; 5s)
+  - needs 10x Ingredient_Bar_Mithril
+    - Ingredient_Bar_Mithril (bench=Processing[Furnace]; 30s)
+      - needs 1x Ore_Mithril
+        - Ore_Mithril (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 4x Ingredient_Leather_Storm
+    - Ingredient_Leather_Storm (bench=Processing[Tannery]; 60s)
+      - needs 1x Ingredient_Hide_Storm
+        - Ingredient_Hide_Storm (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 1x Ingredient_Voidheart
+    - Ingredient_Voidheart (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Mace_Onyxium
+
+Raw/unresolved inputs:
+- 2x Ingredient_Fibre
+- 3x Rock(type)
+- 2x Wood_Trunk(type)
+
+- Weapon_Mace_Onyxium
+  - needs 2x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 3x Rock(type)
+    - Rock(type) (raw/unknown)
+  - needs 2x Ingredient_Fibre
+    - Ingredient_Fibre (raw/unknown)
+
+### Weapon_Mace_Thorium
+
+Raw/unresolved inputs:
+- 1x Bench_Armory
+- 3x Ingredient_Fabric_Scrap_Linen
+- 12x Ingredient_Hide_Light
+- 4x Ingredient_Hide_Medium
+- 2x Ore_Copper
+- 12x Ore_Thorium
+- 158x Rock(type)
+- 194x Wood_Trunk(type)
+
+- Weapon_Mace_Thorium (bench=Crafting[Weapon_Bench,Weapon_Mace] or DiagramCrafting[Armory,Weapons.Mace]; 4s)
+  - needs 12x Ingredient_Bar_Thorium
+    - Ingredient_Bar_Thorium (bench=Processing[Furnace]; 18s)
+      - needs 1x Ore_Thorium
+        - Ore_Thorium (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 4x Ingredient_Leather_Medium
+    - Ingredient_Leather_Medium (bench=Processing[Tannery]; 30s)
+      - needs 1x Ingredient_Hide_Medium
+        - Ingredient_Hide_Medium (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Linen
+    - Ingredient_Fabric_Scrap_Linen (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Armory
+    - Bench_Armory (raw/unknown)
+
+### Weapon_Shield_Adamantite
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fabric_Scrap_Cindercloth
+- 4x Ingredient_Hide_Heavy
+- 12x Ingredient_Hide_Light
+- 8x Ore_Adamantite
+- 2x Ore_Copper
+- 122x Rock(type)
+- 154x Wood_Trunk(type)
+
+- Weapon_Shield_Adamantite (bench=Crafting[Armor_Bench,Weapon_Shield]; 4.5s)
+  - needs 8x Ingredient_Bar_Adamantite
+    - Ingredient_Bar_Adamantite (bench=Processing[Furnace]; 20s)
+      - needs 1x Ore_Adamantite
+        - Ore_Adamantite (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 4x Ingredient_Leather_Heavy
+    - Ingredient_Leather_Heavy (bench=Processing[Tannery]; 40s)
+      - needs 1x Ingredient_Hide_Heavy
+        - Ingredient_Hide_Heavy (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Cindercloth
+    - Ingredient_Fabric_Scrap_Cindercloth (raw/unknown)
+  - requires bench 1x Bench_Armour
+    - Bench_Armour (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Shield_Cobalt
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fabric_Scrap_Shadoweave
+- 3x Ingredient_Hide_Heavy
+- 9x Ingredient_Hide_Light
+- 6x Ore_Cobalt
+- 2x Ore_Copper
+- 98x Rock(type)
+- 124x Wood_Trunk(type)
+
+- Weapon_Shield_Cobalt (bench=Crafting[Armor_Bench,Weapon_Shield]; 4s)
+  - needs 6x Ingredient_Bar_Cobalt
+    - Ingredient_Bar_Cobalt (bench=Processing[Furnace]; 18s)
+      - needs 1x Ore_Cobalt
+        - Ore_Cobalt (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Leather_Heavy
+    - Ingredient_Leather_Heavy (bench=Processing[Tannery]; 40s)
+      - needs 1x Ingredient_Hide_Heavy
+        - Ingredient_Hide_Heavy (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Shadoweave
+    - Ingredient_Fabric_Scrap_Shadoweave (raw/unknown)
+  - requires bench 1x Bench_Armour
+    - Bench_Armour (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Shield_Copper
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fibre
+- 4x Ore_Copper
+- 44x Rock(type)
+- 55x Wood_Trunk(type)
+
+- Weapon_Shield_Copper (bench=Crafting[Armor_Bench,Weapon_Shield]; 3s)
+  - needs 2x Ingredient_Bar_Copper
+    - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+      - needs 1x Ore_Copper
+        - Ore_Copper (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 1x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 3x Ingredient_Fibre
+    - Ingredient_Fibre (raw/unknown)
+  - requires bench 1x Bench_Armour
+    - Bench_Armour (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Shield_Iron
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fabric_Scrap_Linen
+- 12x Ingredient_Hide_Light
+- 2x Ore_Copper
+- 4x Ore_Iron
+- 80x Rock(type)
+- 104x Wood_Trunk(type)
+
+- Weapon_Shield_Iron (bench=Crafting[Armor_Bench,Weapon_Shield]; 3.5s)
+  - needs 4x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Leather_Light
+    - Ingredient_Leather_Light (bench=Processing[Tannery]; 20s)
+      - needs 1x Ingredient_Hide_Light
+        - Ingredient_Hide_Light (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Linen
+    - Ingredient_Fabric_Scrap_Linen (raw/unknown)
+  - requires bench 1x Bench_Armour
+    - Bench_Armour (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Shield_Mithril
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fabric_Scrap_Stormsilk
+- 9x Ingredient_Hide_Light
+- 3x Ingredient_Hide_Storm
+- 2x Ore_Copper
+- 4x Ore_Mithril
+- 80x Rock(type)
+- 104x Wood_Trunk(type)
+
+- Weapon_Shield_Mithril (bench=Crafting[Armor_Bench,Weapon_Shield]; 5s)
+  - needs 4x Ingredient_Bar_Mithril
+    - Ingredient_Bar_Mithril (bench=Processing[Furnace]; 30s)
+      - needs 1x Ore_Mithril
+        - Ore_Mithril (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Leather_Storm
+    - Ingredient_Leather_Storm (bench=Processing[Tannery]; 60s)
+      - needs 1x Ingredient_Hide_Storm
+        - Ingredient_Hide_Storm (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Stormsilk
+    - Ingredient_Fabric_Scrap_Stormsilk (raw/unknown)
+  - requires bench 1x Bench_Armour
+    - Bench_Armour (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Shield_Thorium
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fabric_Scrap_Linen
+- 9x Ingredient_Hide_Light
+- 3x Ingredient_Hide_Medium
+- 2x Ore_Copper
+- 5x Ore_Thorium
+- 89x Rock(type)
+- 114x Wood_Trunk(type)
+
+- Weapon_Shield_Thorium (bench=Crafting[Armor_Bench,Weapon_Shield]; 4s)
+  - needs 5x Ingredient_Bar_Thorium
+    - Ingredient_Bar_Thorium (bench=Processing[Furnace]; 18s)
+      - needs 1x Ore_Thorium
+        - Ore_Thorium (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Leather_Medium
+    - Ingredient_Leather_Medium (bench=Processing[Tannery]; 30s)
+      - needs 1x Ingredient_Hide_Medium
+        - Ingredient_Hide_Medium (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Linen
+    - Ingredient_Fabric_Scrap_Linen (raw/unknown)
+  - requires bench 1x Bench_Armour
+    - Bench_Armour (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Shield_Wood
+
+Raw/unresolved inputs:
+- 4x Ingredient_Fibre
+- 4x Ingredient_Hide_Light
+- 6x Rock(type)
+- 16x Wood_Trunk(type)
+
+- Weapon_Shield_Wood
+  - needs 6x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 4x Ingredient_Fibre
+    - Ingredient_Fibre (raw/unknown)
+  - needs 1x Ingredient_Leather_Light
+    - Ingredient_Leather_Light (bench=Processing[Tannery]; 20s)
+      - needs 1x Ingredient_Hide_Light
+        - Ingredient_Hide_Light (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Weapon_Shortbow_Adamantite
+
+Raw/unresolved inputs:
+- 1x Bench_Armory
+- 3x Ingredient_Fabric_Scrap_Cindercloth
+- 3x Ingredient_Hide_Heavy
+- 9x Ingredient_Hide_Light
+- 11x Ore_Adamantite
+- 2x Ore_Copper
+- 143x Rock(type)
+- 174x Wood_Trunk(type)
+
+- Weapon_Shortbow_Adamantite (bench=Crafting[Weapon_Bench,Weapon_Bow] or DiagramCrafting[Armory,Weapons.Bow]; 4.5s)
+  - needs 11x Ingredient_Bar_Adamantite
+    - Ingredient_Bar_Adamantite (bench=Processing[Furnace]; 20s)
+      - needs 1x Ore_Adamantite
+        - Ore_Adamantite (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Leather_Heavy
+    - Ingredient_Leather_Heavy (bench=Processing[Tannery]; 40s)
+      - needs 1x Ingredient_Hide_Heavy
+        - Ingredient_Hide_Heavy (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Cindercloth
+    - Ingredient_Fabric_Scrap_Cindercloth (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Armory
+    - Bench_Armory (raw/unknown)
+
+### Weapon_Shortbow_Cobalt
+
+Raw/unresolved inputs:
+- 1x Bench_Armory
+- 3x Ingredient_Fabric_Scrap_Shadoweave
+- 2x Ingredient_Hide_Heavy
+- 6x Ingredient_Hide_Light
+- 10x Ore_Cobalt
+- 2x Ore_Copper
+- 128x Rock(type)
+- 154x Wood_Trunk(type)
+
+- Weapon_Shortbow_Cobalt (bench=Crafting[Weapon_Bench,Weapon_Bow] or DiagramCrafting[Armory,Weapons.Bow]; 4s)
+  - needs 10x Ingredient_Bar_Cobalt
+    - Ingredient_Bar_Cobalt (bench=Processing[Furnace]; 18s)
+      - needs 1x Ore_Cobalt
+        - Ore_Cobalt (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 2x Ingredient_Leather_Heavy
+    - Ingredient_Leather_Heavy (bench=Processing[Tannery]; 40s)
+      - needs 1x Ingredient_Hide_Heavy
+        - Ingredient_Hide_Heavy (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Shadoweave
+    - Ingredient_Fabric_Scrap_Shadoweave (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Armory
+    - Bench_Armory (raw/unknown)
+
+### Weapon_Shortbow_Copper
+
+Raw/unresolved inputs:
+- 1x Bench_Armory
+- 6x Ingredient_Fibre
+- 6x Ore_Copper
+- 62x Rock(type)
+- 78x Wood_Trunk(type)
+
+- Weapon_Shortbow_Copper (bench=Crafting[Weapon_Bench,Weapon_Bow] or DiagramCrafting[Armory,Weapons.Bow]; 3s)
+  - needs 4x Ingredient_Bar_Copper
+    - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+      - needs 1x Ore_Copper
+        - Ore_Copper (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 4x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 6x Ingredient_Fibre
+    - Ingredient_Fibre (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Armory
+    - Bench_Armory (raw/unknown)
+
+### Weapon_Shortbow_Crude
+
+Raw/unresolved inputs:
+- 1x Bench_Armory
+- 6x Ingredient_Fibre
+- 4x Ingredient_Stick
+- 2x Ore_Copper
+- 29x Rock(type)
+- 38x Wood_Trunk(type)
+
+- Weapon_Shortbow_Crude (bench=Crafting[Workbench,Workbench_Survival] or Crafting[Weapon_Bench,Weapon_Bow] or DiagramCrafting[Armory,Weapons.Bow]; 0s)
+  - needs 4x Ingredient_Stick
+    - Ingredient_Stick (raw/unknown)
+  - needs 6x Ingredient_Fibre
+    - Ingredient_Fibre (raw/unknown)
+  - requires bench 1x Bench_WorkBench
+    - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+      - needs 4x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 3x Rock(type)
+        - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Armory
+    - Bench_Armory (raw/unknown)
+
+### Weapon_Shortbow_Iron
+
+Raw/unresolved inputs:
+- 1x Bench_Armory
+- 3x Ingredient_Fabric_Scrap_Linen
+- 8x Ingredient_Hide_Light
+- 2x Ore_Copper
+- 6x Ore_Iron
+- 92x Rock(type)
+- 114x Wood_Trunk(type)
+
+- Weapon_Shortbow_Iron (bench=Crafting[Weapon_Bench,Weapon_Bow] or DiagramCrafting[Armory,Weapons.Bow]; 3.5s)
+  - needs 6x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 2x Ingredient_Leather_Light
+    - Ingredient_Leather_Light (bench=Processing[Tannery]; 20s)
+      - needs 1x Ingredient_Hide_Light
+        - Ingredient_Hide_Light (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Linen
+    - Ingredient_Fabric_Scrap_Linen (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Armory
+    - Bench_Armory (raw/unknown)
+
+### Weapon_Shortbow_Mithril
+
+Raw/unresolved inputs:
+- 6x Ingredient_Hide_Light
+- 2x Ingredient_Hide_Storm
+- 1x Ingredient_Voidheart
+- 2x Ore_Copper
+- 6x Ore_Mithril
+- 92x Rock(type)
+- 114x Wood_Trunk(type)
+
+- Weapon_Shortbow_Mithril (bench=Crafting[Weapon_Bench,Weapon_Bow]; 5s)
+  - needs 6x Ingredient_Bar_Mithril
+    - Ingredient_Bar_Mithril (bench=Processing[Furnace]; 30s)
+      - needs 1x Ore_Mithril
+        - Ore_Mithril (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 2x Ingredient_Leather_Storm
+    - Ingredient_Leather_Storm (bench=Processing[Tannery]; 60s)
+      - needs 1x Ingredient_Hide_Storm
+        - Ingredient_Hide_Storm (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 1x Ingredient_Voidheart
+    - Ingredient_Voidheart (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Shortbow_Thorium
+
+Raw/unresolved inputs:
+- 1x Bench_Armory
+- 3x Ingredient_Fabric_Scrap_Linen
+- 6x Ingredient_Hide_Light
+- 2x Ingredient_Hide_Medium
+- 2x Ore_Copper
+- 8x Ore_Thorium
+- 110x Rock(type)
+- 134x Wood_Trunk(type)
+
+- Weapon_Shortbow_Thorium (bench=Crafting[Weapon_Bench,Weapon_Bow] or DiagramCrafting[Armory,Weapons.Bow]; 4s)
+  - needs 8x Ingredient_Bar_Thorium
+    - Ingredient_Bar_Thorium (bench=Processing[Furnace]; 18s)
+      - needs 1x Ore_Thorium
+        - Ore_Thorium (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 2x Ingredient_Leather_Medium
+    - Ingredient_Leather_Medium (bench=Processing[Tannery]; 30s)
+      - needs 1x Ingredient_Hide_Medium
+        - Ingredient_Hide_Medium (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Linen
+    - Ingredient_Fabric_Scrap_Linen (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Armory
+    - Bench_Armory (raw/unknown)
+
+### Weapon_Spear_Crude
+
+Raw/unresolved inputs:
+- 1x Ingredient_Fibre
+- 3x Ingredient_Stick
+- 3x Rubble(type)
+
+- Weapon_Spear_Crude
+  - needs 3x Rubble(type)
+    - Rubble(type) (raw/unknown)
+  - needs 3x Ingredient_Stick
+    - Ingredient_Stick (raw/unknown)
+  - needs 1x Ingredient_Fibre
+    - Ingredient_Fibre (raw/unknown)
+
+### Weapon_Staff_Crystal_Flame
+
+Raw/unresolved inputs:
+- 30x Ingredient_Fabric_Scrap_Linen
+- 20x Ingredient_Fire_Essence
+- 20x Ingredient_Void_Essence
+- 8x Ore_Gold
+- 8x Ore_Silver
+- 10x Ore_Thorium
+- 1x Rock_Gem_Ruby
+- 237x Rock(type)
+- 264x Wood_Trunk(type)
+
+- Weapon_Staff_Crystal_Flame (bench=Crafting[Arcanebench,Arcane_Misc]; 5s)
+  - needs 1x Rock_Gem_Ruby
+    - Rock_Gem_Ruby (raw/unknown)
+  - needs 8x Ingredient_Bar_Silver
+    - Ingredient_Bar_Silver (bench=Processing[Furnace]; 4s)
+      - needs 1x Ore_Silver
+        - Ore_Silver (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 8x Ingredient_Bar_Gold
+    - Ingredient_Bar_Gold (bench=Processing[Furnace]; 10s)
+      - needs 1x Ore_Gold
+        - Ore_Gold (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 20x Ingredient_Fire_Essence
+    - Ingredient_Fire_Essence (raw/unknown)
+  - requires bench 1x Bench_Arcane
+    - Bench_Arcane (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 10x Ingredient_Bar_Thorium
+        - Ingredient_Bar_Thorium (bench=Processing[Furnace]; 18s)
+          - needs 1x Ore_Thorium
+            - Ore_Thorium (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 30x Ingredient_Fabric_Scrap_Linen
+        - Ingredient_Fabric_Scrap_Linen (raw/unknown)
+      - needs 20x Ingredient_Void_Essence
+        - Ingredient_Void_Essence (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Staff_Crystal_Ice
+
+Raw/unresolved inputs:
+- 30x Ingredient_Fabric_Scrap_Linen
+- 20x Ingredient_Ice_Essence
+- 20x Ingredient_Void_Essence
+- 8x Ore_Silver
+- 10x Ore_Thorium
+- 1x Rock_Gem_Sapphire
+- 165x Rock(type)
+- 10x Wood_Azure_Trunk
+- 184x Wood_Trunk(type)
+
+- Weapon_Staff_Crystal_Ice (bench=Crafting[Arcanebench,Arcane_Misc]; 5s)
+  - needs 1x Rock_Gem_Sapphire
+    - Rock_Gem_Sapphire (raw/unknown)
+  - needs 8x Ingredient_Bar_Silver
+    - Ingredient_Bar_Silver (bench=Processing[Furnace]; 4s)
+      - needs 1x Ore_Silver
+        - Ore_Silver (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 10x Wood_Azure_Trunk
+    - Wood_Azure_Trunk (raw/unknown)
+  - needs 20x Ingredient_Ice_Essence
+    - Ingredient_Ice_Essence (raw/unknown)
+  - requires bench 1x Bench_Arcane
+    - Bench_Arcane (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 10x Ingredient_Bar_Thorium
+        - Ingredient_Bar_Thorium (bench=Processing[Furnace]; 18s)
+          - needs 1x Ore_Thorium
+            - Ore_Thorium (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 30x Ingredient_Fabric_Scrap_Linen
+        - Ingredient_Fabric_Scrap_Linen (raw/unknown)
+      - needs 20x Ingredient_Void_Essence
+        - Ingredient_Void_Essence (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Sword_Adamantite
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fabric_Scrap_Cindercloth
+- 4x Ingredient_Hide_Heavy
+- 12x Ingredient_Hide_Light
+- 11x Ore_Adamantite
+- 2x Ore_Copper
+- 149x Rock(type)
+- 184x Wood_Trunk(type)
+
+- Weapon_Sword_Adamantite (bench=Crafting[Weapon_Bench,Weapon_Sword]; 4.5s)
+  - needs 11x Ingredient_Bar_Adamantite
+    - Ingredient_Bar_Adamantite (bench=Processing[Furnace]; 20s)
+      - needs 1x Ore_Adamantite
+        - Ore_Adamantite (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 4x Ingredient_Leather_Heavy
+    - Ingredient_Leather_Heavy (bench=Processing[Tannery]; 40s)
+      - needs 1x Ingredient_Hide_Heavy
+        - Ingredient_Hide_Heavy (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Cindercloth
+    - Ingredient_Fabric_Scrap_Cindercloth (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Sword_Cobalt
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fabric_Scrap_Shadoweave
+- 3x Ingredient_Hide_Heavy
+- 9x Ingredient_Hide_Light
+- 10x Ore_Cobalt
+- 2x Ore_Copper
+- 134x Rock(type)
+- 164x Wood_Trunk(type)
+
+- Weapon_Sword_Cobalt (bench=Crafting[Weapon_Bench,Weapon_Sword]; 4s)
+  - needs 10x Ingredient_Bar_Cobalt
+    - Ingredient_Bar_Cobalt (bench=Processing[Furnace]; 18s)
+      - needs 1x Ore_Cobalt
+        - Ore_Cobalt (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Leather_Heavy
+    - Ingredient_Leather_Heavy (bench=Processing[Tannery]; 40s)
+      - needs 1x Ingredient_Hide_Heavy
+        - Ingredient_Hide_Heavy (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Shadoweave
+    - Ingredient_Fabric_Scrap_Shadoweave (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Sword_Copper
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fibre
+- 6x Ore_Copper
+- 62x Rock(type)
+- 78x Wood_Trunk(type)
+
+- Weapon_Sword_Copper (bench=Crafting[Weapon_Bench,Weapon_Sword]; 3s)
+  - needs 4x Ingredient_Bar_Copper
+    - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+      - needs 1x Ore_Copper
+        - Ore_Copper (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 4x Wood_Trunk(type)
+    - Wood_Trunk(type) (raw/unknown)
+  - needs 3x Ingredient_Fibre
+    - Ingredient_Fibre (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Sword_Crude
+
+Raw/unresolved inputs:
+- 2x Ingredient_Fibre
+- 2x Ingredient_Stick
+- 2x Rubble(type)
+
+- Weapon_Sword_Crude (bench=Crafting[Fieldcraft,Tools] or Crafting[Workbench,Workbench_Survival]; 0s)
+  - needs 2x Rubble(type)
+    - Rubble(type) (raw/unknown)
+  - needs 2x Ingredient_Fibre
+    - Ingredient_Fibre (raw/unknown)
+  - needs 2x Ingredient_Stick
+    - Ingredient_Stick (raw/unknown)
+
+### Weapon_Sword_Iron
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fabric_Scrap_Linen
+- 12x Ingredient_Hide_Light
+- 2x Ore_Copper
+- 6x Ore_Iron
+- 98x Rock(type)
+- 124x Wood_Trunk(type)
+
+- Weapon_Sword_Iron (bench=Crafting[Weapon_Bench,Weapon_Sword]; 3.5s)
+  - needs 6x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Leather_Light
+    - Ingredient_Leather_Light (bench=Processing[Tannery]; 20s)
+      - needs 1x Ingredient_Hide_Light
+        - Ingredient_Hide_Light (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Linen
+    - Ingredient_Fabric_Scrap_Linen (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Sword_Mithril
+
+Raw/unresolved inputs:
+- 9x Ingredient_Hide_Light
+- 3x Ingredient_Hide_Storm
+- 1x Ingredient_Voidheart
+- 2x Ore_Copper
+- 6x Ore_Mithril
+- 98x Rock(type)
+- 124x Wood_Trunk(type)
+
+- Weapon_Sword_Mithril (bench=Crafting[Weapon_Bench,Weapon_Sword]; 5s)
+  - needs 6x Ingredient_Bar_Mithril
+    - Ingredient_Bar_Mithril (bench=Processing[Furnace]; 30s)
+      - needs 1x Ore_Mithril
+        - Ore_Mithril (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Leather_Storm
+    - Ingredient_Leather_Storm (bench=Processing[Tannery]; 60s)
+      - needs 1x Ingredient_Hide_Storm
+        - Ingredient_Hide_Storm (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 1x Ingredient_Voidheart
+    - Ingredient_Voidheart (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Weapon_Sword_Thorium
+
+Raw/unresolved inputs:
+- 3x Ingredient_Fabric_Scrap_Linen
+- 9x Ingredient_Hide_Light
+- 3x Ingredient_Hide_Medium
+- 2x Ore_Copper
+- 8x Ore_Thorium
+- 116x Rock(type)
+- 144x Wood_Trunk(type)
+
+- Weapon_Sword_Thorium (bench=Crafting[Weapon_Bench,Weapon_Sword]; 4s)
+  - needs 8x Ingredient_Bar_Thorium
+    - Ingredient_Bar_Thorium (bench=Processing[Furnace]; 18s)
+      - needs 1x Ore_Thorium
+        - Ore_Thorium (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Leather_Medium
+    - Ingredient_Leather_Medium (bench=Processing[Tannery]; 30s)
+      - needs 1x Ingredient_Hide_Medium
+        - Ingredient_Hide_Medium (raw/unknown)
+      - requires bench 1x Bench_Tannery
+        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+          - needs 3x Ingredient_Hide_Light
+            - Ingredient_Hide_Light (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 3x Ingredient_Fabric_Scrap_Linen
+    - Ingredient_Fabric_Scrap_Linen (raw/unknown)
+  - requires bench 1x Bench_Weapon
+    - Bench_Weapon (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 2x Ingredient_Bar_Copper
+        - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+          - needs 1x Ore_Copper
+            - Ore_Copper (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - needs 10x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 5x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)

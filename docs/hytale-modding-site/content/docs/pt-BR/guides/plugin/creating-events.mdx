@@ -1,0 +1,90 @@
+---
+title: Creating Events Listeners
+description: Learn how to create event listeners for your Hytale mod.
+authors:
+  - name: Neil Revin
+    url: https://itsneil.dev
+  - name: EllieAU
+    url: https://ellie.au
+---
+
+## Classe de evento
+
+You can import an Event class and create a function with the Event as an argument. [Clique aqui](../../server/events) para ver todos os eventos disponíveis.
+
+Exemplo de plugin para quando um jogador estiver pronto (entrar num servidor):
+
+```java
+
+public class ExampleEvent {
+
+    public static void onPlayerReady(PlayerReadyEvent event) {
+        Player player = event.getPlayer();
+        player.sendMessage(Message.raw("Bem-vindo(a) " + player.getDisplayName()));
+    }
+
+}
+```
+
+## Registrando o evento
+
+Todos os eventos devem ser registrados na classe principal do plugin, geralmente localizado na função `setup`.
+
+```java
+public class MyPlugin extends JavaPlugin {
+
+    @Override
+    public void setup() {
+        this.getEventRegistry().registerGlobal(PlayerReadyEvent.class, ExampleEvent::onPlayerReady);
+    }
+}
+```
+
+## ECS Event Classes
+
+For events that fall under the [ECS Events](../../server/events#ecsevent) list you will need to instead create and register an entity event system.
+Veja abaixo um exemplo que cancelará a criação de uma receita caso ela use fibra como ingrediente:
+
+```java
+class ExampleCancelCraft extends EntityEventSystem<EntityStore, CraftRecipeEvent.Pre> {
+    public ExampleCancelCraft() {
+        super(CraftRecipeEvent.Pre.class);
+    }
+
+    @Override
+    public void handle(int index,
+                       @Nonnull ArchetypeChunk<EntityStore> archetypeChunk,
+                       @Nonnull Store<EntityStore> store,
+                       @Nonnull CommandBuffer<EntityStore> commandBuffer,
+                       @Nonnull CraftRecipeEvent.Pre craftRecipeEvent) {
+        CraftingRecipe recipe = craftRecipeEvent.getCraftedRecipe();
+        if (recipe.getInput() != null) {
+            for (MaterialQuantity mq : recipe.getInput()) {
+                if (Objects.equals(mq.getItemId(), "Ingredient_Fibre")) {
+                    craftRecipeEvent.setCancelled(true);
+                    break;
+                }
+            }
+        }
+    }
+
+    @Override
+    public Query<EntityStore> getQuery() {
+        return Archetype.empty();
+    }
+}
+```
+
+## Registering ECS Events
+
+Você precisará registrar o sistema no seu plugin:
+
+```java
+public class MyPlugin extends JavaPlugin {
+
+    @Override
+    public void setup() {
+        this.getEntityStoreRegistry().registerSystem(new ExampleCancelCraft());
+    }
+}
+```

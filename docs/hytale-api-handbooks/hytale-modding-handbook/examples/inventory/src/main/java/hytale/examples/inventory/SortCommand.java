@@ -1,0 +1,63 @@
+package hytale.examples.inventory;
+
+import com.hypixel.hytale.component.Ref;
+import com.hypixel.hytale.component.Store;
+import com.hypixel.hytale.server.core.Message;
+import com.hypixel.hytale.server.core.command.system.CommandContext;
+import com.hypixel.hytale.server.core.command.system.arguments.system.RequiredArg;
+import com.hypixel.hytale.server.core.command.system.arguments.types.ArgTypes;
+import com.hypixel.hytale.server.core.command.system.basecommands.AbstractPlayerCommand;
+import com.hypixel.hytale.server.core.inventory.InventoryComponent;
+import com.hypixel.hytale.server.core.inventory.container.SortType;
+import com.hypixel.hytale.server.core.universe.PlayerRef;
+import com.hypixel.hytale.server.core.universe.world.World;
+import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
+
+/**
+ * Sort the storage inventory.
+ * Usage: /sort <type>
+ * Examples:
+ *   /sort name - Sort alphabetically
+ *   /sort type - Sort by item type
+ *   /sort rarity - Sort by rarity
+ *
+ * <p>Reaches the storage section via its component type, then calls
+ * {@code sortItems(SortType)} on that section's {@link SortType}-aware container.
+ * The {@link SortType} enum names map directly to the command argument, so we
+ * parse the player's input with {@code SortType.valueOf(...)}.
+ */
+public class SortCommand extends AbstractPlayerCommand {
+
+    private final RequiredArg<String> sortTypeArg;
+
+    public SortCommand() {
+        super("sort", "Sort storage inventory");
+        sortTypeArg = withRequiredArg("type", "Sort type (name/type/rarity)", ArgTypes.STRING);
+    }
+
+    // Skip the auto-generated permission node so any player can run this example
+    // (otherwise it requires op). See commands example's HelloCommand for details.
+    @Override
+    protected boolean canGeneratePermission() {
+        return false;
+    }
+
+    @Override
+    protected void execute(CommandContext ctx, Store<EntityStore> store,
+                          Ref<EntityStore> ref, PlayerRef playerRef, World world) {
+        String sortTypeStr = ctx.get(sortTypeArg).toUpperCase();
+
+        SortType sortType;
+        try {
+            sortType = SortType.valueOf(sortTypeStr);
+        } catch (IllegalArgumentException e) {
+            playerRef.sendMessage(Message.raw("Unknown sort type: " + sortTypeStr.toLowerCase()
+                + ". Valid types: name, type, rarity"));
+            return;
+        }
+
+        // Grab the storage section's container and sort it in place.
+        store.getComponent(ref, InventoryComponent.Storage.getComponentType()).getInventory().sortItems(sortType);
+        playerRef.sendMessage(Message.raw("Sorted storage by " + sortType.name().toLowerCase()));
+    }
+}

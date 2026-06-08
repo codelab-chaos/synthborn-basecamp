@@ -1,0 +1,103 @@
+---
+title: Eventos
+description: Lista de todos os eventos em Hytale.
+icon: List
+full: true
+---
+
+## IEvent
+
+- AddPlayerToWorldEvent
+- AllNPCsLoadedEvent
+- AllWorldsLoadedEvent
+- AssetMonitorEvent
+  - AssetStoreMonitorEvent
+  - CommonAssetMonitorEvent
+- AssetPackRegisterEvent
+- AssetPackUnregisterEvent
+- AssetStoreEvent
+  - RegisterAssetStoreEvent
+  - RemoveAssetStoreEvent
+- AssetsEvent
+  - GenerateAssetsEvent
+  - LoadedAssetsEvent
+  - RemovedAssetsEvent
+- BootEvent
+- ChunkEvent
+  - ChunkPreLoadProcessEvent
+- DrainPlayerFromWorldEvent
+- EditorClientEvent
+  - AssetEditorActivateButtonEvent
+  - AssetEditorAssetCreatedEvent
+  - AssetEditorClientDisconnectEvent
+  - AssetEditorSelectAssetEvent
+  - AssetEditorUpdateWeatherPreviewLockEvent
+- EntityEvent
+  - EntityRemoveEvent
+  - LivingEntityInventoryChangeEvent
+- GenerateDefaultLanguageEvent
+- GenerateSchemaEvent
+- GenerateServerStateEvent
+- ItemContainerChangeEvent
+- ~~LivingEntityUseBlockEvent~~ OBSOLETO
+- LoadAssetEvent
+- LoadedNPCEvent
+- MessagesUpdated
+- PlayerConnectEvent
+- PlayerEvent
+  - ~~PlayerCraftEvent~~ OBSOLETO
+  - ~~PlayerInteractEvent~~ OBSOLETO
+  - PlayerMouseButtonEvent
+  - PlayerMouseMotionEvent
+  - PlayerReadyEvent
+- PlayerRefEvent
+  - PlayerDisconnectEvent
+- PlayerSetupConnectEvent
+- PlayerSetupDisconnectEvent
+- PluginEvent
+  - PluginSetupEvent
+- ~~PrepareUniverseEvent~~ OBSOLETO
+- ShutdownEvent
+- SingleplayerRequestAccessEvent
+- TreasureChestOpeningEvent
+- WindowCloseEvent
+- WorldEvent
+  - AddWorldEvent
+  - RemoveWorldEvent
+  - StartWorldEvent
+- WorldPathChangedEvent
+
+## IAsyncEvent
+
+- AssetEditorFetchAutoCompleteDataEvent
+- AssetEditorRequestDataSetEvent
+- PlayerChatEvent
+- SendCommonAssetsEvent
+
+## EcsEvent
+
+- CancellableEcsEvent
+  - BreakBlockEvent
+  - ChangeGameModeEvent
+  - ChunkSaveEvent
+  - ChunkUnloadEvent
+  - CraftRecipeEvent
+    - Post
+    - Pre
+  - Damage
+  - DamageBlockEvent
+  - DropItemEvent
+    - Drop
+    - PlayerRequest
+  - InteractivelyPickupItemEvent
+  - PlaceBlockEvent
+  - PrefabPasteEvent
+  - SwitchActiveSlotEvent
+- DiscoverInstanceEvent
+  - Display
+- DiscoverZoneEvent
+  -
+-
+- UseBlockEvent
+  - Post
+  - Pre
