@@ -11,3 +11,6 @@ remote-host.env
 # docs/external/ — third-party reference repos cloned in for local use, NOT vendored
 # into basecamp. Re-create with: node tools/docs/clone-vendor-docs.js
 docs/external/
+
+node_modules/
+
