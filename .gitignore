@@ -1,0 +1,5 @@
+# _Assets/ — the unzipped Hytale game-assets archive.
+# This is the extracted contents of the assets .zip found in the Hytale game
+# folder. It is large binary game data (multi-GB) and is intentionally NOT
+# version-controlled. Drop/extract the assets here locally; do not commit them.
+_Assets/
