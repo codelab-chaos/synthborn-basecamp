@@ -1,0 +1,232 @@
+---
+title: Системы
+description: В этом руководстве вы узнаете, как системы работают внутри Hytale.
+authors:
+  - name: oskarscot
+    url: https://oskar.scot
+---
+
+Системы - это место, где находится логика. Если компоненты являются просто хранилищами данных, то системы работают на сущностях с определёнными компонентами. Планировщик ECS запускает системы каждый тик, передавая им только те сущности, которые имеют компоненты, необходимые системе.
+
+### EntityTickingSystem
+
+Наиболее распространенный тип системы. Он запускается при каждом тике и обрабатывает каждую сущность, соответствующую его запросу, индивидуально.
+
+```java
+public class PoisonSystem extends EntityTickingSystem<EntityStore> {
+
+  private final ComponentType<EntityStore, PoisonComponent> poisonComponentType;
+
+  public PoisonSystem(ComponentType<EntityStore, PoisonComponent> poisonComponentType) {
+    this.poisonComponentType = poisonComponentType;
+  }
+
+  @Override
+  public void tick(float dt, int index, @Nonnull ArchetypeChunk<EntityStore> archetypeChunk,
+      @Nonnull Store<EntityStore> store, @Nonnull CommandBuffer<EntityStore> commandBuffer) {
+
+    PoisonComponent poison = archetypeChunk.getComponent(index, poisonComponentType);
+    Ref<EntityStore> ref = archetypeChunk.getReferenceTo(index);
+
+    poison.addElapsedTime(dt);
+
+    if (poison.getElapsedTime() >= poison.getTickInterval()) {
+      poison.resetElapsedTime();
+
+      Damage damage = new Damage(Damage.NULL_SOURCE, DamageCause.OUT_OF_WORLD, poison.getDamagePerTick());
+      DamageSystems.executeDamage(ref, commandBuffer, damage);
+
+      poison.decrementRemainingTicks();
+    }
+
+    if (poison.isExpired()) {
+      commandBuffer.removeComponent(ref, poisonComponentType);
+    }
+  }
+
+  @Nullable
+  @Override
+  public SystemGroup<EntityStore> getGroup() {
+    return DamageModule.get().getGatherDamageGroup();
+  }
+
+  @Nonnull
+  @Override
+  public Query<EntityStore> getQuery() {
+    return Query.and(this.poisonComponentType);
+  }
+}
+```
+
+Метод `tick` получает `dt` - время, прошедшее с последнего тика. Это позволяет накапливать время для логики, основанной на интервалах, вместо подсчёта тиков. `ArchetypeChunk` даёт доступ к компонентам сущностей по индексу, а `getReferenceTo` возвращает `Ref`, который нужен для выполнения команд.
+
+### TickingSystem
+
+Выполняется один раз за тик глобально, а не для каждой сущности. Используйте это для глобальных обновлений мира или логики, которая не относится к конкретным сущностям.
+
+```java
+public class GlobalUpdateSystem extends TickingSystem<EntityStore> {
+
+  @Override
+  public void tick(float dt, int index, Store<EntityStore> store) {
+    World world = store.getExternalData().getWorld();
+  }
+}
+```
+
+### DelayedEntitySystem
+
+Похоже на `EntityTickingSystem`, но со встроенной задержкой. Конструктор принимает число с плавающей точкой — количество секунд между выполнениями.
+
+```java
+public class HealthRegenSystem extends DelayedEntitySystem<EntityStore> {
+
+  public HealthRegenSystem() {
+    super(1.0f);
+  }
+
+  @Override
+  public void tick(float dt, int index, @Nonnull ArchetypeChunk<EntityStore> archetypeChunk,
+      @Nonnull Store<EntityStore> store, @Nonnull CommandBuffer<EntityStore> commandBuffer) {
+    // Выполняется каждую секунду для каждой совпадающей сущности
+  }
+
+  @Nonnull
+  @Override
+  public Query<EntityStore> getQuery() {
+    return Query.and(Player.getComponentType());
+  }
+}
+```
+
+### RefSystem
+
+Мы также можем создавать системы для проверки изменений связанных с самими сущностями. Это делается с помощью `RefSystem`. Например, мы хотим выполнять определенные действия каждый раз, когда мы добавляем компонент к сущности, обновляем или удаляем его.
+Это можно сделать с помощью `RefChangeSystem<ECS_STORE, COMPONENT>`. Давайте разберём следующий пример:
+
+```java
+public class PermissionAttachmentSystem extends RefChangeSystem<EntityStore, PermissionAttachment> {
+
+  private static final HytaleLogger LOGGER = HytaleLogger.forEnclosingClass();
+
+  @Nonnull
+  @Override
+  public ComponentType<EntityStore, PermissionAttachment> componentType() {
+    return EntityStoreRegistry.get().getPermissionAttachmentComponentType();
+  }
+
+  @Override
+  public void onComponentAdded(@Nonnull Ref<EntityStore> ref, @Nonnull PermissionAttachment permissionAttachment, @Nonnull Store<EntityStore> store, @Nonnull CommandBuffer<EntityStore> commandBuffer) {
+    UUIDComponent component = store.getComponent(ref, UUIDComponent.getComponentType());
+    UUID playerUuid = component.getUuid();
+
+    // Компонент PermissionAttachment был удален
+  }
+
+  @Override
+  public void onComponentSet(@Nonnull Ref<EntityStore> ref, @Nullable PermissionAttachment oldAttachment, @Nonnull PermissionAttachment newAttachment, @Nonnull Store<EntityStore> store, @Nonnull CommandBuffer<EntityStore> commandBuffer) {
+    UUIDComponent component = store.getComponent(ref, UUIDComponent.getComponentType());
+    UUID playerUuid = component.getUuid();
+
+    // Компонент был PermissionAttachment с использованием replaceComponent или putComponent
+  }
+
+  @Override
+  public void onComponentRemoved(@Nonnull Ref<EntityStore> ref, @Nonnull PermissionAttachment permissionAttachment, @Nonnull Store<EntityStore> store, @Nonnull CommandBuffer<EntityStore> commandBuffer) {
+    UUIDComponent component = store.getComponent(ref, UUIDComponent.getComponentType());
+    UUID playerUuid = component.getUuid();
+
+    // Компонент PermissionAttachment был удален из сущности
+  }
+
+  @Nullable
+  @Override
+  public Query<EntityStore> getQuery() {
+    return EntityStoreRegistry.get().getPermissionAttachmentComponentType();
+  }
+}
+```
+
+В этой системе мы проверяем изменения компонента `PermissionAttachment` внутри `EntityStore`. Это дает нам доступ к `onComponentAdded`, `onComponentSet` и `onComponentRemoved`, которые в данном примере сохраняют и кэшируют данные о правах
+которые хранятся в игроке внутри пользовательского компонента `PermissionAttachment`.
+
+## Запросы (Queries)
+
+Запросы (Queries) фильтруют то, какие сущности будут обрабатываться системой. ECS передаёт сущности в метод `tick` вашей системы **только если у них есть все компоненты**, указанные в запросе.
+
+```java
+// Один компонент — любые сущности с PoisonComponent
+Query.and(poisonComponentType)
+
+// Несколько компонентов — сущности, у которых есть оба компонента
+Query.and(poisonComponentType, Player.getComponentType())
+
+// Исключение — игроки, которые не мертвы
+Query.and(
+    Player.getComponentType(),
+    Query.not(DeathComponent.getComponentType()))
+```
+
+## Группы систем и зависимости
+
+Системы могут указывать, к какой группе они принадлежат, и какие у них есть зависимости. Это контролирует порядок выполнения имеющий решающее значение для взаимодействующих систем.
+
+```java
+@Nullable
+@Override
+public SystemGroup<EntityStore> getGroup() {
+  return DamageModule.get().getGatherDamageGroup();
+}
+```
+
+Для более комплексного порядка выполнения кода вы можете перезаписать `getDependencies`:
+
+```java
+@Nonnull
+public Set<Dependency<EntityStore>> getDependencies() {
+  return Set.of(
+    new SystemGroupDependency(Order.AFTER, DamageModule.get().getFilterDamageGroup()),
+    new SystemDependency(Order.BEFORE, PlayerSystems.ProcessPlayerInput.class)
+  );
+}
+```
+
+Система урона — хороший пример того, почему порядок выполнения важен. Пайплайн урона в Hytale имеет четыре этапа: GatherDamageGroup собирает источники урона, FilterDamageGroup применяет уменьшения и отмены, затем урон применяется к здоровью, и наконец InspectDamageGroup обрабатывает побочные эффекты, такие как частицы и звуки. Если бы эти этапы выполнялись в неправильном порядке, анимация смерти проигрывалась до того, как сущность умерла, или значение параметра брони уменьшилось уже после получения урона.
+
+## Регистрация компонентов и систем
+
+Компоненты и системы должны регистрироваться во время настройки плагина. Этим занимается `EntityStoreRegistry`.
+
+```java
+public final class ExamplePlugin extends JavaPlugin {
+
+  private static ExamplePlugin instance;
+  private ComponentType<EntityStore, PoisonComponent> poisonComponent;
+
+  public ExamplePlugin(@Nonnull JavaPluginInit init) {
+    super(init);
+    instance = this;
+  }
+
+  @Override
+  protected void setup() {
+    this.getCommandRegistry().registerCommand(new ExampleCommand());
+    this.getEventRegistry().registerGlobal(PlayerReadyEvent.class, ExampleEvent::onPlayerReady);
+    this.getEventRegistry().registerGlobal(PlayerChatEvent.class, ChatFormatter::onPlayerChat);
+
+    this.poisonComponent = this.getEntityStoreRegistry()
+        .registerComponent(PoisonComponent.class, PoisonComponent::new);
+    this.getEntityStoreRegistry().registerSystem(new PoisonSystem(this.poisonComponent));
+  }
+
+  public ComponentType<EntityStore, PoisonComponent> getPoisonComponentType() {
+    return poisonComponent;
+  }
+
+  public static ExamplePlugin get() {
+    return instance;
+  }
+}
+```
+
+Метод `registerComponent` возвращает `ComponentType`, который действует как ключ для доступа к этому типу компонента во всем вашем плагине. Сохраните его как поле и передайте в любые системы, которым он нужен. Второй аргумент - это фабрика (функция или объект, который создаёт и возвращает другие объекты) для создания экземпляров по умолчанию.

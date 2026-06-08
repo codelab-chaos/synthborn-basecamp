@@ -1,0 +1,137 @@
+---
+title: Modtale
+description: Повний посібник з публікації та керування вашими модифікаціями Hytale на платформі Modtale.
+---
+
+# Публікація вашої модифікації на Modtale
+
+[Modtale](https://modtale.net) – це репозиторій спільноти Hytale для пошуку модифікацій, пакетів ресурсів, світів та пакетів модифікацій.
+
+Цей посібник проведе вас через весь процес публікації вашої модифікації.
+
+## Передумови
+
+Перш ніж почати, переконайтеся, що у вас є:
+
+- Скомпільований файл `.jar` вашого плагіну або `.zip` вашого пакету ресурсів
+- Опис функцій вашої модифікації
+
+Ми також рекомендуємо:
+
+- Високоякісні знімки екрану або зображення вашої модифікації в дії
+- Чіткий логотип або значок (рекомендований розмір: 512x512 пікселів)
+- Будь-які залежності або вимоги, задокументовані
+
+## Покроковий процес публікації
+
+### 1. Налаштування облікового запису
+
+Увійдіть у [Modtale](https://modtale.net) зручним для вас способом. Якщо у вас немає облікового запису, спочатку створіть його.
+
+### 2. Почніть створювати
+
+Натисніть кнопку **Create** на панелі навігації або перейдіть безпосередньо на [сторінку завантаження](https://modtale.net/upload).
+
+### 3. Виберіть тип контенту
+
+Виберіть відповідний тип контенту для вашої публікації:
+
+- **Server Plugins** – для серверних плагінів та модифікацій Hytale
+- **Data Assets** – для користувацьких пакетів даних, таблиць здобичі та іншого контенту на основі даних
+- **Art Assets** – для пакетів текстур, моделей та іншого художнього контенту
+- **Worlds** – Для користувацьких світів Hytale
+- **Modpacks** – Для кураторських колекцій модифікації та ресурсів
+
+![Вибір типу контенту](/assets/guides/modtale_type.png)
+
+### 4. Основна інформація
+
+Заповніть необхідні дані:
+
+- **Name**: Виберіть чітку, описову назву для вашого моду
+- **Summary**: Напишіть короткий опис (1-2 речення, максимум 250 символів), який пояснює, що робить ваша модифікація.
+
+![Назва та опис проєкту](/assets/guides/modtale_title.png)
+
+### 5. Налаштування проєкту
+
+Тепер ви перебуваєте на сторінці керування вашим проєктом. Тут ви можете:
+
+#### Завантажити файли
+
+Перейдіть на вкладку **Files** та завантажте свій файл `.jar` або `.zip`:
+
+- Перетягніть файл або скористайтеся кнопкою завантаження
+- Додайте примітки до версії з описом змін та нових функцій
+- Тип випуску (Випуск, Бета, Альфа)
+
+![Інтерфейс завантаження файлів](/assets/guides/modtale_upload.png)
+
+#### Налаштуйте свій проєкт
+
+- **Logo**: Завантажте високоякісний логотип (рекомендовано 512x512)
+- **Banner**: Завантажте банер для своєї сторінки (рекомендовано 1920x640)
+- **Screenshots**: Додайте кілька знімків екрана, що показують вашу модифікацію у дії
+- **Description**: Напишіть наочний опис, використовуючи форматування Markdown
+- **Links**: Додайте посилання на ваш вихідний код, сервер Discord або документацію
+- **Теги**: Додайте відповідні теги, щоб допомогти користувачам знайти вашу модифікацію
+- **License**: Indicate what license your mod uses from a selection of common licenses, or use a custom license
+
+## Найкращі практики
+
+### Documentation
+
+<Callout type="info">
+Always include comprehensive documentation in your mod description. Users should understand what your mod does, how to use it, and any special requirements.
+</Callout>
+
+### Version Notes
+
+When uploading new versions:
+
+- You must adhere to SemVer
+- Clearly document all changes and new features
+- Include bug fixes and known issues
+- Mention any breaking changes or migration steps
+- List new dependencies or requirement changes
+
+### Visual Appeal
+
+- Use high-quality screenshots that showcase your mod's features in the gallery
+- Create an eye-catching logo that represents your mod
+- Consider adding a banner image for your project page
+
+### Community Engagement
+
+- Respond to comments and feedback promptly
+- Consider creating a Discord server for community support
+- Regularly update your mod based on user feedback
+
+## After Publishing
+
+### Automated updates
+
+- You can configure your project to automatically upload new versions using Github Actions, Gradle, Maven, or Go. See examples [here](https://github.com/Modtale/modtale-example)
+
+### Monitoring Your Project
+
+- Check the analytics to see download statistics
+- Monitor comments and reviews
+- Keep track of bug reports and feature requests
+
+### Marketing Your Mod
+
+- Share your mod on relevant Hytale communities
+- Create showcase videos or tutorials
+- Engage with other modders and creators
+
+<Callout type="warning">
+Пам'ятайте, що ваш мод потрібно оновлювати для нових версій Hytale та підтримувати сумісність із системою модингу Hytale, щоб максимізувати охоплення вашої аудиторії.
+</Callout>
+
+## Getting Help
+
+If you encounter any issues during the publishing process:
+
+- Join their Discord community for support
+- Contact the Modtale team directly through their support channels

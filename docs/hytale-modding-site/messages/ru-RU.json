@@ -1,0 +1,109 @@
+{
+  "displayName": "Русский",
+  "nav": {
+    "title": "Моддинг Hytale",
+    "documentation": "Документация",
+    "sponsors": "Спонсоры",
+    "wiki": "Wiki",
+    "search": "Поиск",
+    "grants": "Grants"
+  },
+  "home": {
+    "title": "#1 Ресурс для модмейкеров Hytale ",
+    "flipwords": [
+      "Гайды",
+      "Документация",
+      "Инструменты",
+      "Туториалы"
+    ],
+    "description": "Лучший ресурс для моддинг комьюнити Hytale, включающий в себя\nподробные гайды, документацию и все необходимые инструменты, чтобы начать свое путешествие в мир моддинга.",
+    "documentation": "Документация",
+    "forum": "Форум",
+    "discord": "Присоединяйтесь к нашему сообществу!",
+    "memberCount": "{count} Участников",
+    "countdown": "Hytale выйдет через",
+    "countdownUnits": {
+      "hours": "ч",
+      "minutes": "мин",
+      "seconds": "сек"
+    },
+    "hytaleReleased": "Hytale вышел!"
+  },
+  "showcaseItems": {
+    "madeBy": "by {author}"
+  },
+  "sponsors": {
+    "title": "Поддержите нас",
+    "description": "HytaleModding — это проект сообщества с открытым исходным кодом. Для его работы мы оплачиваем сервисы, сервера и инфраструктуру, включая хостинг этого сайта. Если вы хотите поддержать проект, станьте спонсором! Мы используем OpenCollective, поэтому вы всегда можете видеть, на что именно идут собранные средства.",
+    "ourSponsors": "Наши спонсоры"
+  },
+  "misc": {
+    "loading": "Загрузка...",
+    "failedToLoad": "Не удалось загрузить.",
+    "gitInfoUnavailable": "Git недоступен",
+    "credit": "Автор",
+    "supportUs": "Поддержи нас",
+    "officialDocumentationNotice": {
+      "title": "Официальная документация Hytale",
+      "description": "Все материалы этого раздела предоставлены **Hypixel Studios Canada Inc. * и не содержат каких-либо существенных изменений, помимо визуальных корректировок, сделанных командой HytaleModding."
+    }
+  },
+  "meta": {
+    "established_information": {
+      "title": "Известная информация",
+      "separator": "Особые категории",
+      "server": {
+        "title": "Сервер",
+        "content_categories": {
+          "title": "Категории контента"
+        },
+        "interface": {
+          "title": "Интерфейс"
+        }
+      },
+      "client": {
+        "title": "Клиент"
+      },
+      "gameplay": {
+        "title": "Игра"
+      },
+      "misc": {
+        "title": "Прочее"
+      }
+    },
+    "guides": {
+      "title": "Гайды",
+      "java_basics": {
+        "title": "Основы Java"
+      }
+    },
+    "official_documentation": {
+      "worldgen": {
+        "title": "Генерация мира",
+        "pack_tutorial": {
+          "title": "Туториал по пакам генератора мира"
+        },
+        "technical_hytale_generator": {
+          "title": "Изменения технических свойств генератора мира Hytale"
+        },
+        "worldgen_tutorial": {
+          "title": "Туториал по генерации мира"
+        }
+      }
+    },
+    "community_projects": {
+      "title": "Проекты от коммьюнити"
+    }
+  },
+  "callout": {
+    "defaultTitles": {
+      "info": "Info",
+      "warning": "Warning",
+      "danger": "Danger",
+      "success": "Success",
+      "lvl_beginner": "Level: Beginner",
+      "lvl_intermediate": "Level: Intermediate",
+      "lvl_advanced": "Level: Advanced"
+    }
+  }
+}

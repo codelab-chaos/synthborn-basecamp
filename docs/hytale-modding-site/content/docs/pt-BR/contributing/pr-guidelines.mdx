@@ -1,0 +1,41 @@
+---
+title: Orientações de pull request
+description: Orientações que revisores e contribuidores devem seguir ao enviarem e analisarem os pull requests.
+---
+
+# Introdução
+
+Para garantir um processo de revisão suave e eficiente, tanto os contribuidores quantos os revisores devem aderir às orientações ao enviar e analisar os pull requests. Veja abaixo:
+
+## Para os contribuidores
+
+1. **Títulos e descrições descritivas**
+   - Use títulos coerentes e concisos que resumam as alterações;
+   - Descreva detalhadamente as ações do pull request, a necessidade das mudanças e o contexto relevante.
+2. **Link para problemas**
+   - No título do seu pull request, adicione `GH-ISSUE-NUMBER` para vinculá-lo ao problema correspondente. Isso é necessário para todos os pull requests.
+3. **Mudanças pequenas e focadas**
+   - Procure manter os pull requests pequenos e focados em um único problema ou recurso. Isso ajuda os revisores a entenderem melhor e a oferecerem feedback.
+4. **Qualidade do código**
+   - Certifique-se de que seu código siga os padrões e as práticas recomendadas de codificação do projeto;
+   - Inclua comentários quando necessário para explicar a lógica complexa.
+   - Sempre teste suas alterações localmente antes de enviar o pull request para capturar quaisquer problemas antecipadamente.
+   - Construa seu código usando `bun format` para manter a consistência em toda a base dele.
+5. **Testando**
+   - Teste as suas alterações cuidadosamente antes de enviar o pull request;
+   - Se aplicável, inclua testes unitários ou de integração para verificar as suas alterações.
+6. **Documentação**
+   - Atualize ou adicione documentação conforme necessário para refletir em suas alterações.
+7. **Mensagens de commit**
+   - Siga o formato [convencional de commits](https://www.conventionalcommits.org/en/v1.0.0/) para criar mensagens de commit claras e descritivas.
+8. **Verificar se há conflitos**
+   - Antes de enviar seu PR, certifique-se de que a sua branch esteja atualizada com a branch base para minimizar conflitos de mesclagem.
+
+## Para os revisores
+
+- Você deve revisar os pull requests minuciosamente e, se necessário, solicitar alterações;
+- Forneça feedbacks construtivos e sugestões de melhoria;
+- Verifique se as mudanças estão em conformidade com o código e as boas práticas do projeto;
+- Faça a implementação do pull request utilizando a integração com o Dokploy para garantir que as alterações funcionem conforme o esperado;
+- Mantenha a documentação atualizada segundo as necessidades das alterações;
+- Aprove o pull request apenas quando estiver satisfeito com as alterações e todas as verificações tiverem passado.

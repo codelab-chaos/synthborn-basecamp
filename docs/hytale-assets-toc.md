@@ -1,0 +1,117 @@
+# Hytale Assets TOC
+
+Reference root: [`_Assets`](../_Assets)
+
+This folder is an unpacked local copy of the Hytale assets. Treat it as a searchable reference, not as source owned by these mods. The most useful workflow is to search it with `rg` when a mod needs exact asset ids, JSON fields, model names, or drop tables.
+
+## Quick Commands
+
+```powershell
+rg -n "Rubble_Stone|Wood_Sticks|Ingredient_Stick" _Assets
+rg --files _Assets\Server\Item\Items | rg "Rubble|Wood|Stick"
+rg -n '"BlockType"|"Gathering"|"DropList"|"ItemId"' _Assets\Server\Item\Items\Rubble
+rg -n '"BlockType"|"Gathering"|"DropList"|"ItemId"' _Assets\Server\Item\Items\Wood
+```
+
+## Runtime ID Catalogs
+
+The unpacked asset tree is not the same thing as the loaded server registry. For the active server, use:
+
+```text
+/synth catalog count
+/synth catalog dump all
+/synth catalog dump items rubble
+/synth catalog dump blocks rubble
+```
+
+Catalog dumps are written by the SynthUnits plugin to:
+
+```text
+mods/SynthUnitsData/catalog/
+```
+
+Useful catalog snapshots can be copied back into the SynthUnits repo at:
+
+```text
+mods/SynthUnits/catalog/
+```
+
+The block dump includes the numeric runtime block id from `BlockType.getAssetMap()` plus the string `BlockType.getId()`. The item dump includes registered item ids and whether each item has a placeable block type.
+
+## Top-Level Layout
+
+| Path | Purpose |
+| --- | --- |
+| `_Assets/Common` | Client/common visual and audio assets: block textures, icons, models, sounds, particles, UI, VFX. |
+| `_Assets/Cosmetics` | Character creator/cosmetic data. |
+| `_Assets/Server` | Server-side JSON assets: items, block type lists, drops, entities, NPCs, prefabs, worldgen, projectiles, and gameplay data. |
+| `_Assets/CommonAssetsIndex.hashes` | Hash index for common assets. |
+| `_Assets/manifest.json` | Asset pack manifest. |
+
+## Server Asset Folders
+
+| Folder | JSON files | Notes |
+| --- | ---: | --- |
+| `Audio` | 1761 | Sound/event definitions. |
+| `BarterShops` | 2 | Barter shop definitions. |
+| `BlockTypeList` | 13 | Curated block-type lists such as `Ores`, `Rock`, `Soils`, and `TreeWood`. |
+| `Camera` | 110 | Camera behavior/config assets. |
+| `Drops` | 676 | Drop tables. Useful when validating player-like resource gathering. |
+| `Entity` | 269 | Entity definitions. |
+| `Environments` | 122 | Environment configs. |
+| `Farming` | 5 | Farming-specific configs. |
+| `GameplayConfigs` | 5 | General gameplay configs. |
+| `HytaleGenerator` | 219 | World generation configs. |
+| `Instances` | 239 | Instance definitions. |
+| `Item` | 6893 | Item definitions; placeable blocks are generally nested under an item's `BlockType`. |
+| `Languages` | 0 | Server language files are not JSON in this dump. |
+| `MacroCommands` | 11 | Macro command assets. |
+| `Models` | 436 | Server model references/config. |
+| `NPC` | 1537 | NPC roles, attitudes, spawn, balancing, and decision data. |
+| `Objective` | 19 | Objective definitions. |
+| `Particles` | 2 | Particle JSON plus many particle asset files. |
+| `PortalTypes` | 5 | Portal type definitions. |
+| `PrefabEditorCreationSettings` | 1 | Prefab editor settings. |
+| `PrefabList` | 77 | Prefab list assets. |
+| `Prefabs` | 7826 | World/prefab definitions. |
+| `ProjectileConfigs` | 112 | Projectile config assets. |
+| `Projectiles` | 87 | Projectile definitions. |
+| `ResponseCurves` | 12 | Response curve configs. |
+| `ScriptedBrushes` | 39 | Scripted brush assets. |
+| `TagPatterns` | 4 | Tag pattern definitions. |
+| `TriggerVolumes` | 1 | Trigger volume assets. |
+| `Weathers` | 87 | Weather definitions. |
+| `WordLists` | 1 | Word list data. |
+| `World` | 12133 | Biomes, worldgen, structures, and related world data. |
+
+## High-Value Paths
+
+| Need | Start Here |
+| --- | --- |
+| Item ids | `_Assets/Server/Item/Items` |
+| Placeable block ids | `_Assets/Server/Item/Items`, then look for `BlockType` objects |
+| Block groups | `_Assets/Server/Item/Groups` |
+| Block type lists | `_Assets/Server/BlockTypeList` |
+| Drop behavior | `_Assets/Server/Drops` and `BlockType.Gathering` inside item JSON |
+| NPC role inspiration | `_Assets/Server/NPC/Roles` |
+| NPC decision data | `_Assets/Server/NPC/DecisionMaking` |
+| Entity definitions | `_Assets/Server/Entity` |
+| Models | `_Assets/Server/Models` and `_Assets/Common/Blocks` / `_Assets/Common/Items` |
+| Icons | `_Assets/Common/Icons` |
+| Sounds | `_Assets/Common/Sounds` and `_Assets/Server/Audio` |
+
+## Gatherer Resources
+
+Current SynthUnits gatherer scope is intentionally narrow:
+
+| Natural resource | Current ids to inspect |
+| --- | --- |
+| Pile of sticks | `Wood_Sticks`, `Ingredient_Stick` |
+| Stone rubble | `Rubble_*`, especially `Rubble_Stone` |
+
+Useful searches:
+
+```powershell
+rg -n "Wood_Sticks|Ingredient_Stick" _Assets\Server _Assets\Common
+rg -n "Rubble_Stone|Rubble_" _Assets\Server _Assets\Common
+```

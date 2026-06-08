@@ -1,0 +1,138 @@
+---
+title: Escrevendo guias
+---
+
+## Criando um arquivo de guia
+
+Para começar a escrever um guia, crie um arquivo com a extensão `.mdx`. Crie esse arquivo dentro do diretório `/content/docs/en`. O local exato dependerá da seção onde deseja incluir o guia. Por isso, escolha a pasta apropriada após esse caminho.
+
+Suponha que eu queira criar um guia de fundamentos do Java, então eu o colocaria em `/content/docs/en/guides/java-basics`. Você precisará investigar um pouco para descobrir onde deseja colocá-lo.
+
+<Callout>
+    Se já houver um guia na seção sobre a qual você deseja escrever, basta clicar no botão "Edit On GitHub" em nosso site. Isso levará você diretamente à pasta correta. Salve seu novo guia nela para que ele apareça na mesma seção.
+</Callout>
+
+## Frontmatter
+
+O frontmatter representa os metadados do seu guia. Ele informa ao nosso site como o conteúdo deve ser mostrado. Isso precisa estar no topo do arquivo, que começa com `---` e termina com `---`.
+
+Veja um exemplo abaixo:
+
+```mdx
+---
+title: "Fundamentos do Java"
+description: "Aprenda os conceitos básicos de programação em Java."
+authors:
+    - name: "Seu nome"
+      url: "https://seusite.com"
+---
+```
+
+Como você pode ver, é bastante autoexplicativo. Basta preencher os detalhes para o seu guia específico. Caso não tenha uma URL para pôr naquele espaço, deixe-o em branco. A seção de autores é opcional. Se preferir, você pode omiti-la, mas recomendamos que a utilize para se identificar como autor do guia para obter os devidos créditos.
+
+A indentação no frontmatter é fundamental. Garanta que os espaços estejam exatamente como no exemplo.
+
+## Estrutura do conteúdo
+
+Você deve estruturar o conteúdo do seu guia com clareza e organização. Veja abaixo algumas dicas de como fazer isso:
+
+- **Introdução:** comece com uma visão geral do tópico e o que o leitor pode esperar aprender;
+- **Pré-requisitos:** liste quaisquer pré-requisitos ou conhecimentos prévios que o leitor deva ter antes de se aprofundar no guia;
+- **Etapas das instruções:** divida o conteúdo em etapas claras e objetivas. Use títulos e subtítulos para organizar as informações;
+- **Exemplos de código:** inclua trechos de código para ilustrar os principais pontos. Certifique-se de explicar cada exemplo de forma detalhada;
+- **Conclusão:** resuma os principais pontos e incentive o leitor a explorar mais ou a colocar em prática o que aprendeu.
+
+Se você estiver escrevendo uma seção muito extensa, o ideal é dividi-la em várias páginas para que a informação seja mais fácil de ser entendida. Ninguém quer ler um enorme bloco de texto de uma só vez!
+
+Ao escrever guias, devemos pensar em como as pessoas os consumirão e muitas preferem passar rapidamente pelo conteúdo em vez de lê-lo em detalhes. É por isso que é melhor dividir a informação em várias páginas, para que o conteúdo pareça menos denso para o leitor. Além disso, considere usar tópicos, listas numeradas e outras técnicas de formatação para tornar o conteúdo mais amigável.
+
+## Formatação
+
+Utilizamos [Markdown](https://www.markdownguide.org/) para formatar os nossos guias. A seguir estão alguns pontos importantes a serem considerados:
+
+- Use títulos (`#`, `##`, `###`) para organizar o seu conteúdo;
+- Use listas com marcadores e listas numeradas para maior clareza;
+- Use blocos de código (\`\`\`) para trechos de código;
+- Use links para referenciar outros guias ou recursos externos.
+
+Esse é o mesmo tipo de formatação que você verá na maioria dos sites de documentação e também em plataformas sociais, como o Discord.
+
+### Links
+
+Everyone knows what a link is. However, there is a difference between linking to an external resource and linking to an internal one.
+
+Em geral, em Markdown eles são escritos da seguinte forma: `[Seu texto](Seu link)`
+
+#### Externo
+
+Nada para explicar, apenas `https://exemplo.com`.
+
+#### Interno
+
+You cannot use regular links here. Let's say your link to another guide is `https://hytalemodding.dev/en/docs/quick-start`.
+You can't write it like that because you are not only referring to the page but also to the language, which is not correct.
+Instead, type `./quick-start` which is correct and links to the page in the user's language.
+
+**Acessando arquivos**
+
+- **Pasta atual**: `./`
+- **Folder above**: `../` as many times as this folder is higher in the hierarchy.
+
+## Ícones
+
+If you want to add an icon for your page then you should use [Lucide](https://lucide.dev/).
+
+1. Acesse o [site](https://lucide.dev/) e encontre um ícone que desejar;
+2. Após selecionar um ícone, clique nele e depois em "See in action";
+3. Em seguida, clique em "React" que estamos usando. Você apenas precisará do texto entre as chaves na primeira linha;
+4. Depois, cole `icon: SeuÍcone` no Frontmatter.
+
+## Callout
+
+Você também pode usar um callout para destacar informações ou dicas importantes. Use a seguinte sintaxe:
+
+```mdx
+<Callout>
+    Esta é uma mensagem em destaque de callout.
+</Callout>
+```
+
+<Callout>
+    Esta é uma mensagem em destaque usando callout.
+</Callout>
+
+Você pode alterar a cor do callout adicionando um atributo `type`. Por exemplo:
+
+```mdx
+<Callout type="info">
+    Isto é um callout de informação
+</Callout>
+```
+
+Os tipos disponíveis são: `info`, `warning`,  `error`  e `success`.
+
+## Níveis de dificuldade
+
+These are types of callouts, they are optional, they show how complex your page can be.
+There are 3 main levels of complexity.
+
+<Callout type="lvl_beginner">
+    Use `lvl_beginner`. This page contains information for those who are starting out with modding.
+</Callout>
+
+<Callout type="lvl_intermediate">
+    Use `lvl_intermediate`. This page contains information for those who want to deepen their knowledge.
+</Callout>
+
+<Callout type="lvl_advanced">
+   Use `lvl_advanced`. This page contains information for those who already know how to make quality mods, and contains something additional.
+</Callout>
+
+Their usage is the same as in callout, but we would advise not to change the title. Inside,
+you write why your page is classified as this level and what the user should know.
+
+## Conclusão
+
+Isso é tudo! Agora você é um mestre em escrever guias. Não se preocupe em ter um inglês perfeito. Escreva o guia como se estivesse explicando o assunto para alguém e não hesite em pedir feedback ou ajuda se precisar.
+
+Boa escrita!

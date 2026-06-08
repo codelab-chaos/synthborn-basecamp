@@ -1,0 +1,38 @@
+# Repository Docs
+
+This root `docs/` folder is intentionally shared across the current prototype workspace.
+
+Right now multiple mods, plus shared tooling and reference material, depend on the same research notes:
+
+- `mods/SynthUnits`
+- `mods/SynthRCON`
+- root-level `tools/`
+- root-level `_references/`
+- root-level `_Assets/` (local unpacked Hytale assets; see [`hytale-assets-toc.md`](hytale-assets-toc.md))
+- [`hytale-survival-progression.md`](hytale-survival-progression.md), which records starter survival/tool progression so NPC planning does not confuse combat gear, tools, benches, and later tiers
+
+## Quick References
+
+- [`prefab-gallery/index.html`](prefab-gallery/index.html) - static visual browser for vanilla `_Assets/Server/Prefabs` plus creator prefab mods. Each prefab ships as compact hue-only voxel JSON rendered client-side with Three.js card previews plus lightweight top/front projections. Material chips use sampled colors from vanilla asset metadata, not texture files.
+- [`hytale-prefabs.md`](hytale-prefabs.md) - text/index view of the vanilla prefab catalog, useful for counts, categories, dimensions, and dominant block ids.
+- [`hytale-prefabs-index.json`](hytale-prefabs-index.json) - machine-readable prefab index consumed by search and tooling.
+
+Regenerate the visual gallery from the repository root:
+
+```powershell
+cd tools\prefab-viewer
+npm install
+npm run build
+```
+
+Or data only (no npm install required):
+
+```powershell
+node tools\prefab-viewer\scripts\build-prefab-gallery.js _Assets\Server\Prefabs
+```
+
+New community docs are mirrored under `_references/hytale-modding-site/content/docs/en`. For SynthUnits, start with the official/custom NPC role docs, `guides/npc-workings`, `guides/plugin/Interactable-NPCs.mdx`, ECS notes, server event references, and plugin guides for spawning/persistent data.
+
+Keeping broad Hytale notes, patch notes, API references, and cross-mod research here avoids duplicating the same material inside each mod while the project is still in MVP/prototype mode.
+
+Once the mod boundaries settle, this can be reorganized into clearer per-mod docs plus a smaller shared knowledge base.
