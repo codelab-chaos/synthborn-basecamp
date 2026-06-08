@@ -41,9 +41,9 @@ Important classes:
 
 Local docs:
 
-- `_references/hytale-api-handbooks/hytale-modding-handbook/docs/commands.md`
-- `_references/hytale-api-handbooks/hytale-docs/src/content/docs/modding/plugins/commands.md`
-- `_references/hytale-api-handbooks/hytale-docs/src/content/docs/modding/plugins/tasks.md`
+- `docs/external/hytale-modding-handbook/docs/commands.md`
+- `docs/external/hytale-docs/src/content/docs/modding/plugins/commands.md`
+- `docs/external/hytale-docs/src/content/docs/modding/plugins/tasks.md`
 
 ## Plugin Lifecycle
 

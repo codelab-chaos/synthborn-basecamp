@@ -402,7 +402,7 @@ The `builtin.*` packages are Hypixel's own implementations — read them to see 
 
 - **Deeper prose docs** (same numbering as the capability sections): [hytale-mod-quickref/](./hytale-mod-quickref/) — `01`-overview, `02`-plugins, `03`-events, `04`-ecs, `05`-roles/AI, `06`-spawn recipe, `07`-inventory, `08`-threading, `09`-API cheatsheet, `10`-references.
 - **Verified call sites** in `_references/sample-mods/` (HyCitizens, NPCTrading) — ground truth for "does this API exist".
-- **API handbooks (raw decompiled / Javadoc mirror):** `_references/hytale-api-handbooks/`.
+- **API handbooks (raw decompiled / Javadoc mirror):** `docs/external/` (clone with `node tools/docs/clone-vendor-docs.js`).
 - **Project work using this KB:** [SynthUnits/](../mods/SynthUnits/) — see `sprint-board.md`, `capabilities.md`, and especially `mod-dev-discoveries.md` for sharp-edge field notes.
 
 ---

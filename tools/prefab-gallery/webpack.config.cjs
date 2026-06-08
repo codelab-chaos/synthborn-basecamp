@@ -2,7 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const projectRoot = __dirname;
-const galleryRoot = path.resolve(projectRoot, "../../docs/prefab-gallery");
+const galleryRoot = path.resolve(projectRoot, "../../apps/prefab-gallery");
 
 module.exports = (env, argv) => {
   const isProd = argv.mode === "production";
@@ -20,7 +20,9 @@ module.exports = (env, argv) => {
           return asset.startsWith("data/") || asset === "manifest.json";
         },
       },
-      publicPath: "/",
+      // Relative in prod so apps/prefab-gallery/index.html works under a GitHub Pages
+      // subpath (and from file://); absolute in dev for the webpack-dev-server.
+      publicPath: isProd ? "" : "/",
     },
     devtool: isProd ? false : "eval-cheap-module-source-map",
     module: {

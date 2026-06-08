@@ -35,8 +35,10 @@ const {
 const argv = stripRemoteFlags(process.argv.slice(2));
 configureRemoteHost(parseRemoteFlags(process.argv.slice(2)));
 
+const { modDir } = require('../library/workspace');
+
 const REPO_ROOT = path.resolve(__dirname, '..', '..');
-const MOD_DIR = path.join(REPO_ROOT, 'mods', 'SynthOverseer');
+const MOD_DIR = modDir('SynthOverseer');
 const SAVE_NAME = 'overseer-test';
 const SAVE_DIR = localSaveDir(SAVE_NAME);
 const LOGS_DIR = path.join(SAVE_DIR, 'logs');

@@ -16,6 +16,7 @@ const {
   printModeBanner,
   pauseMs,
 } = require("./remote-host");
+const { modDir } = require("./workspace");
 
 const TARGETS = {
   overseer: {
@@ -153,12 +154,6 @@ function targetByName(name) {
     throw new Error(`Unknown target: ${name}. Known targets: ${Object.keys(TARGETS).join(", ")}`);
   }
   return target;
-}
-
-function modDir(moduleName) {
-  // Until mods/SynthWorldview is renamed to mods/SynthTerrascape on disk.
-  const dirName = moduleName === "SynthTerrascape" ? "SynthWorldview" : moduleName;
-  return path.join(REPO_ROOT, "mods", dirName);
 }
 
 function runChecked(label, command, args, options = {}) {
@@ -299,9 +294,12 @@ function smokeTarget(target, opts) {
 
 function testTarget(target, opts) {
   if (opts.targetName === "terrascape") {
-    runChecked("SynthTerrascape npm test", process.platform === "win32" ? "npm.cmd" : "npm", ["test"], {
-      cwd: modDir("SynthTerrascape"),
-    });
+    const cwd = modDir("SynthTerrascape");
+    if (process.platform === "win32") {
+      runChecked("SynthTerrascape npm test", "cmd.exe", ["/d", "/s", "/c", "npm", "test"], { cwd });
+    } else {
+      runChecked("SynthTerrascape npm test", "npm", ["test"], { cwd });
+    }
     return;
   }
   buildTarget(target);

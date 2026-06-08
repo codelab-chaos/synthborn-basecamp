@@ -1,5 +1,5 @@
 {
-  "name": "prefab-viewer",
+  "name": "prefab-gallery",
   "version": "1.0.0",
   "private": true,
   "description": "React prefab gallery with voxel previews",
@@ -8,7 +8,7 @@
     "build:web": "webpack --mode production",
     "build": "npm run build:data && npm run build:web",
     "dev": "webpack serve --mode development",
-    "serve": "node scripts/serve-static.js ../../docs/prefab-gallery"
+    "serve": "node scripts/serve-static.js ../../apps/prefab-gallery"
   },
   "dependencies": {
     "antd": "^6.4.3",

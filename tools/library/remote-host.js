@@ -8,10 +8,11 @@ const { spawnSync } = require("node:child_process");
 const REPO_ROOT = path.resolve(__dirname, "..", "..");
 const IS_WINDOWS = process.platform === "win32";
 
-/** Later files override earlier keys. Root remote-host.env is the canonical config. */
+/**
+ * Deployment config lives in basecamp only — the mod repos carry none, so each builds
+ * standalone in CI. Process-env vars still override (see configureRemoteHost).
+ */
 const ENV_FILES = [
-  path.join(REPO_ROOT, "mods", "SynthOverseer", "remote-host.env"),
-  path.join(REPO_ROOT, "mods", "SynthUnits", "remote-host.env"),
   path.join(REPO_ROOT, "remote-host.env"),
 ];
 

@@ -22,6 +22,7 @@ const os = require("node:os");
 const path = require("node:path");
 const { execFileSync } = require("node:child_process");
 const { buildLlmsTxt } = require("./build-sdk-llms-txt");
+const { MODULE_DIRS, modDir } = require("../library/workspace");
 
 // Curated to the "neighborhood" a synth-style plugin works in. Reading
 // `_references/hytale-mod-quickref/` and `docs/hytale-server-api-index.md`
@@ -159,10 +160,10 @@ matches the last run, recorded in <out>/.sdk-source.json. Pass --force to overri
 `);
 }
 
-function findPinnedSdkVersions(repoRoot) {
-  // Scan all mod build.gradle.kts files for `compileOnly("com.hypixel.hytale:Server:VERSION")`.
+function findPinnedSdkVersions() {
+  // Scan each mod's build.gradle.kts for `compileOnly("com.hypixel.hytale:Server:VERSION")`.
   const versions = new Set();
-  const stack = [path.join(repoRoot, "mods")];
+  const stack = Object.keys(MODULE_DIRS).map((name) => modDir(name));
   while (stack.length) {
     const dir = stack.pop();
     if (!fs.existsSync(dir)) continue;
@@ -202,7 +203,7 @@ function defaultJar(repoRoot) {
   if (!fs.existsSync(cacheRoot)) return null;
 
   // Prefer the version the mods actually pin in build.gradle.kts.
-  const pinned = findPinnedSdkVersions(repoRoot);
+  const pinned = findPinnedSdkVersions();
   for (const v of pinned) {
     const versionDir = path.join(cacheRoot, v);
     if (fs.existsSync(versionDir)) {
