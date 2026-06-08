@@ -127,23 +127,32 @@ function main() {
     totalBytes += files[k].size;
   }
 
-  const toc = {
+  const meta = {
     schema: 'hytale-assets-toc/v1',
     version,
     source: path.basename(source),
     generatedAt: new Date().toISOString(),
     fileCount: Object.keys(sorted).length,
     totalBytes,
-    files: sorted,
   };
+
+  // Serialize with ONE file entry per line. Still valid JSON, but compact and git-diffable:
+  // a changed/added/removed asset shows up as exactly one changed line across versions.
+  const head = Object.entries(meta)
+    .map(([k, v]) => `  ${JSON.stringify(k)}: ${JSON.stringify(v)}`)
+    .join(',\n');
+  const entries = Object.keys(sorted)
+    .map((k) => `${JSON.stringify(k)}: {"size":${sorted[k].size},"crc":"${sorted[k].crc}"}`)
+    .join(',\n');
+  const json = `{\n${head},\n  "files": {\n${entries}\n  }\n}\n`;
 
   const out = args.out || path.join(BASECAMP_ROOT, 'tools', 'assets', 'toc', `assets-toc-${version}.json`);
   fs.mkdirSync(path.dirname(out), { recursive: true });
-  fs.writeFileSync(out, JSON.stringify(toc, null, 2) + '\n');
+  fs.writeFileSync(out, json);
 
   console.log(`\nHytale assets TOC written:`);
   console.log(`  version:    ${version}`);
-  console.log(`  files:      ${toc.fileCount.toLocaleString()}`);
+  console.log(`  files:      ${meta.fileCount.toLocaleString()}`);
   console.log(`  totalBytes: ${totalBytes.toLocaleString()} (${(totalBytes / 1e9).toFixed(2)} GB)`);
   console.log(`  out:        ${path.relative(BASECAMP_ROOT, out)}`);
 }
