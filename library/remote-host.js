@@ -23,7 +23,7 @@ const REMOTE_ENV_KEYS = [
   "HYTALE_REMOTE_INSTALL",
   "HYTALE_REMOTE_SSH",
   "SYNTH_RCON_HOST",
-  "SYNTH_WORLDVIEW_URL",
+  "SYNTH_TERRASCAPE_URL",
 ];
 
 const SAVE_RCON_PORTS = {
@@ -306,12 +306,12 @@ function resolveRconPort(saveName, cliPort) {
 }
 
 /**
- * HTTP base URL for SynthWorldview (or other Mac-hosted HTTP services).
- * Priority: WORLDVIEW_URL > SYNTH_WORLDVIEW_URL > http://SYNTH_RCON_HOST:port (remote) > localhost.
+ * HTTP base URL for SynthTerrascape (or other Mac-hosted HTTP services).
+ * Priority: WORLDVIEW_URL > SYNTH_TERRASCAPE_URL > http://SYNTH_RCON_HOST:port (remote) > localhost.
  */
-function resolveWorldviewUrl(port = 5960) {
+function resolveTerrascapeUrl(port = 5960) {
   if (process.env.WORLDVIEW_URL) return process.env.WORLDVIEW_URL;
-  if (process.env.SYNTH_WORLDVIEW_URL) return process.env.SYNTH_WORLDVIEW_URL;
+  if (process.env.SYNTH_TERRASCAPE_URL) return process.env.SYNTH_TERRASCAPE_URL;
   configureRemoteHost();
   if (isRemoteEnabled() && process.env.SYNTH_RCON_HOST) {
     const host = process.env.SYNTH_RCON_HOST.replace(/^https?:\/\//, "").split(":")[0];
@@ -352,7 +352,7 @@ function remoteStartServerDirect(saveName, options = {}) {
     bindPort ? `if [ "${skipPortCheck}" != "true" ] && lsof -i UDP:${bindPort} >/dev/null 2>&1; then echo "UDP port ${bindPort} already in use"; exit 1; fi` : null,
     'mkdir -p "$SAVE/logs"',
     'cd "$SAVE"',
-    `nohup "$JAVA" -Xms${minRam}G -Xmx${maxRam}G -Dsynthrcon.host=0.0.0.0 -Dsynthrcon.port=${rconPort} -Dsynthrcon.allowRemote=true -Dsynthworldview.http.host=0.0.0.0 -jar "$JAR" --assets "$ASSETS" --auth-mode authenticated --bind "$BIND" >>"$SAVE/logs/dev-server.out" 2>&1 & echo $! > "$SAVE/.dev-server.pid"`,
+    `nohup "$JAVA" -Xms${minRam}G -Xmx${maxRam}G -Dsynthrcon.host=0.0.0.0 -Dsynthrcon.port=${rconPort} -Dsynthrcon.allowRemote=true -Dterrascape.http.host=0.0.0.0 -jar "$JAR" --assets "$ASSETS" --auth-mode authenticated --bind "$BIND" >>"$SAVE/logs/dev-server.out" 2>&1 & echo $! > "$SAVE/.dev-server.pid"`,
     'echo "started detached pid=$(cat "$SAVE/.dev-server.pid")"',
   ].filter(Boolean).join(" && ");
 
@@ -664,7 +664,7 @@ module.exports = {
   resolveSaveRconPort,
   resolveRconHost,
   resolveRconPort,
-  resolveWorldviewUrl,
+  resolveTerrascapeUrl,
   remoteServerHealth,
   waitForRemoteHealth,
   remoteStopServer,
