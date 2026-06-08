@@ -1,11 +1,11 @@
-# Prefab Viewer
+# Prefab Gallery
 
 React 19 + Ant Design 6 + Webpack gallery for Hytale prefab voxel previews.
 
 ## Layout
 
 ```
-tools/prefab-viewer/
+tools/prefab-gallery/        app source
   scripts/           Node data pipeline (no npm deps required to run alone)
     build-prefab-gallery.js
     render-prefab-views.js
@@ -18,14 +18,18 @@ tools/prefab-viewer/
     styles/
 ```
 
-Output lands in `docs/prefab-gallery/`:
+The build outputs to `apps/prefab-gallery/` (a static site — `index.html` in the root,
+so it serves as-is from GitHub Pages):
 
 - `manifest.json` + `data/**/*.vox` from `scripts/build-prefab-gallery.js` (PXV3 binary voxel blobs)
 - `index.html` + `assets/**` from Webpack
 
+The `data/` dir (~8k generated blobs) is gitignored (`apps/.gitignore`) and regenerated
+locally; only the app shell (`index.html`, `assets/`, `manifest.json`) is committed.
+
 ## Commands
 
-From `tools/prefab-viewer`:
+From `tools/prefab-gallery`:
 
 ```bash
 npm install
@@ -39,17 +43,17 @@ npm run serve         # static file server on :8877
 Data build from repo root (without npm):
 
 ```bash
-node tools/prefab-viewer/scripts/build-prefab-gallery.js _Assets/Server/Prefabs
+node tools/prefab-gallery/scripts/build-prefab-gallery.js _Assets/Server/Prefabs
 ```
 
 Vanilla `_Assets/Server/Prefabs` only — third-party creator prefab packs are excluded
 (`_references/example-prefabs`, mod `Server/Prefabs`, etc. are skipped even if passed on the CLI).
 
-Output path is **`docs/prefab-gallery/`** at the repo root. Ignore `tools/docs/prefab-gallery/` if present — that was a mistaken output from an old `REPO_ROOT` bug and may carry a stale manifest.
+Output path is **`apps/prefab-gallery/`** at the basecamp repo root.
 
 ## Memory
 
-`npm run dev` writes bundles into `docs/prefab-gallery/` next to ~8k voxel JSON files. Webpack is configured to **not** file-watch that data directory (watching it can balloon a Node process into many GB on Windows). After `npm run build:data`, refresh the browser — the dev server does not watch `manifest.json` or `data/**`.
+`npm run dev` writes bundles into `apps/prefab-gallery/` next to ~8k voxel JSON files. Webpack is configured to **not** file-watch that data directory (watching it can balloon a Node process into many GB on Windows). After `npm run build:data`, refresh the browser — the dev server does not watch `manifest.json` or `data/**`.
 
 `npm run build:data` streams a compact `manifest.json` (~6 MB) and writes per-prefab **`.vox`** files (PXV3 binary: uint8 coords, 4–5 bytes/voxel, materials only in manifest).
 

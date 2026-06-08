@@ -14,8 +14,10 @@
 const fs = require('fs');
 const path = require('path');
 
+const { modDir } = require('../library/workspace');
+
 const REPO_ROOT = path.resolve(__dirname, '..', '..');
-const INPUT = path.join(REPO_ROOT, 'mods', 'SynthOverseer', 'src', 'main', 'resources',
+const INPUT = path.join(modDir('SynthOverseer'), 'src', 'main', 'resources',
     'synthoverseer', 'builder-commands.json');
 const OUTPUT = path.join(REPO_ROOT, 'docs', 'synthoverseer-builder-commands.md');
 

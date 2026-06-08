@@ -2,11 +2,11 @@
 /*
  * Build prefab gallery data: manifest.json + per-prefab voxel JSON.
  *
- * Output layout (default ../../docs/prefab-gallery):
+ * Output layout (default ../../apps/prefab-gallery):
  *   manifest.json
  *   data/<source-folder>/<prefab-stem>.vox
  *
- * Run alone or via `npm run build:data` / `npm run build` in tools/prefab-viewer.
+ * Run alone or via `npm run build:data` / `npm run build` in tools/prefab-gallery.
  */
 
 const fs = require("fs");
@@ -28,7 +28,7 @@ function main() {
     printUsage(args.help ? 0 : 1);
   }
 
-  const outRoot = path.resolve(args.out || path.join(REPO_ROOT, "docs/prefab-gallery"));
+  const outRoot = path.resolve(args.out || path.join(REPO_ROOT, "apps/prefab-gallery"));
   const dataRoot = path.join(outRoot, "data");
   const assetsRoot = path.resolve(args.assets || path.join(REPO_ROOT, "_Assets"));
   const htmlDir = outRoot;
@@ -88,10 +88,10 @@ function requireValue(argv, i, name) {
 function printUsage(code) {
   const script = path.relative(process.cwd(), __filename);
   console.log(`Usage:
-  node ${script} <prefab.json|directory> [more inputs...] [--out docs/prefab-gallery]
+  node ${script} <prefab.json|directory> [more inputs...] [--out apps/prefab-gallery]
 
 Options:
-  --out DIR     Gallery output folder. Default: <repo>/docs/prefab-gallery
+  --out DIR     Gallery output folder. Default: <repo>/apps/prefab-gallery
   --assets DIR  Hytale _Assets folder. Default: <repo>/_Assets
   --limit N     Process only the first N prefabs for a quick sample.
 

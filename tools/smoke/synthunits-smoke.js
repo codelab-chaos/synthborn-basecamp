@@ -11,6 +11,7 @@ const {
   deployModRemote,
   printModeBanner,
 } = require("../library/remote-host");
+const { modDir } = require("../library/workspace");
 
 const rawArgv = process.argv.slice(2);
 configureRemoteHost(parseRemoteFlags(rawArgv));
@@ -84,7 +85,7 @@ function run(label, command, commandArgs, options = {}) {
 
 function gradle(modName, task) {
   run(`${modName} ${task}`, ".\\gradlew.bat", [task], {
-    cwd: path.join(root, "mods", modName),
+    cwd: modDir(modName),
   });
 }
 
@@ -92,11 +93,11 @@ function deployMods() {
   printModeBanner("synthunits-smoke");
   if (isRemoteEnabled()) {
     deployModRemote({
-      modDir: path.join(root, "mods", "SynthRCON"),
+      modDir: modDir("SynthRCON"),
       saveName: "synthtest-02",
     });
     deployModRemote({
-      modDir: path.join(root, "mods", "SynthUnits"),
+      modDir: modDir("SynthUnits"),
       saveName: "synthtest-02",
     });
     return;

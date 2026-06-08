@@ -23,6 +23,7 @@
  */
 const fs = require("node:fs");
 const path = require("node:path");
+const { modDir } = require("../library/workspace");
 
 const REPO_ROOT = path.resolve(__dirname, "../..");
 const DEFAULT_ROOT = path.join(REPO_ROOT, "_Assets/Server/Prefabs");
@@ -30,8 +31,8 @@ const DEFAULT_MD = path.join(REPO_ROOT, "docs/hytale-prefabs.md");
 const DEFAULT_JSON = path.join(REPO_ROOT, "docs/hytale-prefabs-index.json");
 /** Plugin-bundled copy — the SearchPrefabsTool reads from the classpath at this path. */
 const PLUGIN_RESOURCE_JSON = path.join(
-  REPO_ROOT,
-  "mods/SynthOverseer/src/main/resources/synthoverseer/prefabs/hytale-prefabs-index.json"
+  modDir("SynthOverseer"),
+  "src/main/resources/synthoverseer/prefabs/hytale-prefabs-index.json"
 );
 
 const TOP_BLOCKS_PER_PREFAB = 5;

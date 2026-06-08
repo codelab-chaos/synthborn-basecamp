@@ -6,9 +6,10 @@
  */
 const fs = require("node:fs");
 const path = require("node:path");
+const { modDir } = require("../library/workspace");
 
 const ROOT = path.resolve(__dirname, "../../_Assets/Server/NPC/Roles");
-const DEST = path.resolve(__dirname, "../../mods/SynthOverseer/src/main/resources/synthoverseer/npc/npcs-en.json");
+const DEST = path.join(modDir("SynthOverseer"), "src/main/resources/synthoverseer/npc/npcs-en.json");
 
 function walk(dir, results = []) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {

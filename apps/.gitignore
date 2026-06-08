@@ -1,0 +1,4 @@
+# prefab-gallery is build output. The voxel data/ dir (~8k generated JSON/vox
+# blobs) is large and regenerated locally via build:data — do not commit it.
+# Re-generate: cd tools/prefab-gallery && npm run build:data
+prefab-gallery/data/
