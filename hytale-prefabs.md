@@ -5,6 +5,12 @@ Re-run after Hytale ships a new build to refresh.
 
 Total prefabs indexed: **7825**
 
+Visual quick reference: open [`prefab-gallery/index.html`](prefab-gallery/index.html)
+for top/front/back/profile/45-degree schematic previews. The gallery targets
+vanilla `_Assets/Server/Prefabs`, includes a separate Creator Prefab Mods
+category, and copies material chips from vanilla `Common/BlockTextures` when
+available.
+
 ## Top-Level Categories
 
 | Category | Count | Description |

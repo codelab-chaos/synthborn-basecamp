@@ -1,0 +1,125 @@
+---
+title: Perguntas e respostas técnicas de desenvolvedor
+description: Compilado técnico detalhado dos desenvolvedores do Hytale sobre arquitetura, criação de mods, sistemas do jogo e a filosofia de desenvolvimento.
+---
+
+# Introdução
+
+Esta extensa sessão de perguntas e respostas com os desenvolvedores do Hytale revela detalhes técnicos críticos sobre a arquitetura do jogo, filosofia da criação de mods, sistemas de jogabilidade e abordagem de desenvolvimento.
+
+## Arquitetura técnica
+
+### Rede e infraestrutura
+
+* **Protocolo**: usa QUIC (UDP confiável com canais não confiáveis) em vez de TCP;
+* **Compatibilidade de servidor**: funciona em qualquer plataforma que suporte Java 25;
+* **Método de conexão**: inicialmente por IP direto. A listagem de servidores será planejada após o lançamento;
+* **Camada de dados**: o formato de serialização personalizada atual será substituído pós-lançamento;
+* **Desempenho**: suporte a múltiplos núcleos, e cada mundo tem um thread principal + execução paralela;
+* **Renderização**: OpenGL 3.3 para compatibilidade com Mac, potencial migração para Vulkan/Metal;
+* **Modelo de tick**: a taxa de atualização base do servidor é de 30 TPS por padrão. e pode ser alterada através de plugins de servidor.
+
+### Segurança e distribuição
+
+* **Sem execução de código no client**: previne exploits de execução de código remoto;
+* **Restrição de downloads**: apenas arquivos de configuração e de recursos;
+* **Distribuição de mods**: plataformas comunitárias, como CurseForge e Modrinth, sem marketplace interno imediato;
+* **Hospedagem de servidor**: disponível no dia 1 e não requer acordos de negócios (apenas EULA/TOS).
+
+## Capacidades da criação de mods
+
+### Poder do server-side
+
+* **Acesso completo ao Java**: conexões de banco de dados, solicitações web e qualquer funcionalidade Java;
+* **Bibliotecas personalizadas**: pode criar scripts em Lua, frameworks de machine learning ou qualquer biblioteca do Java;
+* **Modificação no servidor**: o código-fonte compartilhado permite modificações pesadas nos servidores;
+* **Recarregamento imediato**: compatível com a maioria dos tipos de recursos;
+* **Documentação**:  GitBook público planejado, embora inicialmente seja escasso.
+
+### Criação de conteúdo (não requer código)
+
+* **Geração de mundo**: biomas e mapas personalizados sem Java;
+* **NPCs e itens**: configuração baseada em JSON;
+* **Receitas p/ fabricação**: sistema baseado em dados;
+* **Programação visual**: substitui os blocos de comando, totalmente em sandbox;
+* **Sistema de prefab**: blocos de construção sofisticados com editor dentro do jogo.
+
+### Criação de mods avançada
+
+* **Sistema de combate**: sistema de interação baseado em dados para ataque e habilidades em sequências;
+* **Caixas de colisão internas**: suporte para mecânicas de chefes complexas (precisa ser melhorado);
+* **Efeitos de status**: sistema de buff e debuff com efeitos e estatísticas personalizadas;
+* **Interface personalizada**: a transição para o NoesisGUI possibilita uma poderosa personalização da interface;
+* **Física dos blocos**: sistema seletivo (árvores caem, mas blocos colocados não).
+
+## Sistemas de jogabilidade
+
+### Principais mecânicas
+
+* **Sistema de estâmina**: sem fome por padrão (pode ser feito por mods);
+* **Gravidade**: física de blocos seletiva — árvores caem, construções podem flutuar;
+* **Iluminação**: grande revisão para corrigir inconsistências de modelo/voxel;
+* **Altura do mundo**: atualmente limitada e pode mudar com atualizações de armazenamento voxel;
+* **Automação**: sem algo equivalente a redstone no lançamento (pode ser feito por mods).
+
+### Sistemas de jogador
+
+* **Modelos de personagem**: humanos por padrão, alteráveis no modo criativo;
+* **Avatares multijogadores**: controlado pelo servidor (nenhum modelo personalizado no modo multijogador);
+* **Skins**: possibilidade de personalização completa ("modifique você mesmo em uma batata");
+* **Metamorfose**: poções de transformação existem para diversão/mods.
+
+### Mundo e NPCs
+
+* **Sistema de facção**: mundo vivo com interações dinâmicas entre os NPCs;
+* **Sistemas de vilas**: vilas dinâmicas planejadas com relacionamentos e comportamentos;
+* **Carregamento de chunk**: entidades descarregam quando estão fora da distância de renderização de todos os jogadores;
+* **Sementes**: suporte a sementes de geração de mundo compartilháveis.
+
+## Filosofia de desenvolvimento
+
+### Estratégia de lançamento
+
+* **Prioridade básica do jogo**: o modo aventura é o foco principal, a arquitetura de criação de mods é compatível com ele;
+* **Dívida técnica**: reconhecida como necessária para o lançamento, com compromisso de melhoria;
+* **Frequência de atualização**: atualizações frequentemente planejadas, especialmente após o lançamento;
+* **Política de versão**: sempre a versão mais recente, mas os servidores podem executar versões modificadas.
+
+### Foco na comunidade
+
+* **Suporte ao criador**: recompensas de desenvolvimento planejadas para colaboradores da comunidade;
+* **Tutoriais**: tutoriais oficiais de criação de mods planejados com parceiros;
+* **Integração de feedback**: forte compromisso com melhorias conduzidas pela comunidade;
+* **Acessibilidade**: desenvolvido para equipamentos mais baratos, requisitos de sistema razoáveis.
+
+### Ferramentas e documentação
+
+* **Integração com o Blockbench**: substitui um "criador de modelos de Hytale" personalizado;
+* **Ferramentas de Machinima**: recursos completos de criação cinemática;
+* **Ferramentas criativas**: grande revelação dos recursos de construção/criação;
+* **Acesso ao código-fonte**: o código do servidor não será ofuscado com comentários do desenvolvedor.
+
+## Plataforma(s) compatível(is)
+
+* **Atual**: Windows (principal);
+* **Planejado**: suporte para Mac/Linux em constante desenvolvimento;
+* **VR**: é inviável em um futuro próximo;
+* **Desempenho**: taxa de quadros ilimitada, projetada para acessibilidade;
+* **Jogar off-line**: o modo um jogador funciona sem conexão com a internet.
+
+## Monetização e jurídico
+
+* **Sem pay-to-win**: compromisso firme contra a mecânica P2W;
+* **Apenas cosméticos**: os pacotes de cosméticos com baixo preço oferecem suporte à infraestrutura;
+* **EULA do servidor**: termos sendo finalizados para as políticas de monetização do servidor;
+* **Bloqueio QUIC**: problema reconhecido em algumas regiões, sem protocolo alternativo.
+
+## Limitações
+
+* **Sombreadores personalizados**: não há suporte até que uma solução do sandbox seja encontrada;
+* **Limitações de entrada/interface**: ainda em expansão, mas atualmente restrito;
+* **Documentação**: inicialmente escassa, mas será aprimorada com o tempo;
+* **Modificações do client**: nenhuma execução de código em client-side para segurança;
+* **Nameplates**: personalização atualmente limitada.
+
+Esta base técnica abrangente posiciona o Hytale como uma plataforma segura e extensível, capacitando os criadores ao mesmo tempo em que mantém a performance, a acessibilidade e o compromisso com a melhoria contínua.
