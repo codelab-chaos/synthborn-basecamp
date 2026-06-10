@@ -13,9 +13,11 @@ Right now multiple mods, plus shared tooling and reference material, depend on t
 
 ## Quick References
 
+- [`labels/README.md`](labels/README.md) - **English display names ↔ Hytale ids** (`server.lang`). CLI: `node tools/labels/lookup.js find copper`. Regenerate: `node tools/labels/extract-labels.js`.
 - [`sdk-reference/README.md`](sdk-reference/README.md) - topic router + search workflow for the SDK reference.
 - [`sdk-reference/llms.txt`](sdk-reference/llms.txt) / [`methods.txt`](sdk-reference/methods.txt) - grep indexes for classes and methods. CLI: `node tools/sdk/sdk-search.js --method placeBlock`. Regenerate: `node tools/sdk/extract-sdk-reference.js --full` (see [`tools/sdk/README.md`](../tools/sdk/README.md)).
 - [`apps/prefab-gallery/index.html`](../apps/prefab-gallery/index.html) - static visual browser for vanilla `_Assets/Server/Prefabs` plus creator prefab mods. Each prefab ships as compact hue-only voxel JSON rendered client-side with Three.js card previews plus lightweight top/front projections. Material chips use sampled colors from vanilla asset metadata, not texture files.
+- [`apps/recipe-browser/`](../apps/recipe-browser/) - recipe/item search (forward craft chains, backward uses, sources, bench filter) plus an in-app **Tech tree** tab built live from `recipes.json`. `npm run build` in that folder.
 - [`hytale-prefabs.md`](hytale-prefabs.md) - text/index view of the vanilla prefab catalog, useful for counts, categories, dimensions, and dominant block ids.
 - [`hytale-prefabs-index.json`](hytale-prefabs-index.json) - machine-readable prefab index consumed by search and tooling.
 
