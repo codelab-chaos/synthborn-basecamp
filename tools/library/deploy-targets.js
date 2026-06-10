@@ -40,6 +40,7 @@ const TARGETS = {
       { name: "SynthUnits" },
     ],
     smokeScript: path.join("tools", "smoke", "synthunits-smoke.js"),
+    verify: verifyUnits,
   },
   terrascape: {
     save: "synth-worldview-mvp",
@@ -182,7 +183,7 @@ function gradle(moduleName, task, extraArgs = []) {
     );
     return;
   }
-  runChecked(`${moduleName} ${task}`, "./gradlew", [task, ...extraArgs], { cwd });
+  runChecked(`${moduleName} ${task}`, "sh", ["gradlew", task, ...extraArgs], { cwd });
 }
 
 function deployModuleLocal(moduleSpec, saveName) {
@@ -262,6 +263,76 @@ function verifyOverseer(target) {
   }
 
   runNodeTool("verify local SynthOverseer setup", path.join("tools", "overseer", "redeploy.js"), ["--verify", "--local"]);
+}
+
+const CHUNK_SIZE = 32;
+
+function runRconCaptured(saveName, args) {
+  const res = spawnSync(process.execPath, [
+    path.join(REPO_ROOT, "tools", "rcon", "synth-rcon.js"),
+    "--save", saveName,
+    ...args,
+  ], { cwd: REPO_ROOT, encoding: "utf8", env: process.env });
+  if (res.status !== 0) {
+    throw new Error(`synth-rcon ${args.join(" ")} failed: ${(res.stderr || res.stdout || "").trim()}`);
+  }
+  return `${res.stdout || ""}${res.stderr || ""}`;
+}
+
+/**
+ * Units verify: RCON health, then make sure the synth test home sits inside a persistent chunk
+ * loader so `/validate <scenario>` works immediately after a fresh restart instead of failing
+ * `target_chunk_not_loaded` until someone warms the area by hand. Idempotent — an existing
+ * covering loader is left alone (loaders persist across restarts).
+ */
+function verifyUnits(target) {
+  console.log(`\n== RCON health (${target.save})`);
+  console.log(runRconCaptured(target.save, ["--health"]).trim());
+
+  console.log(`\n== ensure test-home chunk loader (${target.save})`);
+  const homeOut = runRconCaptured(target.save, ["synth", "testhome", "show"]);
+  const home = homeOut.match(/Synth test home:\s*(-?\d+(?:\.\d+)?),\s*(-?\d+(?:\.\d+)?),\s*(-?\d+(?:\.\d+)?)/);
+  if (!home) {
+    console.log("no test home configured — skipping chunk warmup (set one with /synth testhome set)");
+    return;
+  }
+  const chunkX = Math.floor(Number(home[1]) / CHUNK_SIZE);
+  const chunkZ = Math.floor(Number(home[3]) / CHUNK_SIZE);
+
+  const listOut = runRconCaptured(target.save, ["synth", "chunk", "list"]);
+  const loaderRe = /chunk=(-?\d+),(-?\d+) radius=(\d+)/g;
+  let covered = false;
+  let match;
+  while ((match = loaderRe.exec(listOut)) !== null) {
+    const [, lx, lz, radius] = match.map(Number);
+    if (Math.abs(chunkX - lx) <= radius && Math.abs(chunkZ - lz) <= radius) {
+      covered = true;
+      break;
+    }
+  }
+  if (!covered) {
+    console.log(runRconCaptured(target.save, ["synth", "chunk", "load", String(chunkX), String(chunkZ), "2"]).trim());
+  } else {
+    console.log(`test home chunk ${chunkX},${chunkZ} already covered by a loader`);
+  }
+
+  // Loader chunks load asynchronously after a restart; a /validate fired immediately can still
+  // fail target_chunk_not_loaded. Wait until every loader reports its chunks fully loaded.
+  const deadline = Date.now() + 60_000;
+  for (;;) {
+    const status = runRconCaptured(target.save, ["synth", "chunk", "list"]);
+    const pending = [...status.matchAll(/chunks=(\d+) kept=\d+ loaded=(\d+)/g)]
+      .filter(([, total, loaded]) => Number(loaded) < Number(total));
+    if (pending.length === 0) {
+      console.log("all chunk loaders fully loaded — ready to validate");
+      return;
+    }
+    if (Date.now() > deadline) {
+      console.log("warning: chunk loaders still loading after 60s — validates may need a retry");
+      return;
+    }
+    pauseMs(3000);
+  }
 }
 
 function verifyTarget(target) {

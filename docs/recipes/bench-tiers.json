@@ -1,0 +1,712 @@
+{
+  "generatedAt": "2026-06-10T00:40:53.618Z",
+  "source": "_Assets/Server/Item/Items/Bench/*.json (BlockType.Bench.TierLevels)",
+  "note": "Upgrade ladder + cost per bench. Recipe->tier gating is runtime (isRestrictedByBenchTierLevel), not in this index.",
+  "count": 16,
+  "upgradableCount": 7,
+  "byBenchId": {
+    "Alchemybench": "Bench_Alchemy",
+    "Arcanebench": "Bench_Arcane",
+    "Armory": "Bench_Armory",
+    "Armor_Bench": "Bench_Armour",
+    "Builders": "Bench_Builders",
+    "Campfire": "Bench_Campfire",
+    "Cookingbench": "Bench_Cooking",
+    "Farmingbench": "Bench_Trough",
+    "Furnace": "Bench_Furnace",
+    "Furniture_Bench": "Bench_Furniture",
+    "Loombench": "Bench_Loom",
+    "Salvagebench": "Bench_Salvage",
+    "Tannery": "Bench_Tannery",
+    "Weapon_Bench": "Bench_Weapon",
+    "Workbench": "Bench_WorkBench"
+  },
+  "benches": [
+    {
+      "itemId": "Bench_Alchemy",
+      "benchId": "Alchemybench",
+      "categories": [
+        "Alchemy_Potions",
+        "Alchemy_Potions_Misc",
+        "Alchemy_Seeds",
+        "Alchemy_Bombs"
+      ],
+      "upgradable": true,
+      "maxTier": 4,
+      "tiers": [
+        {
+          "tier": 1,
+          "craftingTimeReduction": 0,
+          "upgradeToNext": {
+            "toTier": 2,
+            "timeSeconds": 3,
+            "materials": [
+              {
+                "itemId": "Ingredient_Bar_Silver",
+                "quantity": 5
+              },
+              {
+                "itemId": "Ingredient_Bar_Gold",
+                "quantity": 10
+              },
+              {
+                "itemId": "Ingredient_Sac_Venom",
+                "quantity": 10
+              },
+              {
+                "itemId": "Rock_Gem_Emerald",
+                "quantity": 1
+              }
+            ]
+          }
+        },
+        {
+          "tier": 2,
+          "craftingTimeReduction": 0.2,
+          "upgradeToNext": {
+            "toTier": 3,
+            "timeSeconds": 6,
+            "materials": [
+              {
+                "itemId": "Ingredient_Bar_Silver",
+                "quantity": 10
+              },
+              {
+                "itemId": "Ingredient_Bar_Gold",
+                "quantity": 20
+              },
+              {
+                "itemId": "Ingredient_Chitin_Sturdy",
+                "quantity": 20
+              },
+              {
+                "itemId": "Rock_Gem_Zephyr",
+                "quantity": 1
+              }
+            ]
+          }
+        },
+        {
+          "tier": 3,
+          "craftingTimeReduction": 0.4,
+          "upgradeToNext": {
+            "toTier": 4,
+            "timeSeconds": 9,
+            "materials": [
+              {
+                "itemId": "Ingredient_Bar_Silver",
+                "quantity": 20
+              },
+              {
+                "itemId": "Ingredient_Bar_Gold",
+                "quantity": 40
+              },
+              {
+                "itemId": "Ingredient_Fabric_Scrap_Shadoweave",
+                "quantity": 30
+              },
+              {
+                "itemId": "Rock_Gem_Sapphire",
+                "quantity": 1
+              }
+            ]
+          }
+        },
+        {
+          "tier": 4,
+          "craftingTimeReduction": 0.6,
+          "upgradeToNext": {
+            "toTier": 5,
+            "timeSeconds": 9,
+            "materials": [
+              {
+                "itemId": "Ingredient_Bar_Silver",
+                "quantity": 40
+              },
+              {
+                "itemId": "Ingredient_Bar_Gold",
+                "quantity": 80
+              },
+              {
+                "itemId": "Ingredient_Fabric_Scrap_Cindercloth",
+                "quantity": 120
+              },
+              {
+                "itemId": "Rock_Gem_Ruby",
+                "quantity": 1
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "itemId": "Bench_Arcane",
+      "benchId": "Arcanebench",
+      "categories": [
+        "Arcane_Portals",
+        "Arcane_Misc"
+      ],
+      "upgradable": false,
+      "maxTier": 1,
+      "tiers": []
+    },
+    {
+      "itemId": "Bench_Armory",
+      "benchId": "Armory",
+      "categories": [
+        "Weapons",
+        "Armor"
+      ],
+      "upgradable": false,
+      "maxTier": 1,
+      "tiers": []
+    },
+    {
+      "itemId": "Bench_Armour",
+      "benchId": "Armor_Bench",
+      "categories": [
+        "Armor_Head",
+        "Armor_Chest",
+        "Armor_Hands",
+        "Armor_Legs",
+        "Weapon_Shield"
+      ],
+      "upgradable": true,
+      "maxTier": 3,
+      "tiers": [
+        {
+          "tier": 1,
+          "craftingTimeReduction": 0,
+          "upgradeToNext": {
+            "toTier": 2,
+            "timeSeconds": 3,
+            "materials": [
+              {
+                "itemId": "Ingredient_Bar_Copper",
+                "quantity": 20
+              },
+              {
+                "itemId": "Ingredient_Bone_Fragment",
+                "quantity": 20
+              },
+              {
+                "itemId": "Ingredient_Leather_Medium",
+                "quantity": 20
+              },
+              {
+                "itemId": "Wood_Azure_Trunk",
+                "quantity": 100
+              }
+            ]
+          }
+        },
+        {
+          "tier": 2,
+          "craftingTimeReduction": 0.15,
+          "upgradeToNext": {
+            "toTier": 3,
+            "timeSeconds": 3,
+            "materials": [
+              {
+                "itemId": "Ingredient_Bar_Thorium",
+                "quantity": 25
+              },
+              {
+                "itemId": "Ingredient_Bar_Cobalt",
+                "quantity": 25
+              },
+              {
+                "itemId": "Ingredient_Fabric_Scrap_Shadoweave",
+                "quantity": 40
+              },
+              {
+                "itemId": "Ingredient_Chitin_Sturdy",
+                "quantity": 40
+              },
+              {
+                "itemId": "Ingredient_Voidheart",
+                "quantity": 3
+              }
+            ]
+          }
+        },
+        {
+          "tier": 3,
+          "craftingTimeReduction": 0.3,
+          "upgradeToNext": null
+        }
+      ]
+    },
+    {
+      "itemId": "Bench_Builders",
+      "benchId": "Builders",
+      "categories": [],
+      "upgradable": false,
+      "maxTier": 1,
+      "tiers": []
+    },
+    {
+      "itemId": "Bench_Campfire",
+      "benchId": "Campfire",
+      "categories": [],
+      "upgradable": false,
+      "maxTier": 1,
+      "tiers": []
+    },
+    {
+      "itemId": "Bench_Cooking",
+      "benchId": "Cookingbench",
+      "categories": [
+        "Prepared",
+        "Baked",
+        "Ingredients"
+      ],
+      "upgradable": false,
+      "maxTier": 1,
+      "tiers": []
+    },
+    {
+      "itemId": "Bench_Farming",
+      "benchId": "Farmingbench",
+      "categories": [
+        "Farming",
+        "Seeds",
+        "Saplings",
+        "Essence",
+        "Planters",
+        "Decorative"
+      ],
+      "upgradable": true,
+      "maxTier": 7,
+      "tiers": [
+        {
+          "tier": 1,
+          "craftingTimeReduction": 0,
+          "upgradeToNext": {
+            "toTier": 2,
+            "timeSeconds": 3,
+            "materials": [
+              {
+                "itemId": "Ingredient_Life_Essence",
+                "quantity": 50
+              },
+              {
+                "itemId": "Plant_Crop_Wheat_Item",
+                "quantity": 5
+              },
+              {
+                "itemId": "Plant_Crop_Lettuce_Item",
+                "quantity": 5
+              }
+            ]
+          }
+        },
+        {
+          "tier": 2,
+          "craftingTimeReduction": 0.15,
+          "upgradeToNext": {
+            "toTier": 3,
+            "timeSeconds": 3,
+            "materials": [
+              {
+                "itemId": "Ingredient_Life_Essence_Concentrated",
+                "quantity": 1
+              },
+              {
+                "itemId": "Plant_Crop_Carrot_Item",
+                "quantity": 10
+              },
+              {
+                "itemId": "Plant_Crop_Corn_Item",
+                "quantity": 10
+              }
+            ]
+          }
+        },
+        {
+          "tier": 3,
+          "craftingTimeReduction": 0.3,
+          "upgradeToNext": {
+            "toTier": 4,
+            "timeSeconds": 3,
+            "materials": [
+              {
+                "itemId": "Ingredient_Life_Essence_Concentrated",
+                "quantity": 2
+              },
+              {
+                "itemId": "Plant_Crop_Cauliflower_Item",
+                "quantity": 20
+              },
+              {
+                "itemId": "Plant_Crop_Turnip_Item",
+                "quantity": 20
+              }
+            ]
+          }
+        },
+        {
+          "tier": 4,
+          "craftingTimeReduction": 0,
+          "upgradeToNext": {
+            "toTier": 5,
+            "timeSeconds": 3,
+            "materials": [
+              {
+                "itemId": "Ingredient_Life_Essence_Concentrated",
+                "quantity": 3
+              },
+              {
+                "itemId": "Plant_Crop_Aubergine_Item",
+                "quantity": 30
+              },
+              {
+                "itemId": "Plant_Crop_Pumpkin_Item",
+                "quantity": 30
+              }
+            ]
+          }
+        },
+        {
+          "tier": 5,
+          "craftingTimeReduction": 0,
+          "upgradeToNext": {
+            "toTier": 6,
+            "timeSeconds": 3,
+            "materials": [
+              {
+                "itemId": "Ingredient_Life_Essence_Concentrated",
+                "quantity": 4
+              },
+              {
+                "itemId": "Plant_Crop_Tomato_Item",
+                "quantity": 40
+              },
+              {
+                "itemId": "Plant_Crop_Chilli_Item",
+                "quantity": 40
+              }
+            ]
+          }
+        },
+        {
+          "tier": 6,
+          "craftingTimeReduction": 0,
+          "upgradeToNext": {
+            "toTier": 7,
+            "timeSeconds": 3,
+            "materials": [
+              {
+                "itemId": "Ingredient_Life_Essence_Concentrated",
+                "quantity": 5
+              },
+              {
+                "itemId": "Plant_Crop_Cotton_Item",
+                "quantity": 50
+              },
+              {
+                "itemId": "Plant_Crop_Rice_Item",
+                "quantity": 50
+              }
+            ]
+          }
+        },
+        {
+          "tier": 7,
+          "craftingTimeReduction": 0,
+          "upgradeToNext": {
+            "toTier": 8,
+            "timeSeconds": 3,
+            "materials": [
+              {
+                "itemId": "Ingredient_Life_Essence_Concentrated",
+                "quantity": 6
+              },
+              {
+                "itemId": "Plant_Crop_Potato_Item",
+                "quantity": 60
+              },
+              {
+                "itemId": "Plant_Crop_Onion_Item",
+                "quantity": 60
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "itemId": "Bench_Furnace",
+      "benchId": "Furnace",
+      "categories": [],
+      "upgradable": true,
+      "maxTier": 2,
+      "tiers": [
+        {
+          "tier": 1,
+          "craftingTimeReduction": 0,
+          "upgradeToNext": {
+            "toTier": 2,
+            "timeSeconds": 3,
+            "materials": [
+              {
+                "itemId": "Ingredient_Bar_Copper",
+                "quantity": 5
+              },
+              {
+                "itemId": "Ingredient_Bar_Iron",
+                "quantity": 5
+              },
+              {
+                "itemId": "Ingredient_Bar_Thorium",
+                "quantity": 5
+              },
+              {
+                "itemId": "Ingredient_Bar_Cobalt",
+                "quantity": 5
+              }
+            ]
+          }
+        },
+        {
+          "tier": 2,
+          "craftingTimeReduction": 0.3,
+          "upgradeToNext": null
+        }
+      ]
+    },
+    {
+      "itemId": "Bench_Furniture",
+      "benchId": "Furniture_Bench",
+      "categories": [
+        "Furniture_Storage",
+        "Furniture_Beds",
+        "Furniture_Lighting",
+        "Furniture_Pottery",
+        "Furniture_Textiles",
+        "Furniture_Village_Walls",
+        "Furniture_Misc",
+        "Furniture_Seasonal"
+      ],
+      "upgradable": false,
+      "maxTier": 1,
+      "tiers": []
+    },
+    {
+      "itemId": "Bench_Loom",
+      "benchId": "Loombench",
+      "categories": [
+        "All"
+      ],
+      "upgradable": false,
+      "maxTier": 1,
+      "tiers": []
+    },
+    {
+      "itemId": "Bench_Salvage",
+      "benchId": "Salvagebench",
+      "categories": [],
+      "upgradable": false,
+      "maxTier": 1,
+      "tiers": []
+    },
+    {
+      "itemId": "Bench_Tannery",
+      "benchId": "Tannery",
+      "categories": [],
+      "upgradable": true,
+      "maxTier": 2,
+      "tiers": [
+        {
+          "tier": 1,
+          "craftingTimeReduction": 0,
+          "upgradeToNext": {
+            "toTier": 2,
+            "timeSeconds": 3,
+            "materials": [
+              {
+                "itemId": "Ingredient_Leather_Light",
+                "quantity": 5
+              },
+              {
+                "itemId": "Ingredient_Leather_Medium",
+                "quantity": 5
+              },
+              {
+                "itemId": "Ingredient_Leather_Heavy",
+                "quantity": 5
+              },
+              {
+                "itemId": "Ingredient_Chitin_Sturdy",
+                "quantity": 5
+              }
+            ]
+          }
+        },
+        {
+          "tier": 2,
+          "craftingTimeReduction": 0.4,
+          "upgradeToNext": null
+        }
+      ]
+    },
+    {
+      "itemId": "Bench_Trough",
+      "benchId": "Farmingbench",
+      "categories": [
+        "All"
+      ],
+      "upgradable": false,
+      "maxTier": 1,
+      "tiers": []
+    },
+    {
+      "itemId": "Bench_Weapon",
+      "benchId": "Weapon_Bench",
+      "categories": [
+        "Weapon_Sword",
+        "Weapon_Mace",
+        "Weapon_Battleaxe",
+        "Weapon_Daggers",
+        "Weapon_Bow"
+      ],
+      "upgradable": true,
+      "maxTier": 3,
+      "tiers": [
+        {
+          "tier": 1,
+          "craftingTimeReduction": 0,
+          "upgradeToNext": {
+            "toTier": 2,
+            "timeSeconds": 3,
+            "materials": [
+              {
+                "itemId": "Ingredient_Bar_Iron",
+                "quantity": 20
+              },
+              {
+                "itemId": "Ingredient_Leather_Light",
+                "quantity": 30
+              },
+              {
+                "itemId": "Ingredient_Fabric_Scrap_Linen",
+                "quantity": 30
+              },
+              {
+                "itemId": "Ingredient_Sac_Venom",
+                "quantity": 15
+              }
+            ]
+          }
+        },
+        {
+          "tier": 2,
+          "craftingTimeReduction": 0.15,
+          "upgradeToNext": {
+            "toTier": 3,
+            "timeSeconds": 3,
+            "materials": [
+              {
+                "itemId": "Ingredient_Bar_Thorium",
+                "quantity": 25
+              },
+              {
+                "itemId": "Ingredient_Bar_Cobalt",
+                "quantity": 25
+              },
+              {
+                "itemId": "Ingredient_Fire_Essence",
+                "quantity": 20
+              },
+              {
+                "itemId": "Ingredient_Ice_Essence",
+                "quantity": 40
+              },
+              {
+                "itemId": "Ingredient_Void_Essence",
+                "quantity": 100
+              }
+            ]
+          }
+        },
+        {
+          "tier": 3,
+          "craftingTimeReduction": 0.3,
+          "upgradeToNext": null
+        }
+      ]
+    },
+    {
+      "itemId": "Bench_WorkBench",
+      "benchId": "Workbench",
+      "categories": [
+        "Workbench_Survival",
+        "Workbench_Tools",
+        "Workbench_Crafting",
+        "Workbench_Tinkering"
+      ],
+      "upgradable": true,
+      "maxTier": 3,
+      "tiers": [
+        {
+          "tier": 1,
+          "craftingTimeReduction": 0,
+          "upgradeToNext": {
+            "toTier": 2,
+            "timeSeconds": 5,
+            "materials": [
+              {
+                "itemId": "Ingredient_Bar_Copper",
+                "quantity": 30
+              },
+              {
+                "itemId": "Ingredient_Bar_Iron",
+                "quantity": 20
+              },
+              {
+                "itemId": "Ingredient_Fabric_Scrap_Linen",
+                "quantity": 20
+              }
+            ]
+          }
+        },
+        {
+          "tier": 2,
+          "craftingTimeReduction": 0.15,
+          "upgradeToNext": {
+            "toTier": 3,
+            "timeSeconds": 10,
+            "materials": [
+              {
+                "itemId": "Ingredient_Bar_Thorium",
+                "quantity": 30
+              },
+              {
+                "itemId": "Ingredient_Bar_Cobalt",
+                "quantity": 20
+              },
+              {
+                "itemId": "Ingredient_Leather_Heavy",
+                "quantity": 30
+              },
+              {
+                "itemId": "Ingredient_Fabric_Scrap_Shadoweave",
+                "quantity": 50
+              },
+              {
+                "itemId": "Ingredient_Fire_Essence",
+                "quantity": 25
+              }
+            ]
+          }
+        },
+        {
+          "tier": 3,
+          "craftingTimeReduction": 0.3,
+          "upgradeToNext": null
+        }
+      ]
+    }
+  ]
+}

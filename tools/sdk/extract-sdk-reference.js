@@ -9,7 +9,9 @@
  * Cross-platform Node, no deps beyond JDK `jar` and `javap` on PATH.
  *
  * Usage:
- *   node tools/sdk/extract-sdk-reference.js [--jar <path>] [--out <dir>]
+ *   node tools/sdk/extract-sdk-reference.js [--full] [--jar <path>] [--out <dir>]
+ *
+ * See tools/sdk/README.md for the version-bump refresh workflow.
  *
  * Environment fallbacks:
  *   HYTALE_SERVER_JAR — explicit jar path
@@ -22,6 +24,7 @@ const os = require("node:os");
 const path = require("node:path");
 const { execFileSync } = require("node:child_process");
 const { buildLlmsTxt } = require("./build-sdk-llms-txt");
+const { buildMethodIndex } = require("./build-sdk-method-index");
 const { MODULE_DIRS, modDir } = require("../library/workspace");
 
 // Curated to the "neighborhood" a synth-style plugin works in. Reading
@@ -460,6 +463,9 @@ function main() {
   // Derive the LLM-friendly flat index from the .md files we just wrote.
   const llms = buildLlmsTxt({ outDir, quiet: true, packages: rows, version });
   console.log(`Wrote llms.txt: ${llms.packages} packages, ${llms.classes} classes`);
+
+  const methods = buildMethodIndex({ outDir, quiet: true, version });
+  console.log(`Wrote methods index: ${methods.entries} entries, ${methods.uniqueMethods} unique names`);
 
   // Record the fingerprint so the next run can skip when nothing changed.
   fs.writeFileSync(stampPath, JSON.stringify(fingerprint, null, 2) + "\n");

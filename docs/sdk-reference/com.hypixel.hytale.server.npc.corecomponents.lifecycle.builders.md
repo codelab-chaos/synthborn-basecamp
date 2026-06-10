@@ -78,6 +78,7 @@ public class com.hypixel.hytale.server.npc.corecomponents.lifecycle.builders.Bui
   protected final com.hypixel.hytale.server.npc.asset.builder.holder.DeferEvaluateAssetHolder role;
   protected final com.hypixel.hytale.server.npc.asset.builder.holder.BooleanHolder changeAppearance;
   protected final com.hypixel.hytale.server.npc.asset.builder.holder.StringHolder state;
+  protected final com.hypixel.hytale.server.npc.asset.builder.holder.BooleanHolder detachFromSpawning;
   public com.hypixel.hytale.server.npc.corecomponents.lifecycle.builders.BuilderActionRole();
   public java.lang.String getShortDescription();
   public java.lang.String getLongDescription();
@@ -87,6 +88,7 @@ public class com.hypixel.hytale.server.npc.corecomponents.lifecycle.builders.Bui
   public java.lang.String getRole(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
   public boolean getChangeAppearance(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
   public java.lang.String getState(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
+  public boolean getDetachFromSpawning(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
   public java.lang.Object build(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
 }
 ```

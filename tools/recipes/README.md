@@ -48,6 +48,27 @@ Outputs (resolved drop-lists + expected count + chance, with a reverse `byItem` 
 - `docs/recipes/loot.txt`
 - `docs/recipes/loot.json`
 
+## Extract Bench Tiers
+
+Regenerate the bench upgrade-ladder index from `_Assets/Server/Item/Items/Bench/*.json`
+(`BlockType.Bench.TierLevels`):
+
+```powershell
+node tools/recipes/extract-bench-tiers.js
+```
+
+Outputs (per bench: each tier's craft-speed bonus + the material/time cost to reach the next tier,
+plus the bench's crafting `categories`):
+
+- `docs/recipes/bench-tiers.txt`
+- `docs/recipes/bench-tiers.json`
+
+7 benches are upgradable (`Bench_WorkBench`, `Bench_Weapon`, `Bench_Armour`, `Bench_Alchemy`,
+`Bench_Farming`, `Bench_Furnace`, `Bench_Tannery`). **Note:** which *recipes* a tier unlocks is NOT in
+the recipe assets (no per-recipe tier field) — it is the runtime SDK check
+`CraftingRecipe.isRestrictedByBenchTierLevel`. This index captures the upgrade ladder + cost; the bench
+`categories` are the static link between a bench and the recipe categories it crafts.
+
 ## Build Tech Trees
 
 Regenerate craft dependency trees for equipment outputs, currently `Tool_*`, `Weapon_*`, and `Armor_*`:
