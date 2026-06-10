@@ -13,6 +13,8 @@ Right now multiple mods, plus shared tooling and reference material, depend on t
 
 ## Quick References
 
+- [`sdk-reference/README.md`](sdk-reference/README.md) - topic router + search workflow for the SDK reference.
+- [`sdk-reference/llms.txt`](sdk-reference/llms.txt) / [`methods.txt`](sdk-reference/methods.txt) - grep indexes for classes and methods. CLI: `node tools/sdk/sdk-search.js --method placeBlock`. Regenerate: `node tools/sdk/extract-sdk-reference.js --full` (see [`tools/sdk/README.md`](../tools/sdk/README.md)).
 - [`apps/prefab-gallery/index.html`](../apps/prefab-gallery/index.html) - static visual browser for vanilla `_Assets/Server/Prefabs` plus creator prefab mods. Each prefab ships as compact hue-only voxel JSON rendered client-side with Three.js card previews plus lightweight top/front projections. Material chips use sampled colors from vanilla asset metadata, not texture files.
 - [`hytale-prefabs.md`](hytale-prefabs.md) - text/index view of the vanilla prefab catalog, useful for counts, categories, dimensions, and dominant block ids.
 - [`hytale-prefabs-index.json`](hytale-prefabs-index.json) - machine-readable prefab index consumed by search and tooling.
@@ -20,7 +22,7 @@ Right now multiple mods, plus shared tooling and reference material, depend on t
 Regenerate the visual gallery from the repository root:
 
 ```powershell
-cd tools\prefab-gallery
+cd apps\prefab-gallery
 npm install
 npm run build
 ```
@@ -28,7 +30,7 @@ npm run build
 Or data only (no npm install required):
 
 ```powershell
-node tools\prefab-gallery\scripts\build-prefab-gallery.js _Assets\Server\Prefabs
+node apps\prefab-gallery\scripts\build-prefab-gallery.js _Assets\Server\Prefabs
 ```
 
 New community docs are mirrored under `docs/external/hytale-modding-site/content/docs/en` (clone with `node tools/docs/clone-vendor-docs.js`). For SynthUnits, start with the official/custom NPC role docs, `guides/npc-workings`, `guides/plugin/Interactable-NPCs.mdx`, ECS notes, server event references, and plugin guides for spawning/persistent data.

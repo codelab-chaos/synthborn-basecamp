@@ -138,7 +138,7 @@ public class com.hypixel.hytale.server.core.io.ServerManager extends com.hypixel
   protected void shutdown();
   public void unbindAllListeners();
   public java.util.List<com.hypixel.hytale.protocol.io.ServerListener> getListeners();
-  public boolean bind(java.net.InetSocketAddress);
+  public java.util.concurrent.CompletableFuture<java.lang.Boolean> bind(java.net.InetSocketAddress);
   public boolean unbind(com.hypixel.hytale.protocol.io.ServerListener);
   public java.net.InetSocketAddress getLocalOrPublicAddress() throws java.net.SocketException;
   public java.net.InetSocketAddress getNonLoopbackAddress() throws java.net.SocketException;

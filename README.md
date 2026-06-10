@@ -63,5 +63,22 @@ The only coupling is **operational** — basecamp tooling reaches into the mod r
 What each mod relies on basecamp **for**: the build/deploy/run/validate harness plus the
 shared SDK reference and `_Assets` extracts under `docs/` — nothing at compile or runtime.
 
+## SDK reference
+
+[`docs/sdk-reference/`](docs/sdk-reference/) holds offline `javap` signatures for the pinned
+`com.hypixel.hytale:Server` jar. Search via [`llms.txt`](docs/sdk-reference/llms.txt) (classes),
+[`methods.txt`](docs/sdk-reference/methods.txt) (methods), or `node tools/sdk/sdk-search.js`.
+
+After bumping `Server:X.Y.Z` in a mod's `build.gradle.kts`:
+
+```bash
+cd ../synthborn-kyn && ./gradlew compileJava   # pull jar into Gradle cache
+cd ../synthborn-basecamp
+node tools/sdk/extract-sdk-reference.js --full
+node tools/sdk/diff-sdk-reference.js           # review changes vs last commit
+```
+
+See [`tools/sdk/README.md`](tools/sdk/README.md) and [`docs/sdk-reference/README.md`](docs/sdk-reference/README.md).
+
 `kyn` and `terrascape` also keep their own mod-local `tools/` (e.g. `extract-world-interfaces.js`,
 `generate-grid.js`); those are independent of basecamp.

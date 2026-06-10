@@ -17,6 +17,8 @@ public class com.hypixel.hytale.builtin.triggervolumes.component.TriggerVolume i
   public com.hypixel.hytale.builtin.triggervolumes.manager.VolumeEntry toVolumeEntry(java.lang.String, java.lang.String, org.joml.Vector3d, float);
   public java.lang.String getGroupLinkId();
   public void setGroupLinkId(java.lang.String);
+  public int getPrefabIndex();
+  public void setPrefabIndex(int);
   public com.hypixel.hytale.component.Component<com.hypixel.hytale.server.core.universe.world.storage.EntityStore> clone();
   public com.hypixel.hytale.builtin.triggervolumes.shape.TriggerVolumeShape getShape();
   public java.util.List<com.hypixel.hytale.builtin.triggervolumes.effect.TriggerEffect> getEffects();

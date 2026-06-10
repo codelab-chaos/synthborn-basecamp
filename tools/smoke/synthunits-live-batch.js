@@ -25,6 +25,9 @@ const {
   configureRemoteHost,
   parseRemoteFlags,
   stripRemoteFlags,
+  isRemoteEnabled,
+  sshRun,
+  remoteSaveDir,
 } = require("../library/remote-host");
 
 const rawArgv = process.argv.slice(2);
@@ -108,12 +111,43 @@ function rcon(save, ...cmd) {
 // lines[last] a stale old line instead of the newest. Pass a high explicit --limit so ALL matches return in
 // file order (newest last). The previous `-n 0` was a no-op: logs.js has no `-n` flag, so the 50 cap applied.
 function resultLines(save, name) {
-  const r = spawnSync("node", [
-    path.join("tools", "server", "logs.js"), "grep", save, `runtime-validation ${name} `, "--limit", "1000000",
-  ], { cwd: root, shell: process.platform === "win32", encoding: "utf8", timeout: 30000 });
-  return (r.stdout || "")
-    .split(/\r?\n/)
+  return allResultLines(save)
     .filter((l) => l.includes(`runtime-validation ${name} `) && l.includes("pass="));
+}
+
+// One fetch of every runtime-validation line, shared across the per-scenario polls (cached ~4s so an
+// awaitNewResults sweep over N scenarios costs one log read, not N).
+let resultCache = { save: null, atMs: 0, lines: [] };
+
+function allResultLines(save) {
+  if (resultCache.save === save && Date.now() - resultCache.atMs < 4000) {
+    return resultCache.lines;
+  }
+  let stdout = "";
+  if (isRemoteEnabled()) {
+    // logs.js only reads local files; on a dev box the save lives on the remote Mac. The direct-java
+    // start appends to <save>/logs/dev-server.out across restarts, so it's strictly chronological —
+    // exactly what the baseline-delta detection needs (newest last).
+    try {
+      stdout = sshRun(
+        `grep -a -- "runtime-validation " ${shellPath(`${remoteSaveDir(save)}/logs/dev-server.out`)} 2>/dev/null || true`,
+        { silent: true },
+      ) || "";
+    } catch {
+      stdout = "";
+    }
+  } else {
+    const r = spawnSync("node", [
+      path.join("tools", "server", "logs.js"), "grep", save, "runtime-validation ", "--limit", "1000000",
+    ], { cwd: root, shell: process.platform === "win32", encoding: "utf8", timeout: 30000 });
+    stdout = r.stdout || "";
+  }
+  resultCache = { save, atMs: Date.now(), lines: stdout.split(/\r?\n/) };
+  return resultCache.lines;
+}
+
+function shellPath(p) {
+  return `'${String(p).replace(/'/g, `'\\''`)}'`;
 }
 
 function parseResult(line) {
@@ -144,6 +178,11 @@ function awaitNewResults(save, scenarios, phase, baseline, deadlineMs) {
   }
   return found;
 }
+
+// NOTE: do NOT auto-retry phases on missed detection. Under concurrency, result lines can log
+// later than the await deadline; re-firing a start that actually succeeded double-spawns the
+// synth and replaces the pending fixture, corrupting the whole wave (observed 2026-06-09).
+// On detection misses, read the authoritative lines from the server log by hand instead.
 
 // Position arena index j within a wave per the chosen layout. --grid CxRxL packs a 3D cube centered
 // horizontally on (x, z0) so the footprint lands in one loader region (shared, refcounted loader); --stack is
