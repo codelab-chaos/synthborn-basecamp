@@ -39,6 +39,13 @@ const SAVE_BINDS = {
   "synth-worldview-mvp": "0.0.0.0:5521",
 };
 
+// Terrascape map-viewer HTTP port per save (-Dterrascape.http.port; mod default 5960).
+// synthtest-02 runs the viewer on 6776 so the units world is observable alongside the
+// worldview save's default.
+const SAVE_TERRASCAPE_PORTS = {
+  "synthtest-02": 6776,
+};
+
 function parseBool(value, fallback = false) {
   if (value === undefined || value === null || value === "") return fallback;
   const normalized = String(value).trim().toLowerCase();
@@ -377,7 +384,7 @@ function remoteStartServerDirect(saveName, options = {}) {
     bindPort ? `if [ "${skipPortCheck}" != "true" ] && lsof -i UDP:${bindPort} >/dev/null 2>&1; then echo "UDP port ${bindPort} already in use"; exit 1; fi` : null,
     'mkdir -p "$SAVE/logs"',
     'cd "$SAVE"',
-    `nohup "$JAVA" -Xms${minRam}G -Xmx${maxRam}G -Dsynthrcon.host=0.0.0.0 -Dsynthrcon.port=${rconPort} -Dsynthrcon.allowRemote=true -Dterrascape.http.host=0.0.0.0 -jar "$JAR" --assets "$ASSETS" --auth-mode authenticated --bind "$BIND" >>"$SAVE/logs/dev-server.out" 2>&1 & echo $! > "$SAVE/.dev-server.pid"`,
+    `nohup "$JAVA" -Xms${minRam}G -Xmx${maxRam}G -Dsynthrcon.host=0.0.0.0 -Dsynthrcon.port=${rconPort} -Dsynthrcon.allowRemote=true -Dterrascape.http.host=0.0.0.0${SAVE_TERRASCAPE_PORTS[saveName] ? ` -Dterrascape.http.port=${SAVE_TERRASCAPE_PORTS[saveName]}` : ""} -jar "$JAR" --assets "$ASSETS" --auth-mode authenticated --bind "$BIND" >>"$SAVE/logs/dev-server.out" 2>&1 & echo $! > "$SAVE/.dev-server.pid"`,
     'echo "started detached pid=$(cat "$SAVE/.dev-server.pid")"',
   ].filter(Boolean).join(" && ");
 
