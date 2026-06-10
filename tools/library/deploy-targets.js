@@ -38,6 +38,10 @@ const TARGETS = {
     modules: [
       { name: "SynthRCON" },
       { name: "SynthUnits" },
+      // Map-viewer integration is opt-in, not cadence: pass --with-terrascape to include it
+      // (viewer on :6776 via SAVE_TERRASCAPE_PORTS). Without the flag, units deploys leave any
+      // hand-deployed terrascape jar in the save's mods/ untouched.
+      { name: "SynthTerrascape", optionalFlag: "withTerrascape" },
     ],
     smokeScript: path.join("tools", "smoke", "synthunits-smoke.js"),
     verify: verifyUnits,
@@ -61,6 +65,7 @@ Targets:
 
 Options:
   --restart           Stop, deploy, start, then verify when supported.
+  --with-terrascape   Also deploy optional SynthTerrascape (units target; viewer on :6776).
   --verify            Run target verification after deploy.
   --smoke             Run target smoke test after deploy when supported.
   --test              Run target test command when supported.
@@ -89,6 +94,7 @@ function parseArgs(argv) {
     minRamGB: null,
     skipRunningCheck: false,
     clearCache: false,
+    withTerrascape: false,
   };
 
   for (let i = 0; i < argv.length; i += 1) {
@@ -104,6 +110,9 @@ function parseArgs(argv) {
       case "--restart":
         opts.restart = true;
         opts.verify = true;
+        break;
+      case "--with-terrascape":
+        opts.withTerrascape = true;
         break;
       case "--verify":
         opts.verify = true;
@@ -199,16 +208,22 @@ function deployModuleRemote(moduleSpec, saveName) {
   });
 }
 
-function buildTarget(target) {
-  for (const moduleSpec of target.modules) {
+// Modules with an optionalFlag ride only when that flag was passed (e.g. --with-terrascape).
+function modulesFor(target, opts) {
+  return target.modules.filter((m) => !m.optionalFlag || opts[m.optionalFlag]);
+}
+
+function buildTarget(target, opts) {
+  for (const moduleSpec of modulesFor(target, opts)) {
     gradle(moduleSpec.name, "build");
   }
 }
 
-function deployTarget(target, targetName) {
+function deployTarget(target, targetName, opts) {
   printModeBanner("deploy");
-  console.log(`target=${targetName} save=${target.save}`);
-  for (const moduleSpec of target.modules) {
+  console.log(`target=${targetName} save=${target.save}`
+      + ` modules=${modulesFor(target, opts).map((m) => m.name).join(",")}`);
+  for (const moduleSpec of modulesFor(target, opts)) {
     if (isRemoteEnabled()) {
       deployModuleRemote(moduleSpec, target.save);
     } else {
@@ -227,7 +242,7 @@ function restartTarget(target, targetName, opts) {
   if (!isRemoteEnabled()) {
     runNodeTool("stop local server", path.join("tools", "server", "stop-server.js"), ["--save", target.save, "--local"]);
     pauseMs(4000);
-    deployTarget(target, targetName);
+    deployTarget(target, targetName, opts);
     const startArgs = ["--background", "--save", localSaveDir(target.save), "--local"];
     if (opts.maxRamGB) startArgs.push("--max-ram", String(opts.maxRamGB));
     if (opts.minRamGB) startArgs.push("--min-ram", String(opts.minRamGB));
@@ -239,7 +254,7 @@ function restartTarget(target, targetName, opts) {
   console.log(`\n== stop remote ${target.save}`);
   remoteStopServer(target.save, { tolerateDown: true, force: true });
   pauseMs(4000);
-  deployTarget(target, targetName);
+  deployTarget(target, targetName, opts);
   console.log(`\n== start remote ${target.save}`);
   remoteStartServer(target.save, {
     maxRamGB: opts.maxRamGB,
@@ -373,14 +388,20 @@ function testTarget(target, opts) {
     }
     return;
   }
-  buildTarget(target);
+  buildTarget(target, opts);
 }
 
 function printTargets() {
   for (const [name, target] of Object.entries(TARGETS)) {
-    const modules = target.modules.map((m) => m.name).join(", ");
+    const modules = target.modules
+        .map((m) => m.optionalFlag ? `${m.name} (optional: --${kebab(m.optionalFlag)})` : m.name)
+        .join(", ");
     console.log(`${name.padEnd(10)} save=${target.save.padEnd(20)} modules=${modules}`);
   }
+}
+
+function kebab(camel) {
+  return camel.replace(/[A-Z]/g, (c) => "-" + c.toLowerCase());
 }
 
 function runDeployCli(argv, options = {}) {
@@ -408,11 +429,11 @@ function runDeployCli(argv, options = {}) {
   const target = targetByName(opts.targetName);
 
   if (opts.build && !opts.restart) {
-    buildTarget(target);
+    buildTarget(target, opts);
   } else if (opts.restart) {
     restartTarget(target, opts.targetName, opts);
   } else {
-    deployTarget(target, opts.targetName);
+    deployTarget(target, opts.targetName, opts);
   }
 
   if (opts.verify && !opts.restart) {
