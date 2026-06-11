@@ -15,7 +15,7 @@ public class com.hypixel.hytale.server.core.io.transport.QUICTransport implement
   public static final io.netty.util.AttributeKey<java.lang.String> SNI_HOSTNAME_ATTR;
   public com.hypixel.hytale.server.core.io.transport.QUICTransport() throws java.lang.InterruptedException;
   public com.hypixel.hytale.server.core.io.transport.TransportType getType();
-  public java.util.concurrent.Future<com.hypixel.hytale.protocol.io.ServerListener> bind(java.net.InetSocketAddress) throws java.lang.InterruptedException;
+  public java.util.concurrent.CompletableFuture<com.hypixel.hytale.protocol.io.ServerListener> bind(java.net.InetSocketAddress);
   public void shutdown();
 }
 ```
@@ -26,7 +26,7 @@ public class com.hypixel.hytale.server.core.io.transport.QUICTransport implement
 public class com.hypixel.hytale.server.core.io.transport.QuicheTransport implements com.hypixel.hytale.server.core.io.transport.Transport {
   public com.hypixel.hytale.server.core.io.transport.QuicheTransport();
   public com.hypixel.hytale.server.core.io.transport.TransportType getType();
-  public java.util.concurrent.Future<com.hypixel.hytale.protocol.io.ServerListener> bind(java.net.InetSocketAddress) throws java.lang.InterruptedException;
+  public java.util.concurrent.CompletableFuture<com.hypixel.hytale.protocol.io.ServerListener> bind(java.net.InetSocketAddress);
   public void shutdown();
 }
 ```
@@ -36,7 +36,7 @@ public class com.hypixel.hytale.server.core.io.transport.QuicheTransport impleme
 ```java
 public interface com.hypixel.hytale.server.core.io.transport.Transport {
   public abstract com.hypixel.hytale.server.core.io.transport.TransportType getType();
-  public abstract java.util.concurrent.Future<com.hypixel.hytale.protocol.io.ServerListener> bind(java.net.InetSocketAddress) throws java.lang.InterruptedException;
+  public abstract java.util.concurrent.CompletableFuture<com.hypixel.hytale.protocol.io.ServerListener> bind(java.net.InetSocketAddress);
   public abstract void shutdown();
 }
 ```

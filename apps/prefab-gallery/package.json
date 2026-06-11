@@ -1,0 +1,38 @@
+{
+  "name": "prefab-gallery",
+  "version": "1.0.0",
+  "private": true,
+  "description": "React prefab gallery with voxel previews",
+  "scripts": {
+    "build-source": "node scripts/build-prefab-gallery.js ../../_Assets/Server/Prefabs",
+    "build-web": "webpack --mode production",
+    "build-previews": "node scripts/seed-previews.js",
+    "build": "npm run build-source && npm run build-web && npm run build-previews",
+    "build:smoke": "npm run build-source -- --limit 80 && npm run build-web && npm run build-previews -- --limit 80",
+    "build:data": "npm run build-source",
+    "build:web": "npm run build-web",
+    "dev": "webpack serve --mode development",
+    "serve": "node scripts/serve-static.js .",
+    "smoke": "npm run build:smoke && npm run serve"
+  },
+  "dependencies": {
+    "antd": "^6.4.3",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@types/three": "^0.160.0",
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.6",
+    "puppeteer": "^25.1.0",
+    "style-loader": "^4.0.0",
+    "three": "^0.160.0",
+    "ts-loader": "^9.5.4",
+    "typescript": "^5.9.3",
+    "webpack": "^5.104.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.3"
+  }
+}

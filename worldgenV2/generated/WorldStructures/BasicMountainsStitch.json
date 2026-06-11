@@ -1,0 +1,46 @@
+{
+	"Type": "NoiseRange",
+	"Biomes": [
+		{
+			"Biome": "Basic",
+			"Min": -1,
+			"Max": 0
+		},
+		{
+			"Biome": "Mountains",
+			"Min": 0,
+			"Max": 1
+		}
+	],
+	"DefaultBiome": "Basic",
+	"DefaultTransitionDistance": 32,
+	"MaxBiomeEdgeDistance": 32,
+	"Density": {
+		"Type": "Imported",
+		"Name": "Biome-Map"
+	},
+	"Framework": [
+		{
+			"Type": "DecimalConstants",
+			"Entries": [
+				{
+					"Name": "Base",
+					"Value": 100
+				},
+				{
+					"Name": "Water",
+					"Value": 100
+				},
+				{
+					"Name": "Bedrock",
+					"Value": 0
+				}
+			]
+		}
+	],
+	"Tags": {
+		"Template": [
+			"synthborn-stitch"
+		]
+	}
+}

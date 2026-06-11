@@ -54,6 +54,7 @@ public class com.hypixel.hytale.server.npc.corecomponents.lifecycle.ActionRole e
   protected final int roleIndex;
   protected final java.lang.String kind;
   protected final boolean changeAppearance;
+  protected final boolean detachFromSpawning;
   protected final java.lang.String state;
   protected final java.lang.String subState;
   public com.hypixel.hytale.server.npc.corecomponents.lifecycle.ActionRole(com.hypixel.hytale.server.npc.corecomponents.lifecycle.builders.BuilderActionRole, com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);

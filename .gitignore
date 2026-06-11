@@ -13,7 +13,9 @@ remote-host.env
 docs/external/
 
 node_modules/
+.vscode/
 
 
 # macOS
 .DS_Store
+
