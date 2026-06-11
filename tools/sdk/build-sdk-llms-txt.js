@@ -24,6 +24,16 @@ const path = require("node:path");
 
 const DEFAULT_REF_DIR = path.resolve(__dirname, "..", "..", "docs", "sdk-reference");
 
+function readStampedVersion(outDir) {
+  const stampPath = path.join(outDir, ".sdk-source.json");
+  if (!fs.existsSync(stampPath)) return null;
+  try {
+    return JSON.parse(fs.readFileSync(stampPath, "utf8")).version || null;
+  } catch {
+    return null;
+  }
+}
+
 function discoverPackages(refDir) {
   // Discover packages by scanning .md files. Skip llms.txt (it's .txt anyway)
   // and any incidental files that don't start with `# com.hypixel.hytale`.
@@ -101,20 +111,22 @@ function parseClasses(filePath, pkg) {
  * @returns {{ outFile: string, packages: number, classes: number }}
  */
 function buildLlmsTxt({ outDir = DEFAULT_REF_DIR, quiet = false, packages, version } = {}) {
+  const resolvedVersion = version || readStampedVersion(outDir);
   const pkgs = packages && packages.length ? packages : discoverPackages(outDir);
   if (!pkgs.length) {
     throw new Error(`No packages found under ${outDir} — has the extractor run?`);
   }
 
   const lines = [];
-  lines.push(`# Hytale Server SDK Reference${version ? ` v${version}` : ""}`);
+  lines.push(`# Hytale Server SDK Reference${resolvedVersion ? ` v${resolvedVersion}` : ""}`);
   lines.push("");
   lines.push("> Flat index of public SDK types by package. Each entry shows the class declaration (kind, extends, implements) so you can pick which file to read for full method signatures.");
   lines.push("");
   lines.push("Source: `javap -protected` over the Hytale server jar. Excludes package-private classes and inner classes. FQCNs are shortened to leaf names for readability.");
   lines.push("");
-  lines.push("Regenerate per-package files + this index: `node tools/sdk/extract-sdk-reference.js` (slow — re-reads the jar)");
-  lines.push("Regenerate this index only:               `node tools/sdk/build-sdk-llms-txt.js` (fast — reads existing .md files)");
+  lines.push("Regenerate per-package files + indexes: `node tools/sdk/extract-sdk-reference.js --full` (slow — see tools/sdk/README.md)");
+  lines.push("Regenerate indexes only:                  `node tools/sdk/build-sdk-llms-txt.js` + `node tools/sdk/build-sdk-method-index.js`");
+  lines.push("Search:                                   `node tools/sdk/sdk-search.js --method <name>`");
   lines.push("");
   lines.push("## How to use this file");
   lines.push("");

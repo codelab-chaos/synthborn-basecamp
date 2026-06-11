@@ -33,6 +33,19 @@ const SAVE_RCON_PORTS = {
   "synth-worldview-mvp": 25578,
 };
 
+const SAVE_BINDS = {
+  "overseer-test": "0.0.0.0:5550",
+  "synthtest-02": "0.0.0.0:5520",
+  "synth-worldview-mvp": "0.0.0.0:5521",
+};
+
+// Terrascape map-viewer HTTP port per save (-Dterrascape.http.port; mod default 5960).
+// synthtest-02 runs the viewer on 6776 so the units world is observable alongside the
+// worldview save's default.
+const SAVE_TERRASCAPE_PORTS = {
+  "synthtest-02": 6776,
+};
+
 function parseBool(value, fallback = false) {
   if (value === undefined || value === null || value === "") return fallback;
   const normalized = String(value).trim().toLowerCase();
@@ -282,6 +295,24 @@ function loadLocalSaveDevConfig(saveName) {
   }
 }
 
+function loadRemoteSaveDevConfig(saveName) {
+  configureRemoteHost({ remote: true });
+  const file = `${remoteSaveDir(saveName)}/dev-server.json`;
+  try {
+    const out = sshRun(`cat ${remotePathQuote(file)}`, { silent: true }).trim();
+    if (!out) return {};
+    return JSON.parse(out);
+  } catch {
+    return {};
+  }
+}
+
+function loadSaveDevConfig(saveName) {
+  return isRemoteEnabled()
+    ? loadRemoteSaveDevConfig(saveName)
+    : loadLocalSaveDevConfig(saveName);
+}
+
 function parseBindPort(bind) {
   const value = String(bind || "").trim();
   const lastColon = value.lastIndexOf(":");
@@ -296,13 +327,13 @@ function resolveRconHost(saveName, cliHost) {
   if (isRemoteEnabled() && process.env.SYNTH_RCON_HOST) {
     return process.env.SYNTH_RCON_HOST;
   }
-  const dev = loadLocalSaveDevConfig(saveName);
+  const dev = loadSaveDevConfig(saveName);
   return dev.rconHost || process.env.SYNTH_RCON_HOST || "127.0.0.1";
 }
 
 function resolveRconPort(saveName, cliPort) {
   if (cliPort) return cliPort;
-  const dev = loadLocalSaveDevConfig(saveName);
+  const dev = loadSaveDevConfig(saveName);
   return dev.rconPort || resolveSaveRconPort(saveName) || Number(process.env.SYNTH_RCON_PORT) || 25576;
 }
 
@@ -328,8 +359,8 @@ function remoteRepoHasStartScript() {
 }
 
 function remoteStartServerDirect(saveName, options = {}) {
-  const dev = loadLocalSaveDevConfig(saveName);
-  const bind = dev.bind || "0.0.0.0:5520";
+  const dev = loadRemoteSaveDevConfig(saveName);
+  const bind = dev.bind || SAVE_BINDS[saveName] || "0.0.0.0:5520";
   const bindPort = parseBindPort(bind);
   const rconPort = resolveRconPort(saveName);
   const minRam = options.minRamGB || 2;
@@ -353,7 +384,7 @@ function remoteStartServerDirect(saveName, options = {}) {
     bindPort ? `if [ "${skipPortCheck}" != "true" ] && lsof -i UDP:${bindPort} >/dev/null 2>&1; then echo "UDP port ${bindPort} already in use"; exit 1; fi` : null,
     'mkdir -p "$SAVE/logs"',
     'cd "$SAVE"',
-    `nohup "$JAVA" -Xms${minRam}G -Xmx${maxRam}G -Dsynthrcon.host=0.0.0.0 -Dsynthrcon.port=${rconPort} -Dsynthrcon.allowRemote=true -Dterrascape.http.host=0.0.0.0 -jar "$JAR" --assets "$ASSETS" --auth-mode authenticated --bind "$BIND" >>"$SAVE/logs/dev-server.out" 2>&1 & echo $! > "$SAVE/.dev-server.pid"`,
+    `nohup "$JAVA" -Xms${minRam}G -Xmx${maxRam}G -Dsynthrcon.host=0.0.0.0 -Dsynthrcon.port=${rconPort} -Dsynthrcon.allowRemote=true -Dterrascape.http.host=0.0.0.0${SAVE_TERRASCAPE_PORTS[saveName] ? ` -Dterrascape.http.port=${SAVE_TERRASCAPE_PORTS[saveName]}` : ""} -jar "$JAR" --assets "$ASSETS" --auth-mode authenticated --bind "$BIND" >>"$SAVE/logs/dev-server.out" 2>&1 & echo $! > "$SAVE/.dev-server.pid"`,
     'echo "started detached pid=$(cat "$SAVE/.dev-server.pid")"',
   ].filter(Boolean).join(" && ");
 
@@ -378,8 +409,7 @@ function remoteStartServer(saveName, options = {}) {
   }
 
   process.stderr.write(
-    "remote-host: repo not found on Mac — starting via direct java (clone hytale-mods to "
-    + `${remoteRepoDir()} for start-server.js)\n`,
+    "remote-host: Mac-side start-server.js unavailable or node is not on PATH — starting via direct java\n",
   );
   remoteStartServerDirect(saveName, options);
 }
@@ -481,8 +511,8 @@ function remoteStopServerViaLocalRcon(saveName) {
 }
 
 function remoteStopServerViaSsh(saveName) {
-  const dev = loadLocalSaveDevConfig(saveName);
-  const bindPort = parseBindPort(dev.bind || "0.0.0.0:5520");
+  const dev = loadRemoteSaveDevConfig(saveName);
+  const bindPort = parseBindPort(dev.bind || SAVE_BINDS[saveName] || "0.0.0.0:5520");
   const save = remotePathForShell(remoteSaveDir(saveName));
   const parts = [
     `SAVE=${save}`,
@@ -570,7 +600,7 @@ function gradleTask(modDir, task) {
     runChecked(`gradle ${task}`, "cmd.exe", ["/d", "/s", "/c", ".\\gradlew.bat", task], { cwd: modDir });
     return;
   }
-  runChecked(`gradle ${task}`, "./gradlew", [task], { cwd: modDir });
+  runChecked(`gradle ${task}`, "sh", ["gradlew", task], { cwd: modDir });
 }
 
 function deployModLocal(modDir, task = "deploy") {

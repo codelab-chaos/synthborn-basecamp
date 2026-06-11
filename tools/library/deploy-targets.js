@@ -38,8 +38,13 @@ const TARGETS = {
     modules: [
       { name: "SynthRCON" },
       { name: "SynthUnits" },
+      // Map-viewer integration is opt-in, not cadence: pass --with-terrascape to include it
+      // (viewer on :6776 via SAVE_TERRASCAPE_PORTS). Without the flag, units deploys leave any
+      // hand-deployed terrascape jar in the save's mods/ untouched.
+      { name: "SynthTerrascape", optionalFlag: "withTerrascape" },
     ],
     smokeScript: path.join("tools", "smoke", "synthunits-smoke.js"),
+    verify: verifyUnits,
   },
   terrascape: {
     save: "synth-worldview-mvp",
@@ -60,6 +65,7 @@ Targets:
 
 Options:
   --restart           Stop, deploy, start, then verify when supported.
+  --with-terrascape   Also deploy optional SynthTerrascape (units target; viewer on :6776).
   --verify            Run target verification after deploy.
   --smoke             Run target smoke test after deploy when supported.
   --test              Run target test command when supported.
@@ -88,6 +94,7 @@ function parseArgs(argv) {
     minRamGB: null,
     skipRunningCheck: false,
     clearCache: false,
+    withTerrascape: false,
   };
 
   for (let i = 0; i < argv.length; i += 1) {
@@ -103,6 +110,9 @@ function parseArgs(argv) {
       case "--restart":
         opts.restart = true;
         opts.verify = true;
+        break;
+      case "--with-terrascape":
+        opts.withTerrascape = true;
         break;
       case "--verify":
         opts.verify = true;
@@ -182,7 +192,7 @@ function gradle(moduleName, task, extraArgs = []) {
     );
     return;
   }
-  runChecked(`${moduleName} ${task}`, "./gradlew", [task, ...extraArgs], { cwd });
+  runChecked(`${moduleName} ${task}`, "sh", ["gradlew", task, ...extraArgs], { cwd });
 }
 
 function deployModuleLocal(moduleSpec, saveName) {
@@ -198,16 +208,22 @@ function deployModuleRemote(moduleSpec, saveName) {
   });
 }
 
-function buildTarget(target) {
-  for (const moduleSpec of target.modules) {
+// Modules with an optionalFlag ride only when that flag was passed (e.g. --with-terrascape).
+function modulesFor(target, opts) {
+  return target.modules.filter((m) => !m.optionalFlag || opts[m.optionalFlag]);
+}
+
+function buildTarget(target, opts) {
+  for (const moduleSpec of modulesFor(target, opts)) {
     gradle(moduleSpec.name, "build");
   }
 }
 
-function deployTarget(target, targetName) {
+function deployTarget(target, targetName, opts) {
   printModeBanner("deploy");
-  console.log(`target=${targetName} save=${target.save}`);
-  for (const moduleSpec of target.modules) {
+  console.log(`target=${targetName} save=${target.save}`
+      + ` modules=${modulesFor(target, opts).map((m) => m.name).join(",")}`);
+  for (const moduleSpec of modulesFor(target, opts)) {
     if (isRemoteEnabled()) {
       deployModuleRemote(moduleSpec, target.save);
     } else {
@@ -226,7 +242,7 @@ function restartTarget(target, targetName, opts) {
   if (!isRemoteEnabled()) {
     runNodeTool("stop local server", path.join("tools", "server", "stop-server.js"), ["--save", target.save, "--local"]);
     pauseMs(4000);
-    deployTarget(target, targetName);
+    deployTarget(target, targetName, opts);
     const startArgs = ["--background", "--save", localSaveDir(target.save), "--local"];
     if (opts.maxRamGB) startArgs.push("--max-ram", String(opts.maxRamGB));
     if (opts.minRamGB) startArgs.push("--min-ram", String(opts.minRamGB));
@@ -238,7 +254,7 @@ function restartTarget(target, targetName, opts) {
   console.log(`\n== stop remote ${target.save}`);
   remoteStopServer(target.save, { tolerateDown: true, force: true });
   pauseMs(4000);
-  deployTarget(target, targetName);
+  deployTarget(target, targetName, opts);
   console.log(`\n== start remote ${target.save}`);
   remoteStartServer(target.save, {
     maxRamGB: opts.maxRamGB,
@@ -262,6 +278,76 @@ function verifyOverseer(target) {
   }
 
   runNodeTool("verify local SynthOverseer setup", path.join("tools", "overseer", "redeploy.js"), ["--verify", "--local"]);
+}
+
+const CHUNK_SIZE = 32;
+
+function runRconCaptured(saveName, args) {
+  const res = spawnSync(process.execPath, [
+    path.join(REPO_ROOT, "tools", "rcon", "synth-rcon.js"),
+    "--save", saveName,
+    ...args,
+  ], { cwd: REPO_ROOT, encoding: "utf8", env: process.env });
+  if (res.status !== 0) {
+    throw new Error(`synth-rcon ${args.join(" ")} failed: ${(res.stderr || res.stdout || "").trim()}`);
+  }
+  return `${res.stdout || ""}${res.stderr || ""}`;
+}
+
+/**
+ * Units verify: RCON health, then make sure the synth test home sits inside a persistent chunk
+ * loader so `/validate <scenario>` works immediately after a fresh restart instead of failing
+ * `target_chunk_not_loaded` until someone warms the area by hand. Idempotent — an existing
+ * covering loader is left alone (loaders persist across restarts).
+ */
+function verifyUnits(target) {
+  console.log(`\n== RCON health (${target.save})`);
+  console.log(runRconCaptured(target.save, ["--health"]).trim());
+
+  console.log(`\n== ensure test-home chunk loader (${target.save})`);
+  const homeOut = runRconCaptured(target.save, ["synth", "testhome", "show"]);
+  const home = homeOut.match(/Synth test home:\s*(-?\d+(?:\.\d+)?),\s*(-?\d+(?:\.\d+)?),\s*(-?\d+(?:\.\d+)?)/);
+  if (!home) {
+    console.log("no test home configured — skipping chunk warmup (set one with /synth testhome set)");
+    return;
+  }
+  const chunkX = Math.floor(Number(home[1]) / CHUNK_SIZE);
+  const chunkZ = Math.floor(Number(home[3]) / CHUNK_SIZE);
+
+  const listOut = runRconCaptured(target.save, ["synth", "chunk", "list"]);
+  const loaderRe = /chunk=(-?\d+),(-?\d+) radius=(\d+)/g;
+  let covered = false;
+  let match;
+  while ((match = loaderRe.exec(listOut)) !== null) {
+    const [, lx, lz, radius] = match.map(Number);
+    if (Math.abs(chunkX - lx) <= radius && Math.abs(chunkZ - lz) <= radius) {
+      covered = true;
+      break;
+    }
+  }
+  if (!covered) {
+    console.log(runRconCaptured(target.save, ["synth", "chunk", "load", String(chunkX), String(chunkZ), "2"]).trim());
+  } else {
+    console.log(`test home chunk ${chunkX},${chunkZ} already covered by a loader`);
+  }
+
+  // Loader chunks load asynchronously after a restart; a /validate fired immediately can still
+  // fail target_chunk_not_loaded. Wait until every loader reports its chunks fully loaded.
+  const deadline = Date.now() + 60_000;
+  for (;;) {
+    const status = runRconCaptured(target.save, ["synth", "chunk", "list"]);
+    const pending = [...status.matchAll(/chunks=(\d+) kept=\d+ loaded=(\d+)/g)]
+      .filter(([, total, loaded]) => Number(loaded) < Number(total));
+    if (pending.length === 0) {
+      console.log("all chunk loaders fully loaded — ready to validate");
+      return;
+    }
+    if (Date.now() > deadline) {
+      console.log("warning: chunk loaders still loading after 60s — validates may need a retry");
+      return;
+    }
+    pauseMs(3000);
+  }
 }
 
 function verifyTarget(target) {
@@ -302,14 +388,20 @@ function testTarget(target, opts) {
     }
     return;
   }
-  buildTarget(target);
+  buildTarget(target, opts);
 }
 
 function printTargets() {
   for (const [name, target] of Object.entries(TARGETS)) {
-    const modules = target.modules.map((m) => m.name).join(", ");
+    const modules = target.modules
+        .map((m) => m.optionalFlag ? `${m.name} (optional: --${kebab(m.optionalFlag)})` : m.name)
+        .join(", ");
     console.log(`${name.padEnd(10)} save=${target.save.padEnd(20)} modules=${modules}`);
   }
+}
+
+function kebab(camel) {
+  return camel.replace(/[A-Z]/g, (c) => "-" + c.toLowerCase());
 }
 
 function runDeployCli(argv, options = {}) {
@@ -337,11 +429,11 @@ function runDeployCli(argv, options = {}) {
   const target = targetByName(opts.targetName);
 
   if (opts.build && !opts.restart) {
-    buildTarget(target);
+    buildTarget(target, opts);
   } else if (opts.restart) {
     restartTarget(target, opts.targetName, opts);
   } else {
-    deployTarget(target, opts.targetName);
+    deployTarget(target, opts.targetName, opts);
   }
 
   if (opts.verify && !opts.restart) {

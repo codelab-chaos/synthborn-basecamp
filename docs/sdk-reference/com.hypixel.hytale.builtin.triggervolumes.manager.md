@@ -93,8 +93,7 @@ public class com.hypixel.hytale.builtin.triggervolumes.manager.TriggerVolumeMana
   public void unregister(java.lang.String);
   public com.hypixel.hytale.builtin.triggervolumes.manager.VolumeEntry renameVolume(java.lang.String, java.lang.String);
   public void removeWorldGenVolumesInChunk(long);
-  public void markWorldGenRegenChunk(long);
-  public boolean consumeWorldGenRegenChunk(long);
+  public int removeAllVolumes();
   public com.hypixel.hytale.builtin.triggervolumes.manager.VolumeEntry getVolume(java.lang.String);
   public java.util.Collection<com.hypixel.hytale.builtin.triggervolumes.manager.VolumeEntry> getVolumes();
   public java.util.Map<java.lang.String, com.hypixel.hytale.builtin.triggervolumes.manager.VolumeEntry> getVolumesMap();
@@ -114,6 +113,7 @@ public class com.hypixel.hytale.builtin.triggervolumes.manager.TriggerVolumeMana
   public java.lang.String ensureWorldGenGroup(int, java.lang.String, com.hypixel.hytale.builtin.triggervolumes.manager.VolumeEntry, java.lang.String);
   public java.lang.String upsertWorldGenGroup(int, java.lang.String, com.hypixel.hytale.builtin.triggervolumes.component.TriggerVolumeGroup, java.lang.String, org.joml.Vector3d);
   public java.lang.String generateUniqueVolumeId();
+  public java.lang.String generateWorldGenVolumeId(int, org.joml.Vector3d, int);
   public java.util.Map<java.lang.String, com.hypixel.hytale.builtin.triggervolumes.manager.GroupEntry> getGroupsMap();
   public java.util.List<com.hypixel.hytale.builtin.triggervolumes.manager.VolumeEntry> getGroupMembers(java.lang.String);
   public java.util.List<com.hypixel.hytale.builtin.triggervolumes.manager.VolumeEntry> getVolumesByTag(int);

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="360" viewBox="0 0 720 360">
+  <rect width="100%" height="100%" fill="#111827"/>
+  <line x1="48" y1="312" x2="672" y2="312" stroke="#6b7280"/>
+  <line x1="48" y1="48" x2="48" y2="312" stroke="#6b7280"/>
+  <text x="48" y="24" fill="#e5e7eb" font-family="monospace" font-size="14">curve 0: BasicForest.json</text>
+  <text x="48" y="346" fill="#9ca3af" font-family="monospace" font-size="12">x -10..10</text>
+  <text x="570" y="346" fill="#9ca3af" font-family="monospace" font-size="12">y -1..2</text>
+  <polyline points="48.00,48.00 266.40,140.40 328.80,153.60 360.00,162.40 672.00,312.00" fill="none" stroke="#38bdf8" stroke-width="3"/>
+  <circle cx="48.00" cy="48.00" r="4"><title>-10, 2</title></circle>
+  <circle cx="266.40" cy="140.40" r="4"><title>-3, 0.95</title></circle>
+  <circle cx="328.80" cy="153.60" r="4"><title>-1, 0.8</title></circle>
+  <circle cx="360.00" cy="162.40" r="4"><title>0, 0.7</title></circle>
+  <circle cx="672.00" cy="312.00" r="4"><title>10, -1</title></circle>
+</svg>

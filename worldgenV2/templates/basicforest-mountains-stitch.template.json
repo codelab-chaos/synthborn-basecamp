@@ -1,0 +1,9 @@
+{
+	"type": "stitch_worldstructure",
+	"biomes": [
+		"Basic",
+		"Basic"
+	],
+	"defaultBiome": "Basic",
+	"out": "../generated/WorldStructures/BasicForestMountainsStitch.json"
+}
