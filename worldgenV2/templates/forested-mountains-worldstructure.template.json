@@ -1,0 +1,6 @@
+{
+	"type": "worldstructure",
+	"defaultBiome": "MountainForestAtmosphere",
+	"out": "../generated/WorldStructures/MountainForestAtmosphere.json",
+	"spawnY": 200
+}

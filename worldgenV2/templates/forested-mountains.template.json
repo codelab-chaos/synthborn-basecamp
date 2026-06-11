@@ -1,0 +1,10 @@
+{
+	"type": "hybrid_biome",
+	"name": "MountainForestAtmosphere",
+	"base": "../vanilla-examples/Biomes/Experimental/Mountains.json",
+	"graft": "../vanilla-examples/Biomes/Experimental/BasicForest.json",
+	"out": "../generated/Biomes/Experimental/MountainForestAtmosphere.json",
+	"take": [
+		"environment"
+	]
+}

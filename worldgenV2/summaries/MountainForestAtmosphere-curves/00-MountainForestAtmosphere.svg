@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="360" viewBox="0 0 720 360">
+  <rect width="100%" height="100%" fill="#111827"/>
+  <line x1="48" y1="312" x2="672" y2="312" stroke="#6b7280"/>
+  <line x1="48" y1="48" x2="48" y2="312" stroke="#6b7280"/>
+  <text x="48" y="24" fill="#e5e7eb" font-family="monospace" font-size="14">curve 0: MountainForestAtmosphere.json</text>
+  <text x="48" y="346" fill="#9ca3af" font-family="monospace" font-size="12">x -1..1</text>
+  <text x="570" y="346" fill="#9ca3af" font-family="monospace" font-size="12">y -1..1</text>
+  <polyline points="672.00,114.00 609.60,312.00 547.20,114.00 484.80,312.00 422.40,114.00 360.00,312.00 297.60,114.00 235.20,312.00 172.80,114.00 110.40,312.00 48.00,114.00" fill="none" stroke="#38bdf8" stroke-width="3"/>
+  <circle cx="672.00" cy="114.00" r="4"><title>1, 0.5</title></circle>
+  <circle cx="609.60" cy="312.00" r="4"><title>0.8, -1</title></circle>
+  <circle cx="547.20" cy="114.00" r="4"><title>0.6, 0.5</title></circle>
+  <circle cx="484.80" cy="312.00" r="4"><title>0.4, -1</title></circle>
+  <circle cx="422.40" cy="114.00" r="4"><title>0.2, 0.5</title></circle>
+  <circle cx="360.00" cy="312.00" r="4"><title>0, -1</title></circle>
+  <circle cx="297.60" cy="114.00" r="4"><title>-0.2, 0.5</title></circle>
+  <circle cx="235.20" cy="312.00" r="4"><title>-0.4, -1</title></circle>
+  <circle cx="172.80" cy="114.00" r="4"><title>-0.6, 0.5</title></circle>
+  <circle cx="110.40" cy="312.00" r="4"><title>-0.8, -1</title></circle>
+  <circle cx="48.00" cy="114.00" r="4"><title>-1, 0.5</title></circle>
+</svg>
