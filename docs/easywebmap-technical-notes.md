@@ -1,6 +1,6 @@
 # EasyWebMap Technical Notes
 
-Source inspected: `_references/sample-mods/EasyWebMap`
+Source inspected: `_mod-example-sourcecode/EasyWebMap` (legacy seed snapshot: `../_references/example-sourcecode-mods/EasyWebMap`)
 
 EasyWebMap is a Hytale server mod that exposes an in-browser live map. The current
 implementation is a 2D Leaflet map backed by server-generated PNG tiles, plus a

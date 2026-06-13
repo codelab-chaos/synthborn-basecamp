@@ -2,7 +2,7 @@
 
 *Sending text to players, finding worlds/players, and the threading rules that keep you from corrupting the world. Get threading wrong and you get nondeterministic crashes.*
 
-Sources: ✅ `NPCTrading/.../TraderInteraction.java`, ✅ `HyCitizens/.../CitizensManager.java` & `SkinUtilities.java`, 📘 in-repo `LLM_NPC_ROLEPLAY.md` §2
+Sources: ✅ `_mod-example-sourcecode/NPCTrading/.../TraderInteraction.java`, ✅ `_mod-example-sourcecode/HyCitizens/.../CitizensManager.java` & `_mod-example-sourcecode/HyCitizens/.../SkinUtilities.java`, 📘 `research-bank/research-llm-npc-roleplay.md` §2
 
 ---
 

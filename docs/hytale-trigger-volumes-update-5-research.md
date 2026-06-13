@@ -282,6 +282,6 @@ effects:
 - Hytale official Update 5 patch notes, May 26, 2026: `https://hytale.com/news/2026/5/update-5-patch-notes`
 - Hytale official pre-release Update 5 patch notes, April 2026: `https://hytale.com/news/2026/4/hytale-pre-release-patch-notes-update-5`
 - Hytale official pre-release Update 6 patch notes, May 2026: `https://hytale.com/news/2026/5/pre-release-patch-notes-update-6`
-- Local SDK reference: `docs/sdk-reference/com.hypixel.hytale.builtin.triggervolumes.*.md`
-- Local SDK reference: `docs/sdk-reference/com.hypixel.hytale.builtin.blockphysics.md`
+- Local SDK reference: `docs/refs/sdk/com.hypixel.hytale.builtin.triggervolumes.*.md`
+- Local SDK reference: `docs/refs/sdk/com.hypixel.hytale.builtin.blockphysics.md`
 - Local archived patch note copy: `docs/HYTALE PATCH NOTES - UPDATE 5 _ Hytale.mhtml`

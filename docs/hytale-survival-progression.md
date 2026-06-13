@@ -5,9 +5,9 @@ This note captures the progression assumptions SynthUnits should use when choosi
 Source data:
 
 - `_Assets/Server/Item/**`
-- `docs/recipes/recipes.txt`
-- `docs/recipes/recipes.json`
-- runtime catalog dumps under `mods/SynthUnits/catalog/`
+- `docs/refs/recipes/recipes.txt`
+- `docs/refs/recipes/recipes.json`
+- runtime catalog dumps under `../synthborn-kyn/catalog/`
 
 ## Key Rule
 

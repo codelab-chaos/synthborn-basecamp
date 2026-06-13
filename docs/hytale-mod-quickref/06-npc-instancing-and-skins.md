@@ -2,7 +2,7 @@
 
 *How to actually spawn an NPC body in the world, with a random skin — distilled from real, compiling HyCitizens code. This is the most concrete doc in the folder.*
 
-Sources: ✅ `HyCitizens/.../CitizensManager.java` (`spawnCitizenNPCInternal` @2308, `spawnPlayerModelNPC` @2430), ✅ `SkinUtilities.java`, ✅ `SkinCustomizerUI.java:496`
+Sources: ✅ `_mod-example-sourcecode/HyCitizens/.../CitizensManager.java` (`spawnCitizenNPCInternal` @2308, `spawnPlayerModelNPC` @2430), ✅ `_mod-example-sourcecode/HyCitizens/.../SkinUtilities.java`, ✅ `_mod-example-sourcecode/HyCitizens/.../SkinCustomizerUI.java:496`
 
 **Everything here is ✅ verified** — these are the exact engine calls HyCitizens makes. They're all `com.hypixel.hytale.*` (engine), **not** `com.electro.*` (HyCitizens), so you can use them with **zero mod dependency**.
 
@@ -29,7 +29,7 @@ import com.hypixel.hytale.protocol.PlayerSkin;
 PlayerSkin skin = CosmeticsModule.get().generateRandomSkin(RandomUtil.getSecureRandom());
 ```
 
-(✅ exact call used by HyCitizens' "randomize skin" button, `SkinCustomizerUI.java:496` and `CitizensUI.java:3634/3999`.)
+(✅ exact call used by HyCitizens' "randomize skin" button, `_mod-example-sourcecode/HyCitizens/.../SkinCustomizerUI.java:496` and `CitizensUI.java:3634/3999`.)
 
 ### 2. Turn the skin into a renderable model
 
@@ -189,4 +189,4 @@ For random synths you don't need this — `generateRandomSkin` is the whole feat
 
 ## This is what `bare-bones-synth.md` is built on
 
-[`../bare-bones-synth.md`](../bare-bones-synth.md) is exactly this recipe, minimized to a `/synth spawn` command with one bundled `Synth_Base` role. The one open risk it flags — whether a *standalone* (non-HyCitizens) role resolves via `getIndex` — is the only step here that depends on getting Role registration right. See [05-npc-roles-and-ai.md](./05-npc-roles-and-ai.md).
+[`../research-bank/bare-bones-synth.md`](../research-bank/bare-bones-synth.md) is exactly this recipe, minimized to a `/synth spawn` command with one bundled `Synth_Base` role. The one open risk it flags — whether a *standalone* (non-HyCitizens) role resolves via `getIndex` — is the only step here that depends on getting Role registration right. See [05-npc-roles-and-ai.md](./05-npc-roles-and-ai.md).

@@ -8,14 +8,21 @@ _Assets/
 # the canonical copy; keep it local. Use tools/remote-host.env.example as the template.
 remote-host.env
 
-# docs/external/ — third-party reference repos cloned in for local use, NOT vendored
-# into basecamp. Re-create with: node tools/docs/clone-vendor-docs.js
+# docs/external/ — third-party reference docs cloned in for local use, NOT vendored
+# into basecamp. Re-create with:
+#   node tools/refs/reference-docs/sync-reference-repos.js --kind docs
 docs/external/
 
+# _mod-example-sourcecode/ — local example Hytale mod repo cache. This can contain
+# nested Git repos; keep it out of basecamp Git and VS Code Git sensors.
+# Re-create with:
+#   node tools/refs/example-mods/sync-example-mod-repos.js
+_mod-example-sourcecode/
+
 node_modules/
-.vscode/
+.vscode/*
+!.vscode/settings.json
 
 
 # macOS
 .DS_Store
-

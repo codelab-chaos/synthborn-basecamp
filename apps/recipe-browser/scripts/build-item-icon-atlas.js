@@ -29,8 +29,8 @@ function parseArgs(argv) {
   const args = {
     assets: path.join(basecampRoot, "_Assets"),
     out: path.join(appRoot, "data", "icons-atlas"),
-    recipes: path.join(basecampRoot, "docs", "recipes", "recipes.json"),
-    loot: path.join(basecampRoot, "docs", "recipes", "loot.json"),
+    recipes: path.join(basecampRoot, "docs", "refs", "recipes", "recipes.json"),
+    loot: path.join(basecampRoot, "docs", "refs", "recipes", "loot.json"),
     tile: DEFAULT_TILE,
     cols: DEFAULT_COLS,
     quality: 0.85,

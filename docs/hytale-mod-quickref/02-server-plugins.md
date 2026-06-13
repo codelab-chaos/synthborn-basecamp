@@ -2,7 +2,7 @@
 
 *The plugin skeleton: lifecycle, manifest, the singleton pattern, registries, and depending on other plugins.*
 
-Sources: 🌐 [Plugin System](https://hytale-docs.pages.dev/modding/plugins/plugin-system/), ✅ `NPCTrading/.../TraderInteraction.java`, ✅ `HyCitizens/.../HyCitizensPlugin.java`
+Sources: 🌐 [Plugin System](https://hytale-docs.pages.dev/modding/plugins/plugin-system/), ✅ `_mod-example-sourcecode/NPCTrading/.../TraderInteraction.java`, ✅ `_mod-example-sourcecode/HyCitizens/.../HyCitizensPlugin.java`
 
 ---
 
@@ -110,7 +110,7 @@ protected void setup() {
 
 ## Depending on another plugin (the companion-plugin pattern) ✅
 
-This is the **verified** seam from `NPCTrading/.../TraderInteraction.java` — the canonical way to attach to another plugin as an *optional* dependency:
+This is the **verified** seam from `_mod-example-sourcecode/NPCTrading/.../TraderInteraction.java` — the canonical way to attach to another plugin as an *optional* dependency:
 
 ```java
 import com.hypixel.hytale.common.plugin.PluginIdentifier;

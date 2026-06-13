@@ -5,7 +5,7 @@ Self-contained static app — tables and trees; optional item icon atlas from lo
 
 ## Data
 
-Reads `docs/recipes/recipes.json` and `loot.json` (synced into `data/` at build time).
+Reads `docs/refs/recipes/recipes.json` and `loot.json` (synced into `data/` at build time).
 Tech tree tab builds dependency graphs **client-side** from the same recipe index — no
 separate `crafting-tech-tree.json` load.
 
@@ -15,7 +15,7 @@ From `apps/recipe-browser`:
 
 ```bash
 npm install
-npm run sync-data    # copy docs/recipes/*.json → data/
+npm run sync-data    # copy docs/refs/recipes/*.json → data/
 npm run build-icons  # optional: pack item PNGs from _Assets → data/icons-atlas/
 npm run build        # sync + webpack production build
 npm run dev          # sync + dev server :8880

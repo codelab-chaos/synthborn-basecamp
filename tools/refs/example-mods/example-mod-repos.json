@@ -1,0 +1,59 @@
+{
+  "schema": "synthborn.example_mod_repos.v1",
+  "destination": "{basecamp}/_mod-example-sourcecode",
+  "repositories": [
+    {
+      "id": "Aetherhaven",
+      "dir": "Aetherhaven",
+      "url": "git@github.com:gchougland/Aetherhaven.git",
+      "sourcePath": "{workspace}/_references/example-sourcecode-mods/Aetherhaven",
+      "notes": "Village/NPC/economy example mod. Source URL recovered from local _git metadata."
+    },
+    {
+      "id": "EasyWebMap",
+      "dir": "EasyWebMap",
+      "sourcePath": "{workspace}/_references/example-sourcecode-mods/EasyWebMap",
+      "notes": "Local snapshot of a web-map example mod; no clone URL recorded."
+    },
+    {
+      "id": "HyCitizens",
+      "dir": "HyCitizens",
+      "url": "https://github.com/ElectroGamesDev/HyCitizens.git",
+      "sourcePath": "{workspace}/_references/example-sourcecode-mods/HyCitizens",
+      "notes": "NPC management plugin example."
+    },
+    {
+      "id": "MobMapMarkers",
+      "dir": "MobMapMarkers",
+      "sourcePath": "{workspace}/_references/example-sourcecode-mods/MobMapMarkers",
+      "notes": "Local snapshot of a map-marker example mod; no clone URL recorded."
+    },
+    {
+      "id": "NPCTrading",
+      "dir": "NPCTrading",
+      "url": "https://github.com/ElectroGamesDev/NPCTrading.git",
+      "sourcePath": "{workspace}/_references/example-sourcecode-mods/NPCTrading",
+      "notes": "Trading plugin example that integrates with HyCitizens."
+    },
+    {
+      "id": "PlayerAvatarMarker",
+      "dir": "PlayerAvatarMarker",
+      "sourcePath": "{workspace}/_references/example-sourcecode-mods/PlayerAvatarMarker",
+      "notes": "Local snapshot of a player-avatar map marker example; no clone URL recorded."
+    },
+    {
+      "id": "hytale-blockbench-plugin",
+      "dir": "hytale-blockbench-plugin",
+      "url": "https://github.com/JannisX11/hytale-blockbench-plugin.git",
+      "sourcePath": "{workspace}/_references/example-sourcecode-mods/hytale-blockbench-plugin",
+      "notes": "Blockbench plugin reference."
+    },
+    {
+      "id": "hytale-rpgmobs",
+      "dir": "hytale-rpgmobs",
+      "url": "https://github.com/TimShol/hytale-rpgmobs.git",
+      "sourcePath": "{workspace}/_references/example-sourcecode-mods/hytale-rpgmobs",
+      "notes": "RPG mob scaling/combat/loot example."
+    }
+  ]
+}

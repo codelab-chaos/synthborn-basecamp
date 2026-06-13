@@ -67,6 +67,6 @@ The source-code release is the big one — it turns all the "unofficial decompil
 
 ## What this means for the `hytale-synths` project
 
-1. The body layer is **engine API you call**, not magic HyCitizens owns — see [06-npc-instancing-and-skins.md](./06-npc-instancing-and-skins.md). This is what makes [`../bare-bones-synth.md`](../bare-bones-synth.md) feasible without a dependency.
+1. The body layer is **engine API you call**, not magic HyCitizens owns — see [06-npc-instancing-and-skins.md](./06-npc-instancing-and-skins.md). This is what makes [`../research-bank/bare-bones-synth.md`](../research-bank/bare-bones-synth.md) feasible without a dependency.
 2. NPC behavior wants to live in **JSON Roles + instruction lists**; reach for custom Java elements only when no built-in element fits.
 3. Everything is server-side and single-threaded-per-world — **respect the world thread** (see [08](./08-messaging-and-threading.md)) or you'll get nondeterministic corruption.

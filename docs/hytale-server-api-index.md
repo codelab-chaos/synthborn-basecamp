@@ -8,17 +8,17 @@ The official/reference docs are spread across `_references/`, and the SDK jar ha
 
 From the repository root:
 
-```powershell
-powershell -ExecutionPolicy Bypass -File .\tools\sdk\list-hytale-server-api.ps1
-powershell -ExecutionPolicy Bypass -File .\tools\sdk\list-hytale-server-api.ps1 -Package "com/hypixel/hytale/server/core/command"
-powershell -ExecutionPolicy Bypass -File .\tools\sdk\list-hytale-server-api.ps1 -Package "com/hypixel/hytale/server/npc"
+```bash
+node tools/refs/sdk/list-hytale-server-api.js
+node tools/refs/sdk/list-hytale-server-api.js --package com/hypixel/hytale/server/core/command
+node tools/refs/sdk/list-hytale-server-api.js --package com/hypixel/hytale/server/npc
 ```
 
 Inspect a class signature:
 
-```powershell
-$jar = Get-ChildItem "$env:USERPROFILE\.gradle\caches\modules-2\files-2.1\com.hypixel.hytale\Server" -Recurse -Filter "*.jar" | Select-Object -First 1
-javap -classpath $jar.FullName -private "com.hypixel.hytale.server.core.command.system.basecommands.AbstractWorldCommand"
+```bash
+jar="$(find ~/.gradle/caches/modules-2/files-2.1/com.hypixel.hytale/Server -name '*.jar' | head -n 1)"
+javap -classpath "$jar" -private "com.hypixel.hytale.server.core.command.system.basecommands.AbstractWorldCommand"
 ```
 
 ## Command System
@@ -124,7 +124,7 @@ Known SDK lesson:
 
 See:
 
-- `mods/SynthUnits/mod-dev-discoveries.md`
+- `../synthborn-kyn/mod-dev-discoveries.md`
 
 ## NPC Role JSON Debugging
 
@@ -138,6 +138,6 @@ When a synth/NPC role does not register:
 ## Good Discovery Workflow
 
 1. Search `_references/` for examples.
-2. Use `tools/sdk/list-hytale-server-api.ps1` to find nearby classes.
+2. Use `tools/refs/sdk/list-hytale-server-api.js` to find nearby classes.
 3. Use `javap` to inspect exact constructors/methods.
-4. Record reusable SDK gotchas in `mods/SynthUnits/mod-dev-discoveries.md`.
+4. Record reusable SDK gotchas in `../synthborn-kyn/mod-dev-discoveries.md`.

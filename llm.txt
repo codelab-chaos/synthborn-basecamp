@@ -1,0 +1,68 @@
+# Synthborn Basecamp LLM Entry
+
+Purpose: route an agent or LLM through this repo without loading huge generated
+files or confusing basecamp with deployable mod repos.
+
+Basecamp is the shared reference and research repo for the Synthborn Hytale mod
+workspace. It owns Hytale SDK/API indexes, recipe and loot indexes, English
+label lookups, prefab references, external docs mirrors, example mod source
+caches, and cross-repo research. It does not own deployment, RCON operation,
+server lifecycle scripts, or mod-specific implementation.
+
+Start here:
+
+- Human repo map: `README.md`
+- Docs map: `docs/README.md`
+- Tool map: `tools/README.md`
+- Compact Hytale server-side modding KB: `docs/llm-hytale-modding-kb.md`
+- Hytale modding quick reference: `docs/hytale-mod-quickref/README.md`
+- Generated reference map: `docs/refs/README.md`
+
+Search before reading:
+
+- Labels: `cd tools && npm run labels:lookup -- find copper`
+- Recipes and loot: `cd tools && npm run recipes:gamedata -- source Ingredient_Leather`
+- SDK classes and methods: `cd tools && npm run sdk:search -- --method placeBlock`
+- Example mod repos: `cd tools && npm run examples:list`
+- External docs mirrors: `cd tools && npm run docs:list`
+- Basecamp health: `cd tools && npm run verify`
+
+Do not load wholesale:
+
+- `docs/refs/sdk/*.md`
+- `docs/refs/recipes/*.json`
+- `_Assets/`
+- `_mod-example-sourcecode/`
+- `docs/external/`
+
+Use the search commands and generated flat indexes first, then open only the
+small files or package docs that the search result points to.
+
+Key generated reference locations:
+
+- `docs/refs/sdk/`: generated Hytale Server API signatures.
+- `docs/refs/sdk/llms.txt`: SDK package/class router.
+- `docs/refs/sdk/methods.txt`: method to class/package/file index.
+- `docs/refs/labels/`: English name to Hytale id indexes.
+- `docs/refs/recipes/`: crafting, salvage, bench, source, and loot indexes.
+- `docs/refs/prefabs/`: vanilla prefab catalog indexes.
+- `docs/refs/assets/`: asset tree notes and TOC snapshots.
+
+Research routing:
+
+- Active Synth/NPC architecture: `docs/hytale-synthetics.md`
+- Durable NPC and behavior-tree research: `docs/research-bank/README.md`
+- Archived brainstorms and older planning: `docs/idea-bank/README.md`
+- Worldgen V2 research and tooling: `worldgenV2/`
+
+Workspace ownership:
+
+- `../synthborn-kyn/`: SynthUnits/Kyn mod implementation and deploy scripts.
+- `../synthborn-overseer/`: SynthOverseer implementation and deploy scripts.
+- `../synthborn-terrascape/`: SynthTerrascape implementation and deploy scripts.
+- `../synthborn-rcon/`: SynthRCON implementation.
+
+When a task involves build, deploy, RCON, logs, smoke tests, or server lifecycle,
+go to the owning sibling repo. When a task involves shared Hytale reference data,
+SDK discovery, recipe/loot lookup, prefab lookup, or cross-repo research, use
+basecamp.

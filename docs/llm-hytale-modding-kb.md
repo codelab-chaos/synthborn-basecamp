@@ -11,7 +11,7 @@ Single-file, token-dense, capability-indexed reference for Hytale **server-side*
 
 | Tag | Meaning |
 |---|---|
-| ✓ | Verified against compiling code in this repo (`HyCitizens/`, `NPCTrading/`, `mods/SynthUnits/`) |
+| ✓ | Verified against `_mod-example-sourcecode/HyCitizens`, `_mod-example-sourcecode/NPCTrading`, or sibling Synthborn source |
 | 📘 | From official Hypixel post / `release.server.docs.hytale.com` Javadoc |
 | 🌐 | Community docs (`hytale-docs.pages.dev`, `hytalecharts.com`) — may drift |
 | ? | Observed / inferred, not source-confirmed |
@@ -45,7 +45,7 @@ The "I want to ___ → call ___" table. Source column points to a verified call 
 | Register at init | `setup()` | ✓ | [02](./hytale-mod-quickref/02-server-plugins.md) |
 | Touch other plugins | `start()` (NOT `setup()` — they may not be ready) | ✓ | [02](./hytale-mod-quickref/02-server-plugins.md) |
 | Expose plugin to others | Static `instance` + `public static MyPlugin get()` | ✓ | `HyCitizensPlugin.get()` |
-| Check optional dep | `PluginManager.get().getPlugin(new PluginIdentifier(group, name)) == null` | ✓ | `NPCTrading/.../TraderInteraction.java` |
+| Check optional dep | `PluginManager.get().getPlugin(new PluginIdentifier(group, name)) == null` | ✓ | `_mod-example-sourcecode/NPCTrading/.../TraderInteraction.java` |
 | Register a command | `getCommandRegistry().registerCommand(new MyCmd())` | ✓ | `HyCitizens` `/citizens` |
 | Schedule a task | `getTaskRegistry()` | 🌐 | [02](./hytale-mod-quickref/02-server-plugins.md) |
 | Log structured | `getLogger().at(Level.INFO).log("msg")` | ✓ | repo-wide |
@@ -92,7 +92,7 @@ Event catalog (🌐 — confirm in decompiled source before depending on exact s
 | Despawn entity | `store.removeEntity(ref, RemoveReason.REMOVE)` (world thread) | ✓ | `CitizensManager.despawnCitizenNPC*` |
 | Add raw entity | `store.addEntity(holder, AddReason.SPAWN)` | 🌐 | [04](./hytale-mod-quickref/04-ecs.md) |
 | Iterate by component | `store.forEachChunk(T.getComponentType(), (chunk, cmdBuf) -> ...)` | 🌐 | [04](./hytale-mod-quickref/04-ecs.md) |
-| Persist custom data on entity | Custom `Component<EntityStore>` + codec registration | ✓ | `mods/SynthUnits/SynthIdentityComponent`, `SynthBehaviorComponent` |
+| Persist custom data on entity | Custom `Component<EntityStore>` + codec registration | ✓ | `../synthborn-kyn/SynthIdentityComponent`, `SynthBehaviorComponent` |
 
 Verified component types (each has static `getComponentType()`): `ModelComponent`, `PersistentModel`, `PlayerSkinComponent`, `UUIDComponent`, `TransformComponent`, plus stats via `EntityStatsModule.get().getEntityStatMapComponentType()`. ✓
 
@@ -104,17 +104,17 @@ Verified component types (each has static `getComponentType()`): `ModelComponent
 | Spawn NPC | `NPCPlugin.get().spawnEntity(store, roleIdx, pos, rot, model, initCallback, null)` | ✓ | `CitizensManager.spawnCitizenNPCInternal` |
 | Leash to position | `npcEntity.setLeashPoint(position)` | ✓ | `CitizensManager` |
 | Swap role at runtime | `RoleChangeSystem.requestRoleChange(...)` | ✓📘 | `com.hypixel.hytale.server.npc.systems.RoleChangeSystem` |
-| Define a role | JSON at `<asset-pack>/Server/NPC/Roles/<Name>.json` | ✓ | `HyCitizens/.../Template_Citizen.json` |
+| Define a role | JSON at `<asset-pack>/Server/NPC/Roles/<Name>.json` | ✓ | `_mod-example-sourcecode/HyCitizens/.../Template_Citizen.json` |
 | Inherit a role | `"Reference": "Template_Citizen"` in JSON | ✓ | `RoleGenerator.java:359` |
-| Walk an NPC (native) | Role JSON: `Walk` motion controller + `BodyMotion: Find`, target via custom sensor | ✓ | `mods/SynthUnits/Synth_Base.json`, `SynthMoveTarget` sensor |
-| Teleport (debug only) | Write `TransformComponent` position directly — **breaks animation/facing**, use for debug only | ✓ | `mods/SynthUnits/mod-dev-discoveries.md` |
+| Walk an NPC (native) | Role JSON: `Walk` motion controller + `BodyMotion: Find`, target via custom sensor | ✓ | `../synthborn-kyn/Synth_Base.json`, `SynthMoveTarget` sensor |
+| Teleport (debug only) | Write `TransformComponent` position directly — **breaks animation/facing**, use for debug only | ✓ | `../synthborn-kyn/mod-dev-discoveries.md` |
 | Debug visualize AI | `/npc debug set VisAiming\|VisMarkedTargets\|VisSensorRanges\|VisLeashPosition\|VisFlock` | 📘 | [09](./hytale-mod-quickref/09-verified-api-cheatsheet.md) |
 
 ### Skins & models
 
 | Want to... | Use | Status | Source |
 |---|---|---|---|
-| Random skin | `CosmeticsModule.get().generateRandomSkin(RandomUtil.getSecureRandom())` | ✓ | `SkinCustomizerUI.java:496` |
+| Random skin | `CosmeticsModule.get().generateRandomSkin(RandomUtil.getSecureRandom())` | ✓ | `_mod-example-sourcecode/HyCitizens/.../SkinCustomizerUI.java:496` |
 | Validate skin | `CosmeticsModule.get().validateSkin(skin)` (throws if invalid) | ✓ | `SkinUtilities` |
 | Skin → model | `CosmeticsModule.get().createModel(skin, scale)` | ✓ | `CitizensManager` |
 | Attach skin to NPC | `store.putComponent(ref, PlayerSkinComponent.getComponentType(), new PlayerSkinComponent(skin))` | ✓ | `CitizensManager` |
@@ -138,7 +138,7 @@ Verified component types (each has static `getComponentType()`): `ModelComponent
 | Add to container | `container.addItemStack(stack)` → `ItemStackTransaction` | ✓ | `NPCTrading` |
 | Set slot | `container.setItemStackForSlot((short) i, stack)` → `ItemStackSlotTransaction` | 🌐 | [07](./hytale-mod-quickref/07-inventory-and-items.md) |
 | Mutate stack | `stack.withQuantity(n)`, `.withDurability(d)`, `.withMetadata(bson)` — **returns new instance** | 🌐 | [07](./hytale-mod-quickref/07-inventory-and-items.md) |
-| Player↔NPC trade | `TradeManager.executeTrade(playerRef, offer)` — verify→remove→add→message | ✓ | `NPCTrading/.../TradeManager.java` |
+| Player↔NPC trade | `TradeManager.executeTrade(playerRef, offer)` — verify→remove→add→message | ✓ | `_mod-example-sourcecode/NPCTrading/.../TradeManager.java` |
 | NPC↔NPC item move | ✗ — no precedent in repo; new work | ✗ | `hytale-synthetics.md §22` |
 
 Slot capacities: Hotbar=9, Storage=36, Armor=4, Utility=4, Tools=23, Backpack=variable. 🌐
@@ -159,15 +159,15 @@ Slot capacities: Hotbar=9, Storage=36, Armor=4, Utility=4, Tools=23, Backpack=va
 | Off-thread blocking work | `CompletableFuture.supplyAsync(..., HytaleServer.SCHEDULED_EXECUTOR)` | ✓📘 | `HyCitizens` skin fetch |
 | Async HTTP | `java.net.http.HttpClient` (allowed; shared/static; always set timeouts) | ✓ | `HyCitizens` |
 | Re-enter world after async | `.whenComplete((r, err) -> world.execute(() -> {...}))` | ✓📘 | `HyCitizens` |
-| Persist atomically | Write temp → fsync → rename (HyCitizens `ConfigManager`, Gson) | ✓ | `HyCitizens/ConfigManager.java` |
+| Persist atomically | Write temp → fsync → rename (HyCitizens `ConfigManager`, Gson) | ✓ | `_mod-example-sourcecode/HyCitizens/.../ConfigManager.java` |
 
 ### External control / testing
 
 | Want to... | Use | Status | Source |
 |---|---|---|---|
-| Drive server from outside game | RCON, default port `25575` | ✓ | `mods/SynthUnits/mod-dev-discoveries.md` |
+| Drive server from outside game | RCON, default port `25575` | ✓ | `../synthborn-kyn/mod-dev-discoveries.md` |
 | Unit-test plain Java | JUnit 5 (`junit-bom:5.10.0`, already in build) | ✓ | repo build files |
-| Test Hytale-world behavior | Manual / external harness — **don't unit-test Hytale-facing behavior** | ✓ | `mods/SynthUnits/mod-dev-discoveries.md` |
+| Test Hytale-world behavior | Manual / external harness — **don't unit-test Hytale-facing behavior** | ✓ | `../synthborn-kyn/mod-dev-discoveries.md` |
 
 ### Known not-yet-confirmed / unsupported
 
@@ -365,9 +365,9 @@ Tutorial starter states: `Idle`, `Sleep`, `Eat`, `Alerted`, `Combat`, `ReturnHom
 | `.get()`/`.join()` on world thread | Hangs world | All blocking I/O off-thread; return via `whenComplete` + `world.execute` | repo-wide |
 | Mutating `ItemStack` in place | No-op | `withX(...)` returns a new instance — capture it | [07](./hytale-mod-quickref/07-inventory-and-items.md) |
 | Touching other plugins from `setup()` | Sees null/empty | Do cross-plugin work in `start()` | [02](./hytale-mod-quickref/02-server-plugins.md) |
-| Driving motion by writing `TransformComponent` | Teleport-spam, no facing/anim | Native `Walk` motion + intent component + sensor | `mods/SynthUnits/mod-dev-discoveries.md` |
-| Command name hides instant vs walked | User confusion | Distinct verbs: `teleporthere` (instant), `walk` (visible) | `mods/SynthUnits/mod-dev-discoveries.md` |
-| Over-testing Hytale-facing behavior | Slow iteration | Unit-test pure Java only; runtime/manual for world behavior | `mods/SynthUnits/mod-dev-discoveries.md` |
+| Driving motion by writing `TransformComponent` | Teleport-spam, no facing/anim | Native `Walk` motion + intent component + sensor | `../synthborn-kyn/mod-dev-discoveries.md` |
+| Command name hides instant vs walked | User confusion | Distinct verbs: `teleporthere` (instant), `walk` (visible) | `../synthborn-kyn/mod-dev-discoveries.md` |
+| Over-testing Hytale-facing behavior | Slow iteration | Unit-test pure Java only; runtime/manual for world behavior | `../synthborn-kyn/mod-dev-discoveries.md` |
 
 ---
 
@@ -401,18 +401,18 @@ The `builtin.*` packages are Hypixel's own implementations — read them to see 
 ## Drill-in pointers (this repo)
 
 - **Deeper prose docs** (same numbering as the capability sections): [hytale-mod-quickref/](./hytale-mod-quickref/) — `01`-overview, `02`-plugins, `03`-events, `04`-ecs, `05`-roles/AI, `06`-spawn recipe, `07`-inventory, `08`-threading, `09`-API cheatsheet, `10`-references.
-- **Verified call sites** in `_references/sample-mods/` (HyCitizens, NPCTrading) — ground truth for "does this API exist".
-- **API handbooks (raw decompiled / Javadoc mirror):** `docs/external/` (clone with `node tools/docs/clone-vendor-docs.js`).
-- **Project work using this KB:** [SynthUnits/](../mods/SynthUnits/) — see `sprint-board.md`, `capabilities.md`, and especially `mod-dev-discoveries.md` for sharp-edge field notes.
+- **Verified call sites** in `_mod-example-sourcecode/` (HyCitizens, NPCTrading) — ground truth for "does this API exist". Sync with `node tools/refs/example-mods/sync-example-mod-repos.js`; legacy seed snapshots live in `../_references/example-sourcecode-mods/`.
+- **API handbooks (raw decompiled / Javadoc mirror):** `docs/external/` (sync with `node tools/refs/reference-docs/sync-reference-repos.js --kind docs`).
+- **Project work using this KB:** [synthborn-kyn](../../synthborn-kyn/) — see `sprint-board.md`, `capabilities.md`, and especially `mod-dev-discoveries.md` for sharp-edge field notes.
 
 ---
 
 ## What's NOT in this file (and where to get it)
 
-- Full `Template_Citizen.json` (1928 lines of real instruction-list examples) — read it in `_references/sample-mods/HyCitizens/...`.
+- Full `Template_Citizen.json` (1928 lines of real instruction-list examples) — read it in `_mod-example-sourcecode/HyCitizens/...`.
 - Every `*Event` class — read decompiled `com.hypixel.hytale.*Event`.
 - Worldgen / farming / crafting / deployables / mounts / weather / builder — `com.hypixel.hytale.builtin.*` package; not yet curated here.
 - Block placement, NPC-to-NPC transfers, custom UI — open API questions (see "Known not-yet-confirmed" above).
 - Full `PlayerSkin` cosmetic catalogue — enumerate at runtime via `CosmeticsModule.get().getRegistry()`.
 
-When in doubt about a signature, **grep `_references/sample-mods/` first**, then the decompiled source. If neither has it, it's unverified — say so rather than guess.
+When in doubt about a signature, **grep `_mod-example-sourcecode/` first**, then the decompiled source. If neither has it, it's unverified — say so rather than guess.

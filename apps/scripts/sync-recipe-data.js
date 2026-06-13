@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /*
- * Copy docs/recipes/*.json into app data/ folders for static serving.
+ * Copy docs/refs/recipes/*.json into app data/ folders for static serving.
  *
  * Usage: node apps/scripts/sync-recipe-data.js [recipe-browser|tech-tree|all]
  */
@@ -11,7 +11,7 @@ const fs = require("node:fs");
 const path = require("node:path");
 
 const APPS_ROOT = path.resolve(__dirname, "..");
-const DOCS_RECIPES = path.resolve(APPS_ROOT, "..", "docs", "recipes");
+const DOCS_RECIPES = path.resolve(APPS_ROOT, "..", "docs", "refs", "recipes");
 
 const APP_FILES = {
   "recipe-browser": ["recipes.json", "loot.json"],

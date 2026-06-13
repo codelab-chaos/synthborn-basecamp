@@ -1,42 +1,84 @@
-# Repository Docs
+# Basecamp Docs
 
-This root `docs/` folder is intentionally shared across the current prototype workspace.
+Basecamp docs are the shared Hytale knowledge base for the Synthborn workspace. They
+cover reference data, SDK/API discovery, cross-repo update checklists, and research that
+is useful across `synthborn-kyn`, `synthborn-overseer`, and `synthborn-terrascape`.
 
-Right now multiple mods, plus shared tooling and reference material, depend on the same research notes:
+Basecamp does not own deployment, RCON operation, or mod-specific implementation docs.
+Those live in the deployable sibling repos.
 
-- `mods/SynthUnits`
-- `mods/SynthRCON`
-- root-level `tools/`
-- root-level `_references/`
-- root-level `_Assets/` (local unpacked Hytale assets; see [`hytale-assets-toc.md`](hytale-assets-toc.md))
-- [`hytale-survival-progression.md`](hytale-survival-progression.md), which records starter survival/tool progression so NPC planning does not confuse combat gear, tools, benches, and later tiers
+## Start Here
 
-## Quick References
+| Need | Read / run |
+|---|---|
+| Find an item id or English display name | [`refs/labels/README.md`](refs/labels/README.md), `cd tools && npm run labels:lookup -- find copper` |
+| Search SDK classes or methods | [`refs/sdk/README.md`](refs/sdk/README.md), `cd tools && npm run sdk:search -- --method placeBlock` |
+| Query recipes, loot, sources, craft chains | [`refs/recipes/README.md`](refs/recipes/README.md), `cd tools && npm run recipes:gamedata -- source Ingredient_Leather` |
+| Browse vanilla prefab metadata | [`refs/prefabs/README.md`](refs/prefabs/README.md), [`refs/prefabs/prefabs-index.json`](refs/prefabs/prefabs-index.json) |
+| Read the compact Hytale modding KB | [`llm-hytale-modding-kb.md`](llm-hytale-modding-kb.md) |
+| Drill into server-side modding concepts | [`hytale-mod-quickref/`](hytale-mod-quickref/) |
+| Update Hytale version assets/API | [`hytale-version-update-checklist.md`](hytale-version-update-checklist.md) |
+| Review docs health and cleanup plan | [`docs-audit.md`](docs-audit.md) |
+| Verify basecamp links and reference tools | `cd tools && npm run verify` |
 
-- [`labels/README.md`](labels/README.md) - **English display names ↔ Hytale ids** (`server.lang`). CLI: `node tools/labels/lookup.js find copper`. Regenerate: `node tools/labels/extract-labels.js`.
-- [`sdk-reference/README.md`](sdk-reference/README.md) - topic router + search workflow for the SDK reference.
-- [`sdk-reference/llms.txt`](sdk-reference/llms.txt) / [`methods.txt`](sdk-reference/methods.txt) - grep indexes for classes and methods. CLI: `node tools/sdk/sdk-search.js --method placeBlock`. Regenerate: `node tools/sdk/extract-sdk-reference.js --full` (see [`tools/sdk/README.md`](../tools/sdk/README.md)).
-- [`apps/prefab-gallery/index.html`](../apps/prefab-gallery/index.html) - static visual browser for vanilla `_Assets/Server/Prefabs` plus creator prefab mods. Each prefab ships as compact hue-only voxel JSON rendered client-side with Three.js card previews plus lightweight top/front projections. Material chips use sampled colors from vanilla asset metadata, not texture files.
-- [`apps/recipe-browser/`](../apps/recipe-browser/) - recipe/item search (forward craft chains, backward uses, sources, bench filter) plus an in-app **Tech tree** tab built live from `recipes.json`. `npm run build` in that folder.
-- [`hytale-prefabs.md`](hytale-prefabs.md) - text/index view of the vanilla prefab catalog, useful for counts, categories, dimensions, and dominant block ids.
-- [`hytale-prefabs-index.json`](hytale-prefabs-index.json) - machine-readable prefab index consumed by search and tooling.
+## Doc Status
 
-Regenerate the visual gallery from the repository root:
+| Path | Status | Owner | Notes |
+|---|---|---|---|
+| [`llm-hytale-modding-kb.md`](llm-hytale-modding-kb.md) | Active | Basecamp | Compact API and workflow router for agents. |
+| [`hytale-mod-quickref/`](hytale-mod-quickref/) | Active | Basecamp | Curated server-side modding reference; verified against example source and sibling repos. |
+| [`hytale-synthetics.md`](hytale-synthetics.md) | Active architecture | Basecamp / Kyn-adjacent | Promoted self-contained synth/NPC architecture track. |
+| [`research-bank/bare-bones-synth.md`](research-bank/bare-bones-synth.md) | Background spike | Basecamp / Kyn-adjacent | Minimal body/spawn spike for the active synth track. |
+| [`research-bank/`](research-bank/) | Durable research | Basecamp | NPC, behavior-tree, LLM, and body-spawn research used as background. |
+| [`idea-bank/`](idea-bank/) | Archived ideas | Basecamp | Brainstorm and older strategy docs. Useful context, not canonical direction. |
+| [`docs-audit.md`](docs-audit.md) | Maintenance | Basecamp | Audit findings and cleanup checklist. |
 
-```powershell
-cd apps\prefab-gallery
-npm install
-npm run build
-```
+## Generated Reference Data
 
-Or data only (no npm install required):
+Generated docs should be regenerated by tools, not hand-edited.
 
-```powershell
-node apps\prefab-gallery\scripts\build-prefab-gallery.js _Assets\Server\Prefabs
-```
+| Path | Source | Generator |
+|---|---|---|
+| [`refs/labels/labels.json`](refs/labels/labels.json), [`refs/labels/labels.txt`](refs/labels/labels.txt) | `_Assets/Server/Languages/en-US/server.lang` | `cd tools && npm run labels:extract` |
+| [`refs/recipes/recipes.json`](refs/recipes/recipes.json), [`refs/recipes/recipes.txt`](refs/recipes/recipes.txt) | `_Assets/.../Recipes` + item recipe data | `cd tools && npm run recipes:extract` |
+| [`refs/recipes/loot.json`](refs/recipes/loot.json), [`refs/recipes/loot.txt`](refs/recipes/loot.txt) | `_Assets/Server/Drops` + block gathering data | `cd tools && npm run recipes:loot` |
+| [`refs/recipes/bench-tiers.json`](refs/recipes/bench-tiers.json), [`refs/recipes/bench-tiers.txt`](refs/recipes/bench-tiers.txt) | Bench item assets | `cd tools && npm run recipes:benches` |
+| [`refs/recipes/crafting-tech-tree.*`](refs/recipes/), [`refs/recipes/equipment-tech-tree.*`](refs/recipes/) | `refs/recipes/recipes.json` | `cd tools && npm run recipes:deps -- --all` |
+| [`refs/sdk/`](refs/sdk/) | Pinned Hytale Server jar | `cd tools && npm run sdk:extract` |
+| [`refs/prefabs/README.md`](refs/prefabs/README.md), [`refs/prefabs/prefabs-index.json`](refs/prefabs/prefabs-index.json) | `_Assets/Server/Prefabs` | `cd tools && npm run prefabs:index` |
+| [`procbuild/reference-prefab-modules.*`](procbuild/) | `../_references/example-prefabs` legacy seed | `cd tools && npm run prefabs:modules` |
+| [`synthoverseer-builder-commands.md`](synthoverseer-builder-commands.md) | Builder command catalog JSON | `cd tools && npm run builder:catalog` |
+| [`console-commands.md`](console-commands.md) | SynthOverseer `/os commands` output | Refresh from `../synthborn-overseer` after command changes. |
 
-New community docs are mirrored under `docs/external/hytale-modding-site/content/docs/en` (clone with `node tools/docs/clone-vendor-docs.js`). For SynthUnits, start with the official/custom NPC role docs, `guides/npc-workings`, `guides/plugin/Interactable-NPCs.mdx`, ECS notes, server event references, and plugin guides for spawning/persistent data.
+## Local Reference Sources
 
-Keeping broad Hytale notes, patch notes, API references, and cross-mod research here avoids duplicating the same material inside each mod while the project is still in MVP/prototype mode.
+| Path | Purpose | Notes |
+|---|---|---|
+| `_Assets/` | Local unpacked Hytale game data | Gitignored, multi-GB. See [`refs/assets/README.md`](refs/assets/README.md). |
+| `_mod-example-sourcecode/` | Local cache of example Hytale mod repos | Gitignored. Sync with `cd tools && npm run examples:sync`. |
+| `../_references/example-sourcecode-mods/` | Legacy source snapshots | Used only as seeds when an example repo has no clone URL. |
+| `docs/external/` | Mirrored external Hytale docs | Sync with `cd tools && npm run docs:sync`. |
 
-Once the mod boundaries settle, this can be reorganized into clearer per-mod docs plus a smaller shared knowledge base.
+## Ported Official Posts
+
+The original browser `.mhtml` captures were converted once to markdown and deleted.
+The markdown keeps source URLs and remote `cdn.hytale.com` image/download links.
+
+| Path | Source |
+|---|---|
+| [`hytale-making-models-introduction.md`](hytale-making-models-introduction.md) | Official Hytale modeling article |
+| [`hytale-update-5-patch-notes.md`](hytale-update-5-patch-notes.md) | Official Update 5 patch notes |
+
+## Apps
+
+| App | Purpose | Build |
+|---|---|---|
+| [`../apps/recipe-browser/`](../apps/recipe-browser/) | Static recipe/item search and tech-tree UI | `cd apps/recipe-browser && npm install && npm run build` |
+| [`../apps/prefab-gallery/`](../apps/prefab-gallery/) | Static Three.js prefab gallery | `cd apps/prefab-gallery && npm install && npm run build` |
+
+## Policy
+
+- Prefer the CLIs and generated indexes over reading huge generated files directly.
+- Keep operational docs in the owning mod repo.
+- Keep durable research under `research-bank/` and brainstorms under `idea-bank/` unless they become the active architecture.
+- When a doc says an API is verified, it should point to `_mod-example-sourcecode/` or a sibling Synthborn repo, not an old monorepo path.
