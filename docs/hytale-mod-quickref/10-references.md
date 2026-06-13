@@ -10,7 +10,7 @@
 
 | Source | What it is | Best for |
 |---|---|---|
-| **This repo's `HyCitizens/` + `NPCTrading/` source** | Real, compiling plugins | The most concrete API you have — *how working code calls the engine*. The ✅ tags in these docs come from here. |
+| **`_mod-example-sourcecode/HyCitizens` + `_mod-example-sourcecode/NPCTrading`** | Real plugin source synced by `tools/refs/example-mods/sync-example-mod-repos.js` | The most concrete example API surface — *how working code calls the engine*. The ✅ tags in these docs are anchored here or in sibling Synthborn repos. |
 | [Hytale-Server-Unpacked](https://github.com/Ranork/Hytale-Server-Unpacked) | Decompiled server source, "shared as a reference only, to allow reading of public methods" | Looking up real signatures, `builtin.*` implementations (crafting, farming, reputation, npc). Unofficial. |
 | [release.server.docs.hytale.com](https://release.server.docs.hytale.com/) | Official Javadoc (version `2026.05.01-43e16373b46`) | Authoritative package/class/method index. Has Tree view, full index, search. |
 
@@ -36,7 +36,7 @@
 
 - [Erenshor Simulated Players wiki](https://erenshor.wiki.gg/wiki/Simulated_Players) — living-NPC design without LLMs
 - [Stanford Generative Agents](https://dl.acm.org/doi/fullHtml/10.1145/3586183.3606763) — memory→reflection→planning architecture
-- In-repo: [`../research-behavior-trees.md`](../research-behavior-trees.md), [`../research-advanced-npc-techniques.md`](../research-advanced-npc-techniques.md), [`../research-erenshor-npcs.md`](../research-erenshor-npcs.md)
+- Research bank: [`../research-bank/research-behavior-trees.md`](../research-bank/research-behavior-trees.md), [`../research-bank/research-advanced-npc-techniques.md`](../research-bank/research-advanced-npc-techniques.md), [`../research-bank/research-erenshor-npcs.md`](../research-bank/research-erenshor-npcs.md)
 
 ---
 

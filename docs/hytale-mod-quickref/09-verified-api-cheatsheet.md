@@ -1,6 +1,6 @@
 # 09 — Verified API Cheat Sheet
 
-*Every API below is ✅ **verified** — confirmed in this repo's `HyCitizens/` or `NPCTrading/` source, which compiles against the live Hytale server API. When the unofficial web docs disagree with this page, trust this page.*
+*Every API below is ✅ **verified** — confirmed in `_mod-example-sourcecode/` or sibling Synthborn source that compiles against the live Hytale server API. When the unofficial web docs disagree with this page, trust this page.*
 
 Grouped by task. Import path is given once per type.
 

@@ -1,0 +1,64 @@
+# Hytale Bench Tier Reference
+
+> Generated 2026-06-10T00:40:53.618Z from `_Assets/Server/Item/Items/Bench/*.json` (`BlockType.Bench.TierLevels`).
+
+Each placed bench starts at **tier 1**. A tier's `upgrade -> N` line is the material + time cost to reach the next tier. Which *recipes* a tier unlocks is a runtime SDK check (`isRestrictedByBenchTierLevel`), not in this data.
+
+Regenerate: `node tools/refs/recipes/extract-bench-tiers.js`
+
+## Upgradable benches (7)
+
+### Bench_Alchemy  (benchId=Alchemybench, maxTier=4)
+categories: Alchemy_Potions, Alchemy_Potions_Misc, Alchemy_Seeds, Alchemy_Bombs
+- T1 -> T2: 5x Ingredient_Bar_Silver, 10x Ingredient_Bar_Gold, 10x Ingredient_Sac_Venom, 1x Rock_Gem_Emerald, 3s
+- T2 (craft-speed +20%) -> T3: 10x Ingredient_Bar_Silver, 20x Ingredient_Bar_Gold, 20x Ingredient_Chitin_Sturdy, 1x Rock_Gem_Zephyr, 6s
+- T3 (craft-speed +40%) -> T4: 20x Ingredient_Bar_Silver, 40x Ingredient_Bar_Gold, 30x Ingredient_Fabric_Scrap_Shadoweave, 1x Rock_Gem_Sapphire, 9s
+- T4 (craft-speed +60%) -> T5: 40x Ingredient_Bar_Silver, 80x Ingredient_Bar_Gold, 120x Ingredient_Fabric_Scrap_Cindercloth, 1x Rock_Gem_Ruby, 9s
+
+### Bench_Armour  (benchId=Armor_Bench, maxTier=3)
+categories: Armor_Head, Armor_Chest, Armor_Hands, Armor_Legs, Weapon_Shield
+- T1 -> T2: 20x Ingredient_Bar_Copper, 20x Ingredient_Bone_Fragment, 20x Ingredient_Leather_Medium, 100x Wood_Azure_Trunk, 3s
+- T2 (craft-speed +15%) -> T3: 25x Ingredient_Bar_Thorium, 25x Ingredient_Bar_Cobalt, 40x Ingredient_Fabric_Scrap_Shadoweave, 40x Ingredient_Chitin_Sturdy, 3x Ingredient_Voidheart, 3s
+- T3 (craft-speed +30%) (max tier)
+
+### Bench_Farming  (benchId=Farmingbench, maxTier=7)
+categories: Farming, Seeds, Saplings, Essence, Planters, Decorative
+- T1 -> T2: 50x Ingredient_Life_Essence, 5x Plant_Crop_Wheat_Item, 5x Plant_Crop_Lettuce_Item, 3s
+- T2 (craft-speed +15%) -> T3: 1x Ingredient_Life_Essence_Concentrated, 10x Plant_Crop_Carrot_Item, 10x Plant_Crop_Corn_Item, 3s
+- T3 (craft-speed +30%) -> T4: 2x Ingredient_Life_Essence_Concentrated, 20x Plant_Crop_Cauliflower_Item, 20x Plant_Crop_Turnip_Item, 3s
+- T4 -> T5: 3x Ingredient_Life_Essence_Concentrated, 30x Plant_Crop_Aubergine_Item, 30x Plant_Crop_Pumpkin_Item, 3s
+- T5 -> T6: 4x Ingredient_Life_Essence_Concentrated, 40x Plant_Crop_Tomato_Item, 40x Plant_Crop_Chilli_Item, 3s
+- T6 -> T7: 5x Ingredient_Life_Essence_Concentrated, 50x Plant_Crop_Cotton_Item, 50x Plant_Crop_Rice_Item, 3s
+- T7 -> T8: 6x Ingredient_Life_Essence_Concentrated, 60x Plant_Crop_Potato_Item, 60x Plant_Crop_Onion_Item, 3s
+
+### Bench_Furnace  (benchId=Furnace, maxTier=2)
+- T1 -> T2: 5x Ingredient_Bar_Copper, 5x Ingredient_Bar_Iron, 5x Ingredient_Bar_Thorium, 5x Ingredient_Bar_Cobalt, 3s
+- T2 (craft-speed +30%) (max tier)
+
+### Bench_Tannery  (benchId=Tannery, maxTier=2)
+- T1 -> T2: 5x Ingredient_Leather_Light, 5x Ingredient_Leather_Medium, 5x Ingredient_Leather_Heavy, 5x Ingredient_Chitin_Sturdy, 3s
+- T2 (craft-speed +40%) (max tier)
+
+### Bench_Weapon  (benchId=Weapon_Bench, maxTier=3)
+categories: Weapon_Sword, Weapon_Mace, Weapon_Battleaxe, Weapon_Daggers, Weapon_Bow
+- T1 -> T2: 20x Ingredient_Bar_Iron, 30x Ingredient_Leather_Light, 30x Ingredient_Fabric_Scrap_Linen, 15x Ingredient_Sac_Venom, 3s
+- T2 (craft-speed +15%) -> T3: 25x Ingredient_Bar_Thorium, 25x Ingredient_Bar_Cobalt, 20x Ingredient_Fire_Essence, 40x Ingredient_Ice_Essence, 100x Ingredient_Void_Essence, 3s
+- T3 (craft-speed +30%) (max tier)
+
+### Bench_WorkBench  (benchId=Workbench, maxTier=3)
+categories: Workbench_Survival, Workbench_Tools, Workbench_Crafting, Workbench_Tinkering
+- T1 -> T2: 30x Ingredient_Bar_Copper, 20x Ingredient_Bar_Iron, 20x Ingredient_Fabric_Scrap_Linen, 5s
+- T2 (craft-speed +15%) -> T3: 30x Ingredient_Bar_Thorium, 20x Ingredient_Bar_Cobalt, 30x Ingredient_Leather_Heavy, 50x Ingredient_Fabric_Scrap_Shadoweave, 25x Ingredient_Fire_Essence, 10s
+- T3 (craft-speed +30%) (max tier)
+
+## Single-tier benches (9)
+
+- Bench_Arcane (benchId=Arcanebench)
+- Bench_Armory (benchId=Armory)
+- Bench_Builders (benchId=Builders)
+- Bench_Campfire (benchId=Campfire)
+- Bench_Cooking (benchId=Cookingbench)
+- Bench_Furniture (benchId=Furniture_Bench)
+- Bench_Loom (benchId=Loombench)
+- Bench_Salvage (benchId=Salvagebench)
+- Bench_Trough (benchId=Farmingbench)

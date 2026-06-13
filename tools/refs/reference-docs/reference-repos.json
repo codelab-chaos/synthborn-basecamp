@@ -1,0 +1,41 @@
+{
+  "schema": "synthborn.reference_repos.v1",
+  "repositories": [
+    {
+      "id": "HytaleCompleteAPI",
+      "kind": "docs",
+      "dir": "HytaleCompleteAPI",
+      "url": "https://github.com/GalacticOrgOfDev/HytaleCompleteAPI.git",
+      "destRoot": "{basecamp}/docs/external",
+      "shallow": true,
+      "notes": "API reference mirror."
+    },
+    {
+      "id": "hytale-docs",
+      "kind": "docs",
+      "dir": "hytale-docs",
+      "url": "https://github.com/vulpeslab/hytale-docs.git",
+      "destRoot": "{basecamp}/docs/external",
+      "shallow": true,
+      "notes": "Community Hytale docs mirror."
+    },
+    {
+      "id": "hytale-modding-handbook",
+      "kind": "docs",
+      "dir": "hytale-modding-handbook",
+      "url": "https://github.com/inkthorne/hytale-modding-handbook.git",
+      "destRoot": "{basecamp}/docs/external",
+      "shallow": true,
+      "notes": "Modding handbook and examples."
+    },
+    {
+      "id": "hytale-modding-site",
+      "kind": "docs",
+      "dir": "hytale-modding-site",
+      "url": "https://github.com/HytaleModding/site.git",
+      "destRoot": "{basecamp}/docs/external",
+      "shallow": true,
+      "notes": "HytaleModding site content."
+    }
+  ]
+}

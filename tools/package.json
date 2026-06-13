@@ -1,0 +1,32 @@
+{
+  "name": "@synthborn/basecamp-tools",
+  "version": "0.0.0",
+  "private": true,
+  "description": "npm aliases for Synthborn basecamp reference tools.",
+  "scripts": {
+    "check": "find . -type f -name '*.js' -print0 | xargs -0 -n1 node --check",
+    "verify": "node verify.js",
+    "assets:toc": "node refs/assets/build-assets-toc.js",
+    "builder:catalog": "node refs/builder-commands/build-builder-catalog-doc.js",
+    "docs:list": "node refs/reference-docs/sync-reference-repos.js --list",
+    "docs:sync": "node refs/reference-docs/sync-reference-repos.js",
+    "examples:list": "node refs/example-mods/sync-example-mod-repos.js --list",
+    "examples:sync": "node refs/example-mods/sync-example-mod-repos.js",
+    "labels:extract": "node refs/labels/extract-labels.js",
+    "labels:lookup": "node refs/labels/lookup.js",
+    "npcs:extract": "node refs/npcs/extract-npcs.js",
+    "prefabs:index": "node refs/prefabs/index-hytale-prefabs.js",
+    "prefabs:modules": "node refs/prefabs/extract-prefab-modules.js",
+    "recipes:benches": "node refs/recipes/extract-bench-tiers.js",
+    "recipes:deps": "node refs/recipes/build-dependency-tree.js",
+    "recipes:extract": "node refs/recipes/extract-recipes.js",
+    "recipes:gamedata": "node refs/recipes/gamedata.js",
+    "recipes:loot": "node refs/recipes/extract-loot.js",
+    "sdk:diff": "node refs/sdk/diff-sdk-reference.js",
+    "sdk:extract": "node refs/sdk/extract-sdk-reference.js --full",
+    "sdk:index": "node refs/sdk/build-sdk-method-index.js",
+    "sdk:list": "node refs/sdk/list-hytale-server-api.js",
+    "sdk:llms": "node refs/sdk/build-sdk-llms-txt.js",
+    "sdk:search": "node refs/sdk/sdk-search.js"
+  }
+}

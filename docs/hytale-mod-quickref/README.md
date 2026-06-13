@@ -10,7 +10,7 @@ Last compiled: 2026-05-25 · Server API version seen: `2026.05.01-43e16373b46`
 
 The official, polished "full server plugin API reference" does not exist yet — Hypixel has said creator docs are incomplete and the full server source is still ~1–2 months out. So this folder **consolidates the concrete bits that do exist** into one place you can read offline, grep, and link from the design docs.
 
-Crucially, a lot of what's here is **verified against real working code** — the `HyCitizens/` and `NPCTrading/` plugins in this same repo compile and run against the live API, so their usage is ground truth, not guesswork.
+Crucially, a lot of what's here is **verified against real working code** — example sources in `_mod-example-sourcecode/` and sibling Synthborn repos compile against the live API, so their usage is ground truth, not guesswork.
 
 ## Source-confidence legend
 
@@ -18,7 +18,7 @@ Every non-obvious API claim in these docs is tagged:
 
 | Tag | Meaning | Trust |
 |---|---|---|
-| ✅ **Verified** | Confirmed in this repo's `HyCitizens/` or `NPCTrading/` source (compiles against the real API) | Highest |
+| ✅ **Verified** | Confirmed in `_mod-example-sourcecode/` or sibling Synthborn source that compiles against the real API | Highest |
 | 📘 **Official** | From hytale.com posts or `release.server.docs.hytale.com` (the official Javadoc) | High |
 | 🌐 **Community** | From unofficial docs (`hytale-docs.pages.dev`, `hytalecharts.com`); accurate but may drift | Medium |
 
@@ -45,7 +45,7 @@ For a brand-new server plugin: **01 → 02 → 03 → 08**, then **04** when you
 
 For NPC work (the project's goal): **05 → 06 → 09**, with **04** alongside.
 
-For the `hytale-synths` plan specifically, [06](./06-npc-instancing-and-skins.md) and [09](./09-verified-api-cheatsheet.md) are the load-bearing ones — they're what [`../bare-bones-synth.md`](../bare-bones-synth.md) is built on.
+For the `hytale-synths` plan specifically, [06](./06-npc-instancing-and-skins.md) and [09](./09-verified-api-cheatsheet.md) are the load-bearing ones — they're what [`../research-bank/bare-bones-synth.md`](../research-bank/bare-bones-synth.md) is built on.
 
 ## Keeping this current
 

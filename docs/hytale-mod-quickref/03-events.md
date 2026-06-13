@@ -2,7 +2,7 @@
 
 *Reacting to game occurrences: the event registry, sync/async, priorities, cancellation, and the event catalog.*
 
-Sources: 🌐 [Event System](https://hytale-docs.pages.dev/modding/plugins/events/), ✅ `HyCitizens` event usage, 📘 in-repo `LLM_NPC_ROLEPLAY.md` §2
+Sources: 🌐 [Event System](https://hytale-docs.pages.dev/modding/plugins/events/), ✅ `_mod-example-sourcecode/HyCitizens` event usage, 📘 `research-bank/research-llm-npc-roleplay.md` §2
 
 ---
 

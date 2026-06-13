@@ -16,9 +16,8 @@ manifest/runtime tolerance; **compiling** proves source compatibility, and **smo
 proves the basic mod features still work.
 
 > Machines: **macbookpro** (this Mac) and **windowsMSI** (the Windows PC). Build/deploy works
-> on both; `./gradlew deploy` resolves the Hytale save path per-OS. This doc shows the Mac
-> commands first; the Windows equivalents use `.\gradlew.bat`. Build prerequisites (JDK 25,
-> etc.) are covered in [`deployment.md`](deployment.md).
+> on both; each deployable mod repo owns its deploy script. This basecamp checklist covers
+> shared reference refreshes and points operational steps back to the owning repos.
 
 The four Gradle mods and their deploy saves:
 
@@ -41,11 +40,12 @@ process** — are running. There are two distinct kinds of JVM to clear:
 **a. Hytale game servers** (`HytaleServer.jar`, on the bundled JRE). Prefer a graceful RCON
 stop so worlds save. Each server runs with a `-Dsynthrcon.port=2557x`:
 
+Use each owning repo's deploy tool for graceful shutdown, for example:
+
 ```bash
-# graceful, per running save (RCON 'stop'); from windowsMSI this is wrapped by remote-server.js
-curl -X POST 127.0.0.1:<rcon-port>/command -d '{"command":"stop"}'
-# or, from windowsMSI over SSH:
-node tools/server/remote-server.js stop <save>
+( cd ../synthborn-kyn && node tools/deploy.js stop --force )
+( cd ../synthborn-overseer && node tools/deploy.js stop --force )
+( cd ../synthborn-terrascape && node tools/deploy.js stop --force )
 ```
 
 Fallbacks if a server won't stop cleanly (e.g. hung at 100% CPU):
@@ -95,7 +95,7 @@ versioned, committable TOC (path · size · CRC-32 per file) is the change-detec
 
 ```bash
 cd synthborn-basecamp
-node tools/assets/build-assets-toc.js            # writes tools/assets/toc/assets-toc-<version>.json (committable)
+node tools/refs/assets/build-assets-toc.js  # writes docs/refs/assets/toc/assets-toc-<version>.json
 ```
 
 Optionally refresh the unpacked reference (`_Assets/` is gitignored, ~3.3 GB):
@@ -128,24 +128,16 @@ Bumping the Gradle dependency is what gives compile-time API checks against the 
 
 ## 5. Recompile and redeploy
 
-Servers should be down (step 1), so deploy is just a file copy. From each repo:
+Servers should be down (step 1). Build and deploy from each owning repo:
 
 ```bash
-# macbookpro
-( cd synthborn-overseer  && ./gradlew clean deploy )
-( cd synthborn-kyn       && ./gradlew clean deploy )
-( cd synthborn-rcon      && ./gradlew clean deploy )
-( cd synthborn-terrascape && ./gradlew clean deploy )   # also runs webpack :buildWeb (needs `npm install` once)
+( cd ../synthborn-overseer   && node tools/deploy.js build )
+( cd ../synthborn-kyn        && node tools/deploy.js build )
+( cd ../synthborn-terrascape && node tools/deploy.js build )   # also runs webpack :buildWeb
 ```
 
-```powershell
-# windowsMSI
-cd synthborn-overseer ; .\gradlew.bat clean deploy ; cd ..
-# ...repeat per repo
-```
-
-`deploy` resolves the save path per-OS and never clobbers the real (gitignored)
-`overseer-config.json`. Confirm fresh jars landed and the new artifact resolved:
+Then use the repo-local deploy target you need, for example `node tools/deploy.js restart`
+or `node tools/deploy.js --target combined restart`. Confirm the new artifact resolved:
 
 ```bash
 find ~/.gradle/caches -path "*hytale*Server*<new>*" -name "*.jar" | head -1   # proves it compiled against <new>
@@ -153,17 +145,17 @@ find ~/.gradle/caches -path "*hytale*Server*<new>*" -name "*.jar" | head -1   # 
 
 ## 6. Smoke test
 
-Start the patched server and run the smoke test (expects server + SynthRCON already running):
+Start the patched server and run smoke tests from the owning repo. For example:
 
 ```bash
-node tools/server/remote-server.js start synthtest-02 --wait   # or start-server.js locally
-node tools/smoke/synthunits-smoke.js
+( cd ../synthborn-kyn && node tools/deploy.js restart )
+( cd ../synthborn-kyn && node tools/deploy.js rcon -- validate spawn-basic )
 ```
 
-After changing Gradle dependencies, the build+deploy+smoke variant:
+For the integration save:
 
 ```bash
-node tools/smoke/synthunits-smoke.js --build --deploy
+( cd ../synthborn-kyn && node tools/deploy.js --target combined restart )
 ```
 
 ### Known risk areas — smoke-test these after every server update
@@ -188,8 +180,8 @@ changed.
 ---
 
 ## What must stay in sync
-- Hytale launcher/server install used by `tools/server/start-server.js`.
+- Hytale launcher/server install used by each owning repo's deploy script.
 - `com.hypixel.hytale:Server:<version>` in `build.gradle.kts` of overseer, kyn, rcon, terrascape.
 - Each mod's `src/main/resources/manifest.json` `ServerVersion` range (only if compatibility requires).
-- The assets TOC under `tools/assets/toc/` (commit one per release).
+- The assets TOC under `docs/refs/assets/toc/` (commit one per release).
 - Saved patch/release notes in `docs/`.

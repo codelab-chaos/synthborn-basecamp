@@ -2,7 +2,7 @@
 
 *Reading and modifying player/entity inventories — needed for trading, quest hand-ins, and any "give/take item" effect.*
 
-Sources: 🌐 [Inventory & Items](https://hytale-docs.pages.dev/modding/content/inventory/), ✅ `NPCTrading/.../TradeManager.java` (the player↔NPC exchange in practice)
+Sources: 🌐 [Inventory & Items](https://hytale-docs.pages.dev/modding/content/inventory/), ✅ `_mod-example-sourcecode/NPCTrading/.../TradeManager.java` (the player↔NPC exchange in practice)
 
 ---
 

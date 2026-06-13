@@ -2,7 +2,7 @@
 
 *How Hytale NPCs think: Roles, instruction lists, sensors/actions/motions, and how to map an FSM onto them. This is the "behavior" half; [06](./06-npc-instancing-and-skins.md) is the "body" half.*
 
-Sources: 📘 [NPC Technical Rundown](https://hytale.com/news/2026/2/npc-technical-rundown), 🌐 [NPC & AI System](https://hytale-docs.pages.dev/modding/npc-ai/), 🌐 [NPC Framework guide](https://hytalecharts.com/news/hytale-npc-framework-behaviors-ai-modding-guide), ✅ `HyCitizens/.../Template_Citizen.json` (1,928 lines) + `RoleGenerator.java`
+Sources: 📘 [NPC Technical Rundown](https://hytale.com/news/2026/2/npc-technical-rundown), 🌐 [NPC & AI System](https://hytale-docs.pages.dev/modding/npc-ai/), 🌐 [NPC Framework guide](https://hytalecharts.com/news/hytale-npc-framework-behaviors-ai-modding-guide), ✅ `_mod-example-sourcecode/HyCitizens/.../Template_Citizen.json` (1,928 lines) + `_mod-example-sourcecode/HyCitizens/.../RoleGenerator.java`
 
 ---
 
@@ -48,7 +48,7 @@ The NPC-AI internals expose (read these in the decompiled `builtin.npc` package)
 - **Role** class + support objects: `CombatSupport`, `StateSupport`, `EntitySupport`, `WorldSupport`, `PositionCache`.
 - **`NPCEntity`** — the component/handle for a live NPC (role management, instruction execution, movement, combat, interactions).
 
-> ⚠️ Hytale's Role has **native** `IsMemory` / `MemoriesCategory` / `MemoriesNameOverride` params (the NPC's *in-world creature memory*). This is **separate** from any conversational/synth memory you build. Don't conflate them. (📘 in-repo `LLM_NPC_ROLEPLAY.md` §2.)
+> ⚠️ Hytale's Role has **native** `IsMemory` / `MemoriesCategory` / `MemoriesNameOverride` params (the NPC's *in-world creature memory*). This is **separate** from any conversational/synth memory you build. Don't conflate them. (📘 `research-bank/research-llm-npc-roleplay.md` §2.)
 
 ## Role JSON shape ✅
 
@@ -125,7 +125,7 @@ Idle                  ← default fallthrough: wander/graze
 
 Each state = one instruction (sensor guard + motion/action). Before writing any Java, check whether these already exist as elements: "find block," "path to target," "interact with storage," "detect inventory item." Only drop to a custom Java element when no built-in covers the verb.
 
-> This is the same priority-selector + blackboard pattern documented in [`../research-behavior-trees.md`](../research-behavior-trees.md) — Hytale's instruction lists *are* a simplified behavior tree, so that research applies directly.
+> This is the same priority-selector + blackboard pattern documented in [`../research-bank/research-behavior-trees.md`](../research-bank/research-behavior-trees.md) — Hytale's instruction lists *are* a simplified behavior tree, so that research applies directly.
 
 ## Two paths to NPC behavior 🌐
 

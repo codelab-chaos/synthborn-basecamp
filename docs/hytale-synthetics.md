@@ -7,6 +7,10 @@ Scope: MVP only
 Dependencies: Hytale server API only (no mod dependencies)
 Last updated: 2026-05-25
 
+Canonical status: this is the promoted NPC architecture track. Durable background
+research lives in [`research-bank/`](./research-bank/); archived brainstorms and older
+strategy tracks live in [`idea-bank/`](./idea-bank/).
+
 ---
 
 ## 1. Goal
@@ -35,14 +39,14 @@ This plan pulls durable ideas from the docs in this folder. The first six are di
 
 | Document | Useful takeaway for `hytale-synths` |
 |---|---|
-| [`getting-started.md`](./getting-started.md) | Build deterministic believability first: bodies, memory, schedules, dialogue pools, commands, reputation, then optional LLM later. |
-| [`research-erenshor-npcs.md`](./research-erenshor-npcs.md) | Erenshor proves living NPCs can be mostly logic trees, dialogue pools, memory, grouping, command parsing, and off-screen progression. |
-| [`research-behavior-trees.md`](./research-behavior-trees.md) | Use data-driven behavior, blackboard discipline, pure conditions, small actions, deterministic tick tests, and visual/debug traces. |
-| [`research-advanced-npc-techniques.md`](./research-advanced-npc-techniques.md) | Smart objects, utility scoring, needs, perception, social graphs, and A-Life are additive layers; start with BT + blackboard + memory. |
-| [`hytale-test-automation.md`](./hytale-test-automation.md) | Build seams early: fake/replayable inputs, transcript sinks, deterministic clocks, scenario harnesses, and an Actor abstraction. |
-| [`LLM_NPC_ROLEPLAY.md`](./LLM_NPC_ROLEPLAY.md) | Keep a capability catalog and the rule "planner proposes, engine disposes," but implement it deterministically first. |
-| [`HyCitizens/README.md`](./HyCitizens/README.md) | *Inspiration only.* Shows which NPC capabilities matter: spawn/persist, schedules, groups, animations, interactions, nearby lookups. We reimplement a simplified in-house subset; we do not depend on it. |
-| [`NPCTrading/README.md`](./NPCTrading/README.md) | *Inspiration only.* Shows the merchant/exchange model worth having. We will build our own deferred trading sub-system; we do not depend on it. |
+| [`idea-bank/hycitizens-companion-getting-started.md`](./idea-bank/hycitizens-companion-getting-started.md) | Build deterministic believability first: bodies, memory, schedules, dialogue pools, commands, reputation, then optional LLM later. |
+| [`research-bank/research-erenshor-npcs.md`](./research-bank/research-erenshor-npcs.md) | Erenshor proves living NPCs can be mostly logic trees, dialogue pools, memory, grouping, command parsing, and off-screen progression. |
+| [`research-bank/research-behavior-trees.md`](./research-bank/research-behavior-trees.md) | Use data-driven behavior, blackboard discipline, pure conditions, small actions, deterministic tick tests, and visual/debug traces. |
+| [`research-bank/research-advanced-npc-techniques.md`](./research-bank/research-advanced-npc-techniques.md) | Smart objects, utility scoring, needs, perception, social graphs, and A-Life are additive layers; start with BT + blackboard + memory. |
+| `hytale-test-automation.md` (archived/missing) | Build seams early: fake/replayable inputs, transcript sinks, deterministic clocks, scenario harnesses, and an Actor abstraction. |
+| [`research-bank/research-llm-npc-roleplay.md`](./research-bank/research-llm-npc-roleplay.md) | Keep a capability catalog and the rule "planner proposes, engine disposes," but implement it deterministically first. |
+| `_mod-example-sourcecode/HyCitizens/README.md` | *Inspiration only.* Shows which NPC capabilities matter: spawn/persist, schedules, groups, animations, interactions, nearby lookups. We reimplement a simplified in-house subset; we do not depend on it. |
+| `_mod-example-sourcecode/NPCTrading/README.md` | *Inspiration only.* Shows the merchant/exchange model worth having. We will build our own deferred trading sub-system; we do not depend on it. |
 
 ---
 
@@ -1119,7 +1123,7 @@ The main risk is not the behavior layer. Memory, dialogue pools, commands, trace
    Before building the full body module, prove the exact Hytale API path for: registering/loading a minimal NPC role or entity definition, spawning it, persisting identity across restart, playing one animation, receiving interaction events, and despawning/reloading cleanly. The source docs lean heavily on HyCitizens because it already solves this surface. If `hytale-synths` owns bodies, the first deliverable should be "one minimal body works without HyCitizens," not the whole plugin skeleton.
 
 2. **Make the engine seam include asset/role registration, not only runtime calls.**
-   `EngineDriver` currently lists spawn, despawn, move, animate, and message operations. Based on the Hytale role model described in `LLM_NPC_ROLEPLAY.md` and the HyCitizens resources, the seam also needs content-pack/asset registration responsibilities: role ids, model/skin validation, animation id validation, interaction hooks, and whatever lifecycle is required for generated or bundled NPC role data. Otherwise raw Hytale concerns will leak into `NpcBodyService` and content loading.
+   `EngineDriver` currently lists spawn, despawn, move, animate, and message operations. Based on the Hytale role model described in `research-bank/research-llm-npc-roleplay.md` and the HyCitizens resources, the seam also needs content-pack/asset registration responsibilities: role ids, model/skin validation, animation id validation, interaction hooks, and whatever lifecycle is required for generated or bundled NPC role data. Otherwise raw Hytale concerns will leak into `NpcBodyService` and content loading.
 
 3. **Tighten effect execution into an explicit transaction policy.**
    The current rules say effects validate before executing, and failed effects should not block later effects unless marked `required`. That is risky for sequences like `player.inventory.remove` followed by memory/reputation writes. Add an execution model such as: prevalidate all effects first; group irreversible world mutations after cheap state writes; support `required` groups; make every effect idempotent by `eventId` where possible; and trace partial application clearly. This matters most for inventory, future exchange, and any effect that consumes items.
@@ -1167,7 +1171,7 @@ Keep the self-contained direction, but make the body layer prove itself first. O
 
 ## 22. Claude Review Feedback (Opus 4.7)
 
-*Reviewed against all eight source docs in this folder and the actual source of both inspiration repos (`HyCitizens/` and `NPCTrading/`), not just their READMEs.*
+*Reviewed against all eight source docs in this folder and the actual source of both inspiration repos (`_mod-example-sourcecode/HyCitizens` and `_mod-example-sourcecode/NPCTrading`), not just their READMEs.*
 
 ### Where I agree with the Codex review
 
@@ -1176,10 +1180,10 @@ No need to re-argue these — they are correct and I'd keep them: the body layer
 ### Highest-priority additions
 
 1. **Reconcile this plan with the rest of the folder — it silently reverses the folder's central decision.**
-   `LLM_NPC_ROLEPLAY.md` ("We do **not** fork HyCitizens.") and `getting-started.md` ("Do not fork HyCitizens.") both make "build a companion plugin on top of HyCitizens" the load-bearing architectural choice, and `hytale-test-automation.md` builds its `Actor`/test story on that same stack. `hytale-synthetics.md` reverses it (own the body, depend on nothing) — which is a legitimate choice, but the folder now contains two contradictory north-stars with no note saying which supersedes the other. A reader following `getting-started.md` will build the opposite of what this plan describes. Add an explicit "Relationship to the other docs in this folder" subsection stating that `hytale-synths` is an *alternative* track that trades the companion-plugin shortcut for independence, and why.
+   `research-bank/research-llm-npc-roleplay.md` ("We do **not** fork HyCitizens.") and `idea-bank/hycitizens-companion-getting-started.md` ("Do not fork HyCitizens.") both make "build a companion plugin on top of HyCitizens" the load-bearing architectural choice, and `hytale-test-automation.md` builds its `Actor`/test story on that same stack. `hytale-synthetics.md` reverses it (own the body, depend on nothing) — which is a legitimate choice, but the folder now contains two contradictory north-stars with no note saying which supersedes the other. A reader following `idea-bank/hycitizens-companion-getting-started.md` will build the opposite of what this plan describes. Add an explicit "Relationship to the other docs in this folder" subsection stating that `hytale-synths` is an *alternative* track that trades the companion-plugin shortcut for independence, and why.
 
 2. **The body layer is much bigger than "a deliberate simplification" admits — quantify it honestly.**
-   §10.2 / §16 frame owning the body as a manageable simplification ("anchored/wander movement and a coarse schedule template are enough"). The repo says otherwise. `HyCitizens/.../CitizensManager.java` is **~5,280 lines**, and that is just the manager. The single spawn path (`spawnCitizenNPCInternal`) already has to: look up a Role by index (`NPCPlugin.get().getIndex(roleName)`), resolve a `ModelAsset`, rebuild a 20-argument `Model` purely to survive a null `AnimationSetMap`, special-case the `"Player"` model whose scale resets to 0, run spawn-retry/attempt logic, guard against concurrent spawns (`citizensCurrentlySpawning`), dedupe against an existing ref, spawn nametags as **separate** entities, and branch into hologram and player-model-with-skin variants. None of that is "behavior" — it is the cost of owning a body against a young, churning API. For contrast, `NPCTrading` got fully working merchant NPCs in a **65-line** interact listener (`TraderInteraction.java`) precisely because it owns none of this. Recommend the doc state the real trade plainly: *we are re-acquiring the hardest, most API-coupled ~5k lines of an existing mod in exchange for zero dependencies.*
+   §10.2 / §16 frame owning the body as a manageable simplification ("anchored/wander movement and a coarse schedule template are enough"). The repo says otherwise. `_mod-example-sourcecode/HyCitizens/.../CitizensManager.java` is **~5,280 lines**, and that is just the manager. The single spawn path (`spawnCitizenNPCInternal`) already has to: look up a Role by index (`NPCPlugin.get().getIndex(roleName)`), resolve a `ModelAsset`, rebuild a 20-argument `Model` purely to survive a null `AnimationSetMap`, special-case the `"Player"` model whose scale resets to 0, run spawn-retry/attempt logic, guard against concurrent spawns (`citizensCurrentlySpawning`), dedupe against an existing ref, spawn nametags as **separate** entities, and branch into hologram and player-model-with-skin variants. None of that is "behavior" — it is the cost of owning a body against a young, churning API. For contrast, `NPCTrading` got fully working merchant NPCs in a **65-line** interact listener (`TraderInteraction.java`) precisely because it owns none of this. Recommend the doc state the real trade plainly: *we are re-acquiring the hardest, most API-coupled ~5k lines of an existing mod in exchange for zero dependencies.*
 
 3. **You will need your own Role generator and Role-asset lifecycle — the plan never mentions it.**
    In Hytale, NPC behavior *is* a data Role: `Template_Citizen.json` is **~1,928 lines** of sensors/actions/motions, and HyCitizens ships a **711-line** `RoleGenerator` that writes role JSON to a generated-roles directory and registers it so spawning can reference it by name. The plan's `EngineDriver` (§10.1) lists spawn/despawn/move/animate/message but never generating, writing, registering, or hot-reloading a Role — without which `spawnEntity` has nothing to spawn. This is the concrete form of Codex's "asset registration in the seam" point: add a `RoleProvider`/`RoleGenerator` responsibility to §10.1 and a story for where generated roles live and how `/synths reload` re-registers them. This belongs in the Milestone 0 feasibility spike, because if hand-authoring or generating a minimal valid Role is hard, the whole body track stalls here.
@@ -1187,19 +1191,19 @@ No need to re-argue these — they are correct and I'd keep them: the body layer
 ### Medium-priority additions
 
 4. **Rename "memory" — it collides with Hytale's native NPC memory.**
-   `LLM_NPC_ROLEPLAY.md` §2 explicitly warns that `Template_Citizen.json` already has native `IsMemory` / `MemoriesCategory` / `MemoriesNameOverride` — the engine's own in-world creature-memory concept — and tells you not to conflate it with conversational memory. This plan names a core module `MemoryStore` and conditions `npc.memory.*` / `player.memory.*` with no disambiguation. Pick a distinct term for the synth layer (e.g. `Ledger`/`Recall`, or namespace it `synth.memory.*`) and add a one-line note distinguishing engine memory from synth memory, before the names harden across schemas and traces.
+   `research-bank/research-llm-npc-roleplay.md` §2 explicitly warns that `Template_Citizen.json` already has native `IsMemory` / `MemoriesCategory` / `MemoriesNameOverride` — the engine's own in-world creature-memory concept — and tells you not to conflate it with conversational memory. This plan names a core module `MemoryStore` and conditions `npc.memory.*` / `player.memory.*` with no disambiguation. Pick a distinct term for the synth layer (e.g. `Ledger`/`Recall`, or namespace it `synth.memory.*`) and add a one-line note distinguishing engine memory from synth memory, before the names harden across schemas and traces.
 
 5. **NPC↔NPC exchange is new design, not "a simplified subset of NPCTrading" — label it so.**
    §11.3 and §19 present the trading sub-system, including **NPC↔NPC** exchange, as reimplementing a simplified version of NPCTrading. But NPCTrading is strictly player↔NPC: its `TradeManager.executeTrade(playerRef, offer)` moves items between a *player* inventory and a trade offer; there is no NPC-to-NPC path anywhere in it (and its own `Todo.txt` still lists "Test without hycitizens" as undone, i.e. it never even decoupled from HyCitizens). NPC↔NPC goods movement is genuinely new work with no precedent in the inspiration mod. Keep it on the roadmap, but call it new design so its cost isn't filed under "we already have a model for this."
 
 6. **Re-weight the milestones and add an explicit go/no-go gate after the body.**
-   M0–M8 read as roughly equal-sized steps. They are not: realistically **M1 (NPC Body Module) is larger and riskier than M2–M8 combined**, for the reasons in points 2–3. `getting-started.md` budgets the equivalent single-NPC outcome at ~1–2 weeks — but that estimate assumes HyCitizens already provides the body. Stripping that assumption changes the shape of the program. Recommend splitting the Codex-suggested "Milestone 0A — Body Feasibility Spike" into a hard gate: if spawn/persist/interact/animate/reload is not demonstrably stable behind `EngineDriver` by the end of it, fall back to the companion-plugin track from the other docs rather than pushing forward.
+   M0–M8 read as roughly equal-sized steps. They are not: realistically **M1 (NPC Body Module) is larger and riskier than M2–M8 combined**, for the reasons in points 2–3. `idea-bank/hycitizens-companion-getting-started.md` budgets the equivalent single-NPC outcome at ~1–2 weeks — but that estimate assumes HyCitizens already provides the body. Stripping that assumption changes the shape of the program. Recommend splitting the Codex-suggested "Milestone 0A — Body Feasibility Spike" into a hard gate: if spawn/persist/interact/animate/reload is not demonstrably stable behind `EngineDriver` by the end of it, fall back to the companion-plugin track from the other docs rather than pushing forward.
 
 ### Lower-priority notes
 
 7. **State the in-game-UI trade-off explicitly.** Both inspiration mods are loved for "no config files required — edit everything in-game" via HyUI (`libs/HyUI-*.jar`). This plan is JSON-authored and command-driven, with no UI in scope — a reasonable MVP cut, but the opposite of what those mods are known for. Say so in §6 so server owners aren't surprised that authoring Bram means hand-editing JSON.
 
-8. **Reuse patterns you can keep without the dependency.** Independence means no *code* dependency, but the proven *patterns* are free: `HyCitizens/.../util/ConfigManager.java` (~548 lines) already implements the atomic JSON write/rename the Codex review asks for, and `TraderInteraction.java` shows the exact 65-line shape of a clean interact-listener seam. Mirror those rather than rediscovering them.
+8. **Reuse patterns you can keep without the dependency.** Independence means no *code* dependency, but the proven *patterns* are free: `_mod-example-sourcecode/HyCitizens/.../util/ConfigManager.java` (~548 lines) already implements the atomic JSON write/rename the Codex review asks for, and `TraderInteraction.java` shows the exact 65-line shape of a clean interact-listener seam. Mirror those rather than rediscovering them.
 
 9. **Land the deterministic clock + seeded RNG with the `FakeEngineDriver` in M0/M1, not M7.** `hytale-test-automation.md` treats injectable clock, seeded RNG, and a transcript sink as *precondition seams*, not test features. The plan introduces them in the Milestone 7 scenario harness, but memory/dialogue determinism (M3–M4 acceptance criteria like "repeat visit selects a different line") already depends on them. Pull the seeded RNG and injectable clock forward so the earlier milestones are testable as they land.
 
@@ -1353,7 +1357,7 @@ So the three drivers become:
 
 **Unlocks:**
 
-- The Bram vertical slice ships in the `getting-started.md` "~1–2 weeks" range instead of after a multi-month body rebuild — because M1 collapses into an adapter.
+- The Bram vertical slice ships in the `idea-bank/hycitizens-companion-getting-started.md` "~1–2 weeks" range instead of after a multi-month body rebuild — because M1 collapses into an adapter.
 - Real bodies with schedules, combat, patrol, skins, equipment, and map markers **on day one**, plus the in-game `/citizens` editing UX for free.
 - The deferred trading sub-system (§11.3, §19) can wrap **NPCTrading** (`TradersManager` / `executeTrade`) for the player↔NPC direction instead of building exchange from scratch.
 - Directly resolves the §22 body-feasibility risk and the §22 #1 doc-coherence problem in one move.
