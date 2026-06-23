@@ -4,7 +4,7 @@
  *
  * Output:
  *   docs/index.html
- *   docs/recipe-browser/
+ *   docs/recipe-kiosk/
  *   docs/prefab-gallery/
  *
  * Usage: node scripts/build-github-pages.js [--skip-recipe] [--skip-prefab] [--icons]
@@ -144,8 +144,8 @@ function writeLandingIndex() {
       <p class="lead">Hytale mod reference tools — recipes, items, and prefab gallery.</p>
       <ul>
         <li>
-          <a class="card" href="recipe-browser/">
-            <strong>Recipe Browser</strong>
+          <a class="card" href="recipe-kiosk/">
+            <strong>Recipe Kiosk</strong>
             <span>Items, craft chains, benches, loot sources</span>
           </a>
         </li>
@@ -169,9 +169,9 @@ function writeLandingIndex() {
   console.log(`\n[pages] wrote ${path.relative(BASECAMP_ROOT, out)}`);
 }
 
-function buildRecipeBrowser(opts) {
-  const appDir = path.join(APPS_ROOT, "recipe-browser");
-  const dest = path.join(DOCS_ROOT, "recipe-browser");
+function buildRecipeKiosk(opts) {
+  const appDir = path.join(APPS_ROOT, "recipe-kiosk");
+  const dest = path.join(DOCS_ROOT, "recipe-kiosk");
   rimraf(dest);
 
   npmRun(appDir, "sync-data");
@@ -185,7 +185,7 @@ function buildRecipeBrowser(opts) {
   copyTree(appDir, dest, {
     excludeDirNames: new Set(["node_modules", "src", "scripts"]),
   });
-  console.log(`[pages] recipe-browser -> ${path.relative(BASECAMP_ROOT, dest)}`);
+  console.log(`[pages] recipe-kiosk -> ${path.relative(BASECAMP_ROOT, dest)}`);
 }
 
 function buildPrefabGallery() {
@@ -234,7 +234,7 @@ function main() {
   ensureNoJekyll();
   writeLandingIndex();
 
-  if (!opts.skipRecipe) buildRecipeBrowser(opts);
+  if (!opts.skipRecipe) buildRecipeKiosk(opts);
   if (!opts.skipPrefab) buildPrefabGallery();
 
   console.log("\n[done] GitHub Pages bundle ready in docs/");

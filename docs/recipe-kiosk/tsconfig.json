@@ -11,7 +11,10 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true
+    "noEmit": true,
+    "paths": {
+      "@basecamp/library/*": ["../library/*"]
+    }
   },
-  "include": ["src/**/*", "../library/recipe-query/**/*"]
+  "include": ["src/**/*", "../library/recipe-query/**/*", "../library/basecamp-app-links.ts", "../library/basecamp-app-nav.tsx", "../library/basecamp-theme.ts"]
 }

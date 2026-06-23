@@ -2,6 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const appRoot = __dirname;
+const sharedLibrary = path.join(appRoot, "..", "library");
 
 module.exports = (_env, argv) => {
   const isProd = argv.mode === "production";
@@ -18,7 +19,7 @@ module.exports = (_env, argv) => {
         },
       },
       // Relative paths so Live Server / GitHub Pages subpaths work
-      // (e.g. :5500/apps/recipe-browser/ → assets/*.js under that folder).
+      // (e.g. :5500/apps/recipe-kiosk/ → assets/*.js under that folder).
       publicPath: "",
     },
     devtool: isProd ? false : "eval-cheap-module-source-map",
@@ -35,6 +36,10 @@ module.exports = (_env, argv) => {
     resolve: {
       extensions: [".tsx", ".ts", ".js"],
       extensionAlias: { ".js": [".ts", ".tsx", ".js"] },
+      modules: [path.join(appRoot, "node_modules"), "node_modules"],
+      alias: {
+        "@basecamp/library": sharedLibrary,
+      },
     },
     plugins: [
       new HtmlWebpackPlugin({
@@ -43,7 +48,7 @@ module.exports = (_env, argv) => {
       }),
     ],
     watchOptions: {
-      ignored: ["**/recipe-browser/data/**"],
+      ignored: ["**/recipe-kiosk/data/**"],
     },
     devServer: {
       static: [{ directory: appRoot, watch: false }],

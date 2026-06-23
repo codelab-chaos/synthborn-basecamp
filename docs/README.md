@@ -21,7 +21,7 @@ Those live in the deployable sibling repos.
 | Publish a mod to CurseForge (moderation refs) | [`publishing-curseforge.md`](publishing-curseforge.md) |
 | Review docs health and cleanup plan | [`docs-audit.md`](docs-audit.md) |
 | Verify basecamp links and reference tools | `cd tools && npm run verify` |
-| Build GitHub Pages (recipe browser + prefab gallery) | `cd tools && npm run pages:build` → commit `docs/index.html`, `docs/recipe-browser/`, `docs/prefab-gallery/` |
+| Build GitHub Pages (recipe kiosk + prefab gallery) | `cd tools && npm run pages:build` → commit `docs/index.html`, `docs/recipe-kiosk/`, `docs/prefab-gallery/` |
 
 ## GitHub Pages
 
@@ -31,7 +31,7 @@ Static apps are published from the **`/docs` folder** on `main` (repo Settings �
 | URL path (project site) | App |
 |---|---|
 | `/` | Landing (`docs/index.html`) |
-| `/recipe-browser/` | Recipe browser |
+| `/recipe-kiosk/` | Recipe browser |
 | `/prefab-gallery/` | Prefab gallery |
 
 Build before push:
@@ -47,7 +47,7 @@ that runs the build (generated locally via `npm run build` in `apps/prefab-galle
 pages script copies them into `docs/prefab-gallery/` when present.
 
 Production webpack builds use **relative** `publicPath` so `assets/` and `data/` resolve under
-each app subfolder on GitHub Pages (e.g. `…/synthborn-basecamp/recipe-browser/`).
+each app subfolder on GitHub Pages (e.g. `…/synthborn-basecamp/recipe-kiosk/`).
 
 
 | Path | Status | Owner | Notes |
@@ -100,7 +100,7 @@ The markdown keeps source URLs and remote `cdn.hytale.com` image/download links.
 
 | App | Purpose | Build |
 |---|---|---|
-| [`../apps/recipe-browser/`](../apps/recipe-browser/) | Static recipe/item search and tech-tree UI | `cd apps/recipe-browser && npm install && npm run build` |
+| [`../apps/recipe-kiosk/`](../apps/recipe-kiosk/) | Static recipe/item search and tech-tree UI | `cd apps/recipe-kiosk && npm install && npm run build` |
 | [`../apps/prefab-gallery/`](../apps/prefab-gallery/) | Static Three.js prefab gallery | `cd apps/prefab-gallery && npm install && npm run build` |
 
 ## Policy

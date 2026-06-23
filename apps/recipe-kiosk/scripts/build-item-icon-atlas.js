@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /*
- * Pack Hytale item icons into paginated WebP atlases + manifest for recipe-browser.
+ * Pack Hytale item icons into paginated WebP atlases + manifest for recipe-kiosk.
  *
  * Requires local _Assets (ULA) and sharp (devDependency).
  *
@@ -59,7 +59,7 @@ async function loadSharp() {
     return require("sharp");
   } catch {
     throw new Error(
-      "sharp is required — run: npm install (from apps/recipe-browser)",
+      "sharp is required — run: npm install (from apps/recipe-kiosk)",
     );
   }
 }

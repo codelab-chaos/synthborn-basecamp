@@ -1,12 +1,12 @@
-export type BasecampAppId = "recipeBrowser" | "prefabGallery";
+export type BasecampAppId = "recipeKiosk" | "prefabGallery";
 
 /** Relative URLs for Live Server at repo root (`/apps/<app>/`). */
 export const basecampApps = {
-  recipeBrowser: {
-    id: "recipeBrowser" as const,
-    href: "../recipe-browser/",
-    navLabel: "Recipe Browser",
-    pageTitle: "Synthborn Basecamp: Hytale Recipe Browser",
+  recipeKiosk: {
+    id: "recipeKiosk" as const,
+    href: "../recipe-kiosk/",
+    navLabel: "Recipe Kiosk",
+    pageTitle: "Synthborn Basecamp: Hytale Recipe Kiosk",
   },
   prefabGallery: {
     id: "prefabGallery" as const,

@@ -2,7 +2,7 @@
 /*
  * Copy docs/refs/recipes/*.json into app data/ folders for static serving.
  *
- * Usage: node apps/scripts/sync-recipe-data.js [recipe-browser|tech-tree|all]
+ * Usage: node apps/scripts/sync-recipe-data.js [recipe-kiosk|tech-tree|all]
  */
 
 "use strict";
@@ -34,7 +34,7 @@ function stampHytaleVersion(filePath) {
 }
 
 const APP_FILES = {
-  "recipe-browser": ["recipes.json", "loot.json"],
+  "recipe-kiosk": ["recipes.json", "loot.json"],
 };
 
 function copyFile(src, dest) {

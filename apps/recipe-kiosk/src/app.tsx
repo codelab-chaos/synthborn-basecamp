@@ -33,7 +33,7 @@ const SUGGESTION_GROUPS = [
 ] as const;
 
 const SEE_ALL_PREFIX = "__see_all__:";
-const VARIANT_STORAGE_KEY = "recipe-browser:item-variant";
+const VARIANT_STORAGE_KEY = "recipe-kiosk:item-variant";
 
 function readStoredVariant(): ItemLinkVariant {
   try {
@@ -136,7 +136,7 @@ export function App() {
           {" "}
           <code>npm run sync-data</code>
           {" "}
-          in apps/recipe-browser.
+          in apps/recipe-kiosk.
           {error ? ` (${error})` : ""}
         </Typography.Paragraph>
       </Layout>
@@ -191,7 +191,7 @@ export function App() {
                     />
                   </AutoComplete>
                   <div className="basecamp-header-end">
-                    <BasecampAppNav current="recipeBrowser" />
+                    <BasecampAppNav current="recipeKiosk" />
                     <Typography.Text type="secondary" className="app-stats">
                       {recipes.counts?.recipes ?? recipes.recipes.length}
                       {" "}

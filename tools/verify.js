@@ -26,7 +26,7 @@ const SKIP_DIRS = new Set([
 const SKIP_PREFIXES = [
   "docs/external/",
   "apps/prefab-gallery/assets/",
-  "apps/recipe-browser/assets/",
+  "apps/recipe-kiosk/assets/",
 ];
 
 const TEXT_EXTENSIONS = new Set([

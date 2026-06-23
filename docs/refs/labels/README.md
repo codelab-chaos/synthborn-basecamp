@@ -100,7 +100,7 @@ Other locales (`pt-BR`, `zh-CN`, …) live beside `en-US/server.lang` under
 |------|------|
 | English ↔ id | `node tools/refs/labels/lookup.js` (this index) |
 | Craft tree / recipes (ids) | `node tools/refs/recipes/gamedata.js` |
-| Browse recipes + humanized fallback UI | [`apps/recipe-browser/`](../../../apps/recipe-browser/) |
+| Browse recipes + humanized fallback UI | [`apps/recipe-kiosk/`](../../../apps/recipe-kiosk/) |
 | Runtime-registered ids + translation keys | `synthborn-kyn/catalog/item-ids.tsv` |
 | In-game LLM id → name substitution | `synthborn-overseer` `LabelResource` / `LabelResolver` |
 

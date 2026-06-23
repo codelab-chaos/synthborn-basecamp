@@ -1,6 +1,6 @@
 import { theme } from "antd";
 
-/** Shared Ant Design theme for Basecamp static apps (recipe browser, prefab gallery). */
+/** Shared Ant Design theme for Basecamp static apps (recipe kiosk, prefab gallery). */
 export const basecampTheme = {
   algorithm: theme.darkAlgorithm,
   cssVar: { key: "basecamp" },
