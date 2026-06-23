@@ -1,4 +1,4 @@
-# Recipe Browser
+# Recipe Kiosk
 
 React 19 + Ant Design 6 data browser for Hytale recipes, items, and craft chains.
 Self-contained static app — tables and trees; optional item icon atlas from local `_Assets`.
@@ -11,7 +11,7 @@ separate `crafting-tech-tree.json` load.
 
 ## Commands
 
-From `apps/recipe-browser`:
+From `apps/recipe-kiosk`:
 
 ```bash
 npm install
@@ -62,7 +62,7 @@ Navigation syncs to `location.hash` for shareable deep links:
 
 Open the **repo root** with Live Server, then browse:
 
-`http://<host>:5500/apps/recipe-browser/`
+`http://<host>:5500/apps/recipe-kiosk/`
 
 Run `npm run build` first so `index.html` + `assets/` exist. Script tags use **relative**
 paths (`assets/...`, `data/...`) so they resolve under that folder — not `/assets/` at

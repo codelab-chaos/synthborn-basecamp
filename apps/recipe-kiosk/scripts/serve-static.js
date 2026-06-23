@@ -33,5 +33,5 @@ http.createServer((req, res) => {
     res.end(bytes);
   });
 }).listen(port, host, () => {
-  console.log(`recipe browser http://${host}:${port}/`);
+  console.log(`recipe kiosk http://${host}:${port}/`);
 });

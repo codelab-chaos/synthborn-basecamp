@@ -49,7 +49,7 @@ basecamp answers “what APIs exist?”, “how do I craft X?”, and “what’
 | Recipes at a bench | same | `node tools/refs/recipes/gamedata.js bench Campfire` |
 | Block / mob drops | same | `node tools/refs/recipes/gamedata.js drops Plant_Bush` |
 | Fuzzy id across recipes + loot | same | `node tools/refs/recipes/gamedata.js find Tannery` |
-| Browse recipes in a UI | [`apps/recipe-browser/`](apps/recipe-browser/) or GitHub Pages `recipe-browser/` | `cd tools && npm run pages:build` |
+| Browse recipes in a UI | [`apps/recipe-kiosk/`](apps/recipe-kiosk/) or GitHub Pages `recipe-kiosk/` | `cd tools && npm run pages:build` |
 | Vanilla prefab catalog (text/json) | [`docs/refs/prefabs/README.md`](docs/refs/prefabs/README.md), [`docs/refs/prefabs/prefabs-index.json`](docs/refs/prefabs/prefabs-index.json) | — |
 | Unpacked game assets on disk | `_Assets/` (local, gitignored) | [`docs/refs/assets/README.md`](docs/refs/assets/README.md) |
 | SynthUnits-oriented SDK map | sibling repo `synthborn-kyn/kyn-docs/hytale-builtin-sdk-map.md` | — |
@@ -79,7 +79,7 @@ docs/hytale-mod-quickref/   Curated human onboarding (older snapshot)
 tools/refs/labels/lookup.js      English <-> id (server.lang)
 tools/refs/sdk/*                 SDK search, extract, diff
 tools/refs/recipes/gamedata.js   Recipe + loot CLI
-apps/recipe-browser/        Static UI over recipes.json (optional)
+apps/recipe-kiosk/        Static UI over recipes.json (optional)
 ```
 
 | Layer | Regenerate when | Maintainer doc |
@@ -174,13 +174,13 @@ Static React + Ant Design UI over the same data — find, forward/backward chain
 bench filter, and an in-app **Tech tree** tab (built client-side from `recipes.json`).
 
 ```bash
-cd apps/recipe-browser
+cd apps/recipe-kiosk
 npm install
 npm run build
 ```
 
-Live Server (repo root): `http://<host>:5500/apps/recipe-browser/` — use **`npm run build`**
-(relative asset paths). See [`apps/recipe-browser/README.md`](apps/recipe-browser/README.md).
+Live Server (repo root): `http://<host>:5500/apps/recipe-kiosk/` — use **`npm run build`**
+(relative asset paths). See [`apps/recipe-kiosk/README.md`](apps/recipe-kiosk/README.md).
 
 Shared TS query code: [`apps/library/recipe-query/`](apps/library/recipe-query/)
 
@@ -190,12 +190,12 @@ Shared TS query code: [`apps/library/recipe-query/`](apps/library/recipe-query/)
 
 | App | Purpose | Build |
 |-----|---------|-------|
-| [`apps/recipe-browser/`](apps/recipe-browser/) | Recipe/item search + tech tree UI | `npm run build` in app folder |
+| [`apps/recipe-kiosk/`](apps/recipe-kiosk/) | Recipe/item search + tech tree UI | `npm run build` in app folder |
 | [`apps/prefab-gallery/`](apps/prefab-gallery/) | Voxel prefab preview gallery (Three.js) | `npm run build` in app folder; needs `_Assets` |
 
 Apps are **self-contained static sites**. They are not co-deployed — serve each from its
 own path or host. Recipe browser uses relative `assets/` and `data/` paths for subfolder
-hosting (e.g. Live Server `/apps/recipe-browser/`).
+hosting (e.g. Live Server `/apps/recipe-kiosk/`).
 
 ---
 
@@ -209,7 +209,7 @@ cross-cutting tooling and docs.
 ├── synthborn-basecamp/      ← this repo
 │   ├── tools/               Reference CLIs over Hytale SDK and asset data
 │   ├── docs/                Shared indexes + research notes
-│   ├── apps/                Optional static UIs (recipe-browser, prefab-gallery)
+│   ├── apps/                Optional static UIs (recipe-kiosk, prefab-gallery)
 │   └── _Assets/             Local game extract (gitignored)
 ├── synthborn-rcon/          SynthRCON jar
 ├── synthborn-overseer/      SynthOverseer jar

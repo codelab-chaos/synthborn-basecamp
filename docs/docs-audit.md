@@ -26,7 +26,7 @@ Main causes:
 - `docs/bare-bones-synth.md` still links to `./hytale-mod-docs/...`; the folder is now `./hytale-mod-quickref/...`.
 - `docs/concepts-getting-started.md` links to missing `./HyCitizens/`, `./NPCTrading/`, `./LLM_NPC_ROLEPLAY.md`, and `./hytale-test-automation.md`.
 - `docs/hytale-synthetics.md` links to missing `./getting-started.md`, `./LLM_NPC_ROLEPLAY.md`, `./hytale-test-automation.md`, `./HyCitizens/README.md`, and `./NPCTrading/README.md`.
-- `docs/refs/labels/README.md` links to `../apps/recipe-browser/` from inside `docs/refs/labels/`, which resolves to `docs/apps/recipe-browser/`; it should be `../../apps/recipe-browser/`.
+- `docs/refs/labels/README.md` links to `../apps/recipe-kiosk/` from inside `docs/refs/labels/`, which resolves to `docs/apps/recipe-kiosk/`; it should be `../../apps/recipe-kiosk/`.
 - `docs/llm-hytale-modding-kb.md` links to `../mods/SynthUnits/`, which no longer exists in the split repo layout.
 
 Status:

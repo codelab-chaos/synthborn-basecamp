@@ -19,7 +19,7 @@ module.exports = (_env, argv) => {
         },
       },
       // Relative paths so Live Server / GitHub Pages subpaths work
-      // (e.g. :5500/apps/recipe-browser/ → assets/*.js under that folder).
+      // (e.g. :5500/apps/recipe-kiosk/ → assets/*.js under that folder).
       publicPath: "",
     },
     devtool: isProd ? false : "eval-cheap-module-source-map",
@@ -48,7 +48,7 @@ module.exports = (_env, argv) => {
       }),
     ],
     watchOptions: {
-      ignored: ["**/recipe-browser/data/**"],
+      ignored: ["**/recipe-kiosk/data/**"],
     },
     devServer: {
       static: [{ directory: appRoot, watch: false }],

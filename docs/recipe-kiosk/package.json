@@ -1,10 +1,10 @@
 {
-  "name": "recipe-browser",
+  "name": "recipe-kiosk",
   "version": "1.0.0",
   "private": true,
   "description": "Hytale recipe and item search — forward/backward chains, sources, benches",
   "scripts": {
-    "sync-data": "node ../scripts/sync-recipe-data.js recipe-browser",
+    "sync-data": "node ../scripts/sync-recipe-data.js recipe-kiosk",
     "build-web": "webpack --mode production",
     "build-icons": "node scripts/build-item-icon-atlas.js",
     "build": "npm run sync-data && npm run build-web",
