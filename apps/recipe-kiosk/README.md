@@ -5,7 +5,8 @@ Self-contained static app — tables and trees; optional item icon atlas from lo
 
 ## Data
 
-Reads `docs/refs/recipes/recipes.json` and `loot.json` (synced into `data/` at build time).
+Reads `docs/refs/recipes/recipes.json` and `loot.json` (synced into committed `data/`
+static output at build time).
 Tech tree tab builds dependency graphs **client-side** from the same recipe index — no
 separate `crafting-tech-tree.json` load.
 
@@ -42,7 +43,8 @@ Writes `data/icons-atlas/atlas-*.webp` plus `manifest.json`:
 ```
 
 Use `background-position` / `background-size` on a div, or slice coordinates in canvas.
-Icons are gitignored under `data/` — regenerate after SDK/asset updates.
+Icon atlases live under committed `data/` static output — regenerate after SDK/asset
+updates.
 
 ### URL hashes
 

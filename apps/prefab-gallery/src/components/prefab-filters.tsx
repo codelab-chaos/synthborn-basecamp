@@ -1,4 +1,4 @@
-import { Form, Input, Select } from "antd";
+import { Input, Select } from "antd";
 import { useMemo } from "react";
 import { formatPrefabLabel } from "../library/format-prefab-label";
 import {
@@ -51,38 +51,26 @@ export function PrefabFilters({
   }, [parentTags, subfolders]);
 
   return (
-    <Form
-      layout="vertical"
-      colon={false}
-      style={{
-        display: "grid",
-        gridTemplateColumns: "minmax(240px, 1fr) minmax(320px, 1.4fr)",
-        gap: 16,
-      }}
-    >
-      <Form.Item label="Search" style={{ marginBottom: 0 }}>
-        <Input.Search
-          allowClear
-          placeholder="Name, tag, dimensions"
-          value={query}
-          onChange={(event) => onQueryChange(event.target.value)}
-        />
-      </Form.Item>
+    <div className="prefab-filters">
+      <Input.Search
+        allowClear
+        placeholder="Search name, tag, dimensions…"
+        value={query}
+        onChange={(event) => onQueryChange(event.target.value)}
+      />
 
-      <Form.Item label="Tags" style={{ marginBottom: 0 }}>
-        <Select
-          mode="multiple"
-          allowClear
-          showSearch
-          placeholder="All categories"
-          value={tags}
-          onChange={onTagsChange}
-          options={selectOptions}
-          optionFilterProp="label"
-          maxTagCount="responsive"
-          style={{ width: "100%" }}
-        />
-      </Form.Item>
-    </Form>
+      <Select
+        mode="multiple"
+        allowClear
+        showSearch
+        placeholder="Filter by tag"
+        value={tags}
+        onChange={onTagsChange}
+        options={selectOptions}
+        optionFilterProp="label"
+        maxTagCount="responsive"
+        style={{ width: "100%" }}
+      />
+    </div>
   );
 }

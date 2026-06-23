@@ -29,6 +29,7 @@
     "sdk:llms": "node refs/sdk/build-sdk-llms-txt.js",
     "sdk:search": "node refs/sdk/sdk-search.js",
     "pages:build": "node ../scripts/build-github-pages.js",
-    "pages:build:icons": "node ../scripts/build-github-pages.js --icons"
+    "pages:build:icons": "node ../scripts/build-github-pages.js --icons",
+    "index:json": "node ../scripts/build-basecamp-index-json.js"
   }
 }

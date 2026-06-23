@@ -14,7 +14,6 @@ type PrefabCardProps = {
 export function PrefabCard({ entry, activeTags, onTagSelect, onExpand }: PrefabCardProps) {
   return (
     <Card
-      size="small"
       className="prefab-card"
       styles={{ body: { padding: 0 } }}
       title={

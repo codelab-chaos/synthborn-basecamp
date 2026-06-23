@@ -20,6 +20,7 @@ import { useRecipeData } from "./hooks/use-recipe-data";
 import { ItemIcon } from "./components/ui/item-icon";
 import type { ItemLinkVariant } from "./components/ui/item-link";
 import { BasecampAppNav } from "@basecamp/library/basecamp-app-nav";
+import { BasecampAppBadge } from "@basecamp/library/basecamp-app-badge";
 import { APP_TITLE } from "./library/app-meta";
 import { humanizeId } from "./library/humanize";
 import { appTheme } from "./library/theme";
@@ -151,65 +152,72 @@ export function App() {
       <AntApp>
         <IconAtlasProvider>
           <ItemNavContext.Provider value={nav}>
-            <Layout className="app-shell">
-              <Header className="app-header">
-                <Flex align="center" gap={16} wrap="wrap" className="app-header-inner">
-                  <Typography.Title level={4} className="app-title">
-                    {APP_TITLE}
-                  </Typography.Title>
-                  <AutoComplete
-                    className="app-omnibox"
-                    options={suggestions}
-                    value={query}
-                    onChange={(value) => {
-                      if (!value.startsWith(SEE_ALL_PREFIX)) setQuery(value);
-                    }}
-                    defaultActiveFirstOption={false}
-                    open={suggestOpen}
-                    onOpenChange={setSuggestOpen}
-                    onSelect={(value) => {
-                      setSuggestOpen(false);
-                      if (value.startsWith(SEE_ALL_PREFIX)) {
-                        const q = value.slice(SEE_ALL_PREFIX.length);
-                        setQuery(q);
-                        openSearch(q);
-                        return;
-                      }
-                      setQuery("");
-                      focusItem(value, "recipes");
-                    }}
-                    popupMatchSelectWidth={480}
-                  >
-                    <Input.Search
-                      placeholder="Search items, recipes, blocks…"
-                      allowClear
-                      onSearch={(value) => {
-                        if (!value.trim() || value.startsWith(SEE_ALL_PREFIX)) return;
-                        openSearch(value);
-                        setSuggestOpen(false);
-                      }}
-                    />
-                  </AutoComplete>
-                  <div className="basecamp-header-end">
-                    <BasecampAppNav current="recipeKiosk" />
-                    <Typography.Text type="secondary" className="app-stats">
-                      {recipes.counts?.recipes ?? recipes.recipes.length}
-                      {" "}
-                      recipes
-                      {hytaleVersion ? (
-                        <>
-                          {" · Hytale "}
-                          {hytaleVersion}
-                        </>
-                      ) : null}
-                      {" · "}
-                      {generatedAt}
-                    </Typography.Text>
+            <Layout className="basecamp-shell">
+              <Header className="basecamp-header">
+                <div className="basecamp-header-inner">
+                  <div className="basecamp-header-layout">
+                    <BasecampAppBadge app="recipeKiosk" variant="header-rail" />
+                    <div className="basecamp-header-main">
+                      <Flex align="center" wrap="wrap" gap={16} className="basecamp-header-row">
+                        <Typography.Title level={4} className="basecamp-title">
+                          {APP_TITLE}
+                        </Typography.Title>
+                        <div className="basecamp-header-end">
+                          <BasecampAppNav current="recipeKiosk" />
+                          <Typography.Text type="secondary" className="basecamp-stats">
+                            {recipes.counts?.recipes ?? recipes.recipes.length}
+                            {" "}
+                            recipes
+                            {hytaleVersion ? (
+                              <>
+                                {" · Hytale "}
+                                {hytaleVersion}
+                              </>
+                            ) : null}
+                            {" · "}
+                            {generatedAt}
+                          </Typography.Text>
+                        </div>
+                      </Flex>
+                      <AutoComplete
+                        className="app-omnibox"
+                        options={suggestions}
+                        value={query}
+                        onChange={(value) => {
+                          if (!value.startsWith(SEE_ALL_PREFIX)) setQuery(value);
+                        }}
+                        defaultActiveFirstOption={false}
+                        open={suggestOpen}
+                        onOpenChange={setSuggestOpen}
+                        onSelect={(value) => {
+                          setSuggestOpen(false);
+                          if (value.startsWith(SEE_ALL_PREFIX)) {
+                            const q = value.slice(SEE_ALL_PREFIX.length);
+                            setQuery(q);
+                            openSearch(q);
+                            return;
+                          }
+                          setQuery("");
+                          focusItem(value, "recipes");
+                        }}
+                        popupMatchSelectWidth={480}
+                      >
+                        <Input.Search
+                          placeholder="Search items, recipes, blocks…"
+                          allowClear
+                          onSearch={(value) => {
+                            if (!value.trim() || value.startsWith(SEE_ALL_PREFIX)) return;
+                            openSearch(value);
+                            setSuggestOpen(false);
+                          }}
+                        />
+                      </AutoComplete>
+                    </div>
                   </div>
-                </Flex>
+                </div>
               </Header>
 
-              <Content className="app-main">
+              <Content className="basecamp-main">
                 <Tabs
                   className="app-tabs"
                   type="card"

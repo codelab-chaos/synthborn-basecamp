@@ -1,7 +1,7 @@
 # Hytale Server SDK reference
 
 Offline `javap` signatures for the pinned `com.hypixel.hytale:Server` jar. Output lives in
-[`docs/refs/sdk/`](../../../docs/refs/sdk/) — one markdown file per package plus search indexes.
+[`docs/sdk/`](../../../docs/sdk/) — one markdown file per package plus search indexes.
 
 Requires JDK on `PATH` (`jar`, `javap`). No `npm install`.
 
@@ -15,12 +15,12 @@ node tools/refs/sdk/sdk-search.js --extends JavaPlugin
 node tools/refs/sdk/sdk-search.js --grep CompletableFuture
 ```
 
-Or grep the generated indexes in `docs/refs/sdk/`:
+Or grep the generated indexes in `docs/sdk/`:
 
 - `llms.txt` — classes by package
 - `methods.txt` — tab-separated method → class → package → file
 
-Topic entry points: [`docs/refs/sdk/README.md`](../../../docs/refs/sdk/README.md).
+Topic entry points: [`docs/sdk/README.md`](../../../docs/sdk/README.md).
 
 ## Refresh after a version bump
 
@@ -52,7 +52,7 @@ The extractor reads the jar version pinned in sibling mod repos (via
 | Jar resolved | `JAR: .../Server-0.5.4.jar` and `Version: 0.5.4` |
 | Full mode | `Mode: --full (auto-discovered ~915 packages)` |
 | Done | `Wrote 915 package file(s)`, `llms.txt`, `methods.json` / `methods.txt` |
-| Stamp | `docs/refs/sdk/.sdk-source.json` updated with jar fingerprint |
+| Stamp | `docs/sdk/.sdk-source.json` updated with jar fingerprint |
 
 ### Skip / force
 
@@ -70,7 +70,7 @@ rewrite files without a new jar.
 | Flag | Packages | When to use |
 |------|----------|-------------|
 | *(default)* | ~60 curated packages | Fast spot-check of mod-facing APIs |
-| `--full` | ~915 auto-discovered | **Default for repo commits** — matches current `docs/refs/sdk/` |
+| `--full` | ~915 auto-discovered | **Default for repo commits** — matches current `docs/sdk/` |
 
 ### Rebuild indexes only (fast)
 

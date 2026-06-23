@@ -39,9 +39,9 @@ basecamp answers “what APIs exist?”, “how do I craft X?”, and “what’
 | Question | Start here | CLI / file |
 |----------|------------|------------|
 | **English name for an item id** (or id from English) | [`docs/refs/labels/README.md`](docs/refs/labels/README.md) | `node tools/refs/labels/lookup.js find copper` |
-| Find an SDK class or method | [`docs/refs/sdk/README.md`](docs/refs/sdk/README.md) | `node tools/refs/sdk/sdk-search.js --method placeBlock` |
-| Plugin / NPC / inventory APIs by topic | [`docs/refs/sdk/README.md`](docs/refs/sdk/README.md) topic router | `grep ClassName docs/refs/sdk/llms.txt` |
-| Full method signatures for one class | Per-package `.md` under [`docs/refs/sdk/`](docs/refs/sdk/) | open file named after the package |
+| Find an SDK class or method | [`docs/sdk/README.md`](docs/sdk/README.md) | `node tools/refs/sdk/sdk-search.js --method placeBlock` |
+| Plugin / NPC / inventory APIs by topic | [`docs/sdk/README.md`](docs/sdk/README.md) topic router | `grep ClassName docs/sdk/llms.txt` |
+| Full method signatures for one class | Per-package `.md` under [`docs/sdk/`](docs/sdk/) | open file named after the package |
 | What changed after a Server version bump | `node tools/refs/sdk/diff-sdk-reference.js` | compare to last commit |
 | Craft tree / raw inputs for an item | [`docs/refs/recipes/README.md`](docs/refs/recipes/README.md) | `node tools/refs/recipes/gamedata.js make Weapon_Sword_Copper` |
 | What consumes an item (backward) | same | `node tools/refs/recipes/gamedata.js uses Ingredient_Bar_Copper` |
@@ -49,13 +49,13 @@ basecamp answers “what APIs exist?”, “how do I craft X?”, and “what’
 | Recipes at a bench | same | `node tools/refs/recipes/gamedata.js bench Campfire` |
 | Block / mob drops | same | `node tools/refs/recipes/gamedata.js drops Plant_Bush` |
 | Fuzzy id across recipes + loot | same | `node tools/refs/recipes/gamedata.js find Tannery` |
-| Browse recipes in a UI | [`apps/recipe-kiosk/`](apps/recipe-kiosk/) or GitHub Pages `recipe-kiosk/` | `cd tools && npm run pages:build` |
+| Browse recipes in a UI | [`apps/recipe-kiosk/`](apps/recipe-kiosk/) or GitHub Pages `/apps/recipe-kiosk/` | `cd tools && npm run pages:build` |
 | Vanilla prefab catalog (text/json) | [`docs/refs/prefabs/README.md`](docs/refs/prefabs/README.md), [`docs/refs/prefabs/prefabs-index.json`](docs/refs/prefabs/prefabs-index.json) | — |
 | Unpacked game assets on disk | `_Assets/` (local, gitignored) | [`docs/refs/assets/README.md`](docs/refs/assets/README.md) |
 | SynthUnits-oriented SDK map | sibling repo `synthborn-kyn/kyn-docs/hytale-builtin-sdk-map.md` | — |
 | Deploy / validate a mod jar | owning mod repo | `cd ../synthborn-kyn && node tools/deploy.js restart` |
 
-**Do not** read all of `docs/refs/sdk/*.md` or `docs/refs/recipes/*.json` into context.
+**Do not** read all of `docs/sdk/*.md` or `docs/refs/recipes/*.json` into context.
 Search first (`sdk-search`, `gamedata.js`, `llms.txt`, `methods.txt`), then open the
 one or two files the hit points to.
 
@@ -72,7 +72,7 @@ _Assets/                    Local unpacked Hytale game data (gitignored, multi-G
     ↓ extract
 docs/refs/labels/                en-US id ↔ English name index (from server.lang)
 docs/refs/recipes/               recipes.json, loot.json, tech-tree exports
-docs/refs/sdk/         ~915 packages, javap signatures from pinned Server jar
+docs/sdk/         ~915 packages, javap signatures from pinned Server jar
 docs/refs/prefabs/               Prefab catalog indexes
 docs/hytale-mod-quickref/   Curated human onboarding (older snapshot)
     ↓ query
@@ -112,11 +112,11 @@ node tools/refs/sdk/sdk-search.js --grep CompletableFuture
 
 Or grep the flat indexes:
 
-- [`docs/refs/sdk/llms.txt`](docs/refs/sdk/llms.txt) — class declarations by package
-- [`docs/refs/sdk/methods.txt`](docs/refs/sdk/methods.txt) — `method → class → package → file`
+- [`docs/sdk/llms.txt`](docs/sdk/llms.txt) — class declarations by package
+- [`docs/sdk/methods.txt`](docs/sdk/methods.txt) — `method → class → package → file`
 
 Topic entry points (plugin, NPC, inventory, worldgen, …):
-[`docs/refs/sdk/README.md`](docs/refs/sdk/README.md)
+[`docs/sdk/README.md`](docs/sdk/README.md)
 
 ### Refresh (15–30 min, rare)
 
@@ -193,9 +193,9 @@ Shared TS query code: [`apps/library/recipe-query/`](apps/library/recipe-query/)
 | [`apps/recipe-kiosk/`](apps/recipe-kiosk/) | Recipe/item search + tech tree UI | `npm run build` in app folder |
 | [`apps/prefab-gallery/`](apps/prefab-gallery/) | Voxel prefab preview gallery (Three.js) | `npm run build` in app folder; needs `_Assets` |
 
-Apps are **self-contained static sites**. They are not co-deployed — serve each from its
-own path or host. Recipe browser uses relative `assets/` and `data/` paths for subfolder
-hosting (e.g. Live Server `/apps/recipe-kiosk/`).
+Apps are **self-contained static sites** served in place from their app folders. GitHub
+Pages should use the repository root so `/`, `/apps/recipe-kiosk/`, and
+`/apps/prefab-gallery/` all resolve without copied app output under `docs/`.
 
 ---
 
@@ -270,7 +270,7 @@ Server lifecycle, RCON, smoke tests, and deployment live in the owning mod repos
 |-----|----------|
 | [`docs/README.md`](docs/README.md) | Full docs folder guide |
 | [`docs/refs/labels/README.md`](docs/refs/labels/README.md) | **English ↔ id lookup** (server.lang) |
-| [`docs/refs/sdk/README.md`](docs/refs/sdk/README.md) | SDK topic router |
+| [`docs/sdk/README.md`](docs/sdk/README.md) | SDK topic router |
 | [`docs/refs/recipes/README.md`](docs/refs/recipes/README.md) | Recipe/loot model + bench mechanics |
 | [`docs/hytale-mod-quickref/`](docs/hytale-mod-quickref/) | Curated modding onboarding (snapshot) |
 | [`docs/external/`](docs/external/) | Cloned reference docs (`node tools/refs/reference-docs/sync-reference-repos.js --kind docs`) |

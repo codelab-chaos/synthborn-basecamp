@@ -14,14 +14,14 @@ This note captures what we currently know about Hytale Worldgen 2 from the offic
 - Local clone of those docs:
   - `../synthborn-basecamp/docs/external/hytale-modding-site/content/docs/en/official-documentation/worldgen/`
 - Local SDK references:
-  - `../synthborn-basecamp/docs/refs/sdk/com.hypixel.hytale.builtin.hytalegenerator.plugin.md`
-  - `../synthborn-basecamp/docs/refs/sdk/com.hypixel.hytale.builtin.hytalegenerator.plugin.editor.md`
-  - `../synthborn-basecamp/docs/refs/sdk/com.hypixel.hytale.builtin.hytalegenerator.assets.*.md`
-  - `../synthborn-basecamp/docs/refs/sdk/com.hypixel.hytale.builtin.worldgen.modifier*.md`
-  - `../synthborn-basecamp/docs/refs/sdk/com.hypixel.hytale.server.core.universe.world.worldgen.provider.md`
-  - `../synthborn-basecamp/docs/refs/sdk/com.hypixel.hytale.server.worldgen.loader*.md`
-  - `../synthborn-basecamp/docs/refs/sdk/com.hypixel.hytale.server.core.command.commands.world.worldgen.md`
-  - `../synthborn-basecamp/docs/refs/sdk/com.hypixel.hytale.builtin.hytalegenerator.commands.md`
+  - `../synthborn-basecamp/docs/sdk/com.hypixel.hytale.builtin.hytalegenerator.plugin.md`
+  - `../synthborn-basecamp/docs/sdk/com.hypixel.hytale.builtin.hytalegenerator.plugin.editor.md`
+  - `../synthborn-basecamp/docs/sdk/com.hypixel.hytale.builtin.hytalegenerator.assets.*.md`
+  - `../synthborn-basecamp/docs/sdk/com.hypixel.hytale.builtin.worldgen.modifier*.md`
+  - `../synthborn-basecamp/docs/sdk/com.hypixel.hytale.server.core.universe.world.worldgen.provider.md`
+  - `../synthborn-basecamp/docs/sdk/com.hypixel.hytale.server.worldgen.loader*.md`
+  - `../synthborn-basecamp/docs/sdk/com.hypixel.hytale.server.core.command.commands.world.worldgen.md`
+  - `../synthborn-basecamp/docs/sdk/com.hypixel.hytale.builtin.hytalegenerator.commands.md`
 - Extracted asset examples:
   - `../synthborn-basecamp/_Assets/Server/HytaleGenerator/`
 - Community Google Doc:

@@ -280,7 +280,7 @@ function renderText({ recipes, byInput, byOutput, generatedAt }) {
 }
 
 function readPinnedHytaleVersion() {
-  const sdkSource = path.join(REPO_ROOT, "docs", "refs", "sdk", ".sdk-source.json");
+  const sdkSource = path.join(REPO_ROOT, "docs", "sdk", ".sdk-source.json");
   try {
     const data = JSON.parse(fs.readFileSync(sdkSource, "utf8"));
     return typeof data.version === "string" ? data.version : null;

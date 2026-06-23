@@ -2,8 +2,9 @@
 
 React 19 + Ant Design 6 + Webpack gallery for Hytale prefab voxel previews.
 
-Self-contained under `apps/prefab-gallery/` — source, build scripts, and deployable static
-output live in one folder (GitHub Pages / Live Server friendly).
+Self-contained under `apps/prefab-gallery/` — source, build scripts, generated gallery
+data, previews, and deployable static output live in one folder. Do not maintain a second
+copy under `docs/prefab-gallery/`.
 
 ## Layout
 
@@ -14,8 +15,8 @@ apps/prefab-gallery/
   index.html         built shell (committed)
   assets/            built bundles (committed)
   manifest.json      built catalog (committed)
-  data/packs/        category-sharded .pxv3 voxel packs (gitignored)
-  previews/atlas/    baked 45° webp preview atlases (gitignored)
+  data/packs/        category-sharded .pxv3 voxel packs (committed app output)
+  previews/atlas/    baked 45° webp preview atlases (committed app output)
   previews/Vanilla _Assets/  legacy per-prefab webps — **obsolete** once atlas previews exist
 ```
 

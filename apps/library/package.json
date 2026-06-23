@@ -1,0 +1,11 @@
+{
+  "name": "@basecamp/library",
+  "private": true,
+  "description": "Shared Basecamp UI and recipe-query modules for synthborn apps",
+  "devDependencies": {
+    "@types/react": "^19.2.7",
+    "antd": "^6.4.3",
+    "react": "^19.2.7",
+    "typescript": "^5.9.3"
+  }
+}

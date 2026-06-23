@@ -29,7 +29,7 @@ Search before reading:
 
 Do not load wholesale:
 
-- `docs/refs/sdk/*.md`
+- `docs/sdk/*.md`
 - `docs/refs/recipes/*.json`
 - `_Assets/`
 - `_mod-example-sourcecode/`
@@ -40,9 +40,9 @@ small files or package docs that the search result points to.
 
 Key generated reference locations:
 
-- `docs/refs/sdk/`: generated Hytale Server API signatures.
-- `docs/refs/sdk/llms.txt`: SDK package/class router.
-- `docs/refs/sdk/methods.txt`: method to class/package/file index.
+- `docs/sdk/`: generated Hytale Server API signatures.
+- `docs/sdk/llms.txt`: SDK package/class router.
+- `docs/sdk/methods.txt`: method to class/package/file index.
 - `docs/refs/labels/`: English name to Hytale id indexes.
 - `docs/refs/recipes/`: crafting, salvage, bench, source, and loot indexes.
 - `docs/refs/prefabs/`: vanilla prefab catalog indexes.

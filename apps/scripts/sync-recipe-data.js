@@ -13,7 +13,7 @@ const path = require("node:path");
 const APPS_ROOT = path.resolve(__dirname, "..");
 const REPO_ROOT = path.resolve(APPS_ROOT, "..");
 const DOCS_RECIPES = path.join(REPO_ROOT, "docs", "refs", "recipes");
-const SDK_SOURCE = path.join(REPO_ROOT, "docs", "refs", "sdk", ".sdk-source.json");
+const SDK_SOURCE = path.join(REPO_ROOT, "docs", "sdk", ".sdk-source.json");
 
 function readPinnedHytaleVersion() {
   try {

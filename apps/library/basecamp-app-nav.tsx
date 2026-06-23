@@ -1,4 +1,5 @@
 import { basecampApps, type BasecampAppId } from "./basecamp-app-links";
+import "./basecamp-shell.css";
 import "./basecamp-app-nav.css";
 
 type BasecampAppNavProps = {

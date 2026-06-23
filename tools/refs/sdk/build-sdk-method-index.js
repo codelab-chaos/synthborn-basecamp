@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /*
- * Build docs/refs/sdk/methods.json + methods.txt from per-package .md files.
+ * Build docs/sdk/methods.json + methods.txt from per-package .md files.
  * Fast — no jar/javap. Called by extract-sdk-reference.js and usable standalone.
  */
 
@@ -10,7 +10,7 @@ const fs = require("node:fs");
 const path = require("node:path");
 const { discoverPackages, parsePackageFile } = require("./library/parse-sdk-package");
 
-const DEFAULT_REF_DIR = path.resolve(__dirname, "..", "..", "..", "docs", "refs", "sdk");
+const DEFAULT_REF_DIR = path.resolve(__dirname, "..", "..", "..", "docs", "sdk");
 
 function readStampedVersion(outDir) {
   const stampPath = path.join(outDir, ".sdk-source.json");
