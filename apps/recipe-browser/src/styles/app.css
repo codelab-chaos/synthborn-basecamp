@@ -31,6 +31,12 @@ body {
   margin: 0 auto;
 }
 
+.app-title {
+  margin: 0 !important;
+  line-height: 1.25 !important;
+  max-width: min(100%, 28rem);
+}
+
 .app-omnibox {
   flex: 1 1 320px;
   min-width: 260px;
@@ -39,7 +45,6 @@ body {
 
 .app-stats {
   font-size: 12px;
-  margin-left: auto;
   white-space: nowrap;
 }
 
@@ -160,6 +165,7 @@ h3.dossier-title {
   margin: 0 0 4px;
   padding: 0;
   white-space: nowrap;
+  cursor: help;
 }
 
 .dossier-stat .ant-statistic-content {

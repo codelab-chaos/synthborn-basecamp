@@ -19,6 +19,8 @@ import { useHashRoute } from "./hooks/use-hash-route";
 import { useRecipeData } from "./hooks/use-recipe-data";
 import { ItemIcon } from "./components/ui/item-icon";
 import type { ItemLinkVariant } from "./components/ui/item-link";
+import { BasecampAppNav } from "@basecamp/library/basecamp-app-nav";
+import { APP_TITLE } from "./library/app-meta";
 import { humanizeId } from "./library/humanize";
 import { appTheme } from "./library/theme";
 import "./styles/app.css";
@@ -128,7 +130,7 @@ export function App() {
   if (error || !recipes || !loot || !catalog) {
     return (
       <Layout style={{ minHeight: "100vh", padding: 24 }}>
-        <Typography.Title level={3}>Recipe Browser</Typography.Title>
+        <Typography.Title level={3}>{APP_TITLE}</Typography.Title>
         <Typography.Paragraph type="secondary">
           Failed to load recipe data. Run
           {" "}
@@ -142,6 +144,7 @@ export function App() {
   }
 
   const generatedAt = new Date(recipes.generatedAt).toLocaleDateString();
+  const hytaleVersion = recipes.hytaleVersion ?? loot.hytaleVersion;
 
   return (
     <ConfigProvider theme={appTheme}>
@@ -151,8 +154,8 @@ export function App() {
             <Layout className="app-shell">
               <Header className="app-header">
                 <Flex align="center" gap={16} wrap="wrap" className="app-header-inner">
-                  <Typography.Title level={4} style={{ margin: 0, whiteSpace: "nowrap" }}>
-                    Recipe Browser
+                  <Typography.Title level={4} className="app-title">
+                    {APP_TITLE}
                   </Typography.Title>
                   <AutoComplete
                     className="app-omnibox"
@@ -187,13 +190,22 @@ export function App() {
                       }}
                     />
                   </AutoComplete>
-                  <Typography.Text type="secondary" className="app-stats">
-                    {recipes.counts?.recipes ?? recipes.recipes.length}
-                    {" "}
-                    recipes · data from
-                    {" "}
-                    {generatedAt}
-                  </Typography.Text>
+                  <div className="basecamp-header-end">
+                    <BasecampAppNav current="recipeBrowser" />
+                    <Typography.Text type="secondary" className="app-stats">
+                      {recipes.counts?.recipes ?? recipes.recipes.length}
+                      {" "}
+                      recipes
+                      {hytaleVersion ? (
+                        <>
+                          {" · Hytale "}
+                          {hytaleVersion}
+                        </>
+                      ) : null}
+                      {" · "}
+                      {generatedAt}
+                    </Typography.Text>
+                  </div>
                 </Flex>
               </Header>
 

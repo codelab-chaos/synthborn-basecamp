@@ -1,7 +1,7 @@
 # Research Bank
 
-This folder holds durable NPC, behavior, and AI research that supports Synthborn design
-but is not the active architecture spec.
+This folder holds durable NPC, behavior, AI, and world-layout research that supports
+Synthborn design but is not the active architecture spec.
 
 Use the active root docs first:
 
@@ -21,3 +21,4 @@ Use `../idea-bank/` for archived brainstorms and older strategy tracks.
 | [`research-advanced-npc-techniques.md`](research-advanced-npc-techniques.md) | Survey of utility AI, GOAP, HTN, smart objects, perception, social graphs, and hybrid NPC stacks. |
 | [`research-llm-npc-roleplay.md`](research-llm-npc-roleplay.md) | LLM roleplay, memory, capability-catalog, and planner/engine-boundary notes. |
 | [`bare-bones-synth.md`](bare-bones-synth.md) | Feasibility spike for the active `hytale-synthetics` plan: prove body spawn, skin, and engine seam first. |
+| [`research-procedural-town-layout.md`](research-procedural-town-layout.md) | Watabou/peer procgen survey and how scoring, spacing, and progressive growth apply to Kyn accretion and Overseer `plan_settlement`. |

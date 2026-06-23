@@ -279,6 +279,16 @@ function renderText({ recipes, byInput, byOutput, generatedAt }) {
   return lines.join("\n");
 }
 
+function readPinnedHytaleVersion() {
+  const sdkSource = path.join(REPO_ROOT, "docs", "refs", "sdk", ".sdk-source.json");
+  try {
+    const data = JSON.parse(fs.readFileSync(sdkSource, "utf8"));
+    return typeof data.version === "string" ? data.version : null;
+  } catch {
+    return null;
+  }
+}
+
 function main() {
   const opts = parseArgs(process.argv.slice(2));
   if (opts.help) { usage(); return; }
@@ -299,6 +309,7 @@ function main() {
 
   const jsonPayload = {
     generatedAt,
+    hytaleVersion: readPinnedHytaleVersion(),
     counts: {
       recipes: recipes.length,
       standalone: standaloneCount,

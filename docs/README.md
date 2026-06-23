@@ -18,10 +18,37 @@ Those live in the deployable sibling repos.
 | Read the compact Hytale modding KB | [`llm-hytale-modding-kb.md`](llm-hytale-modding-kb.md) |
 | Drill into server-side modding concepts | [`hytale-mod-quickref/`](hytale-mod-quickref/) |
 | Update Hytale version assets/API | [`hytale-version-update-checklist.md`](hytale-version-update-checklist.md) |
+| Publish a mod to CurseForge (moderation refs) | [`publishing-curseforge.md`](publishing-curseforge.md) |
 | Review docs health and cleanup plan | [`docs-audit.md`](docs-audit.md) |
 | Verify basecamp links and reference tools | `cd tools && npm run verify` |
+| Build GitHub Pages (recipe browser + prefab gallery) | `cd tools && npm run pages:build` → commit `docs/index.html`, `docs/recipe-browser/`, `docs/prefab-gallery/` |
 
-## Doc Status
+## GitHub Pages
+
+Static apps are published from the **`/docs` folder** on `main` (repo Settings → Pages →
+**Deploy from branch** → `main` → `/docs`).
+
+| URL path (project site) | App |
+|---|---|
+| `/` | Landing (`docs/index.html`) |
+| `/recipe-browser/` | Recipe browser |
+| `/prefab-gallery/` | Prefab gallery |
+
+Build before push:
+
+```bash
+cd tools && npm run pages:build
+# optional item icons (needs local _Assets):
+cd tools && npm run pages:build:icons
+```
+
+Prefab gallery needs `apps/prefab-gallery/data/packs/` and `previews/atlas/` on the machine
+that runs the build (generated locally via `npm run build` in `apps/prefab-gallery`). The
+pages script copies them into `docs/prefab-gallery/` when present.
+
+Production webpack builds use **relative** `publicPath` so `assets/` and `data/` resolve under
+each app subfolder on GitHub Pages (e.g. `…/synthborn-basecamp/recipe-browser/`).
+
 
 | Path | Status | Owner | Notes |
 |---|---|---|---|
@@ -29,7 +56,7 @@ Those live in the deployable sibling repos.
 | [`hytale-mod-quickref/`](hytale-mod-quickref/) | Active | Basecamp | Curated server-side modding reference; verified against example source and sibling repos. |
 | [`hytale-synthetics.md`](hytale-synthetics.md) | Active architecture | Basecamp / Kyn-adjacent | Promoted self-contained synth/NPC architecture track. |
 | [`research-bank/bare-bones-synth.md`](research-bank/bare-bones-synth.md) | Background spike | Basecamp / Kyn-adjacent | Minimal body/spawn spike for the active synth track. |
-| [`research-bank/`](research-bank/) | Durable research | Basecamp | NPC, behavior-tree, LLM, and body-spawn research used as background. |
+| [`research-bank/`](research-bank/) | Durable research | Basecamp | NPC, behavior-tree, LLM, body-spawn, and settlement-layout research used as background. |
 | [`idea-bank/`](idea-bank/) | Archived ideas | Basecamp | Brainstorm and older strategy docs. Useful context, not canonical direction. |
 | [`docs-audit.md`](docs-audit.md) | Maintenance | Basecamp | Audit findings and cleanup checklist. |
 

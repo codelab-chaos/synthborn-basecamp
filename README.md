@@ -49,7 +49,7 @@ basecamp answers “what APIs exist?”, “how do I craft X?”, and “what’
 | Recipes at a bench | same | `node tools/refs/recipes/gamedata.js bench Campfire` |
 | Block / mob drops | same | `node tools/refs/recipes/gamedata.js drops Plant_Bush` |
 | Fuzzy id across recipes + loot | same | `node tools/refs/recipes/gamedata.js find Tannery` |
-| Browse recipes in a UI | [`apps/recipe-browser/`](apps/recipe-browser/) | `npm run build` → Live Server at `/apps/recipe-browser/` |
+| Browse recipes in a UI | [`apps/recipe-browser/`](apps/recipe-browser/) or GitHub Pages `recipe-browser/` | `cd tools && npm run pages:build` |
 | Vanilla prefab catalog (text/json) | [`docs/refs/prefabs/README.md`](docs/refs/prefabs/README.md), [`docs/refs/prefabs/prefabs-index.json`](docs/refs/prefabs/prefabs-index.json) | — |
 | Unpacked game assets on disk | `_Assets/` (local, gitignored) | [`docs/refs/assets/README.md`](docs/refs/assets/README.md) |
 | SynthUnits-oriented SDK map | sibling repo `synthborn-kyn/kyn-docs/hytale-builtin-sdk-map.md` | — |

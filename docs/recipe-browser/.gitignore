@@ -1,0 +1,4 @@
+node_modules/
+data/
+*.hot-update.js
+*.hot-update.json

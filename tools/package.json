@@ -27,6 +27,8 @@
     "sdk:index": "node refs/sdk/build-sdk-method-index.js",
     "sdk:list": "node refs/sdk/list-hytale-server-api.js",
     "sdk:llms": "node refs/sdk/build-sdk-llms-txt.js",
-    "sdk:search": "node refs/sdk/sdk-search.js"
+    "sdk:search": "node refs/sdk/sdk-search.js",
+    "pages:build": "node ../scripts/build-github-pages.js",
+    "pages:build:icons": "node ../scripts/build-github-pages.js --icons"
   }
 }
