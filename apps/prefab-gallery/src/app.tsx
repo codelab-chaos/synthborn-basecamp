@@ -1,5 +1,8 @@
-import { ConfigProvider, Flex, Layout, Spin, theme, Typography } from "antd";
+import { ConfigProvider, Flex, Layout, Spin, Typography } from "antd";
 import { useLayoutEffect, useState } from "react";
+import { BasecampAppNav } from "@basecamp/library/basecamp-app-nav";
+import { basecampApps } from "@basecamp/library/basecamp-app-links";
+import { basecampTheme } from "@basecamp/library/basecamp-theme";
 import { resetGalleryVisibilityLayout } from "./hooks/use-element-visibility";
 import { PrefabFilters } from "./components/prefab-filters";
 import { PrefabGalleryGrid } from "./components/prefab-gallery-grid";
@@ -25,49 +28,47 @@ export function App() {
 
   if (loading) {
     return (
-      <Flex align="center" justify="center" style={{ minHeight: "100vh" }}>
-        <Spin size="large" />
-      </Flex>
+      <ConfigProvider theme={basecampTheme}>
+        <Flex align="center" justify="center" style={{ minHeight: "100vh", background: "#27272a" }}>
+          <Spin size="large" />
+        </Flex>
+      </ConfigProvider>
     );
   }
 
   if (error || !manifest) {
     return (
-      <Layout style={{ minHeight: "100vh", padding: 24 }}>
-        <Typography.Title level={3}>Prefab Preview Gallery</Typography.Title>
+      <ConfigProvider theme={basecampTheme}>
+        <Layout style={{ minHeight: "100vh", padding: 24, background: "#27272a" }}>
+        <Typography.Title level={3}>{basecampApps.prefabGallery.pageTitle}</Typography.Title>
         <Typography.Paragraph type="secondary">
           Failed to load manifest.json. Run <code>npm run build-source</code> in apps/prefab-gallery first.
           {error ? ` (${error})` : ""}
         </Typography.Paragraph>
       </Layout>
+      </ConfigProvider>
     );
   }
 
   const generatedAt = new Date(manifest.generatedAt).toLocaleString();
 
   return (
-    <ConfigProvider
-      theme={{
-        algorithm: theme.darkAlgorithm,
-        token: {
-          colorBgBase: "#101419",
-          colorBgContainer: "#171d23",
-          colorBorder: "#34404b",
-          colorPrimary: "#c06f42",
-          colorText: "#eef2f0",
-          colorTextSecondary: "#9da8a8",
-          borderRadius: 6,
-        },
-      }}
-    >
+    <ConfigProvider theme={basecampTheme}>
       <Layout className="gallery-shell">
         <Header className="gallery-header">
-          <Typography.Title level={3} style={{ margin: 0 }}>
-            Prefab Preview Gallery
-          </Typography.Title>
-          <Typography.Paragraph type="secondary" style={{ margin: "4px 0 0" }}>
-            Generated {generatedAt} · {manifest.entries.length} prefabs
-          </Typography.Paragraph>
+          <Flex align="flex-start" wrap="wrap" gap={16} className="gallery-header-top">
+            <div className="gallery-header-copy">
+              <Typography.Title level={3} style={{ margin: 0 }}>
+                {basecampApps.prefabGallery.pageTitle}
+              </Typography.Title>
+              <Typography.Paragraph type="secondary" style={{ margin: "4px 0 0" }}>
+                Generated {generatedAt} · {manifest.entries.length} prefabs
+              </Typography.Paragraph>
+            </div>
+            <div className="basecamp-header-end">
+              <BasecampAppNav current="prefabGallery" />
+            </div>
+          </Flex>
           <div style={{ marginTop: 16 }}>
             <PrefabFilters
               query={filter.state.query}

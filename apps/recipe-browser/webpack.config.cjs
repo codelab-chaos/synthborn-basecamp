@@ -2,6 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const appRoot = __dirname;
+const sharedLibrary = path.join(appRoot, "..", "library");
 
 module.exports = (_env, argv) => {
   const isProd = argv.mode === "production";
@@ -35,6 +36,10 @@ module.exports = (_env, argv) => {
     resolve: {
       extensions: [".tsx", ".ts", ".js"],
       extensionAlias: { ".js": [".ts", ".tsx", ".js"] },
+      modules: [path.join(appRoot, "node_modules"), "node_modules"],
+      alias: {
+        "@basecamp/library": sharedLibrary,
+      },
     },
     plugins: [
       new HtmlWebpackPlugin({

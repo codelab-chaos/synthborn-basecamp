@@ -17,7 +17,23 @@ body {
   height: auto !important;
   line-height: inherit !important;
   padding: 16px 24px !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.gallery-shell .ant-card {
+  box-shadow:
+    0 10px 28px rgba(0, 0, 0, 0.55),
+    0 3px 8px rgba(0, 0, 0, 0.45);
+}
+
+.gallery-header-top {
+  width: 100%;
+  align-items: flex-start;
+}
+
+.gallery-header-copy {
+  min-width: 0;
+  flex: 1 1 240px;
 }
 
 .gallery-toolbar {

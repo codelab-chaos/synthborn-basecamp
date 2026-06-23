@@ -1,5 +1,5 @@
 import { ArrowLeftOutlined } from "@ant-design/icons";
-import { Button, Card, Flex, Statistic, Tag, Typography } from "antd";
+import { Button, Card, Flex, Statistic, Tag, Tooltip, Typography } from "antd";
 import type { DossierSection } from "../library/hash-route";
 import { humanizeId } from "../library/humanize";
 import { ItemIcon } from "./ui/item-icon";
@@ -7,14 +7,33 @@ import { ItemIcon } from "./ui/item-icon";
 type StatDef = {
   key: string;
   title: string;
+  tooltip: string;
   field: "recipeCount" | "consumerCount" | "lootSourceCount";
   section: DossierSection;
 };
 
 const STATS: StatDef[] = [
-  { key: "craft", title: "Recipes to craft", field: "recipeCount", section: "recipes" },
-  { key: "uses", title: "Used as ingredient", field: "consumerCount", section: "uses" },
-  { key: "loot", title: "Loot tables", field: "lootSourceCount", section: "obtain" },
+  {
+    key: "craft",
+    title: "Recipes",
+    tooltip: "Recipes that craft this item",
+    field: "recipeCount",
+    section: "recipes",
+  },
+  {
+    key: "uses",
+    title: "Ingredients",
+    tooltip: "Recipes that use this item as an ingredient",
+    field: "consumerCount",
+    section: "uses",
+  },
+  {
+    key: "loot",
+    title: "Drops",
+    tooltip: "Loot tables and gather sources that drop this item",
+    field: "lootSourceCount",
+    section: "obtain",
+  },
 ];
 
 type ItemDossierHeaderProps = {
@@ -71,21 +90,23 @@ export function ItemDossierHeader({
         </div>
         <div className="dossier-stats-grid">
           {STATS.map((stat) => (
-            <button
-              key={stat.key}
-              type="button"
-              className={[
-                "dossier-stat-button",
-                section === stat.section ? "dossier-stat-active" : "",
-              ].filter(Boolean).join(" ")}
-              onClick={() => onSectionChange(stat.section)}
-            >
-              <Statistic
-                className="dossier-stat"
-                title={stat.title}
-                value={values[stat.field]}
-              />
-            </button>
+            <Tooltip key={stat.key} title={stat.tooltip} mouseEnterDelay={0.4}>
+              <button
+                type="button"
+                className={[
+                  "dossier-stat-button",
+                  section === stat.section ? "dossier-stat-active" : "",
+                ].filter(Boolean).join(" ")}
+                onClick={() => onSectionChange(stat.section)}
+                aria-label={stat.tooltip}
+              >
+                <Statistic
+                  className="dossier-stat"
+                  title={stat.title}
+                  value={values[stat.field]}
+                />
+              </button>
+            </Tooltip>
           ))}
         </div>
       </div>
