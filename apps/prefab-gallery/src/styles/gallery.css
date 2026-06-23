@@ -2,52 +2,25 @@
   --preview-bg: linear-gradient(180deg, #7a8088 0%, #666c74 52%, #565c64 100%);
 }
 
-body {
-  margin: 0;
-}
-
-.gallery-shell {
-  min-height: 100vh;
-}
-
-.gallery-header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  height: auto !important;
-  line-height: inherit !important;
-  padding: 16px 24px !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
-}
-
-.gallery-shell .ant-card {
-  box-shadow:
-    0 10px 28px rgba(0, 0, 0, 0.55),
-    0 3px 8px rgba(0, 0, 0, 0.45);
-}
-
-.gallery-header-top {
+.prefab-filters {
+  display: grid;
+  grid-template-columns: minmax(240px, 1fr) minmax(320px, 1.4fr);
+  gap: 16px;
   width: 100%;
-  align-items: flex-start;
-}
-
-.gallery-header-copy {
-  min-width: 0;
-  flex: 1 1 240px;
 }
 
 .gallery-toolbar {
   width: 100%;
 }
 
-.gallery-main {
-  padding: 16px 24px 32px;
-}
-
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 16px;
+}
+
+.prefab-card > .ant-card-body {
+  padding: 0 !important;
 }
 
 .prefab-card .ant-card-head {

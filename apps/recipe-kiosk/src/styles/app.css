@@ -2,57 +2,11 @@ body {
   margin: 0;
 }
 
-.app-shell {
-  min-height: 100vh;
-}
-
-/* ---------- page shell (antd layout tokens) ---------- */
-
-.app-header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  height: auto !important;
-  line-height: inherit !important;
-  padding-block: 12px !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
-}
-
-/* Container cards float above the page background */
-.ant-card {
-  box-shadow:
-    0 10px 28px rgba(0, 0, 0, 0.55),
-    0 3px 8px rgba(0, 0, 0, 0.45);
-}
-
-/* Same content column as .app-main so the brand, omnibox, and tabs share an edge */
-.app-header-inner {
-  max-width: 1392px; /* app-main 1440px minus its 24px side padding */
-  margin: 0 auto;
-}
-
-.app-title {
-  margin: 0 !important;
-  line-height: 1.25 !important;
-  max-width: min(100%, 28rem);
-}
+/* Shell layout lives in @basecamp/library/basecamp-shell.css (via BasecampAppNav). */
 
 .app-omnibox {
-  flex: 1 1 320px;
-  min-width: 260px;
-  max-width: 560px;
-}
-
-.app-stats {
-  font-size: 12px;
-  white-space: nowrap;
-}
-
-.app-main {
-  padding: 24px;
-  max-width: 1440px;
   width: 100%;
-  margin: 0 auto;
+  max-width: none;
 }
 
 /* Primary navigation — card tabs */

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /*
- * Build docs/refs/sdk/llms.txt from the already-generated per-package
+ * Build docs/sdk/llms.txt from the already-generated per-package
  * markdown files. Reads README.md for the package list/purposes, reads each
  * package .md for class declarations, emits a flat, grep-friendly index so
  * an LLM (or human) can decide which package file to cat without reading
@@ -22,7 +22,7 @@
 const fs = require("node:fs");
 const path = require("node:path");
 
-const DEFAULT_REF_DIR = path.resolve(__dirname, "..", "..", "..", "docs", "refs", "sdk");
+const DEFAULT_REF_DIR = path.resolve(__dirname, "..", "..", "..", "docs", "sdk");
 
 function readStampedVersion(outDir) {
   const stampPath = path.join(outDir, ".sdk-source.json");
@@ -101,7 +101,7 @@ function parseClasses(filePath, pkg) {
  * Build llms.txt at `${outDir}/llms.txt` from the per-package .md files in `outDir`.
  *
  * @param {object} opts
- * @param {string} [opts.outDir]   - Reference directory (default: docs/refs/sdk).
+ * @param {string} [opts.outDir]   - Reference directory (default: docs/sdk).
  * @param {boolean} [opts.quiet]   - Suppress console output.
  * @param {Array<{pkg:string,file:string,purpose:string}>} [opts.packages]
  *                                 - Pre-ordered package list (extractor passes its

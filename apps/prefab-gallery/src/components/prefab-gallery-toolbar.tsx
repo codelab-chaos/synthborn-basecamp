@@ -1,4 +1,4 @@
-import { Divider, Flex, Pagination, Typography } from "antd";
+import { Flex, Pagination, Typography } from "antd";
 
 type PrefabGalleryToolbarProps = {
   page: number;
@@ -20,9 +20,7 @@ export function PrefabGalleryToolbar({
   onPageSizeChange,
 }: PrefabGalleryToolbarProps) {
   return (
-    <>
-      <Divider style={{ margin: "16px 0 12px" }} />
-      <Flex className="gallery-toolbar" justify="space-between" align="center" wrap="wrap" gap="middle">
+    <Flex className="gallery-toolbar" justify="space-between" align="center" wrap="wrap" gap="middle">
         <Typography.Text type="secondary">
           {total
             ? `${total} of ${catalogTotal} matched · page ${page} of ${totalPages}`
@@ -38,7 +36,6 @@ export function PrefabGalleryToolbar({
           onShowSizeChange={(_, size) => onPageSizeChange(size)}
           showTotal={(count, range) => `${range[0]}-${range[1]} of ${count}`}
         />
-      </Flex>
-    </>
+    </Flex>
   );
 }
