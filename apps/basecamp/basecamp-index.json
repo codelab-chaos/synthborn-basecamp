@@ -1,6 +1,6 @@
 {
   "title": "Synthborn Basecamp",
-  "lead": "Basecamp for Hytale mods — reference data, searchable SDK signatures, recipe and prefab tools, and curated docs for the Synthborn workspace.",
+  "lead": "Basecamp for Hytale mods — reference data, recipe and prefab tools, and curated docs for the Synthborn workspace.",
   "banner": {
     "src": "apps/images/basecamp-banner.png",
     "alt": "Synthborn Basecamp"

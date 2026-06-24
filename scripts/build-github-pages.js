@@ -7,8 +7,9 @@
  *   apps/basecamp/basecamp-index.json
  *   apps/recipe-kiosk/
  *   apps/prefab-gallery/
+ *   apps/sdk-explorer/
  *
- * Usage: node scripts/build-github-pages.js [--skip-recipe] [--skip-prefab-web] [--icons]
+ * Usage: node scripts/build-github-pages.js [--skip-recipe] [--skip-prefab-web] [--skip-sdk] [--icons]
  */
 
 "use strict";
@@ -25,6 +26,7 @@ function parseArgs(argv) {
   return {
     skipRecipe: argv.includes("--skip-recipe"),
     skipPrefabWeb: argv.includes("--skip-prefab-web"),
+    skipSdk: argv.includes("--skip-sdk"),
     icons: argv.includes("--icons"),
   };
 }
@@ -83,6 +85,12 @@ function buildPrefabGalleryWeb() {
   console.log(`[pages] prefab-gallery -> ${path.relative(BASECAMP_ROOT, appDir)}`);
 }
 
+function buildSdkExplorer() {
+  const appDir = path.join(APPS_ROOT, "sdk-explorer");
+  npmRun(appDir, "build");
+  console.log(`[pages] sdk-explorer -> ${path.relative(BASECAMP_ROOT, appDir)}`);
+}
+
 function main() {
   const opts = parseArgs(process.argv.slice(2));
   console.log(`Building GitHub Pages site from ${BASECAMP_ROOT}`);
@@ -92,6 +100,7 @@ function main() {
 
   if (!opts.skipRecipe) buildRecipeKiosk(opts);
   if (!opts.skipPrefabWeb) buildPrefabGalleryWeb();
+  if (!opts.skipSdk) buildSdkExplorer();
 
   console.log("\n[done] GitHub Pages bundle ready at repo root");
   console.log("Enable: repo Settings → Pages → Deploy from branch → main → /");

@@ -6,6 +6,7 @@
  *   /index.html
  *   /apps/recipe-kiosk/
  *   /apps/prefab-gallery/
+ *   /apps/sdk-explorer/
  *
  *   node scripts/build-basecamp-index-json.js
  */
@@ -70,7 +71,7 @@ function buildBasecampIndexConfig() {
   return {
     title: "Synthborn Basecamp",
     lead:
-      "Basecamp for Hytale mods — reference data, searchable SDK signatures, recipe and prefab tools, "
+      "Basecamp for Hytale mods — reference data, recipe and prefab tools, "
       + "and curated docs for the Synthborn workspace.",
     banner: {
       src: "apps/images/basecamp-banner.png",

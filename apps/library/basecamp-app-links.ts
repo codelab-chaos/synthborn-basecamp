@@ -1,4 +1,5 @@
-export type BasecampAppId = "recipeKiosk" | "prefabGallery";
+export type BasecampAppId = "recipeKiosk" | "prefabGallery" | "sdkExplorer";
+export type BasecampLinkedAppId = Exclude<BasecampAppId, "sdkExplorer">;
 
 /** Relative URLs for Live Server at repo root (`/apps/<app>/`). */
 export const basecampApps = {
@@ -13,8 +14,15 @@ export const basecampApps = {
     id: "prefabGallery" as const,
     href: "../prefab-gallery/",
     navLabel: "Prefab Gallery",
-    pageTitle: "Prefab Preview Gallery",
+    pageTitle: "Prefab Gallery",
     iconSrc: "../images/prefab-gallery-icon.png",
+  },
+  sdkExplorer: {
+    id: "sdkExplorer" as const,
+    href: "../sdk-explorer/",
+    navLabel: "SDK Explorer",
+    pageTitle: "Hytale SDK Explorer",
+    iconSrc: "../images/sdk-explorer-icon.png",
   },
 } satisfies Record<BasecampAppId, {
   id: BasecampAppId;
@@ -23,3 +31,5 @@ export const basecampApps = {
   pageTitle: string;
   iconSrc: string;
 }>;
+
+export const basecampLinkedAppIds: BasecampLinkedAppId[] = ["recipeKiosk", "prefabGallery"];

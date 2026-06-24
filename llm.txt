@@ -23,6 +23,7 @@ Search before reading:
 - Labels: `cd tools && npm run labels:lookup -- find copper`
 - Recipes and loot: `cd tools && npm run recipes:gamedata -- source Ingredient_Leather`
 - SDK classes and methods: `cd tools && npm run sdk:search -- --method placeBlock`
+- SDK Explorer app data: `cd tools && npm run sdk:app-data`
 - Example mod repos: `cd tools && npm run examples:list`
 - External docs mirrors: `cd tools && npm run docs:list`
 - Basecamp health: `cd tools && npm run verify`
@@ -43,6 +44,7 @@ Key generated reference locations:
 - `docs/sdk/`: generated Hytale Server API signatures.
 - `docs/sdk/llms.txt`: SDK package/class router.
 - `docs/sdk/methods.txt`: method to class/package/file index.
+- `apps/sdk-explorer/data/sdk-reference.json`: static app data generated from `docs/sdk`.
 - `docs/refs/labels/`: English name to Hytale id indexes.
 - `docs/refs/recipes/`: crafting, salvage, bench, source, and loot indexes.
 - `docs/refs/prefabs/`: vanilla prefab catalog indexes.

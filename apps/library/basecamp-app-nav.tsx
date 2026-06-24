@@ -1,4 +1,4 @@
-import { basecampApps, type BasecampAppId } from "./basecamp-app-links";
+import { basecampApps, basecampLinkedAppIds, type BasecampAppId } from "./basecamp-app-links";
 import "./basecamp-shell.css";
 import "./basecamp-app-nav.css";
 
@@ -7,7 +7,7 @@ type BasecampAppNavProps = {
 };
 
 export function BasecampAppNav({ current }: BasecampAppNavProps) {
-  const links = (Object.keys(basecampApps) as BasecampAppId[]).filter((id) => id !== current);
+  const links = basecampLinkedAppIds.filter((id) => id !== current);
 
   return (
     <nav className="basecamp-app-nav" aria-label="Basecamp apps">

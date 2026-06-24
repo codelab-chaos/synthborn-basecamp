@@ -50,6 +50,7 @@ basecamp answers “what APIs exist?”, “how do I craft X?”, and “what’
 | Block / mob drops | same | `node tools/refs/recipes/gamedata.js drops Plant_Bush` |
 | Fuzzy id across recipes + loot | same | `node tools/refs/recipes/gamedata.js find Tannery` |
 | Browse recipes in a UI | [`apps/recipe-kiosk/`](apps/recipe-kiosk/) or GitHub Pages `/apps/recipe-kiosk/` | `cd tools && npm run pages:build` |
+| Browse SDK classes in a UI | [`apps/sdk-explorer/`](apps/sdk-explorer/) or GitHub Pages `/apps/sdk-explorer/` | `cd tools && npm run pages:build` |
 | Vanilla prefab catalog (text/json) | [`docs/refs/prefabs/README.md`](docs/refs/prefabs/README.md), [`docs/refs/prefabs/prefabs-index.json`](docs/refs/prefabs/prefabs-index.json) | — |
 | Unpacked game assets on disk | `_Assets/` (local, gitignored) | [`docs/refs/assets/README.md`](docs/refs/assets/README.md) |
 | SynthUnits-oriented SDK map | sibling repo `synthborn-kyn/kyn-docs/hytale-builtin-sdk-map.md` | — |
@@ -192,6 +193,7 @@ Shared TS query code: [`apps/library/recipe-query/`](apps/library/recipe-query/)
 |-----|---------|-------|
 | [`apps/recipe-kiosk/`](apps/recipe-kiosk/) | Recipe/item search + tech tree UI | `npm run build` in app folder |
 | [`apps/prefab-gallery/`](apps/prefab-gallery/) | Voxel prefab preview gallery (Three.js) | `npm run build` in app folder; needs `_Assets` |
+| [`apps/sdk-explorer/`](apps/sdk-explorer/) | SDK wildcard search over markdown cards | `npm run build` in app folder |
 
 Apps are **self-contained static sites** served in place from their app folders. GitHub
 Pages should use the repository root so `/`, `/apps/recipe-kiosk/`, and

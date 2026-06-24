@@ -25,6 +25,7 @@
     "sdk:diff": "node refs/sdk/diff-sdk-reference.js",
     "sdk:extract": "node refs/sdk/extract-sdk-reference.js --full",
     "sdk:index": "node refs/sdk/build-sdk-method-index.js",
+    "sdk:app-data": "node refs/sdk/build-sdk-app-data.js",
     "sdk:list": "node refs/sdk/list-hytale-server-api.js",
     "sdk:llms": "node refs/sdk/build-sdk-llms-txt.js",
     "sdk:search": "node refs/sdk/sdk-search.js",

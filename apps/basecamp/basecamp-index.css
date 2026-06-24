@@ -95,6 +95,11 @@ a.app-card {
   background-position: 80% 5% !important;
 }
 
+.app-card--sdk-explorer {
+  background-size: cover !important;
+  background-position: center !important;
+}
+
 a.app-card:hover {
   border-color: color-mix(in srgb, var(--accent) 55%, var(--border));
   transform: translateY(-2px);
