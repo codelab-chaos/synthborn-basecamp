@@ -9,11 +9,15 @@
     return node;
   }
 
+  function assetUrl(src) {
+    return new URL(src, window.location.href).href;
+  }
+
   function renderAppCard(app, bannerSrc) {
     const link = el("a", `app-card app-card--${app.tile}`);
     link.href = app.href;
     link.setAttribute("aria-label", app.title);
-    link.style.backgroundImage = `url("${app.image || bannerSrc}")`;
+    link.style.backgroundImage = `url("${assetUrl(app.image || bannerSrc)}")`;
 
     const item = el("li");
     item.appendChild(link);
@@ -46,17 +50,17 @@
     root.removeAttribute("aria-busy");
 
     const bannerSrc = config.banner.src;
-
-    const banner = document.createElement("img");
-    banner.className = "banner";
-    banner.src = bannerSrc;
-    banner.alt = config.banner.alt;
-    banner.width = 1920;
-    banner.height = 220;
-    root.appendChild(banner);
+    root.style.setProperty("--basecamp-banner-image", `url("${assetUrl(bannerSrc)}")`);
 
     const main = el("main");
-    main.appendChild(el("p", "lead", config.lead));
+    const titleImage = el("div", "basecamp-title-image");
+    titleImage.setAttribute("role", "img");
+    titleImage.setAttribute("aria-label", config.title || config.banner.alt);
+    main.appendChild(titleImage);
+
+    if (config.lead?.trim()) {
+      main.appendChild(el("p", "lead", config.lead));
+    }
 
     const appsSection = el("section", "section");
     appsSection.appendChild(el("h2", null, "Apps"));

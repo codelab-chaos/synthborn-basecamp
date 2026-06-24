@@ -124,7 +124,6 @@ export function PrefabViewerModal({ entry, open, onClose }: PrefabViewerModalPro
           <Typography.Paragraph type="secondary" className="prefab-viewer-modal__path">
             {entry.id} · {entry.path}
           </Typography.Paragraph>
-          <div ref={hostRef} className="modal-viewer" />
           <div className="modal-controls">
             <div>
               <Typography.Text>Top slice</Typography.Text>
@@ -135,6 +134,7 @@ export function PrefabViewerModal({ entry, open, onClose }: PrefabViewerModalPro
               <Slider min={0} max={maxSide} value={sideSlice} onChange={setSideSlice} />
             </div>
           </div>
+          <div ref={hostRef} className="modal-viewer" />
         </div>
       ) : null}
     </Modal>
