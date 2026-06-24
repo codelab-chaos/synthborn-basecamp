@@ -1,4 +1,4 @@
-import { Button, Card, Flex, Typography } from "antd";
+import { Button, Card, Typography } from "antd";
 import type { PrefabEntry } from "../library/types";
 import { MaterialStrip } from "./material-strip";
 import { PrefabPathLinks } from "./prefab-path-links";
@@ -14,22 +14,31 @@ type PrefabCardProps = {
 export function PrefabCard({ entry, activeTags, onTagSelect, onExpand }: PrefabCardProps) {
   return (
     <Card
-      size="small"
       className="prefab-card"
       styles={{ body: { padding: 0 } }}
-      title={
-        <Typography.Text ellipsis={{ tooltip: entry.label }} strong>
-          {entry.label}
-        </Typography.Text>
-      }
-      extra={
-        <Typography.Text type="success" style={{ fontSize: 12, textAlign: "right", whiteSpace: "nowrap" }}>
-          {entry.bounds}
-          <br />
-          {entry.blockCount} blocks
-        </Typography.Text>
-      }
     >
+      <div className="prefab-card__header">
+        <div className="prefab-card__title-row">
+          <Typography.Text ellipsis={{ tooltip: entry.label }} strong className="prefab-card__title">
+            {entry.label}
+          </Typography.Text>
+          <Button
+            size="small"
+            type="text"
+            className="prefab-icon-button prefab-icon-button--maximize"
+            aria-label={`Maximize ${entry.label}`}
+            title="Maximize preview"
+            onClick={() => onExpand(entry)}
+          >
+            <span className="prefab-window-icon prefab-window-icon--maximize" aria-hidden="true" />
+          </Button>
+        </div>
+        <Typography.Text type="success" className="prefab-card__stats">
+          <span>{entry.bounds}</span>
+          <span>{entry.blockCount} blocks</span>
+        </Typography.Text>
+      </div>
+
       <div className="prefab-card__meta">
         <Typography.Text type="secondary" ellipsis={{ tooltip: entry.id }} className="prefab-card__id">
           {entry.id}
@@ -38,14 +47,6 @@ export function PrefabCard({ entry, activeTags, onTagSelect, onExpand }: PrefabC
       </div>
 
       <div className="prefab-card__preview-wrap">
-        <Flex className="prefab-card__view-label" justify="space-between" align="center">
-          <Typography.Text type="secondary" style={{ fontSize: 11, textTransform: "uppercase" }}>
-            Front
-          </Typography.Text>
-          <Button size="small" type="primary" onClick={() => onExpand(entry)}>
-            Expand
-          </Button>
-        </Flex>
         <VoxelPreview
           voxelData={entry.voxelData}
           preview={entry.preview}

@@ -23,13 +23,14 @@ Search before reading:
 - Labels: `cd tools && npm run labels:lookup -- find copper`
 - Recipes and loot: `cd tools && npm run recipes:gamedata -- source Ingredient_Leather`
 - SDK classes and methods: `cd tools && npm run sdk:search -- --method placeBlock`
+- SDK Explorer app data: `cd tools && npm run sdk:app-data`
 - Example mod repos: `cd tools && npm run examples:list`
 - External docs mirrors: `cd tools && npm run docs:list`
 - Basecamp health: `cd tools && npm run verify`
 
 Do not load wholesale:
 
-- `docs/refs/sdk/*.md`
+- `docs/sdk/*.md`
 - `docs/refs/recipes/*.json`
 - `_Assets/`
 - `_mod-example-sourcecode/`
@@ -40,9 +41,10 @@ small files or package docs that the search result points to.
 
 Key generated reference locations:
 
-- `docs/refs/sdk/`: generated Hytale Server API signatures.
-- `docs/refs/sdk/llms.txt`: SDK package/class router.
-- `docs/refs/sdk/methods.txt`: method to class/package/file index.
+- `docs/sdk/`: generated Hytale Server API signatures.
+- `docs/sdk/llms.txt`: SDK package/class router.
+- `docs/sdk/methods.txt`: method to class/package/file index.
+- `apps/sdk-explorer/data/sdk-reference.json`: static app data generated from `docs/sdk`.
 - `docs/refs/labels/`: English name to Hytale id indexes.
 - `docs/refs/recipes/`: crafting, salvage, bench, source, and loot indexes.
 - `docs/refs/prefabs/`: vanilla prefab catalog indexes.
@@ -51,7 +53,7 @@ Key generated reference locations:
 Research routing:
 
 - Active Synth/NPC architecture: `docs/hytale-synthetics.md`
-- Durable NPC and behavior-tree research: `docs/research-bank/README.md`
+- Durable NPC, behavior-tree, and layout research: `docs/research-bank/README.md`
 - Archived brainstorms and older planning: `docs/idea-bank/README.md`
 - Worldgen V2 research and tooling: `worldgenV2/`
 

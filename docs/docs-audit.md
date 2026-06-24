@@ -19,14 +19,14 @@ The strongest material is the generated reference layer and the compact LLM/quic
 
 ### 1. Broken Local Links
 
-A local markdown link scan found 35 broken links in internal markdown, excluding `docs/external/` and `docs/refs/sdk/`.
+A local markdown link scan found 35 broken links in internal markdown, excluding `docs/external/` and `docs/sdk/`.
 
 Main causes:
 
 - `docs/bare-bones-synth.md` still links to `./hytale-mod-docs/...`; the folder is now `./hytale-mod-quickref/...`.
 - `docs/concepts-getting-started.md` links to missing `./HyCitizens/`, `./NPCTrading/`, `./LLM_NPC_ROLEPLAY.md`, and `./hytale-test-automation.md`.
 - `docs/hytale-synthetics.md` links to missing `./getting-started.md`, `./LLM_NPC_ROLEPLAY.md`, `./hytale-test-automation.md`, `./HyCitizens/README.md`, and `./NPCTrading/README.md`.
-- `docs/refs/labels/README.md` links to `../apps/recipe-browser/` from inside `docs/refs/labels/`, which resolves to `docs/apps/recipe-browser/`; it should be `../../apps/recipe-browser/`.
+- `docs/refs/labels/README.md` links to `../apps/recipe-kiosk/` from inside `docs/refs/labels/`, which resolves to `docs/apps/recipe-kiosk/`; it should be `../../apps/recipe-kiosk/`.
 - `docs/llm-hytale-modding-kb.md` links to `../mods/SynthUnits/`, which no longer exists in the split repo layout.
 
 Status:
@@ -168,7 +168,7 @@ Recommended cleanup:
 | `docs/README.md` | High | Rewritten as canonical docs map | Keep current as the first docs router. |
 | `docs/llm-hytale-modding-kb.md` | High | Some verified-source paths stale | Keep, fix provenance and sibling repo links. |
 | `docs/hytale-mod-quickref/` | High | Strong content, stale provenance and old refresh workflow | Keep, fix source paths and update refresh instructions. |
-| `docs/refs/sdk/` | High | Huge generated surface | Keep generated; route users through `sdk-search`, `llms.txt`, `methods.txt`. |
+| `docs/sdk/` | High | Huge generated surface | Keep generated; route users through `sdk-search`, `llms.txt`, `methods.txt`. |
 | `docs/refs/recipes/` | High | Huge generated surface with some `TODO` bench labels | Keep; note generator limitations. |
 | `docs/refs/labels/` | High | One broken app link | Keep; fix link. |
 | `docs/hytale-version-update-checklist.md` | High | Needs explicit decentralized ownership wording | Keep and update. |

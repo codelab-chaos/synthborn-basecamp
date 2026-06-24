@@ -1,0 +1,30 @@
+{
+  "name": "sdk-explorer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Searchable Hytale SDK markdown card explorer",
+  "scripts": {
+    "sync-data": "node ../../tools/refs/sdk/build-sdk-app-data.js",
+    "build-web": "webpack --mode production",
+    "build": "npm run sync-data && npm run build-web",
+    "dev": "npm run sync-data && webpack serve --mode development",
+    "serve": "node ../recipe-kiosk/scripts/serve-static.js ."
+  },
+  "dependencies": {
+    "antd": "^6.4.3",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.6",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.4",
+    "typescript": "^5.9.3",
+    "webpack": "^5.104.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.3"
+  }
+}

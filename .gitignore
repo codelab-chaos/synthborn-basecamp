@@ -13,6 +13,15 @@ remote-host.env
 #   node tools/refs/reference-docs/sync-reference-repos.js --kind docs
 docs/external/
 
+# Static apps are owned under / and apps/. Do not keep generated app copies
+# under docs/.
+docs/index.html
+docs/basecamp-index.css
+docs/basecamp-index.js
+docs/basecamp-index.json
+docs/recipe-kiosk/
+docs/prefab-gallery/
+
 # _mod-example-sourcecode/ — local example Hytale mod repo cache. This can contain
 # nested Git repos; keep it out of basecamp Git and VS Code Git sensors.
 # Re-create with:

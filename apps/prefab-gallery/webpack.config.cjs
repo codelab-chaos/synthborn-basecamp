@@ -2,6 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const galleryRoot = __dirname;
+const sharedLibrary = path.join(galleryRoot, "..", "library");
 
 module.exports = (env, argv) => {
   const isProd = argv.mode === "production";
@@ -41,6 +42,10 @@ module.exports = (env, argv) => {
       extensions: [".tsx", ".ts", ".js"],
       extensionAlias: {
         ".js": [".ts", ".tsx", ".js"],
+      },
+      modules: [path.join(galleryRoot, "node_modules"), "node_modules"],
+      alias: {
+        "@basecamp/library": sharedLibrary,
       },
     },
     plugins: [

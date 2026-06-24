@@ -15,7 +15,7 @@ const path = require("node:path");
 const { execFileSync } = require("node:child_process");
 const { parsePackageMarkdown } = require("./library/parse-sdk-package");
 
-const DEFAULT_REF_DIR = path.resolve(__dirname, "..", "..", "..", "docs", "refs", "sdk");
+const DEFAULT_REF_DIR = path.resolve(__dirname, "..", "..", "..", "docs", "sdk");
 
 function parseArgs(argv) {
   const opts = { refDir: DEFAULT_REF_DIR, against: "HEAD" };
@@ -44,7 +44,7 @@ function usage() {
   console.log(`Usage:
   node tools/refs/sdk/diff-sdk-reference.js [--against <git-ref|dir>] [--out <dir>]
 
-Compares the current docs/refs/sdk tree to:
+Compares the current docs/sdk tree to:
   - a git ref (default: HEAD) — reads committed .md blobs
   - another directory on disk
 

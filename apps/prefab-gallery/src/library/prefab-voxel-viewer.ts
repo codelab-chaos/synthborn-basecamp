@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import { buildVoxelMesh, enrichPreviewRgb, setInstanceColor } from "./build-voxel-mesh";
-import type { UnpackedVoxels, ViewerOptions, VoxelViewer } from "./types";
+import type { UnpackedVoxels, ViewerOptions, VoxelViewer, VoxelViewerMode } from "./types";
 
 const CAMERA_AZIMUTH = 0;
 const CAMERA_ELEVATION = Math.PI / 4;
@@ -14,6 +14,22 @@ export function placePreviewCamera(camera: THREE.PerspectiveCamera, maxDim: numb
   const z = horiz * Math.cos(CAMERA_AZIMUTH);
   const y = radius * Math.sin(CAMERA_ELEVATION);
   camera.position.set(x, y, z);
+  camera.lookAt(0, 0, 0);
+}
+
+function placeViewerCamera(camera: THREE.PerspectiveCamera, maxDim: number, mode: VoxelViewerMode) {
+  const radius = maxDim * 2.35;
+
+  if (mode === "front") {
+    camera.position.set(0, 0, radius);
+  } else if (mode === "right") {
+    camera.position.set(radius, 0, 0);
+  } else {
+    const elevation = Math.PI / 5;
+    const horiz = radius * Math.cos(elevation);
+    camera.position.set(horiz * 0.72, radius * Math.sin(elevation), horiz * 0.72);
+  }
+
   camera.lookAt(0, 0, 0);
 }
 
@@ -32,7 +48,6 @@ export function installPreviewLighting(scene: THREE.Scene) {
 
 export function configureRenderer(renderer: THREE.WebGLRenderer) {
   renderer.setClearColor(0x000000, 0);
-  renderer.premultipliedAlpha = false;
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   renderer.toneMapping = THREE.NoToneMapping;
 }
@@ -44,6 +59,7 @@ export function createViewer(container: HTMLElement, options: ViewerOptions = {}
   const renderer = new THREE.WebGLRenderer({
     antialias: options.antialias !== false,
     alpha: true,
+    premultipliedAlpha: false,
     preserveDrawingBuffer: options.preserveDrawingBuffer === true,
   });
   configureRenderer(renderer);
@@ -99,6 +115,7 @@ export function createViewer(container: HTMLElement, options: ViewerOptions = {}
   let frameId = 0;
   let disposed = false;
   let currentPayload: UnpackedVoxels | null = null;
+  let currentViewMode: VoxelViewerMode | null = null;
   let pointerId: number | null = null;
   let middlePointerId: number | null = null;
   let windowDragBound = false;
@@ -200,6 +217,17 @@ export function createViewer(container: HTMLElement, options: ViewerOptions = {}
   function setHomeView() {
     setHomeRotation();
     setHomeCamera();
+  }
+
+  function setCameraMode(mode: VoxelViewerMode) {
+    currentViewMode = mode;
+    if (!currentPayload) return;
+
+    const maxDim = Math.max(currentPayload.size[0], currentPayload.size[1], currentPayload.size[2]);
+    placeViewerCamera(camera, maxDim, mode);
+    captureHomeCamera();
+    setHomeView();
+    resize();
   }
 
   function easeInCubic(t: number) {
@@ -461,7 +489,11 @@ export function createViewer(container: HTMLElement, options: ViewerOptions = {}
       root.add(buildVoxelMesh(payload));
 
       const maxDim = Math.max(currentPayload.size[0], currentPayload.size[1], currentPayload.size[2]);
-      placePreviewCamera(camera, maxDim);
+      if (currentViewMode) {
+        placeViewerCamera(camera, maxDim, currentViewMode);
+      } else {
+        placePreviewCamera(camera, maxDim);
+      }
       captureHomeCamera();
       setHomeView();
       resize();
@@ -492,6 +524,9 @@ export function createViewer(container: HTMLElement, options: ViewerOptions = {}
       mesh.count = visible;
       mesh.instanceMatrix.needsUpdate = true;
       if (mesh.instanceColor) mesh.instanceColor.needsUpdate = true;
+    },
+    setViewMode(mode: VoxelViewerMode) {
+      setCameraMode(mode);
     },
     getPayload() {
       return currentPayload;

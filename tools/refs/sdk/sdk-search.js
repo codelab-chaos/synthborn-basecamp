@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /*
- * Search docs/refs/sdk by class, method, package, or free-text grep.
+ * Search docs/sdk by class, method, package, or free-text grep.
  *
  * Usage:
  *   node tools/refs/sdk/sdk-search.js BlockPlaceUtils
@@ -16,7 +16,7 @@ const fs = require("node:fs");
 const path = require("node:path");
 const { loadReference } = require("./library/parse-sdk-package");
 
-const DEFAULT_REF_DIR = path.resolve(__dirname, "..", "..", "..", "docs", "refs", "sdk");
+const DEFAULT_REF_DIR = path.resolve(__dirname, "..", "..", "..", "docs", "sdk");
 const MAX_RESULTS = 40;
 
 function parseArgs(argv) {
@@ -84,7 +84,7 @@ function usage() {
   node tools/refs/sdk/sdk-search.js --grep <text>
 
 Options:
-  --out <dir>   SDK reference directory (default: docs/refs/sdk)
+  --out <dir>   SDK reference directory (default: docs/sdk)
   --limit N     Max results (default: ${MAX_RESULTS})
 `);
 }

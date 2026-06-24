@@ -29,6 +29,7 @@ export type Recipe = {
 
 export type RecipesFile = {
   generatedAt: string;
+  hytaleVersion?: string;
   counts?: Record<string, number>;
   recipes: Recipe[];
 };
@@ -61,6 +62,7 @@ export type LootSource = {
 
 export type LootFile = {
   generatedAt: string;
+  hytaleVersion?: string;
   blocks: LootBlock[];
   droplists: { id: string }[];
   byItem: Record<string, LootSource[]>;

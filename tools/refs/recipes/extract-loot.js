@@ -405,6 +405,16 @@ function renderText({ droplists, blocks, byItem, generatedAt }) {
   return lines.join("\n");
 }
 
+function readPinnedHytaleVersion() {
+  const sdkSource = path.join(REPO_ROOT, "docs", "sdk", ".sdk-source.json");
+  try {
+    const data = JSON.parse(fs.readFileSync(sdkSource, "utf8"));
+    return typeof data.version === "string" ? data.version : null;
+  } catch {
+    return null;
+  }
+}
+
 function main() {
   const opts = parseArgs(process.argv.slice(2));
   if (opts.help) { usage(); return; }
@@ -424,6 +434,7 @@ function main() {
 
   const jsonPayload = {
     generatedAt,
+    hytaleVersion: readPinnedHytaleVersion(),
     counts: {
       droplists: droplists.length,
       blocks: blocks.length,
