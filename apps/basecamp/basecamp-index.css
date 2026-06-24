@@ -22,19 +22,65 @@ body {
   line-height: 1.5;
 }
 
-.banner {
-  display: block;
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  object-position: center 83%;
-  border-bottom: 1px solid var(--border);
+#basecamp-root {
+  min-height: 100vh;
+  padding: clamp(20px, 4vh, 44px) 24px 64px;
+  background:
+    linear-gradient(180deg, rgba(9, 13, 19, 0.18), rgba(9, 13, 19, 0.76) 72%, rgba(9, 13, 19, 0.92)),
+    var(--basecamp-banner-image),
+    var(--bg-base);
+  background-attachment: fixed;
+  background-position: center 52%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 main {
   max-width: 880px;
   margin: 0 auto;
-  padding: 32px 24px 64px;
+  padding: 18px 24px 24px;
+  border: 1px solid rgba(215, 229, 242, 0.16);
+  border-radius: 14px;
+  background: rgba(13, 18, 26, 0.68);
+  box-shadow:
+    0 22px 54px rgba(0, 0, 0, 0.48),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px) saturate(1.15);
+}
+
+.basecamp-title-image {
+  position: relative;
+  height: clamp(80px, 17vw, 80px);
+  margin: 0 0 22px;
+  overflow: hidden;
+  border: 1px solid rgba(215, 229, 242, 0.12);
+  border-radius: 10px;
+  background: rgba(8, 12, 18, 0.32);
+  box-shadow: inset 0 -54px 76px rgba(0, 0, 0, 0.24);
+}
+
+.basecamp-title-image::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(1280px, 142vw);
+  aspect-ratio: 1672 / 941;
+  background-image: var(--basecamp-banner-image);
+  background-position: 50% 52%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  content: "";
+  transform: translate(-35%, -76%);
+}
+
+.basecamp-title-image::after {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(7, 10, 15, 0.42), rgba(7, 10, 15, 0.03) 42%, rgba(7, 10, 15, 0.38)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(0, 0, 0, 0.2));
+  content: "";
+  pointer-events: none;
 }
 
 .lead {
@@ -159,4 +205,26 @@ footer {
 .basecamp-index--error {
   padding: 24px;
   color: var(--muted);
+}
+
+@media (max-width: 720px) {
+  #basecamp-root {
+    padding: 16px 12px 40px;
+    background-attachment: scroll;
+    background-position: center top;
+  }
+
+  main {
+    padding: 18px;
+    border-radius: 12px;
+  }
+
+  .basecamp-title-image {
+    height: clamp(108px, 32vw, 150px);
+    margin-bottom: 18px;
+  }
+
+  .basecamp-title-image::before {
+    width: max(760px, 168vw);
+  }
 }

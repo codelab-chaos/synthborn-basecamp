@@ -7,14 +7,14 @@ export const basecampApps = {
     id: "recipeKiosk" as const,
     href: "../recipe-kiosk/",
     navLabel: "Recipe Kiosk",
-    pageTitle: "Synthborn Basecamp: Hytale Recipe Kiosk",
+    pageTitle: "Hytale Recipe Kiosk",
     iconSrc: "../images/recipe-kiosk-icon.png",
   },
   prefabGallery: {
     id: "prefabGallery" as const,
     href: "../prefab-gallery/",
-    navLabel: "Prefab Gallery",
-    pageTitle: "Prefab Gallery",
+    navLabel: "Hytale Prefab Gallery",
+    pageTitle: "Hytale Prefab Gallery",
     iconSrc: "../images/prefab-gallery-icon.png",
   },
   sdkExplorer: {

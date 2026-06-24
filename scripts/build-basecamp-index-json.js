@@ -70,9 +70,7 @@ const ROOT_INDEX_HTML = `<!doctype html>
 function buildBasecampIndexConfig() {
   return {
     title: "Synthborn Basecamp",
-    lead:
-      "Basecamp for Hytale mods — reference data, recipe and prefab tools, "
-      + "and curated docs for the Synthborn workspace.",
+    lead: "",
     banner: {
       src: "apps/images/basecamp-banner.png",
       alt: "Synthborn Basecamp",
