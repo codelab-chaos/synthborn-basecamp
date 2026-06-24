@@ -13,7 +13,7 @@
     const link = el("a", `app-card app-card--${app.tile}`);
     link.href = app.href;
     link.setAttribute("aria-label", app.title);
-    link.style.backgroundImage = `url("${bannerSrc}")`;
+    link.style.backgroundImage = `url("${app.image || bannerSrc}")`;
 
     const item = el("li");
     item.appendChild(link);

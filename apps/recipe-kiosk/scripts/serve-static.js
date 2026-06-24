@@ -17,7 +17,12 @@ const types = {
 
 http.createServer((req, res) => {
   const urlPath = decodeURIComponent(new URL(req.url, `http://${host}`).pathname);
-  const target = path.resolve(root, urlPath === "/" ? "index.html" : `.${urlPath}`);
+  const relativePath = urlPath === "/"
+    ? "index.html"
+    : urlPath.endsWith("/")
+      ? `.${urlPath}index.html`
+      : `.${urlPath}`;
+  const target = path.resolve(root, relativePath);
   if (!target.startsWith(root)) {
     res.writeHead(403);
     res.end("Forbidden");

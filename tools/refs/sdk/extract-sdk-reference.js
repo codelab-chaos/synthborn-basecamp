@@ -25,6 +25,7 @@ const path = require("node:path");
 const { execFileSync } = require("node:child_process");
 const { buildLlmsTxt } = require("./build-sdk-llms-txt");
 const { buildMethodIndex } = require("./build-sdk-method-index");
+const { buildSdkAppData } = require("./build-sdk-app-data");
 const { MODULE_DIRS, modDir } = require("../../lib/workspace");
 
 // Curated to the "neighborhood" a synth-style plugin works in. Reading
@@ -433,6 +434,8 @@ function main() {
       if (fingerprintMatches(prev, fingerprint)) {
         console.log(`Up to date: already extracted from this jar (version ${version || "?"}, `
           + `${opts.full ? "full" : "curated"} mode). Pass --force to re-extract.`);
+        const appData = buildSdkAppData({ refDir: outDir });
+        console.log(`Wrote SDK app data: ${appData.counts.classes} classes, ${appData.counts.dependencies} dependency edges`);
         return;
       }
     } catch { /* malformed stamp — fall through and re-extract */ }
@@ -466,6 +469,9 @@ function main() {
 
   const methods = buildMethodIndex({ outDir, quiet: true, version });
   console.log(`Wrote methods index: ${methods.entries} entries, ${methods.uniqueMethods} unique names`);
+
+  const appData = buildSdkAppData({ refDir: outDir });
+  console.log(`Wrote SDK app data: ${appData.counts.classes} classes, ${appData.counts.dependencies} dependency edges`);
 
   // Record the fingerprint so the next run can skip when nothing changed.
   fs.writeFileSync(stampPath, JSON.stringify(fingerprint, null, 2) + "\n");

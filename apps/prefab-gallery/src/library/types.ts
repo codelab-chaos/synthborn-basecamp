@@ -60,9 +60,12 @@ export type ViewerOptions = {
   tiltY?: number;
 };
 
+export type VoxelViewerMode = "front" | "right" | "3d";
+
 export type VoxelViewer = {
   load: (payload: UnpackedVoxels) => void;
   applySlices: (top: number, side: number) => void;
+  setViewMode: (mode: VoxelViewerMode) => void;
   getPayload: () => UnpackedVoxels | null;
   captureSnapshot: (target: HTMLCanvasElement) => boolean;
   dispose: () => void;

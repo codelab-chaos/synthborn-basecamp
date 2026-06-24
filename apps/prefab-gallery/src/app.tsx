@@ -8,7 +8,7 @@ import { resetGalleryVisibilityLayout } from "./hooks/use-element-visibility";
 import { PrefabFilters } from "./components/prefab-filters";
 import { PrefabGalleryGrid } from "./components/prefab-gallery-grid";
 import { PrefabGalleryToolbar } from "./components/prefab-gallery-toolbar";
-import { PrefabViewerDrawer } from "./components/prefab-viewer-drawer";
+import { PrefabViewerModal } from "./components/prefab-viewer-modal";
 import { useGalleryManifest } from "./hooks/use-gallery-manifest";
 import { usePrefabFilter } from "./hooks/use-prefab-filter";
 import type { PrefabEntry } from "./library/types";
@@ -18,7 +18,7 @@ const { Header, Content } = Layout;
 
 export function App() {
   const { manifest, error, loading } = useGalleryManifest();
-  const [drawerEntry, setDrawerEntry] = useState<PrefabEntry | null>(null);
+  const [viewerEntry, setViewerEntry] = useState<PrefabEntry | null>(null);
 
   const filter = usePrefabFilter(manifest?.entries ?? []);
 
@@ -100,14 +100,14 @@ export function App() {
             entries={filter.pageEntries}
             activeTags={filter.state.tags}
             onTagSelect={filter.addTag}
-            onExpand={setDrawerEntry}
+            onExpand={setViewerEntry}
           />
         </Content>
 
-        <PrefabViewerDrawer
-          entry={drawerEntry}
-          open={drawerEntry != null}
-          onClose={() => setDrawerEntry(null)}
+        <PrefabViewerModal
+          entry={viewerEntry}
+          open={viewerEntry != null}
+          onClose={() => setViewerEntry(null)}
         />
       </Layout>
     </ConfigProvider>
