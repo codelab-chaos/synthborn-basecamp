@@ -221,6 +221,7 @@ public class com.hypixel.hytale.server.core.inventory.ItemStack implements com.h
   public com.hypixel.hytale.server.core.inventory.ItemStack withRestoredDurability(double);
   public com.hypixel.hytale.server.core.inventory.ItemStack withState(java.lang.String);
   public com.hypixel.hytale.server.core.inventory.ItemStack withQuantity(int);
+  public com.hypixel.hytale.server.core.inventory.ItemStack cleanCopy();
   public com.hypixel.hytale.server.core.inventory.ItemStack withMetadata(org.bson.BsonDocument);
   public <T> com.hypixel.hytale.server.core.inventory.ItemStack withMetadata(com.hypixel.hytale.codec.KeyedCodec<T>, T);
   public <T> com.hypixel.hytale.server.core.inventory.ItemStack withMetadata(java.lang.String, com.hypixel.hytale.codec.Codec<T>, T);

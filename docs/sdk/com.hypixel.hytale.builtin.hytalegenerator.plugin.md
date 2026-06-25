@@ -46,7 +46,7 @@ public class com.hypixel.hytale.builtin.hytalegenerator.plugin.HytaleGenerator e
   public java.util.List<org.joml.Vector3d> getSpawnPositions(com.hypixel.hytale.builtin.hytalegenerator.engine.chunkgenerator.ChunkRequest$GeneratorProfile, int);
   public java.util.concurrent.CompletableFuture<com.hypixel.hytale.server.core.universe.world.worldgen.GeneratedChunk> submitChunkRequest(com.hypixel.hytale.builtin.hytalegenerator.engine.chunkgenerator.ChunkRequest);
   protected void setup();
-  public com.hypixel.hytale.builtin.hytalegenerator.engine.chunkgenerator.StagedChunkGenerator createStagedChunkGenerator(com.hypixel.hytale.builtin.hytalegenerator.engine.chunkgenerator.ChunkRequest$GeneratorProfile, com.hypixel.hytale.builtin.hytalegenerator.assets.worldstructures.WorldStructureAsset, com.hypixel.hytale.builtin.hytalegenerator.assets.SettingsAsset);
+  public com.hypixel.hytale.builtin.hytalegenerator.engine.chunkgenerator.ChunkGenerator createStagedChunkGenerator(com.hypixel.hytale.builtin.hytalegenerator.engine.chunkgenerator.ChunkRequest$GeneratorProfile, com.hypixel.hytale.builtin.hytalegenerator.assets.worldstructures.WorldStructureAsset, com.hypixel.hytale.builtin.hytalegenerator.assets.SettingsAsset);
   public com.hypixel.hytale.builtin.hytalegenerator.plugin.HytaleGenerator(com.hypixel.hytale.server.core.plugin.JavaPluginInit);
 }
 ```

@@ -1,6 +1,6 @@
 # Equipment Tech Tree
 
-> Generated 2026-05-27T22:25:14.670Z from `docs/refs/recipes/recipes.json`.
+> Generated 2026-06-25T03:50:05.881Z from `docs/refs/recipes/recipes.json`.
 
 This file is generated. Regenerate with:
 

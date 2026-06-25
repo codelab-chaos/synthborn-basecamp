@@ -80,6 +80,7 @@ public abstract class com.hypixel.hytale.event.EventBusRegistry<KeyType, EventTy
   public void setTimeEvents(boolean);
   public void shutdown();
   public boolean isAlive();
+  protected com.hypixel.hytale.event.EventRegistration<KeyType, EventType> deadRegistration(java.lang.String);
   public abstract com.hypixel.hytale.event.EventRegistration<KeyType, EventType> register(short, KeyType, java.util.function.Consumer<EventType>);
   public abstract com.hypixel.hytale.event.EventRegistration<KeyType, EventType> registerGlobal(short, java.util.function.Consumer<EventType>);
   public abstract com.hypixel.hytale.event.EventRegistration<KeyType, EventType> registerUnhandled(short, java.util.function.Consumer<EventType>);

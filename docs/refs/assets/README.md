@@ -7,6 +7,26 @@ live in [`toc/`](toc/).
 
 This folder is an unpacked local copy of the Hytale assets. Treat it as a searchable reference, not as source owned by these mods. The most useful workflow is to search it with `rg` when a mod needs exact asset ids, JSON fields, model names, or drop tables.
 
+## Refreshing `_Assets`
+
+Capture the new TOC first, then sync the unpacked tree. The fast path compares the new
+`Assets.zip` central directory against the previous committed TOC, so it extracts only
+added/changed files and deletes files removed from the new zip:
+
+```bash
+node tools/refs/assets/build-assets-toc.js
+node tools/refs/assets/sync-assets.js --dry-run --from-toc docs/refs/assets/toc/assets-toc-<old>.json
+node tools/refs/assets/sync-assets.js           --from-toc docs/refs/assets/toc/assets-toc-<old>.json
+```
+
+If `_Assets/` may not match the previous TOC, omit `--from-toc`. That hashes the local tree
+before planning the same minimal extract/delete pass:
+
+```bash
+node tools/refs/assets/sync-assets.js --dry-run
+node tools/refs/assets/sync-assets.js
+```
+
 ## Quick Commands
 
 ```powershell

@@ -26,7 +26,7 @@ The four Gradle mods and their deploy saves:
 | `synthborn-overseer` | SynthOverseer | `overseer-test` |
 | `synthborn-kyn` | SynthUnits | `synthtest-02` |
 | `synthborn-rcon` | SynthRCON | `synthtest-02` |
-| `synthborn-terrascape` | SynthTerrascape | `synth-worldview-mvp` |
+| `synthborn-terrascape` | Terrascape | `synth-worldview-mvp` |
 
 (`synthborn-basecamp` has no Gradle build — it holds the shared tools and docs.)
 
@@ -98,10 +98,21 @@ cd synthborn-basecamp
 node tools/refs/assets/build-assets-toc.js  # writes docs/refs/assets/toc/assets-toc-<version>.json
 ```
 
-Optionally refresh the unpacked reference (`_Assets/` is gitignored, ~3.3 GB):
+Refresh the unpacked reference (`_Assets/` is gitignored, ~3.3 GB). If `_Assets/` still
+matches the last committed TOC, use the old TOC as the baseline so only added/changed files
+are extracted and removed files are deleted:
 
 ```bash
-ditto -x -k "<install>/game/latest/Assets.zip" _Assets   # full overwrite extract
+node tools/refs/assets/sync-assets.js --dry-run --from-toc docs/refs/assets/toc/assets-toc-<old>.json
+node tools/refs/assets/sync-assets.js           --from-toc docs/refs/assets/toc/assets-toc-<old>.json
+```
+
+If `_Assets/` may have local drift, omit `--from-toc`. That scans the existing directory and
+computes local CRCs before deciding what to extract:
+
+```bash
+node tools/refs/assets/sync-assets.js --dry-run
+node tools/refs/assets/sync-assets.js
 ```
 
 > Note: the very first run establishes the baseline — you can only *diff* from the next
@@ -150,6 +161,7 @@ Start the patched server and run smoke tests from the owning repo. For example:
 ```bash
 ( cd ../synthborn-kyn && node tools/deploy.js restart )
 ( cd ../synthborn-kyn && node tools/deploy.js rcon -- validate spawn-basic )
+( cd ../synthborn-kyn && node tools/deploy.js rcon -- validate berry-harvest at <x,y,z> )
 ```
 
 For the integration save:
@@ -164,18 +176,25 @@ For the integration save:
 - NPC role registration/validation for `Synth_Base`.
 - Chunk loader persistence and ticking state.
 - World spawn provider / test-home anchor.
-- Runtime validation: `spawn-basic`, `gatherer-basic`.
+- Runtime validation: `spawn-basic` plus one currently registered quick mechanics scenario.
+  As of 0.5.6, use `berry-harvest` for a resource primitive smoke; confirm available names with
+  `validate list mechanics`.
 
 ### Expected smoke results
 - SynthRCON health returns `ok: true`.
 - `/synth chunk list` succeeds and reports the persisted loader.
 - `/synth testhome show` succeeds and reports the saved anchor.
 - `/validate spawn-basic` passes.
-- `/validate gatherer-basic` passes.
+- `/validate berry-harvest at <x,y,z>` passes.
 
-If `spawn-basic` or `gatherer-basic` fails with `target_chunk_not_loaded`, check the chunk
+If `spawn-basic` or the quick mechanics scenario fails with `target_chunk_not_loaded`, check the chunk
 loader first. If it reports `kept` nonzero but `loaded=0`, the chunk ticking behavior likely
 changed.
+
+Note: `gatherer-basic` and `gathering-basics` are stale validator names in the current Kyn help text;
+they are not registered scenarios in `RuntimeValidationRunner` as of the 0.5.6 update. The confirmed
+arena live suites are useful deeper validation, but they can exceed SynthRCON's command timeout and
+should not be used as the default version-update smoke.
 
 ---
 

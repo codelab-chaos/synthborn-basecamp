@@ -1,6 +1,6 @@
 # Hytale Recipe Reference
 
-> Generated 2026-05-27T03:53:09.173Z from `_Assets/Server/Item/Recipes/` (standalone) and `_Assets/Server/Item/Items/` (embedded `Recipe` blocks).
+> Generated 2026-06-25T03:49:59.872Z from `_Assets/Server/Item/Recipes/` (standalone) and `_Assets/Server/Item/Items/` (embedded `Recipe` blocks).
 
 Each entry: `id | inputs → outputs | bench | time`. `(type)` after an ingredient means it accepts any item of that ResourceType (e.g. `Wood_Trunk(type)` matches any trunk wood). `bench=Type[Id,Categories]`.
 

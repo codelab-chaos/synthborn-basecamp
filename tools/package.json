@@ -6,6 +6,7 @@
   "scripts": {
     "check": "find . -type f -name '*.js' -print0 | xargs -0 -n1 node --check",
     "verify": "node verify.js",
+    "assets:sync": "node refs/assets/sync-assets.js",
     "assets:toc": "node refs/assets/build-assets-toc.js",
     "builder:catalog": "node refs/builder-commands/build-builder-catalog-doc.js",
     "docs:list": "node refs/reference-docs/sync-reference-repos.js --list",

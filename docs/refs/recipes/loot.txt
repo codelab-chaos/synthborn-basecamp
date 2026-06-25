@@ -1,12 +1,12 @@
 # Hytale Loot / Drop Reference
 
-> Generated 2026-06-07T08:12:49.561Z from `_Assets/Server/Drops/` (named drop-lists) and `_Assets/Server/Item/Items/` (block `BlockType.Gathering`).
+> Generated 2026-06-25T03:49:59.895Z from `_Assets/Server/Drops/` (named drop-lists) and `_Assets/Server/Item/Items/` (block `BlockType.Gathering`).
 
 `x<n>~` is the mean count per resolution; `(p%)` is P(at least one). Query with `node tools/refs/recipes/gamedata.js drops <id>` / `source <item>`.
 
 Regenerate: `node tools/refs/recipes/extract-loot.js`
 
-## Blocks (673)
+## Blocks (672)
 
 - Debug_Falling_Barrel (Breaking/Woods) [list=Barrels] → Plant_Fruit_Apple x0.091~ (9%), Plant_Fruit_Berries_Red x0.091~ (9%), Weapon_Arrow_Crude x0.068~ (2%), Ingredient_Hide_Light x0.046~ (5%), Ingredient_Salt x0.018~ (2%)
 - Debug_Falling_Explosive (Soft) [list=Barrels] → Plant_Fruit_Apple x0.091~ (9%), Plant_Fruit_Berries_Red x0.091~ (9%), Weapon_Arrow_Crude x0.068~ (2%), Ingredient_Hide_Light x0.046~ (5%), Ingredient_Salt x0.018~ (2%)
@@ -144,7 +144,7 @@ Regenerate: `node tools/refs/recipes/extract-loot.js`
 - Plant_Bush_Winter_Sharp (Soft) [list=Plant_Bush] → Ingredient_Fibre x0.7~ (60%), Ingredient_Stick x0.5~ (50%)
 - Plant_Bush_Winter_Snow (Soft) [list=Plant_Bush] → Ingredient_Fibre x0.7~ (60%), Ingredient_Stick x0.5~ (50%)
 - Plant_Cactus_Flower (Soft) [list=Plant_Flower_Red_Soft] → @droplist:Plant_Flower_Red_Soft x0~ (unresolved)
-- Plant_Crop_Aubergine_Block (Soft) [list=Plant_Crop_Aubergine_Stage_0] → @droplist:Plant_Crop_Aubergine_Stage_0 x0~ (unresolved)
+- Plant_Crop_Aubergine_Block (Soft) [list=Drops_Plant_Crop_Aubergine_Block] → Plant_Seeds_Aubergine x1~ (100%)
 - Plant_Crop_Aubergine_Block_Eternal (Soft) [list=Drops_Plant_Crop_Aubergine_Eternal_Block] → Plant_Seeds_Aubergine_Eternal x1~ (100%)
 - Plant_Crop_Berry_Block (Soft) [list=Drops_Plant_Crop_Berry_Block] → Ingredient_Fibre x1.5~ (100%), Ingredient_Stick x1.5~ (100%)
 - Plant_Crop_Berry_Wet_Block (Soft) [list=Drops_Plant_Crop_Berry_Wet_Block] → Ingredient_Fibre x1.5~ (100%), Ingredient_Stick x1.5~ (100%)
@@ -165,7 +165,7 @@ Regenerate: `node tools/refs/recipes/extract-loot.js`
 - Plant_Crop_Health2_Block (Soft) [list=Plant_Crop_Health2_Stage_0] → Plant_Seeds_Health2 x1~ (100%)
 - Plant_Crop_Health3 (Soft) [list=Plant_Crop_Health3] → Plant_Petals_Blood x2.5~ (100%)
 - Plant_Crop_Health3_Block (Soft) [list=Plant_Crop_Health3_Stage_0] → Plant_Seeds_Health3 x1~ (100%)
-- Plant_Crop_Lettuce_Block (Soft) [list=Plant_Crop_Lettuce_Block] → @droplist:Plant_Crop_Lettuce_Block x0~ (unresolved)
+- Plant_Crop_Lettuce_Block (Soft) [list=Drops_Plant_Crop_Lettuce_Block] → Plant_Seeds_Lettuce x1~ (100%)
 - Plant_Crop_Lettuce_Block_Eternal (Soft) [list=Drops_Plant_Crop_Lettuce_Eternal_Block] → Plant_Seeds_Lettuce_Eternal x1~ (100%)
 - Plant_Crop_Mana1 (Soft) [list=Plant_Crop_Mana1] → Plant_Petals_Azure x1~ (100%)
 - Plant_Crop_Mana1_Block (Soft) [list=Plant_Crop_Mana1_Stage_0] → Plant_Seeds_Mana1 x1~ (100%)
@@ -173,7 +173,6 @@ Regenerate: `node tools/refs/recipes/extract-loot.js`
 - Plant_Crop_Mana2_Block (Soft) [list=Plant_Crop_Mana2_Stage_0] → Plant_Seeds_Mana2 x1~ (100%)
 - Plant_Crop_Mana3 (Soft) [list=Plant_Crop_Mana3] → Plant_Petals_Azure x2.5~ (100%)
 - Plant_Crop_Mana3_Block (Soft) [list=Plant_Crop_Mana3_Stage_0] → Plant_Seeds_Mana3 x1~ (100%)
-- Plant_Crop_Mushroom_Block (Soft) [list=Plant_Crop_Lettuce_Stage_0] → @droplist:Plant_Crop_Lettuce_Stage_0 x0~ (unresolved)
 - Plant_Crop_Mushroom_Block_Brown_Branch (Breaking/Woods) [list=Wood_Sallow_Trunk] → @droplist:Wood_Sallow_Trunk x0~ (unresolved)
 - Plant_Crop_Mushroom_Block_Green_Branch (Breaking/Woods) [list=Wood_Sallow_Trunk] → @droplist:Wood_Sallow_Trunk x0~ (unresolved)
 - Plant_Crop_Mushroom_Block_Purple_Branch (Breaking/Woods) [list=Wood_Sallow_Trunk] → @droplist:Wood_Sallow_Trunk x0~ (unresolved)
@@ -984,12 +983,12 @@ Regenerate: `node tools/refs/recipes/extract-loot.js`
 - Drops_Plant_Crop_Corn_Eternal_Stage1 → Plant_Seeds_Corn_Eternal x1~ (100%)
 - Drops_Plant_Crop_Corn_Eternal_Stage2 → Plant_Seeds_Corn_Eternal x1~ (100%)
 - Drops_Plant_Crop_Corn_Eternal_Stage3 → Plant_Seeds_Corn_Eternal x1~ (100%)
-- Drops_Plant_Crop_Corn_Eternal_StageFinal → Ingredient_Life_Essence x2.5~ (100%), Plant_Crop_Corn_Item x1.5~ (100%), Plant_Seeds_Corn_Eternal x1~ (100%)
-- Drops_Plant_Crop_Corn_Eternal_StageFinal_Harvest → Ingredient_Life_Essence x2.5~ (100%), Plant_Crop_Corn_Item x1.5~ (100%)
+- Drops_Plant_Crop_Corn_Eternal_StageFinal → Plant_Crop_Corn_Item x3~ (100%), Ingredient_Life_Essence x2.5~ (100%), Plant_Seeds_Corn_Eternal x1~ (100%)
+- Drops_Plant_Crop_Corn_Eternal_StageFinal_Harvest → Plant_Crop_Corn_Item x3~ (100%), Ingredient_Life_Essence x2.5~ (100%)
 - Drops_Plant_Crop_Corn_Stage1 → Plant_Seeds_Corn x1~ (100%)
 - Drops_Plant_Crop_Corn_Stage2 → Plant_Seeds_Corn x1~ (100%)
 - Drops_Plant_Crop_Corn_Stage3 → Plant_Seeds_Corn x1~ (100%)
-- Drops_Plant_Crop_Corn_StageFinal → Ingredient_Life_Essence x4.5~ (100%), Plant_Crop_Corn_Item x2.5~ (100%), Plant_Seeds_Corn_Eternal x0.005~ (1%)
+- Drops_Plant_Crop_Corn_StageFinal → Ingredient_Life_Essence x4.5~ (100%), Plant_Crop_Corn_Item x3~ (100%), Plant_Seeds_Corn_Eternal x0.005~ (1%)
 - Drops_Plant_Crop_Corn_StageFinal_Harvest → Ingredient_Life_Essence x4.5~ (100%), Plant_Crop_Corn_Item x3~ (100%), Plant_Seeds_Corn_Eternal x0.005~ (1%)
 - Drops_Plant_Crop_Cotton_Block → Plant_Seeds_Cotton x1~ (100%)
 - Drops_Plant_Crop_Cotton_Eternal_Block → Plant_Seeds_Cotton_Eternal x1~ (100%)
@@ -4343,10 +4342,10 @@ Regenerate: `node tools/refs/recipes/extract-loot.js`
 - droplist Zone3_Kweebec_Tier2 — x0.058~ (2%)
 
 ### Plant_Crop_Corn_Item
+- droplist Drops_Plant_Crop_Corn_Eternal_StageFinal — x3~ (100%)
+- droplist Drops_Plant_Crop_Corn_Eternal_StageFinal_Harvest — x3~ (100%)
+- droplist Drops_Plant_Crop_Corn_StageFinal — x3~ (100%)
 - droplist Drops_Plant_Crop_Corn_StageFinal_Harvest — x3~ (100%)
-- droplist Drops_Plant_Crop_Corn_StageFinal — x2.5~ (100%)
-- droplist Drops_Plant_Crop_Corn_Eternal_StageFinal — x1.5~ (100%)
-- droplist Drops_Plant_Crop_Corn_Eternal_StageFinal_Harvest — x1.5~ (100%)
 - droplist Zone1_Kweebec_Tier3 — x0.168~ (6%)
 - droplist Zone3_Kweebec_Tier3 — x0.168~ (6%)
 - droplist Zone1_Kweebec_Tier1 — x0.14~ (6%)
@@ -4821,6 +4820,7 @@ Regenerate: `node tools/refs/recipes/extract-loot.js`
 - droplist Drops_Plant_Crop_Aubergine_Block — x1~ (100%)
 - droplist Drops_Plant_Crop_Aubergine_Stage1 — x1~ (100%)
 - droplist Drops_Plant_Crop_Aubergine_Stage2 — x1~ (100%)
+- Plant_Crop_Aubergine_Block (Soft) — x1~ (100%)
 - droplist Zone2_Encounters_Tier4 — x0.543~ (22%)
 - droplist Portals_Oasis — x0.15~ (15%)
 - droplist Zone2_Encounters_Tier3 — x0.15~ (15%)
@@ -5000,6 +5000,7 @@ Regenerate: `node tools/refs/recipes/extract-loot.js`
 - droplist Drops_Plant_Crop_Lettuce_Block — x1~ (100%)
 - droplist Drops_Plant_Crop_Lettuce_Stage1 — x1~ (100%)
 - droplist Drops_Plant_Crop_Lettuce_Stage2 — x1~ (100%)
+- Plant_Crop_Lettuce_Block (Soft) — x1~ (100%)
 - droplist Zone1_Kweebec_Tier2 — x0.661~ (26%)
 - droplist Zone1_Encounters_Tier2 — x0.521~ (21%)
 - droplist Zone1_Goblin_Tier2 — x0.521~ (21%)

@@ -67,7 +67,7 @@ function detectVersion(gameLatest) {
 // Build {path: {size, crc}} from a zip's central directory via `unzip -v`.
 function tocFromZip(zipPath) {
   const out = execFileSync('unzip', ['-v', zipPath], { encoding: 'utf8', maxBuffer: 1 << 30 });
-  const re = /^\s*(\d+)\s+\S+\s+\d+\s+\S+\s+\d{2}-\d{2}-\d{4}\s+\d{2}:\d{2}\s+([0-9a-fA-F]{8})\s+(.+?)\s*$/;
+  const re = /^\s*(\d+)\s+\S+\s+\d+\s+\S+\s+\S+\s+\S+\s+([0-9a-fA-F]{8})\s+(.+?)\s*$/;
   const files = {};
   for (const line of out.split('\n')) {
     const m = line.match(re);
@@ -157,4 +157,14 @@ function main() {
   console.log(`  out:        ${path.relative(BASECAMP_ROOT, out)}`);
 }
 
-main();
+if (require.main === module) {
+  main();
+}
+
+module.exports = {
+  BASECAMP_ROOT,
+  defaultGameLatest,
+  detectVersion,
+  tocFromDir,
+  tocFromZip,
+};

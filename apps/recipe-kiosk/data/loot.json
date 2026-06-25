@@ -1,8 +1,9 @@
 {
-  "generatedAt": "2026-06-07T08:12:49.561Z",
+  "generatedAt": "2026-06-25T03:49:59.895Z",
+  "hytaleVersion": "0.5.6",
   "counts": {
     "droplists": 620,
-    "blocks": 673,
+    "blocks": 672,
     "items": 433
   },
   "droplists": [
@@ -7971,19 +7972,19 @@
       "sourceFile": "_Assets/Server/Drops/Crop/Corn/Drops_Plant_Crop_Corn_Eternal_StageFinal.json",
       "drops": [
         {
+          "item": "Plant_Crop_Corn_Item",
+          "expected": 3,
+          "chancePct": 100,
+          "qtyMin": 2,
+          "qtyMax": 4,
+          "unresolved": false
+        },
+        {
           "item": "Ingredient_Life_Essence",
           "expected": 2.5,
           "chancePct": 100,
           "qtyMin": 2,
           "qtyMax": 3,
-          "unresolved": false
-        },
-        {
-          "item": "Plant_Crop_Corn_Item",
-          "expected": 1.5,
-          "chancePct": 100,
-          "qtyMin": 1,
-          "qtyMax": 2,
           "unresolved": false
         },
         {
@@ -8001,19 +8002,19 @@
       "sourceFile": "_Assets/Server/Drops/Crop/Corn/Drops_Plant_Crop_Corn_Eternal_StageFinal_Harvest.json",
       "drops": [
         {
+          "item": "Plant_Crop_Corn_Item",
+          "expected": 3,
+          "chancePct": 100,
+          "qtyMin": 2,
+          "qtyMax": 4,
+          "unresolved": false
+        },
+        {
           "item": "Ingredient_Life_Essence",
           "expected": 2.5,
           "chancePct": 100,
           "qtyMin": 2,
           "qtyMax": 3,
-          "unresolved": false
-        },
-        {
-          "item": "Plant_Crop_Corn_Item",
-          "expected": 1.5,
-          "chancePct": 100,
-          "qtyMin": 1,
-          "qtyMax": 2,
           "unresolved": false
         }
       ]
@@ -8074,9 +8075,9 @@
         },
         {
           "item": "Plant_Crop_Corn_Item",
-          "expected": 2.5,
+          "expected": 3,
           "chancePct": 100,
-          "qtyMin": 1,
+          "qtyMin": 2,
           "qtyMax": 4,
           "unresolved": false
         },
@@ -39379,15 +39380,15 @@
       "modes": {
         "Soft": {
           "gatherType": null,
-          "droplistRef": "Plant_Crop_Aubergine_Stage_0",
+          "droplistRef": "Drops_Plant_Crop_Aubergine_Block",
           "drops": [
             {
-              "item": "@droplist:Plant_Crop_Aubergine_Stage_0",
-              "expected": 0,
-              "chancePct": null,
-              "qtyMin": 0,
-              "qtyMax": 0,
-              "unresolved": true
+              "item": "Plant_Seeds_Aubergine",
+              "expected": 1,
+              "chancePct": 100,
+              "qtyMin": 1,
+              "qtyMax": 1,
+              "unresolved": false
             }
           ]
         }
@@ -39844,15 +39845,15 @@
       "modes": {
         "Soft": {
           "gatherType": null,
-          "droplistRef": "Plant_Crop_Lettuce_Block",
+          "droplistRef": "Drops_Plant_Crop_Lettuce_Block",
           "drops": [
             {
-              "item": "@droplist:Plant_Crop_Lettuce_Block",
-              "expected": 0,
-              "chancePct": null,
-              "qtyMin": 0,
-              "qtyMax": 0,
-              "unresolved": true
+              "item": "Plant_Seeds_Lettuce",
+              "expected": 1,
+              "chancePct": 100,
+              "qtyMin": 1,
+              "qtyMax": 1,
+              "unresolved": false
             }
           ]
         }
@@ -40000,27 +40001,6 @@
               "qtyMin": 1,
               "qtyMax": 1,
               "unresolved": false
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "Plant_Crop_Mushroom_Block",
-      "sourceFile": "_Assets/Server/Item/Items/Plant/Crop/Mushroom/Plant_Crop_Mushroom_Block.json",
-      "gatheringDefinedBy": null,
-      "modes": {
-        "Soft": {
-          "gatherType": null,
-          "droplistRef": "Plant_Crop_Lettuce_Stage_0",
-          "drops": [
-            {
-              "item": "@droplist:Plant_Crop_Lettuce_Stage_0",
-              "expected": 0,
-              "chancePct": null,
-              "qtyMin": 0,
-              "qtyMax": 0,
-              "unresolved": true
             }
           ]
         }
@@ -68666,26 +68646,26 @@
     "Plant_Crop_Corn_Item": [
       {
         "kind": "droplist",
-        "id": "Drops_Plant_Crop_Corn_StageFinal_Harvest",
+        "id": "Drops_Plant_Crop_Corn_Eternal_StageFinal",
+        "expected": 3,
+        "chancePct": 100
+      },
+      {
+        "kind": "droplist",
+        "id": "Drops_Plant_Crop_Corn_Eternal_StageFinal_Harvest",
         "expected": 3,
         "chancePct": 100
       },
       {
         "kind": "droplist",
         "id": "Drops_Plant_Crop_Corn_StageFinal",
-        "expected": 2.5,
+        "expected": 3,
         "chancePct": 100
       },
       {
         "kind": "droplist",
-        "id": "Drops_Plant_Crop_Corn_Eternal_StageFinal",
-        "expected": 1.5,
-        "chancePct": 100
-      },
-      {
-        "kind": "droplist",
-        "id": "Drops_Plant_Crop_Corn_Eternal_StageFinal_Harvest",
-        "expected": 1.5,
+        "id": "Drops_Plant_Crop_Corn_StageFinal_Harvest",
+        "expected": 3,
         "chancePct": 100
       },
       {
@@ -71213,6 +71193,13 @@
         "chancePct": 100
       },
       {
+        "kind": "block",
+        "id": "Plant_Crop_Aubergine_Block",
+        "mode": "Soft",
+        "expected": 1,
+        "chancePct": 100
+      },
+      {
         "kind": "droplist",
         "id": "Zone2_Encounters_Tier4",
         "expected": 0.543,
@@ -72148,6 +72135,13 @@
       {
         "kind": "droplist",
         "id": "Drops_Plant_Crop_Lettuce_Stage2",
+        "expected": 1,
+        "chancePct": 100
+      },
+      {
+        "kind": "block",
+        "id": "Plant_Crop_Lettuce_Block",
+        "mode": "Soft",
         "expected": 1,
         "chancePct": 100
       },
@@ -82387,6 +82381,5 @@
         "chancePct": 75
       }
     ]
-  },
-  "hytaleVersion": "0.5.4"
+  }
 }

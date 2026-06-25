@@ -1,6 +1,6 @@
 # Hytale Bench Tier Reference
 
-> Generated 2026-06-10T00:40:53.618Z from `_Assets/Server/Item/Items/Bench/*.json` (`BlockType.Bench.TierLevels`).
+> Generated 2026-06-25T03:49:59.760Z from `_Assets/Server/Item/Items/Bench/*.json` (`BlockType.Bench.TierLevels`).
 
 Each placed bench starts at **tier 1**. A tier's `upgrade -> N` line is the material + time cost to reach the next tier. Which *recipes* a tier unlocks is a runtime SDK check (`isRestrictedByBenchTierLevel`), not in this data.
 

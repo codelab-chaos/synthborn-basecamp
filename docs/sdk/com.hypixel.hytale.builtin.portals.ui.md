@@ -42,6 +42,6 @@ public class com.hypixel.hytale.builtin.portals.ui.PortalDeviceSummonPage extend
 ```java
 public final class com.hypixel.hytale.builtin.portals.ui.PortalSpawnFinder {
   public com.hypixel.hytale.builtin.portals.ui.PortalSpawnFinder();
-  public static com.hypixel.hytale.math.vector.Transform computeSpawnTransform(com.hypixel.hytale.server.core.universe.world.World, java.util.List<org.joml.Vector3d>);
+  public static java.util.concurrent.CompletableFuture<com.hypixel.hytale.math.vector.Transform> computeSpawnTransform(com.hypixel.hytale.server.core.universe.world.World, java.util.List<org.joml.Vector3d>);
 }
 ```
