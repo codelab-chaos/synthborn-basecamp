@@ -5,15 +5,17 @@ files or confusing basecamp with deployable mod repos.
 
 Basecamp is the shared reference and research repo for the Synthborn Hytale mod
 workspace. It owns Hytale SDK/API indexes, recipe and loot indexes, English
-label lookups, prefab references, external docs mirrors, example mod source
-caches, and cross-repo research. It does not own deployment, RCON operation,
-server lifecycle scripts, or mod-specific implementation.
+label lookups, prefab references, NPC role metadata, external docs mirrors,
+example mod source caches, static reference apps, and cross-repo research. It
+does not own deployment, RCON operation, server lifecycle scripts, or
+mod-specific implementation.
 
 Start here:
 
 - Human repo map: `README.md`
 - Docs map: `docs/README.md`
 - Tool map: `tools/README.md`
+- Published/static app map: README `App Booth`, `index.html`, `apps/basecamp/`
 - Compact Hytale server-side modding KB: `docs/llm-hytale-modding-kb.md`
 - Hytale modding quick reference: `docs/hytale-mod-quickref/README.md`
 - Generated reference map: `docs/refs/README.md`
@@ -23,7 +25,13 @@ Search before reading:
 - Labels: `cd tools && npm run labels:lookup -- find copper`
 - Recipes and loot: `cd tools && npm run recipes:gamedata -- source Ingredient_Leather`
 - SDK classes and methods: `cd tools && npm run sdk:search -- --method placeBlock`
+- NPC role metadata: `docs/npcs/npcs-en.json`, regenerate with `cd tools && npm run npcs:extract`
+- Prefabs: `docs/refs/prefabs/README.md`, `apps/prefab-gallery/`, `cd tools && npm run prefabs:index`
+- Prefab modules/procbuild: `docs/procbuild/reference-prefab-modules.md`, `cd tools && npm run prefabs:modules`
+- BuilderTools catalog: `docs/synthoverseer-builder-commands.md`
+- Console commands: `docs/console-commands.md`
 - SDK Explorer app data: `cd tools && npm run sdk:app-data`
+- Static Pages apps: `cd tools && npm run pages:build`
 - Example mod repos: `cd tools && npm run examples:list`
 - External docs mirrors: `cd tools && npm run docs:list`
 - Basecamp health: `cd tools && npm run verify`
@@ -35,6 +43,8 @@ Do not load wholesale:
 - `_Assets/`
 - `_mod-example-sourcecode/`
 - `docs/external/`
+- `docs/refs/assets/toc/*.json`
+- `apps/sdk-explorer/data/sdk-reference.json`
 
 Use the search commands and generated flat indexes first, then open only the
 small files or package docs that the search result points to.
@@ -48,13 +58,23 @@ Key generated reference locations:
 - `docs/refs/labels/`: English name to Hytale id indexes.
 - `docs/refs/recipes/`: crafting, salvage, bench, source, and loot indexes.
 - `docs/refs/prefabs/`: vanilla prefab catalog indexes.
+- `docs/npcs/npcs-en.json`: extracted NPC role metadata.
+- `docs/procbuild/reference-prefab-modules.*`: prefab module analysis.
+- `docs/synthoverseer-builder-commands.md`: curated BuilderTools command catalog for Overseer.
+- `docs/console-commands.md`: captured Hytale/SynthOverseer command surface.
 - `docs/refs/assets/`: asset tree notes and TOC snapshots.
+- `apps/recipe-kiosk/`: static recipe/item browser.
+- `apps/prefab-gallery/`: static prefab preview gallery.
+- `apps/sdk-explorer/`: static SDK card browser.
+- `apps/library/`: shared app shell/theme/query helpers; not a served app.
 
 Research routing:
 
 - Active Synth/NPC architecture: `docs/hytale-synthetics.md`
 - Durable NPC, behavior-tree, and layout research: `docs/research-bank/README.md`
 - Archived brainstorms and older planning: `docs/idea-bank/README.md`
+- Trigger Volume encounter research: `docs/hytale-trigger-volumes-update-5-research.md`
+- EasyWebMap/live-map reference notes: `docs/easywebmap-technical-notes.md`
 - Worldgen V2 research and tooling: `worldgenV2/`
 
 Workspace ownership:
@@ -62,7 +82,6 @@ Workspace ownership:
 - `../synthborn-kyn/`: SynthUnits/Kyn mod implementation and deploy scripts.
 - `../synthborn-overseer/`: SynthOverseer implementation and deploy scripts.
 - `../synthborn-terrascape/`: SynthTerrascape implementation and deploy scripts.
-- `../synthborn-rcon/`: SynthRCON implementation.
 
 When a task involves build, deploy, RCON, logs, smoke tests, or server lifecycle,
 go to the owning sibling repo. When a task involves shared Hytale reference data,

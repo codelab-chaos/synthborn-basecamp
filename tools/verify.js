@@ -49,7 +49,6 @@ const SIBLING_READMES = [
   "../synthborn-kyn/README.md",
   "../synthborn-overseer/README.md",
   "../synthborn-terrascape/README.md",
-  "../synthborn-rcon/README.md",
 ].map((entry) => path.resolve(REPO_ROOT, entry));
 
 function toPosix(filePath) {

@@ -19,13 +19,12 @@ proves the basic mod features still work.
 > on both; each deployable mod repo owns its deploy script. This basecamp checklist covers
 > shared reference refreshes and points operational steps back to the owning repos.
 
-The four Gradle mods and their deploy saves:
+The deployable Gradle mods and their deploy saves:
 
 | Repo | Jar | Save |
 |------|-----|------|
 | `synthborn-overseer` | SynthOverseer | `overseer-test` |
 | `synthborn-kyn` | SynthUnits | `synthtest-02` |
-| `synthborn-rcon` | SynthRCON | `synthtest-02` |
 | `synthborn-terrascape` | Terrascape | `synth-worldview-mvp` |
 
 (`synthborn-basecamp` has no Gradle build — it holds the shared tools and docs.)
@@ -37,8 +36,8 @@ The four Gradle mods and their deploy saves:
 The Hytale updater refuses to patch while game processes — or sometimes **any `java`
 process** — are running. There are two distinct kinds of JVM to clear:
 
-**a. Hytale game servers** (`HytaleServer.jar`, on the bundled JRE). Prefer a graceful RCON
-stop so worlds save. Each server runs with a `-Dsynthrcon.port=2557x`:
+**a. Hytale game servers** (`HytaleServer.jar`, on the bundled JRE). Prefer the
+owning deploy script's graceful stop path so worlds save:
 
 Use each owning repo's deploy tool for graceful shutdown, for example:
 
@@ -126,8 +125,8 @@ First confirm the new version is actually published, or every build fails:
 curl -s https://maven.hytale.com/release/com/hypixel/hytale/Server/maven-metadata.xml | grep -E "release|version"
 ```
 
-Then bump the **exact** Gradle pin in all four mods (`compileOnly`, and `testImplementation`
-where present — `synthborn-rcon` has only `compileOnly`):
+Then bump the **exact** Gradle pin in each deployable mod (`compileOnly`, and
+`testImplementation` where present):
 
 ```
 com.hypixel.hytale:Server:<old>  ->  com.hypixel.hytale:Server:<new>
@@ -171,7 +170,7 @@ For the integration save:
 ```
 
 ### Known risk areas — smoke-test these after every server update
-- Plugin loading for all four mods.
+- Plugin loading for all deployable mods.
 - RCON health and command dispatch.
 - NPC role registration/validation for `Synth_Base`.
 - Chunk loader persistence and ticking state.
@@ -181,7 +180,7 @@ For the integration save:
   `validate list mechanics`.
 
 ### Expected smoke results
-- SynthRCON health returns `ok: true`.
+- RCON health returns `ok: true`.
 - `/synth chunk list` succeeds and reports the persisted loader.
 - `/synth testhome show` succeeds and reports the saved anchor.
 - `/validate spawn-basic` passes.
@@ -193,14 +192,14 @@ changed.
 
 Note: `gatherer-basic` and `gathering-basics` are stale validator names in the current Kyn help text;
 they are not registered scenarios in `RuntimeValidationRunner` as of the 0.5.6 update. The confirmed
-arena live suites are useful deeper validation, but they can exceed SynthRCON's command timeout and
+arena live suites are useful deeper validation, but they can exceed the RCON command timeout and
 should not be used as the default version-update smoke.
 
 ---
 
 ## What must stay in sync
 - Hytale launcher/server install used by each owning repo's deploy script.
-- `com.hypixel.hytale:Server:<version>` in `build.gradle.kts` of overseer, kyn, rcon, terrascape.
+- `com.hypixel.hytale:Server:<version>` in `build.gradle.kts` of overseer, kyn, and terrascape.
 - Each mod's `src/main/resources/manifest.json` `ServerVersion` range (only if compatibility requires).
 - The assets TOC under `docs/refs/assets/toc/` (commit one per release).
 - Saved patch/release notes in `docs/`.

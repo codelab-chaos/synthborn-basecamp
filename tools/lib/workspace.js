@@ -4,12 +4,11 @@
 //
 // The repo was split out of the old `hytale-mods` monorepo: tooling and docs
 // now live in `synthborn-basecamp`, and each mod is its own sibling repo under
-// the workspace root. Jar / logical module names stay the same (SynthRCON,
-// SynthOverseer, SynthUnits, SynthTerrascape) — only the directory layout moved.
+// the workspace root. Jar / logical module names stay the same for active
+// deployable repos; only the directory layout moved.
 //
 //   <workspace root>/                 (e.g. ~/git/hytale-mods)
 //   ├── synthborn-basecamp/  (= BASECAMP_ROOT)  tools/, docs/, _Assets/,
-//   ├── synthborn-rcon/
 //   ├── synthborn-overseer/
 //   ├── synthborn-kyn/                builds the SynthUnits jar
 //   └── synthborn-terrascape/
@@ -26,7 +25,6 @@ const WORKSPACE_ROOT = path.resolve(BASECAMP_ROOT, "..");
 
 // Logical module / jar name -> sibling repo directory name under WORKSPACE_ROOT.
 const MODULE_DIRS = {
-  SynthRCON: "synthborn-rcon",
   SynthOverseer: "synthborn-overseer",
   SynthUnits: "synthborn-kyn",
   SynthTerrascape: "synthborn-terrascape",
