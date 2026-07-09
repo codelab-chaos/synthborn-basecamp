@@ -45,12 +45,6 @@ const TEXT_EXTENSIONS = new Set([
   ".yml",
 ]);
 
-const SIBLING_READMES = [
-  "../synthborn-kyn/README.md",
-  "../synthborn-overseer/README.md",
-  "../synthborn-terrascape/README.md",
-].map((entry) => path.resolve(REPO_ROOT, entry));
-
 function toPosix(filePath) {
   return filePath.split(path.sep).join("/");
 }
@@ -151,7 +145,6 @@ function isTextFile(file) {
 
 function checkStalePaths() {
   const files = walkFiles(REPO_ROOT, (file) => isTextFile(file))
-    .concat(SIBLING_READMES.filter((file) => fs.existsSync(file)))
     .filter((file) => path.resolve(file) !== path.resolve(__filename));
 
   const stalePatterns = [
@@ -188,7 +181,6 @@ function markdownFiles() {
     path.join(REPO_ROOT, "tools", "README.md"),
     ...walkFiles(path.join(REPO_ROOT, "docs"), (file) => path.extname(file) === ".md"),
     ...walkFiles(path.join(REPO_ROOT, "apps"), (file) => path.extname(file) === ".md"),
-    ...SIBLING_READMES.filter((file) => fs.existsSync(file)),
   ];
   return Array.from(new Set(files.map((file) => path.resolve(file))));
 }
@@ -230,6 +222,8 @@ function localPathForLink(fromFile, href) {
 }
 
 function linkExists(targetPath) {
+  const relativeTarget = path.relative(REPO_ROOT, targetPath);
+  if (relativeTarget.startsWith("..") || path.isAbsolute(relativeTarget)) return false;
   if (fs.existsSync(targetPath)) return true;
   if (fs.existsSync(`${targetPath}.md`)) return true;
   if (fs.existsSync(path.join(targetPath, "README.md"))) return true;

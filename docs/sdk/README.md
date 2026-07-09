@@ -107,7 +107,7 @@ Jump to the packages that usually matter for mod work. Open the linked `.md` fil
 
 ## Mod-specific maps
 
-- **SynthUnits:** [`synthborn-kyn/kyn-docs/hytale-builtin-sdk-map.md`](../../../synthborn-kyn/kyn-docs/hytale-builtin-sdk-map.md)
+- **SynthUnits:** [`synthborn-kyn/kyn-docs/hytale-builtin-sdk-map.md`](https://github.com/codelab-chaos/synthborn-kyn/blob/main/kyn-docs/hytale-builtin-sdk-map.md)
 - **Overseer:** worldgen notes in `synthborn-overseer/worldgen-2-research.md`
 
 ## Limits

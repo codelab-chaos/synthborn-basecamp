@@ -76,7 +76,7 @@ to `main` builds all three browser apps in GitHub Actions and deploys the assemb
 
 | | |
 |---|---|
-| **[Basecamp Landing](https://codelab-chaos.github.io/synthborn-basecamp/)**<br>Front door for the published Basecamp site: app tiles, docs links, and the first camp map.<br>Source: [`index.html`](index.html), [`apps/basecamp/`](apps/basecamp/) | **[Recipe Kiosk](https://codelab-chaos.github.io/synthborn-basecamp/apps/recipe-kiosk/)**<br>Recipe, item, loot-source, craft-tree, reverse-use, and bench-route browser.<br>Source: [`apps/recipe-kiosk/`](apps/recipe-kiosk/) |
+| **[Basecamp Landing](https://codelab-chaos.github.io/synthborn-basecamp/)**<br>Front door for the published Basecamp site: app tiles, docs links, and the first camp map.<br>Source: [`scripts/build-basecamp-index-json.js`](scripts/build-basecamp-index-json.js), [`apps/basecamp/`](apps/basecamp/) | **[Recipe Kiosk](https://codelab-chaos.github.io/synthborn-basecamp/apps/recipe-kiosk/)**<br>Recipe, item, loot-source, craft-tree, reverse-use, and bench-route browser.<br>Source: [`apps/recipe-kiosk/`](apps/recipe-kiosk/) |
 | **[Prefab Gallery](https://codelab-chaos.github.io/synthborn-basecamp/apps/prefab-gallery/)**<br>Visual browser for vanilla Hytale prefab previews, metadata, packed voxel data, and preview atlases.<br>Source: [`apps/prefab-gallery/`](apps/prefab-gallery/) | **[SDK Explorer](https://codelab-chaos.github.io/synthborn-basecamp/apps/sdk-explorer/)**<br>Wildcard-search browser over generated Hytale Server SDK markdown cards.<br>Source: [`apps/sdk-explorer/`](apps/sdk-explorer/) |
 
 Build and verify the same static-site artifact locally from the repo root:
@@ -104,7 +104,7 @@ npm run pages:build:icons
 | [`docs/refs/`](docs/refs/) | Asset-derived reference data: labels, recipes, loot, prefabs, and asset snapshots. | [`docs/refs/README.md`](docs/refs/README.md) |
 | [`docs/research-bank/`](docs/research-bank/) | Durable NPC, behavior-tree, LLM, and settlement-layout research. | [`docs/research-bank/README.md`](docs/research-bank/README.md) |
 | [`docs/idea-bank/`](docs/idea-bank/) | Archived brainstorms and older strategy tracks that are useful context but not canonical. | [`docs/idea-bank/README.md`](docs/idea-bank/README.md) |
-| [`docs/external/`](docs/external/) | Mirrored external Hytale docs for offline/local reference. | `cd tools && npm run docs:list` |
+| `docs/external/` | Optional, gitignored mirror of external Hytale docs for offline/local reference. | `cd tools && npm run docs:list` |
 | [`docs/procbuild/`](docs/procbuild/) | Procedural building and prefab-module references for settlement/building work. | [`docs/procbuild/reference-prefab-modules.md`](docs/procbuild/reference-prefab-modules.md) |
 | [`tools/`](tools/) | Node reference CLIs for querying and regenerating docs and app data. | [`tools/README.md`](tools/README.md) |
 | [`apps/`](apps/) | Static browser apps over the generated indexes. | [Field Apps](#field-apps) |
@@ -124,10 +124,10 @@ root.
 
 | App | Why it exists | Data it uses | Build |
 |-----|---------------|--------------|-------|
-| [`apps/basecamp/`](apps/basecamp/) | Landing page for the published Basecamp site: app tiles, docs links, and the first camp map. | [`apps/basecamp/basecamp-index.json`](apps/basecamp/basecamp-index.json) | `cd tools && npm run pages:build` |
+| [`apps/basecamp/`](apps/basecamp/) | Landing page for the published Basecamp site: app tiles, docs links, and the first camp map. | Generated `apps/basecamp/basecamp-index.json` | `cd tools && npm run pages:build` |
 | [`apps/recipe-kiosk/`](apps/recipe-kiosk/) | Search items, recipes, loot sources, craft trees, reverse uses, and bench routes without grepping raw asset JSON. | [`docs/refs/recipes/`](docs/refs/recipes/) plus optional icon atlas from `_Assets/` | `cd apps/recipe-kiosk && npm install && npm run build` |
 | [`apps/prefab-gallery/`](apps/prefab-gallery/) | Browse vanilla Hytale prefabs visually so builders and agents can inspect structures without opening thousands of prefab files. | `_Assets/Server/Prefabs` -> `manifest.json`, packed voxel data, and preview atlases | `cd apps/prefab-gallery && npm install && npm run build` |
-| [`apps/sdk-explorer/`](apps/sdk-explorer/) | Wildcard-search generated SDK markdown cards in a browser when CLI search is not enough. | [`docs/sdk/`](docs/sdk/) -> [`apps/sdk-explorer/data/sdk-reference.json`](apps/sdk-explorer/data/sdk-reference.json) | `cd apps/sdk-explorer && npm install && npm run build` |
+| [`apps/sdk-explorer/`](apps/sdk-explorer/) | Wildcard-search generated SDK markdown cards in a browser when CLI search is not enough. | [`docs/sdk/`](docs/sdk/) -> generated `apps/sdk-explorer/data/sdk-reference.json` | `cd apps/sdk-explorer && npm install && npm run build` |
 | [`apps/library/`](apps/library/) | Shared app shell, Ant Design theme, item icon helpers, and recipe query modules used by the static apps. | App source and generated recipe data | Consumed through local TypeScript and webpack aliases; do not serve directly |
 
 For one command that rebuilds the published static surface, use
