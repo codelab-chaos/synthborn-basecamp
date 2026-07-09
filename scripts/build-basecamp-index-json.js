@@ -12,6 +12,7 @@
 
 const fs = require("node:fs");
 const path = require("node:path");
+const crypto = require("node:crypto");
 
 const BASECAMP_ROOT = path.resolve(__dirname, "..");
 const LANDING_DIR = path.join(BASECAMP_ROOT, "apps", "basecamp");
@@ -50,20 +51,22 @@ const DOC_LINKS = [
   },
 ];
 
-const ROOT_INDEX_HTML = `<!doctype html>
+function rootIndexHtml(buildVersion) {
+  return `<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Synthborn Basecamp</title>
-    <link rel="stylesheet" href="apps/basecamp/basecamp-index.css" />
+    <link rel="stylesheet" href="apps/basecamp/basecamp-index.css?v=${buildVersion}" />
   </head>
   <body>
     <div id="basecamp-root" aria-busy="true"></div>
-    <script src="apps/basecamp/basecamp-index.js" data-config="apps/basecamp/basecamp-index.json"></script>
+    <script src="apps/basecamp/basecamp-index.js?v=${buildVersion}" data-config="apps/basecamp/basecamp-index.json?v=${buildVersion}"></script>
   </body>
 </html>
 `;
+}
 
 function buildBasecampIndexConfig() {
   return {
@@ -106,15 +109,32 @@ function writeJson(target, config) {
   console.log(`wrote ${path.relative(BASECAMP_ROOT, target)}`);
 }
 
-function writeRootIndexHtml(rootDir) {
+function buildVersion(config) {
+  const githubSha = process.env.GITHUB_SHA?.trim();
+  if (githubSha && /^[0-9a-f]{7,64}$/i.test(githubSha)) {
+    return githubSha.slice(0, 12).toLowerCase();
+  }
+
+  const hash = crypto.createHash("sha256");
+  hash.update(JSON.stringify(config));
+  hash.update(fs.readFileSync(path.join(LANDING_DIR, "basecamp-index.css")));
+  hash.update(fs.readFileSync(path.join(LANDING_DIR, "basecamp-index.js")));
+  return hash.digest("hex").slice(0, 12);
+}
+
+function writeRootIndexHtml(rootDir, version) {
   const out = path.join(rootDir, "index.html");
-  fs.writeFileSync(out, ROOT_INDEX_HTML, "utf8");
+  fs.writeFileSync(out, rootIndexHtml(version), "utf8");
   console.log(`wrote ${path.relative(BASECAMP_ROOT, out)}`);
 }
 
 function main() {
-  writeJson(path.join(LANDING_DIR, "basecamp-index.json"), buildBasecampIndexConfig());
-  writeRootIndexHtml(BASECAMP_ROOT);
+  const config = buildBasecampIndexConfig();
+  const version = buildVersion(config);
+  config.buildVersion = version;
+  config.banner.src = `${config.banner.src}?v=${version}`;
+  writeJson(path.join(LANDING_DIR, "basecamp-index.json"), config);
+  writeRootIndexHtml(BASECAMP_ROOT, version);
 }
 
 if (require.main === module) {
@@ -123,6 +143,7 @@ if (require.main === module) {
 
 module.exports = {
   buildBasecampIndexConfig,
+  buildVersion,
   writeRootIndexHtml,
   DOC_LINKS,
   LANDING_DIR,
