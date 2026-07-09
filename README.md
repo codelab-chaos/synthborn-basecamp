@@ -1,6 +1,6 @@
-# synthborn-basecamp
+# Synthborn Basecamp
 
-Welcome to Synthborn Basecamp.
+Welcome to The Synthborn Basecamp.
 
 This repo is the warm, rugged stop before you head into the Hytale modding woods.
 It is stocked with maps, field guides, reference tools, generated indexes, and
