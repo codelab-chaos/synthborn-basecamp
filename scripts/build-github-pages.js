@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 /*
- * Build the GitHub Pages static site in place.
+ * Build the GitHub Pages static site and assemble a deployable artifact.
  *
  * Output:
- *   index.html
- *   apps/basecamp/basecamp-index.json
- *   apps/recipe-kiosk/
- *   apps/prefab-gallery/
- *   apps/sdk-explorer/
+ *   _site/index.html
+ *   _site/apps/basecamp/
+ *   _site/apps/recipe-kiosk/
+ *   _site/apps/prefab-gallery/
+ *   _site/apps/sdk-explorer/
  *
  * Usage: node scripts/build-github-pages.js [--skip-recipe] [--skip-prefab-web] [--skip-sdk] [--icons]
  */
@@ -21,6 +21,7 @@ const { spawnSync } = require("node:child_process");
 const BASECAMP_ROOT = path.resolve(__dirname, "..");
 const APPS_ROOT = path.join(BASECAMP_ROOT, "apps");
 const ASSETS_ROOT = path.join(BASECAMP_ROOT, "_Assets");
+const SITE_ROOT = path.join(BASECAMP_ROOT, "_site");
 
 function parseArgs(argv) {
   return {
@@ -61,14 +62,6 @@ function buildRecipeKiosk(opts) {
   console.log(`[pages] recipe-kiosk -> ${path.relative(BASECAMP_ROOT, appDir)}`);
 }
 
-function ensureNoJekyll() {
-  const file = path.join(BASECAMP_ROOT, ".nojekyll");
-  if (!fs.existsSync(file)) {
-    fs.writeFileSync(file, "", "utf8");
-    console.log("[pages] created .nojekyll");
-  }
-}
-
 function buildPrefabGalleryWeb() {
   const appDir = path.join(APPS_ROOT, "prefab-gallery");
   const required = [
@@ -91,19 +84,76 @@ function buildSdkExplorer() {
   console.log(`[pages] sdk-explorer -> ${path.relative(BASECAMP_ROOT, appDir)}`);
 }
 
+function copyFile(source, destination) {
+  fs.mkdirSync(path.dirname(destination), { recursive: true });
+  fs.copyFileSync(source, destination);
+}
+
+function copyDirectory(source, destination) {
+  fs.cpSync(source, destination, { recursive: true });
+}
+
+function requirePath(target) {
+  if (!fs.existsSync(target)) {
+    throw new Error(`${path.relative(BASECAMP_ROOT, target)} missing from Pages build`);
+  }
+}
+
+function assembleSite(opts) {
+  fs.rmSync(SITE_ROOT, { recursive: true, force: true });
+  fs.mkdirSync(SITE_ROOT, { recursive: true });
+
+  const files = ["index.html"];
+  const directories = [
+    "apps/basecamp",
+    "apps/images",
+  ];
+
+  if (!opts.skipRecipe) {
+    files.push("apps/recipe-kiosk/index.html");
+    directories.push("apps/recipe-kiosk/assets", "apps/recipe-kiosk/data");
+  }
+  if (!opts.skipPrefabWeb) {
+    files.push("apps/prefab-gallery/index.html", "apps/prefab-gallery/manifest.json");
+    directories.push(
+      "apps/prefab-gallery/assets",
+      "apps/prefab-gallery/data",
+      "apps/prefab-gallery/previews",
+    );
+  }
+  if (!opts.skipSdk) {
+    files.push("apps/sdk-explorer/index.html");
+    directories.push("apps/sdk-explorer/assets", "apps/sdk-explorer/data");
+  }
+
+  for (const relativePath of files) {
+    const source = path.join(BASECAMP_ROOT, relativePath);
+    requirePath(source);
+    copyFile(source, path.join(SITE_ROOT, relativePath));
+  }
+  for (const relativePath of directories) {
+    const source = path.join(BASECAMP_ROOT, relativePath);
+    requirePath(source);
+    copyDirectory(source, path.join(SITE_ROOT, relativePath));
+  }
+
+  console.log(`[pages] artifact -> ${path.relative(BASECAMP_ROOT, SITE_ROOT)}`);
+}
+
 function main() {
   const opts = parseArgs(process.argv.slice(2));
   console.log(`Building GitHub Pages site from ${BASECAMP_ROOT}`);
 
-  ensureNoJekyll();
   buildLandingPage();
 
   if (!opts.skipRecipe) buildRecipeKiosk(opts);
   if (!opts.skipPrefabWeb) buildPrefabGalleryWeb();
   if (!opts.skipSdk) buildSdkExplorer();
 
-  console.log("\n[done] GitHub Pages bundle ready at repo root");
-  console.log("Enable: repo Settings → Pages → Deploy from branch → main → /");
+  assembleSite(opts);
+
+  console.log("\n[done] GitHub Pages artifact ready in _site/");
+  console.log("Enable: repo Settings → Pages → GitHub Actions");
 }
 
 try {

@@ -1,0 +1,71 @@
+name: Build and deploy GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: |
+            apps/library/package-lock.json
+            apps/prefab-gallery/package-lock.json
+            apps/recipe-kiosk/package-lock.json
+            apps/sdk-explorer/package-lock.json
+
+      - name: Install Prefab Gallery dependencies
+        run: npm ci --prefix apps/prefab-gallery
+
+      - name: Install Recipe Kiosk dependencies
+        run: npm ci --prefix apps/recipe-kiosk
+
+      - name: Install SDK Explorer dependencies
+        run: npm ci --prefix apps/sdk-explorer
+
+      - name: Verify repository
+        run: npm run verify --prefix tools
+
+      - name: Build Pages artifact
+        run: npm run pages:build --prefix tools
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    steps:
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

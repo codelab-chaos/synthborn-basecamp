@@ -2,11 +2,8 @@
 /*
  * Build basecamp-index.json and the root shell for the static landing page.
  *
- * GitHub Pages is served from the repository root. Apps are owned in-place:
- *   /index.html
- *   /apps/recipe-kiosk/
- *   /apps/prefab-gallery/
- *   /apps/sdk-explorer/
+ * The local build writes disposable app output in place, then
+ * build-github-pages.js stages the public files under _site/ for deployment.
  *
  *   node scripts/build-basecamp-index-json.js
  */
@@ -18,6 +15,7 @@ const path = require("node:path");
 
 const BASECAMP_ROOT = path.resolve(__dirname, "..");
 const LANDING_DIR = path.join(BASECAMP_ROOT, "apps", "basecamp");
+const REPO_BLOB_BASE = "https://github.com/codelab-chaos/synthborn-basecamp/blob/main";
 
 const DOC_LINKS = [
   {
@@ -86,13 +84,22 @@ function buildBasecampIndexConfig() {
         href: "apps/prefab-gallery/",
         title: "Prefab Gallery",
       },
+      {
+        tile: "sdk-explorer",
+        href: "apps/sdk-explorer/",
+        title: "SDK Explorer",
+        image: "apps/images/sdk-explorer-icon.png",
+      },
     ],
     docSections: DOC_LINKS.map((section) => ({
       section: section.section,
-      items: section.items,
+      items: section.items.map((item) => ({
+        ...item,
+        href: `${REPO_BLOB_BASE}/${item.href}`,
+      })),
     })),
     footer:
-      "Source markdown links open in your editor or browser. Regenerate GitHub Pages apps with "
+      "Source documentation opens on GitHub. Regenerate GitHub Pages apps with "
       + "cd tools && npm run pages:build.",
   };
 }

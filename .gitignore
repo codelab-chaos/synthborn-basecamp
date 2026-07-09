@@ -32,6 +32,22 @@ node_modules/
 .vscode/*
 !.vscode/settings.json
 
+# GitHub Pages is built and deployed from an Actions artifact. Keep disposable
+# webpack output and CI-generated app data out of repository history.
+_site/
+/.nojekyll
+/index.html
+/apps/basecamp/basecamp-index.json
+/apps/recipe-kiosk/index.html
+/apps/recipe-kiosk/assets/
+/apps/recipe-kiosk/data/loot.json
+/apps/recipe-kiosk/data/recipes.json
+/apps/prefab-gallery/index.html
+/apps/prefab-gallery/assets/
+/apps/sdk-explorer/index.html
+/apps/sdk-explorer/assets/
+/apps/sdk-explorer/data/sdk-reference.json
+
 
 # macOS
 .DS_Store

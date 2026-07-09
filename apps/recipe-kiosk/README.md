@@ -5,7 +5,7 @@ Self-contained static app — tables and trees; optional item icon atlas from lo
 
 ## Data
 
-Reads `docs/refs/recipes/recipes.json` and `loot.json` (synced into committed `data/`
+Reads `docs/refs/recipes/recipes.json` and `loot.json` (synced into disposable `data/`
 static output at build time).
 Tech tree tab builds dependency graphs **client-side** from the same recipe index — no
 separate `crafting-tech-tree.json` load.

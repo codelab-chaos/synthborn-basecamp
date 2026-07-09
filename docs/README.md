@@ -21,12 +21,13 @@ Those live in the deployable sibling repos.
 | Publish a mod to CurseForge (moderation refs) | [`publishing-curseforge.md`](publishing-curseforge.md) |
 | Review docs health and cleanup plan | [`docs-audit.md`](docs-audit.md) |
 | Verify basecamp links and reference tools | `cd tools && npm run verify` |
-| Build GitHub Pages apps | `cd tools && npm run pages:build` → commit `index.html`, `apps/recipe-kiosk/`, `apps/prefab-gallery/`, `apps/sdk-explorer/` |
+| Build GitHub Pages apps | `cd tools && npm run pages:build` → inspect the disposable `_site/` artifact; pushes to `main` build and deploy it automatically |
 
 ## GitHub Pages
 
-Static apps are published from the repository root on `main` (repo Settings → Pages →
-**Deploy from branch** → `main` → `/`).
+Static apps are built by [the Pages workflow](../.github/workflows/pages.yml) on
+every push or merge to `main`. Configure repo Settings → Pages → **GitHub Actions**;
+the workflow uploads and deploys the generated `_site/` artifact.
 
 | URL path (project site) | App |
 |---|---|
@@ -35,7 +36,7 @@ Static apps are published from the repository root on `main` (repo Settings → 
 | `/apps/prefab-gallery/` | Prefab gallery |
 | `/apps/sdk-explorer/` | SDK explorer |
 
-Build before push:
+Build locally when you want to inspect the same artifact before pushing:
 
 ```bash
 cd tools && npm run pages:build
@@ -44,7 +45,8 @@ cd tools && npm run pages:build:icons
 ```
 
 App build output is maintained only in each app folder. Do not copy app output into
-`docs/`.
+`docs/`. Webpack bundles and CI-generated app data are disposable and ignored by
+Git; the Pages workflow publishes them from `_site/`.
 
 Production webpack builds use **relative** `publicPath` so `assets/` and `data/` resolve under
 each app subfolder (e.g. `/apps/recipe-kiosk/`).
@@ -101,8 +103,11 @@ The markdown keeps source URLs and remote `cdn.hytale.com` image/download links.
 
 | App | Purpose | Build |
 |---|---|---|
+| [`../apps/basecamp/`](../apps/basecamp/) | Generated landing-page data and styling | `cd tools && npm run pages:build` |
 | [`../apps/recipe-kiosk/`](../apps/recipe-kiosk/) | Static recipe/item search and tech-tree UI | `cd apps/recipe-kiosk && npm install && npm run build` |
 | [`../apps/prefab-gallery/`](../apps/prefab-gallery/) | Static Three.js prefab gallery | `cd apps/prefab-gallery && npm install && npm run build` |
+| [`../apps/sdk-explorer/`](../apps/sdk-explorer/) | Searchable SDK signature browser | `cd apps/sdk-explorer && npm install && npm run build` |
+| [`../apps/library/`](../apps/library/) | Shared UI and recipe-query source consumed by the browser apps | Not served directly |
 
 ## Policy
 

@@ -1,6 +1,6 @@
 # Research: Procedural Town & Settlement Layout Generation
 
-*Survey of map/layout procgen techniques — Watabou (Procgen Arcana), peer tools and papers, and how they apply to Kyn emergent settlements and Overseer village planning. Companion to Kyn [`settlement-spec.md`](../../../synthborn-kyn/kyn-docs/settlement-spec.md) and Overseer [`making-towns-research.md`](../../../synthborn-overseer/overseer-docs/making-towns-research.md).*
+*Survey of map/layout procgen techniques — Watabou (Procgen Arcana), peer tools and papers, and how they apply to Kyn emergent settlements and Overseer village planning. Companion to Kyn [`settlement-spec.md`](../../../synthborn-kyn/kyn-docs/settlement-spec.md) and Overseer [`making-towns-research.md`](../../../synthborn-overseer/docs/making-towns-research.md).*
 
 **Date:** 2026-06-19  
 **Status:** Durable background research — not an implementation spec.  

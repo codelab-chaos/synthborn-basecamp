@@ -1,5 +1,5 @@
 export type BasecampAppId = "recipeKiosk" | "prefabGallery" | "sdkExplorer";
-export type BasecampLinkedAppId = Exclude<BasecampAppId, "sdkExplorer">;
+export type BasecampLinkedAppId = BasecampAppId;
 
 /** Relative URLs for Live Server at repo root (`/apps/<app>/`). */
 export const basecampApps = {
@@ -32,4 +32,8 @@ export const basecampApps = {
   iconSrc: string;
 }>;
 
-export const basecampLinkedAppIds: BasecampLinkedAppId[] = ["recipeKiosk", "prefabGallery"];
+export const basecampLinkedAppIds: BasecampLinkedAppId[] = [
+  "recipeKiosk",
+  "prefabGallery",
+  "sdkExplorer",
+];
