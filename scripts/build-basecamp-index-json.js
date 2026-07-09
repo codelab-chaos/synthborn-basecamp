@@ -74,6 +74,8 @@ function buildBasecampIndexConfig() {
       alt: "Synthborn Basecamp",
     },
     apps: [
+      // SDK Explorer is intentionally direct-link only. Do not add it to this
+      // visible landing list unless the user explicitly requests that change.
       {
         tile: "recipe-kiosk",
         href: "apps/recipe-kiosk/",
@@ -83,12 +85,6 @@ function buildBasecampIndexConfig() {
         tile: "prefab-gallery",
         href: "apps/prefab-gallery/",
         title: "Prefab Gallery",
-      },
-      {
-        tile: "sdk-explorer",
-        href: "apps/sdk-explorer/",
-        title: "SDK Explorer",
-        image: "apps/images/sdk-explorer-icon.png",
       },
     ],
     docSections: DOC_LINKS.map((section) => ({

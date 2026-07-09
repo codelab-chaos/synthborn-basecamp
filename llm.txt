@@ -36,6 +36,15 @@ Search before reading:
 - External docs mirrors: `cd tools && npm run docs:list`
 - Basecamp health: `cd tools && npm run verify`
 
+Published app visibility:
+
+- SDK Explorer is intentionally built and deployed for direct testing, but it
+  must remain absent from the Basecamp landing-page tiles and shared app
+  navigation.
+- Add SDK Explorer back to those visible menus only when the user explicitly
+  asks for that visibility change. Do not infer readiness from the app building
+  successfully or from its direct URL being available.
+
 Do not load wholesale:
 
 - `docs/sdk/*.md`

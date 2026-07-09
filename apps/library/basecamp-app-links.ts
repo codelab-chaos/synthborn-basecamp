@@ -1,5 +1,5 @@
 export type BasecampAppId = "recipeKiosk" | "prefabGallery" | "sdkExplorer";
-export type BasecampLinkedAppId = BasecampAppId;
+export type BasecampLinkedAppId = Exclude<BasecampAppId, "sdkExplorer">;
 
 /** Relative URLs for Live Server at repo root (`/apps/<app>/`). */
 export const basecampApps = {
@@ -32,8 +32,9 @@ export const basecampApps = {
   iconSrc: string;
 }>;
 
+// SDK Explorer remains direct-link only until the user explicitly asks to make
+// it visible in shared navigation.
 export const basecampLinkedAppIds: BasecampLinkedAppId[] = [
   "recipeKiosk",
   "prefabGallery",
-  "sdkExplorer",
 ];
