@@ -1,4 +1,4 @@
-# Hytale Server SDK method index v0.5.6
+# Hytale Server SDK method index v0.5.7
 
 Grep-friendly: `grep placeBlock methods.txt` then open the listed .md file for context.
 Regenerate: `node tools/refs/sdk/build-sdk-method-index.js` (or full extract — see tools/refs/sdk/README.md)

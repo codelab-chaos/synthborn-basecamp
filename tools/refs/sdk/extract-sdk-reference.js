@@ -22,6 +22,7 @@
 const fs = require("node:fs");
 const os = require("node:os");
 const path = require("node:path");
+const crypto = require("node:crypto");
 const { execFileSync } = require("node:child_process");
 const { buildLlmsTxt } = require("./build-sdk-llms-txt");
 const { buildMethodIndex } = require("./build-sdk-method-index");
@@ -159,7 +160,7 @@ Options:
   --full   Auto-discover every package (vs the curated allowlist)
   --force  Re-extract even if the source jar is unchanged since last run
 
-Skips extraction when the source jar fingerprint (name/size/mtime/version/mode)
+Skips extraction when the source jar fingerprint (SHA-256/version/mode)
 matches the last run, recorded in <out>/.sdk-source.json. Pass --force to override.
 `);
 }
@@ -315,22 +316,25 @@ function pkgFile(pkg) {
   return pkg.replace(/\//g, ".") + ".md";
 }
 
-function renderPackage(jar, pkg, purpose) {
+function renderPackage(jar, pkg, purpose, allClasses = listPublicClasses(jar, pkg), onClass = null) {
   const pkgDot = pkg.replace(/\//g, ".");
-  const allClasses = listPublicClasses(jar, pkg);
   const sections = [];
   let publicCount = 0;
   let skipped = 0;
   for (const cls of allClasses) {
     const dump = javap(jar, cls);
-    if (!isPublicTopLevel(dump)) { skipped++; continue; }
-    publicCount++;
-    sections.push(`## ${shortName(cls)}`);
-    sections.push("");
-    sections.push("```java");
-    sections.push(cleanJavap(dump));
-    sections.push("```");
-    sections.push("");
+    if (!isPublicTopLevel(dump)) {
+      skipped++;
+    } else {
+      publicCount++;
+      sections.push(`## ${shortName(cls)}`);
+      sections.push("");
+      sections.push("```java");
+      sections.push(cleanJavap(dump));
+      sections.push("```");
+      sections.push("");
+    }
+    if (onClass) onClass(cls);
   }
   const header = [
     `# ${pkgDot}`,
@@ -347,6 +351,50 @@ function renderPackage(jar, pkg, purpose) {
   header.push("---");
   header.push("");
   return { md: header.concat(sections).join("\n"), publicCount, skipped };
+}
+
+function createClassProgress(totalClasses) {
+  let completed = 0;
+  let lastReportAt = 0;
+  let lastRenderedLength = 0;
+
+  function render(cls, force = false) {
+    completed++;
+    const now = Date.now();
+    if (!force && !process.stdout.isTTY && now - lastReportAt < 1000) return;
+
+    const remaining = Math.max(0, totalClasses - completed);
+    const percent = totalClasses === 0 ? 100 : (completed / totalClasses) * 100;
+    const line = `  Classes: ${percent.toFixed(1).padStart(5)}%`
+      + ` (${completed.toLocaleString()}/${totalClasses.toLocaleString()},`
+      + ` ${remaining.toLocaleString()} left)`
+      + (cls ? ` ${cls}` : "");
+
+    if (process.stdout.isTTY) {
+      process.stdout.write(`\r${line.padEnd(lastRenderedLength, " ")}`);
+      lastRenderedLength = Math.max(lastRenderedLength, line.length);
+    } else {
+      console.log(line);
+    }
+    lastReportAt = now;
+  }
+
+  function lineBreak() {
+    if (process.stdout.isTTY && lastRenderedLength > 0) {
+      process.stdout.write("\n");
+      lastRenderedLength = 0;
+    }
+  }
+
+  return {
+    advance(cls) {
+      render(cls, completed + 1 === totalClasses);
+    },
+    lineBreak,
+    finish() {
+      lineBreak();
+    },
+  };
 }
 
 const PURPOSE = {
@@ -382,7 +430,20 @@ const PURPOSE = {
 
 function extractVersion(jarPath) {
   const m = /Server-([\d.\-a-f]+)\.jar$/.exec(path.basename(jarPath));
-  return m ? m[1] : null;
+  if (m) return m[1];
+  try {
+    const manifest = execFileSync("unzip", ["-p", jarPath, "META-INF/MANIFEST.MF"], {
+      encoding: "utf8",
+      maxBuffer: 1024 * 1024,
+    });
+    return manifest.match(/Implementation-Version:\s*([^\r\n]+)/i)?.[1]?.trim() || null;
+  } catch {
+    return null;
+  }
+}
+
+function sha256File(file) {
+  return crypto.createHash("sha256").update(fs.readFileSync(file)).digest("hex");
 }
 
 // Fingerprint of the source jar + extraction mode. If this is unchanged since the last
@@ -393,15 +454,17 @@ function sourceFingerprint(jar, full) {
     jar: path.basename(jar),
     size: st.size,
     mtimeMs: Math.round(st.mtimeMs),
+    sha256: sha256File(jar),
     version: extractVersion(jar),
     full: !!full,
   };
 }
 
 function fingerprintMatches(a, b) {
-  return !!a && !!b
-    && a.jar === b.jar && a.size === b.size && a.mtimeMs === b.mtimeMs
-    && a.version === b.version && a.full === b.full;
+  if (!a || !b || a.full !== b.full || a.version !== b.version) return false;
+  if (a.sha256 && b.sha256) return a.sha256 === b.sha256;
+  // Compatibility with stamps written before SHA-256 was recorded.
+  return a.jar === b.jar && a.size === b.size && a.mtimeMs === b.mtimeMs;
 }
 
 function main() {
@@ -432,10 +495,14 @@ function main() {
     try {
       const prev = JSON.parse(fs.readFileSync(stampPath, "utf8"));
       if (fingerprintMatches(prev, fingerprint)) {
+        // Transparently migrate legacy stamps to content-based fingerprints.
+        if (!prev.sha256) {
+          fs.writeFileSync(stampPath, JSON.stringify(fingerprint, null, 2) + "\n");
+        }
         console.log(`Up to date: already extracted from this jar (version ${version || "?"}, `
           + `${opts.full ? "full" : "curated"} mode). Pass --force to re-extract.`);
         const appData = buildSdkAppData({ refDir: outDir });
-        console.log(`Wrote SDK app data: ${appData.counts.classes} classes, ${appData.counts.dependencies} dependency edges`);
+        console.log(`Wrote SDK app data: ${appData.counts.packages} packages, ${appData.counts.cards} cards`);
         return;
       }
     } catch { /* malformed stamp — fall through and re-extract */ }
@@ -450,16 +517,34 @@ function main() {
 
   const rows = [];
   const total = packages.length;
+  const classesByPackage = new Map(
+    packages.map(pkg => [pkg, listPublicClasses(jar, pkg)]),
+  );
+  const totalClasses = [...classesByPackage.values()]
+    .reduce((sum, classes) => sum + classes.length, 0);
+  const classProgress = createClassProgress(totalClasses);
+  console.log(`Classes: ${totalClasses.toLocaleString()} top-level type(s) to inspect`);
+
   let i = 0;
   for (const pkg of packages) {
     i++;
-    process.stdout.write(`  [${i}/${total}] ${pkg.replace(/\//g, ".")} ... `);
+    const packagePercent = ((i - 1) / total) * 100;
+    console.log(`  Package ${i}/${total} (${packagePercent.toFixed(1)}%,`
+      + ` ${(total - i + 1).toLocaleString()} left): ${pkg.replace(/\//g, ".")}`);
     const purpose = PURPOSE[pkg] || "";
-    const { md, publicCount, skipped } = renderPackage(jar, pkg, purpose);
+    const { md, publicCount, skipped } = renderPackage(
+      jar,
+      pkg,
+      purpose,
+      classesByPackage.get(pkg),
+      cls => classProgress.advance(cls),
+    );
+    classProgress.lineBreak();
     fs.writeFileSync(path.join(outDir, pkgFile(pkg)), md);
     rows.push({ pkg, file: pkgFile(pkg), purpose, publicCount, skipped });
-    console.log(`${publicCount} public (${skipped} skipped)`);
+    console.log(`    Wrote ${publicCount} public type(s) (${skipped} skipped)`);
   }
+  classProgress.finish();
   console.log("");
   console.log(`Wrote ${rows.length} package file(s) to ${outDir}`);
 
@@ -471,7 +556,7 @@ function main() {
   console.log(`Wrote methods index: ${methods.entries} entries, ${methods.uniqueMethods} unique names`);
 
   const appData = buildSdkAppData({ refDir: outDir });
-  console.log(`Wrote SDK app data: ${appData.counts.classes} classes, ${appData.counts.dependencies} dependency edges`);
+  console.log(`Wrote SDK app data: ${appData.counts.packages} packages, ${appData.counts.cards} cards`);
 
   // Record the fingerprint so the next run can skip when nothing changed.
   fs.writeFileSync(stampPath, JSON.stringify(fingerprint, null, 2) + "\n");

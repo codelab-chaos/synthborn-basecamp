@@ -1,7 +1,8 @@
 {
-  "jar": "Server-0.5.6.jar",
-  "size": 123347825,
-  "mtimeMs": 1782345261642,
-  "version": "0.5.6",
+  "jar": "Server-0.5.7.jar",
+  "size": 123347829,
+  "mtimeMs": 1784834169014,
+  "sha256": "43d9bcff1dd31574577dbfc82147718dbe2ac16c19000071f965b521ba808cdc",
+  "version": "0.5.7",
   "full": true
 }

@@ -7,9 +7,10 @@ The core routine is:
 
 1. Shut everything down cleanly before patching.
 2. Patch Hytale through the launcher.
-3. Capture the new assets (TOC + `_Assets/`) so updates are documented and diffable.
-4. Recompile and redeploy fresh jars against the new server API.
-5. Smoke-test against the patched server.
+3. Run the fast impact plan before starting any extractors.
+4. Capture/sync assets and regenerate only the affected Basecamp references/apps.
+5. Recompile and redeploy fresh jars against the new server API.
+6. Smoke-test against the patched server.
 
 Do not treat "the old jars still load" as the full compatibility check. Loading proves only
 manifest/runtime tolerance; **compiling** proves source compatibility, and **smoke testing**
@@ -86,7 +87,57 @@ grep -i "applying game update" "<install>/../hytale-launcher.log" | tail -1
 `<install>` = `~/Library/Application Support/Hytale/install/release/package` on macbookpro,
 `%APPDATA%/Hytale/install/release/package` on windowsMSI.
 
-## 3. Capture the new assets
+## 3. Plan the update first
+
+Run the read-only planner immediately after patching:
+
+```bash
+cd synthborn-basecamp/tools
+npm run update:plan
+```
+
+This is the normal release convention. It reads the asset ZIP directory and hashes the
+server jar, which is much faster than extracting assets or running `javap` across thousands
+of classes. It reports:
+
+- exact added, changed, and removed asset counts;
+- which Basecamp references/apps consume those paths;
+- whether the SDK jar actually changed;
+- the commands that would be run.
+
+Use `npm run update:plan -- --show-files` when the path list is useful. The previous TOC is
+selected automatically; `--from-toc <file>` is available for an unusual baseline. On WSL,
+the Windows launcher install is auto-detected. Set `HYTALE_GAME_LATEST` or pass `--game`
+when Hytale lives somewhere else.
+
+When the plan looks right:
+
+```bash
+npm run update:apply
+```
+
+`update:apply` incrementally syncs `_Assets`, captures the new TOC when needed, and runs
+only affected Basecamp data/app pipelines. Full SDK signature extraction runs only when
+the server jar fingerprint changed. `--force-sdk` is the simple escape hatch after changing
+the extractor itself.
+
+The planner intentionally does not edit sibling Gradle pins, deploy jars, or start servers;
+those remain explicit mod-repository steps below.
+
+The routing convention is deliberately small:
+
+| Changed input | Updated consumer |
+|---|---|
+| English `server.lang` | Label index and NPC display metadata |
+| `Server/NPC/**` | NPC catalog |
+| Recipe, item, or drop JSON | Recipe/loot indexes, dependency trees, and Recipe Kiosk data |
+| Bench item JSON | Bench tier index |
+| Item/resource JSON or `Common/Icons/**` | Recipe Kiosk item-icon atlas |
+| Prefab JSON or item JSON (which supplies block colors) | Prefab index, gallery packs, and preview atlases |
+| Server jar SHA-256/version | Full SDK references and SDK Explorer data |
+| Anything else | Recorded in the TOC and reported, but no unrelated app is rebuilt |
+
+## 4. Capture the new assets
 
 The patch overwrites `Assets.zip`, so capture the baseline **right after** updating. A
 versioned, committable TOC (path · size · CRC-32 per file) is the change-detection trail —
@@ -96,6 +147,9 @@ versioned, committable TOC (path · size · CRC-32 per file) is the change-detec
 cd synthborn-basecamp
 node tools/refs/assets/build-assets-toc.js  # writes docs/refs/assets/toc/assets-toc-<version>.json
 ```
+
+The normal `npm run update:apply` path performs this capture and sync. The commands below
+are the manual fallback.
 
 Refresh the unpacked reference (`_Assets/` is gitignored, ~3.3 GB). If `_Assets/` still
 matches the last committed TOC, use the old TOC as the baseline so only added/changed files
@@ -117,7 +171,7 @@ node tools/refs/assets/sync-assets.js
 > Note: the very first run establishes the baseline — you can only *diff* from the next
 > update onward (and only if you captured the TOC before the next patch overwrote the zip).
 
-## 4. Bump the server API version
+## 5. Bump the server API version
 
 First confirm the new version is actually published, or every build fails:
 
@@ -136,7 +190,7 @@ Manifest `ServerVersion` ranges usually do **not** need to change for a patch: a
 `>=0.5.0 <0.6.0` already covers any `0.5.x`. Only narrow it if compatibility requires it.
 Bumping the Gradle dependency is what gives compile-time API checks against the new jar.
 
-## 5. Recompile and redeploy
+## 6. Recompile and redeploy
 
 Servers should be down (step 1). Build and deploy from each owning repo:
 
@@ -153,7 +207,7 @@ or `node tools/deploy.js --target combined restart`. Confirm the new artifact re
 find ~/.gradle/caches -path "*hytale*Server*<new>*" -name "*.jar" | head -1   # proves it compiled against <new>
 ```
 
-## 6. Smoke test
+## 7. Smoke test
 
 Start the patched server and run smoke tests from the owning repo. For example:
 

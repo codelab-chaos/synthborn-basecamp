@@ -30,6 +30,8 @@
     "sdk:list": "node refs/sdk/list-hytale-server-api.js",
     "sdk:llms": "node refs/sdk/build-sdk-llms-txt.js",
     "sdk:search": "node refs/sdk/sdk-search.js",
+    "update:plan": "node release/plan-hytale-update.js",
+    "update:apply": "node release/plan-hytale-update.js --apply",
     "pages:build": "node ../scripts/build-github-pages.js",
     "pages:build:icons": "node ../scripts/build-github-pages.js --icons",
     "index:json": "node ../scripts/build-basecamp-index-json.js"

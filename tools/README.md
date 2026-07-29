@@ -24,6 +24,7 @@ npm run verify
 npm run examples:list
 npm run examples:sync
 npm run docs:sync
+npm run update:plan
 npm run sdk:search -- BlockPlaceUtils
 npm run recipes:gamedata -- source Ingredient_Leather
 ```
@@ -41,6 +42,7 @@ These are stable basecamp tools. They generate or query shared reference materia
 | Tool | Path | Why it exists | Terse instructions |
 |------|------|---------------|--------------------|
 | Basecamp verifier | `verify.js` | Catches drift across reference tools and docs after moves, generated-data refreshes, or README edits. | `cd tools && npm run verify`; read-only health check. |
+| Hytale update planner | `release/plan-hytale-update.js` | Quickly maps asset CRC and server-jar changes to only the Basecamp references/apps that consume them. | `cd tools && npm run update:plan`; add `-- --show-files`, then use `npm run update:apply` after review. |
 | SDK search | `refs/sdk/sdk-search.js` | Finds SDK classes, methods, inheritance, packages, or text without loading all generated SDK docs. | `node tools/refs/sdk/sdk-search.js BlockPlaceUtils`; use `--method`, `--package`, `--extends`, `--implements`, or `--grep`. |
 | SDK extractor | `refs/sdk/extract-sdk-reference.js` | Rebuilds `docs/sdk/` from the pinned Hytale Server jar so API research matches the current mod compile target. | Run `cd ../synthborn-kyn && ./gradlew compileJava`, return here, then `node tools/refs/sdk/extract-sdk-reference.js --full`. |
 | SDK diff | `refs/sdk/diff-sdk-reference.js` | Summarizes package, class, and method signature changes after an SDK refresh. | `node tools/refs/sdk/diff-sdk-reference.js`; add `--against main` or `--against /path/to/old-sdk-reference`. |

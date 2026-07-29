@@ -27,6 +27,14 @@ Topic entry points: [`docs/sdk/README.md`](../../../docs/sdk/README.md).
 When mod `build.gradle.kts` files pin a new `Server:X.Y.Z`, refresh the reference so research
 docs and agents grep the right signatures.
 
+Start with the Basecamp release planner. Its quick SHA-256 check decides whether this
+15–30 minute extraction is necessary:
+
+```bash
+cd tools
+npm run update:plan
+```
+
 ```bash
 # from synthborn-basecamp repo root
 
@@ -40,6 +48,10 @@ node tools/refs/sdk/extract-sdk-reference.js --full
 # 3. Review API changes vs last commit
 node tools/refs/sdk/diff-sdk-reference.js
 ```
+
+Full extraction reports both package progress and class-level completion, including the
+percentage complete and number of classes remaining. Interactive terminals update the
+class counter in place; redirected/non-interactive output emits periodic progress lines.
 
 The extractor reads the jar version pinned in sibling mod repos (via
 [`tools/lib/workspace.js`](../../lib/workspace.js)) and picks the matching file from
@@ -57,7 +69,9 @@ The extractor reads the jar version pinned in sibling mod repos (via
 
 ### Skip / force
 
-Re-running with the **same** jar fingerprint is a no-op:
+Re-running with the **same** jar content fingerprint (SHA-256, version, and extraction
+mode) is a no-op. Copying the same jar or changing its timestamp does not trigger another
+full extraction:
 
 ```
 Up to date: already extracted from this jar … Pass --force to re-extract.

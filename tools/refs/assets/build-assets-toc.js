@@ -32,9 +32,31 @@ const BASECAMP_ROOT = path.resolve(__dirname, '..', '..', '..');
 function defaultGameLatest() {
   const os = process.platform;
   const home = require('os').homedir();
+  if (process.env.HYTALE_GAME_LATEST) return path.resolve(process.env.HYTALE_GAME_LATEST);
   if (os === 'win32') return path.join(process.env.APPDATA || '', 'Hytale/install/release/package/game/latest');
   if (os === 'darwin') return path.join(home, 'Library/Application Support/Hytale/install/release/package/game/latest');
-  return path.join(home, '.local/share/Hytale/install/release/package/game/latest');
+
+  const linuxDefault = path.join(home, '.local/share/Hytale/install/release/package/game/latest');
+  if (fs.existsSync(linuxDefault)) return linuxDefault;
+
+  // WSL development machines commonly use the launcher installed on Windows.
+  const windowsUsers = '/mnt/c/Users';
+  if (fs.existsSync(windowsUsers)) {
+    try {
+      const candidates = fs.readdirSync(windowsUsers)
+        .map((user) => path.join(
+          windowsUsers,
+          user,
+          'AppData/Roaming/Hytale/install/release/package/game/latest',
+        ))
+        .filter((candidate) => fs.existsSync(path.join(candidate, 'Assets.zip')));
+      if (candidates.length > 0) return candidates[0];
+    } catch {
+      // Fall back to the normal Linux path when the Windows user tree is unreadable.
+    }
+  }
+
+  return linuxDefault;
 }
 
 function parseArgs(argv) {

@@ -188,6 +188,11 @@ Regenerate reference data when its upstream input changes:
 | Basecamp landing index | Landing-page config should be rebuilt from repo docs/apps | `cd tools && npm run index:json` |
 | Static Pages apps | App source or generated app data changes | `cd tools && npm run pages:build` |
 
+For Hytale releases, do not manually guess which rows apply. Start with
+`cd tools && npm run update:plan`; after review, `npm run update:apply` syncs assets and
+runs only the affected rows. The SDK SHA-256 check happens before the long class-signature
+extraction.
+
 Run `cd tools && npm run verify` after README edits, docs moves, reference refreshes,
 or app path changes. It checks JavaScript syntax, JSON parse health, stale moved
 paths, local markdown links, and read-only smoke tests.

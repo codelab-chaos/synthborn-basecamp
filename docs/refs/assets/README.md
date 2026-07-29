@@ -9,6 +9,21 @@ This folder is an unpacked local copy of the Hytale assets. Treat it as a search
 
 ## Refreshing `_Assets`
 
+For a Hytale release update, use the impact planner from `tools/`:
+
+```bash
+npm run update:plan                 # cheap, read-only asset + SDK decision
+npm run update:plan -- --show-files # include every changed path
+npm run update:apply                # sync and run only affected pipelines
+```
+
+The planner compares path/size/CRC entries, maps changed paths to their consumers, and
+skips unrelated Recipe Kiosk, Prefab Gallery, label, NPC, and SDK work. See the
+[version update checklist](../../hytale-version-update-checklist.md) for the complete
+workspace procedure.
+
+The lower-level manual workflow follows.
+
 Capture the new TOC first, then sync the unpacked tree. The fast path compares the new
 `Assets.zip` central directory against the previous committed TOC, so it extracts only
 added/changed files and deletes files removed from the new zip:

@@ -1,4 +1,4 @@
-# Hytale Server SDK Reference v0.5.6
+# Hytale Server SDK Reference v0.5.7
 
 > Flat index of public SDK types by package. Each entry shows the class declaration (kind, extends, implements) so you can pick which file to read for full method signatures.
 
