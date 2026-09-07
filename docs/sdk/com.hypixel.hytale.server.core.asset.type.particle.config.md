@@ -17,11 +17,15 @@ public class com.hypixel.hytale.server.core.asset.type.particle.config.Particle 
   protected com.hypixel.hytale.protocol.ParticleScaleRatioConstraint scaleRatioConstraint;
   protected com.hypixel.hytale.protocol.SoftParticle softParticle;
   protected float softParticlesFadeFactor;
+  protected float cameraNearFadeStartDistance;
+  protected float cameraNearFadeEndDistance;
+  protected float cameraFarFadeStartDistance;
+  protected float cameraFarFadeEndDistance;
   protected boolean useSpriteBlending;
   protected com.hypixel.hytale.server.core.asset.type.particle.config.ParticleAnimationFrame initialAnimationFrame;
   protected com.hypixel.hytale.server.core.asset.type.particle.config.ParticleAnimationFrame collisionAnimationFrame;
   protected it.unimi.dsi.fastutil.ints.Int2ObjectMap<com.hypixel.hytale.server.core.asset.type.particle.config.ParticleAnimationFrame> animation;
-  public com.hypixel.hytale.server.core.asset.type.particle.config.Particle(java.lang.String, com.hypixel.hytale.protocol.Size, com.hypixel.hytale.protocol.ParticleUVOption, com.hypixel.hytale.protocol.ParticleScaleRatioConstraint, com.hypixel.hytale.protocol.SoftParticle, float, boolean, com.hypixel.hytale.server.core.asset.type.particle.config.ParticleAnimationFrame, com.hypixel.hytale.server.core.asset.type.particle.config.ParticleAnimationFrame, it.unimi.dsi.fastutil.ints.Int2ObjectMap<com.hypixel.hytale.server.core.asset.type.particle.config.ParticleAnimationFrame>);
+  public com.hypixel.hytale.server.core.asset.type.particle.config.Particle(java.lang.String, com.hypixel.hytale.protocol.Size, com.hypixel.hytale.protocol.ParticleUVOption, com.hypixel.hytale.protocol.ParticleScaleRatioConstraint, com.hypixel.hytale.protocol.SoftParticle, float, float, float, float, float, boolean, com.hypixel.hytale.server.core.asset.type.particle.config.ParticleAnimationFrame, com.hypixel.hytale.server.core.asset.type.particle.config.ParticleAnimationFrame, it.unimi.dsi.fastutil.ints.Int2ObjectMap<com.hypixel.hytale.server.core.asset.type.particle.config.ParticleAnimationFrame>);
   protected com.hypixel.hytale.server.core.asset.type.particle.config.Particle();
   public java.lang.String getTexture();
   public com.hypixel.hytale.protocol.Size getFrameSize();
@@ -29,6 +33,10 @@ public class com.hypixel.hytale.server.core.asset.type.particle.config.Particle 
   public com.hypixel.hytale.protocol.ParticleScaleRatioConstraint getScaleRatioConstraint();
   public com.hypixel.hytale.protocol.SoftParticle getSoftParticle();
   public float getSoftParticlesFadeFactor();
+  public float getCameraNearFadeStartDistance();
+  public float getCameraNearFadeEndDistance();
+  public float getCameraFarFadeStartDistance();
+  public float getCameraFarFadeEndDistance();
   public boolean isUseSpriteBlending();
   public com.hypixel.hytale.server.core.asset.type.particle.config.ParticleAnimationFrame getInitialAnimationFrame();
   public com.hypixel.hytale.server.core.asset.type.particle.config.ParticleAnimationFrame getCollisionAnimationFrame();

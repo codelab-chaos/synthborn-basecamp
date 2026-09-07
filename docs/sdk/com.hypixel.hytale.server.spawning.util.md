@@ -96,14 +96,14 @@ public class com.hypixel.hytale.server.spawning.util.LightRangePredicate {
   public boolean isTestGreenLightValue();
   public boolean isTestBlueLightValue();
   public boolean test(com.hypixel.hytale.server.core.universe.world.World, org.joml.Vector3d, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
-  public boolean test(com.hypixel.hytale.server.core.universe.world.chunk.BlockChunk, int, int, int, double);
+  public boolean test(com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, int, int, int, double);
   public boolean testLight(byte);
   public boolean testSkyLight(byte);
   public boolean testSunlight(byte);
   public boolean testRedLight(byte);
   public boolean testGreenLight(byte);
   public boolean testBlueLight(byte);
-  public static byte calculateLightValue(com.hypixel.hytale.server.core.universe.world.chunk.BlockChunk, int, int, int, double);
+  public static byte calculateLightValue(com.hypixel.hytale.server.core.universe.world.chunk.section.BlockSection, int, int, int, double);
 }
 ```
 

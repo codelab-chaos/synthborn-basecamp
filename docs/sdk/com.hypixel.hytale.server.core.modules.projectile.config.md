@@ -39,7 +39,7 @@ public interface com.hypixel.hytale.server.core.modules.projectile.config.Bounce
 
 ```java
 public interface com.hypixel.hytale.server.core.modules.projectile.config.ImpactConsumer {
-  public abstract void onImpact(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, org.joml.Vector3d, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, java.lang.String, com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public abstract void onImpact(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, org.joml.Vector3d, org.joml.Vector3i, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, java.lang.String, com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
 }
 ```
 
@@ -64,9 +64,12 @@ public class com.hypixel.hytale.server.core.modules.projectile.config.Projectile
   protected com.hypixel.hytale.server.core.modules.projectile.config.PhysicsConfig physicsConfig;
   protected java.lang.String model;
   protected com.hypixel.hytale.server.core.asset.type.model.config.Model generatedModel;
+  protected boolean useModelScale;
   protected double launchForce;
   protected org.joml.Vector3f spawnOffset;
   protected com.hypixel.hytale.protocol.Direction spawnRotationOffset;
+  protected boolean rotateSpawnOffsetByPitch;
+  protected boolean rotateSpawnOffsetByYaw;
   protected java.util.Map<com.hypixel.hytale.protocol.InteractionType, java.lang.String> interactions;
   protected java.lang.String launchLocalSoundEventId;
   protected java.lang.String launchWorldSoundEventId;
@@ -80,7 +83,9 @@ public class com.hypixel.hytale.server.core.modules.projectile.config.Projectile
   public java.lang.String getId();
   protected void processConfig();
   public com.hypixel.hytale.server.core.modules.projectile.config.PhysicsConfig getPhysicsConfig();
+  public com.hypixel.hytale.server.core.asset.type.model.config.ModelAsset getModelAsset();
   public com.hypixel.hytale.server.core.asset.type.model.config.Model getModel();
+  public com.hypixel.hytale.server.core.asset.type.model.config.Model createSpawnModel(java.lang.Long);
   public double getLaunchForce();
   public double getMuzzleVelocity();
   public double getGravity();
@@ -92,6 +97,8 @@ public class com.hypixel.hytale.server.core.modules.projectile.config.Projectile
   public int getLaunchWorldSoundEventIndex();
   public int getProjectileSoundEventIndex();
   public org.joml.Vector3f getSpawnOffset();
+  public boolean isRotateSpawnOffsetByPitch();
+  public boolean isRotateSpawnOffsetByYaw();
   public com.hypixel.hytale.protocol.Direction getSpawnRotationOffset();
   public org.joml.Vector3d getCalculatedOffset(float, float);
   public com.hypixel.hytale.protocol.ProjectileConfig toPacket();
@@ -178,6 +185,7 @@ public class com.hypixel.hytale.server.core.modules.projectile.config.StandardPh
   protected final org.joml.Vector3d nextMovement;
   protected boolean bounced;
   protected int bounces;
+  protected org.joml.Vector3i bounceBlockPosition;
   protected boolean onGround;
   protected boolean provideCharacterCollisions;
   protected final java.util.UUID creatorUuid;
@@ -189,6 +197,11 @@ public class com.hypixel.hytale.server.core.modules.projectile.config.StandardPh
   protected final org.joml.Vector3d moveOutOfSolidVelocity;
   protected final org.joml.Vector3d contactPosition;
   protected final org.joml.Vector3d contactNormal;
+  protected int contactBlockX;
+  protected int contactBlockY;
+  protected int contactBlockZ;
+  protected boolean contactBlockRecorded;
+  protected boolean fallingAfterBreak;
   protected double collisionStart;
   protected final com.hypixel.hytale.server.core.modules.physics.util.PhysicsBodyStateUpdater stateUpdater;
   protected final com.hypixel.hytale.server.core.modules.physics.util.PhysicsBodyState stateBefore;
@@ -243,9 +256,13 @@ public class com.hypixel.hytale.server.core.modules.projectile.config.StandardPh
   public void setBounced(boolean);
   public int getBounces();
   public void incrementBounces();
+  public org.joml.Vector3i bounceBlockPosition();
+  public void clearBounced();
   public org.joml.Vector3d getMoveOutOfSolidVelocity();
   public boolean isMovedInsideSolid();
   public void setMovedInsideSolid(boolean);
+  public com.hypixel.hytale.protocol.BlockPosition getContactBlock();
+  public void setFallingAfterBreak(boolean);
   public double getDisplacedMass();
   public void setDisplacedMass(double);
   public double getSubSurfaceVolume();

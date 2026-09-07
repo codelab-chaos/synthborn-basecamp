@@ -37,6 +37,6 @@ public class com.hypixel.hytale.server.core.discovery.DiscoveryModuleConfig {
 ```java
 public class com.hypixel.hytale.server.core.discovery.DiscoveryService {
   public com.hypixel.hytale.server.core.discovery.DiscoveryService();
-  public boolean sendHeartbeat(java.lang.String);
+  public com.hypixel.hytale.server.core.discovery.DiscoveryService$HeartbeatResult sendHeartbeat(java.lang.String);
 }
 ```

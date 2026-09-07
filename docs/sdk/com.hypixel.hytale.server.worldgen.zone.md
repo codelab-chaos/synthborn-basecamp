@@ -95,8 +95,8 @@ public class com.hypixel.hytale.server.worldgen.zone.ZonePatternGenerator {
 
 ```java
 public class com.hypixel.hytale.server.worldgen.zone.ZonePatternGeneratorCache {
-  protected final java.util.function.Function<java.lang.Integer, com.hypixel.hytale.server.worldgen.zone.ZonePatternGenerator> compute;
-  protected final java.util.Map<java.lang.Integer, com.hypixel.hytale.server.worldgen.zone.ZonePatternGenerator> cache;
+  protected final com.hypixel.fastutil.ints.Int2ObjectConcurrentHashMap$IntFunction<com.hypixel.hytale.server.worldgen.zone.ZonePatternGenerator> compute;
+  protected final com.hypixel.fastutil.ints.Int2ObjectConcurrentHashMap<com.hypixel.hytale.server.worldgen.zone.ZonePatternGenerator> cache;
   public com.hypixel.hytale.server.worldgen.zone.ZonePatternGeneratorCache(com.hypixel.hytale.server.worldgen.zone.ZonePatternProvider);
   public com.hypixel.hytale.server.worldgen.zone.ZonePatternGenerator get(int);
 }

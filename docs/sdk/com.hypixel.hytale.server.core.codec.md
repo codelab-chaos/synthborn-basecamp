@@ -49,7 +49,7 @@ public final class com.hypixel.hytale.server.core.codec.ProtocolCodecs {
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.protocol.ColorLight> COLOR_LIGHT;
   public static final com.hypixel.hytale.server.core.codec.protocol.ColorCodec COLOR;
   public static final com.hypixel.hytale.codec.codecs.array.ArrayCodec<com.hypixel.hytale.protocol.Color> COLOR_ARRAY;
-  public static final com.hypixel.hytale.server.core.codec.protocol.ColorAlphaCodec COLOR_AlPHA;
+  public static final com.hypixel.hytale.server.core.codec.protocol.ColorAlphaCodec COLOR_ALPHA;
   public static final com.hypixel.hytale.codec.codecs.EnumCodec<com.hypixel.hytale.protocol.GameMode> GAMEMODE;
   public static final com.hypixel.hytale.codec.codecs.EnumCodec<com.hypixel.hytale.protocol.GameMode> GAMEMODE_LEGACY;
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.protocol.Size> SIZE;

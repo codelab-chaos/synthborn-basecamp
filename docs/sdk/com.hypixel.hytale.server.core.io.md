@@ -66,7 +66,7 @@ public abstract class com.hypixel.hytale.server.core.io.PacketHandler implements
   public void write(com.hypixel.hytale.protocol.ToClientPacket[], com.hypixel.hytale.protocol.ToClientPacket);
   public void write(com.hypixel.hytale.protocol.ToClientPacket);
   public void writeNoCache(com.hypixel.hytale.protocol.ToClientPacket);
-  public void writePacket(com.hypixel.hytale.protocol.ToClientPacket, boolean);
+  public boolean writePacket(com.hypixel.hytale.protocol.ToClientPacket, boolean);
   public void disconnect(com.hypixel.hytale.server.core.Message);
   public void disconnect(com.hypixel.hytale.protocol.FormattedMessage);
   protected void disconnect0(com.hypixel.hytale.protocol.FormattedMessage);
@@ -138,7 +138,7 @@ public class com.hypixel.hytale.server.core.io.ServerManager extends com.hypixel
   protected void shutdown();
   public void unbindAllListeners();
   public java.util.List<com.hypixel.hytale.protocol.io.ServerListener> getListeners();
-  public java.util.concurrent.CompletableFuture<java.lang.Boolean> bind(java.net.InetSocketAddress);
+  public java.util.concurrent.CompletableFuture<java.lang.Integer> bind(java.net.InetSocketAddress);
   public boolean unbind(com.hypixel.hytale.protocol.io.ServerListener);
   public java.net.InetSocketAddress getLocalOrPublicAddress() throws java.net.SocketException;
   public java.net.InetSocketAddress getNonLoopbackAddress() throws java.net.SocketException;

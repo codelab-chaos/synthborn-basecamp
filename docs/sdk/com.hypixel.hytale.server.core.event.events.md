@@ -34,6 +34,7 @@ public class com.hypixel.hytale.server.core.event.events.ShutdownEvent implement
   public static final short DISCONNECT_PLAYERS;
   public static final short UNBIND_LISTENERS;
   public static final short SHUTDOWN_WORLDS;
+  public static final short FLUSH_UNIVERSE_RESOURCES;
   public com.hypixel.hytale.server.core.event.events.ShutdownEvent();
   public java.lang.String toString();
 }

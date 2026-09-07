@@ -48,6 +48,7 @@ public class com.hypixel.hytale.math.vector.Location {
 ```java
 public class com.hypixel.hytale.math.vector.Rotation3f implements com.hypixel.hytale.math.vector.Rotation3fc {
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.math.vector.Rotation3f> CODEC;
+  public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.math.vector.Rotation3f> PARTIAL_TELEPORT_CODEC;
   public static final com.hypixel.hytale.math.vector.Rotation3fc ZERO;
   public static final com.hypixel.hytale.math.vector.Rotation3fc IDENTITY;
   public static final com.hypixel.hytale.math.vector.Rotation3fc NaN;
@@ -87,6 +88,7 @@ public class com.hypixel.hytale.math.vector.Rotation3f implements com.hypixel.hy
   public com.hypixel.hytale.math.vector.Rotation3f mul(com.hypixel.hytale.math.vector.Rotation3f);
   public float distanceSquaredTo(float, float, float);
   public boolean isFinite();
+  public void sanitizeNonFinite();
   public org.joml.Quaterniond getQuaternion(org.joml.Quaterniond);
   public com.hypixel.hytale.math.vector.Rotation3f premul(org.joml.Quaterniondc, com.hypixel.hytale.math.vector.Rotation3f);
   public com.hypixel.hytale.math.vector.Rotation3f mul(org.joml.Quaterniondc, com.hypixel.hytale.math.vector.Rotation3f);
@@ -102,8 +104,12 @@ public class com.hypixel.hytale.math.vector.Rotation3f implements com.hypixel.hy
   public static com.hypixel.hytale.math.vector.Rotation3f lerpUnclamped(com.hypixel.hytale.math.vector.Rotation3f, com.hypixel.hytale.math.vector.Rotation3f, float);
   public static com.hypixel.hytale.math.vector.Rotation3f lerpAngle(com.hypixel.hytale.math.vector.Rotation3fc, com.hypixel.hytale.math.vector.Rotation3fc, float);
   public static com.hypixel.hytale.math.vector.Rotation3f lerpAngle(com.hypixel.hytale.math.vector.Rotation3fc, com.hypixel.hytale.math.vector.Rotation3fc, float, com.hypixel.hytale.math.vector.Rotation3f);
-  public static com.hypixel.hytale.math.vector.Rotation3f lookAt(org.joml.Vector3d);
-  public static com.hypixel.hytale.math.vector.Rotation3f lookAt(org.joml.Vector3d, com.hypixel.hytale.math.vector.Rotation3f);
+  public static com.hypixel.hytale.math.vector.Rotation3f lookAt(org.joml.Vector3dc, org.joml.Vector3dc);
+  public static com.hypixel.hytale.math.vector.Rotation3f lookAt(org.joml.Vector3dc, org.joml.Vector3dc, com.hypixel.hytale.math.vector.Rotation3f);
+  public static com.hypixel.hytale.math.vector.Rotation3f lookAt(org.joml.Vector3dc);
+  public static com.hypixel.hytale.math.vector.Rotation3f lookAt(org.joml.Vector3dc, com.hypixel.hytale.math.vector.Rotation3f);
+  public static com.hypixel.hytale.math.vector.Rotation3f lookAt(double, double, double);
+  public static com.hypixel.hytale.math.vector.Rotation3f lookAt(double, double, double, com.hypixel.hytale.math.vector.Rotation3f);
   public java.lang.Object clone() throws java.lang.CloneNotSupportedException;
 }
 ```
@@ -131,6 +137,7 @@ public interface com.hypixel.hytale.math.vector.Rotation3fc {
 ```java
 public class com.hypixel.hytale.math.vector.Transform {
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.math.vector.Transform> CODEC;
+  public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.math.vector.Transform> PARTIAL_TELEPORT_CODEC;
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.math.vector.Transform> CODEC_DEGREES;
   protected org.joml.Vector3d position;
   protected com.hypixel.hytale.math.vector.Rotation3f rotation;
@@ -142,11 +149,12 @@ public class com.hypixel.hytale.math.vector.Transform {
   public static final int ROLL_IS_RELATIVE;
   public static final int RELATIVE_TO_BLOCK;
   public com.hypixel.hytale.math.vector.Transform();
-  public com.hypixel.hytale.math.vector.Transform(org.joml.Vector3i);
-  public com.hypixel.hytale.math.vector.Transform(org.joml.Vector3d);
+  public com.hypixel.hytale.math.vector.Transform(org.joml.Vector3ic);
+  public com.hypixel.hytale.math.vector.Transform(org.joml.Vector3dc);
   public com.hypixel.hytale.math.vector.Transform(double, double, double);
   public com.hypixel.hytale.math.vector.Transform(double, double, double, float, float, float);
   public com.hypixel.hytale.math.vector.Transform(com.hypixel.hytale.math.vector.Transform);
+  public com.hypixel.hytale.math.vector.Transform(org.joml.Vector3dc, com.hypixel.hytale.math.vector.Rotation3fc);
   public com.hypixel.hytale.math.vector.Transform(org.joml.Vector3d, com.hypixel.hytale.math.vector.Rotation3f);
   public void set(com.hypixel.hytale.math.vector.Transform);
   public org.joml.Vector3d getPosition();
@@ -162,7 +170,7 @@ public class com.hypixel.hytale.math.vector.Transform {
   public boolean equals(java.lang.Object);
   public int hashCode();
   public java.lang.String toString();
-  public static void applyMaskedRelativeTransform(com.hypixel.hytale.math.vector.Transform, byte, org.joml.Vector3d, com.hypixel.hytale.math.vector.Rotation3f, org.joml.Vector3i);
+  public static void applyMaskedRelativeTransform(com.hypixel.hytale.math.vector.Transform, byte, org.joml.Vector3dc, com.hypixel.hytale.math.vector.Rotation3fc, org.joml.Vector3ic);
   public java.lang.Object clone() throws java.lang.CloneNotSupportedException;
 }
 ```
@@ -251,6 +259,8 @@ public final class com.hypixel.hytale.math.vector.Vector3dUtil {
   public static final org.joml.Vector3dc MAX;
   public static org.joml.Vector3d setYawPitch(double, double, org.joml.Vector3d);
   public static org.joml.Vector3d directionTo(org.joml.Vector3dc, org.joml.Vector3dc);
+  public static void sanitizeNonFinite(org.joml.Vector3d);
+  public static org.joml.Vector3d quadraticBezier(org.joml.Vector3dc, org.joml.Vector3dc, org.joml.Vector3dc, double, org.joml.Vector3d);
   public static java.lang.String formatShortString(org.joml.Vector3dc);
   public static org.joml.Vector3i toVector3i(org.joml.Vector3d);
   public static org.joml.Vector3d clipToZero(org.joml.Vector3d, double);
@@ -298,6 +308,7 @@ public final class com.hypixel.hytale.math.vector.Vector3iUtil {
   public static final org.joml.Vector3ic MAX;
   public static org.joml.Vector3i max(org.joml.Vector3ic, org.joml.Vector3ic);
   public static org.joml.Vector3i min(org.joml.Vector3ic, org.joml.Vector3ic);
+  public static long inclusiveBoxVolume(int, int, int, int, int, int);
   public static org.joml.Vector3d toVector3d(org.joml.Vector3ic);
 }
 ```

@@ -91,6 +91,9 @@ public class com.hypixel.hytale.server.core.modules.time.WorldTimeResource imple
   public double getSunlightFactor();
   public void setGameTime(java.time.Instant, com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public void setDayTime(double, com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public void startDayTimeInterpolation(double, double, boolean, boolean, com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public boolean isInterpolating();
+  public void cancelInterpolation();
   public void broadcastTimePacket(com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public void sendTimePackets(com.hypixel.hytale.server.core.universe.PlayerRef);
   public boolean isDayTimeWithinRange(double, double);
@@ -100,6 +103,7 @@ public class com.hypixel.hytale.server.core.modules.time.WorldTimeResource imple
   public boolean isYearWithinRange(double, double);
   public int getCurrentHour();
   public float getDayProgress();
+  public java.time.Instant dayProgressToInstant(double);
   public org.joml.Vector3d getSunDirection();
   public static com.hypixel.hytale.protocol.InstantData instantToInstantData(java.time.Instant);
   public static java.time.Instant instantDataToInstant(com.hypixel.hytale.protocol.InstantData);

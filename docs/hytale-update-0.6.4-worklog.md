@@ -69,11 +69,66 @@ This is the first Basecamp pass since 0.5.7, so it covers Update 6 (0.6.1) and h
 
 ## SDK Reference
 
-PENDING_SDK
+- Regenerated the full SDK reference from the installed `HytaleServer.jar` (0.6.4,
+  SHA-256 `7ebe0259...052b787`). The Gradle cache does not have 0.6.4 yet, so the
+  planner passed the install path explicitly.
+  - packages: 1,001 (was 915)
+  - classes in `llms.txt`: 5,618 (was 4,923)
+  - method entries: 40,972 (was 36,641)
+  - SDK Explorer cards: 5,617 (was 4,921)
+- `node tools/refs/sdk/diff-sdk-reference.js` against HEAD:
+  - added packages: 87 (new areas include `builtin.adventure.wilderness`,
+    `builtin.adventure.worldevents`, and the spectator, hardcore, encounter, camera
+    sequence, and mod-browser surfaces)
+  - added classes: 314
+  - removed classes: 18
+  - changed classes: 908
+- Removed classes (check the mods for references):
+  - `TimeInstrument in com.hypixel.hytale.builtin.hytalegenerator.engine.performanceinstruments`
+  - `NoPropDistribution in com.hypixel.hytale.builtin.hytalegenerator.propdistributions`
+  - `VoxelSpaceUtil in com.hypixel.hytale.builtin.hytalegenerator.voxelspace`
+  - `PortalWorldCommandBase in com.hypixel.hytale.builtin.portals.commands`
+  - `TimerFragmentCommand in com.hypixel.hytale.builtin.portals.commands`
+  - `ValidationResult in com.hypixel.hytale.protocol.io`
+  - `BlockFlags in com.hypixel.hytale.protocol`
+  - `ConnectedBlockRuleSetType in com.hypixel.hytale.protocol`
+  - `ChunkLoadedCommand in com.hypixel.hytale.server.core.command.commands.world.chunk`
+  - `BanParser in com.hypixel.hytale.server.core.modules.accesscontrol.ban`
+  - `InfiniteBan in com.hypixel.hytale.server.core.modules.accesscontrol.ban`
+  - `TimedBan in com.hypixel.hytale.server.core.modules.accesscontrol.ban`
+  - `HytaleWhitelistProvider in com.hypixel.hytale.server.core.modules.accesscontrol.provider`
+  - `BlockAccessor in com.hypixel.hytale.server.core.universe.world.accessor`
+  - `EmptyBlockAccessor in com.hypixel.hytale.server.core.universe.world.accessor`
+  - `ConnectedBlockFaceTags in com.hypixel.hytale.server.core.universe.world.connectedblocks`
+  - `GeneratedBlockStateChunk in com.hypixel.hytale.server.core.universe.world.worldgen`
+  - `SpawnableWithModelBuilder in com.hypixel.hytale.server.npc.asset.builder`
+- Full extraction took about 45 minutes on WSL against the Windows install path. The
+  jar location made no measurable difference; JVM start per `javap` call dominates.
 
 ## Derived References And Apps
 
-PENDING_DERIVED
+- Regenerated labels, NPCs, recipes, loot, bench tiers, dependency trees, item icons,
+  the prefab index, gallery packs, and preview atlases:
+  - labels: 3,724 items (was 3,696), 118 resource types, 574 NPC roles (was 558),
+    4,323 by-name keys (was 4,279)
+  - NPC catalog: 999 roles (was 974), 0 skipped
+  - recipes: 403 standalone, 1,581 embedded (was 1,544), 1,984 total (was 1,947)
+  - loot: 622 named drop-lists (was 620), 677 gatherable blocks (was 672), 433 distinct
+    dropped items
+  - bench tiers: 16 benches, 7 upgradable (unchanged)
+  - dependency tree: 1,552 all-recipe targets (was 1,515)
+  - Recipe Kiosk icon atlas: 1,978 icons across 2 pages, 2,536 ids in scope
+  - prefab index: 7,828 entries
+  - Prefab Gallery: 7,778 prefabs rendered, 0 failed, 45 preview atlas pages
+- `cd tools && npm run verify` passed: JavaScript syntax (27), JSON parse (32), stale
+  path scan (1,343 files), markdown links (1,063 files), reference smoke tests (3).
+- `cd tools && npm run pages:build` built the landing page and all three apps into
+  `_site/` (143 MB) with only the existing webpack bundle-size warnings.
+- Headless Chromium smoke over the staged site (landing, Recipe Kiosk, Prefab Gallery,
+  SDK Explorer): every page loaded with no console errors and no failed requests other
+  than the landing favicon. Recipe Kiosk reported 1,984 recipes on Hytale 0.6.4 and
+  resolved a copper search with icons; the gallery listed 7,778 prefabs with previews;
+  SDK Explorer reported 5,617 cards and returned the new `BlockOperations` class.
 
 ## Sibling Mod Impact (not applied in this pass)
 

@@ -59,6 +59,10 @@ public class com.hypixel.hytale.builtin.instances.config.InstanceEntityConfig im
   public static com.hypixel.hytale.builtin.instances.config.InstanceEntityConfig removeAndGet(com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public com.hypixel.hytale.builtin.instances.config.WorldReturnPoint getReturnPoint();
   public void setReturnPoint(com.hypixel.hytale.builtin.instances.config.WorldReturnPoint);
+  public void pushReturnPoint(com.hypixel.hytale.builtin.instances.config.WorldReturnPoint);
+  public com.hypixel.hytale.builtin.instances.config.WorldReturnPoint popReturnPoint();
+  public void dropReturnsInto(java.util.UUID);
+  public void clearReturnStack();
   public com.hypixel.hytale.builtin.instances.config.WorldReturnPoint getReturnPointOverride();
   public void setReturnPointOverride(com.hypixel.hytale.builtin.instances.config.WorldReturnPoint);
   public com.hypixel.hytale.builtin.instances.config.InstanceEntityConfig clone();
@@ -83,6 +87,12 @@ public class com.hypixel.hytale.builtin.instances.config.InstanceWorldConfig {
   public void setReturnPoint(com.hypixel.hytale.builtin.instances.config.WorldReturnPoint);
   public com.hypixel.hytale.builtin.instances.config.InstanceDiscoveryConfig getDiscovery();
   public void setDiscovery(com.hypixel.hytale.builtin.instances.config.InstanceDiscoveryConfig);
+  public boolean shouldRespawnWhenTargeted();
+  public java.lang.String getInstanceKey();
+  public java.lang.String getInstanceName();
+  public void setInstanceName(java.lang.String);
+  public java.lang.String getDocumentDisplayOnRemoval();
+  public void setDocumentDisplayOnRemoval(java.lang.String);
 }
 ```
 
@@ -92,13 +102,17 @@ public class com.hypixel.hytale.builtin.instances.config.InstanceWorldConfig {
 public class com.hypixel.hytale.builtin.instances.config.WorldReturnPoint {
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.builtin.instances.config.WorldReturnPoint> CODEC;
   public com.hypixel.hytale.builtin.instances.config.WorldReturnPoint();
-  public com.hypixel.hytale.builtin.instances.config.WorldReturnPoint(java.util.UUID, com.hypixel.hytale.math.vector.Transform, boolean);
+  public com.hypixel.hytale.builtin.instances.config.WorldReturnPoint(java.util.UUID, com.hypixel.hytale.math.vector.Transform, boolean, java.lang.String, java.lang.String);
   public java.util.UUID getWorld();
   public void setWorld(java.util.UUID);
   public com.hypixel.hytale.math.vector.Transform getReturnPoint();
   public void setReturnPoint(com.hypixel.hytale.math.vector.Transform);
   public boolean isReturnOnReconnect();
   public void setReturnOnReconnect(boolean);
+  public java.lang.String getInstanceName();
+  public void setInstanceName(java.lang.String);
+  public java.lang.String getInstanceKey();
+  public void setInstanceKey(java.lang.String);
   public com.hypixel.hytale.builtin.instances.config.WorldReturnPoint clone();
   public java.lang.Object clone() throws java.lang.CloneNotSupportedException;
 }

@@ -14,13 +14,17 @@ public class com.hypixel.hytale.builtin.triggervolumes.asset.TriggerEffectAsset 
   public com.hypixel.hytale.builtin.triggervolumes.asset.TriggerEffectAsset();
   public static com.hypixel.hytale.builtin.triggervolumes.asset.TriggerEffectAsset create(java.lang.String, com.hypixel.hytale.builtin.triggervolumes.effect.TriggerEffect[]);
   public static com.hypixel.hytale.builtin.triggervolumes.asset.TriggerEffectAsset create(java.lang.String, com.hypixel.hytale.builtin.triggervolumes.effect.TriggerCondition[], com.hypixel.hytale.builtin.triggervolumes.effect.TriggerEffect[], com.hypixel.hytale.builtin.triggervolumes.effect.TriggerEffect[], com.hypixel.hytale.builtin.triggervolumes.manager.ConditionTiming);
+  public static com.hypixel.hytale.builtin.triggervolumes.asset.TriggerEffectAsset create(java.lang.String, com.hypixel.hytale.builtin.triggervolumes.effect.TriggerCondition[], com.hypixel.hytale.builtin.triggervolumes.effect.TriggerEffect[], com.hypixel.hytale.builtin.triggervolumes.effect.TriggerEffect[], com.hypixel.hytale.builtin.triggervolumes.effect.TriggerRule[], com.hypixel.hytale.builtin.triggervolumes.manager.ConditionTiming, com.hypixel.hytale.builtin.triggervolumes.asset.TriggerEffectAsset$VolumeSettings);
   public java.lang.String getId();
   public void setId(java.lang.String);
   public com.hypixel.hytale.builtin.triggervolumes.effect.TriggerEffect[] getEffects();
   public com.hypixel.hytale.builtin.triggervolumes.effect.TriggerCondition[] getConditions();
   public com.hypixel.hytale.builtin.triggervolumes.effect.TriggerEffect[] getRejectionEffects();
+  public com.hypixel.hytale.builtin.triggervolumes.effect.TriggerRule[] getRules();
   public com.hypixel.hytale.builtin.triggervolumes.manager.ConditionTiming getConditionTiming();
   public java.util.Set<com.hypixel.hytale.builtin.triggervolumes.EntityTargetType> getTargetTypes();
+  public boolean isIncludeVolumeSettings();
+  public com.hypixel.hytale.builtin.triggervolumes.asset.TriggerEffectAsset$VolumeSettings getVolumeSettings();
   public java.lang.Object getId();
 }
 ```

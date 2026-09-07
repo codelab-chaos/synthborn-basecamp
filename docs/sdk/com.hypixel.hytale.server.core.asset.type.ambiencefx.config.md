@@ -35,9 +35,6 @@ public class com.hypixel.hytale.server.core.asset.type.ambiencefx.config.Ambienc
   protected com.hypixel.hytale.server.core.asset.type.ambiencefx.config.AmbienceFX();
   public com.hypixel.hytale.protocol.AmbienceFX toPacket();
   public java.lang.String getId();
-  public void refreshAudioStateResolution();
-  public static void onAudioStateLoaded(com.hypixel.hytale.assetstore.event.LoadedAssetsEvent<java.lang.String, com.hypixel.hytale.server.core.asset.type.audiostate.config.AudioState, com.hypixel.hytale.assetstore.map.IndexedLookupTableAssetMap<java.lang.String, com.hypixel.hytale.server.core.asset.type.audiostate.config.AudioState>>);
-  public static void onAudioStateRemoved(com.hypixel.hytale.assetstore.event.RemovedAssetsEvent<java.lang.String, com.hypixel.hytale.server.core.asset.type.audiostate.config.AudioState, com.hypixel.hytale.assetstore.map.IndexedLookupTableAssetMap<java.lang.String, com.hypixel.hytale.server.core.asset.type.audiostate.config.AudioState>>);
   public com.hypixel.hytale.server.core.asset.type.ambiencefx.config.AmbienceFXConditions getConditions();
   public com.hypixel.hytale.server.core.asset.type.ambiencefx.config.AmbienceFXSound[] getSounds();
   public int getMusicContainerIndex();

@@ -79,6 +79,11 @@ public final class com.hypixel.hytale.server.core.entity.entities.player.data.Pl
   public java.util.Collection<? extends com.hypixel.hytale.server.core.universe.world.worldmap.markers.user.UserMapMarker> getUserMapMarkers(java.util.UUID);
   public void setUserMapMarkers(java.util.Collection<? extends com.hypixel.hytale.server.core.universe.world.worldmap.markers.user.UserMapMarker>);
   public com.hypixel.hytale.server.core.universe.world.worldmap.markers.user.UserMapMarker getUserMapMarker(java.lang.String);
+  public boolean isMarkerRevealed(java.lang.String);
+  public boolean revealMarker(java.lang.String);
+  public boolean hideMarker(java.lang.String);
+  public int retainRevealedMarkers(java.util.Set<java.lang.String>);
+  public boolean hasRevealedMarkers();
   public boolean isFirstSpawn();
   public void setFirstSpawn(boolean);
   public com.hypixel.hytale.server.core.entity.entities.player.data.PlayerRespawnPointData[] getRespawnPoints();

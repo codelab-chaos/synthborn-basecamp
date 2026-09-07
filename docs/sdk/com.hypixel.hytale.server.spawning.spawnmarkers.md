@@ -39,12 +39,13 @@ public class com.hypixel.hytale.server.spawning.spawnmarkers.SpawnMarkerEntity i
   public boolean isDespawnStarted();
   public void setDespawnStarted(boolean);
   public void refreshTimeout();
-  public boolean spawnNPC(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.spawning.assets.spawnmarker.config.SpawnMarker, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public boolean spawnNPC(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.spawning.assets.spawnmarker.config.SpawnMarker, java.util.List<com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>>, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public void setSpawnMarker(com.hypixel.hytale.server.spawning.assets.spawnmarker.config.SpawnMarker);
   public int decrementAndGetSpawnCount();
   public java.lang.String getSpawnMarkerId();
   public boolean isManualTrigger();
-  public boolean trigger(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public boolean trigger(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, java.util.List<com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>>, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public boolean isSuppressedBy(com.hypixel.hytale.server.spawning.assets.spawnsuppression.SpawnSuppression);
   public void suppress(java.util.UUID);
   public void releaseSuppression(java.util.UUID);
   public void clearAllSuppressions();

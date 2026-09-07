@@ -35,6 +35,7 @@ public final class com.hypixel.hytale.math.random.RandomExtra {
   public static <T> void reservoirSample(java.util.List<T>, java.util.function.Predicate<T>, int, java.util.List<T>);
   public static <E, S extends java.util.List<E>, F, T extends java.util.List<F>, G, H> void reservoirSample(S, com.hypixel.hytale.function.function.TriFunction<E, G, H, F>, int, T, G, H);
   public static <E, T extends java.util.List<E>> void reservoirSample(E, int, T);
+  public static int reservoirSample(int, int, int[]);
   public static int pickWeightedIndex(double[]);
 }
 ```

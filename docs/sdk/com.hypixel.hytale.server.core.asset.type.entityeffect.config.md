@@ -56,6 +56,7 @@ public class com.hypixel.hytale.server.core.asset.type.entityeffect.config.Appli
 public class com.hypixel.hytale.server.core.asset.type.entityeffect.config.EntityEffect implements com.hypixel.hytale.assetstore.map.JsonAssetWithMap<java.lang.String, com.hypixel.hytale.assetstore.map.IndexedLookupTableAssetMap<java.lang.String, com.hypixel.hytale.server.core.asset.type.entityeffect.config.EntityEffect>>, com.hypixel.hytale.server.core.io.NetworkSerializable<com.hypixel.hytale.protocol.EntityEffect> {
   public static final com.hypixel.hytale.assetstore.codec.AssetBuilderCodec<java.lang.String, com.hypixel.hytale.server.core.asset.type.entityeffect.config.EntityEffect> CODEC;
   public static final com.hypixel.hytale.codec.Codec<java.lang.String> CHILD_ASSET_CODEC;
+  public static final com.hypixel.hytale.codec.Codec<java.lang.String[]> CHILD_ASSET_CODEC_ARRAY;
   public static final com.hypixel.hytale.codec.validation.ValidatorCache<java.lang.String> VALIDATOR_CACHE;
   protected com.hypixel.hytale.assetstore.AssetExtraInfo$Data data;
   protected java.lang.String id;

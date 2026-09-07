@@ -23,15 +23,15 @@ public class com.hypixel.hytale.server.npc.AllNPCsLoadedEvent implements com.hyp
 
 ```java
 public class com.hypixel.hytale.server.npc.NPCPlugin extends com.hypixel.hytale.server.core.plugin.JavaPlugin {
-  public static java.lang.String FACTORY_CLASS_ROLE;
-  public static java.lang.String FACTORY_CLASS_BODY_MOTION;
-  public static java.lang.String FACTORY_CLASS_HEAD_MOTION;
-  public static java.lang.String FACTORY_CLASS_ACTION;
-  public static java.lang.String FACTORY_CLASS_SENSOR;
-  public static java.lang.String FACTORY_CLASS_INSTRUCTION;
-  public static java.lang.String FACTORY_CLASS_TRANSIENT_PATH;
-  public static java.lang.String FACTORY_CLASS_ACTION_LIST;
-  public static java.lang.String ROLE_ASSETS_PATH;
+  public static final java.lang.String FACTORY_CLASS_ROLE;
+  public static final java.lang.String FACTORY_CLASS_BODY_MOTION;
+  public static final java.lang.String FACTORY_CLASS_HEAD_MOTION;
+  public static final java.lang.String FACTORY_CLASS_ACTION;
+  public static final java.lang.String FACTORY_CLASS_SENSOR;
+  public static final java.lang.String FACTORY_CLASS_INSTRUCTION;
+  public static final java.lang.String FACTORY_CLASS_TRANSIENT_PATH;
+  public static final java.lang.String FACTORY_CLASS_ACTION_LIST;
+  public static final java.lang.String ROLE_ASSETS_PATH;
   public static final com.hypixel.hytale.codec.codecs.EnumCodec<com.hypixel.hytale.server.npc.movement.MovementMode> MOVEMENT_MODE_CODEC;
   public static final com.hypixel.hytale.codec.codecs.set.SetCodec<com.hypixel.hytale.server.npc.movement.MovementMode, java.util.EnumSet<com.hypixel.hytale.server.npc.movement.MovementMode>> MOVEMENT_MODE_SET_CODEC;
   protected java.util.List<com.hypixel.hytale.server.npc.asset.builder.BuilderDescriptor> builderDescriptors;
@@ -54,12 +54,15 @@ public class com.hypixel.hytale.server.npc.NPCPlugin extends com.hypixel.hytale.
   protected void setup();
   protected void start();
   public com.hypixel.hytale.component.ResourceType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.npc.blackboard.Blackboard> getBlackboardResourceType();
+  public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.npc.blackboard.BlackboardSubscription> getBlackboardSubscriptionComponentType();
   public com.hypixel.hytale.component.ResourceType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.npc.blackboard.view.combat.CombatViewSystems$CombatDataPool> getCombatDataPoolResourceType();
   public com.hypixel.hytale.component.ResourceType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.npc.systems.RoleChangeSystem$RoleChangeQueue> getRoleChangeQueueResourceType();
   public com.hypixel.hytale.component.ResourceType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.npc.systems.NewSpawnStartTickingSystem$QueueResource> getNewSpawnStartTickingQueueResourceType();
   public com.hypixel.hytale.component.ResourceType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.npc.components.SortBufferProviderResource> getSortBufferProviderResourceResourceType();
   public com.hypixel.hytale.component.ResourceType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.npc.navigation.AStarNodePoolProviderSimple> getAStarNodePoolProviderSimpleResourceType();
   public com.hypixel.hytale.component.ResourceType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.component.spatial.SpatialResource<com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.universe.world.storage.EntityStore>> getNpcSpatialResource();
+  public void registerBeaconReceiverProvider(com.hypixel.hytale.server.npc.components.messaging.BeaconReceiverProvider);
+  public java.util.List<com.hypixel.hytale.server.npc.components.messaging.BeaconReceiverProvider> getBeaconReceiverProviders();
   public com.hypixel.hytale.component.ResourceType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.npc.interactions.SpawnNPCInteractionFailureTracker> getSpawnNPCInteractionFailureTrackerResourceType();
   public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.npc.blackboard.view.combat.CombatViewSystems$CombatData> getCombatDataComponentType();
   public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.npc.commands.NPCRunTestsCommand$NPCTestData> getNpcTestDataComponentType();
@@ -68,6 +71,19 @@ public class com.hypixel.hytale.server.npc.NPCPlugin extends com.hypixel.hytale.
   public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.npc.components.messaging.PlayerBlockEventSupport> getPlayerBlockEventSupportComponentType();
   public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.npc.components.messaging.NPCEntityEventSupport> getNpcEntityEventSupportComponentType();
   public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.npc.components.messaging.PlayerEntityEventSupport> getPlayerEntityEventSupportComponentType();
+  public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.npc.role.support.CombatSupport> getCombatSupportComponentType();
+  public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.npc.role.support.StateSupport> getStateSupportComponentType();
+  public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.npc.role.support.MarkedEntitySupport> getMarkedEntitySupportComponentType();
+  public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.npc.role.support.WorldSupport> getWorldSupportComponentType();
+  public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.npc.role.support.EntitySupport> getEntitySupportComponentType();
+  public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.npc.role.support.MotionContextSupport> getMotionContextSupportComponentType();
+  public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.npc.role.support.DisplayNameSupport> getDisplayNameSupportComponentType();
+  public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.npc.role.support.PlayerTaskSupport> getPlayerTaskSupportComponentType();
+  public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.npc.role.support.PositionCache> getPositionCacheComponentType();
+  public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.npc.role.support.DebugSupport> getDebugSupportComponentType();
+  public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.npc.storage.AlarmStore> getAlarmStoreComponentType();
+  public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.spawning.SpawnLineage> getSpawnLineageComponentType();
+  public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.npc.role.support.FlagsComponent> getFlagsComponentType();
   public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.npc.components.StepComponent> getStepComponentType();
   public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.npc.components.FailedSpawnComponent> getFailedSpawnComponentType();
   public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.npc.components.Timers> getTimersComponentType();
@@ -77,7 +93,10 @@ public class com.hypixel.hytale.server.npc.NPCPlugin extends com.hypixel.hytale.
   public java.lang.String[] getPresetCoverageTestNPCs();
   public it.unimi.dsi.fastutil.Pair<com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.universe.world.npc.INonPlayerCharacter> spawnNPC(com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, java.lang.String, java.lang.String, org.joml.Vector3dc, com.hypixel.hytale.math.vector.Rotation3fc);
   public com.hypixel.hytale.server.spawning.SpawnTestResult spawnNPCWithSpaceValidation(com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, java.lang.String, java.lang.String, org.joml.Vector3dc, com.hypixel.hytale.math.vector.Rotation3fc);
+  public com.hypixel.hytale.server.spawning.SpawnTestResult spawnNPCWithSpaceValidation(com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, java.lang.String, java.lang.String, org.joml.Vector3dc, com.hypixel.hytale.math.vector.Rotation3fc, com.hypixel.hytale.function.consumer.TriConsumer<com.hypixel.hytale.server.npc.entities.NPCEntity, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>>);
+  public com.hypixel.hytale.server.spawning.SpawnTestResult spawnNPCWithSpaceValidation(com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, java.lang.String, java.lang.String, org.joml.Vector3dc, com.hypixel.hytale.math.vector.Rotation3fc, com.hypixel.hytale.function.consumer.TriConsumer<com.hypixel.hytale.server.npc.entities.NPCEntity, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>>, boolean, boolean);
   public com.hypixel.hytale.server.spawning.SpawnTestResult spawnNPCWithColumnProbe(com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, java.lang.String, java.lang.String, com.hypixel.hytale.server.core.universe.world.World, int, int, double, com.hypixel.hytale.math.vector.Rotation3fc);
+  public com.hypixel.hytale.server.spawning.SpawnTestResult spawnNPCWithColumnProbe(com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, java.lang.String, java.lang.String, com.hypixel.hytale.server.core.universe.world.World, int, int, double, com.hypixel.hytale.math.vector.Rotation3fc, com.hypixel.hytale.function.consumer.TriConsumer<com.hypixel.hytale.server.npc.entities.NPCEntity, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>>);
   public static void reloadNPCsWithRole(int);
   protected void onNPCGroupsLoaded(com.hypixel.hytale.assetstore.event.LoadedAssetsEvent<java.lang.String, com.hypixel.hytale.builtin.tagset.config.NPCGroup, com.hypixel.hytale.assetstore.AssetMap<java.lang.String, com.hypixel.hytale.builtin.tagset.config.NPCGroup>>);
   protected void onNPCGroupsRemoved(com.hypixel.hytale.assetstore.event.RemovedAssetsEvent<java.lang.String, com.hypixel.hytale.builtin.tagset.config.NPCGroup, com.hypixel.hytale.assetstore.AssetMap<java.lang.String, com.hypixel.hytale.builtin.tagset.config.NPCGroup>>);
@@ -85,6 +104,7 @@ public class com.hypixel.hytale.server.npc.NPCPlugin extends com.hypixel.hytale.
   protected void onAttitudeGroupsRemoved(com.hypixel.hytale.assetstore.event.RemovedAssetsEvent<java.lang.String, com.hypixel.hytale.server.npc.config.AttitudeGroup, com.hypixel.hytale.assetstore.AssetMap<java.lang.String, com.hypixel.hytale.server.npc.config.AttitudeGroup>>);
   protected void onItemAttitudeGroupsLoaded(com.hypixel.hytale.assetstore.event.LoadedAssetsEvent<java.lang.String, com.hypixel.hytale.server.npc.config.ItemAttitudeGroup, com.hypixel.hytale.assetstore.AssetMap<java.lang.String, com.hypixel.hytale.server.npc.config.ItemAttitudeGroup>>);
   protected void onItemAttitudeGroupsRemoved(com.hypixel.hytale.assetstore.event.RemovedAssetsEvent<java.lang.String, com.hypixel.hytale.server.npc.config.ItemAttitudeGroup, com.hypixel.hytale.assetstore.AssetMap<java.lang.String, com.hypixel.hytale.server.npc.config.ItemAttitudeGroup>>);
+  protected void onBlockSetsLoaded(com.hypixel.hytale.assetstore.event.LoadedAssetsEvent<java.lang.String, com.hypixel.hytale.server.core.asset.type.blockset.config.BlockSet, com.hypixel.hytale.assetstore.map.DefaultAssetMap<java.lang.String, com.hypixel.hytale.server.core.asset.type.blockset.config.BlockSet>>);
   protected void onPathChange(com.hypixel.hytale.server.core.universe.world.path.WorldPathChangedEvent);
   public int getPathChangeRevision();
   protected void onNPCsLoaded(com.hypixel.hytale.server.npc.AllNPCsLoadedEvent);
@@ -104,7 +124,7 @@ public class com.hypixel.hytale.server.npc.NPCPlugin extends com.hypixel.hytale.
   public it.unimi.dsi.fastutil.Pair<com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.entities.NPCEntity> spawnEntity(com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, int, org.joml.Vector3dc, com.hypixel.hytale.math.vector.Rotation3fc, com.hypixel.hytale.server.core.asset.type.model.config.Model, com.hypixel.hytale.function.consumer.TriConsumer<com.hypixel.hytale.server.npc.entities.NPCEntity, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>>);
   public it.unimi.dsi.fastutil.Pair<com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.entities.NPCEntity> spawnEntity(com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, int, org.joml.Vector3dc, com.hypixel.hytale.math.vector.Rotation3fc, com.hypixel.hytale.server.core.asset.type.model.config.Model, com.hypixel.hytale.function.consumer.TriConsumer<com.hypixel.hytale.server.npc.entities.NPCEntity, com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>>, com.hypixel.hytale.function.consumer.TriConsumer<com.hypixel.hytale.server.npc.entities.NPCEntity, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>>);
   public com.hypixel.hytale.server.npc.asset.builder.BuilderInfo prepareRoleBuilderInfo(int);
-  public static com.hypixel.hytale.server.npc.role.Role buildRole(com.hypixel.hytale.server.npc.asset.builder.Builder<com.hypixel.hytale.server.npc.role.Role>, com.hypixel.hytale.server.npc.asset.builder.BuilderInfo, com.hypixel.hytale.server.npc.asset.builder.BuilderSupport, int);
+  public static com.hypixel.hytale.server.npc.role.Role buildRole(com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.asset.builder.Builder<com.hypixel.hytale.server.npc.role.Role>, com.hypixel.hytale.server.npc.asset.builder.BuilderInfo, com.hypixel.hytale.server.npc.asset.builder.BuilderSupport, int);
   protected void onModelsChanged(com.hypixel.hytale.assetstore.event.LoadedAssetsEvent<java.lang.String, com.hypixel.hytale.server.core.asset.type.model.config.ModelAsset, com.hypixel.hytale.assetstore.map.DefaultAssetMap<java.lang.String, com.hypixel.hytale.server.core.asset.type.model.config.ModelAsset>>);
   public void generateDescriptors();
   public void saveDescriptors();

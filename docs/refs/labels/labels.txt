@@ -1,7 +1,7 @@
 # Hytale en-US display names — id → English
 # source: _Assets/Server/Languages/en-US/server.lang
 
-# items (3696)
+# items (3724)
 item	Alchemy_Cauldron	Cauldron
 item	Alchemy_Cauldron_Big	Large Cauldron
 item	Arcade_Machine	Arcade Machine
@@ -330,18 +330,40 @@ item	Debug_Armor_Leather_Light_Chest_Mods	Debug Light Leather Cuirass Mods
 item	Debug_Armor_O_Chest_Of_Damage_Enhancement	Debug Steel Cuirass of Damage Enhancement
 item	Debug_Armor_O_Head_Of_Dash_Exhaustion	Debug Steel Helm of Dash Cost Increase
 item	Debug_Armor_O_Legs_Of_Knockback_Enhancement	Debug Steel Greaves Of Knockback Enhancements
+item	Debug_Beacon_Horn	Debug Beacon Horn
 item	Debug_Block	Debug Block
 item	Debug_Bow_Two_Handed	Two-Handed Bow
 item	Debug_Combo	Debug Combo Item
+item	Debug_Companion_Block_Spawner	Debug Companion Block Spawner
+item	Debug_Companion_Block_Spawner_Explicit	Debug Companion Block Spawner Explicit
+item	Debug_Companion_Block_Spawner_Requirement	Debug Companion Block Spawner Requirement
 item	Debug_Continue	Debug Interaction Item
 item	Debug_Continue_Equip	Debug Continue Equip Hands
 item	Debug_Continue_Equip_Legs	Debug Continue Equip Legs
+item	Debug_Donut_Selector	Debug Donut Selector
 item	Debug_Durability_Condition	Debug Durability Condition Item
+item	Debug_Explosive	Debug Explosive Block
 item	Debug_Falling_Barrel	Debug Falling Barrel
 item	Debug_Falling_Explosive	Debug Falling Explosive
 item	Debug_Forking	Debug Block
 item	Debug_Forking_2	Debug Block
+item	Debug_Launch_Projectile_Fixed_Pitch	Debug Launch Projectile (Fixed Pitch)
+item	Debug_Launch_Projectile_Fixed_Yaw	Debug Launch Projectile (Fixed Yaw)
+item	Debug_Movement_Boots	Debug Movement Boots
+item	Debug_MusicEmitter_CaveEncounter	Debug Music Emitter (Cave Encounter)
+item	Debug_MusicEmitter_DeepJungles	Debug Music Emitter (Deep Jungles)
+item	Debug_MusicEmitter_ForgottenTemple	Debug Music Emitter (Forgotten Temple)
+item	Debug_MusicEmitter_HowlingSands	Debug Music Emitter (Howling Sands)
+item	Debug_MusicItem_DeepJungles	Debug Music Item: Deep Jungles
+item	Debug_MusicItem_ForgottenTemple	Debug Music Item: Forgotten Temple
+item	Debug_MusicPlayer	Debug Music Player
+item	Debug_Pickaxe_Shaped	Debug Shaped Pickaxe (3x3)
+item	Debug_Pickaxe_Shaped_Cylinder	Debug Shaped Pickaxe (Cylinder 5x5)
 item	Debug_Projectile	Debug Projectile Item
+item	Debug_Projectile_Fixed_Pitch	Debug Projectile (Fixed Pitch)
+item	Debug_Projectile_Fixed_Yaw	Debug Projectile (Fixed Yaw)
+item	Debug_Projectile_Scale	Debug Projectile (Random Scale)
+item	Debug_Projectile_TriggerVolume	Debug Projectile (Trigger Volume)
 item	Debug_Raycast	Debug Raycast Item
 item	Debug_Spawn_Marker_Block	Debug Spawn Marker Block
 item	Debug_Stick	The Stick
@@ -1007,10 +1029,10 @@ item	Metal_Copper_Smooth_Half	Copper - Smooth Half Slab
 item	Metal_Copper_Stairs	Copper - Stairs
 item	Metal_Gold_Pipe_Chimney	Gold Pipe - Chimney
 item	Metal_Gold_Pipe_Corner	Gold Pipe - Corner
-item	Metal_Gold_Pipe_Large	[TMP] Gold Pipe - Large
+item	Metal_Gold_Pipe_Large	Gold Pipe - Large
 item	Metal_Gold_Pipe_Large_Corner	Gold Pipe - Large Corner
-item	Metal_Gold_Pipe_Large_Mouthpiece	[TMP] Gold Pipe - Large Mouthpiece
-item	Metal_Gold_Pipe_Long	[TMP] Gold Pipe - Long
+item	Metal_Gold_Pipe_Large_Mouthpiece	Gold Pipe - Large Mouthpiece
+item	Metal_Gold_Pipe_Long	Gold Pipe - Long
 item	Metal_Gold_Pipe_Short	Gold Pipe - Short
 item	Metal_Iron	Iron
 item	Metal_Iron_Decorative	Iron - Decorative
@@ -1927,6 +1949,7 @@ item	Prototype_Softwood_Carpet_Side	Prototype - Softwood Planks Carpet Side
 item	Prototype_Softwood_Parquet	Prototype - Softwood Planks Top Parquet
 item	Prototype_Softwood_Roof_Gutter_Slope	Prototype - Softwood Roof - Gutter
 item	Prototype_Softwood_Tile	Prototype - Softwood Planks Top Tiles
+item	Prototype_Spider_Cocoon_Falling	[TMP] Prototype - Falling Spider Cocoon
 item	Prototype_Stone_Tile	Prototype - Stone - Top Tiles
 item	Prototype_Succulent_Hanging_One_Corner	Hanging Succulent One - Corner
 item	Prototype_Succulent_Hanging_One_End	Hanging Succulent One - End
@@ -2005,7 +2028,7 @@ item	Rail_Kart	Rail Cart
 item	Recipe_Book_Magic_Air	Air Grimoire
 item	Recipe_Book_Magic_Void	Void Grimoire
 item	Recipe_Page	Recipe Page
-item	RecipeItem	[TMP] Recipe: {itemName}
+item	RecipeItem	Recipe: {itemName}
 item	Rock_Aqua	Aqua Stone
 item	Rock_Aqua_Beam	Aqua Stone - Beam
 item	Rock_Aqua_Brick	Aqua Brick
@@ -2852,6 +2875,7 @@ item	Soil_Hive_Corrupted_Brick_Smooth	Corrupted Hive Brick - Smooth
 item	Soil_Hive_Corrupted_Brick_Smooth_Half	Corrupted Hive Brick - Smooth Half Slab
 item	Soil_Hive_Corrupted_Brick_Stairs	Corrupted Hive Brick - Stairs
 item	Soil_Leaves	Leafy Soil
+item	Soil_Leaves_Full	Full Leafy Soil
 item	Soil_Lime_Gravel_Half	Limestone Gravel - Half Slab
 item	Soil_Magma_Cooled_Gravel	Cooled Magma Gravel
 item	Soil_Magma_Cooled_Gravel_Half	Cooled Magma Gravel - Half Slab
@@ -2917,6 +2941,7 @@ item	Test_Backpack	Test Backpack Item
 item	Test_Camera_Item	Test Camera Item
 item	Test_Objective_Line_Interaction	Treasure Map
 item	Test_Pedestal	Test Pedestal
+item	Test_PlaceBlockProcedure	Test PlaceBlockProcedure
 item	Test_Spawn_Marker_Trigger	Test Spawn Marker Trigger
 item	Tinkering_Target_Dummy	Training Dummy
 item	Tool_Bark_Scraper	Bark Scraper
@@ -3154,6 +3179,7 @@ item	Weapon_Shortbow_Onyxium	Onyxium Shortbow
 item	Weapon_Shortbow_Prisma	Prisma Shortbow
 item	Weapon_Shortbow_Pull	Pull Shortbow
 item	Weapon_Shortbow_Ricochet	Ricochet Shortbow
+item	Weapon_Shortbow_Test_Zoom	Test Bow Zoom
 item	Weapon_Shortbow_Thorium	Thorium Shortbow
 item	Weapon_Shortbow_Vampire	Vampire Shortbow
 item	Weapon_Spear_Adamantite	Adamantite Spear
@@ -3228,6 +3254,8 @@ item	Weapon_Sword_Steel_Rusty	Rusty Steel Sword
 item	Weapon_Sword_Stone_Trork	Stone Trork Sword
 item	Weapon_Sword_Thorium	Thorium Sword
 item	Weapon_Sword_Wood	Wooden Sword
+item	Weapon_Test_Sniper_Rifle	Test Sniper Zoom
+item	Weapon_Test_Zoom_Rifle	Test Rifle Zoom
 item	Weapon_Wand_Root	Root Wand
 item	Weapon_Wand_Stoneskin	Stoneskin Wand
 item	Weapon_Wand_Tribal	Tribal Wand
@@ -3819,7 +3847,7 @@ resource	Wood_Tropicalwood	Tropical Wood
 resource	Wood_Tropicalwood_Trunk	Tropical Wood Log
 resource	Wood_Trunk	Any Tree Log
 
-# npcRoles (558)
+# npcRoles (574)
 npc	Antelope	Antelope
 npc	Archaeopteryx	Archaeopteryx
 npc	Armadillo	Armadillo
@@ -4098,6 +4126,10 @@ npc	Test_Block_Sensor	Test Block Sensor
 npc	Test_Block_Sensor_Mobile	Test Block Sensor Mobile
 npc	Test_Block_Sensor_Reservation	Test Block Sensor Reservation
 npc	Test_Blocking_Animation	Test Blocking Animation
+npc	Test_Boss_Basic	Test Boss Basic
+npc	Test_Boss_Basic_Intro	Test Boss Awakening
+npc	Test_Boss_Minion	Test Boss Minion
+npc	Test_Boss_Spawning	Test Boss Spawning
 npc	Test_Bow_Charge	Test Bow Charge
 npc	Test_Bow_Target	Test Bow Target
 npc	Test_Can_Join_Flock	Test Can Join Flock
@@ -4112,20 +4144,20 @@ npc	Test_Combat_Sensor_Charge	Test Combat Sensor Charge
 npc	Test_Combat_Sensor_Sheep	Test Combat Sensor Sheep
 npc	Test_Component_Attack_Sequence	Test Component Attack Sequence
 npc	Test_Computable_Component_Template	Test Computable Component Template
-npc	Test_Constraints_Flee_Legacy_Relaxed	[TMP] Test Constraints Flee Legacy Relaxed
-npc	Test_Constraints_Flee_Legacy_Unrelaxed	[TMP] Test Constraints Flee Legacy Unrelaxed
-npc	Test_Constraints_Seek_Breathe	[TMP] Test Constraints Seek Breathe
-npc	Test_Constraints_Seek_Drop	[TMP] Test Constraints Seek Drop
-npc	Test_Constraints_Seek_Fence	[TMP] Test Constraints Seek Fence
-npc	Test_Constraints_Seek_Legacy_Relaxed	[TMP] Test Constraints Seek Legacy Relaxed
-npc	Test_Constraints_Seek_Legacy_Relaxed_Small	[TMP] Test Constraints Seek Legacy Relaxed Small
-npc	Test_Constraints_Seek_Legacy_Unrelaxed	[TMP] Test Constraints Seek Legacy Unrelaxed
-npc	Test_Constraints_Seek_Legacy_Unrelaxed_Small	[TMP] Test Constraints Seek Legacy Unrelaxed Small
-npc	Test_Constraints_Seek_None	[TMP] Test Constraints Seek None
-npc	Test_Constraints_Seek_Wade	[TMP] Test Constraints Seek Wade
-npc	Test_Constraints_Seek_Wade_Breathe	[TMP] Test Constraints Seek Wade Breathe
-npc	Test_Constraints_Wander_Legacy_Relaxed	[TMP] Test Constraints Wander Legacy Relaxed
-npc	Test_Constraints_Wander_Legacy_Unrelaxed	[TMP] Test Constraints Wander Legacy Unrelaxed
+npc	Test_Constraints_Flee_Legacy_Relaxed	Test Constraints Flee Legacy Relaxed
+npc	Test_Constraints_Flee_Legacy_Unrelaxed	Test Constraints Flee Legacy Unrelaxed
+npc	Test_Constraints_Seek_Breathe	Test Constraints Seek Breathe
+npc	Test_Constraints_Seek_Drop	Test Constraints Seek Drop
+npc	Test_Constraints_Seek_Fence	Test Constraints Seek Fence
+npc	Test_Constraints_Seek_Legacy_Relaxed	Test Constraints Seek Legacy Relaxed
+npc	Test_Constraints_Seek_Legacy_Relaxed_Small	Test Constraints Seek Legacy Relaxed Small
+npc	Test_Constraints_Seek_Legacy_Unrelaxed	Test Constraints Seek Legacy Unrelaxed
+npc	Test_Constraints_Seek_Legacy_Unrelaxed_Small	Test Constraints Seek Legacy Unrelaxed Small
+npc	Test_Constraints_Seek_None	Test Constraints Seek None
+npc	Test_Constraints_Seek_Wade	Test Constraints Seek Wade
+npc	Test_Constraints_Seek_Wade_Breathe	Test Constraints Seek Wade Breathe
+npc	Test_Constraints_Wander_Legacy_Relaxed	Test Constraints Wander Legacy Relaxed
+npc	Test_Constraints_Wander_Legacy_Unrelaxed	Test Constraints Wander Legacy Unrelaxed
 npc	Test_Count_Sheep	Test Count Sheep
 npc	Test_Crouch	Test Crouch
 npc	Test_Deal_Friendly_Damage	Test Deal Friendly Damage
@@ -4140,7 +4172,7 @@ npc	Test_Dragon	Test Dragon
 npc	Test_Dragon_Frost	Test Dragon Frost
 npc	Test_Drop_Item	Test Drop Item
 npc	Test_Dummy	Test Dummy
-npc	Test_Dummy_Damage	[TMP] Test Dummy Damage
+npc	Test_Dummy_Damage	Test Dummy Damage
 npc	Test_Dummy_Stationary	Test Dummy Stationary
 npc	Test_Entity_Damage_Event	Test Entity Damage Event
 npc	Test_Entity_Effect	Test Entity Effect
@@ -4148,6 +4180,8 @@ npc	Test_Entity_Effect_Condition	Test Entity Effect Condition
 npc	Test_Entity_Effect_Filter	Test Entity Effect Filter
 npc	Test_Entity_Flock_Damage_Event	Test Entity Flock Damage Event
 npc	Test_Entity_Sensor_Crouch	Test Entity Sensor Crouch
+npc	Test_EntityFilter_ExecutingInteraction	Test EntityFilter Executing Interaction
+npc	Test_EntityFilter_ExecutingInteraction_Observer	Test EntityFilter Executing Interaction Observer
 npc	Test_EntityFilter_Walk	Test EntityFilter Walk
 npc	Test_Eval_IsEmpty	Test Eval IsEmpty
 npc	Test_Fail_ItemInHand	Test Fail ItemInHand
@@ -4168,6 +4202,7 @@ npc	Test_Group_Sheep	Test Group Sheep
 npc	Test_Group_Wolf	Test Group Wolf
 npc	Test_Guided_Block	Test Guided Block
 npc	Test_Guided_Bow	Test Guided Bow
+npc	Test_Head_Motion_Rotate	Test Head Motion Rotate
 npc	Test_Head_Motion_Sequence	Test Head Motion Sequence
 npc	Test_Hotbar_SetItem	Test Hotbar SetItem
 npc	Test_Hotbar_Weapon_Swap	Test Hotbar Weapon Swap
@@ -4203,14 +4238,17 @@ npc	Test_Maintain_Distance	Test Maintain Distance
 npc	Test_Maintain_Distance_Melee	Test Maintain Distance Melee
 npc	Test_Manual_Beacon	Test Manual Beacon
 npc	Test_Model_Change	Test Model Change
-npc	Test_Motion_Charge	[TMP] Test Motion Charge
-npc	Test_Motion_Charge_Debug	[TMP] Test Motion Charge Debug
-npc	Test_Motion_Charge_Rot	[TMP] Test Motion Charge Rot
-npc	Test_Motion_Charge_Skip	[TMP] Test Motion Charge Skip
-npc	Test_Motion_Charge_Slope	[TMP] Test Motion Charge Slope
-npc	Test_Motion_Charge_Speed	[TMP] Test Motion Charge Speed
-npc	Test_Motion_Charge_States	[TMP] Test Motion Charge States
-npc	Test_Motion_Charge_Stop	[TMP] Test Motion Charge Stop
+npc	Test_Motion_Charge	Test Motion Charge
+npc	Test_Motion_Charge_Debug	Test Motion Charge Debug
+npc	Test_Motion_Charge_Path	Test Motion Charge Path
+npc	Test_Motion_Charge_Repath	Test Motion Charge Repath
+npc	Test_Motion_Charge_Rot	Test Motion Charge Rot
+npc	Test_Motion_Charge_Skip	Test Motion Charge Skip
+npc	Test_Motion_Charge_Slope	Test Motion Charge Slope
+npc	Test_Motion_Charge_Speed	Test Motion Charge Speed
+npc	Test_Motion_Charge_States	Test Motion Charge States
+npc	Test_Motion_Charge_Stop	Test Motion Charge Stop
+npc	Test_Motion_Charge_Stun	Test Motion Charge Stun
 npc	Test_Movement_State_Sheep	Test Movement State Sheep
 npc	Test_Notify_Action	Test Notify Action
 npc	Test_NPCGroup_Sensor	Test NPCGroup Sensor
@@ -4219,6 +4257,7 @@ npc	Test_OffHand_Wielding	Test OffHand Wielding
 npc	Test_Pack_Aggressive	Test Pack Aggressive
 npc	Test_Pack_Tame	Test Pack Tame
 npc	Test_Particle_Emotions	Test Particle Emotions
+npc	Test_Particle_Scale	Test Particle Scale
 npc	Test_Path	Test Path
 npc	Test_Path_Avoid	Test Path Avoid
 npc	Test_Path_Distance1	Test Path Distance1
@@ -4232,6 +4271,7 @@ npc	Test_Pet	Test Pet
 npc	Test_Pet_Lantern	Test Pet Lantern
 npc	Test_Place_Block	Test Place Block
 npc	Test_Place_Blocks	Test Place Blocks
+npc	Test_Platform	Test Platform
 npc	Test_Player_Hidden_Template	Test Player Hidden Template
 npc	Test_Position_Adjustment_Wrapper	Test Position Adjustment Wrapper
 npc	Test_Prioritiser_Provided_Filter	Test Prioritiser Provided Filter
@@ -4267,6 +4307,8 @@ npc	Test_Separation_Path	Test Separation Path
 npc	Test_Separation_Seek	Test Separation Seek
 npc	Test_Separation_Stationary	Test Separation Stationary
 npc	Test_Separation_Wander	Test Separation Wander
+npc	Test_Set_Health_Regen	Test Set Health Regen
+npc	Test_Set_Invulnerable	Test Set Invulnerable
 npc	Test_Set_Stat	Test Set Stat
 npc	Test_Set_State_From_Component	Test Set State From Component
 npc	Test_ShapeChange	Test ShapeChange
@@ -4292,6 +4334,7 @@ npc	Test_Start_Objective	Test Start Objective
 npc	Test_State_Evaluator	Test State Evaluator
 npc	Test_State_Evaluator_Nearby	Test State Evaluator Nearby
 npc	Test_State_Evaluator_Sleep	Test State Evaluator Sleep
+npc	Test_State_Evaluator_TimeSinceLastUsed	Test State Evaluator TimeSinceLastUsed
 npc	Test_State_Evaluator_Toggle	Test State Evaluator Toggle
 npc	Test_State_Transitions	Test State Transitions
 npc	Test_Stats_Health	Test Stats Health
@@ -4316,6 +4359,7 @@ npc	Test_TorchHolder	Test TorchHolder
 npc	Test_Transient_Path	Test Transient Path
 npc	Test_TreeMode_Instruction	Test TreeMode Instruction
 npc	Test_Trigger_Spawners	Test Trigger Spawners
+npc	Test_Trigger_Volume	Test Trigger Volume
 npc	Test_Unified_1	Test Unified 1
 npc	Test_Unified_10	Test Unified 10
 npc	Test_Unified_11	Test Unified 11

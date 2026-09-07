@@ -35,25 +35,25 @@ public class com.hypixel.hytale.server.npc.util.expression.compile.CompileContex
 ## Lexer
 
 ```java
-public class com.hypixel.hytale.server.npc.util.expression.compile.Lexer<Token extends java.util.function.Supplier<java.lang.String>> {
+public class com.hypixel.hytale.server.npc.util.expression.compile.Lexer<T extends java.util.function.Supplier<java.lang.String>> {
   public static final java.lang.String UNTERMINATED_STRING;
   public static final java.lang.String INVALID_NUMBER_FORMAT;
   public static final java.lang.String INVALID_CHARACTER_IN_EXPRESSION;
-  public com.hypixel.hytale.server.npc.util.expression.compile.Lexer(Token, Token, Token, Token, java.util.stream.Stream<Token>);
-  public Token nextToken(com.hypixel.hytale.server.npc.util.expression.compile.LexerContext<Token>) throws java.text.ParseException;
+  public com.hypixel.hytale.server.npc.util.expression.compile.Lexer(T, T, T, T, java.util.stream.Stream<T>);
+  public T nextToken(com.hypixel.hytale.server.npc.util.expression.compile.LexerContext<T>) throws java.text.ParseException;
 }
 ```
 
 ## LexerContext
 
 ```java
-public class com.hypixel.hytale.server.npc.util.expression.compile.LexerContext<Token> {
+public class com.hypixel.hytale.server.npc.util.expression.compile.LexerContext<T> {
   public com.hypixel.hytale.server.npc.util.expression.compile.LexerContext();
   public void init(java.lang.String);
   public void resetToken();
-  public Token setToken(Token);
+  public T setToken(T);
   public java.lang.String getExpression();
-  public Token getToken();
+  public T getToken();
   public int getTokenPosition();
   public java.lang.String getTokenString();
   public double getTokenNumber();

@@ -13,10 +13,13 @@ public class com.hypixel.hytale.server.core.universe.world.meta.state.BlockMapMa
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.server.core.universe.world.meta.state.BlockMapMarker> CODEC;
   public com.hypixel.hytale.server.core.universe.world.meta.state.BlockMapMarker();
   public com.hypixel.hytale.server.core.universe.world.meta.state.BlockMapMarker(java.lang.String, java.lang.String);
+  public com.hypixel.hytale.server.core.universe.world.meta.state.BlockMapMarker(java.lang.String, java.lang.String, boolean);
   public static com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, com.hypixel.hytale.server.core.universe.world.meta.state.BlockMapMarker> getComponentType();
   public java.lang.String getName();
   public java.lang.String getIcon();
+  public boolean isDiscoverable();
   public com.hypixel.hytale.component.Component<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore> clone();
+  public static int retainRevealedMarkers(com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.server.core.entity.entities.player.data.PlayerWorldData);
   public java.lang.Object clone() throws java.lang.CloneNotSupportedException;
 }
 ```
@@ -27,11 +30,15 @@ public class com.hypixel.hytale.server.core.universe.world.meta.state.BlockMapMa
 public class com.hypixel.hytale.server.core.universe.world.meta.state.BlockMapMarkersResource implements com.hypixel.hytale.component.Resource<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore> {
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.server.core.universe.world.meta.state.BlockMapMarkersResource> CODEC;
   public com.hypixel.hytale.server.core.universe.world.meta.state.BlockMapMarkersResource();
-  public com.hypixel.hytale.server.core.universe.world.meta.state.BlockMapMarkersResource(it.unimi.dsi.fastutil.longs.Long2ObjectMap<com.hypixel.hytale.server.core.universe.world.meta.state.BlockMapMarkersResource$BlockMapMarkerData>);
+  public com.hypixel.hytale.server.core.universe.world.meta.state.BlockMapMarkersResource(com.hypixel.hytale.math.data.Int3ObjectOpenHashMap<com.hypixel.hytale.server.core.universe.world.meta.state.BlockMapMarkersResource$BlockMapMarkerData>);
   public static com.hypixel.hytale.component.ResourceType<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, com.hypixel.hytale.server.core.universe.world.meta.state.BlockMapMarkersResource> getResourceType();
-  public it.unimi.dsi.fastutil.longs.Long2ObjectMap<com.hypixel.hytale.server.core.universe.world.meta.state.BlockMapMarkersResource$BlockMapMarkerData> getMarkers();
-  public void addMarker(org.joml.Vector3i, java.lang.String, java.lang.String);
-  public void removeMarker(org.joml.Vector3i);
+  public static com.hypixel.hytale.server.core.universe.world.meta.state.BlockMapMarkersResource of(com.hypixel.hytale.server.core.universe.world.World);
+  public com.hypixel.hytale.math.data.Int3ObjectOpenHashMap<com.hypixel.hytale.server.core.universe.world.meta.state.BlockMapMarkersResource$BlockMapMarkerData> getMarkers();
+  public com.hypixel.hytale.server.core.universe.world.meta.state.BlockMapMarkersResource$BlockMapMarkerData getMarker(int, int, int);
+  public com.hypixel.hytale.server.core.universe.world.meta.state.BlockMapMarkersResource$BlockMapMarkerData getMarker(org.joml.Vector3ic);
+  public com.hypixel.hytale.server.core.universe.world.meta.state.BlockMapMarkersResource$BlockMapMarkerData addMarker(org.joml.Vector3i, java.lang.String, java.lang.String);
+  public com.hypixel.hytale.server.core.universe.world.meta.state.BlockMapMarkersResource$BlockMapMarkerData addMarker(org.joml.Vector3i, java.lang.String, java.lang.String, boolean);
+  public com.hypixel.hytale.server.core.universe.world.meta.state.BlockMapMarkersResource$BlockMapMarkerData removeMarker(org.joml.Vector3i);
   public com.hypixel.hytale.component.Resource<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore> clone();
   public java.lang.Object clone() throws java.lang.CloneNotSupportedException;
 }

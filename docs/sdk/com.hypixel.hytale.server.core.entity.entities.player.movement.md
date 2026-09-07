@@ -42,6 +42,7 @@ public class com.hypixel.hytale.server.core.entity.entities.player.movement.Move
   protected float climbSpeedLateral;
   protected float climbUpSprintSpeed;
   protected float climbDownSprintSpeed;
+  protected com.hypixel.hytale.protocol.FlyMode fly;
   protected float horizontalFlySpeed;
   protected float verticalFlySpeed;
   protected float maxSpeedMultiplier;
@@ -80,6 +81,8 @@ public class com.hypixel.hytale.server.core.entity.entities.player.movement.Move
   protected float rollStartSpeedModifier;
   protected float rollExitSpeedModifier;
   protected float rollTimeToComplete;
+  protected float maxSlopeAngleDegrees;
+  protected float maxWallAngleDegrees;
   public static com.hypixel.hytale.assetstore.AssetStore<java.lang.String, com.hypixel.hytale.server.core.entity.entities.player.movement.MovementConfig, com.hypixel.hytale.assetstore.map.IndexedLookupTableAssetMap<java.lang.String, com.hypixel.hytale.server.core.entity.entities.player.movement.MovementConfig>> getAssetStore();
   public static com.hypixel.hytale.assetstore.map.IndexedLookupTableAssetMap<java.lang.String, com.hypixel.hytale.server.core.entity.entities.player.movement.MovementConfig> getAssetMap();
   public com.hypixel.hytale.server.core.entity.entities.player.movement.MovementConfig(com.hypixel.hytale.server.core.entity.entities.player.movement.MovementConfig);
@@ -112,6 +115,7 @@ public class com.hypixel.hytale.server.core.entity.entities.player.movement.Move
   public float getClimbSpeedLateral();
   public float getClimbUpSprintSpeed();
   public float getClimbDownSprintSpeed();
+  public com.hypixel.hytale.protocol.FlyMode getFly();
   public float getHorizontalFlySpeed();
   public float getVerticalFlySpeed();
   public float getMaxSpeedMultiplier();
@@ -148,6 +152,8 @@ public class com.hypixel.hytale.server.core.entity.entities.player.movement.Move
   public float getRollStartSpeedModifier();
   public float getRollExitSpeedModifier();
   public float getRollTimeToComplete();
+  public float getMaxSlopeAngleDegrees();
+  public float getMaxWallAngleDegrees();
   public com.hypixel.hytale.protocol.MovementSettings toPacket();
   public java.lang.String toString();
   public java.lang.Object getId();
@@ -162,15 +168,18 @@ public class com.hypixel.hytale.server.core.entity.entities.player.movement.Move
   public static final java.util.function.BiFunction<com.hypixel.hytale.server.core.modules.physics.component.PhysicsValues, com.hypixel.hytale.protocol.GameMode, com.hypixel.hytale.protocol.MovementSettings> MASTER_DEFAULT;
   protected com.hypixel.hytale.protocol.MovementSettings defaultSettings;
   protected com.hypixel.hytale.protocol.MovementSettings settings;
+  protected com.hypixel.hytale.protocol.FlyMode configFly;
   public static com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.core.entity.entities.player.movement.MovementManager> getComponentType();
   public com.hypixel.hytale.server.core.entity.entities.player.movement.MovementManager();
   public com.hypixel.hytale.server.core.entity.entities.player.movement.MovementManager(com.hypixel.hytale.server.core.entity.entities.player.movement.MovementManager);
   public void resetDefaultsAndUpdate(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public void refreshDefaultSettings(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public void applyDefaultSettings();
+  public void applyConfigAndUpdate(com.hypixel.hytale.server.core.entity.entities.player.movement.MovementConfig, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public void update(com.hypixel.hytale.server.core.io.PacketHandler);
   public com.hypixel.hytale.protocol.MovementSettings getSettings();
-  public void setDefaultSettings(com.hypixel.hytale.protocol.MovementSettings, com.hypixel.hytale.server.core.modules.physics.component.PhysicsValues, com.hypixel.hytale.protocol.GameMode);
+  public void setDefaultSettings(com.hypixel.hytale.server.core.entity.entities.player.movement.MovementConfig, com.hypixel.hytale.server.core.modules.physics.component.PhysicsValues, com.hypixel.hytale.protocol.GameMode);
+  public void resetFly(com.hypixel.hytale.protocol.GameMode);
   public com.hypixel.hytale.protocol.MovementSettings getDefaultSettings();
   public java.lang.String toString();
   public com.hypixel.hytale.component.Component<com.hypixel.hytale.server.core.universe.world.storage.EntityStore> clone();

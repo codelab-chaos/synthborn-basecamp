@@ -29,6 +29,7 @@ public class com.hypixel.hytale.server.spawning.assets.spawns.config.BeaconNPCSp
   protected java.lang.String npcSpawnState;
   protected java.lang.String npcSpawnSubState;
   protected java.lang.String targetSlot;
+  protected boolean rebind;
   protected java.lang.String spawnSuppression;
   protected com.hypixel.hytale.server.core.asset.type.responsecurve.ScaledXYResponseCurve maxSpawnsScalingCurve;
   protected com.hypixel.hytale.server.core.asset.type.responsecurve.ScaledXYResponseCurve concurrentSpawnsScalingCurve;
@@ -59,6 +60,7 @@ public class com.hypixel.hytale.server.spawning.assets.spawns.config.BeaconNPCSp
   public java.lang.String getSpawnSuppression();
   public boolean isOverrideSpawnSuppressors();
   public java.lang.String getTargetSlot();
+  public boolean isRebind();
   public com.hypixel.hytale.server.core.asset.type.responsecurve.ScaledXYResponseCurve getMaxSpawnsScalingCurve();
   public com.hypixel.hytale.server.core.asset.type.responsecurve.ScaledXYResponseCurve getConcurrentSpawnsScalingCurve();
   public com.hypixel.hytale.server.spawning.util.FloodFillPositionSelector$Debug getDebug();
@@ -130,6 +132,7 @@ public class com.hypixel.hytale.server.spawning.assets.spawns.config.RoleSpawnPa
   public boolean getEnableSafeSpawning();
   public java.util.Map<com.hypixel.hytale.server.npc.movement.MovementMode, java.lang.Double> getConfigMovementModeWeights();
   public double[] getOrComputeMovementModeWeights(com.hypixel.hytale.server.spawning.ISpawnable, com.hypixel.hytale.server.spawning.SpawningContext);
+  public boolean claimSpawnOverYRangeReport();
   public com.hypixel.hytale.server.flock.config.FlockAsset getFlockDefinition();
   public java.lang.String toString();
 }

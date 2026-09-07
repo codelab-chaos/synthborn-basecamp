@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-25T03:49:59.895Z",
-  "hytaleVersion": "0.5.6",
+  "generatedAt": "2026-09-07T17:13:42.828Z",
+  "hytaleVersion": "0.6.4",
   "counts": {
-    "droplists": 620,
-    "blocks": 672,
+    "droplists": 622,
+    "blocks": 677,
     "items": 433
   },
   "droplists": [
@@ -12726,6 +12726,20 @@
       ]
     },
     {
+      "id": "Tree_Leaves_Palm",
+      "sourceFile": "_Assets/Server/Drops/Wood/Tree_Leaves_Palm.json",
+      "drops": [
+        {
+          "item": "Wood_Palm_Trunk",
+          "expected": 3,
+          "chancePct": 100,
+          "qtyMin": 1,
+          "qtyMax": 5,
+          "unresolved": false
+        }
+      ]
+    },
+    {
       "id": "Tree_Leaves_Physics",
       "sourceFile": "_Assets/Server/Drops/Wood/Tree_Leaves_Physics.json",
       "drops": [
@@ -12735,6 +12749,20 @@
           "chancePct": 2,
           "qtyMin": 0.02,
           "qtyMax": 0.02,
+          "unresolved": false
+        }
+      ]
+    },
+    {
+      "id": "Tree_Leaves_Physics_Palm",
+      "sourceFile": "_Assets/Server/Drops/Wood/Tree_Leaves_Physics_Palm.json",
+      "drops": [
+        {
+          "item": "Wood_Palm_Trunk",
+          "expected": 3,
+          "chancePct": 100,
+          "qtyMin": 1,
+          "qtyMax": 5,
           "unresolved": false
         }
       ]
@@ -35226,6 +35254,112 @@
   ],
   "blocks": [
     {
+      "id": "Debug_Companion_Block_Spawner",
+      "sourceFile": "_Assets/Server/Item/Items/_Debug/Debug_Companion_Block_Spawner.json",
+      "gatheringDefinedBy": null,
+      "modes": {
+        "Soft": {
+          "gatherType": null,
+          "droplistRef": "Barrels",
+          "drops": [
+            {
+              "item": "Plant_Fruit_Apple",
+              "expected": 0.091,
+              "chancePct": 9,
+              "qtyMin": 0.091,
+              "qtyMax": 0.091,
+              "unresolved": false
+            },
+            {
+              "item": "Plant_Fruit_Berries_Red",
+              "expected": 0.091,
+              "chancePct": 9,
+              "qtyMin": 0.091,
+              "qtyMax": 0.091,
+              "unresolved": false
+            },
+            {
+              "item": "Weapon_Arrow_Crude",
+              "expected": 0.068,
+              "chancePct": 2,
+              "qtyMin": 0.023,
+              "qtyMax": 0.114,
+              "unresolved": false
+            },
+            {
+              "item": "Ingredient_Hide_Light",
+              "expected": 0.046,
+              "chancePct": 5,
+              "qtyMin": 0.046,
+              "qtyMax": 0.046,
+              "unresolved": false
+            },
+            {
+              "item": "Ingredient_Salt",
+              "expected": 0.018,
+              "chancePct": 2,
+              "qtyMin": 0.018,
+              "qtyMax": 0.018,
+              "unresolved": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "Debug_Companion_Block_Spawner_Explicit",
+      "sourceFile": "_Assets/Server/Item/Items/_Debug/Debug_Companion_Block_Spawner_Explicit.json",
+      "gatheringDefinedBy": null,
+      "modes": {
+        "Soft": {
+          "gatherType": null,
+          "droplistRef": "Barrels",
+          "drops": [
+            {
+              "item": "Plant_Fruit_Apple",
+              "expected": 0.091,
+              "chancePct": 9,
+              "qtyMin": 0.091,
+              "qtyMax": 0.091,
+              "unresolved": false
+            },
+            {
+              "item": "Plant_Fruit_Berries_Red",
+              "expected": 0.091,
+              "chancePct": 9,
+              "qtyMin": 0.091,
+              "qtyMax": 0.091,
+              "unresolved": false
+            },
+            {
+              "item": "Weapon_Arrow_Crude",
+              "expected": 0.068,
+              "chancePct": 2,
+              "qtyMin": 0.023,
+              "qtyMax": 0.114,
+              "unresolved": false
+            },
+            {
+              "item": "Ingredient_Hide_Light",
+              "expected": 0.046,
+              "chancePct": 5,
+              "qtyMin": 0.046,
+              "qtyMax": 0.046,
+              "unresolved": false
+            },
+            {
+              "item": "Ingredient_Salt",
+              "expected": 0.018,
+              "chancePct": 2,
+              "qtyMin": 0.018,
+              "qtyMax": 0.018,
+              "unresolved": false
+            }
+          ]
+        }
+      }
+    },
+    {
       "id": "Debug_Falling_Barrel",
       "sourceFile": "_Assets/Server/Item/Items/_Debug/Debug_Falling_Barrel.json",
       "gatheringDefinedBy": null,
@@ -36757,7 +36891,7 @@
       "gatheringDefinedBy": null,
       "modes": {
         "Breaking": {
-          "gatherType": "SoftBlocks",
+          "gatherType": "Woods",
           "droplistRef": null,
           "drops": [
             {
@@ -40364,6 +40498,27 @@
       }
     },
     {
+      "id": "Plant_Crop_Stamina1_Block",
+      "sourceFile": "_Assets/Server/Item/Items/Plant/Crop/Stamina1/Plant_Crop_Stamina1_Block.json",
+      "gatheringDefinedBy": null,
+      "modes": {
+        "Soft": {
+          "gatherType": null,
+          "droplistRef": "Plant_Crop_Stamina1_Stage_0",
+          "drops": [
+            {
+              "item": "Plant_Seeds_Stamina1",
+              "expected": 1,
+              "chancePct": 100,
+              "qtyMin": 1,
+              "qtyMax": 1,
+              "unresolved": false
+            }
+          ]
+        }
+      }
+    },
+    {
       "id": "Plant_Crop_Stamina2",
       "sourceFile": "_Assets/Server/Item/Items/Plant/Crop/Stamina2/Plant_Crop_Stamina2.json",
       "gatheringDefinedBy": null,
@@ -43772,18 +43927,18 @@
     {
       "id": "Plant_Leaves_Palm_Arid",
       "sourceFile": "_Assets/Server/Item/Items/Plant/Leaves/Plant_Leaves_Palm_Arid.json",
-      "gatheringDefinedBy": "Plant_Leaves_Oak",
+      "gatheringDefinedBy": null,
       "modes": {
         "Soft": {
           "gatherType": null,
-          "droplistRef": "Tree_Leaves",
+          "droplistRef": "Tree_Leaves_Palm",
           "drops": [
             {
-              "item": "Ingredient_Fibre",
-              "expected": 1,
+              "item": "Wood_Palm_Trunk",
+              "expected": 3,
               "chancePct": 100,
               "qtyMin": 1,
-              "qtyMax": 1,
+              "qtyMax": 5,
               "unresolved": false
             }
           ]
@@ -43793,18 +43948,18 @@
     {
       "id": "Plant_Leaves_Palm_Oasis",
       "sourceFile": "_Assets/Server/Item/Items/Plant/Leaves/Plant_Leaves_Palm_Oasis.json",
-      "gatheringDefinedBy": "Plant_Leaves_Oak",
+      "gatheringDefinedBy": null,
       "modes": {
         "Soft": {
           "gatherType": null,
-          "droplistRef": "Tree_Leaves",
+          "droplistRef": "Tree_Leaves_Palm",
           "drops": [
             {
-              "item": "Ingredient_Fibre",
-              "expected": 1,
+              "item": "Wood_Palm_Trunk",
+              "expected": 3,
               "chancePct": 100,
               "qtyMin": 1,
-              "qtyMax": 1,
+              "qtyMax": 5,
               "unresolved": false
             }
           ]
@@ -46050,6 +46205,27 @@
       }
     },
     {
+      "id": "Prototype_Spider_Cocoon_Falling",
+      "sourceFile": "_Assets/Server/Item/Items/MISC/Prototype_Spider_Cocoon_Falling.json",
+      "gatheringDefinedBy": null,
+      "modes": {
+        "Soft": {
+          "gatherType": null,
+          "droplistRef": "Spider_Cocoon",
+          "drops": [
+            {
+              "item": "Deco_Bone_Skulls",
+              "expected": 1.5,
+              "chancePct": 100,
+              "qtyMin": 1,
+              "qtyMax": 2,
+              "unresolved": false
+            }
+          ]
+        }
+      }
+    },
+    {
       "id": "Prototype_Succulent_Hanging_Vertical",
       "sourceFile": "_Assets/Server/Item/Items/Plant/Prototype_Succulent_Hanging_Vertical.json",
       "gatheringDefinedBy": null,
@@ -48193,6 +48369,27 @@
               "chancePct": 100,
               "qtyMin": 1,
               "qtyMax": 1,
+              "unresolved": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "Test_PlaceBlockProcedure",
+      "sourceFile": "_Assets/Server/Item/Items/_Debug/Test_PlaceBlockProcedure.json",
+      "gatheringDefinedBy": "Soil_Gravel",
+      "modes": {
+        "Breaking": {
+          "gatherType": "Soils",
+          "droplistRef": "Soil_Gravel",
+          "drops": [
+            {
+              "item": "Rubble_Stone",
+              "expected": 1.5,
+              "chancePct": 100,
+              "qtyMin": 1,
+              "qtyMax": 2,
               "unresolved": false
             }
           ]
@@ -54705,6 +54902,13 @@
         "chancePct": 100
       },
       {
+        "kind": "block",
+        "id": "Prototype_Spider_Cocoon_Falling",
+        "mode": "Soft",
+        "expected": 1.5,
+        "chancePct": 100
+      },
+      {
         "kind": "droplist",
         "id": "Container_Coffins",
         "expected": 0.5,
@@ -60585,20 +60789,6 @@
       },
       {
         "kind": "block",
-        "id": "Plant_Leaves_Palm_Arid",
-        "mode": "Soft",
-        "expected": 1,
-        "chancePct": 100
-      },
-      {
-        "kind": "block",
-        "id": "Plant_Leaves_Palm_Oasis",
-        "mode": "Soft",
-        "expected": 1,
-        "chancePct": 100
-      },
-      {
-        "kind": "block",
         "id": "Plant_Leaves_Palo",
         "mode": "Soft",
         "expected": 1,
@@ -62502,6 +62692,20 @@
       {
         "kind": "droplist",
         "id": "Container_Pot_Jar_Blue",
+        "expected": 0.046,
+        "chancePct": 5
+      },
+      {
+        "kind": "block",
+        "id": "Debug_Companion_Block_Spawner",
+        "mode": "Soft",
+        "expected": 0.046,
+        "chancePct": 5
+      },
+      {
+        "kind": "block",
+        "id": "Debug_Companion_Block_Spawner_Explicit",
+        "mode": "Soft",
         "expected": 0.046,
         "chancePct": 5
       },
@@ -64601,6 +64805,20 @@
       {
         "kind": "droplist",
         "id": "Container_Pot_Jar_Blue",
+        "expected": 0.018,
+        "chancePct": 2
+      },
+      {
+        "kind": "block",
+        "id": "Debug_Companion_Block_Spawner",
+        "mode": "Soft",
+        "expected": 0.018,
+        "chancePct": 2
+      },
+      {
+        "kind": "block",
+        "id": "Debug_Companion_Block_Spawner_Explicit",
+        "mode": "Soft",
         "expected": 0.018,
         "chancePct": 2
       },
@@ -69664,6 +69882,20 @@
       },
       {
         "kind": "block",
+        "id": "Debug_Companion_Block_Spawner",
+        "mode": "Soft",
+        "expected": 0.091,
+        "chancePct": 9
+      },
+      {
+        "kind": "block",
+        "id": "Debug_Companion_Block_Spawner_Explicit",
+        "mode": "Soft",
+        "expected": 0.091,
+        "chancePct": 9
+      },
+      {
+        "kind": "block",
         "id": "Debug_Falling_Barrel",
         "mode": "Breaking",
         "expected": 0.091,
@@ -70128,6 +70360,20 @@
       {
         "kind": "droplist",
         "id": "Container_Pot_Jar_Blue",
+        "expected": 0.091,
+        "chancePct": 9
+      },
+      {
+        "kind": "block",
+        "id": "Debug_Companion_Block_Spawner",
+        "mode": "Soft",
+        "expected": 0.091,
+        "chancePct": 9
+      },
+      {
+        "kind": "block",
+        "id": "Debug_Companion_Block_Spawner_Explicit",
+        "mode": "Soft",
         "expected": 0.091,
         "chancePct": 9
       },
@@ -72950,6 +73196,13 @@
         "id": "Plant_Crop_Stamina1_Stage_2",
         "expected": 1,
         "chancePct": 100
+      },
+      {
+        "kind": "block",
+        "id": "Plant_Crop_Stamina1_Block",
+        "mode": "Soft",
+        "expected": 1,
+        "chancePct": 100
       }
     ],
     "Plant_Seeds_Stamina2": [
@@ -75265,6 +75518,13 @@
         "chancePct": 100
       },
       {
+        "kind": "block",
+        "id": "Test_PlaceBlockProcedure",
+        "mode": "Breaking",
+        "expected": 1.5,
+        "chancePct": 100
+      },
+      {
         "kind": "droplist",
         "id": "Rubble_Stone",
         "expected": 1,
@@ -77142,6 +77402,20 @@
       {
         "kind": "droplist",
         "id": "Container_Pot_Jar_Blue",
+        "expected": 0.068,
+        "chancePct": 2
+      },
+      {
+        "kind": "block",
+        "id": "Debug_Companion_Block_Spawner",
+        "mode": "Soft",
+        "expected": 0.068,
+        "chancePct": 2
+      },
+      {
+        "kind": "block",
+        "id": "Debug_Companion_Block_Spawner_Explicit",
+        "mode": "Soft",
         "expected": 0.068,
         "chancePct": 2
       },
@@ -82162,6 +82436,32 @@
       }
     ],
     "Wood_Palm_Trunk": [
+      {
+        "kind": "droplist",
+        "id": "Tree_Leaves_Palm",
+        "expected": 3,
+        "chancePct": 100
+      },
+      {
+        "kind": "droplist",
+        "id": "Tree_Leaves_Physics_Palm",
+        "expected": 3,
+        "chancePct": 100
+      },
+      {
+        "kind": "block",
+        "id": "Plant_Leaves_Palm_Arid",
+        "mode": "Soft",
+        "expected": 3,
+        "chancePct": 100
+      },
+      {
+        "kind": "block",
+        "id": "Plant_Leaves_Palm_Oasis",
+        "mode": "Soft",
+        "expected": 3,
+        "chancePct": 100
+      },
       {
         "kind": "droplist",
         "id": "Zone2_Encounters_Tier2",

@@ -15,7 +15,7 @@ public class com.hypixel.hytale.server.npc.corecomponents.statemachine.ActionPar
   protected final boolean clearHeadMotion;
   protected final boolean clearBodyMotion;
   public com.hypixel.hytale.server.npc.corecomponents.statemachine.ActionParentState(com.hypixel.hytale.server.npc.corecomponents.statemachine.builders.BuilderActionParentState, com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
-  public boolean execute(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.role.Role, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public boolean execute(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.instructions.ExecutionSupport, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
 }
 ```
 
@@ -31,8 +31,8 @@ public class com.hypixel.hytale.server.npc.corecomponents.statemachine.ActionSta
   protected final boolean componentLocal;
   protected final int componentIndex;
   public com.hypixel.hytale.server.npc.corecomponents.statemachine.ActionState(com.hypixel.hytale.server.npc.corecomponents.statemachine.builders.BuilderActionState, com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
-  public boolean execute(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.role.Role, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
-  public void getInfo(com.hypixel.hytale.server.npc.role.Role, com.hypixel.hytale.server.npc.util.ComponentInfo);
+  public boolean execute(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.instructions.ExecutionSupport, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public void getInfo(com.hypixel.hytale.server.npc.instructions.ExecutionSupport, com.hypixel.hytale.server.npc.util.ComponentInfo);
 }
 ```
 
@@ -42,7 +42,7 @@ public class com.hypixel.hytale.server.npc.corecomponents.statemachine.ActionSta
 public class com.hypixel.hytale.server.npc.corecomponents.statemachine.ActionToggleStateEvaluator extends com.hypixel.hytale.server.npc.corecomponents.ActionBase {
   protected final boolean on;
   public com.hypixel.hytale.server.npc.corecomponents.statemachine.ActionToggleStateEvaluator(com.hypixel.hytale.server.npc.corecomponents.statemachine.builders.BuilderActionToggleStateEvaluator);
-  public boolean execute(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.role.Role, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public boolean execute(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.instructions.ExecutionSupport, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
 }
 ```
 
@@ -51,7 +51,7 @@ public class com.hypixel.hytale.server.npc.corecomponents.statemachine.ActionTog
 ```java
 public class com.hypixel.hytale.server.npc.corecomponents.statemachine.SensorIsBusy extends com.hypixel.hytale.server.npc.corecomponents.SensorBase {
   public com.hypixel.hytale.server.npc.corecomponents.statemachine.SensorIsBusy(com.hypixel.hytale.server.npc.corecomponents.builders.BuilderSensorBase);
-  public boolean matches(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.role.Role, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public boolean matches(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.instructions.ExecutionSupport, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public com.hypixel.hytale.server.npc.sensorinfo.InfoProvider getSensorInfo();
 }
 ```
@@ -66,8 +66,8 @@ public class com.hypixel.hytale.server.npc.corecomponents.statemachine.SensorSta
   protected final boolean componentLocal;
   protected final int componentIndex;
   public com.hypixel.hytale.server.npc.corecomponents.statemachine.SensorState(com.hypixel.hytale.server.npc.corecomponents.statemachine.builders.BuilderSensorState, com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
-  public boolean matches(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.role.Role, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public boolean matches(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.instructions.ExecutionSupport, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public com.hypixel.hytale.server.npc.sensorinfo.InfoProvider getSensorInfo();
-  public void getInfo(com.hypixel.hytale.server.npc.role.Role, com.hypixel.hytale.server.npc.util.ComponentInfo);
+  public void getInfo(com.hypixel.hytale.server.npc.instructions.ExecutionSupport, com.hypixel.hytale.server.npc.util.ComponentInfo);
 }
 ```

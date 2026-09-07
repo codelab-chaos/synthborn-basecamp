@@ -22,7 +22,7 @@ public class com.hypixel.hytale.server.core.modules.projectile.component.Predict
 
 ```java
 public class com.hypixel.hytale.server.core.modules.projectile.component.Projectile implements com.hypixel.hytale.component.Component<com.hypixel.hytale.server.core.universe.world.storage.EntityStore> {
-  public static com.hypixel.hytale.server.core.modules.projectile.component.Projectile INSTANCE;
+  public static final com.hypixel.hytale.server.core.modules.projectile.component.Projectile INSTANCE;
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.server.core.modules.projectile.component.Projectile> CODEC;
   public static com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.core.modules.projectile.component.Projectile> getComponentType();
   public com.hypixel.hytale.component.Component<com.hypixel.hytale.server.core.universe.world.storage.EntityStore> clone();

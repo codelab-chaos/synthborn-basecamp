@@ -60,6 +60,7 @@ public class com.hypixel.hytale.builtin.mounts.MountPlugin extends com.hypixel.h
   public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, com.hypixel.hytale.builtin.mounts.BlockMountComponent> getBlockMountComponentType();
   public static void checkDismountNpc(com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.entity.entities.Player);
   public static void resetOriginalPlayerMovementSettings(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public static void resetOriginalPlayerMovementSettings(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, int);
 }
 ```
 
@@ -92,11 +93,11 @@ public class com.hypixel.hytale.builtin.mounts.MountedByComponent implements com
 ```java
 public class com.hypixel.hytale.builtin.mounts.MountedComponent implements com.hypixel.hytale.component.Component<com.hypixel.hytale.server.core.universe.world.storage.EntityStore> {
   public static com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.builtin.mounts.MountedComponent> getComponentType();
-  public com.hypixel.hytale.builtin.mounts.MountedComponent(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.math.vector.Rotation3f, com.hypixel.hytale.protocol.MountController);
-  public com.hypixel.hytale.builtin.mounts.MountedComponent(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, com.hypixel.hytale.math.vector.Rotation3f, com.hypixel.hytale.protocol.BlockMountType);
+  public com.hypixel.hytale.builtin.mounts.MountedComponent(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, org.joml.Vector3f, com.hypixel.hytale.protocol.MountController);
+  public com.hypixel.hytale.builtin.mounts.MountedComponent(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, org.joml.Vector3f, com.hypixel.hytale.protocol.BlockMountType);
   public com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore> getMountedToEntity();
   public com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore> getMountedToBlock();
-  public com.hypixel.hytale.math.vector.Rotation3f getAttachmentOffset();
+  public org.joml.Vector3fc getAttachmentOffset();
   public com.hypixel.hytale.protocol.MountController getControllerType();
   public com.hypixel.hytale.protocol.BlockMountType getBlockMountType();
   public long getMountedDurationMs();

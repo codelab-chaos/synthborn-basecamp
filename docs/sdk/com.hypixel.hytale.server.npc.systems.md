@@ -168,7 +168,8 @@ public class com.hypixel.hytale.server.npc.systems.NewSpawnStartTickingSystem ex
 ```java
 public class com.hypixel.hytale.server.npc.systems.PositionCacheSystems {
   public com.hypixel.hytale.server.npc.systems.PositionCacheSystems();
-  public static void initialisePositionCache(com.hypixel.hytale.server.npc.role.Role, com.hypixel.hytale.server.npc.decisionmaker.stateevaluator.StateEvaluator, double);
+  public static void initialisePositionCache(com.hypixel.hytale.server.npc.instructions.ExecutionSupport, com.hypixel.hytale.server.npc.role.Role, com.hypixel.hytale.server.npc.decisionmaker.stateevaluator.StateEvaluator, double);
+  public static void registerInstructionsWithCache(com.hypixel.hytale.server.npc.instructions.ExecutionSupport, com.hypixel.hytale.server.npc.instructions.Instruction, com.hypixel.hytale.server.npc.instructions.Instruction, com.hypixel.hytale.server.npc.instructions.Instruction, com.hypixel.hytale.server.npc.decisionmaker.stateevaluator.StateEvaluator);
 }
 ```
 

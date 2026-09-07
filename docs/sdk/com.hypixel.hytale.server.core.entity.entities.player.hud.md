@@ -38,6 +38,7 @@ public class com.hypixel.hytale.server.core.entity.entities.player.hud.HudManage
   public void hideHudComponents(com.hypixel.hytale.server.core.universe.PlayerRef, com.hypixel.hytale.protocol.packets.interface_.HudComponent...);
   public void addCustomHud(com.hypixel.hytale.server.core.universe.PlayerRef, com.hypixel.hytale.server.core.entity.entities.player.hud.CustomUIHud);
   public void removeCustomHud(com.hypixel.hytale.server.core.universe.PlayerRef, java.lang.String);
+  public void resetVisibleHudComponents(com.hypixel.hytale.server.core.universe.PlayerRef);
   public void resetHud(com.hypixel.hytale.server.core.universe.PlayerRef);
   public void resetUserInterface(com.hypixel.hytale.server.core.universe.PlayerRef);
   public void sendVisibleHudComponents(com.hypixel.hytale.server.core.io.PacketHandler);

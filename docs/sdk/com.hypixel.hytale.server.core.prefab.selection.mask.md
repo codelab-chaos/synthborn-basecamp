@@ -20,6 +20,8 @@ public class com.hypixel.hytale.server.core.prefab.selection.mask.BlockFilter {
   public com.hypixel.hytale.server.core.prefab.selection.mask.BlockFilter$FilterType getBlockFilterType();
   public java.lang.String[] getBlocks();
   public boolean isInverted();
+  public it.unimi.dsi.fastutil.ints.IntSet getResolvedBlocks();
+  public it.unimi.dsi.fastutil.ints.IntSet getResolvedFluids();
   public boolean isExcluded(com.hypixel.hytale.server.core.universe.world.accessor.ChunkAccessor, int, int, int, org.joml.Vector3i, org.joml.Vector3i, int);
   public boolean isExcluded(com.hypixel.hytale.server.core.universe.world.accessor.ChunkAccessor, int, int, int, org.joml.Vector3i, org.joml.Vector3i, int, int);
   public java.lang.String toString();
@@ -66,6 +68,7 @@ public class com.hypixel.hytale.server.core.prefab.selection.mask.BlockPattern {
   public static final com.hypixel.hytale.codec.Codec<com.hypixel.hytale.server.core.prefab.selection.mask.BlockPattern> CODEC;
   public static final com.hypixel.hytale.server.core.prefab.selection.mask.BlockPattern EMPTY;
   public static final com.hypixel.hytale.server.core.prefab.selection.mask.BlockPattern[] EMPTY_ARRAY;
+  public static final java.lang.String CHANCE_SUFFIX;
   public com.hypixel.hytale.server.core.prefab.selection.mask.BlockPattern(com.hypixel.hytale.common.map.IWeightedMap<java.lang.String>);
   public java.lang.Integer[] getResolvedKeys();
   public void resolve();

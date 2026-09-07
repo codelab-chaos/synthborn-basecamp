@@ -14,7 +14,6 @@ public class com.hypixel.hytale.server.core.asset.type.blockset.config.BlockSet 
   public static final com.hypixel.hytale.codec.validation.ValidatorCache<java.lang.String> VALIDATOR_CACHE;
   protected com.hypixel.hytale.assetstore.AssetExtraInfo$Data data;
   protected java.lang.String id;
-  protected java.lang.String parent;
   protected boolean includeAll;
   protected java.lang.String[] includeBlockTypes;
   protected java.lang.String[] excludeBlockTypes;
@@ -27,10 +26,10 @@ public class com.hypixel.hytale.server.core.asset.type.blockset.config.BlockSet 
   public static com.hypixel.hytale.assetstore.AssetStore<java.lang.String, com.hypixel.hytale.server.core.asset.type.blockset.config.BlockSet, com.hypixel.hytale.assetstore.map.IndexedLookupTableAssetMap<java.lang.String, com.hypixel.hytale.server.core.asset.type.blockset.config.BlockSet>> getAssetStore();
   public static com.hypixel.hytale.assetstore.map.IndexedLookupTableAssetMap<java.lang.String, com.hypixel.hytale.server.core.asset.type.blockset.config.BlockSet> getAssetMap();
   public com.hypixel.hytale.server.core.asset.type.blockset.config.BlockSet(java.lang.String);
-  public com.hypixel.hytale.server.core.asset.type.blockset.config.BlockSet(java.lang.String, java.lang.String, boolean, java.lang.String[], java.lang.String[], java.lang.String[], java.lang.String[], java.lang.String[], java.lang.String[], java.lang.String[][], java.lang.String[][]);
+  public com.hypixel.hytale.server.core.asset.type.blockset.config.BlockSet(java.lang.String, boolean, java.lang.String[], java.lang.String[], java.lang.String[], java.lang.String[], java.lang.String[], java.lang.String[], java.lang.String[][], java.lang.String[][]);
   protected com.hypixel.hytale.server.core.asset.type.blockset.config.BlockSet();
   public java.lang.String getId();
-  public java.lang.String getParent();
+  public com.hypixel.hytale.assetstore.AssetExtraInfo$Data getData();
   public boolean isIncludeAll();
   public java.lang.String[] getIncludeBlockTypes();
   public java.lang.String[] getExcludeBlockTypes();

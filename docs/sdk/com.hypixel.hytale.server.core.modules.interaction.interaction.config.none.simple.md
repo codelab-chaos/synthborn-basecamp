@@ -42,6 +42,7 @@ public class com.hypixel.hytale.server.core.modules.interaction.interaction.conf
   public com.hypixel.hytale.server.core.modules.interaction.interaction.config.none.simple.SendMessageInteraction(java.lang.String, java.lang.String);
   public com.hypixel.hytale.server.core.modules.interaction.interaction.config.none.simple.SendMessageInteraction();
   protected void firstRun(com.hypixel.hytale.protocol.InteractionType, com.hypixel.hytale.server.core.entity.InteractionContext, com.hypixel.hytale.server.core.modules.interaction.interaction.CooldownHandler);
+  protected void simulateFirstRun(com.hypixel.hytale.protocol.InteractionType, com.hypixel.hytale.server.core.entity.InteractionContext, com.hypixel.hytale.server.core.modules.interaction.interaction.CooldownHandler);
   public java.lang.String toString();
 }
 ```

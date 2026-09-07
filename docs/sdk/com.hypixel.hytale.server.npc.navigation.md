@@ -99,7 +99,7 @@ public class com.hypixel.hytale.server.npc.navigation.AStarBase {
   protected void updateNodeCost(com.hypixel.hytale.server.npc.navigation.AStarNode, int, com.hypixel.hytale.server.npc.navigation.AStarNode, float);
   protected long positionToIndex(org.joml.Vector3d);
   protected float measureWalkCost(org.joml.Vector3d, org.joml.Vector3d, com.hypixel.hytale.server.npc.movement.controllers.MotionController);
-  protected void buildPath(com.hypixel.hytale.server.npc.navigation.AStarNode);
+  protected boolean buildPath(com.hypixel.hytale.server.npc.navigation.AStarNode);
   protected long addOffsetToIndex(long, long, long, long);
 }
 ```

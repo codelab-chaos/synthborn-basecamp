@@ -87,7 +87,6 @@ public final class com.hypixel.hytale.procedurallib.logic.cell.DistanceCalculati
   public static final com.hypixel.hytale.procedurallib.logic.cell.DistanceCalculationMode MANHATTAN;
   public static final com.hypixel.hytale.procedurallib.logic.cell.DistanceCalculationMode NATURAL;
   public static final com.hypixel.hytale.procedurallib.logic.cell.DistanceCalculationMode MAX;
-  protected static final com.hypixel.hytale.procedurallib.logic.cell.DistanceCalculationMode[] VALUES;
   public static com.hypixel.hytale.procedurallib.logic.cell.DistanceCalculationMode[] values();
   public static com.hypixel.hytale.procedurallib.logic.cell.DistanceCalculationMode valueOf(java.lang.String);
   public com.hypixel.hytale.procedurallib.logic.cell.PointDistanceFunction getFunction();
@@ -113,6 +112,7 @@ public class com.hypixel.hytale.procedurallib.logic.cell.GridCellDistanceFunctio
   public <T> void collect(int, int, int, int, int, int, com.hypixel.hytale.procedurallib.logic.ResultBuffer$Bounds2d, T, com.hypixel.hytale.procedurallib.logic.point.PointConsumer<T>, com.hypixel.hytale.procedurallib.logic.cell.evaluator.PointEvaluator);
   public java.lang.String toString();
   public static int getHash(int, int, int);
+  public static int getHash(int, int, int, int);
 }
 ```
 

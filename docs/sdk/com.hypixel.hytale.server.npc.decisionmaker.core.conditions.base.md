@@ -29,7 +29,7 @@ public abstract class com.hypixel.hytale.server.npc.decisionmaker.core.condition
   public com.hypixel.hytale.server.npc.decisionmaker.core.conditions.base.Condition(java.lang.String);
   protected com.hypixel.hytale.server.npc.decisionmaker.core.conditions.base.Condition();
   public java.lang.String getId();
-  public void setupNPC(com.hypixel.hytale.server.npc.role.Role);
+  public void setupNPC(com.hypixel.hytale.server.npc.instructions.ExecutionSupport);
   public void setupNPC(com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public java.lang.ref.WeakReference<com.hypixel.hytale.server.npc.decisionmaker.core.conditions.base.Condition> getReference();
   public abstract double calculateUtility(int, com.hypixel.hytale.component.ArchetypeChunk<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.decisionmaker.core.EvaluationContext);

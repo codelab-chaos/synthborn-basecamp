@@ -32,7 +32,7 @@ public abstract class com.hypixel.hytale.server.npc.decisionmaker.core.Evaluator
   protected java.util.List<com.hypixel.hytale.server.npc.decisionmaker.core.Evaluator<OptionType>.OptionHolder> options;
   public com.hypixel.hytale.server.npc.decisionmaker.core.Evaluator();
   public void initialise();
-  public void setupNPC(com.hypixel.hytale.server.npc.role.Role);
+  public void setupNPC(com.hypixel.hytale.server.npc.instructions.ExecutionSupport);
   public void setupNPC(com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public com.hypixel.hytale.server.npc.decisionmaker.core.Evaluator<OptionType>.OptionHolder evaluate(int, com.hypixel.hytale.component.ArchetypeChunk<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.decisionmaker.core.EvaluationContext);
 }
@@ -51,7 +51,7 @@ public abstract class com.hypixel.hytale.server.npc.decisionmaker.core.Option {
   public java.lang.String[] getConditions();
   public double getWeightCoefficient();
   public void sortConditions();
-  public void setupNPC(com.hypixel.hytale.server.npc.role.Role);
+  public void setupNPC(com.hypixel.hytale.server.npc.instructions.ExecutionSupport);
   public void setupNPC(com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public double calculateUtility(int, com.hypixel.hytale.component.ArchetypeChunk<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.decisionmaker.core.EvaluationContext);
   public java.lang.String toString();

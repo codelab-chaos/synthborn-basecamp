@@ -63,9 +63,10 @@ public class com.hypixel.hytale.server.worldgen.chunk.ChunkGenerator implements 
   public void putHeight(int, int, int, int);
   public com.hypixel.hytale.server.worldgen.cache.InterpolatedBiomeCountList getInterpolatedBiomeCountAt(int, int, int);
   public com.hypixel.hytale.server.worldgen.cave.Cave getCave(com.hypixel.hytale.server.worldgen.cave.CaveType, int, int, int);
+  public java.util.concurrent.CompletableFuture<com.hypixel.hytale.server.worldgen.cave.Cave> getCaveAsync(com.hypixel.hytale.server.worldgen.cave.CaveType, int, int, int);
   public com.hypixel.hytale.server.worldgen.prefab.PrefabLoadingCache getPrefabLoadingCache();
   public com.hypixel.hytale.server.worldgen.container.UniquePrefabContainer$UniquePrefabEntry[] getUniquePrefabs(int);
-  public java.util.concurrent.CompletableFuture<com.hypixel.hytale.server.core.universe.world.worldgen.GeneratedChunk> generate(int, long, int, int, java.util.function.LongPredicate);
+  public java.util.concurrent.CompletableFuture<com.hypixel.hytale.server.core.universe.world.worldgen.GeneratedChunk> generate(int, long, int, int, java.util.function.LongPredicate, it.unimi.dsi.fastutil.longs.Long2FloatFunction);
   public void shutdown();
   public com.hypixel.hytale.server.worldgen.chunk.ZoneBiomeResult generateZoneBiomeResultAt(int, int, int);
   public com.hypixel.hytale.server.worldgen.chunk.ZoneBiomeResult generateZoneBiomeResultAt(int, int, int, com.hypixel.hytale.server.worldgen.chunk.ZoneBiomeResult);
@@ -78,6 +79,8 @@ public class com.hypixel.hytale.server.worldgen.chunk.ChunkGenerator implements 
   public int generateHeightBetween(int, int, int, com.hypixel.hytale.procedurallib.condition.IHeightThresholdInterpreter);
   public com.hypixel.hytale.server.worldgen.cave.Cave generateCave(com.hypixel.hytale.server.worldgen.cave.CaveType, int, int, int);
   public com.hypixel.hytale.server.worldgen.container.UniquePrefabContainer$UniquePrefabEntry[] generateUniquePrefabs(int);
+  public java.util.concurrent.CompletableFuture<java.lang.Void> run(int, com.hypixel.hytale.function.consumer.IntObjectConsumer<com.hypixel.hytale.server.worldgen.chunk.ChunkGenerator>);
+  public <T> java.util.concurrent.CompletableFuture<T> execute(int, com.hypixel.hytale.function.function.IntObjectFunction<com.hypixel.hytale.server.worldgen.chunk.ChunkGenerator, T>);
   protected final void onExecutorShutdown();
   public static com.hypixel.hytale.server.worldgen.ChunkGeneratorResource getResource();
   public boolean isChunkOutsideGeneratableArea(int, int);
@@ -93,11 +96,10 @@ public class com.hypixel.hytale.server.worldgen.chunk.ChunkGenerator implements 
 
 ```java
 public class com.hypixel.hytale.server.worldgen.chunk.ChunkGeneratorExecution {
-  public com.hypixel.hytale.server.worldgen.chunk.ChunkGeneratorExecution(int, com.hypixel.hytale.server.worldgen.chunk.ChunkGenerator, com.hypixel.hytale.server.core.universe.world.worldgen.GeneratedBlockChunk, com.hypixel.hytale.server.core.universe.world.worldgen.GeneratedBlockStateChunk, com.hypixel.hytale.server.core.universe.world.worldgen.GeneratedEntityChunk, com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>[]);
+  public com.hypixel.hytale.server.worldgen.chunk.ChunkGeneratorExecution(int, com.hypixel.hytale.server.worldgen.chunk.ChunkGenerator, com.hypixel.hytale.server.core.universe.world.worldgen.GeneratedChunk);
   public void execute(int);
   public com.hypixel.hytale.server.worldgen.chunk.ChunkGenerator getChunkGenerator();
   public com.hypixel.hytale.server.core.universe.world.worldgen.GeneratedBlockChunk getChunk();
-  public com.hypixel.hytale.server.core.universe.world.worldgen.GeneratedBlockStateChunk getBlockStateChunk();
   public com.hypixel.hytale.server.core.universe.world.worldgen.GeneratedEntityChunk getEntityChunk();
   public com.hypixel.hytale.server.worldgen.chunk.BlockPriorityChunk getPriorityChunk();
   public com.hypixel.hytale.server.worldgen.chunk.HeightThresholdInterpolator getInterpolator();

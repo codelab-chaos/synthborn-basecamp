@@ -27,6 +27,7 @@ public class com.hypixel.hytale.server.core.universe.world.worldmap.provider.chu
   public com.hypixel.hytale.server.core.universe.world.worldmap.provider.chunk.ImageBuilder(long, int, int, com.hypixel.hytale.server.core.universe.world.World);
   public long getIndex();
   public com.hypixel.hytale.protocol.packets.worldmap.MapImage getImage();
+  public void release();
   public static java.util.concurrent.CompletableFuture<com.hypixel.hytale.server.core.universe.world.worldmap.provider.chunk.ImageBuilder> build(long, int, int, com.hypixel.hytale.server.core.universe.world.World);
 }
 ```

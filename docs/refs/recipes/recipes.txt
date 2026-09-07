@@ -1,12 +1,12 @@
 # Hytale Recipe Reference
 
-> Generated 2026-06-25T03:49:59.872Z from `_Assets/Server/Item/Recipes/` (standalone) and `_Assets/Server/Item/Items/` (embedded `Recipe` blocks).
+> Generated 2026-09-07T17:13:42.568Z from `_Assets/Server/Item/Recipes/` (standalone) and `_Assets/Server/Item/Items/` (embedded `Recipe` blocks).
 
 Each entry: `id | inputs → outputs | bench | time`. `(type)` after an ingredient means it accepts any item of that ResourceType (e.g. `Wood_Trunk(type)` matches any trunk wood). `bench=Type[Id,Categories]`.
 
 Regenerate: `node tools/refs/recipes/extract-recipes.js`
 
-## Recipes (1947)
+## Recipes (1984)
 
 - Alchemy_Cauldron | 6×Ingredient_Bar_Copper + 4×Soil_Clay_Smooth_White + 2×Ingredient_Tree_Sap → 1×Alchemy_Cauldron | bench=Crafting[Furniture_Bench,Furniture_Misc] | —
 - Alchemy_Cauldron_Big | 12×Ingredient_Bar_Iron + 8×Soil_Clay_Smooth_White + 4×Ingredient_Tree_Sap → 1×Alchemy_Cauldron_Big | bench=Crafting[Furniture_Bench,Furniture_Misc] | —
@@ -728,6 +728,7 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Rock_Calcite_Brick_Stairs | 1×Rock_Calcite_Brick(type) → 1×Rock_Calcite_Brick_Stairs | bench=StructuralCrafting[Builders,Stairs] | 0s
 - Rock_Calcite_Brick_Wall | 1×Rock_Calcite_Brick(type) → 1×Rock_Calcite_Brick_Wall | bench=StructuralCrafting[Builders,Wall] | 0s
 - Rock_Calcite_Cobble_Beam | 1×Rock_Calcite(type) → 1×Rock_Calcite_Cobble_Beam | bench=StructuralCrafting[Builders,Beam] | 0s
+- Rock_Calcite_Cobble_Half | 1×Rock_Calcite(type) → 1×Rock_Calcite_Cobble_Half | bench=StructuralCrafting[Builders,HalfSlab] | 0s
 - Rock_Calcite_Cobble_Roof | 1×Rock_Calcite(type) → 1×Rock_Calcite_Cobble_Roof | bench=StructuralCrafting[Builders,Roof] | 0s
 - Rock_Calcite_Cobble_Roof_Flat | 1×Rock_Calcite(type) → 1×Rock_Calcite_Cobble_Roof_Flat | bench=StructuralCrafting[Builders,Roof] | 0s
 - Rock_Calcite_Cobble_Roof_Shallow | 1×Rock_Calcite(type) → 1×Rock_Calcite_Cobble_Roof_Shallow | bench=StructuralCrafting[Builders,Roof] | 0s
@@ -792,7 +793,7 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Rock_Crystal_Yellow_Small | 2×Ingredient_Crystal_Yellow → 1×Rock_Crystal_Yellow_Small | bench=StructuralCrafting[Builders,Decorative] | —
 - Rock_Dawnstone | 2×Rock_Quartzite → 1×Rock_Dawnstone | bench=Processing[Furnace] | 2s
 - Rock_Dawnstone_Cobble | 2×Rock_Quartzite → 1×Rock_Dawnstone_Cobble | bench=Processing[Furnace] | 2s
-- Rock_Gold_Brick | 1×Ingredient_Bar_Gold → 1×Rock_Gold_Brick | bench=StructuralCrafting[Builders] | 10s
+- Rock_Gold_Brick | 1×Ingredient_Bar_Gold → 1×Rock_Gold_Brick | bench=StructuralCrafting[Builders] | 0s
 - Rock_Gold_Brick_Beam | 1×Rock_Gold_Brick(type) → 1×Rock_Gold_Brick_Beam | bench=StructuralCrafting[Builders,Beam] | 0s
 - Rock_Gold_Brick_Decorative | 1×Rock_Gold_Brick(type) → 1×Rock_Gold_Brick_Decorative | bench=StructuralCrafting[Builders,Decorative] | 0s
 - Rock_Gold_Brick_Half | 1×Rock_Gold_Brick(type) → 1×Rock_Gold_Brick_Half | bench=StructuralCrafting[Builders,HalfSlab] | 0s
@@ -1537,6 +1538,14 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Salvage_Weapon_Sword_Steel_Rusty | 1×Weapon_Sword_Steel_Rusty → 1×Ore_Iron + 1×Ingredient_Hide_Light + 1×Ingredient_Fabric_Scrap_Linen | bench=Processing[Salvagebench] | 4s
 - Salvage_Weapon_Sword_Stone_Trork | 1×Weapon_Sword_Stone_Trork → 2×Rock_Stone_Cobble + 1×Wood_Hardwood_Planks + 1×Ingredient_Fibre | bench=Processing[Salvagebench] | 4s
 - Salvage_Weapon_Sword_Thorium | 1×Weapon_Sword_Thorium → 2×Ore_Thorium + 1×Ingredient_Hide_Medium + 1×Ingredient_Fabric_Scrap_Linen | bench=Processing[Salvagebench] | 4s
+- Soil_Aqua_Gravel | 3×Rubble_Aqua → 1×Soil_Aqua_Gravel | bench=Crafting[Farmingbench,Decorative] | 0s
+- Soil_Aqua_Gravel_Half | 3×Rubble_Aqua → 1×Soil_Aqua_Gravel_Half | bench=Crafting[Farmingbench,Decorative] | 0s
+- Soil_Basalt_Gravel | 3×Rubble_Basalt → 1×Soil_Basalt_Gravel | bench=Crafting[Farmingbench,Decorative] | 0s
+- Soil_Basalt_Gravel_Half | 3×Rubble_Basalt → 1×Soil_Basalt_Gravel_Half | bench=Crafting[Farmingbench,Decorative] | 0s
+- Soil_Calcite_Gravel | 3×Rubble_Calcite → 1×Soil_Calcite_Gravel | bench=Crafting[Farmingbench,Decorative] | 0s
+- Soil_Calcite_Gravel_Half | 3×Rubble_Calcite → 1×Soil_Calcite_Gravel_Half | bench=Crafting[Farmingbench,Decorative] | 0s
+- Soil_Chalk_Gravel | 3×Rubble_Chalk → 1×Soil_Chalk_Gravel | bench=Crafting[Farmingbench,Decorative] | 0s
+- Soil_Chalk_Gravel_Half | 3×Rubble_Chalk → 1×Soil_Chalk_Gravel_Half | bench=Crafting[Farmingbench,Decorative] | 0s
 - Soil_Clay | 4×Rock_Sandstone_Red → 1×Soil_Clay | bench=Crafting[Furniture_Bench,Furniture_Pottery] | —
 - Soil_Clay_Brick | 1×Clays(type) → 1×Soil_Clay_Brick | bench=StructuralCrafting[Builders,Bricks] | —
 - Soil_Clay_Brick_Beam | 1×Clays(type) → 1×Soil_Clay_Brick_Beam | bench=StructuralCrafting[Builders,Beam] | —
@@ -1576,9 +1585,15 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Soil_Clay_Smooth_White | 2×Soil_Clay + 1×Plant_Petals_White → 1×Soil_Clay_Smooth_White | bench=Crafting[Furniture_Bench,Furniture_Pottery] | —
 - Soil_Clay_Smooth_Yellow | 2×Soil_Clay + 1×Plant_Petals_Yellow → 1×Soil_Clay_Smooth_Yellow | bench=Crafting[Furniture_Bench,Furniture_Pottery] | —
 - Soil_Clay_Smooth_Yellow2 | 2×Soil_Clay + 1×Plant_Petals_Yellow → 1×Soil_Clay_Smooth_Yellow2 | bench=Crafting[Furniture_Bench,Furniture_Pottery] | —
+- Soil_Dirt_Burnt_Half | 1×Soil_Dirt_Burnt → 1×Soil_Dirt_Burnt_Half | bench=StructuralCrafting[Builders,HalfSlab] | 0s
 - Soil_Dirt_Cold | 1×Soils(type) + 1×Ingredient_Fibre → 1×Soil_Dirt_Cold | bench=Crafting[Farmingbench,Decorative] | 0s
+- Soil_Dirt_Cold_Half | 1×Soil_Dirt_Cold → 1×Soil_Dirt_Cold_Half | bench=StructuralCrafting[Builders,HalfSlab] | 0s
 - Soil_Dirt_Dry | 1×Soils(type) + 1×Ingredient_Fibre → 1×Soil_Dirt_Dry | bench=Crafting[Farmingbench,Decorative] | 0s
+- Soil_Dirt_Dry_Half | 1×Soil_Dirt_Dry → 1×Soil_Dirt_Dry_Half | bench=StructuralCrafting[Builders,HalfSlab] | 0s
+- Soil_Dirt_Half | 1×Soil_Dirt → 1×Soil_Dirt_Half | bench=StructuralCrafting[Builders,HalfSlab] | 0s
+- Soil_Dirt_Lush_Half | 1×Soil_Dirt_Lush → 1×Soil_Dirt_Lush_Half | bench=StructuralCrafting[Builders,HalfSlab] | 0s
 - Soil_Dirt_Poisoned | 1×Soils(type) + 1×Ingredient_Fibre → 1×Soil_Dirt_Poisoned | bench=Crafting[Farmingbench,Decorative] | 0s
+- Soil_Dirt_Wet_Half | 1×Soil_Dirt_Wet → 1×Soil_Dirt_Wet_Half | bench=StructuralCrafting[Builders,HalfSlab] | 0s
 - Soil_Grass | 1×Soils(type) + 1×Ingredient_Fibre → 1×Soil_Grass | bench=Crafting[Farmingbench,Decorative] | 0s
 - Soil_Grass_Burnt | 1×Soils(type) + 1×Ingredient_Fibre → 1×Soil_Grass_Burnt | bench=Crafting[Farmingbench,Decorative] | 0s
 - Soil_Grass_Cold | 1×Soils(type) + 1×Ingredient_Fibre → 1×Soil_Grass_Cold | bench=Crafting[Farmingbench,Decorative] | 0s
@@ -1587,10 +1602,25 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Soil_Grass_Full | 1×Soils(type) + 1×Ingredient_Fibre → 1×Soil_Grass_Full | bench=Crafting[Farmingbench,Decorative] | 0s
 - Soil_Grass_Sunny | 1×Soils(type) + 1×Ingredient_Fibre → 1×Soil_Grass_Sunny | bench=Crafting[Farmingbench,Decorative] | 0s
 - Soil_Grass_Wet | 1×Soils(type) + 1×Ingredient_Fibre → 1×Soil_Grass_Wet | bench=Crafting[Farmingbench,Decorative] | 0s
-- Soil_Gravel | 3×Rubble(type) → 1×Soil_Gravel | bench=Crafting[Farmingbench,Decorative] | 0s
+- Soil_Gravel | 3×Rubble_Stone → 1×Soil_Gravel | bench=Crafting[Farmingbench,Decorative] | 0s
+- Soil_Gravel_Half | 3×Rubble_Stone → 1×Soil_Gravel_Half | bench=Crafting[Farmingbench,Decorative] | 0s
+- Soil_Gravel_Lime | 3×Rubble_Lime → 1×Soil_Gravel_Lime | bench=Crafting[Farmingbench,Decorative] | 0s
+- Soil_Gravel_Mossy | 3×Rubble_Stone_Mossy → 1×Soil_Gravel_Mossy | bench=Crafting[Farmingbench,Decorative] | 0s
+- Soil_Gravel_Mossy_Half | 3×Rubble_Stone_Mossy → 1×Soil_Gravel_Mossy_Half | bench=Crafting[Farmingbench,Decorative] | 0s
+- Soil_Gravel_Sand | 3×Rubble_Sandstone → 1×Soil_Gravel_Sand | bench=Crafting[Farmingbench,Decorative] | 0s
+- Soil_Gravel_Sand_Half | 3×Rubble_Sandstone → 1×Soil_Gravel_Sand_Half | bench=Crafting[Farmingbench,Decorative] | 0s
+- Soil_Gravel_Sand_Red | 3×Rubble_Sandstone_Red → 1×Soil_Gravel_Sand_Red | bench=Crafting[Farmingbench,Decorative] | 0s
+- Soil_Gravel_Sand_Red_Half | 3×Rubble_Sandstone_Red → 1×Soil_Gravel_Sand_Red_Half | bench=Crafting[Farmingbench,Decorative] | 0s
+- Soil_Gravel_Sand_White | 3×Rubble_Sandstone_White → 1×Soil_Gravel_Sand_White | bench=Crafting[Farmingbench,Decorative] | 0s
+- Soil_Gravel_Sand_White_Half | 3×Rubble_Sandstone_White → 1×Soil_Gravel_Sand_White_Half | bench=Crafting[Farmingbench,Decorative] | 0s
 - Soil_Hive_Brick_Smooth_Half | 1×Soil_Clay → 1×Soil_Hive_Brick_Smooth_Half | bench=Crafting[Builders,Structural-Rock] | 2s
 - Soil_Hive_Corrupted_Brick_Smooth_Half | 1×Soil_Clay → 1×Soil_Hive_Corrupted_Brick_Smooth_Half | bench=Crafting[Builders,Structural-Rock] | 2s
 - Soil_Leaves | 1×Soils(type) + 1×Ingredient_Fibre → 1×Soil_Leaves | bench=Crafting[Farmingbench,Decorative] | 0s
+- Soil_Leaves_Full | 1×Soils(type) + 1×Ingredient_Fibre → 1×Soil_Leaves_Full | bench=Crafting[Farmingbench,Decorative] | 0s
+- Soil_Lime_Gravel_Half | 3×Rubble_Lime → 1×Soil_Lime_Gravel_Half | bench=Crafting[Farmingbench,Decorative] | 0s
+- Soil_Magma_Cooled_Gravel | 3×Rubble_Magma_Cooled → 1×Soil_Magma_Cooled_Gravel | bench=Crafting[Farmingbench,Decorative] | 0s
+- Soil_Magma_Cooled_Gravel_Half | 3×Rubble_Magma_Cooled → 1×Soil_Magma_Cooled_Gravel_Half | bench=Crafting[Farmingbench,Decorative] | 0s
+- Soil_Marble_Gravel_Half | 3×Rubble_Marble → 1×Soil_Marble_Gravel_Half | bench=Crafting[Farmingbench,Decorative] | 0s
 - Soil_Mud | 1×Soils(type) + 1×Ingredient_Fibre → 1×Soil_Mud | bench=Crafting[Farmingbench,Decorative] | 0s
 - Soil_Mud_Dry | 1×Soils(type) + 1×Ingredient_Fibre → 1×Soil_Mud_Dry | bench=Crafting[Farmingbench,Decorative] | 0s
 - Soil_Needles | 1×Soils(type) + 1×Ingredient_Fibre → 1×Soil_Needles | bench=Crafting[Farmingbench,Decorative] | 0s
@@ -1598,14 +1628,21 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Soil_Pathway_Half | 1×Soil_Pathway → 1×Soil_Pathway_Half | bench=Crafting[Builders,Structural-Rock] | 2s
 - Soil_Pathway_Quarter | 1×Soil_Pathway → 1×Soil_Pathway_Quarter | bench=Crafting[Builders,Structural-Rock] | 2s
 - Soil_Pathway_ThreeQuarter | 1×Soil_Pathway → 1×Soil_Pathway_ThreeQuarter | bench=Crafting[Builders,Structural-Rock] | 2s
-- Soil_Pebbles | 3×Rubble(type) → 1×Soil_Pebbles | bench=Crafting[Farmingbench,Decorative] | 0s
-- Soil_Pebbles_Frozen | 3×Rubble(type) → 1×Soil_Pebbles_Frozen | bench=Crafting[Farmingbench,Decorative] | 0s
+- Soil_Pebbles | 3×Rubble_Marble → 1×Soil_Pebbles | bench=Crafting[Farmingbench,Decorative] | 0s
+- Soil_Pebbles_Frozen | 3×Rubble_Shale → 1×Soil_Pebbles_Frozen | bench=Crafting[Farmingbench,Decorative] | 0s
+- Soil_Quartzite_Gravel | 3×Rubble_Quartzite → 1×Soil_Quartzite_Gravel | bench=Crafting[Farmingbench,Decorative] | 0s
+- Soil_Quartzite_Gravel_Half | 3×Rubble_Quartzite → 1×Soil_Quartzite_Gravel_Half | bench=Crafting[Farmingbench,Decorative] | 0s
 - Soil_Sand_White_Path_Half | 1×Soil_Sand_White → 1×Soil_Sand_White_Path_Half | bench=Crafting[Builders,Structural-Rock] | 2s
+- Soil_Shale_Gravel_Half | 3×Rubble_Shale → 1×Soil_Shale_Gravel_Half | bench=Crafting[Farmingbench,Decorative] | 0s
+- Soil_Slate_Gravel | 3×Rubble_Slate → 1×Soil_Slate_Gravel | bench=Crafting[Farmingbench,Decorative] | 0s
+- Soil_Slate_Gravel_Half | 3×Rubble_Slate → 1×Soil_Slate_Gravel_Half | bench=Crafting[Farmingbench,Decorative] | 0s
 - Soil_Snow_Brick | 2×Soil_Snow → 1×Soil_Snow_Brick | bench=Processing[Furnace] | 2s
 - Soil_Snow_Brick_Beam | 1×Soil_Snow → 1×Soil_Snow_Brick_Beam | bench=Crafting[Builders,Structural-Rock] | 2s
 - Soil_Snow_Brick_Half | 1×Soil_Snow → 1×Soil_Snow_Brick_Half | bench=Crafting[Builders,Structural-Rock] | 2s
 - Soil_Snow_Brick_Stairs | 1×Soil_Snow → 1×Soil_Snow_Brick_Stairs | bench=Crafting[Builders,Structural-Rock] | 2s
 - Soil_Snow_Brick_Wall | 1×Soil_Snow → 1×Soil_Snow_Brick_Wall | bench=Crafting[Builders,Structural-Rock] | 2s
+- Soil_Volcanic_Gravel | 3×Rubble_Volcanic → 1×Soil_Volcanic_Gravel | bench=Crafting[Farmingbench,Decorative] | 0s
+- Soil_Volcanic_Gravel_Half | 3×Rubble_Volcanic → 1×Soil_Volcanic_Gravel_Half | bench=Crafting[Farmingbench,Decorative] | 0s
 - Survival_Trap_Grass | 3×Ingredient_Fibre → 1×Survival_Trap_Grass | bench=— | —
 - Survival_Trap_Snapjaw | 3×Ingredient_Bar_Iron → 1×Survival_Trap_Snapjaw | bench=Crafting[Workbench,Workbench_Tinkering] | 1s
 - Survival_Trap_Spike_Iron | 1×Ingredient_Bar_Iron → 1×Survival_Trap_Spike_Iron | bench=Crafting[Workbench,Workbench_Tinkering] | 1s
@@ -1956,7 +1993,7 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Wood_Wisteria_Wild_Trunk_Half | 1×Wood_Wisteria_Wild(type) → 1×Wood_Wisteria_Wild_Trunk_Half | bench=StructuralCrafting[Builders,HalfSlab] | 0s
 - Wood_Wisteria_Wild_Trunk_Stairs | 1×Wood_Wisteria_Wild(type) → 1×Wood_Wisteria_Wild_Trunk_Stairs | bench=StructuralCrafting[Builders,Stairs] | 0s
 
-## By output (1562 items)
+## By output (1599 items)
 
 ### Alchemy_Cauldron
 - Alchemy_Cauldron
@@ -4717,6 +4754,9 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 ### Rock_Calcite_Cobble_Beam
 - Rock_Calcite_Cobble_Beam
 
+### Rock_Calcite_Cobble_Half
+- Rock_Calcite_Cobble_Half
+
 ### Rock_Calcite_Cobble_Roof
 - Rock_Calcite_Cobble_Roof
 
@@ -6117,6 +6157,30 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Salvage_Rock_Volcanic_Cobble_Stairs
 - Salvage_Rock_Volcanic_Cobble_Wall
 
+### Soil_Aqua_Gravel
+- Soil_Aqua_Gravel
+
+### Soil_Aqua_Gravel_Half
+- Soil_Aqua_Gravel_Half
+
+### Soil_Basalt_Gravel
+- Soil_Basalt_Gravel
+
+### Soil_Basalt_Gravel_Half
+- Soil_Basalt_Gravel_Half
+
+### Soil_Calcite_Gravel
+- Soil_Calcite_Gravel
+
+### Soil_Calcite_Gravel_Half
+- Soil_Calcite_Gravel_Half
+
+### Soil_Chalk_Gravel
+- Soil_Chalk_Gravel
+
+### Soil_Chalk_Gravel_Half
+- Soil_Chalk_Gravel_Half
+
 ### Soil_Clay
 - Soil_Clay
 
@@ -6234,14 +6298,32 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 ### Soil_Clay_Smooth_Yellow2
 - Soil_Clay_Smooth_Yellow2
 
+### Soil_Dirt_Burnt_Half
+- Soil_Dirt_Burnt_Half
+
 ### Soil_Dirt_Cold
 - Soil_Dirt_Cold
+
+### Soil_Dirt_Cold_Half
+- Soil_Dirt_Cold_Half
 
 ### Soil_Dirt_Dry
 - Soil_Dirt_Dry
 
+### Soil_Dirt_Dry_Half
+- Soil_Dirt_Dry_Half
+
+### Soil_Dirt_Half
+- Soil_Dirt_Half
+
+### Soil_Dirt_Lush_Half
+- Soil_Dirt_Lush_Half
+
 ### Soil_Dirt_Poisoned
 - Soil_Dirt_Poisoned
+
+### Soil_Dirt_Wet_Half
+- Soil_Dirt_Wet_Half
 
 ### Soil_Grass
 - Soil_Grass
@@ -6270,6 +6352,36 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 ### Soil_Gravel
 - Soil_Gravel
 
+### Soil_Gravel_Half
+- Soil_Gravel_Half
+
+### Soil_Gravel_Lime
+- Soil_Gravel_Lime
+
+### Soil_Gravel_Mossy
+- Soil_Gravel_Mossy
+
+### Soil_Gravel_Mossy_Half
+- Soil_Gravel_Mossy_Half
+
+### Soil_Gravel_Sand
+- Soil_Gravel_Sand
+
+### Soil_Gravel_Sand_Half
+- Soil_Gravel_Sand_Half
+
+### Soil_Gravel_Sand_Red
+- Soil_Gravel_Sand_Red
+
+### Soil_Gravel_Sand_Red_Half
+- Soil_Gravel_Sand_Red_Half
+
+### Soil_Gravel_Sand_White
+- Soil_Gravel_Sand_White
+
+### Soil_Gravel_Sand_White_Half
+- Soil_Gravel_Sand_White_Half
+
 ### Soil_Hive_Brick_Smooth_Half
 - Soil_Hive_Brick_Smooth_Half
 
@@ -6278,6 +6390,21 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 
 ### Soil_Leaves
 - Soil_Leaves
+
+### Soil_Leaves_Full
+- Soil_Leaves_Full
+
+### Soil_Lime_Gravel_Half
+- Soil_Lime_Gravel_Half
+
+### Soil_Magma_Cooled_Gravel
+- Soil_Magma_Cooled_Gravel
+
+### Soil_Magma_Cooled_Gravel_Half
+- Soil_Magma_Cooled_Gravel_Half
+
+### Soil_Marble_Gravel_Half
+- Soil_Marble_Gravel_Half
 
 ### Soil_Mud
 - Soil_Mud
@@ -6306,8 +6433,23 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 ### Soil_Pebbles_Frozen
 - Soil_Pebbles_Frozen
 
+### Soil_Quartzite_Gravel
+- Soil_Quartzite_Gravel
+
+### Soil_Quartzite_Gravel_Half
+- Soil_Quartzite_Gravel_Half
+
 ### Soil_Sand_White_Path_Half
 - Soil_Sand_White_Path_Half
+
+### Soil_Shale_Gravel_Half
+- Soil_Shale_Gravel_Half
+
+### Soil_Slate_Gravel
+- Soil_Slate_Gravel
+
+### Soil_Slate_Gravel_Half
+- Soil_Slate_Gravel_Half
 
 ### Soil_Snow_Brick
 - Soil_Snow_Brick
@@ -6323,6 +6465,12 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 
 ### Soil_Snow_Brick_Wall
 - Soil_Snow_Brick_Wall
+
+### Soil_Volcanic_Gravel
+- Soil_Volcanic_Gravel
+
+### Soil_Volcanic_Gravel_Half
+- Soil_Volcanic_Gravel_Half
 
 ### Survival_Trap_Grass
 - Survival_Trap_Grass
@@ -7380,7 +7528,7 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 ### Wood_Wisteria_Wild_Trunk_Stairs
 - Wood_Wisteria_Wild_Trunk_Stairs
 
-## By input (740 ingredients)
+## By input (761 ingredients)
 
 ### *Deco_Tankard_State_Filled_Water
 - Ingredient_Dough
@@ -8406,6 +8554,7 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Soil_Grass_Sunny
 - Soil_Grass_Wet
 - Soil_Leaves
+- Soil_Leaves_Full
 - Soil_Mud
 - Soil_Mud_Dry
 - Soil_Needles
@@ -9576,6 +9725,7 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Rock_Calcite_Brick_Ornate
 - Rock_Calcite_Brick_Smooth
 - Rock_Calcite_Cobble_Beam
+- Rock_Calcite_Cobble_Half
 - Rock_Calcite_Cobble_Roof
 - Rock_Calcite_Cobble_Roof_Flat
 - Rock_Calcite_Cobble_Roof_Shallow
@@ -10425,9 +10575,6 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 ### Rubble(type)
 - Bench_Campfire
 - Bench_Lumbermill
-- Soil_Gravel
-- Soil_Pebbles
-- Soil_Pebbles_Frozen
 - Tool_Hammer_Crude
 - Tool_Hatchet_Crude
 - Tool_Pickaxe_Crude
@@ -10436,8 +10583,70 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Weapon_Spear_Crude
 - Weapon_Sword_Crude
 
+### Rubble_Aqua
+- Soil_Aqua_Gravel
+- Soil_Aqua_Gravel_Half
+
+### Rubble_Basalt
+- Soil_Basalt_Gravel
+- Soil_Basalt_Gravel_Half
+
+### Rubble_Calcite
+- Soil_Calcite_Gravel
+- Soil_Calcite_Gravel_Half
+
+### Rubble_Chalk
+- Soil_Chalk_Gravel
+- Soil_Chalk_Gravel_Half
+
+### Rubble_Lime
+- Soil_Gravel_Lime
+- Soil_Lime_Gravel_Half
+
+### Rubble_Magma_Cooled
+- Soil_Magma_Cooled_Gravel
+- Soil_Magma_Cooled_Gravel_Half
+
+### Rubble_Marble
+- Soil_Marble_Gravel_Half
+- Soil_Pebbles
+
+### Rubble_Quartzite
+- Soil_Quartzite_Gravel
+- Soil_Quartzite_Gravel_Half
+
+### Rubble_Sandstone
+- Soil_Gravel_Sand
+- Soil_Gravel_Sand_Half
+
+### Rubble_Sandstone_Red
+- Soil_Gravel_Sand_Red
+- Soil_Gravel_Sand_Red_Half
+
+### Rubble_Sandstone_White
+- Soil_Gravel_Sand_White
+- Soil_Gravel_Sand_White_Half
+
+### Rubble_Shale
+- Soil_Pebbles_Frozen
+- Soil_Shale_Gravel_Half
+
+### Rubble_Slate
+- Soil_Slate_Gravel
+- Soil_Slate_Gravel_Half
+
 ### Rubble_Stone
+- Soil_Gravel
+- Soil_Gravel_Half
 - Weapon_Axe_Crude
+
+### Rubble_Stone_Mossy
+- Soil_Gravel_Mossy
+- Soil_Gravel_Mossy_Half
+
+### Rubble_Volcanic
+- Soil_Volcanic_Gravel
+- Soil_Volcanic_Gravel_Half
 
 ### Salvage_Adamantite(type)
 - Ore_Adamantite
@@ -10569,6 +10778,24 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 ### Soil_Clay_Smooth_Yellow2
 - Wood_Village_Wall_Yellow_Full
 
+### Soil_Dirt
+- Soil_Dirt_Half
+
+### Soil_Dirt_Burnt
+- Soil_Dirt_Burnt_Half
+
+### Soil_Dirt_Cold
+- Soil_Dirt_Cold_Half
+
+### Soil_Dirt_Dry
+- Soil_Dirt_Dry_Half
+
+### Soil_Dirt_Lush
+- Soil_Dirt_Lush_Half
+
+### Soil_Dirt_Wet
+- Soil_Dirt_Wet_Half
+
 ### Soil_Pathway
 - Soil_Pathway_Half
 - Soil_Pathway_Quarter
@@ -10606,6 +10833,7 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Soil_Grass_Sunny
 - Soil_Grass_Wet
 - Soil_Leaves
+- Soil_Leaves_Full
 - Soil_Mud
 - Soil_Mud_Dry
 - Soil_Needles

@@ -47,7 +47,7 @@ public class com.hypixel.hytale.builtin.npccombatactionevaluator.evaluator.Comba
   protected float timeout;
   protected final com.hypixel.hytale.server.npc.decisionmaker.core.EvaluationContext evaluationContext;
   public static com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.builtin.npccombatactionevaluator.evaluator.CombatActionEvaluator> getComponentType();
-  public com.hypixel.hytale.builtin.npccombatactionevaluator.evaluator.CombatActionEvaluator(com.hypixel.hytale.server.npc.role.Role, com.hypixel.hytale.builtin.npccombatactionevaluator.evaluator.CombatActionEvaluatorConfig, com.hypixel.hytale.builtin.npccombatactionevaluator.CombatActionEvaluatorSystems$CombatConstructionData);
+  public com.hypixel.hytale.builtin.npccombatactionevaluator.evaluator.CombatActionEvaluator(com.hypixel.hytale.server.npc.role.support.StateSupport, com.hypixel.hytale.builtin.npccombatactionevaluator.evaluator.CombatActionEvaluatorConfig, com.hypixel.hytale.builtin.npccombatactionevaluator.CombatActionEvaluatorSystems$CombatConstructionData);
   protected com.hypixel.hytale.builtin.npccombatactionevaluator.evaluator.CombatActionEvaluator();
   public com.hypixel.hytale.builtin.npccombatactionevaluator.evaluator.CombatActionEvaluator$RunOption getRunOption();
   public double getMinRunUtility();
@@ -90,11 +90,11 @@ public class com.hypixel.hytale.builtin.npccombatactionevaluator.evaluator.Comba
   public void setTimeout(float);
   public void clearTimeout();
   public boolean hasTimedOut(float);
-  public void selectNextCombatAction(int, com.hypixel.hytale.component.ArchetypeChunk<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.role.Role, com.hypixel.hytale.server.npc.valuestore.ValueStore);
+  public void selectNextCombatAction(int, com.hypixel.hytale.component.ArchetypeChunk<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.instructions.ExecutionSupport, com.hypixel.hytale.server.npc.valuestore.ValueStore);
   public void completeCurrentAction(boolean, boolean);
   public void terminateCurrentAction();
   public void clearCurrentBasicAttack();
-  public void setupNPC(com.hypixel.hytale.server.npc.role.Role);
+  public void setupNPC(com.hypixel.hytale.server.npc.instructions.ExecutionSupport);
   public void setupNPC(com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public com.hypixel.hytale.component.Component<com.hypixel.hytale.server.core.universe.world.storage.EntityStore> clone();
   public java.lang.Object clone() throws java.lang.CloneNotSupportedException;

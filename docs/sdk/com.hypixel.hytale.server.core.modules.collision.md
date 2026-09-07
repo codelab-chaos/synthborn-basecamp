@@ -154,10 +154,7 @@ public class com.hypixel.hytale.server.core.modules.collision.BlockData {
 ```java
 public class com.hypixel.hytale.server.core.modules.collision.BlockDataProvider extends com.hypixel.hytale.server.core.modules.collision.BlockData {
   protected static int FULL_LEVEL;
-  protected final int INVALID_CHUNK_SECTION_INDEX;
   protected com.hypixel.hytale.server.core.universe.world.World world;
-  protected com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk chunk;
-  protected int chunkSectionIndex;
   protected com.hypixel.hytale.server.core.universe.world.chunk.section.BlockSection chunkSection;
   protected int chunkX;
   protected int chunkY;
@@ -172,6 +169,7 @@ public class com.hypixel.hytale.server.core.modules.collision.BlockDataProvider 
   protected int readFiller(int, int, int);
   protected int readFluidId(int, int, int);
   protected byte readFluidLevel(int, int, int);
+  protected void refreshSection(int, int, int);
   protected void setBlock(int, com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType, int, int, com.hypixel.hytale.server.core.asset.type.blockhitbox.BlockBoundingBoxes);
   protected void setBlock(int, com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType, int, int);
   protected void cleanup0();
@@ -284,6 +282,7 @@ public class com.hypixel.hytale.server.core.modules.collision.CollisionConfig {
   public java.util.function.Predicate<com.hypixel.hytale.server.core.modules.collision.CollisionConfig> canCollide;
   public java.util.function.Predicate<com.hypixel.hytale.server.core.modules.collision.CollisionConfig> extraBlockCollisionFilter;
   public boolean dumpInvalidBlocks;
+  public boolean dumpNonOverlappingBlocks;
   public java.lang.Object extraData1;
   public java.lang.Object extraData2;
   public com.hypixel.hytale.server.core.modules.collision.CollisionConfig();
@@ -427,6 +426,8 @@ public class com.hypixel.hytale.server.core.modules.collision.CollisionModuleCon
   public void setExtentMax(double);
   public boolean isDumpInvalidBlocks();
   public void setDumpInvalidBlocks(boolean);
+  public boolean isDumpNonOverlappingBlocks();
+  public void setDumpNonOverlappingBlocks(boolean);
   public double getMinimumThickness();
   public void setMinimumThickness(double);
   public boolean hasMinimumThickness();
@@ -512,6 +513,9 @@ public class com.hypixel.hytale.server.core.modules.collision.CollisionResult im
   public com.hypixel.hytale.logger.HytaleLogger getLogger();
   public boolean shouldLog();
   public void setLogger(com.hypixel.hytale.logger.HytaleLogger);
+  public void setLogger(com.hypixel.hytale.logger.HytaleLogger, int);
+  public void setDebugEntityId(int);
+  public int getDebugEntityId();
 }
 ```
 

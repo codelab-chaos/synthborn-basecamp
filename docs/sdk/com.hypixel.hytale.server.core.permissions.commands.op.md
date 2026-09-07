@@ -20,7 +20,6 @@ public class com.hypixel.hytale.server.core.permissions.commands.op.OpAddCommand
 ```java
 public class com.hypixel.hytale.server.core.permissions.commands.op.OpCommand extends com.hypixel.hytale.server.core.command.system.basecommands.AbstractCommandCollection {
   public com.hypixel.hytale.server.core.permissions.commands.op.OpCommand();
-  protected boolean canGeneratePermission();
 }
 ```
 
@@ -38,7 +37,6 @@ public class com.hypixel.hytale.server.core.permissions.commands.op.OpRemoveComm
 ```java
 public class com.hypixel.hytale.server.core.permissions.commands.op.OpSelfCommand extends com.hypixel.hytale.server.core.command.system.basecommands.AbstractPlayerCommand {
   public com.hypixel.hytale.server.core.permissions.commands.op.OpSelfCommand();
-  protected boolean canGeneratePermission();
   protected void execute(com.hypixel.hytale.server.core.command.system.CommandContext, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.universe.PlayerRef, com.hypixel.hytale.server.core.universe.world.World);
 }
 ```

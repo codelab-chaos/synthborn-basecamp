@@ -138,7 +138,6 @@ public class com.hypixel.hytale.server.npc.corecomponents.combat.builders.Builde
   protected final com.hypixel.hytale.server.npc.asset.builder.holder.NumberArrayHolder windingUpDurationRange;
   protected final com.hypixel.hytale.server.npc.asset.builder.holder.NumberArrayHolder postChargeDurationRange;
   protected final com.hypixel.hytale.server.npc.asset.builder.holder.BooleanHolder windingUpUninterruptable;
-  protected final com.hypixel.hytale.server.npc.asset.builder.holder.BooleanHolder chargingUninterruptable;
   protected final com.hypixel.hytale.server.npc.asset.builder.holder.BooleanHolder clearOnceOnStateChange;
   protected final com.hypixel.hytale.server.npc.asset.builder.holder.DoubleHolder chargeAbsoluteSpeed;
   protected final com.hypixel.hytale.server.npc.asset.builder.holder.DoubleHolder chargeAcceleration;
@@ -151,25 +150,33 @@ public class com.hypixel.hytale.server.npc.corecomponents.combat.builders.Builde
   protected final com.hypixel.hytale.server.npc.asset.builder.holder.DoubleHolder climbSlope;
   protected final com.hypixel.hytale.server.npc.asset.builder.holder.DoubleHolder dropSlope;
   protected final com.hypixel.hytale.server.npc.asset.builder.holder.DoubleHolder horizontalSkipGapWidth;
-  protected double lockedOnToleranceAngleDegrees;
+  protected final com.hypixel.hytale.server.npc.asset.builder.holder.DoubleHolder knockbackThreshold;
+  protected final com.hypixel.hytale.server.npc.asset.builder.holder.DoubleHolder probeChargeRecomputeDistance;
+  protected final com.hypixel.hytale.server.npc.asset.builder.holder.IntHolder probeMinFrequency;
+  protected final com.hypixel.hytale.server.npc.asset.builder.holder.IntHolder probeMaxFrequency;
+  protected final com.hypixel.hytale.server.npc.asset.builder.holder.DoubleHolder probeMinDirectionChangeDegrees;
+  protected final com.hypixel.hytale.server.npc.asset.builder.holder.DoubleHolder lockedOnToleranceAngleDegrees;
+  protected final com.hypixel.hytale.server.npc.asset.builder.holder.AssetHolder ignoredBlockSet;
+  protected final com.hypixel.hytale.server.npc.asset.builder.holder.AssetHolder removedBlockSet;
   public com.hypixel.hytale.server.npc.corecomponents.combat.builders.BuilderBodyMotionCharge();
   public com.hypixel.hytale.server.npc.instructions.BodyMotion build(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
   public java.lang.String getShortDescription();
   public java.lang.String getLongDescription();
   public com.hypixel.hytale.server.npc.asset.builder.BuilderDescriptorState getBuilderDescriptorState();
   public com.hypixel.hytale.server.npc.corecomponents.combat.builders.BuilderBodyMotionCharge readConfig(com.google.gson.JsonElement);
+  public boolean validate(java.lang.String, com.hypixel.hytale.server.npc.validators.NPCLoadTimeValidationHelper, com.hypixel.hytale.server.npc.util.expression.ExecutionContext, com.hypixel.hytale.server.npc.util.expression.Scope, java.util.List<java.lang.String>);
   public double getRelativeTurnSpeed(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
-  public double getLockedOnHalfAngleRadians();
+  public double getLockedOnHalfAngleRadians(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
   public double[] getLockedOnDurationRange(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
   public double[] getWindingUpDurationRange(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
   public double[] getPostChargeDurationRange(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
   public boolean isWindingUpUninterruptable(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
-  public boolean isChargingUninterruptable(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
   public boolean isClearOnceOnStateChange(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
   public double getWindingUpRelativeTurnSpeed(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
   public double getChargeRelativeSpeed(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
   public double[] getChargeDistanceRange(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
-  public int getIgnoredBlockSet();
+  public int getIgnoredBlockSet(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
+  public int getRemovedBlockSet(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
   public double getChargeAbsoluteSpeed(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
   public double getChargeAcceleration(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
   public boolean isIgnoredBlockSetTriggers(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
@@ -181,6 +188,11 @@ public class com.hypixel.hytale.server.npc.corecomponents.combat.builders.Builde
   public double getDropSlope(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
   public double getHorizontalSkipGapWidth(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
   public double getRepeatCollisionIgnoreDuration(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
+  public double getKnockbackThreshold(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
+  public double getProbeChargeRecomputeDistance(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
+  public double getProbeMinInterval(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
+  public double getProbeMaxInterval(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
+  public double getProbeMinDirectionChangeRadians(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
   public com.hypixel.hytale.server.npc.asset.builder.Builder readConfig(com.google.gson.JsonElement);
   public java.lang.Object build(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
 }
@@ -213,12 +225,14 @@ public class com.hypixel.hytale.server.npc.corecomponents.combat.builders.Builde
 
 ```java
 public class com.hypixel.hytale.server.npc.corecomponents.combat.builders.BuilderSensorChargeBlockCollisions extends com.hypixel.hytale.server.npc.corecomponents.builders.BuilderSensorBase {
+  protected final com.hypixel.hytale.server.npc.asset.builder.holder.AssetHolder blockFilter;
   public com.hypixel.hytale.server.npc.corecomponents.combat.builders.BuilderSensorChargeBlockCollisions();
   public com.hypixel.hytale.server.npc.instructions.Sensor build(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
   public java.lang.String getShortDescription();
   public java.lang.String getLongDescription();
   public com.hypixel.hytale.server.npc.asset.builder.BuilderDescriptorState getBuilderDescriptorState();
   public com.hypixel.hytale.server.npc.asset.builder.Builder<com.hypixel.hytale.server.npc.instructions.Sensor> readConfig(com.google.gson.JsonElement);
+  public int getBlockFilterSet(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
   public java.lang.Object build(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
 }
 ```
@@ -297,6 +311,8 @@ public class com.hypixel.hytale.server.npc.corecomponents.combat.builders.Builde
   public java.lang.String getShortDescription();
   public java.lang.String getLongDescription();
   public com.hypixel.hytale.server.npc.asset.builder.BuilderDescriptorState getBuilderDescriptorState();
+  public com.hypixel.hytale.server.npc.corecomponents.combat.builders.BuilderSensorIsBackingAway readConfig(com.google.gson.JsonElement);
+  public com.hypixel.hytale.server.npc.asset.builder.Builder readConfig(com.google.gson.JsonElement);
   public java.lang.Object build(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
 }
 ```

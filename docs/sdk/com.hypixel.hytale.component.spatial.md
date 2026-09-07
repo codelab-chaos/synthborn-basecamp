@@ -13,12 +13,12 @@ public class com.hypixel.hytale.component.spatial.KDTree<T> implements com.hypix
   public com.hypixel.hytale.component.spatial.KDTree(java.util.function.Predicate<T>);
   public int size();
   public void rebuild(com.hypixel.hytale.component.spatial.SpatialData<T>);
-  public T closest(org.joml.Vector3d);
-  public void collect(org.joml.Vector3d, double, java.util.List<T>);
-  public void collectCylinder(org.joml.Vector3d, double, double, java.util.List<T>);
-  public void collectBox(org.joml.Vector3d, org.joml.Vector3d, java.util.List<T>);
-  public void ordered(org.joml.Vector3d, double, java.util.List<T>);
-  public void ordered3DAxis(org.joml.Vector3d, double, double, double, java.util.List<T>);
+  public T closest(org.joml.Vector3dc);
+  public void collect(org.joml.Vector3dc, double, java.util.List<T>);
+  public void collectCylinder(org.joml.Vector3dc, double, double, java.util.List<T>);
+  public void collectBox(org.joml.Vector3dc, org.joml.Vector3dc, java.util.List<T>);
+  public void ordered(org.joml.Vector3dc, double, java.util.List<T>);
+  public void ordered3DAxis(org.joml.Vector3dc, double, double, double, java.util.List<T>);
   public java.lang.String dump();
 }
 ```
@@ -70,12 +70,12 @@ public class com.hypixel.hytale.component.spatial.SpatialResource<T, ECS_TYPE> i
 public interface com.hypixel.hytale.component.spatial.SpatialStructure<T> {
   public abstract int size();
   public abstract void rebuild(com.hypixel.hytale.component.spatial.SpatialData<T>);
-  public abstract T closest(org.joml.Vector3d);
-  public abstract void collect(org.joml.Vector3d, double, java.util.List<T>);
-  public abstract void collectCylinder(org.joml.Vector3d, double, double, java.util.List<T>);
-  public abstract void collectBox(org.joml.Vector3d, org.joml.Vector3d, java.util.List<T>);
-  public abstract void ordered(org.joml.Vector3d, double, java.util.List<T>);
-  public abstract void ordered3DAxis(org.joml.Vector3d, double, double, double, java.util.List<T>);
+  public abstract T closest(org.joml.Vector3dc);
+  public abstract void collect(org.joml.Vector3dc, double, java.util.List<T>);
+  public abstract void collectCylinder(org.joml.Vector3dc, double, double, java.util.List<T>);
+  public abstract void collectBox(org.joml.Vector3dc, org.joml.Vector3dc, java.util.List<T>);
+  public abstract void ordered(org.joml.Vector3dc, double, java.util.List<T>);
+  public abstract void ordered3DAxis(org.joml.Vector3dc, double, double, double, java.util.List<T>);
   public abstract java.lang.String dump();
 }
 ```

@@ -69,6 +69,7 @@ public class com.hypixel.hytale.server.core.asset.type.portalworld.PortalType im
   public boolean isVoidInvasionEnabled();
   public com.hypixel.hytale.server.core.asset.type.portalworld.PortalSpawnConfig getSpawn();
   public com.hypixel.hytale.server.core.asset.type.gameplay.GameplayConfig getGameplayConfig();
+  public boolean isCloseWhenEmpty();
   public java.lang.Object getId();
 }
 ```

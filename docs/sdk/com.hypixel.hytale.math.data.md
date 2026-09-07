@@ -13,6 +13,7 @@ public class com.hypixel.hytale.math.data.Int3ObjectOpenHashMap<V> {
   public com.hypixel.hytale.math.data.Int3ObjectOpenHashMap();
   public com.hypixel.hytale.math.data.Int3ObjectOpenHashMap(int);
   public com.hypixel.hytale.math.data.Int3ObjectOpenHashMap(int, float);
+  public com.hypixel.hytale.math.data.Int3ObjectOpenHashMap(com.hypixel.hytale.math.data.Int3ObjectOpenHashMap<? extends V>);
   public V get(int, int, int);
   public V put(int, int, int, V);
   public V remove(int, int, int);

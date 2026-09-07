@@ -51,6 +51,8 @@ public class com.hypixel.hytale.server.npc.corecomponents.lifecycle.builders.Bui
   public java.lang.String getShortDescription();
   public java.lang.String getLongDescription();
   public com.hypixel.hytale.server.npc.asset.builder.BuilderDescriptorState getBuilderDescriptorState();
+  public com.hypixel.hytale.server.npc.corecomponents.lifecycle.builders.BuilderActionDie readConfig(com.google.gson.JsonElement);
+  public com.hypixel.hytale.server.npc.asset.builder.Builder readConfig(com.google.gson.JsonElement);
   public java.lang.Object build(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
 }
 ```
@@ -114,6 +116,7 @@ public class com.hypixel.hytale.server.npc.corecomponents.lifecycle.builders.Bui
   protected final com.hypixel.hytale.server.npc.asset.builder.holder.BooleanHolder joinFlock;
   protected final com.hypixel.hytale.server.npc.asset.builder.holder.StringHolder spawnState;
   protected final com.hypixel.hytale.server.npc.asset.builder.holder.StringHolder spawnSubState;
+  protected com.hypixel.hytale.server.npc.corecomponents.PositionSource positionSource;
   public com.hypixel.hytale.server.npc.corecomponents.lifecycle.builders.BuilderActionSpawn();
   public com.hypixel.hytale.server.npc.corecomponents.lifecycle.ActionSpawn build(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
   public java.lang.String getShortDescription();
@@ -134,6 +137,7 @@ public class com.hypixel.hytale.server.npc.corecomponents.lifecycle.builders.Bui
   public boolean isJoinFlock(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
   public java.lang.String getSpawnState(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
   public java.lang.String getSpawnSubState(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
+  public com.hypixel.hytale.server.npc.corecomponents.PositionSource getPositionSource(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
   public com.hypixel.hytale.server.npc.asset.builder.Builder readConfig(com.google.gson.JsonElement);
   public java.lang.Object build(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
 }

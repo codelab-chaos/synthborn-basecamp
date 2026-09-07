@@ -53,6 +53,7 @@ public class com.hypixel.hytale.server.core.io.netty.NettyUtil {
   public static void closeConnection(io.netty.channel.Channel);
   public static void closeApplicationConnection(io.netty.channel.Channel);
   public static void closeApplicationConnection(io.netty.channel.Channel, com.hypixel.hytale.protocol.packets.connection.QuicApplicationErrorCode);
+  public static void closeApplicationConnection(io.netty.channel.Channel, com.hypixel.hytale.protocol.packets.connection.QuicApplicationErrorCode, com.hypixel.hytale.protocol.FormattedMessage);
   public static io.netty.channel.EventLoopGroup getEventLoopGroup(java.lang.String);
   public static io.netty.channel.EventLoopGroup getEventLoopGroup(int, java.lang.String);
   public static java.lang.Class<? extends io.netty.channel.ServerChannel> getServerChannel();

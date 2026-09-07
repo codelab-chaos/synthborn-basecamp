@@ -50,7 +50,7 @@ public class com.hypixel.hytale.server.core.modules.physics.util.ForceProviderEn
 
 ```java
 public abstract class com.hypixel.hytale.server.core.modules.physics.util.ForceProviderStandard implements com.hypixel.hytale.server.core.modules.physics.util.ForceProvider {
-  public static com.hypixel.hytale.logger.HytaleLogger LOGGER;
+  public static final com.hypixel.hytale.logger.HytaleLogger LOGGER;
   protected org.joml.Vector3d dragForce;
   public com.hypixel.hytale.server.core.modules.physics.util.ForceProviderStandard();
   public abstract double getMass(double);

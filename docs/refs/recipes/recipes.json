@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-25T03:49:59.872Z",
-  "hytaleVersion": "0.5.6",
+  "generatedAt": "2026-09-07T17:13:42.568Z",
+  "hytaleVersion": "0.6.4",
   "counts": {
-    "recipes": 1947,
+    "recipes": 1984,
     "standalone": 403,
-    "embedded": 1544,
-    "scannedFiles": 4044
+    "embedded": 1581,
+    "scannedFiles": 4075
   },
   "recipes": [
     {
@@ -24144,6 +24144,36 @@
       "knowledgeRequired": false
     },
     {
+      "id": "Rock_Calcite_Cobble_Half",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Rock/Calcite/Rock_Calcite_Cobble_Half.json",
+      "inputs": [
+        {
+          "kind": "resource",
+          "id": "Rock_Calcite",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Rock_Calcite_Cobble_Half",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "StructuralCrafting",
+          "id": "Builders",
+          "categories": [
+            "HalfSlab"
+          ]
+        }
+      ],
+      "timeSeconds": 0,
+      "knowledgeRequired": false
+    },
+    {
       "id": "Rock_Calcite_Cobble_Roof",
       "source": "embedded",
       "sourceFile": "_Assets/Server/Item/Items/Rock/Calcite/Rock_Calcite_Cobble_Roof.json",
@@ -26084,7 +26114,7 @@
           "categories": []
         }
       ],
-      "timeSeconds": 10,
+      "timeSeconds": 0,
       "knowledgeRequired": false
     },
     {
@@ -49329,6 +49359,246 @@
       "knowledgeRequired": false
     },
     {
+      "id": "Soil_Aqua_Gravel",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Aqua_Gravel.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Rubble_Aqua",
+          "quantity": 3
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Aqua_Gravel",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "Farmingbench",
+          "categories": [
+            "Decorative"
+          ]
+        }
+      ],
+      "timeSeconds": 0,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Soil_Aqua_Gravel_Half",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Aqua_Gravel_Half.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Rubble_Aqua",
+          "quantity": 3
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Aqua_Gravel_Half",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "Farmingbench",
+          "categories": [
+            "Decorative"
+          ]
+        }
+      ],
+      "timeSeconds": 0,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Soil_Basalt_Gravel",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Basalt_Gravel.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Rubble_Basalt",
+          "quantity": 3
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Basalt_Gravel",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "Farmingbench",
+          "categories": [
+            "Decorative"
+          ]
+        }
+      ],
+      "timeSeconds": 0,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Soil_Basalt_Gravel_Half",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Basalt_Gravel_Half.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Rubble_Basalt",
+          "quantity": 3
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Basalt_Gravel_Half",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "Farmingbench",
+          "categories": [
+            "Decorative"
+          ]
+        }
+      ],
+      "timeSeconds": 0,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Soil_Calcite_Gravel",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Calcite_Gravel.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Rubble_Calcite",
+          "quantity": 3
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Calcite_Gravel",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "Farmingbench",
+          "categories": [
+            "Decorative"
+          ]
+        }
+      ],
+      "timeSeconds": 0,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Soil_Calcite_Gravel_Half",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Calcite_Gravel_Half.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Rubble_Calcite",
+          "quantity": 3
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Calcite_Gravel_Half",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "Farmingbench",
+          "categories": [
+            "Decorative"
+          ]
+        }
+      ],
+      "timeSeconds": 0,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Soil_Chalk_Gravel",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Chalk_Gravel.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Rubble_Chalk",
+          "quantity": 3
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Chalk_Gravel",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "Farmingbench",
+          "categories": [
+            "Decorative"
+          ]
+        }
+      ],
+      "timeSeconds": 0,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Soil_Chalk_Gravel_Half",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Chalk_Gravel_Half.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Rubble_Chalk",
+          "quantity": 3
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Chalk_Gravel_Half",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "Farmingbench",
+          "categories": [
+            "Decorative"
+          ]
+        }
+      ],
+      "timeSeconds": 0,
+      "knowledgeRequired": false
+    },
+    {
       "id": "Soil_Clay",
       "source": "embedded",
       "sourceFile": "_Assets/Server/Item/Items/Soil/Clay/Soil_Clay.json",
@@ -50605,6 +50875,36 @@
       "knowledgeRequired": false
     },
     {
+      "id": "Soil_Dirt_Burnt_Half",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Soil/Dirt/Soil_Dirt_Burnt_Half.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Dirt_Burnt",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Dirt_Burnt_Half",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "StructuralCrafting",
+          "id": "Builders",
+          "categories": [
+            "HalfSlab"
+          ]
+        }
+      ],
+      "timeSeconds": 0,
+      "knowledgeRequired": false
+    },
+    {
       "id": "Soil_Dirt_Cold",
       "source": "embedded",
       "sourceFile": "_Assets/Server/Item/Items/Soil/Dirt/Soil_Dirt_Cold.json",
@@ -50633,6 +50933,36 @@
           "id": "Farmingbench",
           "categories": [
             "Decorative"
+          ]
+        }
+      ],
+      "timeSeconds": 0,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Soil_Dirt_Cold_Half",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Soil/Dirt/Soil_Dirt_Cold_Half.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Dirt_Cold",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Dirt_Cold_Half",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "StructuralCrafting",
+          "id": "Builders",
+          "categories": [
+            "HalfSlab"
           ]
         }
       ],
@@ -50675,6 +51005,96 @@
       "knowledgeRequired": false
     },
     {
+      "id": "Soil_Dirt_Dry_Half",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Soil/Dirt/Soil_Dirt_Dry_Half.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Dirt_Dry",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Dirt_Dry_Half",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "StructuralCrafting",
+          "id": "Builders",
+          "categories": [
+            "HalfSlab"
+          ]
+        }
+      ],
+      "timeSeconds": 0,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Soil_Dirt_Half",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Soil/Dirt/Soil_Dirt_Half.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Dirt",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Dirt_Half",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "StructuralCrafting",
+          "id": "Builders",
+          "categories": [
+            "HalfSlab"
+          ]
+        }
+      ],
+      "timeSeconds": 0,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Soil_Dirt_Lush_Half",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Soil/Dirt/Soil_Dirt_Lush_Half.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Dirt_Lush",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Dirt_Lush_Half",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "StructuralCrafting",
+          "id": "Builders",
+          "categories": [
+            "HalfSlab"
+          ]
+        }
+      ],
+      "timeSeconds": 0,
+      "knowledgeRequired": false
+    },
+    {
       "id": "Soil_Dirt_Poisoned",
       "source": "embedded",
       "sourceFile": "_Assets/Server/Item/Items/Soil/Dirt/Soil_Dirt_Poisoned.json",
@@ -50703,6 +51123,36 @@
           "id": "Farmingbench",
           "categories": [
             "Decorative"
+          ]
+        }
+      ],
+      "timeSeconds": 0,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Soil_Dirt_Wet_Half",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Soil/Dirt/Soil_Dirt_Wet_Half.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Dirt_Wet",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Dirt_Wet_Half",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "StructuralCrafting",
+          "id": "Builders",
+          "categories": [
+            "HalfSlab"
           ]
         }
       ],
@@ -50995,8 +51445,8 @@
       "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Gravel.json",
       "inputs": [
         {
-          "kind": "resource",
-          "id": "Rubble",
+          "kind": "item",
+          "id": "Rubble_Stone",
           "quantity": 3
         }
       ],
@@ -51004,6 +51454,306 @@
         {
           "kind": "item",
           "id": "Soil_Gravel",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "Farmingbench",
+          "categories": [
+            "Decorative"
+          ]
+        }
+      ],
+      "timeSeconds": 0,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Soil_Gravel_Half",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Gravel_Half.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Rubble_Stone",
+          "quantity": 3
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Gravel_Half",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "Farmingbench",
+          "categories": [
+            "Decorative"
+          ]
+        }
+      ],
+      "timeSeconds": 0,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Soil_Gravel_Lime",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Gravel_Lime.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Rubble_Lime",
+          "quantity": 3
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Gravel_Lime",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "Farmingbench",
+          "categories": [
+            "Decorative"
+          ]
+        }
+      ],
+      "timeSeconds": 0,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Soil_Gravel_Mossy",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Gravel_Mossy.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Rubble_Stone_Mossy",
+          "quantity": 3
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Gravel_Mossy",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "Farmingbench",
+          "categories": [
+            "Decorative"
+          ]
+        }
+      ],
+      "timeSeconds": 0,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Soil_Gravel_Mossy_Half",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Gravel_Mossy_Half.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Rubble_Stone_Mossy",
+          "quantity": 3
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Gravel_Mossy_Half",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "Farmingbench",
+          "categories": [
+            "Decorative"
+          ]
+        }
+      ],
+      "timeSeconds": 0,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Soil_Gravel_Sand",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Gravel_Sand.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Rubble_Sandstone",
+          "quantity": 3
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Gravel_Sand",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "Farmingbench",
+          "categories": [
+            "Decorative"
+          ]
+        }
+      ],
+      "timeSeconds": 0,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Soil_Gravel_Sand_Half",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Gravel_Sand_Half.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Rubble_Sandstone",
+          "quantity": 3
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Gravel_Sand_Half",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "Farmingbench",
+          "categories": [
+            "Decorative"
+          ]
+        }
+      ],
+      "timeSeconds": 0,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Soil_Gravel_Sand_Red",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Gravel_Sand_Red.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Rubble_Sandstone_Red",
+          "quantity": 3
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Gravel_Sand_Red",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "Farmingbench",
+          "categories": [
+            "Decorative"
+          ]
+        }
+      ],
+      "timeSeconds": 0,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Soil_Gravel_Sand_Red_Half",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Gravel_Sand_Red_Half.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Rubble_Sandstone_Red",
+          "quantity": 3
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Gravel_Sand_Red_Half",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "Farmingbench",
+          "categories": [
+            "Decorative"
+          ]
+        }
+      ],
+      "timeSeconds": 0,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Soil_Gravel_Sand_White",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Gravel_Sand_White.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Rubble_Sandstone_White",
+          "quantity": 3
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Gravel_Sand_White",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "Farmingbench",
+          "categories": [
+            "Decorative"
+          ]
+        }
+      ],
+      "timeSeconds": 0,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Soil_Gravel_Sand_White_Half",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Gravel_Sand_White_Half.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Rubble_Sandstone_White",
+          "quantity": 3
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Gravel_Sand_White_Half",
           "quantity": 1
         }
       ],
@@ -51099,6 +51849,161 @@
         {
           "kind": "item",
           "id": "Soil_Leaves",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "Farmingbench",
+          "categories": [
+            "Decorative"
+          ]
+        }
+      ],
+      "timeSeconds": 0,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Soil_Leaves_Full",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Soil/Soil_Leaves_Full.json",
+      "inputs": [
+        {
+          "kind": "resource",
+          "id": "Soils",
+          "quantity": 1
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Fibre",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Leaves_Full",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "Farmingbench",
+          "categories": [
+            "Decorative"
+          ]
+        }
+      ],
+      "timeSeconds": 0,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Soil_Lime_Gravel_Half",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Lime_Gravel_Half.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Rubble_Lime",
+          "quantity": 3
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Lime_Gravel_Half",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "Farmingbench",
+          "categories": [
+            "Decorative"
+          ]
+        }
+      ],
+      "timeSeconds": 0,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Soil_Magma_Cooled_Gravel",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Magma_Cooled_Gravel.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Rubble_Magma_Cooled",
+          "quantity": 3
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Magma_Cooled_Gravel",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "Farmingbench",
+          "categories": [
+            "Decorative"
+          ]
+        }
+      ],
+      "timeSeconds": 0,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Soil_Magma_Cooled_Gravel_Half",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Magma_Cooled_Gravel_Half.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Rubble_Magma_Cooled",
+          "quantity": 3
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Magma_Cooled_Gravel_Half",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "Farmingbench",
+          "categories": [
+            "Decorative"
+          ]
+        }
+      ],
+      "timeSeconds": 0,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Soil_Marble_Gravel_Half",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Marble_Gravel_Half.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Rubble_Marble",
+          "quantity": 3
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Marble_Gravel_Half",
           "quantity": 1
         }
       ],
@@ -51350,8 +52255,8 @@
       "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Pebbles.json",
       "inputs": [
         {
-          "kind": "resource",
-          "id": "Rubble",
+          "kind": "item",
+          "id": "Rubble_Marble",
           "quantity": 3
         }
       ],
@@ -51380,8 +52285,8 @@
       "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Pebbles_Frozen.json",
       "inputs": [
         {
-          "kind": "resource",
-          "id": "Rubble",
+          "kind": "item",
+          "id": "Rubble_Shale",
           "quantity": 3
         }
       ],
@@ -51389,6 +52294,66 @@
         {
           "kind": "item",
           "id": "Soil_Pebbles_Frozen",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "Farmingbench",
+          "categories": [
+            "Decorative"
+          ]
+        }
+      ],
+      "timeSeconds": 0,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Soil_Quartzite_Gravel",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Quartzite_Gravel.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Rubble_Quartzite",
+          "quantity": 3
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Quartzite_Gravel",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "Farmingbench",
+          "categories": [
+            "Decorative"
+          ]
+        }
+      ],
+      "timeSeconds": 0,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Soil_Quartzite_Gravel_Half",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Quartzite_Gravel_Half.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Rubble_Quartzite",
+          "quantity": 3
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Quartzite_Gravel_Half",
           "quantity": 1
         }
       ],
@@ -51432,6 +52397,96 @@
         }
       ],
       "timeSeconds": 2,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Soil_Shale_Gravel_Half",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Shale_Gravel_Half.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Rubble_Shale",
+          "quantity": 3
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Shale_Gravel_Half",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "Farmingbench",
+          "categories": [
+            "Decorative"
+          ]
+        }
+      ],
+      "timeSeconds": 0,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Soil_Slate_Gravel",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Slate_Gravel.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Rubble_Slate",
+          "quantity": 3
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Slate_Gravel",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "Farmingbench",
+          "categories": [
+            "Decorative"
+          ]
+        }
+      ],
+      "timeSeconds": 0,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Soil_Slate_Gravel_Half",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Slate_Gravel_Half.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Rubble_Slate",
+          "quantity": 3
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Slate_Gravel_Half",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "Farmingbench",
+          "categories": [
+            "Decorative"
+          ]
+        }
+      ],
+      "timeSeconds": 0,
       "knowledgeRequired": false
     },
     {
@@ -51580,6 +52635,66 @@
         }
       ],
       "timeSeconds": 2,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Soil_Volcanic_Gravel",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Volcanic_Gravel.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Rubble_Volcanic",
+          "quantity": 3
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Volcanic_Gravel",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "Farmingbench",
+          "categories": [
+            "Decorative"
+          ]
+        }
+      ],
+      "timeSeconds": 0,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Soil_Volcanic_Gravel_Half",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Volcanic_Gravel_Half.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Rubble_Volcanic",
+          "quantity": 3
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Soil_Volcanic_Gravel_Half",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "Farmingbench",
+          "categories": [
+            "Decorative"
+          ]
+        }
+      ],
+      "timeSeconds": 0,
       "knowledgeRequired": false
     },
     {
@@ -64400,6 +65515,7 @@
       "Soil_Grass_Sunny",
       "Soil_Grass_Wet",
       "Soil_Leaves",
+      "Soil_Leaves_Full",
       "Soil_Mud",
       "Soil_Mud_Dry",
       "Soil_Needles",
@@ -65570,6 +66686,7 @@
       "Rock_Calcite_Brick_Ornate",
       "Rock_Calcite_Brick_Smooth",
       "Rock_Calcite_Cobble_Beam",
+      "Rock_Calcite_Cobble_Half",
       "Rock_Calcite_Cobble_Roof",
       "Rock_Calcite_Cobble_Roof_Flat",
       "Rock_Calcite_Cobble_Roof_Shallow",
@@ -66419,9 +67536,6 @@
     "Rubble(type)": [
       "Bench_Campfire",
       "Bench_Lumbermill",
-      "Soil_Gravel",
-      "Soil_Pebbles",
-      "Soil_Pebbles_Frozen",
       "Tool_Hammer_Crude",
       "Tool_Hatchet_Crude",
       "Tool_Pickaxe_Crude",
@@ -66430,8 +67544,70 @@
       "Weapon_Spear_Crude",
       "Weapon_Sword_Crude"
     ],
+    "Rubble_Aqua": [
+      "Soil_Aqua_Gravel",
+      "Soil_Aqua_Gravel_Half"
+    ],
+    "Rubble_Basalt": [
+      "Soil_Basalt_Gravel",
+      "Soil_Basalt_Gravel_Half"
+    ],
+    "Rubble_Calcite": [
+      "Soil_Calcite_Gravel",
+      "Soil_Calcite_Gravel_Half"
+    ],
+    "Rubble_Chalk": [
+      "Soil_Chalk_Gravel",
+      "Soil_Chalk_Gravel_Half"
+    ],
+    "Rubble_Lime": [
+      "Soil_Gravel_Lime",
+      "Soil_Lime_Gravel_Half"
+    ],
+    "Rubble_Magma_Cooled": [
+      "Soil_Magma_Cooled_Gravel",
+      "Soil_Magma_Cooled_Gravel_Half"
+    ],
+    "Rubble_Marble": [
+      "Soil_Marble_Gravel_Half",
+      "Soil_Pebbles"
+    ],
+    "Rubble_Quartzite": [
+      "Soil_Quartzite_Gravel",
+      "Soil_Quartzite_Gravel_Half"
+    ],
+    "Rubble_Sandstone": [
+      "Soil_Gravel_Sand",
+      "Soil_Gravel_Sand_Half"
+    ],
+    "Rubble_Sandstone_Red": [
+      "Soil_Gravel_Sand_Red",
+      "Soil_Gravel_Sand_Red_Half"
+    ],
+    "Rubble_Sandstone_White": [
+      "Soil_Gravel_Sand_White",
+      "Soil_Gravel_Sand_White_Half"
+    ],
+    "Rubble_Shale": [
+      "Soil_Pebbles_Frozen",
+      "Soil_Shale_Gravel_Half"
+    ],
+    "Rubble_Slate": [
+      "Soil_Slate_Gravel",
+      "Soil_Slate_Gravel_Half"
+    ],
     "Rubble_Stone": [
+      "Soil_Gravel",
+      "Soil_Gravel_Half",
       "Weapon_Axe_Crude"
+    ],
+    "Rubble_Stone_Mossy": [
+      "Soil_Gravel_Mossy",
+      "Soil_Gravel_Mossy_Half"
+    ],
+    "Rubble_Volcanic": [
+      "Soil_Volcanic_Gravel",
+      "Soil_Volcanic_Gravel_Half"
     ],
     "Salvage_Adamantite(type)": [
       "Ore_Adamantite"
@@ -66563,6 +67739,24 @@
     "Soil_Clay_Smooth_Yellow2": [
       "Wood_Village_Wall_Yellow_Full"
     ],
+    "Soil_Dirt": [
+      "Soil_Dirt_Half"
+    ],
+    "Soil_Dirt_Burnt": [
+      "Soil_Dirt_Burnt_Half"
+    ],
+    "Soil_Dirt_Cold": [
+      "Soil_Dirt_Cold_Half"
+    ],
+    "Soil_Dirt_Dry": [
+      "Soil_Dirt_Dry_Half"
+    ],
+    "Soil_Dirt_Lush": [
+      "Soil_Dirt_Lush_Half"
+    ],
+    "Soil_Dirt_Wet": [
+      "Soil_Dirt_Wet_Half"
+    ],
     "Soil_Pathway": [
       "Soil_Pathway_Half",
       "Soil_Pathway_Quarter",
@@ -66600,6 +67794,7 @@
       "Soil_Grass_Sunny",
       "Soil_Grass_Wet",
       "Soil_Leaves",
+      "Soil_Leaves_Full",
       "Soil_Mud",
       "Soil_Mud_Dry",
       "Soil_Needles",
@@ -70382,6 +71577,9 @@
     "Rock_Calcite_Cobble_Beam": [
       "Rock_Calcite_Cobble_Beam"
     ],
+    "Rock_Calcite_Cobble_Half": [
+      "Rock_Calcite_Cobble_Half"
+    ],
     "Rock_Calcite_Cobble_Roof": [
       "Rock_Calcite_Cobble_Roof"
     ],
@@ -71782,6 +72980,30 @@
       "Salvage_Rock_Volcanic_Cobble_Stairs",
       "Salvage_Rock_Volcanic_Cobble_Wall"
     ],
+    "Soil_Aqua_Gravel": [
+      "Soil_Aqua_Gravel"
+    ],
+    "Soil_Aqua_Gravel_Half": [
+      "Soil_Aqua_Gravel_Half"
+    ],
+    "Soil_Basalt_Gravel": [
+      "Soil_Basalt_Gravel"
+    ],
+    "Soil_Basalt_Gravel_Half": [
+      "Soil_Basalt_Gravel_Half"
+    ],
+    "Soil_Calcite_Gravel": [
+      "Soil_Calcite_Gravel"
+    ],
+    "Soil_Calcite_Gravel_Half": [
+      "Soil_Calcite_Gravel_Half"
+    ],
+    "Soil_Chalk_Gravel": [
+      "Soil_Chalk_Gravel"
+    ],
+    "Soil_Chalk_Gravel_Half": [
+      "Soil_Chalk_Gravel_Half"
+    ],
     "Soil_Clay": [
       "Soil_Clay"
     ],
@@ -71899,14 +73121,32 @@
     "Soil_Clay_Smooth_Yellow2": [
       "Soil_Clay_Smooth_Yellow2"
     ],
+    "Soil_Dirt_Burnt_Half": [
+      "Soil_Dirt_Burnt_Half"
+    ],
     "Soil_Dirt_Cold": [
       "Soil_Dirt_Cold"
+    ],
+    "Soil_Dirt_Cold_Half": [
+      "Soil_Dirt_Cold_Half"
     ],
     "Soil_Dirt_Dry": [
       "Soil_Dirt_Dry"
     ],
+    "Soil_Dirt_Dry_Half": [
+      "Soil_Dirt_Dry_Half"
+    ],
+    "Soil_Dirt_Half": [
+      "Soil_Dirt_Half"
+    ],
+    "Soil_Dirt_Lush_Half": [
+      "Soil_Dirt_Lush_Half"
+    ],
     "Soil_Dirt_Poisoned": [
       "Soil_Dirt_Poisoned"
+    ],
+    "Soil_Dirt_Wet_Half": [
+      "Soil_Dirt_Wet_Half"
     ],
     "Soil_Grass": [
       "Soil_Grass"
@@ -71935,6 +73175,36 @@
     "Soil_Gravel": [
       "Soil_Gravel"
     ],
+    "Soil_Gravel_Half": [
+      "Soil_Gravel_Half"
+    ],
+    "Soil_Gravel_Lime": [
+      "Soil_Gravel_Lime"
+    ],
+    "Soil_Gravel_Mossy": [
+      "Soil_Gravel_Mossy"
+    ],
+    "Soil_Gravel_Mossy_Half": [
+      "Soil_Gravel_Mossy_Half"
+    ],
+    "Soil_Gravel_Sand": [
+      "Soil_Gravel_Sand"
+    ],
+    "Soil_Gravel_Sand_Half": [
+      "Soil_Gravel_Sand_Half"
+    ],
+    "Soil_Gravel_Sand_Red": [
+      "Soil_Gravel_Sand_Red"
+    ],
+    "Soil_Gravel_Sand_Red_Half": [
+      "Soil_Gravel_Sand_Red_Half"
+    ],
+    "Soil_Gravel_Sand_White": [
+      "Soil_Gravel_Sand_White"
+    ],
+    "Soil_Gravel_Sand_White_Half": [
+      "Soil_Gravel_Sand_White_Half"
+    ],
     "Soil_Hive_Brick_Smooth_Half": [
       "Soil_Hive_Brick_Smooth_Half"
     ],
@@ -71943,6 +73213,21 @@
     ],
     "Soil_Leaves": [
       "Soil_Leaves"
+    ],
+    "Soil_Leaves_Full": [
+      "Soil_Leaves_Full"
+    ],
+    "Soil_Lime_Gravel_Half": [
+      "Soil_Lime_Gravel_Half"
+    ],
+    "Soil_Magma_Cooled_Gravel": [
+      "Soil_Magma_Cooled_Gravel"
+    ],
+    "Soil_Magma_Cooled_Gravel_Half": [
+      "Soil_Magma_Cooled_Gravel_Half"
+    ],
+    "Soil_Marble_Gravel_Half": [
+      "Soil_Marble_Gravel_Half"
     ],
     "Soil_Mud": [
       "Soil_Mud"
@@ -71971,8 +73256,23 @@
     "Soil_Pebbles_Frozen": [
       "Soil_Pebbles_Frozen"
     ],
+    "Soil_Quartzite_Gravel": [
+      "Soil_Quartzite_Gravel"
+    ],
+    "Soil_Quartzite_Gravel_Half": [
+      "Soil_Quartzite_Gravel_Half"
+    ],
     "Soil_Sand_White_Path_Half": [
       "Soil_Sand_White_Path_Half"
+    ],
+    "Soil_Shale_Gravel_Half": [
+      "Soil_Shale_Gravel_Half"
+    ],
+    "Soil_Slate_Gravel": [
+      "Soil_Slate_Gravel"
+    ],
+    "Soil_Slate_Gravel_Half": [
+      "Soil_Slate_Gravel_Half"
     ],
     "Soil_Snow_Brick": [
       "Soil_Snow_Brick"
@@ -71988,6 +73288,12 @@
     ],
     "Soil_Snow_Brick_Wall": [
       "Soil_Snow_Brick_Wall"
+    ],
+    "Soil_Volcanic_Gravel": [
+      "Soil_Volcanic_Gravel"
+    ],
+    "Soil_Volcanic_Gravel_Half": [
+      "Soil_Volcanic_Gravel_Half"
     ],
     "Survival_Trap_Grass": [
       "Survival_Trap_Grass"

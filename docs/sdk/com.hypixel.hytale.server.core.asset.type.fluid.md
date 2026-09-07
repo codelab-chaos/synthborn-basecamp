@@ -23,7 +23,7 @@ public class com.hypixel.hytale.server.core.asset.type.fluid.DefaultFluidTicker 
 
 ```java
 public class com.hypixel.hytale.server.core.asset.type.fluid.FiniteFluidTicker extends com.hypixel.hytale.server.core.asset.type.fluid.FluidTicker {
-  public static com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.server.core.asset.type.fluid.FiniteFluidTicker> CODEC;
+  public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.server.core.asset.type.fluid.FiniteFluidTicker> CODEC;
   public com.hypixel.hytale.server.core.asset.type.fluid.FiniteFluidTicker();
   protected com.hypixel.hytale.server.core.asset.type.fluid.FluidTicker$AliveStatus isAlive(com.hypixel.hytale.server.core.asset.type.fluid.FluidTicker$Accessor, com.hypixel.hytale.server.core.universe.world.chunk.section.FluidSection, com.hypixel.hytale.server.core.universe.world.chunk.section.BlockSection, com.hypixel.hytale.server.core.asset.type.fluid.Fluid, int, byte, int, int, int);
   protected com.hypixel.hytale.server.core.asset.type.blocktick.BlockTickStrategy spread(com.hypixel.hytale.server.core.universe.world.World, long, com.hypixel.hytale.server.core.asset.type.fluid.FluidTicker$Accessor, com.hypixel.hytale.server.core.universe.world.chunk.section.FluidSection, com.hypixel.hytale.server.core.universe.world.chunk.section.BlockSection, com.hypixel.hytale.server.core.asset.type.fluid.Fluid, int, byte, int, int, int);
