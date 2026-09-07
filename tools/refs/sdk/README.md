@@ -61,7 +61,7 @@ The extractor reads the jar version pinned in sibling mod repos (via
 
 | Step | Output |
 |------|--------|
-| Jar resolved | `JAR: .../Server-0.5.4.jar` and `Version: 0.5.4` |
+| Jar resolved | `JAR: .../Server-<version>.jar` and `Version: <version>` |
 | Full mode | `Mode: --full (auto-discovered ~915 packages)` |
 | Done | `Wrote 915 package file(s)`, `llms.txt`, `methods.json` / `methods.txt` |
 | App data | `apps/sdk-explorer/data/sdk-reference.json` updated for the static SDK Explorer |
@@ -99,7 +99,7 @@ node tools/refs/sdk/build-sdk-app-data.js
 
 ```bash
 # explicit jar (bypasses Gradle cache lookup)
-HYTALE_SERVER_JAR=/path/to/Server-0.5.4.jar node tools/refs/sdk/extract-sdk-reference.js --full
+HYTALE_SERVER_JAR=/path/to/Server-<version>.jar node tools/refs/sdk/extract-sdk-reference.js --full
 
 # diff against another git ref or directory
 node tools/refs/sdk/diff-sdk-reference.js --against main
@@ -112,7 +112,7 @@ node tools/refs/sdk/diff-sdk-reference.js --against /path/to/old-sdk-reference
   in `./gradlew compileJava` after a version bump. Re-extracting does not surface them.
 - **Curated vs full:** the default (no `--full`) writes far fewer packages. If you commit SDK
   docs, always use `--full` so counts stay near 915.
-- **Version drift:** if extraction reports `0.5.3` while mods pin `0.5.4`, run
+- **Version drift:** if extraction reports an older version than the mods pin, run
   `./gradlew compileJava` in a mod repo first to populate the cache.
 
 ## Scripts

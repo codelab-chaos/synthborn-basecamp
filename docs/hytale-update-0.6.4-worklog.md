@@ -133,7 +133,8 @@ This is the first Basecamp pass since 0.5.7, so it covers Update 6 (0.6.1) and h
 ## Sibling Mod Impact (not applied in this pass)
 
 - All three manifests declare `ServerVersion >= 0.5.0 <0.6.0`, which excludes 0.6.x. The
-  jars will not load until the range is widened.
+  jars will not load until the range changes. Decision: switch to a minimum-only range
+  (`>=0.6.0`) so future releases do not require moving a cap.
 - Gradle pins: Kyn and Overseer 0.5.7, Terrascape 0.5.9. All three must move to 0.6.4
   and rebuild; the protocol change alone requires a rebuild.
 - The chunk accessor, packet API, and prefab utility changes above are the likely

@@ -130,8 +130,16 @@ import com.hypixel.hytale.math.vector.Vector3d;
 import com.hypixel.hytale.math.vector.Vector3f;
 
 long chunkIndex = ChunkUtil.indexChunkFromBlock(x, z);
-boolean loaded  = world.getChunkIfLoaded(chunkIndex) != null;
+boolean loaded  = world.getChunkIfLoaded(chunkIndex) != null;  // deprecated since 0.6.x, still compiles
 ```
+
+> **0.6.x deprecation.** Update 6 deprecated `World#getChunkIfLoaded`, `getChunkIfInMemory`,
+> `getChunkIfNonTicking`, `getChunkAsync`, and `getNonTickingChunkAsync`. The stated replacement
+> is to resolve the chunk ref, `world.getChunkStore().getChunkReference(chunkIndex)`, and read
+> chunk data as components from that ref. `BlockAccessor` was removed outright (use `WorldChunk`),
+> and `WorldChunk.setBlock` should move to `BlockOperations.setBlock`. The ref-based check is not
+> yet verified in a Synthborn build; see `docs/patch-notes/hytale-update-6-patch-notes.md`,
+> section "For Plugin Developers".
 
 ## Messaging
 

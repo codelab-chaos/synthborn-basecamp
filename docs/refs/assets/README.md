@@ -90,29 +90,30 @@ The block dump includes the numeric runtime block id from `BlockType.getAssetMap
 
 | Folder | JSON files | Notes |
 | --- | ---: | --- |
-| `Audio` | 1761 | Sound/event definitions. |
+| `Audio` | 1803 | Sound/event definitions. |
 | `BarterShops` | 2 | Barter shop definitions. |
 | `BlockTypeList` | 13 | Curated block-type lists such as `Ores`, `Rock`, `Soils`, and `TreeWood`. |
 | `Camera` | 110 | Camera behavior/config assets. |
-| `Drops` | 676 | Drop tables. Useful when validating player-like resource gathering. |
-| `Entity` | 269 | Entity definitions. |
+| `Drops` | 678 | Drop tables. Useful when validating player-like resource gathering. |
+| `EncounterManager` | 27 | Server data folder. |
+| `Entity` | 282 | Entity definitions. |
 | `Environments` | 122 | Environment configs. |
 | `Farming` | 5 | Farming-specific configs. |
 | `GameplayConfigs` | 5 | General gameplay configs. |
-| `HytaleGenerator` | 219 | World generation configs. |
-| `Instances` | 239 | Instance definitions. |
-| `Item` | 6893 | Item definitions; placeable blocks are generally nested under an item's `BlockType`. |
+| `HytaleGenerator` | 235 | World generation configs. |
+| `Instances` | 242 | Instance definitions. |
+| `Item` | 6948 | Item definitions; placeable blocks are generally nested under an item's `BlockType`. |
 | `Languages` | 0 | Server language files are not JSON in this dump. |
-| `MacroCommands` | 11 | Macro command assets. |
-| `Models` | 436 | Server model references/config. |
-| `NPC` | 1537 | NPC roles, attitudes, spawn, balancing, and decision data. |
+| `MacroCommands` | 14 | Macro command assets. |
+| `Models` | 438 | Server model references/config. |
+| `NPC` | 1568 | NPC roles, attitudes, spawn, balancing, and decision data. |
 | `Objective` | 19 | Objective definitions. |
 | `Particles` | 2 | Particle JSON plus many particle asset files. |
 | `PortalTypes` | 5 | Portal type definitions. |
 | `PrefabEditorCreationSettings` | 1 | Prefab editor settings. |
 | `PrefabList` | 77 | Prefab list assets. |
-| `Prefabs` | 7826 | World/prefab definitions. |
-| `ProjectileConfigs` | 112 | Projectile config assets. |
+| `Prefabs` | 7829 | World/prefab definitions. |
+| `ProjectileConfigs` | 116 | Projectile config assets. |
 | `Projectiles` | 87 | Projectile definitions. |
 | `ResponseCurves` | 12 | Response curve configs. |
 | `ScriptedBrushes` | 39 | Scripted brush assets. |
@@ -121,6 +122,7 @@ The block dump includes the numeric runtime block id from `BlockType.getAssetMap
 | `Weathers` | 87 | Weather definitions. |
 | `WordLists` | 1 | Word list data. |
 | `World` | 12133 | Biomes, worldgen, structures, and related world data. |
+| `WorldEvent` | 1 | Server data folder. |
 
 ## High-Value Paths
 

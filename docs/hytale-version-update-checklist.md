@@ -154,6 +154,7 @@ The routing convention is deliberately small:
 | Item/resource JSON or `Common/Icons/**` | Recipe Kiosk item-icon atlas |
 | Prefab JSON or item JSON (which supplies block colors) | Prefab index, gallery packs, and preview atlases |
 | Server jar SHA-256/version | Full SDK references and SDK Explorer data |
+| Gameplay JSON with no generated consumer (item interactions, block items, encounters, entities, worldgen, instances, projectiles) | Listed under `REVIEW` in the plan for manual follow-up in the sibling mods |
 | Anything else | Recorded in the TOC and reported, but no unrelated app is rebuilt |
 
 ## 4. Capture the new assets
@@ -205,11 +206,11 @@ Then bump the **exact** Gradle pin in each deployable mod (`compileOnly`, and
 com.hypixel.hytale:Server:<old>  ->  com.hypixel.hytale:Server:<new>
 ```
 
-Manifest `ServerVersion` ranges usually do **not** need to change for a patch: a range like
-`>=0.5.0 <0.6.0` already covers any `0.5.x`. Only narrow it if compatibility requires it.
-A **minor** bump is different: `0.5.x` to `0.6.x` falls outside `<0.6.0`, so the old jars
-will not load at all until the range is widened (for example `>=0.6.0 <0.7.0`).
-Bumping the Gradle dependency is what gives compile-time API checks against the new jar.
+Manifest `ServerVersion` should state a **minimum only**, for example `>=0.6.0`. Do not cap
+the upper bound: the `>=0.5.0 <0.6.0` ranges used through 0.5.x refused to load on 0.6.1, and
+moving a cap for every release is overhead with no benefit. Raise the minimum only when a mod
+starts depending on an API that older servers lack. Bumping the Gradle dependency is what gives
+compile-time API checks against the new jar.
 
 ## 6. Recompile and redeploy
 
@@ -275,7 +276,7 @@ should not be used as the default version-update smoke.
 ## What must stay in sync
 - Hytale launcher/server install used by each owning repo's deploy script.
 - `com.hypixel.hytale:Server:<version>` in `build.gradle.kts` of overseer, kyn, and terrascape.
-- Each mod's `src/main/resources/manifest.json` `ServerVersion` range (only if compatibility requires).
+- Each mod's `src/main/resources/manifest.json` `ServerVersion` minimum (no upper cap; raise only when a newer API is required).
 - The assets TOC under `docs/refs/assets/toc/` (commit one per release, hotfixes included).
 - Official patch notes under `docs/patch-notes/` and the version index in its README.
 - A worklog per processed release: `docs/hytale-update-<version>-worklog.md`.

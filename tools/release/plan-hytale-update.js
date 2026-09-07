@@ -80,6 +80,51 @@ const IMPACTS = [
   },
 ];
 
+// Gameplay data with no generated Basecamp consumer yet. Changes here are
+// surfaced for manual review in the sibling mods instead of being lumped in
+// with audio, cosmetics, and other cosmetic-only churn.
+const REVIEW_AREAS = [
+  {
+    id: "item-interactions",
+    label: "Item interactions and root interactions",
+    matches: (file) => file.startsWith("Server/Item/Interactions/")
+      || file.startsWith("Server/Item/RootInteractions/"),
+  },
+  {
+    id: "block-items",
+    label: "Block item definitions (Server/Item/Block)",
+    matches: (file) => file.startsWith("Server/Item/Block/"),
+  },
+  {
+    id: "encounters",
+    label: "Encounter manager and trigger volume assets",
+    matches: (file) => file.startsWith("Server/EncounterManager/")
+      || file.startsWith("Server/TriggerVolumes/"),
+  },
+  {
+    id: "entities",
+    label: "Entity definitions",
+    matches: (file) => file.startsWith("Server/Entity/"),
+  },
+  {
+    id: "worldgen",
+    label: "World generation (HytaleGenerator, World)",
+    matches: (file) => file.startsWith("Server/HytaleGenerator/")
+      || file.startsWith("Server/World/"),
+  },
+  {
+    id: "instances",
+    label: "Instances and objectives",
+    matches: (file) => file.startsWith("Server/Instances/")
+      || file.startsWith("Server/Objective/"),
+  },
+  {
+    id: "projectiles",
+    label: "Projectiles and projectile configs",
+    matches: (file) => file.startsWith("Server/Projectile"),
+  },
+];
+
 function parseArgs(argv) {
   const args = {
     game: null,
@@ -266,6 +311,14 @@ function classifyImpact(files) {
   })).filter((impact) => impact.files.length > 0);
 }
 
+function classifyReview(files) {
+  return REVIEW_AREAS.map((area) => ({
+    id: area.id,
+    label: area.label,
+    files: files.filter(area.matches),
+  })).filter((area) => area.files.length > 0);
+}
+
 function commandText(command) {
   const [program, args, cwd] = command;
   const body = [program, ...args].join(" ");
@@ -335,7 +388,10 @@ function buildPlan(args) {
   const changedFiles = [...new Set([...diff.added, ...diff.changed, ...diff.removed])].sort();
   const impacts = classifyImpact(changedFiles);
   const classified = new Set(impacts.flatMap((impact) => impact.files));
-  const unclassified = changedFiles.filter((file) => !classified.has(file));
+  const unrouted = changedFiles.filter((file) => !classified.has(file));
+  const review = classifyReview(unrouted);
+  const reviewed = new Set(review.flatMap((area) => area.files));
+  const unclassified = unrouted.filter((file) => !reviewed.has(file));
   const sdk = inspectSdk(jar, version, args.forceSdk);
   const targetTocPath = toToc?.path || path.join(TOC_ROOT, `assets-toc-${version}.json`);
   let snapshotMatches = Boolean(toToc);
@@ -362,6 +418,7 @@ function buildPlan(args) {
     snapshotMatches,
     assets: { ...diff, totalChanged: changedFiles.length, files: changedFiles },
     impacts,
+    review,
     unclassified,
     sdk,
   };
@@ -382,6 +439,9 @@ function printPlan(plan, showFiles, willApply = false) {
   if (plan.impacts.length === 0) console.log("  none");
   for (const impact of plan.impacts) {
     console.log(`  UPDATE ${impact.label} (${impact.files.length} source file(s))`);
+  }
+  for (const area of plan.review) {
+    console.log(`  REVIEW ${area.label} (${area.files.length} source file(s)) - gameplay data with no generated consumer; check the sibling mods`);
   }
   if (plan.unclassified.length > 0) {
     console.log(`  NOTE   ${plan.unclassified.length} changed asset file(s) do not feed a generated app/reference`);
@@ -465,8 +525,10 @@ if (require.main === module) {
 
 module.exports = {
   IMPACTS,
+  REVIEW_AREAS,
   buildPlan,
   classifyImpact,
+  classifyReview,
   compareVersions,
   diffFiles,
   findPreviousToc,

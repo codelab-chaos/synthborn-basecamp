@@ -80,7 +80,7 @@ Event catalog (🌐 — confirm in decompiled source before depending on exact s
 | Player → ref | `playerRef.getReference()` | ✓ | repo |
 | Load offline player | `Universe.get().getPlayerStorage().load(uuid)` → `CompletableFuture<EntityStore>` | ✓ | repo |
 | Resolve ref from stored UUID | `world.getEntityRef(uuid)` (null if gone) | ✓ | `HyCitizens` |
-| Chunk loaded? | `world.getChunkIfLoaded(ChunkUtil.indexChunkFromBlock(x,z)) != null` | ✓ | `CitizensManager` |
+| Chunk loaded? | `world.getChunkIfLoaded(ChunkUtil.indexChunkFromBlock(x,z)) != null` (deprecated since 0.6.x; replacement is the chunk ref from `world.getChunkStore().getChunkReference(index)`, unverified) | ✓ | `CitizensManager` |
 
 ### ECS (components / entities)
 
@@ -185,7 +185,7 @@ Slot capacities: Hotbar=9, Storage=36, Armor=4, Utility=4, Tools=23, Backpack=va
 
 - `Ref<EntityStore>` — opaque entity handle; **always `isValid()` first**. Methods: `isValid()`, `getStore()`, `getIndex()`, `validate()`.
 - `Store<EntityStore>` — entity container, owns components by type token. From `world.getEntityStore().getStore()`.
-- `World` — world handle. Key methods: `execute(Runnable)`, `getEntityStore()`, `getChunkIfLoaded(long)`, `getEntityRef(uuid)`.
+- `World` — world handle. Key methods: `execute(Runnable)`, `getEntityStore()`, `getChunkStore()`, `getChunkIfLoaded(long)` (deprecated since 0.6.x), `getEntityRef(uuid)`.
 - `PlayerRef` — player handle. Has `sendMessage(Message)` and `getReference()`.
 - `Universe` — singleton root. `Universe.get().getWorld/getPlayer/getPlayerStorage()`.
 - `NPCPlugin` — singleton. `.getIndex(name)`, `.spawnEntity(...)`.
@@ -214,7 +214,7 @@ world.execute(() -> {
     model = withSafeAnimationSetMap(model);  // GOTCHA: rebuild with empty map if AnimationSetMap is null
 
     long chunk = ChunkUtil.indexChunkFromBlock(position.x, position.z);
-    if (world.getChunkIfLoaded(chunk) == null) return;
+    if (world.getChunkIfLoaded(chunk) == null) return;  // deprecated since 0.6.x, still compiles
 
     int roleIndex = NPCPlugin.get().getIndex("Synth_Base");
     if (roleIndex == Integer.MIN_VALUE) return;
@@ -356,7 +356,7 @@ Tutorial starter states: `Idle`, `Sleep`, `Eat`, `Alerted`, `Combat`, `ReturnHom
 | Null `AnimationSetMap` on model | NPE when spawning | Wrap model with `Collections.emptyMap()` as animation-set map if null | `HyCitizens.withSafeAnimationSetMap` |
 | `"Player"` model scale resets to 0 | Invisible/zero-size NPC | After spawn, re-set `PersistentModel` reference with the real scale | `CitizensManager` |
 | Engine overrides scale | Wrong size | Pass `model` explicitly + set scale in the spawn callback | `CitizensManager` |
-| Unloaded chunk | Silent no-spawn | Check `getChunkIfLoaded` before spawn; retry on chunk load | `CitizensManager` |
+| Unloaded chunk | Silent no-spawn | Check `getChunkIfLoaded` (deprecated since 0.6.x) or the chunk ref before spawn; retry on chunk load | `CitizensManager` |
 | Role not registered | `getIndex` → `Integer.MIN_VALUE` | Bundle the role asset first; retry after asset load | repo |
 | Wrong thread | Corruption / crash | Wrap in `world.execute(...)` | [08](./hytale-mod-quickref/08-messaging-and-threading.md) |
 | Stale `Ref` after async hop | NPE or silent miss | Re-check `ref.isValid()` after every async boundary | repo-wide |
