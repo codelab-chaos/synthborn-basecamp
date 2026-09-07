@@ -182,6 +182,7 @@ Regenerate reference data when its upstream input changes:
 | Prefab catalog | `_Assets/Server/Prefabs` changes | `cd tools && npm run prefabs:index` |
 | Prefab module analysis | Reference prefab packs change | `cd tools && npm run prefabs:modules` |
 | Asset snapshots | New local `_Assets` drop | `cd tools && npm run assets:toc` |
+| Official patch notes | Hytale publishes an update or hotfix post | `cd tools && npm run notes:port -- <url>` |
 | Builder command catalog | SynthOverseer builder-command JSON changes | `cd tools && npm run builder:catalog` |
 | Mirrored external docs | External reference docs should be refreshed | `cd tools && npm run docs:sync` |
 | Example mod source cache | Example repo list or sources change | `cd tools && npm run examples:sync` |
@@ -211,6 +212,7 @@ paths, local markdown links, and read-only smoke tests.
 | [`docs/hytale-mod-quickref/`](docs/hytale-mod-quickref/) | Curated server-side Hytale modding guide. |
 | [`docs/llm-hytale-modding-kb.md`](docs/llm-hytale-modding-kb.md) | Compact API and workflow router for agents. |
 | [`docs/hytale-version-update-checklist.md`](docs/hytale-version-update-checklist.md) | Checklist for asset and SDK bumps. |
+| [`docs/patch-notes/README.md`](docs/patch-notes/README.md) | Official Hytale patch notes and hotfix history, indexed by game version. |
 | [`docs/hytale-synthetics.md`](docs/hytale-synthetics.md) | Active synth/NPC architecture track. |
 | [`docs/research-bank/README.md`](docs/research-bank/README.md) | Durable NPC, behavior, AI, and world-layout research. |
 | [`docs/idea-bank/README.md`](docs/idea-bank/README.md) | Archived brainstorms and older strategy notes. |

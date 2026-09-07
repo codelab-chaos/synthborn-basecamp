@@ -16,7 +16,7 @@ public class com.hypixel.hytale.builtin.hytalegenerator.assets.biomes.BiomeAsset
   public static com.hypixel.hytale.assetstore.AssetStore<java.lang.String, com.hypixel.hytale.builtin.hytalegenerator.assets.biomes.BiomeAsset, com.hypixel.hytale.assetstore.map.DefaultAssetMap<java.lang.String, com.hypixel.hytale.builtin.hytalegenerator.assets.biomes.BiomeAsset>> getAssetStore();
   public void setId(java.lang.String);
   public void cleanUp();
-  public com.hypixel.hytale.builtin.hytalegenerator.biome.Biome build(com.hypixel.hytale.builtin.hytalegenerator.material.MaterialCache, com.hypixel.hytale.builtin.hytalegenerator.rng.SeedBox, com.hypixel.hytale.builtin.hytalegenerator.referencebundle.ReferenceBundle, com.hypixel.hytale.builtin.hytalegenerator.workerindexer.WorkerIndexer$Id);
+  public com.hypixel.hytale.builtin.hytalegenerator.biome.Biome build(com.hypixel.hytale.builtin.hytalegenerator.material.MaterialCache, com.hypixel.hytale.builtin.hytalegenerator.rng.SeedBox, com.hypixel.hytale.builtin.hytalegenerator.referencebundle.ReferenceBundle, com.hypixel.hytale.builtin.hytalegenerator.workerindexer.WorkerIndexer$Id, com.hypixel.hytale.builtin.hytalegenerator.assets.ThreadBridge);
   public java.lang.String getBiomeName();
   public java.lang.String getId();
   public java.lang.Object getId();

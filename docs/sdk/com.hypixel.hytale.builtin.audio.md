@@ -15,5 +15,7 @@ public class com.hypixel.hytale.builtin.audio.AudioPlugin extends com.hypixel.hy
   protected void setup();
   public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.builtin.audio.components.AudioStateComponent> getAudioStateComponentType();
   public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.builtin.audio.components.ForcedMusicTracker> getForcedMusicTrackerComponentType();
+  public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, com.hypixel.hytale.builtin.audio.components.MusicEmitterBlock> getMusicEmitterBlockComponentType();
+  public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, com.hypixel.hytale.builtin.audio.components.MusicPlayerBlock> getMusicPlayerBlockComponentType();
 }
 ```

@@ -44,7 +44,7 @@ public class com.hypixel.hytale.builtin.adventure.objectives.config.ObjectiveAss
 
 ```java
 public class com.hypixel.hytale.builtin.adventure.objectives.config.ObjectiveLineAsset implements com.hypixel.hytale.assetstore.map.JsonAssetWithMap<java.lang.String, com.hypixel.hytale.assetstore.map.DefaultAssetMap<java.lang.String, com.hypixel.hytale.builtin.adventure.objectives.config.ObjectiveLineAsset>> {
-  public static com.hypixel.hytale.assetstore.codec.AssetBuilderCodec<java.lang.String, com.hypixel.hytale.builtin.adventure.objectives.config.ObjectiveLineAsset> CODEC;
+  public static final com.hypixel.hytale.assetstore.codec.AssetBuilderCodec<java.lang.String, com.hypixel.hytale.builtin.adventure.objectives.config.ObjectiveLineAsset> CODEC;
   public static final com.hypixel.hytale.codec.validation.ValidatorCache<java.lang.String> VALIDATOR_CACHE;
   protected com.hypixel.hytale.assetstore.AssetExtraInfo$Data extraData;
   protected java.lang.String id;

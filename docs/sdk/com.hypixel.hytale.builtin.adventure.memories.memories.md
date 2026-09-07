@@ -17,6 +17,7 @@ public abstract class com.hypixel.hytale.builtin.adventure.memories.memories.Mem
   public abstract com.hypixel.hytale.server.core.Message getTooltipText();
   public abstract java.lang.String getIconPath();
   public abstract com.hypixel.hytale.server.core.Message getUndiscoveredTooltipText();
+  public com.hypixel.hytale.server.core.Message getDescription();
   public boolean equals(java.lang.Object);
   public int hashCode();
   public java.lang.String toString();

@@ -119,7 +119,7 @@ public class com.hypixel.hytale.builtin.adventure.objectives.task.ObjectiveTaskR
 ```java
 public class com.hypixel.hytale.builtin.adventure.objectives.task.ReachLocationTask extends com.hypixel.hytale.builtin.adventure.objectives.task.ObjectiveTask {
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.builtin.adventure.objectives.task.ReachLocationTask> CODEC;
-  public static java.lang.String MARKER_ICON;
+  public static final java.lang.String MARKER_ICON;
   public com.hypixel.hytale.builtin.adventure.objectives.task.ReachLocationTask(com.hypixel.hytale.builtin.adventure.objectives.config.task.ObjectiveTaskAsset, int, int);
   protected com.hypixel.hytale.builtin.adventure.objectives.task.ReachLocationTask();
   public boolean checkCompletion();

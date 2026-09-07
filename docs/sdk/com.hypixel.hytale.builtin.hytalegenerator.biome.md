@@ -43,6 +43,7 @@ public interface com.hypixel.hytale.builtin.hytalegenerator.biome.PropsSource {
 
 ```java
 public class com.hypixel.hytale.builtin.hytalegenerator.biome.SimpleBiome implements com.hypixel.hytale.builtin.hytalegenerator.biome.Biome {
+  public static final com.hypixel.hytale.builtin.hytalegenerator.biome.SimpleBiome DEFAULT_INSTANCE;
   public com.hypixel.hytale.builtin.hytalegenerator.biome.SimpleBiome(java.lang.String, com.hypixel.hytale.builtin.hytalegenerator.density.Density, com.hypixel.hytale.builtin.hytalegenerator.materialproviders.MaterialProvider<com.hypixel.hytale.builtin.hytalegenerator.material.Material>, com.hypixel.hytale.builtin.hytalegenerator.environmentproviders.EnvironmentProvider, com.hypixel.hytale.builtin.hytalegenerator.tintproviders.TintProvider);
   public void addPropFieldTo(com.hypixel.hytale.builtin.hytalegenerator.PropRuntime);
   public com.hypixel.hytale.builtin.hytalegenerator.materialproviders.MaterialProvider<com.hypixel.hytale.builtin.hytalegenerator.material.Material> getMaterialProvider();

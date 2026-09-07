@@ -82,6 +82,7 @@ Research routing:
 - Active Synth/NPC architecture: `docs/hytale-synthetics.md`
 - Durable NPC, behavior-tree, and layout research: `docs/research-bank/README.md`
 - Archived brainstorms and older planning: `docs/idea-bank/README.md`
+- Official patch notes and hotfix history by game version: `docs/patch-notes/README.md`
 - Trigger Volume encounter research: `docs/hytale-trigger-volumes-update-5-research.md`
 - EasyWebMap/live-map reference notes: `docs/easywebmap-technical-notes.md`
 - Worldgen V2 research and tooling: `worldgenV2/`

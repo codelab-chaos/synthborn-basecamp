@@ -97,7 +97,13 @@ The markdown keeps source URLs and remote `cdn.hytale.com` image/download links.
 | Path | Source |
 |---|---|
 | [`hytale-making-models-introduction.md`](hytale-making-models-introduction.md) | Official Hytale modeling article |
-| [`hytale-update-5-patch-notes.md`](hytale-update-5-patch-notes.md) | Official Update 5 patch notes |
+| [`patch-notes/hytale-update-5-patch-notes.md`](patch-notes/hytale-update-5-patch-notes.md) | Official Update 5 patch notes |
+| [`patch-notes/hytale-hotfixes-update-5.md`](patch-notes/hytale-hotfixes-update-5.md) | Official Update 5 hotfix roundup (0.5.1 to 0.5.7) |
+| [`patch-notes/hytale-update-6-patch-notes.md`](patch-notes/hytale-update-6-patch-notes.md) | Official Update 6 patch notes |
+| [`patch-notes/hytale-hotfixes-update-6.md`](patch-notes/hytale-hotfixes-update-6.md) | Official Update 6 hotfix roundup (0.6.1 onward) |
+
+Every Hytale release should have its notes here. [`patch-notes/README.md`](patch-notes/README.md)
+maps each game version to its post, and `cd tools && npm run notes:port -- <url>` ports a new one.
 
 ## Apps
 

@@ -36,7 +36,7 @@ public class com.hypixel.hytale.builtin.hytalegenerator.props.deprecated.Cluster
 
 ```java
 public class com.hypixel.hytale.builtin.hytalegenerator.props.deprecated.ColumnProp extends com.hypixel.hytale.builtin.hytalegenerator.props.Prop {
-  public com.hypixel.hytale.builtin.hytalegenerator.props.deprecated.ColumnProp(java.util.List<java.lang.Integer>, java.util.List<com.hypixel.hytale.builtin.hytalegenerator.material.Material>, com.hypixel.hytale.builtin.hytalegenerator.BlockMask, com.hypixel.hytale.builtin.hytalegenerator.scanners.Scanner, com.hypixel.hytale.builtin.hytalegenerator.props.deprecated.directionality.Directionality, com.hypixel.hytale.builtin.hytalegenerator.material.MaterialCache);
+  public com.hypixel.hytale.builtin.hytalegenerator.props.deprecated.ColumnProp(it.unimi.dsi.fastutil.ints.IntList, java.util.List<com.hypixel.hytale.builtin.hytalegenerator.material.Material>, com.hypixel.hytale.builtin.hytalegenerator.BlockMask, com.hypixel.hytale.builtin.hytalegenerator.scanners.Scanner, com.hypixel.hytale.builtin.hytalegenerator.props.deprecated.directionality.Directionality, com.hypixel.hytale.builtin.hytalegenerator.material.MaterialCache);
   public boolean generate(com.hypixel.hytale.builtin.hytalegenerator.props.Prop$Context);
   public com.hypixel.hytale.builtin.hytalegenerator.props.deprecated.directionality.RotatedPositionsScanResult scan_deprecated(org.joml.Vector3i, com.hypixel.hytale.builtin.hytalegenerator.voxelspace.VoxelSpace<com.hypixel.hytale.builtin.hytalegenerator.material.Material>);
   public void place_deprecated(com.hypixel.hytale.builtin.hytalegenerator.props.Prop$Context, com.hypixel.hytale.builtin.hytalegenerator.props.deprecated.directionality.RotatedPositionsScanResult);

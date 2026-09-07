@@ -69,9 +69,9 @@ public class com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfig
 
 ```java
 public class com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfigChunkAccessor extends com.hypixel.hytale.server.core.universe.world.accessor.LocalCachedChunkAccessor {
-  public static com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfigChunkAccessor atWorldCoords(com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfigEditStore, com.hypixel.hytale.server.core.universe.world.accessor.ChunkAccessor<com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk>, int, int, int);
-  public static com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfigChunkAccessor atChunkCoords(com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfigEditStore, com.hypixel.hytale.server.core.universe.world.accessor.ChunkAccessor<com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk>, int, int, int);
-  protected com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfigChunkAccessor(com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfigEditStore, com.hypixel.hytale.server.core.universe.world.accessor.ChunkAccessor<com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk>, int, int, int);
+  public static com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfigChunkAccessor atWorldCoords(com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfigEditStore, com.hypixel.hytale.server.core.universe.world.accessor.ChunkAccessor, int, int, int);
+  public static com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfigChunkAccessor atChunkCoords(com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfigEditStore, com.hypixel.hytale.server.core.universe.world.accessor.ChunkAccessor, int, int, int);
+  protected com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfigChunkAccessor(com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfigEditStore, com.hypixel.hytale.server.core.universe.world.accessor.ChunkAccessor, int, int, int);
   public int getBlock(org.joml.Vector3i);
   public int getBlock(int, int, int);
   public int getBlockIgnoringHistory(org.joml.Vector3i);
@@ -123,9 +123,11 @@ public class com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfig
 
 ```java
 public class com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfigEditStore {
-  public com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfigEditStore(it.unimi.dsi.fastutil.longs.LongOpenHashSet, com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfig, com.hypixel.hytale.server.core.universe.world.World);
+  public com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfigEditStore(it.unimi.dsi.fastutil.longs.LongOpenHashSet, com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfig, com.hypixel.hytale.server.core.universe.world.World, org.joml.Vector3i, org.joml.Vector3i);
   public com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfigChunkAccessor getAccessor();
   public com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfig getBrushConfig();
+  public org.joml.Vector3i getSelectionMin();
+  public org.joml.Vector3i getSelectionMax();
   public int getOriginalBlock(int, int, int);
   public int getBlock(int, int, int);
   public int getBlockIncludingCurrent(int, int, int);
@@ -133,6 +135,7 @@ public class com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfig
   public boolean setFullBlock(int, int, int, int, int, int, int, com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>);
   public int getFluid(int, int, int);
   public boolean setMaterial(int, int, int, com.hypixel.hytale.builtin.buildertools.utils.Material);
+  public boolean setMaterialWithFiller(int, int, int, com.hypixel.hytale.builtin.buildertools.utils.Material);
   public com.hypixel.hytale.builtin.buildertools.BuilderToolsPlugin$BuilderState$BlocksSampleData getBlockSampledataIncludingPreviousStages(int, int, int, int);
   public void flushCurrentEditsToPrevious();
   public com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection getAfter();

@@ -17,7 +17,7 @@ public interface com.hypixel.hytale.builtin.beds.sleep.components.PlayerSleep {
 
 ```java
 public class com.hypixel.hytale.builtin.beds.sleep.components.PlayerSomnolence implements com.hypixel.hytale.component.Component<com.hypixel.hytale.server.core.universe.world.storage.EntityStore> {
-  public static com.hypixel.hytale.builtin.beds.sleep.components.PlayerSomnolence AWAKE;
+  public static final com.hypixel.hytale.builtin.beds.sleep.components.PlayerSomnolence AWAKE;
   public static com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.builtin.beds.sleep.components.PlayerSomnolence> getComponentType();
   public com.hypixel.hytale.builtin.beds.sleep.components.PlayerSomnolence();
   public com.hypixel.hytale.builtin.beds.sleep.components.PlayerSomnolence(com.hypixel.hytale.builtin.beds.sleep.components.PlayerSleep);

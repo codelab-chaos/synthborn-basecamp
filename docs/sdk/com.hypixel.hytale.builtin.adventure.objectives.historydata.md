@@ -32,10 +32,7 @@ public abstract class com.hypixel.hytale.builtin.adventure.objectives.historydat
 ```java
 public final class com.hypixel.hytale.builtin.adventure.objectives.historydata.ItemObjectiveRewardHistoryData extends com.hypixel.hytale.builtin.adventure.objectives.historydata.ObjectiveRewardHistoryData {
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.builtin.adventure.objectives.historydata.ItemObjectiveRewardHistoryData> CODEC;
-  protected java.lang.String itemId;
-  protected int quantity;
   public com.hypixel.hytale.builtin.adventure.objectives.historydata.ItemObjectiveRewardHistoryData(java.lang.String, int);
-  protected com.hypixel.hytale.builtin.adventure.objectives.historydata.ItemObjectiveRewardHistoryData();
   public java.lang.String getItemId();
   public int getQuantity();
   public java.lang.String toString();
@@ -47,11 +44,8 @@ public final class com.hypixel.hytale.builtin.adventure.objectives.historydata.I
 ```java
 public final class com.hypixel.hytale.builtin.adventure.objectives.historydata.ObjectiveHistoryData extends com.hypixel.hytale.builtin.adventure.objectives.historydata.CommonObjectiveHistoryData {
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.builtin.adventure.objectives.historydata.ObjectiveHistoryData> CODEC;
-  protected java.util.Map<java.util.UUID, java.util.List<com.hypixel.hytale.builtin.adventure.objectives.historydata.ObjectiveRewardHistoryData>> rewardsPerPlayer;
-  protected com.hypixel.hytale.builtin.adventure.objectives.historydata.ObjectiveRewardHistoryData[] rewards;
   public com.hypixel.hytale.builtin.adventure.objectives.historydata.ObjectiveHistoryData(java.lang.String, java.lang.String);
   public com.hypixel.hytale.builtin.adventure.objectives.historydata.ObjectiveHistoryData(java.lang.String, java.lang.String, com.hypixel.hytale.builtin.adventure.objectives.historydata.ObjectiveRewardHistoryData[]);
-  protected com.hypixel.hytale.builtin.adventure.objectives.historydata.ObjectiveHistoryData();
   public com.hypixel.hytale.builtin.adventure.objectives.historydata.ObjectiveRewardHistoryData[] getRewards();
   public void addRewardForPlayerUUID(java.util.UUID, com.hypixel.hytale.builtin.adventure.objectives.historydata.ObjectiveRewardHistoryData);
   public com.hypixel.hytale.builtin.adventure.objectives.historydata.ObjectiveHistoryData cloneForPlayer(java.util.UUID);

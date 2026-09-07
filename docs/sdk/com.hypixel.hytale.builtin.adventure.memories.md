@@ -29,11 +29,11 @@ public class com.hypixel.hytale.builtin.adventure.memories.MemoriesGameplayConfi
 ```java
 public class com.hypixel.hytale.builtin.adventure.memories.MemoriesPlugin extends com.hypixel.hytale.server.core.plugin.JavaPlugin {
   public static final java.lang.String MEMORIES_JSON_PATH;
+  public static final java.lang.String RECORDED_MEMORIES_ID;
   public static com.hypixel.hytale.builtin.adventure.memories.MemoriesPlugin get();
   public com.hypixel.hytale.builtin.adventure.memories.MemoriesPlugin(com.hypixel.hytale.server.core.plugin.JavaPluginInit);
   protected void setup();
   protected void start();
-  protected void shutdown();
   public com.hypixel.hytale.builtin.adventure.memories.MemoriesPlugin$MemoriesPluginConfig getConfig();
   public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.builtin.adventure.memories.component.PlayerMemories> getPlayerMemoriesComponentType();
   public <T extends com.hypixel.hytale.builtin.adventure.memories.memories.Memory> void registerMemoryProvider(com.hypixel.hytale.builtin.adventure.memories.memories.MemoryProvider<T>);

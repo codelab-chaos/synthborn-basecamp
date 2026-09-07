@@ -6,11 +6,16 @@ Use this when moving the workspace to a new Hytale server/client release or hotf
 The core routine is:
 
 1. Shut everything down cleanly before patching.
-2. Patch Hytale through the launcher.
+2. Patch Hytale through the launcher and port the official patch notes.
 3. Run the fast impact plan before starting any extractors.
 4. Capture/sync assets and regenerate only the affected Basecamp references/apps.
 5. Recompile and redeploy fresh jars against the new server API.
 6. Smoke-test against the patched server.
+7. Write the release worklog.
+
+Do this for every patch the launcher applies, including hotfixes you do not otherwise act on.
+The patch overwrites `Assets.zip`, so a skipped release loses its asset baseline and its
+change trail. Steps 2 through 4 take about a minute when nothing relevant changed.
 
 Do not treat "the old jars still load" as the full compatibility check. Loading proves only
 manifest/runtime tolerance; **compiling** proves source compatibility, and **smoke testing**
@@ -86,6 +91,20 @@ grep -i "applying game update" "<install>/../hytale-launcher.log" | tail -1
 
 `<install>` = `~/Library/Application Support/Hytale/install/release/package` on macbookpro,
 `%APPDATA%/Hytale/install/release/package` on windowsMSI.
+
+3. Port the official notes so Basecamp keeps release notes for every game version. Hytale
+   publishes one patch-notes post per Update and one rolling hotfix post per Update that
+   gains a section for each `0.x.y` hotfix, so re-port the hotfix post after each hotfix:
+
+```bash
+cd synthborn-basecamp/tools
+npm run notes:port -- https://hytale.com/news/<year>/<month>/update-<n>-patch-notes
+npm run notes:port -- https://hytale.com/news/<year>/<month>/hotfixes-update-<n>
+```
+
+Then add the new version row(s) to `docs/patch-notes/README.md`. Read the "Before You Play"
+and modder-facing sections before touching the mods; protocol bumps and asset schema changes
+are announced there first.
 
 ## 3. Plan the update first
 
@@ -188,6 +207,8 @@ com.hypixel.hytale:Server:<old>  ->  com.hypixel.hytale:Server:<new>
 
 Manifest `ServerVersion` ranges usually do **not** need to change for a patch: a range like
 `>=0.5.0 <0.6.0` already covers any `0.5.x`. Only narrow it if compatibility requires it.
+A **minor** bump is different: `0.5.x` to `0.6.x` falls outside `<0.6.0`, so the old jars
+will not load at all until the range is widened (for example `>=0.6.0 <0.7.0`).
 Bumping the Gradle dependency is what gives compile-time API checks against the new jar.
 
 ## 6. Recompile and redeploy
@@ -255,5 +276,6 @@ should not be used as the default version-update smoke.
 - Hytale launcher/server install used by each owning repo's deploy script.
 - `com.hypixel.hytale:Server:<version>` in `build.gradle.kts` of overseer, kyn, and terrascape.
 - Each mod's `src/main/resources/manifest.json` `ServerVersion` range (only if compatibility requires).
-- The assets TOC under `docs/refs/assets/toc/` (commit one per release).
-- Saved patch/release notes in `docs/`.
+- The assets TOC under `docs/refs/assets/toc/` (commit one per release, hotfixes included).
+- Official patch notes under `docs/patch-notes/` and the version index in its README.
+- A worklog per processed release: `docs/hytale-update-<version>-worklog.md`.

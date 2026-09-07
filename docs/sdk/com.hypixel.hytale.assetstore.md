@@ -21,7 +21,7 @@ public class com.hypixel.hytale.assetstore.AssetConstants {
 ## AssetExtraInfo
 
 ```java
-public class com.hypixel.hytale.assetstore.AssetExtraInfo<K> extends com.hypixel.hytale.codec.ExtraInfo {
+public class com.hypixel.hytale.assetstore.AssetExtraInfo<K> extends com.hypixel.hytale.codec.CollectingExtraInfo {
   public com.hypixel.hytale.assetstore.AssetExtraInfo(com.hypixel.hytale.assetstore.AssetExtraInfo$Data);
   public com.hypixel.hytale.assetstore.AssetExtraInfo(java.nio.file.Path, com.hypixel.hytale.assetstore.AssetExtraInfo$Data);
   public java.lang.String generateKey();
@@ -47,6 +47,7 @@ public interface com.hypixel.hytale.assetstore.AssetHolder<K> {
 ```java
 public class com.hypixel.hytale.assetstore.AssetKeyValidator<K> implements com.hypixel.hytale.codec.validation.Validator<K> {
   public com.hypixel.hytale.assetstore.AssetKeyValidator(java.util.function.Supplier<com.hypixel.hytale.assetstore.AssetStore<K, ?, ?>>);
+  public com.hypixel.hytale.assetstore.AssetKeyValidator(java.util.function.Supplier<com.hypixel.hytale.assetstore.AssetStore<K, ?, ?>>, boolean);
   public com.hypixel.hytale.assetstore.AssetStore<K, ?, ?> getStore();
   public void accept(K, com.hypixel.hytale.codec.validation.ValidationResults);
   public void updateSchema(com.hypixel.hytale.codec.schema.SchemaContext, com.hypixel.hytale.codec.schema.config.Schema);
@@ -105,6 +106,10 @@ public class com.hypixel.hytale.assetstore.AssetPack implements com.hypixel.hyta
   public boolean isImmutable();
   public java.nio.file.Path getPackLocation();
   public com.hypixel.hytale.assetstore.AssetPack$PackSource getSource();
+  public boolean contains(java.nio.file.Path);
+  public java.nio.file.Path resolve(java.nio.file.Path);
+  public java.nio.file.Path tryRelativize(java.nio.file.Path);
+  public boolean existsOnDisk();
   public boolean isCoreMod();
   public boolean equals(java.lang.Object);
   public int hashCode();
@@ -192,6 +197,7 @@ public abstract class com.hypixel.hytale.assetstore.AssetStore<K, T extends com.
   public K decodeStringKey(java.lang.String);
   public K transformKey(java.lang.Object);
   public void validate(K, com.hypixel.hytale.codec.validation.ValidationResults, com.hypixel.hytale.codec.ExtraInfo);
+  public void validate(K, com.hypixel.hytale.codec.validation.ValidationResults, com.hypixel.hytale.codec.ExtraInfo, boolean);
   public void validateCodecDefaults();
   public void logDependencies();
   public com.hypixel.hytale.assetstore.AssetLoadResult<K, T> loadAssetsFromDirectory(java.lang.String, java.nio.file.Path) throws java.io.IOException;
@@ -212,8 +218,9 @@ public abstract class com.hypixel.hytale.assetstore.AssetStore<K, T extends com.
   public java.util.Set<K> removeAssets(java.util.Collection<K>);
   public java.util.Set<K> removeAssets(java.lang.String, boolean, java.util.Collection<K>, com.hypixel.hytale.assetstore.AssetUpdateQuery);
   public void removeAssetPack(java.lang.String);
-  public com.hypixel.hytale.assetstore.AssetLoadResult<K, T> writeAssetToDisk(com.hypixel.hytale.assetstore.AssetPack, java.util.Map<java.nio.file.Path, T>) throws java.io.IOException;
+  public com.hypixel.hytale.assetstore.AssetLoadResult<K, T> writeAssetToDisk(com.hypixel.hytale.assetstore.AssetPack, java.util.Map<java.nio.file.Path, T>, boolean) throws java.io.IOException;
   public com.hypixel.hytale.assetstore.AssetLoadResult<K, T> writeAssetToDisk(com.hypixel.hytale.assetstore.AssetPack, java.util.Map<java.nio.file.Path, T>, com.hypixel.hytale.assetstore.AssetUpdateQuery) throws java.io.IOException;
+  public com.hypixel.hytale.assetstore.AssetLoadResult<K, T> writeAssetToDisk(com.hypixel.hytale.assetstore.AssetPack, java.util.Map<java.nio.file.Path, T>, com.hypixel.hytale.assetstore.AssetUpdateQuery, boolean) throws java.io.IOException;
   public T decode(java.lang.String, K, org.bson.BsonDocument);
   public <CK> void addChildAssetReferences(K, java.lang.Class<? extends com.hypixel.hytale.assetstore.map.JsonAssetWithMap<CK, ?>>, java.util.Set<CK>);
   protected void loadAssets0(java.lang.String, java.util.Map<K, T>, java.util.List<com.hypixel.hytale.assetstore.RawAsset<K>>, java.util.Map<K, java.nio.file.Path>, java.util.Set<K>, java.util.Set<java.nio.file.Path>, com.hypixel.hytale.assetstore.AssetUpdateQuery, boolean, java.util.Map<java.lang.Class<? extends com.hypixel.hytale.assetstore.map.JsonAssetWithMap>, com.hypixel.hytale.assetstore.AssetLoadResult>);

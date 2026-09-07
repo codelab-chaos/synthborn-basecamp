@@ -15,6 +15,7 @@
     "examples:sync": "node refs/example-mods/sync-example-mod-repos.js",
     "labels:extract": "node refs/labels/extract-labels.js",
     "labels:lookup": "node refs/labels/lookup.js",
+    "notes:port": "node refs/patch-notes/port-hytale-post.js",
     "npcs:extract": "node refs/npcs/extract-npcs.js",
     "prefabs:index": "node refs/prefabs/index-hytale-prefabs.js",
     "prefabs:modules": "node refs/prefabs/extract-prefab-modules.js",
