@@ -136,8 +136,9 @@ npm run update:apply
 ```
 
 `update:apply` incrementally syncs `_Assets`, captures the new TOC when needed, and runs
-only affected Basecamp data/app pipelines. Full SDK signature extraction runs only when
-the server jar fingerprint changed. `--force-sdk` is the simple escape hatch after changing
+only affected Basecamp data/app pipelines. SDK refresh runs only when
+the server jar fingerprint changed, then reuses cached signatures for unchanged classes
+and batches disassembly of changed classes. `sdk:extract -- --plan` previews that work. `--force-sdk` is the simple escape hatch after changing
 the extractor itself.
 
 The planner intentionally does not edit sibling Gradle pins, deploy jars, or start servers;

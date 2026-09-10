@@ -3,10 +3,45 @@
 **Source:** <https://hytale.com/news/2026/8/hotfixes-update-6>  
 **Author:** Hytale Team  
 **Published:** August 27, 2026  
-**Local capture:** Mon, 07 Sep 2026 16:35:49 GMT  
+**Local capture:** Thu, 10 Sep 2026 19:39:05 GMT
 **Ported from:** hytale.com article HTML via `tools/refs/patch-notes/port-hytale-post.js`
 
 # UPDATE 6: HOTFIXES
+
+# 0.6.5
+
+**Sep 10, 2026**
+
+#### Stability Fixes
+
+- Fixed a client memory leak that accumulated when joining worlds or switching instances.
+- Fixed a server memory leak where unloaded worlds could stay in memory after their world maps were generated.
+- Fixed a crash when leaving a world with a machinima scene loaded.
+
+#### UI & Quality of Life Fixes
+
+- Social features now recover after connection timeouts at startup, instead of leaving the friends list and invitations unavailable.
+- Fixed the social sidebar failing to appear or open when social features become available partway through a session.
+
+#### Item & Visual Fixes
+
+- Lifting a block no longer triggers its block-breaking effects, such as explosions.
+- Timed visual effects no longer expire while a singleplayer world is paused.
+- Held items now keep their movement animations when their appearance changes.
+
+#### Creative Tool Fixes
+
+- Trigger volumes signalled by NPCs now fire their effects once instead of twice.
+- Trigger volumes configured to target a projectile’s shooter now correctly find the shooter instead of targeting the projectile itself.
+
+#### Server & Security Fixes
+
+- Server bans now apply to asset editor connections. Kicking or banning a player also closes their active editor connections.
+
+#### Modder-Facing Fixes
+
+- Asset validation no longer risks deleting instance asset folders when unloading a validation world.
+- Generated schemas for `Float2ObjectMap` fields now accept scientific-notation keys and correctly reject non-numeric keys.
 
 # 0.6.4
 

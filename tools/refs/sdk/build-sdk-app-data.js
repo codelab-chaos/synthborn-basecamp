@@ -85,9 +85,9 @@ function simpleMembers(members) {
   }));
 }
 
-function buildSdkAppData({ refDir = DEFAULT_REF_DIR, outFile = DEFAULT_OUT } = {}) {
+function buildSdkAppData({ refDir = DEFAULT_REF_DIR, outFile = DEFAULT_OUT, sourceStamp = null } = {}) {
   const loaded = loadReference(refDir);
-  const stamp = readStamp(refDir);
+  const stamp = sourceStamp || readStamp(refDir);
 
   const cards = [];
   for (const meta of loaded.packages) {

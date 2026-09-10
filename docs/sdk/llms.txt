@@ -1,4 +1,4 @@
-# Hytale Server SDK Reference v0.6.4
+# Hytale Server SDK Reference v0.6.5
 
 > Flat index of public SDK types by package. Each entry shows the class declaration (kind, extends, implements) so you can pick which file to read for full method signatures.
 
@@ -6077,8 +6077,9 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `Transaction` — interface Transaction
 
 ## com/hypixel/hytale/server/core/io
-[`com.hypixel.hytale.server.core.io.md`](./com.hypixel.hytale.server.core.io.md) (7)
+[`com.hypixel.hytale.server.core.io.md`](./com.hypixel.hytale.server.core.io.md) (8)
 
+- `ConnectionRegistry` — final class ConnectionRegistry
 - `NetworkSerializable` — interface NetworkSerializable<Packet>
 - `NetworkSerializer` — interface NetworkSerializer<Type, Packet>
 - `NetworkSerializers` — interface NetworkSerializers

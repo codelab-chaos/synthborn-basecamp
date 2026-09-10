@@ -1,7 +1,7 @@
 {
-  "version": "0.6.4",
+  "version": "0.6.5",
   "generatedBy": "tools/refs/sdk/build-sdk-method-index.js",
-  "methodCount": 40972,
+  "methodCount": 40980,
   "uniqueMethods": 13996,
   "entries": [
     {
@@ -40669,10 +40669,24 @@
     },
     {
       "method": "disconnect",
+      "class": "AssetEditorPacketHandler",
+      "package": "com.hypixel.hytale.builtin.asseteditor",
+      "file": "com.hypixel.hytale.builtin.asseteditor.md",
+      "signature": "public void disconnect(com.hypixel.hytale.protocol.FormattedMessage);"
+    },
+    {
+      "method": "disconnect",
       "class": "ChannelConnection",
       "package": "com.hypixel.hytale.protocol.io",
       "file": "com.hypixel.hytale.protocol.io.md",
       "signature": "public abstract void disconnect(com.hypixel.hytale.protocol.FormattedMessage);"
+    },
+    {
+      "method": "disconnect",
+      "class": "ConnectionRegistry",
+      "package": "com.hypixel.hytale.server.core.io",
+      "file": "com.hypixel.hytale.server.core.io.md",
+      "signature": "public int disconnect(java.util.UUID, com.hypixel.hytale.server.core.Message);"
     },
     {
       "method": "disconnect",
@@ -62537,6 +62551,13 @@
     },
     {
       "method": "get",
+      "class": "ConnectionRegistry",
+      "package": "com.hypixel.hytale.server.core.io",
+      "file": "com.hypixel.hytale.server.core.io.md",
+      "signature": "public static com.hypixel.hytale.server.core.io.ConnectionRegistry get();"
+    },
+    {
+      "method": "get",
       "class": "ConsoleModule",
       "package": "com.hypixel.hytale.server.core.console",
       "file": "com.hypixel.hytale.server.core.console.md",
@@ -65180,6 +65201,34 @@
       "package": "com.hypixel.hytale.builtin.buildertools",
       "file": "com.hypixel.hytale.builtin.buildertools.md",
       "signature": "public com.hypixel.hytale.server.core.universe.world.accessor.OverridableChunkAccessor getAccessor();"
+    },
+    {
+      "method": "getAccountUuid",
+      "class": "AssetEditorPacketHandler",
+      "package": "com.hypixel.hytale.builtin.asseteditor",
+      "file": "com.hypixel.hytale.builtin.asseteditor.md",
+      "signature": "protected java.util.UUID getAccountUuid();"
+    },
+    {
+      "method": "getAccountUuid",
+      "class": "GamePacketHandler",
+      "package": "com.hypixel.hytale.server.core.io.handlers.game",
+      "file": "com.hypixel.hytale.server.core.io.handlers.game.md",
+      "signature": "protected java.util.UUID getAccountUuid();"
+    },
+    {
+      "method": "getAccountUuid",
+      "class": "PacketHandler",
+      "package": "com.hypixel.hytale.server.core.io",
+      "file": "com.hypixel.hytale.server.core.io.md",
+      "signature": "protected java.util.UUID getAccountUuid();"
+    },
+    {
+      "method": "getAccountUuid",
+      "class": "SetupPacketHandler",
+      "package": "com.hypixel.hytale.server.core.io.handlers",
+      "file": "com.hypixel.hytale.server.core.io.handlers.md",
+      "signature": "protected java.util.UUID getAccountUuid();"
     },
     {
       "method": "getAccumulationMode",
@@ -90061,6 +90110,13 @@
     },
     {
       "method": "getDisconnectReason",
+      "class": "AccessControlModule",
+      "package": "com.hypixel.hytale.server.core.modules.accesscontrol",
+      "file": "com.hypixel.hytale.server.core.modules.accesscontrol.md",
+      "signature": "public java.util.concurrent.CompletableFuture<java.util.Optional<com.hypixel.hytale.server.core.Message>> getDisconnectReason(java.util.UUID);"
+    },
+    {
+      "method": "getDisconnectReason",
       "class": "AccessProvider",
       "package": "com.hypixel.hytale.server.core.modules.accesscontrol.provider",
       "file": "com.hypixel.hytale.server.core.modules.accesscontrol.provider.md",
@@ -105062,20 +105118,6 @@
     },
     {
       "method": "getId",
-      "class": "BiomeFrontierAsset",
-      "package": "com.hypixel.hytale.builtin.hytalegenerator.assets.interpolationasset",
-      "file": "com.hypixel.hytale.builtin.hytalegenerator.assets.interpolationasset.md",
-      "signature": "public java.lang.String getId();"
-    },
-    {
-      "method": "getId",
-      "class": "BiomeFrontierAsset",
-      "package": "com.hypixel.hytale.builtin.hytalegenerator.assets.interpolationasset",
-      "file": "com.hypixel.hytale.builtin.hytalegenerator.assets.interpolationasset.md",
-      "signature": "public java.lang.Object getId();"
-    },
-    {
-      "method": "getId",
       "class": "BiomeRangeAsset",
       "package": "com.hypixel.hytale.builtin.hytalegenerator.assets.worldstructures.basic",
       "file": "com.hypixel.hytale.builtin.hytalegenerator.assets.worldstructures.basic.md",
@@ -110491,13 +110533,6 @@
       "package": "com.hypixel.hytale.procedurallib.logic",
       "file": "com.hypixel.hytale.procedurallib.logic.md",
       "signature": "public com.hypixel.hytale.procedurallib.logic.GeneralNoise$InterpolationFunction getInterpolationFunction();"
-    },
-    {
-      "method": "getInterpolationRadius",
-      "class": "BiomeFrontierAsset",
-      "package": "com.hypixel.hytale.builtin.hytalegenerator.assets.interpolationasset",
-      "file": "com.hypixel.hytale.builtin.hytalegenerator.assets.interpolationasset.md",
-      "signature": "public int getInterpolationRadius();"
     },
     {
       "method": "getInterpolator",
@@ -167785,6 +167820,13 @@
       "class": "AssetEditorPacketHandler",
       "package": "com.hypixel.hytale.builtin.asseteditor",
       "file": "com.hypixel.hytale.builtin.asseteditor.md",
+      "signature": "public void handle(com.hypixel.hytale.protocol.ToServerPacket);"
+    },
+    {
+      "method": "handle",
+      "class": "AssetEditorPacketHandler",
+      "package": "com.hypixel.hytale.builtin.asseteditor",
+      "file": "com.hypixel.hytale.builtin.asseteditor.md",
       "signature": "public void handle(com.hypixel.hytale.protocol.packets.asseteditor.AssetEditorSubscribeModifiedAssetsChanges);"
     },
     {
@@ -220552,6 +220594,13 @@
       "package": "com.hypixel.hytale.server.core.modules.voice",
       "file": "com.hypixel.hytale.server.core.modules.voice.md",
       "signature": "public void registered(com.hypixel.hytale.protocol.io.ConnectionHandler);"
+    },
+    {
+      "method": "registered0",
+      "class": "AssetEditorPacketHandler",
+      "package": "com.hypixel.hytale.builtin.asseteditor",
+      "file": "com.hypixel.hytale.builtin.asseteditor.md",
+      "signature": "protected void registered0(com.hypixel.hytale.protocol.io.ConnectionHandler);"
     },
     {
       "method": "registered0",
@@ -276503,6 +276552,13 @@
       "package": "com.hypixel.hytale.server.core.modules.voice",
       "file": "com.hypixel.hytale.server.core.modules.voice.md",
       "signature": "public void unregistered(com.hypixel.hytale.protocol.io.ConnectionHandler);"
+    },
+    {
+      "method": "unregistered0",
+      "class": "AssetEditorPacketHandler",
+      "package": "com.hypixel.hytale.builtin.asseteditor",
+      "file": "com.hypixel.hytale.builtin.asseteditor.md",
+      "signature": "protected void unregistered0(com.hypixel.hytale.protocol.io.ConnectionHandler);"
     },
     {
       "method": "unregistered0",

@@ -35,6 +35,9 @@ Search before reading:
 - Example mod repos: `cd tools && npm run examples:list`
 - External docs mirrors: `cd tools && npm run docs:list`
 - Basecamp health: `cd tools && npm run verify`
+- SDK update preflight: `cd tools && npm run update:plan` (includes class reuse counts)
+- SDK-only preflight: `cd tools && npm run sdk:extract -- --full --jar <installed-jar> --json`
+- SDK research workflow and evidence limits: `docs/sdk-research-workflow.md`
 
 Published app visibility:
 

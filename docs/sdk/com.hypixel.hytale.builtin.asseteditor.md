@@ -26,6 +26,11 @@ public class com.hypixel.hytale.builtin.asseteditor.AssetEditorPacketHandler ext
   public com.hypixel.hytale.builtin.asseteditor.AssetEditorPacketHandler(com.hypixel.hytale.protocol.io.ChannelConnection, com.hypixel.hytale.server.core.io.ProtocolVersion, java.lang.String, java.util.UUID, java.lang.String, byte[], com.hypixel.hytale.protocol.HostAddress);
   public com.hypixel.hytale.builtin.asseteditor.EditorClient getEditorClient();
   public java.lang.String getIdentifier();
+  protected java.util.UUID getAccountUuid();
+  protected void registered0(com.hypixel.hytale.protocol.io.ConnectionHandler);
+  public void handle(com.hypixel.hytale.protocol.ToServerPacket);
+  public void disconnect(com.hypixel.hytale.protocol.FormattedMessage);
+  protected void unregistered0(com.hypixel.hytale.protocol.io.ConnectionHandler);
   public void closed(com.hypixel.hytale.protocol.NetworkChannel);
   public void registerHandlers();
   public void handle(com.hypixel.hytale.protocol.packets.asseteditor.AssetEditorSubscribeModifiedAssetsChanges);

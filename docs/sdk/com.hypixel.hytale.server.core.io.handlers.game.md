@@ -15,6 +15,7 @@ public class com.hypixel.hytale.server.core.io.handlers.game.GamePacketHandler e
   public com.hypixel.hytale.server.core.universe.PlayerRef getPlayerRef();
   public void setPlayerRef(com.hypixel.hytale.server.core.universe.PlayerRef);
   public java.lang.String getIdentifier();
+  protected java.util.UUID getAccountUuid();
   protected void registered0(com.hypixel.hytale.protocol.io.ConnectionHandler);
   public void sendCommandTree();
   protected void registerHandlers();

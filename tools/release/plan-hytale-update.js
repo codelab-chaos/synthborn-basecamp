@@ -21,6 +21,7 @@ const {
 } = require("../refs/assets/build-assets-toc.js");
 
 const TOC_ROOT = path.join(BASECAMP_ROOT, "docs", "refs", "assets", "toc");
+const { inspectClasses } = require("../refs/sdk/extract-sdk-reference");
 const SDK_STAMP = path.join(BASECAMP_ROOT, "docs", "sdk", ".sdk-source.json");
 
 const IMPACTS = [
@@ -290,7 +291,15 @@ function inspectSdk(jar, version, force) {
     }
   }
 
+  let classPlan = null;
+  if (changed) {
+    const scan = inspectClasses(jar, path.dirname(SDK_STAMP), true, force);
+    classPlan = { cached: !!scan.cache, added: scan.added.length, changed: scan.changed.length,
+      removed: scan.removed.length, reused: scan.reused.length,
+      inspect: scan.added.length + scan.changed.length };
+  }
   return {
+    classPlan,
     changed,
     reason,
     jar,
@@ -433,6 +442,10 @@ function printPlan(plan, showFiles, willApply = false) {
     + ` ${assets.removed.length} removed, ${assets.unchanged.toLocaleString()} unchanged`);
   console.log(`  TOC:    ${plan.snapshotMatches ? "ready" : "capture"} - ${path.relative(BASECAMP_ROOT, plan.paths.toToc)}`);
   console.log(`  SDK:    ${sdk.changed ? "EXTRACT" : "skip"} - ${sdk.reason}`);
+  if (sdk.classPlan) {
+    const c = sdk.classPlan;
+    console.log(`  Classes: ${c.added} new/uncached, ${c.changed} bytecode changes, ${c.removed} removed, ${c.reused} reused; ${c.inspect} to inspect`);
+  }
 
   console.log("");
   console.log("Affected Basecamp areas");

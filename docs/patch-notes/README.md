@@ -21,6 +21,7 @@ needs `pandoc` on PATH; see
 
 | Version | Released | Notes | Basecamp trail |
 |---|---|---|---|
+| 0.6.5 | Sep 10, 2026 | [Hotfixes: Update 6](hytale-hotfixes-update-6.md#065) | [`assets-toc-0.6.5.json`](../refs/assets/toc/assets-toc-0.6.5.json), [worklog](../hytale-update-0.6.5-worklog.md) |
 | 0.6.4 | Sep 7, 2026 | [Hotfixes: Update 6](hytale-hotfixes-update-6.md#064) | [`assets-toc-0.6.4.json`](../refs/assets/toc/assets-toc-0.6.4.json), [worklog](../hytale-update-0.6.4-worklog.md) |
 | 0.6.3 | Aug 31, 2026 | [Hotfixes: Update 6](hytale-hotfixes-update-6.md#063) | not processed |
 | 0.6.2 | Aug 27, 2026 | [Hotfixes: Update 6](hytale-hotfixes-update-6.md#062) | not processed |

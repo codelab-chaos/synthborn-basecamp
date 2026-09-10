@@ -1,4 +1,4 @@
-# Hytale Server SDK method index v0.6.4
+# Hytale Server SDK method index v0.6.5
 
 Grep-friendly: `grep placeBlock methods.txt` then open the listed .md file for context.
 Regenerate: `node tools/refs/sdk/build-sdk-method-index.js` (or full extract — see tools/refs/sdk/README.md)
@@ -5812,7 +5812,9 @@ disableTriggerBlocks	CollisionResult	com.hypixel.hytale.server.core.modules.coll
 disallowAllJoins	AccessControlModule	com.hypixel.hytale.server.core.modules.accesscontrol	com.hypixel.hytale.server.core.modules.accesscontrol.md
 disallowJoin	AccessControlModule	com.hypixel.hytale.server.core.modules.accesscontrol	com.hypixel.hytale.server.core.modules.accesscontrol.md
 disallowParameterProviders	FeatureEvaluatorHelper	com.hypixel.hytale.server.npc.asset.builder	com.hypixel.hytale.server.npc.asset.builder.md
+disconnect	AssetEditorPacketHandler	com.hypixel.hytale.builtin.asseteditor	com.hypixel.hytale.builtin.asseteditor.md
 disconnect	ChannelConnection	com.hypixel.hytale.protocol.io	com.hypixel.hytale.protocol.io.md
+disconnect	ConnectionRegistry	com.hypixel.hytale.server.core.io	com.hypixel.hytale.server.core.io.md
 disconnect	GamePacketHandler	com.hypixel.hytale.server.core.io.handlers.game	com.hypixel.hytale.server.core.io.handlers.game.md
 disconnect	InitialPacketHandler	com.hypixel.hytale.server.core.io.handlers	com.hypixel.hytale.server.core.io.handlers.md
 disconnect	PacketHandler	com.hypixel.hytale.server.core.io	com.hypixel.hytale.server.core.io.md
@@ -8936,6 +8938,7 @@ get	ConditionMap	com.hypixel.hytale.builtin.adventure.worldevents.condition.mana
 get	ConditionMap	com.hypixel.hytale.builtin.adventure.worldevents.condition.manager	com.hypixel.hytale.builtin.adventure.worldevents.condition.manager.md
 get	Config	com.hypixel.hytale.server.core.util	com.hypixel.hytale.server.core.util.md
 get	ConnectedBlocksModule	com.hypixel.hytale.server.core.universe.world.connectedblocks	com.hypixel.hytale.server.core.universe.world.connectedblocks.md
+get	ConnectionRegistry	com.hypixel.hytale.server.core.io	com.hypixel.hytale.server.core.io.md
 get	ConsoleModule	com.hypixel.hytale.server.core.console	com.hypixel.hytale.server.core.console.md
 get	ConstantContentSupplier	com.hypixel.hytale.builtin.hytalegenerator.graph.contentsuppliers	com.hypixel.hytale.builtin.hytalegenerator.graph.contentsuppliers.md
 get	ConstantDoubleCoordinateHashSupplier	com.hypixel.hytale.procedurallib.supplier	com.hypixel.hytale.procedurallib.supplier.md
@@ -9314,6 +9317,10 @@ getAccess	SingleplayerModule	com.hypixel.hytale.server.core.modules.singleplayer
 getAccess	SingleplayerRequestAccessEvent	com.hypixel.hytale.server.core.modules.singleplayer	com.hypixel.hytale.server.core.modules.singleplayer.md
 getAccessor	BrushConfigEditStore	com.hypixel.hytale.builtin.buildertools.scriptedbrushes	com.hypixel.hytale.builtin.buildertools.scriptedbrushes.md
 getAccessor	EditOperation	com.hypixel.hytale.builtin.buildertools	com.hypixel.hytale.builtin.buildertools.md
+getAccountUuid	AssetEditorPacketHandler	com.hypixel.hytale.builtin.asseteditor	com.hypixel.hytale.builtin.asseteditor.md
+getAccountUuid	GamePacketHandler	com.hypixel.hytale.server.core.io.handlers.game	com.hypixel.hytale.server.core.io.handlers.game.md
+getAccountUuid	PacketHandler	com.hypixel.hytale.server.core.io	com.hypixel.hytale.server.core.io.md
+getAccountUuid	SetupPacketHandler	com.hypixel.hytale.server.core.io.handlers	com.hypixel.hytale.server.core.io.handlers.md
 getAccumulationMode	CameraShakeEffect	com.hypixel.hytale.builtin.adventure.camera.asset.cameraeffect	com.hypixel.hytale.builtin.adventure.camera.asset.cameraeffect.md
 getAccumulationMode	ShakeIntensity	com.hypixel.hytale.builtin.adventure.camera.asset.cameraeffect	com.hypixel.hytale.builtin.adventure.camera.asset.cameraeffect.md
 getAction	BuilderActionTimeout	com.hypixel.hytale.server.npc.corecomponents.utility.builders	com.hypixel.hytale.server.npc.corecomponents.utility.builders.md
@@ -12868,6 +12875,7 @@ getDisableRight	MovementEffects	com.hypixel.hytale.protocol	com.hypixel.hytale.p
 getDisableRight	MovementEffects	com.hypixel.hytale.protocol	com.hypixel.hytale.protocol.md
 getDisableSprint	MovementEffects	com.hypixel.hytale.protocol	com.hypixel.hytale.protocol.md
 getDisableSprint	MovementEffects	com.hypixel.hytale.protocol	com.hypixel.hytale.protocol.md
+getDisconnectReason	AccessControlModule	com.hypixel.hytale.server.core.modules.accesscontrol	com.hypixel.hytale.server.core.modules.accesscontrol.md
 getDisconnectReason	AccessProvider	com.hypixel.hytale.server.core.modules.accesscontrol.provider	com.hypixel.hytale.server.core.modules.accesscontrol.provider.md
 getDisconnectReason	AssetEditorClientDisconnectEvent	com.hypixel.hytale.builtin.asseteditor.event	com.hypixel.hytale.builtin.asseteditor.event.md
 getDisconnectReason	Ban	com.hypixel.hytale.server.core.modules.accesscontrol.ban	com.hypixel.hytale.server.core.modules.accesscontrol.ban.md
@@ -15011,8 +15019,6 @@ getId	BenchRequirement	com.hypixel.hytale.protocol	com.hypixel.hytale.protocol.m
 getId	Biome	com.hypixel.hytale.server.worldgen.biome	com.hypixel.hytale.server.worldgen.biome.md
 getId	BiomeAsset	com.hypixel.hytale.builtin.hytalegenerator.assets.biomes	com.hypixel.hytale.builtin.hytalegenerator.assets.biomes.md
 getId	BiomeAsset	com.hypixel.hytale.builtin.hytalegenerator.assets.biomes	com.hypixel.hytale.builtin.hytalegenerator.assets.biomes.md
-getId	BiomeFrontierAsset	com.hypixel.hytale.builtin.hytalegenerator.assets.interpolationasset	com.hypixel.hytale.builtin.hytalegenerator.assets.interpolationasset.md
-getId	BiomeFrontierAsset	com.hypixel.hytale.builtin.hytalegenerator.assets.interpolationasset	com.hypixel.hytale.builtin.hytalegenerator.assets.interpolationasset.md
 getId	BiomeRangeAsset	com.hypixel.hytale.builtin.hytalegenerator.assets.worldstructures.basic	com.hypixel.hytale.builtin.hytalegenerator.assets.worldstructures.basic.md
 getId	BiomeRangeAsset	com.hypixel.hytale.builtin.hytalegenerator.assets.worldstructures.basic	com.hypixel.hytale.builtin.hytalegenerator.assets.worldstructures.basic.md
 getId	BlockBoundingBoxes	com.hypixel.hytale.server.core.asset.type.blockhitbox	com.hypixel.hytale.server.core.asset.type.blockhitbox.md
@@ -15787,7 +15793,6 @@ getInterpolatedBiomeCountAt	ChunkGenerator	com.hypixel.hytale.server.worldgen.ch
 getInterpolation	Biome	com.hypixel.hytale.server.worldgen.biome	com.hypixel.hytale.server.worldgen.biome.md
 getInterpolationFunction	PerlinNoise	com.hypixel.hytale.procedurallib.logic	com.hypixel.hytale.procedurallib.logic.md
 getInterpolationFunction	ValueNoise	com.hypixel.hytale.procedurallib.logic	com.hypixel.hytale.procedurallib.logic.md
-getInterpolationRadius	BiomeFrontierAsset	com.hypixel.hytale.builtin.hytalegenerator.assets.interpolationasset	com.hypixel.hytale.builtin.hytalegenerator.assets.interpolationasset.md
 getInterpolator	ChunkGeneratorExecution	com.hypixel.hytale.server.worldgen.chunk	com.hypixel.hytale.server.worldgen.chunk.md
 getInterruptedBy	InteractionRules	com.hypixel.hytale.protocol	com.hypixel.hytale.protocol.md
 getInterruptedBy	InteractionRules	com.hypixel.hytale.protocol	com.hypixel.hytale.protocol.md
@@ -23999,6 +24004,7 @@ handle	AssetEditorPacketHandler	com.hypixel.hytale.builtin.asseteditor	com.hypix
 handle	AssetEditorPacketHandler	com.hypixel.hytale.builtin.asseteditor	com.hypixel.hytale.builtin.asseteditor.md
 handle	AssetEditorPacketHandler	com.hypixel.hytale.builtin.asseteditor	com.hypixel.hytale.builtin.asseteditor.md
 handle	AssetEditorPacketHandler	com.hypixel.hytale.builtin.asseteditor	com.hypixel.hytale.builtin.asseteditor.md
+handle	AssetEditorPacketHandler	com.hypixel.hytale.builtin.asseteditor	com.hypixel.hytale.builtin.asseteditor.md
 handle	CameraEffectSystem	com.hypixel.hytale.builtin.adventure.camera.system	com.hypixel.hytale.builtin.adventure.camera.system.md
 handle	CameraEffectSystem	com.hypixel.hytale.builtin.adventure.camera.system	com.hypixel.hytale.builtin.adventure.camera.system.md
 handle	ClearObjectiveItemsCompletion	com.hypixel.hytale.builtin.adventure.objectives.completion	com.hypixel.hytale.builtin.adventure.objectives.completion.md
@@ -31510,6 +31516,7 @@ registered	ConnectionHandler	com.hypixel.hytale.protocol.io	com.hypixel.hytale.p
 registered	PacketHandler	com.hypixel.hytale.server.core.io	com.hypixel.hytale.server.core.io.md
 registered	PendingStreamConnectionHandler	com.hypixel.hytale.server.core.io.stream	com.hypixel.hytale.server.core.io.stream.md
 registered	VoiceStreamHandler	com.hypixel.hytale.server.core.modules.voice	com.hypixel.hytale.server.core.modules.voice.md
+registered0	AssetEditorPacketHandler	com.hypixel.hytale.builtin.asseteditor	com.hypixel.hytale.builtin.asseteditor.md
 registered0	AuthenticationPacketHandler	com.hypixel.hytale.server.core.io.handlers.login	com.hypixel.hytale.server.core.io.handlers.login.md
 registered0	GamePacketHandler	com.hypixel.hytale.server.core.io.handlers.game	com.hypixel.hytale.server.core.io.handlers.game.md
 registered0	HandshakeHandler	com.hypixel.hytale.server.core.io.handlers.login	com.hypixel.hytale.server.core.io.handlers.login.md
@@ -39503,6 +39510,7 @@ unregistered	ConnectionHandler	com.hypixel.hytale.protocol.io	com.hypixel.hytale
 unregistered	PacketHandler	com.hypixel.hytale.server.core.io	com.hypixel.hytale.server.core.io.md
 unregistered	PendingStreamConnectionHandler	com.hypixel.hytale.server.core.io.stream	com.hypixel.hytale.server.core.io.stream.md
 unregistered	VoiceStreamHandler	com.hypixel.hytale.server.core.modules.voice	com.hypixel.hytale.server.core.modules.voice.md
+unregistered0	AssetEditorPacketHandler	com.hypixel.hytale.builtin.asseteditor	com.hypixel.hytale.builtin.asseteditor.md
 unregistered0	PacketHandler	com.hypixel.hytale.server.core.io	com.hypixel.hytale.server.core.io.md
 unregisterEntityEventType	ComponentRegistry	com.hypixel.hytale.component	com.hypixel.hytale.component.md
 unregisterEntityHolderEventType	ComponentRegistry	com.hypixel.hytale.component	com.hypixel.hytale.component.md

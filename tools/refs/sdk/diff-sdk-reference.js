@@ -228,7 +228,7 @@ function main() {
     console.log("No package/class/method signature changes detected.");
   } else {
     console.log(`Summary: ${total} change group(s).`);
-    console.log("Note: javap cannot see deprecations — run ./gradlew compileJava for [removal] warnings.");
+    console.log("Note: This signature view omits deprecation annotations — compile with deprecation/removal lint or inspect javap -v.");
   }
 }
 

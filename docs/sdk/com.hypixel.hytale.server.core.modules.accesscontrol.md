@@ -31,5 +31,6 @@ public class com.hypixel.hytale.server.core.modules.accesscontrol.AccessControlM
   public boolean isBanned(java.util.UUID);
   public boolean ban(com.hypixel.hytale.server.core.modules.accesscontrol.ban.Ban);
   public boolean unban(java.util.UUID);
+  public java.util.concurrent.CompletableFuture<java.util.Optional<com.hypixel.hytale.server.core.Message>> getDisconnectReason(java.util.UUID);
 }
 ```

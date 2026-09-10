@@ -73,6 +73,7 @@ public class com.hypixel.hytale.server.core.io.handlers.InitialPacketHandler ext
 public class com.hypixel.hytale.server.core.io.handlers.SetupPacketHandler extends com.hypixel.hytale.server.core.io.handlers.GenericConnectionPacketHandler {
   public com.hypixel.hytale.server.core.io.handlers.SetupPacketHandler(com.hypixel.hytale.protocol.io.ChannelConnection, com.hypixel.hytale.server.core.io.ProtocolVersion, java.lang.String, com.hypixel.hytale.server.core.auth.PlayerAuthentication);
   public java.lang.String getIdentifier();
+  protected java.util.UUID getAccountUuid();
   public void registered0(com.hypixel.hytale.protocol.io.ConnectionHandler);
   public void accept(com.hypixel.hytale.protocol.ToServerPacket);
   public void closed(com.hypixel.hytale.protocol.NetworkChannel);
