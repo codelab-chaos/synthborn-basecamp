@@ -43,11 +43,6 @@ public class com.hypixel.hytale.math.util.ChunkUtil {
   public static int xFromIndex(int);
   public static int yFromIndex(int);
   public static int zFromIndex(int);
-  public static int indexBlockInColumn(int, int, int);
-  public static int indexBlockInColumnFromColumn(int, int);
-  public static int xFromBlockInColumn(int);
-  public static int yFromBlockInColumn(int);
-  public static int zFromBlockInColumn(int);
   public static int localCoordinate(long);
   public static int chunkCoordinate(double);
   public static int chunkCoordinate(int);
@@ -112,6 +107,7 @@ public class com.hypixel.hytale.math.util.HashUtil {
 public class com.hypixel.hytale.math.util.MathUtil {
   public static final double EPSILON_DOUBLE;
   public static final float EPSILON_FLOAT;
+  public static final double ZERO_LENGTH_EPSILON;
   public static float PITCH_EDGE_PADDING;
   public static int abs(int);
   public static int floor(double);
@@ -145,6 +141,7 @@ public class com.hypixel.hytale.math.util.MathUtil {
   public static float clamp(float, float, float);
   public static int clamp(int, int, int);
   public static long clamp(long, long, long);
+  public static long saturatedMultiply(long, long);
   public static int getPercentageOf(int, int);
   public static double percent(int, int);
   public static int fastRound(float);
@@ -168,6 +165,7 @@ public class com.hypixel.hytale.math.util.MathUtil {
   public static float lerp(float, float, float);
   public static float lerpUnclamped(float, float, float);
   public static double lerp(double, double, double);
+  public static float seededLerp(float, float, long);
   public static double lerpUnclamped(double, double, double);
   public static float shortAngleDistance(float, float);
   public static float lerpAngle(float, float, float);

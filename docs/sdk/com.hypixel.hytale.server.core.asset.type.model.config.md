@@ -139,6 +139,7 @@ public class com.hypixel.hytale.server.core.asset.type.model.config.ModelAsset i
   public com.hypixel.hytale.server.core.asset.type.item.config.AssetIconProperties getIconProperties();
   public java.lang.String getIcon();
   public float generateRandomScale();
+  public float generateDeterministicScale(long);
   public java.util.Map<java.lang.String, java.lang.String> generateRandomAttachmentIds();
   public com.hypixel.hytale.server.core.asset.type.model.config.ModelAttachment[] getAttachments(java.util.Map<java.lang.String, java.lang.String>);
   public java.util.Map<java.lang.String, com.hypixel.hytale.server.core.asset.type.model.config.DetailBox[]> getDetailBoxes();
@@ -186,7 +187,8 @@ public class com.hypixel.hytale.server.core.asset.type.model.config.ModelParticl
   protected org.joml.Vector3f positionOffset;
   protected com.hypixel.hytale.protocol.Direction rotationOffset;
   protected boolean detachedFromModel;
-  public com.hypixel.hytale.server.core.asset.type.model.config.ModelParticle(java.lang.String, com.hypixel.hytale.protocol.EntityPart, java.lang.String, com.hypixel.hytale.protocol.Color, float, org.joml.Vector3f, com.hypixel.hytale.protocol.Direction, boolean);
+  protected boolean clearParticlesOnRemove;
+  public com.hypixel.hytale.server.core.asset.type.model.config.ModelParticle(java.lang.String, com.hypixel.hytale.protocol.EntityPart, java.lang.String, com.hypixel.hytale.protocol.Color, float, org.joml.Vector3f, com.hypixel.hytale.protocol.Direction, boolean, boolean);
   public com.hypixel.hytale.server.core.asset.type.model.config.ModelParticle(com.hypixel.hytale.server.core.asset.type.model.config.ModelParticle);
   public com.hypixel.hytale.server.core.asset.type.model.config.ModelParticle();
   public com.hypixel.hytale.protocol.ModelParticle toPacket();
@@ -197,11 +199,14 @@ public class com.hypixel.hytale.server.core.asset.type.model.config.ModelParticl
   public void setTargetNodeName(java.lang.String);
   public com.hypixel.hytale.protocol.Color getColor();
   public float getScale();
+  public void setScale(float);
   public org.joml.Vector3f getPositionOffset();
   public void setPositionOffset(org.joml.Vector3f);
   public com.hypixel.hytale.protocol.Direction getRotationOffset();
   public boolean isDetachedFromModel();
   public void setDetachedFromModel(boolean);
+  public boolean isClearParticlesOnRemove();
+  public void setClearParticlesOnRemove(boolean);
   public com.hypixel.hytale.server.core.asset.type.model.config.ModelParticle scale(float);
   public java.lang.String toString();
   public com.hypixel.hytale.server.core.asset.type.model.config.ModelParticle clone();

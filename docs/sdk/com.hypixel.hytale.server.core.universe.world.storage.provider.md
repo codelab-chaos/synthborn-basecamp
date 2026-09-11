@@ -132,6 +132,13 @@ public class com.hypixel.hytale.server.core.universe.world.storage.provider.Migr
 public class com.hypixel.hytale.server.core.universe.world.storage.provider.RocksDbChunkStorageProvider implements com.hypixel.hytale.server.core.universe.world.storage.provider.IChunkStorageProvider<com.hypixel.hytale.server.core.universe.world.storage.provider.RocksDbChunkStorageProvider$RocksDbResource> {
   public static final java.lang.String ID;
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.server.core.universe.world.storage.provider.RocksDbChunkStorageProvider> CODEC;
+  public static final java.lang.String STATISTICS_PROPERTY;
+  public static final java.lang.String BLOB_GC_AGE_CUTOFF_PROPERTY;
+  public static final java.lang.String BLOB_GC_FORCE_THRESHOLD_PROPERTY;
+  public static final java.lang.String BLOB_COMPACTION_READAHEAD_SIZE_PROPERTY;
+  public static final java.lang.String MIN_BLOB_SIZE_PROPERTY;
+  public static final java.lang.String BLOB_CACHE_SIZE_PROPERTY;
+  public static final java.lang.String IO_THREADS_PROPERTY;
   public com.hypixel.hytale.server.core.universe.world.storage.provider.RocksDbChunkStorageProvider();
   public com.hypixel.hytale.server.core.universe.world.storage.provider.RocksDbChunkStorageProvider$RocksDbResource initialize(com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>) throws java.io.IOException;
   public void delete(com.hypixel.hytale.server.core.universe.world.storage.provider.RocksDbChunkStorageProvider$RocksDbResource, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>) throws java.io.IOException;

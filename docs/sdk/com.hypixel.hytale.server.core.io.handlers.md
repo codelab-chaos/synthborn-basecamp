@@ -23,6 +23,7 @@ public abstract class com.hypixel.hytale.server.core.io.handlers.GenericPacketHa
   public static java.util.function.Consumer<com.hypixel.hytale.protocol.ToServerPacket>[] newHandlerArray(int);
   public com.hypixel.hytale.server.core.io.handlers.GenericPacketHandler(com.hypixel.hytale.protocol.io.ChannelConnection, com.hypixel.hytale.server.core.io.ProtocolVersion);
   public void registerSubPacketHandler(com.hypixel.hytale.server.core.io.handlers.SubPacketHandler);
+  public <T extends com.hypixel.hytale.server.core.io.handlers.SubPacketHandler> T getSubPacketHandler(java.lang.Class<T>);
   public void registerHandler(int, java.util.function.Consumer<com.hypixel.hytale.protocol.ToServerPacket>);
   public void registerNoOpHandlers(int...);
   public final void accept(com.hypixel.hytale.protocol.ToServerPacket);
@@ -72,6 +73,7 @@ public class com.hypixel.hytale.server.core.io.handlers.InitialPacketHandler ext
 public class com.hypixel.hytale.server.core.io.handlers.SetupPacketHandler extends com.hypixel.hytale.server.core.io.handlers.GenericConnectionPacketHandler {
   public com.hypixel.hytale.server.core.io.handlers.SetupPacketHandler(com.hypixel.hytale.protocol.io.ChannelConnection, com.hypixel.hytale.server.core.io.ProtocolVersion, java.lang.String, com.hypixel.hytale.server.core.auth.PlayerAuthentication);
   public java.lang.String getIdentifier();
+  protected java.util.UUID getAccountUuid();
   public void registered0(com.hypixel.hytale.protocol.io.ConnectionHandler);
   public void accept(com.hypixel.hytale.protocol.ToServerPacket);
   public void closed(com.hypixel.hytale.protocol.NetworkChannel);

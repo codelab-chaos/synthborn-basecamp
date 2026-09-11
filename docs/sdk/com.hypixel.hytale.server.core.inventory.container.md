@@ -274,6 +274,7 @@ public class com.hypixel.hytale.server.core.inventory.container.InternalContaine
   protected static com.hypixel.hytale.server.core.inventory.transaction.ItemStackSlotTransaction internal_removeItemStackFromSlot(com.hypixel.hytale.server.core.inventory.container.ItemContainer, short, com.hypixel.hytale.server.core.inventory.ItemStack, int, boolean, boolean);
   protected static com.hypixel.hytale.server.core.inventory.transaction.ItemStackSlotTransaction internal_removeItemStackFromSlot(com.hypixel.hytale.server.core.inventory.container.ItemContainer, short, com.hypixel.hytale.server.core.inventory.ItemStack, int, boolean, boolean, java.util.function.BiPredicate<com.hypixel.hytale.server.core.inventory.ItemStack, com.hypixel.hytale.server.core.inventory.ItemStack>);
   protected static int testRemoveItemStackFromSlot(com.hypixel.hytale.server.core.inventory.container.ItemContainer, short, com.hypixel.hytale.server.core.inventory.ItemStack, int, boolean, java.util.function.BiPredicate<com.hypixel.hytale.server.core.inventory.ItemStack, com.hypixel.hytale.server.core.inventory.ItemStack>);
+  protected static int countItemStackFromSlot(com.hypixel.hytale.server.core.inventory.container.ItemContainer, short, com.hypixel.hytale.server.core.inventory.ItemStack, boolean, java.util.function.BiPredicate<com.hypixel.hytale.server.core.inventory.ItemStack, com.hypixel.hytale.server.core.inventory.ItemStack>);
   protected static com.hypixel.hytale.server.core.inventory.transaction.ItemStackTransaction internal_addItemStack(com.hypixel.hytale.server.core.inventory.container.ItemContainer, com.hypixel.hytale.server.core.inventory.ItemStack, boolean, boolean, boolean);
   protected static com.hypixel.hytale.server.core.inventory.transaction.ListTransaction<com.hypixel.hytale.server.core.inventory.transaction.ItemStackTransaction> internal_addItemStacks(com.hypixel.hytale.server.core.inventory.container.ItemContainer, java.util.List<com.hypixel.hytale.server.core.inventory.ItemStack>, boolean, boolean, boolean);
   protected static com.hypixel.hytale.server.core.inventory.transaction.ListTransaction<com.hypixel.hytale.server.core.inventory.transaction.ItemStackSlotTransaction> internal_addItemStacksOrdered(com.hypixel.hytale.server.core.inventory.container.ItemContainer, short, java.util.List<com.hypixel.hytale.server.core.inventory.ItemStack>, boolean, boolean);
@@ -282,6 +283,7 @@ public class com.hypixel.hytale.server.core.inventory.container.InternalContaine
   protected static com.hypixel.hytale.server.core.inventory.transaction.ListTransaction<com.hypixel.hytale.server.core.inventory.transaction.ItemStackTransaction> internal_removeItemStacks(com.hypixel.hytale.server.core.inventory.container.ItemContainer, java.util.List<com.hypixel.hytale.server.core.inventory.ItemStack>, boolean, boolean);
   protected static int testRemoveItemStackFromItems(com.hypixel.hytale.server.core.inventory.container.ItemContainer, com.hypixel.hytale.server.core.inventory.ItemStack, int, boolean);
   protected static int testRemoveItemStackFromItems(com.hypixel.hytale.server.core.inventory.container.ItemContainer, com.hypixel.hytale.server.core.inventory.ItemStack, int, boolean, java.util.function.BiPredicate<com.hypixel.hytale.server.core.inventory.ItemStack, com.hypixel.hytale.server.core.inventory.ItemStack>);
+  protected static int countItemStackFromItems(com.hypixel.hytale.server.core.inventory.container.ItemContainer, com.hypixel.hytale.server.core.inventory.ItemStack, boolean, java.util.function.BiPredicate<com.hypixel.hytale.server.core.inventory.ItemStack, com.hypixel.hytale.server.core.inventory.ItemStack>);
   protected static com.hypixel.hytale.server.core.inventory.container.TestRemoveItemSlotResult testRemoveItemStackSlotFromItems(com.hypixel.hytale.server.core.inventory.container.ItemContainer, com.hypixel.hytale.server.core.inventory.ItemStack, int, boolean);
   protected static com.hypixel.hytale.server.core.inventory.container.TestRemoveItemSlotResult testRemoveItemStackSlotFromItems(com.hypixel.hytale.server.core.inventory.container.ItemContainer, com.hypixel.hytale.server.core.inventory.ItemStack, int, boolean, java.util.function.BiPredicate<com.hypixel.hytale.server.core.inventory.ItemStack, com.hypixel.hytale.server.core.inventory.ItemStack>);
 }
@@ -297,6 +299,7 @@ public class com.hypixel.hytale.server.core.inventory.container.InternalContaine
   protected static com.hypixel.hytale.server.core.inventory.transaction.ListTransaction<com.hypixel.hytale.server.core.inventory.transaction.MaterialTransaction> internal_removeMaterials(com.hypixel.hytale.server.core.inventory.container.ItemContainer, java.util.List<com.hypixel.hytale.server.core.inventory.MaterialQuantity>, boolean, boolean, boolean);
   public static int testRemoveMaterialFromItems(com.hypixel.hytale.server.core.inventory.container.ItemContainer, com.hypixel.hytale.server.core.inventory.MaterialQuantity, int, boolean);
   public static com.hypixel.hytale.server.core.inventory.container.TestRemoveItemSlotResult getTestRemoveMaterialFromItems(com.hypixel.hytale.server.core.inventory.container.ItemContainer, com.hypixel.hytale.server.core.inventory.MaterialQuantity, int, boolean);
+  public static int countMaterialFromItems(com.hypixel.hytale.server.core.inventory.container.ItemContainer, com.hypixel.hytale.server.core.inventory.MaterialQuantity, boolean);
   protected static com.hypixel.hytale.server.core.inventory.transaction.ListTransaction<com.hypixel.hytale.server.core.inventory.transaction.MaterialSlotTransaction> internal_removeMaterialsOrdered(com.hypixel.hytale.server.core.inventory.container.ItemContainer, short, java.util.List<com.hypixel.hytale.server.core.inventory.MaterialQuantity>, boolean, boolean, boolean);
   public static int testRemoveMaterialFromSlot(com.hypixel.hytale.server.core.inventory.container.ItemContainer, short, com.hypixel.hytale.server.core.inventory.MaterialQuantity, int, boolean);
 }
@@ -313,6 +316,8 @@ public class com.hypixel.hytale.server.core.inventory.container.InternalContaine
   public static int testRemoveResourceFromItems(com.hypixel.hytale.server.core.inventory.container.ItemContainer, com.hypixel.hytale.server.core.inventory.ResourceQuantity, int, boolean);
   public static com.hypixel.hytale.server.core.inventory.container.TestRemoveItemSlotResult testRemoveResourceSlotFromItems(com.hypixel.hytale.server.core.inventory.container.ItemContainer, com.hypixel.hytale.server.core.inventory.ResourceQuantity, int, boolean);
   public static int testRemoveResourceFromSlot(com.hypixel.hytale.server.core.inventory.container.ItemContainer, short, com.hypixel.hytale.server.core.inventory.ResourceQuantity, int, boolean);
+  protected static int countResourceFromSlot(com.hypixel.hytale.server.core.inventory.container.ItemContainer, short, com.hypixel.hytale.server.core.inventory.ResourceQuantity, boolean);
+  protected static int countResourceFromItems(com.hypixel.hytale.server.core.inventory.container.ItemContainer, com.hypixel.hytale.server.core.inventory.ResourceQuantity, boolean);
 }
 ```
 
@@ -326,6 +331,8 @@ public class com.hypixel.hytale.server.core.inventory.container.InternalContaine
   protected static int testRemoveTagFromItems(com.hypixel.hytale.server.core.inventory.container.ItemContainer, int, int, boolean);
   protected static com.hypixel.hytale.server.core.inventory.container.TestRemoveItemSlotResult testRemoveTagSlotFromItems(com.hypixel.hytale.server.core.inventory.container.ItemContainer, int, int, boolean);
   protected static int testRemoveTagFromSlot(com.hypixel.hytale.server.core.inventory.container.ItemContainer, short, int, int, boolean);
+  protected static int countTagFromSlot(com.hypixel.hytale.server.core.inventory.container.ItemContainer, short, int, boolean);
+  protected static int countTagFromItems(com.hypixel.hytale.server.core.inventory.container.ItemContainer, int, boolean);
 }
 ```
 
@@ -448,6 +455,8 @@ public abstract class com.hypixel.hytale.server.core.inventory.container.ItemCon
   public com.hypixel.hytale.server.core.inventory.transaction.ListTransaction<com.hypixel.hytale.server.core.inventory.transaction.ResourceTransaction> removeResources(java.util.List<com.hypixel.hytale.server.core.inventory.ResourceQuantity>, boolean, boolean, boolean);
   public boolean canRemoveMaterial(com.hypixel.hytale.server.core.inventory.MaterialQuantity);
   public boolean canRemoveMaterial(com.hypixel.hytale.server.core.inventory.MaterialQuantity, boolean, boolean);
+  public int countRemovableMaterial(com.hypixel.hytale.server.core.inventory.MaterialQuantity);
+  public int countRemovableMaterial(com.hypixel.hytale.server.core.inventory.MaterialQuantity, boolean);
   public com.hypixel.hytale.server.core.inventory.transaction.MaterialTransaction removeMaterial(com.hypixel.hytale.server.core.inventory.MaterialQuantity);
   public com.hypixel.hytale.server.core.inventory.transaction.MaterialTransaction removeMaterial(com.hypixel.hytale.server.core.inventory.MaterialQuantity, boolean, boolean, boolean);
   public boolean canRemoveMaterials(java.util.List<com.hypixel.hytale.server.core.inventory.MaterialQuantity>);
@@ -495,9 +504,9 @@ public class com.hypixel.hytale.server.core.inventory.container.ItemContainerUti
 
 ```java
 public class com.hypixel.hytale.server.core.inventory.container.ItemStackItemContainer extends com.hypixel.hytale.server.core.inventory.container.ItemContainer {
-  public static com.hypixel.hytale.codec.KeyedCodec<org.bson.BsonDocument> CONTAINER_CODEC;
-  public static com.hypixel.hytale.codec.KeyedCodec<java.lang.Short> CAPACITY_CODEC;
-  public static com.hypixel.hytale.codec.KeyedCodec<com.hypixel.hytale.server.core.inventory.ItemStack[]> ITEMS_CODEC;
+  public static final com.hypixel.hytale.codec.KeyedCodec<org.bson.BsonDocument> CONTAINER_CODEC;
+  public static final com.hypixel.hytale.codec.KeyedCodec<java.lang.Short> CAPACITY_CODEC;
+  public static final com.hypixel.hytale.codec.KeyedCodec<com.hypixel.hytale.server.core.inventory.ItemStack[]> ITEMS_CODEC;
   protected final java.util.concurrent.locks.ReadWriteLock lock;
   protected final com.hypixel.hytale.server.core.inventory.container.ItemContainer parentContainer;
   protected final short itemStackSlot;
@@ -600,7 +609,7 @@ public final class com.hypixel.hytale.server.core.inventory.container.SortType e
   public static final com.hypixel.hytale.server.core.inventory.container.SortType NAME;
   public static final com.hypixel.hytale.server.core.inventory.container.SortType TYPE;
   public static final com.hypixel.hytale.server.core.inventory.container.SortType RARITY;
-  public static com.hypixel.hytale.server.core.inventory.container.SortType[] VALUES;
+  public static final com.hypixel.hytale.server.core.inventory.container.SortType[] VALUES;
   public static com.hypixel.hytale.server.core.inventory.container.SortType[] values();
   public static com.hypixel.hytale.server.core.inventory.container.SortType valueOf(java.lang.String);
   public java.util.Comparator<com.hypixel.hytale.server.core.inventory.ItemStack> getComparator();

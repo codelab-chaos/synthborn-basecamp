@@ -15,7 +15,7 @@ public interface com.hypixel.hytale.builtin.hytalegenerator.plugin.editor.AssetP
   public static final com.hypixel.hytale.common.semver.Semver DEFAULT_VERSION;
   public static final org.bson.json.JsonWriterSettings JSON_SETTINGS;
   public static java.util.concurrent.CompletableFuture<com.hypixel.hytale.assetstore.AssetPack> getOrCreatePack(java.lang.String, java.lang.String);
-  public static <T extends com.hypixel.hytale.assetstore.map.JsonAssetWithMap<java.lang.String, M>, M extends com.hypixel.hytale.assetstore.AssetMap<java.lang.String, T>, V extends T> void exportAsset(com.hypixel.hytale.assetstore.AssetPack, java.lang.String, org.bson.BsonDocument, java.lang.Class<T>) throws java.io.IOException;
+  public static <T extends com.hypixel.hytale.assetstore.map.JsonAssetWithMap<java.lang.String, M>, M extends com.hypixel.hytale.assetstore.AssetMap<java.lang.String, T>> void exportAsset(com.hypixel.hytale.assetstore.AssetPack, java.lang.String, org.bson.BsonDocument, java.lang.Class<T>) throws java.io.IOException;
   public static java.nio.file.Path getStorePath(java.nio.file.Path, java.lang.String, com.hypixel.hytale.assetstore.AssetStore<?, ?, ?>);
 }
 ```

@@ -53,6 +53,11 @@ public class com.hypixel.hytale.server.core.universe.world.worldmap.WorldMapMana
   public void generate();
   public void sendSettings();
   public boolean shouldTick();
+  public java.util.Map<java.lang.String, com.hypixel.hytale.server.core.universe.world.worldmap.markers.MapMarkerOverride> getMarkerOverridesView();
+  public boolean addMarkerOverride(java.lang.String, com.hypixel.hytale.server.core.universe.world.worldmap.markers.MapMarkerOverride);
+  public boolean removeMarkerOverride(java.lang.String);
+  public boolean removeMarkerOverride(java.lang.String, com.hypixel.hytale.server.core.universe.world.worldmap.markers.MapMarkerOverride);
+  public void removeAllMarkerOverrides();
   public void updateTickingState(boolean);
   public void handleUserCreateMarker(com.hypixel.hytale.server.core.universe.PlayerRef, com.hypixel.hytale.protocol.packets.worldmap.CreateUserMarker);
   public void handleUserRemoveMarker(com.hypixel.hytale.server.core.universe.PlayerRef, com.hypixel.hytale.protocol.packets.player.RemoveMapMarker);

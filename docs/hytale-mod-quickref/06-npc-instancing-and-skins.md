@@ -52,8 +52,12 @@ model = withSafeAnimationSetMap(model);                   // GOTCHA — see belo
 import com.hypixel.hytale.math.util.ChunkUtil;
 
 long chunkIndex = ChunkUtil.indexChunkFromBlock(position.x, position.z);
-if (world.getChunkIfLoaded(chunkIndex) == null) return;  // unloaded → can't spawn
+if (world.getChunkIfLoaded(chunkIndex) == null) return;  // unloaded → can't spawn (deprecated since 0.6.x, still compiles)
 ```
+
+Update 6 deprecated the `World#getChunkIf*` accessors in favor of reading chunk components
+from `world.getChunkStore().getChunkReference(chunkIndex)`; see the note in
+[09](./09-verified-api-cheatsheet.md#chunks--math) before migrating.
 
 (Spawning at a player's position sidesteps this — their chunk is always loaded.)
 

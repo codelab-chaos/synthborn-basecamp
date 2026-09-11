@@ -23,11 +23,11 @@ public class com.hypixel.hytale.server.npc.blackboard.view.blocktype.BlockTypeVi
   public long getIndex();
   public boolean isOutdated(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public com.hypixel.hytale.server.npc.blackboard.view.blocktype.BlockTypeView getUpdatedView(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
-  public void initialiseEntity(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.entities.NPCEntity);
+  public void initialiseEntity(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.blackboard.BlackboardSubscription);
   public void cleanup();
   public void onWorldRemoved();
-  public void addSearchedBlockSets(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.entities.NPCEntity, it.unimi.dsi.fastutil.ints.IntList);
-  public void removeSearchedBlockSets(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.entities.NPCEntity, it.unimi.dsi.fastutil.ints.IntList);
+  public void addSearchedBlockSets(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, it.unimi.dsi.fastutil.ints.IntList);
+  public void removeSearchedBlockSets(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, it.unimi.dsi.fastutil.ints.IntList);
   public com.hypixel.hytale.server.core.universe.world.chunk.section.blockpositions.IBlockPositionData findBlock(int, double, double, boolean, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public java.util.Set<com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>> getEntities();
   public java.util.BitSet getAllBlockSets();

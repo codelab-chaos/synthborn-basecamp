@@ -133,11 +133,12 @@ public class com.hypixel.hytale.server.core.plugin.PluginManager {
   public com.hypixel.hytale.server.core.plugin.PluginManager$PluginBridgeClassLoader getBridgeClassLoader();
   public java.util.List<com.hypixel.hytale.server.core.plugin.PluginBase> getPlugins();
   public com.hypixel.hytale.server.core.plugin.PluginBase getPlugin(com.hypixel.hytale.common.plugin.PluginIdentifier);
+  public <T extends com.hypixel.hytale.server.core.plugin.PluginBase> T getPlugin(java.lang.Class<T>);
   public boolean hasPlugin(com.hypixel.hytale.common.plugin.PluginIdentifier, com.hypixel.hytale.common.semver.SemverRange);
   public java.util.List<com.hypixel.hytale.server.core.plugin.PluginManager$ClasspathAssetPack> consumeClasspathAssetPacks();
   public boolean reload(com.hypixel.hytale.common.plugin.PluginIdentifier);
   public boolean unload(com.hypixel.hytale.common.plugin.PluginIdentifier);
-  protected void unloadJavaPlugin(com.hypixel.hytale.server.core.plugin.JavaPlugin);
+  protected void releasePluginClassLoader(com.hypixel.hytale.server.core.plugin.JavaPlugin);
   public boolean load(com.hypixel.hytale.common.plugin.PluginIdentifier);
   public java.util.Map<com.hypixel.hytale.common.plugin.PluginIdentifier, com.hypixel.hytale.common.plugin.PluginManifest> getAvailablePlugins();
   public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.core.plugin.PluginListPageManager$SessionSettings> getSessionSettingsComponentType();

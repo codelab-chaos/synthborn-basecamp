@@ -38,7 +38,6 @@ public class com.hypixel.hytale.server.npc.decisionmaker.core.conditions.IsInSta
 ```java
 public class com.hypixel.hytale.server.npc.decisionmaker.core.conditions.LineOfSightCondition extends com.hypixel.hytale.server.npc.decisionmaker.core.conditions.base.SimpleCondition {
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.server.npc.decisionmaker.core.conditions.LineOfSightCondition> CODEC;
-  protected static final com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.npc.entities.NPCEntity> NPC_COMPONENT_TYPE;
   public com.hypixel.hytale.server.npc.decisionmaker.core.conditions.LineOfSightCondition();
   public int getSimplicity();
   protected boolean evaluate(int, com.hypixel.hytale.component.ArchetypeChunk<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.decisionmaker.core.EvaluationContext);
@@ -58,7 +57,7 @@ public class com.hypixel.hytale.server.npc.decisionmaker.core.conditions.NearbyC
   public double getRange();
   public java.lang.String getNpcGroup();
   public int getNpcGroupIndex();
-  public void setupNPC(com.hypixel.hytale.server.npc.role.Role);
+  public void setupNPC(com.hypixel.hytale.server.npc.instructions.ExecutionSupport);
   protected double getInput(int, com.hypixel.hytale.component.ArchetypeChunk<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.decisionmaker.core.EvaluationContext);
   protected static boolean filterNPC(com.hypixel.hytale.server.npc.role.Role, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.decisionmaker.core.conditions.NearbyCountCondition, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public java.lang.String toString();

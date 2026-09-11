@@ -19,8 +19,8 @@ public class com.hypixel.hytale.server.flock.corecomponents.ActionFlockBeacon ex
   protected final boolean sendToLeaderOnly;
   protected final int sendTargetSlot;
   public com.hypixel.hytale.server.flock.corecomponents.ActionFlockBeacon(com.hypixel.hytale.server.flock.corecomponents.builders.BuilderActionFlockBeacon, com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
-  public boolean canExecute(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.role.Role, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
-  public boolean execute(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.role.Role, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public boolean canExecute(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.instructions.ExecutionSupport, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public boolean execute(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.instructions.ExecutionSupport, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   protected void sendNPCMessage(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
 }
 ```
@@ -31,8 +31,8 @@ public class com.hypixel.hytale.server.flock.corecomponents.ActionFlockBeacon ex
 public class com.hypixel.hytale.server.flock.corecomponents.ActionFlockJoin extends com.hypixel.hytale.server.npc.corecomponents.ActionBase {
   protected final boolean forceJoin;
   public com.hypixel.hytale.server.flock.corecomponents.ActionFlockJoin(com.hypixel.hytale.server.flock.corecomponents.builders.BuilderActionFlockJoin);
-  public boolean canExecute(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.role.Role, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
-  public boolean execute(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.role.Role, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public boolean canExecute(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.instructions.ExecutionSupport, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public boolean execute(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.instructions.ExecutionSupport, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
 }
 ```
 
@@ -41,8 +41,8 @@ public class com.hypixel.hytale.server.flock.corecomponents.ActionFlockJoin exte
 ```java
 public class com.hypixel.hytale.server.flock.corecomponents.ActionFlockLeave extends com.hypixel.hytale.server.npc.corecomponents.ActionBase {
   public com.hypixel.hytale.server.flock.corecomponents.ActionFlockLeave(com.hypixel.hytale.server.flock.corecomponents.builders.BuilderActionFlockLeave);
-  public boolean canExecute(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.role.Role, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
-  public boolean execute(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.role.Role, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public boolean canExecute(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.instructions.ExecutionSupport, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public boolean execute(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.instructions.ExecutionSupport, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
 }
 ```
 
@@ -53,8 +53,8 @@ public class com.hypixel.hytale.server.flock.corecomponents.ActionFlockSetTarget
   protected final boolean clear;
   protected final java.lang.String targetSlot;
   public com.hypixel.hytale.server.flock.corecomponents.ActionFlockSetTarget(com.hypixel.hytale.server.flock.corecomponents.builders.BuilderActionFlockSetTarget, com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
-  public boolean canExecute(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.role.Role, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
-  public boolean execute(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.role.Role, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public boolean canExecute(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.instructions.ExecutionSupport, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public boolean execute(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.instructions.ExecutionSupport, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
 }
 ```
 
@@ -65,7 +65,7 @@ public class com.hypixel.hytale.server.flock.corecomponents.ActionFlockState ext
   protected final java.lang.String state;
   protected final java.lang.String subState;
   public com.hypixel.hytale.server.flock.corecomponents.ActionFlockState(com.hypixel.hytale.server.flock.corecomponents.builders.BuilderActionFlockState, com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
-  public boolean execute(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.role.Role, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public boolean execute(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.instructions.ExecutionSupport, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
 }
 ```
 
@@ -75,7 +75,7 @@ public class com.hypixel.hytale.server.flock.corecomponents.ActionFlockState ext
 public class com.hypixel.hytale.server.flock.corecomponents.BodyMotionFlock extends com.hypixel.hytale.server.npc.corecomponents.BodyMotionBase {
   protected final com.hypixel.hytale.server.npc.movement.GroupSteeringAccumulator groupSteeringAccumulator;
   public com.hypixel.hytale.server.flock.corecomponents.BodyMotionFlock(com.hypixel.hytale.server.flock.corecomponents.builders.BuilderBodyMotionFlock);
-  public boolean computeSteering(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.role.Role, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, double, com.hypixel.hytale.server.npc.movement.Steering, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public boolean computeSteering(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.instructions.ExecutionSupport, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, double, com.hypixel.hytale.server.npc.movement.Steering, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
 }
 ```
 
@@ -92,7 +92,7 @@ public class com.hypixel.hytale.server.flock.corecomponents.EntityFilterFlock ex
   protected final int[] size;
   protected final boolean checkCanJoin;
   public com.hypixel.hytale.server.flock.corecomponents.EntityFilterFlock(com.hypixel.hytale.server.flock.corecomponents.builders.BuilderEntityFilterFlock);
-  public boolean matchesEntity(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.role.Role, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public boolean matchesEntity(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.instructions.ExecutionSupport, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public int cost();
 }
 ```
@@ -104,7 +104,7 @@ public class com.hypixel.hytale.server.flock.corecomponents.SensorFlockCombatDam
   protected final boolean leaderOnly;
   protected final com.hypixel.hytale.server.npc.sensorinfo.EntityPositionProvider positionProvider;
   public com.hypixel.hytale.server.flock.corecomponents.SensorFlockCombatDamage(com.hypixel.hytale.server.flock.corecomponents.builders.BuilderSensorFlockCombatDamage);
-  public boolean matches(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.role.Role, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public boolean matches(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.instructions.ExecutionSupport, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public com.hypixel.hytale.server.npc.sensorinfo.InfoProvider getSensorInfo();
 }
 ```
@@ -115,7 +115,7 @@ public class com.hypixel.hytale.server.flock.corecomponents.SensorFlockCombatDam
 public class com.hypixel.hytale.server.flock.corecomponents.SensorFlockLeader extends com.hypixel.hytale.server.npc.corecomponents.SensorBase {
   protected final com.hypixel.hytale.server.npc.sensorinfo.EntityPositionProvider positionProvider;
   public com.hypixel.hytale.server.flock.corecomponents.SensorFlockLeader(com.hypixel.hytale.server.flock.corecomponents.builders.BuilderSensorFlockLeader);
-  public boolean matches(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.role.Role, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public boolean matches(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.instructions.ExecutionSupport, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public com.hypixel.hytale.server.npc.sensorinfo.InfoProvider getSensorInfo();
 }
 ```
@@ -128,7 +128,7 @@ public class com.hypixel.hytale.server.flock.corecomponents.SensorInflictedDamag
   protected final boolean friendlyFire;
   protected final com.hypixel.hytale.server.npc.sensorinfo.EntityPositionProvider positionProvider;
   public com.hypixel.hytale.server.flock.corecomponents.SensorInflictedDamage(com.hypixel.hytale.server.flock.corecomponents.builders.BuilderSensorInflictedDamage);
-  public boolean matches(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.role.Role, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public boolean matches(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.instructions.ExecutionSupport, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public com.hypixel.hytale.server.npc.sensorinfo.InfoProvider getSensorInfo();
   protected static boolean inSameFlock(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
 }

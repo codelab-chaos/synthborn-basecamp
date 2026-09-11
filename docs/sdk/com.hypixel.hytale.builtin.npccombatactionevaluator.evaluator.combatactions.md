@@ -38,7 +38,7 @@ public class com.hypixel.hytale.builtin.npccombatactionevaluator.evaluator.comba
   public float getFailureTimeout();
   public boolean isDamageFriendlies();
   public boolean isPositionFirst();
-  public void execute(int, com.hypixel.hytale.component.ArchetypeChunk<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.role.Role, com.hypixel.hytale.builtin.npccombatactionevaluator.evaluator.CombatActionEvaluator, com.hypixel.hytale.server.npc.valuestore.ValueStore);
+  public void execute(int, com.hypixel.hytale.component.ArchetypeChunk<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.instructions.ExecutionSupport, com.hypixel.hytale.builtin.npccombatactionevaluator.evaluator.CombatActionEvaluator, com.hypixel.hytale.server.npc.valuestore.ValueStore);
   public boolean isBasicAttackAllowed(int, com.hypixel.hytale.component.ArchetypeChunk<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.builtin.npccombatactionevaluator.evaluator.CombatActionEvaluator);
   public java.lang.String toString();
 }
@@ -52,7 +52,7 @@ public class com.hypixel.hytale.builtin.npccombatactionevaluator.evaluator.comba
   protected int weaponSlot;
   protected int offhandSlot;
   public com.hypixel.hytale.builtin.npccombatactionevaluator.evaluator.combatactions.BasicAttackTargetCombatAction();
-  public void execute(int, com.hypixel.hytale.component.ArchetypeChunk<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.role.Role, com.hypixel.hytale.builtin.npccombatactionevaluator.evaluator.CombatActionEvaluator, com.hypixel.hytale.server.npc.valuestore.ValueStore);
+  public void execute(int, com.hypixel.hytale.component.ArchetypeChunk<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.instructions.ExecutionSupport, com.hypixel.hytale.builtin.npccombatactionevaluator.evaluator.CombatActionEvaluator, com.hypixel.hytale.server.npc.valuestore.ValueStore);
   public boolean isBasicAttackAllowed(int, com.hypixel.hytale.component.ArchetypeChunk<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.builtin.npccombatactionevaluator.evaluator.CombatActionEvaluator);
   public boolean cancelBasicAttackOnSelect();
 }
@@ -77,7 +77,7 @@ public abstract class com.hypixel.hytale.builtin.npccombatactionevaluator.evalua
   public java.lang.String getId();
   public com.hypixel.hytale.builtin.npccombatactionevaluator.evaluator.combatactions.CombatActionOption$Target getActionTarget();
   public double[] getPostExecuteDistanceRange();
-  public abstract void execute(int, com.hypixel.hytale.component.ArchetypeChunk<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.role.Role, com.hypixel.hytale.builtin.npccombatactionevaluator.evaluator.CombatActionEvaluator, com.hypixel.hytale.server.npc.valuestore.ValueStore);
+  public abstract void execute(int, com.hypixel.hytale.component.ArchetypeChunk<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.instructions.ExecutionSupport, com.hypixel.hytale.builtin.npccombatactionevaluator.evaluator.CombatActionEvaluator, com.hypixel.hytale.server.npc.valuestore.ValueStore);
   public abstract boolean isBasicAttackAllowed(int, com.hypixel.hytale.component.ArchetypeChunk<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.builtin.npccombatactionevaluator.evaluator.CombatActionEvaluator);
   public boolean cancelBasicAttackOnSelect();
   public java.lang.String toString();
@@ -96,7 +96,7 @@ public class com.hypixel.hytale.builtin.npccombatactionevaluator.evaluator.comba
   public com.hypixel.hytale.builtin.npccombatactionevaluator.evaluator.combatactions.StateCombatAction();
   public java.lang.String getState();
   public java.lang.String getSubState();
-  public void execute(int, com.hypixel.hytale.component.ArchetypeChunk<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.role.Role, com.hypixel.hytale.builtin.npccombatactionevaluator.evaluator.CombatActionEvaluator, com.hypixel.hytale.server.npc.valuestore.ValueStore);
+  public void execute(int, com.hypixel.hytale.component.ArchetypeChunk<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.instructions.ExecutionSupport, com.hypixel.hytale.builtin.npccombatactionevaluator.evaluator.CombatActionEvaluator, com.hypixel.hytale.server.npc.valuestore.ValueStore);
   public boolean isBasicAttackAllowed(int, com.hypixel.hytale.component.ArchetypeChunk<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.builtin.npccombatactionevaluator.evaluator.CombatActionEvaluator);
   public java.lang.String toString();
 }

@@ -40,6 +40,7 @@ public final class com.hypixel.hytale.builtin.hytalegenerator.material.Material 
 
 ```java
 public class com.hypixel.hytale.builtin.hytalegenerator.material.MaterialCache {
+  public final com.hypixel.hytale.builtin.hytalegenerator.material.SolidMaterial UNKNOWN_SOLID;
   public final com.hypixel.hytale.builtin.hytalegenerator.material.SolidMaterial EMPTY_AIR;
   public final com.hypixel.hytale.builtin.hytalegenerator.material.SolidMaterial ROCK_STONE;
   public final com.hypixel.hytale.builtin.hytalegenerator.material.SolidMaterial SOIL_GRASS;
@@ -55,15 +56,15 @@ public class com.hypixel.hytale.builtin.hytalegenerator.material.MaterialCache {
   public final com.hypixel.hytale.builtin.hytalegenerator.material.FluidMaterial UNKNOWN_FLUID;
   public final com.hypixel.hytale.builtin.hytalegenerator.material.FluidMaterial EMPTY_FLUID;
   public final com.hypixel.hytale.builtin.hytalegenerator.material.Material EMPTY;
+  public final com.hypixel.hytale.builtin.hytalegenerator.material.Material FALLBACK_MATERIAL;
   public com.hypixel.hytale.builtin.hytalegenerator.material.MaterialCache();
-  public com.hypixel.hytale.builtin.hytalegenerator.material.Material getMaterial(com.hypixel.hytale.builtin.hytalegenerator.material.SolidMaterial, com.hypixel.hytale.builtin.hytalegenerator.material.FluidMaterial);
-  public com.hypixel.hytale.builtin.hytalegenerator.material.Material getMaterialRotated(com.hypixel.hytale.builtin.hytalegenerator.material.Material, com.hypixel.hytale.server.core.asset.type.blocktype.config.RotationTuple);
+  public com.hypixel.hytale.builtin.hytalegenerator.material.Material getMaterial(com.hypixel.hytale.builtin.hytalegenerator.material.MaterialCache$MaterialKey);
+  public com.hypixel.hytale.builtin.hytalegenerator.material.Material getMaterialRotated(com.hypixel.hytale.builtin.hytalegenerator.material.MaterialCache$MaterialKey, com.hypixel.hytale.server.core.asset.type.blocktype.config.RotationTuple);
+  public com.hypixel.hytale.builtin.hytalegenerator.material.FluidMaterial getFluidMaterial(com.hypixel.hytale.builtin.hytalegenerator.material.MaterialCache$FluidKey);
   public com.hypixel.hytale.builtin.hytalegenerator.material.FluidMaterial getFluidMaterial(java.lang.String);
-  public com.hypixel.hytale.builtin.hytalegenerator.material.FluidMaterial getFluidMaterial(int, byte);
-  public com.hypixel.hytale.builtin.hytalegenerator.material.SolidMaterial getSolidMaterial(java.lang.String, com.hypixel.hytale.server.core.asset.type.blocktype.config.RotationTuple);
+  public com.hypixel.hytale.builtin.hytalegenerator.material.SolidMaterial getSolidMaterial(com.hypixel.hytale.builtin.hytalegenerator.material.MaterialCache$SolidKey);
   public com.hypixel.hytale.builtin.hytalegenerator.material.SolidMaterial getSolidMaterial(java.lang.String);
-  public com.hypixel.hytale.builtin.hytalegenerator.material.SolidMaterial getSolidMaterialRotatedY(com.hypixel.hytale.builtin.hytalegenerator.material.SolidMaterial, com.hypixel.hytale.server.core.asset.type.blocktype.config.Rotation);
-  public com.hypixel.hytale.builtin.hytalegenerator.material.SolidMaterial getSolidMaterial(int, int, int, int, com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>);
+  public com.hypixel.hytale.builtin.hytalegenerator.material.SolidMaterial getSolidMaterial(java.lang.String, com.hypixel.hytale.server.core.asset.type.blocktype.config.RotationTuple);
 }
 ```
 

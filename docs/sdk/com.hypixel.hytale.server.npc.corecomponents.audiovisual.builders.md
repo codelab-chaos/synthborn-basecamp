@@ -82,8 +82,9 @@ public class com.hypixel.hytale.server.npc.corecomponents.audiovisual.builders.B
 ## BuilderActionPlaySound
 
 ```java
-public class com.hypixel.hytale.server.npc.corecomponents.audiovisual.builders.BuilderActionPlaySound extends com.hypixel.hytale.server.npc.corecomponents.builders.BuilderActionBase {
+public class com.hypixel.hytale.server.npc.corecomponents.audiovisual.builders.BuilderActionPlaySound extends com.hypixel.hytale.server.npc.corecomponents.builders.BuilderDeferrableAction {
   protected final com.hypixel.hytale.server.npc.asset.builder.holder.AssetHolder soundEventId;
+  protected com.hypixel.hytale.server.npc.corecomponents.PositionSource positionSource;
   public com.hypixel.hytale.server.npc.corecomponents.audiovisual.builders.BuilderActionPlaySound();
   public com.hypixel.hytale.server.npc.corecomponents.audiovisual.ActionPlaySound build(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
   public java.lang.String getShortDescription();
@@ -91,6 +92,7 @@ public class com.hypixel.hytale.server.npc.corecomponents.audiovisual.builders.B
   public com.hypixel.hytale.server.npc.asset.builder.BuilderDescriptorState getBuilderDescriptorState();
   public com.hypixel.hytale.server.npc.corecomponents.audiovisual.builders.BuilderActionPlaySound readConfig(com.google.gson.JsonElement);
   public java.lang.String getSoundEventId(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
+  public com.hypixel.hytale.server.npc.corecomponents.PositionSource getPositionSource();
   public int getSoundEventIndex(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
   public com.hypixel.hytale.server.npc.asset.builder.Builder readConfig(com.google.gson.JsonElement);
   public java.lang.Object build(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
@@ -100,12 +102,14 @@ public class com.hypixel.hytale.server.npc.corecomponents.audiovisual.builders.B
 ## BuilderActionSpawnParticles
 
 ```java
-public class com.hypixel.hytale.server.npc.corecomponents.audiovisual.builders.BuilderActionSpawnParticles extends com.hypixel.hytale.server.npc.corecomponents.builders.BuilderActionBase {
+public class com.hypixel.hytale.server.npc.corecomponents.audiovisual.builders.BuilderActionSpawnParticles extends com.hypixel.hytale.server.npc.corecomponents.builders.BuilderDeferrableAction {
   protected final com.hypixel.hytale.server.npc.asset.builder.holder.AssetHolder particleSystem;
   protected final com.hypixel.hytale.server.npc.asset.builder.holder.DoubleHolder range;
+  protected final com.hypixel.hytale.server.npc.asset.builder.holder.FloatHolder scale;
   protected final com.hypixel.hytale.server.npc.asset.builder.holder.NumberArrayHolder offset;
   protected final com.hypixel.hytale.server.npc.asset.builder.holder.StringHolder targetNodeName;
   protected final com.hypixel.hytale.server.npc.asset.builder.holder.BooleanHolder isDetachedFromModel;
+  protected com.hypixel.hytale.server.npc.corecomponents.PositionSource positionSource;
   public com.hypixel.hytale.server.npc.corecomponents.audiovisual.builders.BuilderActionSpawnParticles();
   public com.hypixel.hytale.server.npc.corecomponents.audiovisual.ActionSpawnParticles build(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
   public java.lang.String getShortDescription();
@@ -114,9 +118,11 @@ public class com.hypixel.hytale.server.npc.corecomponents.audiovisual.builders.B
   public com.hypixel.hytale.server.npc.corecomponents.audiovisual.builders.BuilderActionSpawnParticles readConfig(com.google.gson.JsonElement);
   public java.lang.String getParticleSystem(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
   public double getRange(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
+  public float getScale(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
   public org.joml.Vector3d getOffset(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
   public java.lang.String getTargetNodeName(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
   public boolean isDetachedFromModel(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
+  public com.hypixel.hytale.server.npc.corecomponents.PositionSource getPositionSource();
   public com.hypixel.hytale.server.npc.asset.builder.Builder readConfig(com.google.gson.JsonElement);
   public java.lang.Object build(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
 }

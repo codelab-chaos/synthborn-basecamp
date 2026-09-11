@@ -102,6 +102,7 @@ public abstract class com.hypixel.hytale.server.core.inventory.InventoryComponen
   public static final int UTILITY_SECTION_ID;
   public static final int TOOLS_SECTION_ID;
   public static final int BACKPACK_SECTION_ID;
+  public static final int DUMMY_SECTION_ID;
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.server.core.inventory.InventoryComponent> CODEC;
   protected final java.util.concurrent.atomic.AtomicBoolean isDirty;
   protected final java.util.concurrent.atomic.AtomicBoolean needsSaving;
@@ -195,10 +196,12 @@ public class com.hypixel.hytale.server.core.inventory.ItemStack implements com.h
   protected int quantity;
   protected double durability;
   protected double maxDurability;
+  protected int qualityIndex;
   protected boolean overrideDroppedItemAnimation;
   protected org.bson.BsonDocument metadata;
   public com.hypixel.hytale.server.core.inventory.ItemStack(java.lang.String, int, org.bson.BsonDocument);
   public com.hypixel.hytale.server.core.inventory.ItemStack(java.lang.String, int, double, double, org.bson.BsonDocument);
+  public com.hypixel.hytale.server.core.inventory.ItemStack(java.lang.String, int, double, double, int, org.bson.BsonDocument);
   public com.hypixel.hytale.server.core.inventory.ItemStack(java.lang.String);
   public com.hypixel.hytale.server.core.inventory.ItemStack(java.lang.String, int);
   protected com.hypixel.hytale.server.core.inventory.ItemStack();
@@ -209,6 +212,7 @@ public class com.hypixel.hytale.server.core.inventory.ItemStack implements com.h
   public boolean isBroken();
   public double getMaxDurability();
   public double getDurability();
+  public int getQualityIndex();
   public boolean isEmpty();
   public boolean getOverrideDroppedItemAnimation();
   public void setOverrideDroppedItemAnimation(boolean);
@@ -217,6 +221,7 @@ public class com.hypixel.hytale.server.core.inventory.ItemStack implements com.h
   public boolean isValid();
   public com.hypixel.hytale.server.core.inventory.ItemStack withDurability(double);
   public com.hypixel.hytale.server.core.inventory.ItemStack withMaxDurability(double);
+  public com.hypixel.hytale.server.core.inventory.ItemStack withQuality(int);
   public com.hypixel.hytale.server.core.inventory.ItemStack withIncreasedDurability(double);
   public com.hypixel.hytale.server.core.inventory.ItemStack withRestoredDurability(double);
   public com.hypixel.hytale.server.core.inventory.ItemStack withState(java.lang.String);
@@ -241,7 +246,6 @@ public class com.hypixel.hytale.server.core.inventory.ItemStack implements com.h
   public static boolean isStackableWith(com.hypixel.hytale.server.core.inventory.ItemStack, com.hypixel.hytale.server.core.inventory.ItemStack);
   public static boolean isEquivalentType(com.hypixel.hytale.server.core.inventory.ItemStack, com.hypixel.hytale.server.core.inventory.ItemStack);
   public static boolean isSameItemType(com.hypixel.hytale.server.core.inventory.ItemStack, com.hypixel.hytale.server.core.inventory.ItemStack);
-  public static com.hypixel.hytale.server.core.inventory.ItemStack fromPacket(com.hypixel.hytale.protocol.ItemQuantity);
   public java.lang.Object toPacket();
 }
 ```
@@ -251,6 +255,7 @@ public class com.hypixel.hytale.server.core.inventory.ItemStack implements com.h
 ```java
 public class com.hypixel.hytale.server.core.inventory.MaterialQuantity implements com.hypixel.hytale.server.core.io.NetworkSerializable<com.hypixel.hytale.protocol.MaterialQuantity> {
   public static final com.hypixel.hytale.server.core.inventory.MaterialQuantity[] EMPTY_ARRAY;
+  public static final com.hypixel.hytale.codec.validation.ValidatorCache<com.hypixel.hytale.server.core.inventory.MaterialQuantity> ITEM_VALIDATOR_CACHE;
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.server.core.inventory.MaterialQuantity> CODEC;
   protected java.lang.String itemId;
   protected java.lang.String resourceTypeId;
@@ -271,6 +276,7 @@ public class com.hypixel.hytale.server.core.inventory.MaterialQuantity implement
   public java.util.Set<java.lang.String> getExcludedItemIds();
   public boolean isItemExcluded(java.lang.String);
   public com.hypixel.hytale.server.core.inventory.ItemStack toItemStack();
+  public static java.util.List<com.hypixel.hytale.server.core.inventory.ItemStack> toItemStacks(com.hypixel.hytale.server.core.inventory.MaterialQuantity[]);
   public com.hypixel.hytale.server.core.inventory.ResourceQuantity toResource();
   public com.hypixel.hytale.protocol.MaterialQuantity toPacket();
   public boolean equals(java.lang.Object);

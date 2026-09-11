@@ -42,7 +42,7 @@ public class com.hypixel.hytale.server.core.modules.entity.damage.Damage extends
 
 ```java
 public class com.hypixel.hytale.server.core.modules.entity.damage.DamageCalculatorSystems {
-  public static com.hypixel.hytale.server.core.meta.MetaKey<com.hypixel.hytale.server.core.modules.entity.damage.DamageCalculatorSystems$DamageSequence> DAMAGE_SEQUENCE;
+  public static final com.hypixel.hytale.server.core.meta.MetaKey<com.hypixel.hytale.server.core.modules.entity.damage.DamageCalculatorSystems$DamageSequence> DAMAGE_SEQUENCE;
   public com.hypixel.hytale.server.core.modules.entity.damage.DamageCalculatorSystems();
   public static com.hypixel.hytale.server.core.modules.entity.damage.Damage[] queueDamageCalculator(com.hypixel.hytale.server.core.universe.world.World, it.unimi.dsi.fastutil.objects.Object2FloatMap<com.hypixel.hytale.server.core.modules.entity.damage.DamageCause>, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.modules.entity.damage.Damage$Source, com.hypixel.hytale.server.core.inventory.ItemStack);
 }

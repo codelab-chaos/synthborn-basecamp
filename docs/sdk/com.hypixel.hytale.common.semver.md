@@ -66,6 +66,7 @@ public class com.hypixel.hytale.common.semver.SemverRange implements com.hypixel
   public boolean satisfies(com.hypixel.hytale.common.semver.Semver);
   public java.lang.String toString();
   public static com.hypixel.hytale.common.semver.SemverRange fromString(java.lang.String);
+  public static com.hypixel.hytale.common.semver.SemverRange exact(com.hypixel.hytale.common.semver.Semver);
   public static com.hypixel.hytale.common.semver.SemverRange fromString(java.lang.String, boolean);
 }
 ```

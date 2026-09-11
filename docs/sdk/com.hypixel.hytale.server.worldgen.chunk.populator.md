@@ -21,6 +21,7 @@ public class com.hypixel.hytale.server.worldgen.chunk.populator.BlockPopulator {
 public class com.hypixel.hytale.server.worldgen.chunk.populator.CavePopulator {
   public com.hypixel.hytale.server.worldgen.chunk.populator.CavePopulator();
   public static void populate(int, com.hypixel.hytale.server.worldgen.chunk.ChunkGeneratorExecution);
+  public static boolean isMatchingHeightThreshold(int, int, int, com.hypixel.hytale.server.worldgen.chunk.ChunkGenerator, com.hypixel.hytale.server.worldgen.cave.CaveType);
 }
 ```
 

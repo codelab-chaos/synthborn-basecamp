@@ -50,9 +50,6 @@ public abstract class com.hypixel.hytale.server.npc.blackboard.view.event.EventV
   protected final java.util.Map<EventType, com.hypixel.hytale.server.npc.blackboard.view.event.EventTypeRegistration<EventType, NotificationType>> entityMapsByEventType;
   protected final com.hypixel.hytale.server.core.universe.world.World world;
   protected final EventType[] eventTypes;
-  protected com.hypixel.hytale.event.EventRegistry eventRegistry;
-  protected com.hypixel.hytale.component.ComponentRegistryProxy<com.hypixel.hytale.server.core.universe.world.storage.EntityStore> entityStoreRegistry;
-  protected boolean shutdown;
   protected final NotificationType reusableEventNotification;
   protected com.hypixel.hytale.server.npc.blackboard.view.event.EventView(java.lang.Class<EventType>, EventType[], NotificationType, com.hypixel.hytale.server.core.universe.world.World);
   public boolean isOutdated(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
@@ -68,6 +65,6 @@ public abstract class com.hypixel.hytale.server.npc.blackboard.view.event.EventV
 
 ```java
 public interface com.hypixel.hytale.server.npc.blackboard.view.event.IEventCallback<EventType, NotificationType extends com.hypixel.hytale.server.npc.blackboard.view.event.EventNotification> {
-  public abstract void notify(com.hypixel.hytale.server.npc.entities.NPCEntity, EventType, NotificationType);
+  public abstract void notify(com.hypixel.hytale.server.npc.blackboard.BlackboardSubscription, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, EventType, NotificationType);
 }
 ```

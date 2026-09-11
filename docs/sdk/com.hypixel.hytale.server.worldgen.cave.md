@@ -17,6 +17,7 @@ public class com.hypixel.hytale.server.worldgen.cave.Cave {
   public void addNode(com.hypixel.hytale.server.worldgen.cave.element.CaveNode);
   public boolean contains(long);
   public com.hypixel.hytale.server.worldgen.cave.element.CaveNode[] getCaveNodes(long);
+  public void forEachNode(java.util.function.Consumer<com.hypixel.hytale.server.worldgen.cave.element.CaveNode>);
   public void compile();
   public java.lang.String toString();
 }

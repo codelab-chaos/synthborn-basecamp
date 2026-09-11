@@ -13,7 +13,7 @@ public class com.hypixel.hytale.server.npc.blackboard.view.resource.ResourceView
   public com.hypixel.hytale.server.npc.blackboard.view.resource.ResourceView(long);
   public boolean isOutdated(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public com.hypixel.hytale.server.npc.blackboard.view.resource.ResourceView getUpdatedView(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
-  public void initialiseEntity(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.entities.NPCEntity);
+  public void initialiseEntity(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.blackboard.BlackboardSubscription);
   public void cleanup();
   public void onWorldRemoved();
   public boolean isBlockReserved(int, int, int);

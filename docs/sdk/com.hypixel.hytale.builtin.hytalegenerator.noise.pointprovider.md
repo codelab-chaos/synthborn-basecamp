@@ -32,10 +32,10 @@ public abstract class com.hypixel.hytale.builtin.hytalegenerator.noise.pointprov
   public com.hypixel.hytale.builtin.hytalegenerator.noise.pointprovider.PointField();
   public java.util.List<org.joml.Vector3i> points3i(org.joml.Vector3i, org.joml.Vector3i);
   public java.util.List<org.joml.Vector2i> points2i(org.joml.Vector2i, org.joml.Vector2i);
-  public java.util.List<java.lang.Integer> points1i(int, int);
+  public it.unimi.dsi.fastutil.ints.IntList points1i(int, int);
   public java.util.List<org.joml.Vector3d> points3d(org.joml.Vector3d, org.joml.Vector3d);
   public java.util.List<org.joml.Vector2d> points2d(org.joml.Vector2d, org.joml.Vector2d);
-  public java.util.List<java.lang.Double> points1d(double, double);
+  public it.unimi.dsi.fastutil.doubles.DoubleList points1d(double, double);
   public com.hypixel.hytale.builtin.hytalegenerator.noise.pointprovider.PointField setScale(double, double, double, double);
   public com.hypixel.hytale.builtin.hytalegenerator.noise.pointprovider.PointField setScale(double);
 }
@@ -47,13 +47,13 @@ public abstract class com.hypixel.hytale.builtin.hytalegenerator.noise.pointprov
 public interface com.hypixel.hytale.builtin.hytalegenerator.noise.pointprovider.PointProvider {
   public abstract java.util.List<org.joml.Vector3i> points3i(org.joml.Vector3i, org.joml.Vector3i);
   public abstract java.util.List<org.joml.Vector2i> points2i(org.joml.Vector2i, org.joml.Vector2i);
-  public abstract java.util.List<java.lang.Integer> points1i(int, int);
+  public abstract it.unimi.dsi.fastutil.ints.IntList points1i(int, int);
   public abstract void points3i(org.joml.Vector3i, org.joml.Vector3i, java.util.function.Consumer<org.joml.Vector3i>);
   public abstract void points2i(org.joml.Vector2i, org.joml.Vector2i, java.util.function.Consumer<org.joml.Vector2i>);
   public abstract void points1i(int, int, java.util.function.Consumer<java.lang.Integer>);
   public abstract java.util.List<org.joml.Vector3d> points3d(org.joml.Vector3d, org.joml.Vector3d);
   public abstract java.util.List<org.joml.Vector2d> points2d(org.joml.Vector2d, org.joml.Vector2d);
-  public abstract java.util.List<java.lang.Double> points1d(double, double);
+  public abstract it.unimi.dsi.fastutil.doubles.DoubleList points1d(double, double);
   public abstract void points3d(org.joml.Vector3d, org.joml.Vector3d, java.util.function.Consumer<org.joml.Vector3d>);
   public abstract void points2d(org.joml.Vector2d, org.joml.Vector2d, java.util.function.Consumer<org.joml.Vector2d>);
   public abstract void points1d(double, double, java.util.function.Consumer<java.lang.Double>);

@@ -16,12 +16,12 @@ public class com.hypixel.hytale.server.npc.config.balancing.BalanceAsset impleme
   public static final com.hypixel.hytale.codec.Codec<java.lang.String> CHILD_ASSET_CODEC;
   public static final com.hypixel.hytale.codec.validation.ValidatorCache<java.lang.String> VALIDATOR_CACHE;
   protected java.lang.String id;
-  protected java.lang.String entityEffect;
+  protected java.lang.String[] entityEffects;
   public static com.hypixel.hytale.assetstore.AssetStore<java.lang.String, com.hypixel.hytale.server.npc.config.balancing.BalanceAsset, com.hypixel.hytale.assetstore.map.DefaultAssetMap<java.lang.String, com.hypixel.hytale.server.npc.config.balancing.BalanceAsset>> getAssetStore();
   public static com.hypixel.hytale.assetstore.map.DefaultAssetMap<java.lang.String, com.hypixel.hytale.server.npc.config.balancing.BalanceAsset> getAssetMap();
   protected com.hypixel.hytale.server.npc.config.balancing.BalanceAsset();
   public java.lang.String getId();
-  public java.lang.String getEntityEffect();
+  public java.lang.String[] getEntityEffects();
   public java.lang.String toString();
   public java.lang.Object getId();
 }

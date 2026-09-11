@@ -32,7 +32,7 @@ public class com.hypixel.hytale.server.core.entity.entities.player.CameraManager
 
 ```java
 public class com.hypixel.hytale.server.core.entity.entities.player.HiddenPlayersManager {
-  public com.hypixel.hytale.server.core.entity.entities.player.HiddenPlayersManager();
+  public com.hypixel.hytale.server.core.entity.entities.player.HiddenPlayersManager(com.hypixel.hytale.server.core.universe.PlayerRef);
   public void hidePlayer(java.util.UUID);
   public void showPlayer(java.util.UUID);
   public boolean isPlayerHidden(java.util.UUID);

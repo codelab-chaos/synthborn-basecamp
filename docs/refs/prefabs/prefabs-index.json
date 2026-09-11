@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generated_at": "2026-06-13T00:15:26.042Z",
+  "generated_at": "2026-09-07T17:13:59.808Z",
   "root": "_Assets/Server/Prefabs",
-  "total": 7825,
+  "total": 7828,
   "prefabs": [
     {
       "id": "Blocksets/Blocksets_08",
@@ -16,15 +16,15 @@
       ],
       "version": 8,
       "blockIdVersion": 11,
-      "block_count": 43679,
+      "block_count": 43680,
       "footprint": {
         "min": [
-          -100,
+          -115,
           0,
           -86
         ],
         "max": [
-          131,
+          116,
           4,
           87
         ],
@@ -173952,7 +173952,7 @@
       ],
       "version": 8,
       "blockIdVersion": 11,
-      "block_count": 24825,
+      "block_count": 24843,
       "footprint": {
         "min": [
           -18,
@@ -173973,23 +173973,76 @@
       "top_blocks": [
         {
           "name": "Empty",
-          "count": 8249
-        },
-        {
-          "name": "Rock_Sandstone_Brick",
-          "count": 5234
+          "count": 7382
         },
         {
           "name": "Rock_Sandstone",
-          "count": 5226
+          "count": 5254
+        },
+        {
+          "name": "Rock_Sandstone_Brick",
+          "count": 5093
         },
         {
           "name": "Wood_Drywood_Planks",
-          "count": 1198
+          "count": 1180
         },
         {
           "name": "Soil_Clay_Ocean_Brick_Smooth",
           "count": 911
+        }
+      ]
+    },
+    {
+      "id": "Monuments/Unique/Mage_Towers/Sandstone/Tier_2/Monuments_MageTower_Sandstone_Tier2_002",
+      "path": "Monuments/Unique/Mage_Towers/Sandstone/Tier_2/Monuments_MageTower_Sandstone_Tier2_002.prefab.json",
+      "category": "Monuments",
+      "subcategory": "Unique/Mage_Towers/Sandstone/Tier_2",
+      "anchor": [
+        4,
+        7,
+        -3
+      ],
+      "version": 8,
+      "blockIdVersion": 11,
+      "block_count": 51240,
+      "footprint": {
+        "min": [
+          -21,
+          0,
+          -29
+        ],
+        "max": [
+          21,
+          64,
+          23
+        ],
+        "size": [
+          43,
+          65,
+          53
+        ]
+      },
+      "top_blocks": [
+        {
+          "name": "Empty",
+          "count": 19567
+        },
+        {
+          "name": "Rock_Sandstone",
+          "count": 11906
+        },
+        {
+          "name": "Rock_Sandstone_Brick",
+          "count": 7368
+        },
+        {
+          "name": "Wood_Drywood_Planks",
+          "count": 1882
+        },
+        {
+          "name": "Soil_Dirt_Dry",
+          "count": 1276
         }
       ]
     },
@@ -174005,7 +174058,7 @@
       ],
       "version": 8,
       "blockIdVersion": 11,
-      "block_count": 34974,
+      "block_count": 35095,
       "footprint": {
         "min": [
           -18,
@@ -174026,23 +174079,76 @@
       "top_blocks": [
         {
           "name": "Empty",
-          "count": 12988
+          "count": 12889
         },
         {
           "name": "Rock_Sandstone_Brick",
-          "count": 7506
+          "count": 7291
         },
         {
           "name": "Rock_Sandstone",
-          "count": 5993
+          "count": 6019
         },
         {
           "name": "Wood_Drywood_Planks",
           "count": 1914
         },
         {
-          "name": "Soil_Clay_Ocean_Brick_Smooth",
-          "count": 759
+          "name": "Rock_Sandstone_Cobble",
+          "count": 764
+        }
+      ]
+    },
+    {
+      "id": "Monuments/Unique/Mage_Towers/Sandstone/Tier_3/Monuments_MageTower_Sandstone_Tier3_002",
+      "path": "Monuments/Unique/Mage_Towers/Sandstone/Tier_3/Monuments_MageTower_Sandstone_Tier3_002.prefab.json",
+      "category": "Monuments",
+      "subcategory": "Unique/Mage_Towers/Sandstone/Tier_3",
+      "anchor": [
+        2,
+        7,
+        2
+      ],
+      "version": 8,
+      "blockIdVersion": 11,
+      "block_count": 42883,
+      "footprint": {
+        "min": [
+          -16,
+          0,
+          -15
+        ],
+        "max": [
+          35,
+          81,
+          16
+        ],
+        "size": [
+          52,
+          82,
+          32
+        ]
+      },
+      "top_blocks": [
+        {
+          "name": "Empty",
+          "count": 14547
+        },
+        {
+          "name": "Rock_Sandstone",
+          "count": 8254
+        },
+        {
+          "name": "Rock_Sandstone_Brick",
+          "count": 7453
+        },
+        {
+          "name": "Wood_Drywood_Planks",
+          "count": 3001
+        },
+        {
+          "name": "Wood_Drywood_Planks_Half",
+          "count": 1510
         }
       ]
     },
@@ -174164,44 +174270,97 @@
       ],
       "version": 8,
       "blockIdVersion": 11,
-      "block_count": 53855,
+      "block_count": 64610,
       "footprint": {
         "min": [
           -19,
           0,
-          -33
+          -34
         ],
         "max": [
-          20,
+          21,
           85,
           33
         ],
         "size": [
-          40,
+          41,
           86,
-          67
+          68
         ]
       },
       "top_blocks": [
         {
           "name": "Rock_Slate",
-          "count": 24330
+          "count": 25295
         },
         {
           "name": "Empty",
-          "count": 15764
+          "count": 22339
         },
         {
           "name": "Rock_Basalt",
-          "count": 10451
+          "count": 8006
+        },
+        {
+          "name": "Wood_Deadwood_Planks",
+          "count": 1736
         },
         {
           "name": "Soil_Ash",
-          "count": 819
+          "count": 1221
+        }
+      ]
+    },
+    {
+      "id": "Monuments/Unique/Mage_Towers/Volcanic/Tier_4/Monuments_MageTower_Volcanic_Tier4_002",
+      "path": "Monuments/Unique/Mage_Towers/Volcanic/Tier_4/Monuments_MageTower_Volcanic_Tier4_002.prefab.json",
+      "category": "Monuments",
+      "subcategory": "Unique/Mage_Towers/Volcanic/Tier_4",
+      "anchor": [
+        0,
+        6,
+        -1
+      ],
+      "version": 8,
+      "blockIdVersion": 11,
+      "block_count": 58050,
+      "footprint": {
+        "min": [
+          -33,
+          0,
+          -24
+        ],
+        "max": [
+          20,
+          95,
+          33
+        ],
+        "size": [
+          54,
+          96,
+          58
+        ]
+      },
+      "top_blocks": [
+        {
+          "name": "Rock_Slate",
+          "count": 23897
         },
         {
-          "name": "Rock_Basalt_Brick_Smooth",
-          "count": 545
+          "name": "Empty",
+          "count": 17251
+        },
+        {
+          "name": "Rock_Basalt",
+          "count": 8574
+        },
+        {
+          "name": "Soil_Ash",
+          "count": 1149
+        },
+        {
+          "name": "Rock_Basalt_Brick",
+          "count": 1075
         }
       ]
     },
@@ -174217,7 +174376,7 @@
       ],
       "version": 8,
       "blockIdVersion": 11,
-      "block_count": 24989,
+      "block_count": 23898,
       "footprint": {
         "min": [
           -17,
@@ -174238,23 +174397,23 @@
       "top_blocks": [
         {
           "name": "Empty",
-          "count": 9424
+          "count": 8257
         },
         {
           "name": "Rock_Volcanic",
-          "count": 8184
+          "count": 7149
         },
         {
           "name": "Rock_Basalt",
-          "count": 3312
+          "count": 2920
         },
         {
           "name": "Rock_Basalt_Brick",
-          "count": 1165
+          "count": 1179
         },
         {
           "name": "Rock_Basalt_Brick_Smooth",
-          "count": 886
+          "count": 1017
         }
       ]
     },
@@ -174270,44 +174429,44 @@
       ],
       "version": 8,
       "blockIdVersion": 11,
-      "block_count": 63049,
+      "block_count": 57787,
       "footprint": {
         "min": [
-          -34,
+          -25,
           0,
-          -32
+          -23
         ],
         "max": [
-          34,
-          114,
+          29,
+          101,
           33
         ],
         "size": [
-          69,
-          115,
-          66
+          55,
+          102,
+          57
         ]
       },
       "top_blocks": [
         {
+          "name": "Empty",
+          "count": 20996
+        },
+        {
           "name": "Rock_Volcanic",
-          "count": 31328
+          "count": 14156
         },
         {
           "name": "Rock_Basalt",
-          "count": 19776
-        },
-        {
-          "name": "Empty",
-          "count": 7780
+          "count": 13533
         },
         {
           "name": "Wood_Deadwood_Planks",
-          "count": 2026
+          "count": 2202
         },
         {
-          "name": "Rock_Volcanic_Cracked_Lava",
-          "count": 794
+          "name": "Rock_Basalt_Brick",
+          "count": 1330
         }
       ]
     },

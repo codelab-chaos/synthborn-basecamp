@@ -19,7 +19,7 @@ public class com.hypixel.hytale.server.core.modules.prefabspawner.commands.Prefa
 ```java
 public class com.hypixel.hytale.server.core.modules.prefabspawner.commands.PrefabSpawnerGetCommand extends com.hypixel.hytale.server.core.modules.prefabspawner.commands.TargetPrefabSpawnerCommand {
   public com.hypixel.hytale.server.core.modules.prefabspawner.commands.PrefabSpawnerGetCommand();
-  protected void execute(com.hypixel.hytale.server.core.command.system.CommandContext, com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk, com.hypixel.hytale.server.core.modules.prefabspawner.PrefabSpawnerBlock);
+  protected void execute(com.hypixel.hytale.server.core.command.system.CommandContext, com.hypixel.hytale.server.core.modules.prefabspawner.PrefabSpawnerBlock, com.hypixel.hytale.server.core.modules.block.BlockModule$BlockStateInfo);
 }
 ```
 
@@ -33,7 +33,7 @@ public class com.hypixel.hytale.server.core.modules.prefabspawner.commands.Prefa
   protected final com.hypixel.hytale.server.core.command.system.arguments.system.OptionalArg<java.lang.Boolean> inheritHeightCheckArg;
   protected final com.hypixel.hytale.server.core.command.system.arguments.system.OptionalArg<java.lang.Double> defaultWeightArg;
   public com.hypixel.hytale.server.core.modules.prefabspawner.commands.PrefabSpawnerSetCommand();
-  protected void execute(com.hypixel.hytale.server.core.command.system.CommandContext, com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk, com.hypixel.hytale.server.core.modules.prefabspawner.PrefabSpawnerBlock);
+  protected void execute(com.hypixel.hytale.server.core.command.system.CommandContext, com.hypixel.hytale.server.core.modules.prefabspawner.PrefabSpawnerBlock, com.hypixel.hytale.server.core.modules.block.BlockModule$BlockStateInfo);
   protected static boolean getOrDefault(com.hypixel.hytale.server.core.command.system.arguments.system.OptionalArg<java.lang.Boolean>, com.hypixel.hytale.server.core.command.system.CommandContext, boolean);
 }
 ```
@@ -43,7 +43,7 @@ public class com.hypixel.hytale.server.core.modules.prefabspawner.commands.Prefa
 ```java
 public class com.hypixel.hytale.server.core.modules.prefabspawner.commands.PrefabSpawnerWeightCommand extends com.hypixel.hytale.server.core.modules.prefabspawner.commands.TargetPrefabSpawnerCommand {
   public com.hypixel.hytale.server.core.modules.prefabspawner.commands.PrefabSpawnerWeightCommand();
-  protected void execute(com.hypixel.hytale.server.core.command.system.CommandContext, com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk, com.hypixel.hytale.server.core.modules.prefabspawner.PrefabSpawnerBlock);
+  protected void execute(com.hypixel.hytale.server.core.command.system.CommandContext, com.hypixel.hytale.server.core.modules.prefabspawner.PrefabSpawnerBlock, com.hypixel.hytale.server.core.modules.block.BlockModule$BlockStateInfo);
 }
 ```
 
@@ -54,6 +54,6 @@ public abstract class com.hypixel.hytale.server.core.modules.prefabspawner.comma
   protected final com.hypixel.hytale.server.core.command.system.arguments.system.OptionalArg<com.hypixel.hytale.server.core.command.system.arguments.types.RelativeIntPosition> positionArg;
   public com.hypixel.hytale.server.core.modules.prefabspawner.commands.TargetPrefabSpawnerCommand(java.lang.String, java.lang.String);
   protected void execute(com.hypixel.hytale.server.core.command.system.CommandContext, com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
-  protected abstract void execute(com.hypixel.hytale.server.core.command.system.CommandContext, com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk, com.hypixel.hytale.server.core.modules.prefabspawner.PrefabSpawnerBlock);
+  protected abstract void execute(com.hypixel.hytale.server.core.command.system.CommandContext, com.hypixel.hytale.server.core.modules.prefabspawner.PrefabSpawnerBlock, com.hypixel.hytale.server.core.modules.block.BlockModule$BlockStateInfo);
 }
 ```

@@ -63,7 +63,7 @@ public abstract class com.hypixel.hytale.server.npc.blackboard.view.BlockRegionV
 public interface com.hypixel.hytale.server.npc.blackboard.view.IBlackboardView<View extends com.hypixel.hytale.server.npc.blackboard.view.IBlackboardView<View>> {
   public abstract boolean isOutdated(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public abstract View getUpdatedView(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
-  public abstract void initialiseEntity(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.entities.NPCEntity);
+  public abstract void initialiseEntity(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.blackboard.BlackboardSubscription);
   public abstract void cleanup();
   public abstract void onWorldRemoved();
 }

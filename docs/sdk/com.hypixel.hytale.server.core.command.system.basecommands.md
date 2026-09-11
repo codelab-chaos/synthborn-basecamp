@@ -90,6 +90,7 @@ public abstract class com.hypixel.hytale.server.core.command.system.basecommands
   public com.hypixel.hytale.server.core.command.system.basecommands.AbstractTargetPlayerCommand(java.lang.String);
   protected final java.util.concurrent.CompletableFuture<java.lang.Void> executeAsync(com.hypixel.hytale.server.core.command.system.CommandContext);
   protected abstract void execute(com.hypixel.hytale.server.core.command.system.CommandContext, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.universe.PlayerRef, com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public void completeRegistration() throws com.hypixel.hytale.server.core.command.system.exceptions.GeneralCommandException;
 }
 ```
 
@@ -102,6 +103,7 @@ public abstract class com.hypixel.hytale.server.core.command.system.basecommands
   public com.hypixel.hytale.server.core.command.system.basecommands.AbstractTargetPlayersCommand(java.lang.String);
   protected final java.util.concurrent.CompletableFuture<java.lang.Void> executeAsync(com.hypixel.hytale.server.core.command.system.CommandContext);
   protected abstract void execute(com.hypixel.hytale.server.core.command.system.CommandContext, com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, java.util.List<com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>>);
+  public void completeRegistration() throws com.hypixel.hytale.server.core.command.system.exceptions.GeneralCommandException;
 }
 ```
 

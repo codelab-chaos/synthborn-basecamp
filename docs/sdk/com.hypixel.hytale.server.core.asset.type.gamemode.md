@@ -19,6 +19,23 @@ public class com.hypixel.hytale.server.core.asset.type.gamemode.GameModeType imp
   public static com.hypixel.hytale.server.core.asset.type.gamemode.GameModeType fromGameMode(com.hypixel.hytale.protocol.GameMode);
   protected com.hypixel.hytale.server.core.asset.type.gamemode.GameModeType();
   public java.lang.String getInteractionsOnEnter();
+  public boolean isSpectator();
+  public java.lang.String getMovementConfigId();
+  public java.lang.Boolean getFlying();
+  public java.lang.Boolean getNoClip();
+  public java.lang.Boolean getInvulnerable();
+  public java.lang.Boolean getIntangible();
+  public java.lang.Boolean getItemDrops();
+  public java.lang.Boolean getPreventInventoryAccess();
+  public java.lang.Boolean getPreventEmotes();
+  public java.lang.Boolean getTriggerBlocks();
+  public java.lang.String getVoiceChannel();
+  public com.hypixel.hytale.protocol.packets.interface_.HudComponent[] getHudComponents();
+  public com.hypixel.hytale.protocol.ClientCameraView getLockedCameraView();
+  public java.lang.String getEntityEffectId();
+  public java.lang.String getDeathScreenMessage();
+  public java.util.Map<com.hypixel.hytale.protocol.InteractionType, java.lang.String> getInteractionOverrides();
+  public java.lang.Boolean getOverrideAllInteractions();
   public java.lang.String getId();
   public java.lang.Object getId();
 }

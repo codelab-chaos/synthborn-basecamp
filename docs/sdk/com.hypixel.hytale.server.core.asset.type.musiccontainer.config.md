@@ -88,9 +88,6 @@ public abstract class com.hypixel.hytale.server.core.asset.type.musiccontainer.c
   public int getLoopCount();
   public void setAudioCategory(java.lang.String, int);
   public java.lang.String[] getChildIds();
-  public void refreshAudioStateResolution();
-  public static void onAudioStateLoaded(com.hypixel.hytale.assetstore.event.LoadedAssetsEvent<java.lang.String, com.hypixel.hytale.server.core.asset.type.audiostate.config.AudioState, com.hypixel.hytale.assetstore.map.IndexedLookupTableAssetMap<java.lang.String, com.hypixel.hytale.server.core.asset.type.audiostate.config.AudioState>>);
-  public static void onAudioStateRemoved(com.hypixel.hytale.assetstore.event.RemovedAssetsEvent<java.lang.String, com.hypixel.hytale.server.core.asset.type.audiostate.config.AudioState, com.hypixel.hytale.assetstore.map.IndexedLookupTableAssetMap<java.lang.String, com.hypixel.hytale.server.core.asset.type.audiostate.config.AudioState>>);
   protected void fillBasePacketFields(com.hypixel.hytale.protocol.MusicContainer);
   public java.lang.String toString();
   public java.lang.Object getId();
@@ -126,7 +123,6 @@ public class com.hypixel.hytale.server.core.asset.type.musiccontainer.config.Seg
   protected com.hypixel.hytale.server.core.asset.type.musiccontainer.config.SegmentMusicContainer();
   public com.hypixel.hytale.server.core.asset.type.musiccontainer.config.SegmentMusicContainer(java.lang.String);
   public java.lang.String[] getChildIds();
-  public void refreshAudioStateResolution();
   public com.hypixel.hytale.protocol.MusicContainer toPacket();
   public java.lang.Object toPacket();
 }

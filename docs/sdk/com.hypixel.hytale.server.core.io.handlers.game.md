@@ -15,6 +15,7 @@ public class com.hypixel.hytale.server.core.io.handlers.game.GamePacketHandler e
   public com.hypixel.hytale.server.core.universe.PlayerRef getPlayerRef();
   public void setPlayerRef(com.hypixel.hytale.server.core.universe.PlayerRef);
   public java.lang.String getIdentifier();
+  protected java.util.UUID getAccountUuid();
   protected void registered0(com.hypixel.hytale.protocol.io.ConnectionHandler);
   public void sendCommandTree();
   protected void registerHandlers();
@@ -31,10 +32,10 @@ public class com.hypixel.hytale.server.core.io.handlers.game.GamePacketHandler e
   protected void handleClientOpenWindow(com.hypixel.hytale.protocol.packets.window.ClientOpenWindow, com.hypixel.hytale.server.core.universe.PlayerRef, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public void handleSendWindowAction(com.hypixel.hytale.protocol.packets.window.SendWindowAction, com.hypixel.hytale.server.core.universe.PlayerRef, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public static void handleSyncPlayerPreferences(com.hypixel.hytale.protocol.packets.player.SyncPlayerPreferences, com.hypixel.hytale.server.core.universe.PlayerRef, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
-  public void handleClientPlaceBlock(com.hypixel.hytale.protocol.packets.player.ClientPlaceBlock, com.hypixel.hytale.server.core.universe.PlayerRef, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public void handleRemoveMapMarker(com.hypixel.hytale.protocol.packets.player.RemoveMapMarker, com.hypixel.hytale.server.core.universe.PlayerRef, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public void handleCloseWindow(com.hypixel.hytale.protocol.packets.window.CloseWindow, com.hypixel.hytale.server.core.universe.PlayerRef, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public void handle(com.hypixel.hytale.protocol.packets.serveraccess.UpdateServerAccess);
+  public void handle(com.hypixel.hytale.protocol.packets.serveraccess.ConfigureIcePeer);
   public void handle(com.hypixel.hytale.protocol.packets.serveraccess.SetServerAccess);
   public void handle(com.hypixel.hytale.protocol.packets.machinima.RequestMachinimaActorModel);
   public void handleUpdateMachinimaScene(com.hypixel.hytale.protocol.packets.machinima.UpdateMachinimaScene, com.hypixel.hytale.server.core.universe.PlayerRef, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
@@ -48,6 +49,7 @@ public class com.hypixel.hytale.server.core.io.handlers.game.GamePacketHandler e
   public void handlePlayEmote(com.hypixel.hytale.protocol.packets.entities.PlayEmote, com.hypixel.hytale.server.core.universe.PlayerRef, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public void handleSetPaused(com.hypixel.hytale.protocol.packets.world.SetPaused, com.hypixel.hytale.server.core.universe.PlayerRef, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public void handleRequestFlyCameraMode(com.hypixel.hytale.protocol.packets.camera.RequestFlyCameraMode, com.hypixel.hytale.server.core.universe.PlayerRef, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public void handleRequestNoClip(com.hypixel.hytale.protocol.packets.player.RequestNoClip, com.hypixel.hytale.server.core.universe.PlayerRef, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
 }
 ```
 

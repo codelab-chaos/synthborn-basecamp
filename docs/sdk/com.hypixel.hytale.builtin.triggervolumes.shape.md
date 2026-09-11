@@ -13,6 +13,8 @@ public class com.hypixel.hytale.builtin.triggervolumes.shape.BoxShape extends co
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.builtin.triggervolumes.shape.BoxShape> CODEC;
   public com.hypixel.hytale.builtin.triggervolumes.shape.BoxShape();
   public com.hypixel.hytale.builtin.triggervolumes.shape.BoxShape(org.joml.Vector3d, org.joml.Vector3d);
+  public com.hypixel.hytale.builtin.triggervolumes.shape.BoxShape(org.joml.Vector3d, org.joml.Vector3d, org.joml.Vector3d);
+  public boolean hasRotation();
   public boolean contains(org.joml.Vector3d, org.joml.Vector3d);
   public double getBoundingRadius();
   public double getMaxDistanceFromOrigin();
@@ -21,6 +23,8 @@ public class com.hypixel.hytale.builtin.triggervolumes.shape.BoxShape extends co
   public com.hypixel.hytale.builtin.triggervolumes.shape.BoxShape copy();
   public org.joml.Vector3d getMin();
   public org.joml.Vector3d getMax();
+  public org.joml.Vector3d getRotation();
+  public void setRotation(org.joml.Vector3d);
   public com.hypixel.hytale.builtin.triggervolumes.shape.TriggerVolumeShape copy();
 }
 ```
@@ -77,5 +81,6 @@ public abstract class com.hypixel.hytale.builtin.triggervolumes.shape.TriggerVol
   public abstract void getWorldAABB(org.joml.Vector3d, org.joml.Vector3d, org.joml.Vector3d);
   public abstract void rotateInPlace(float);
   public abstract com.hypixel.hytale.builtin.triggervolumes.shape.TriggerVolumeShape copy();
+  public static void registerBuiltinShapes();
 }
 ```

@@ -29,6 +29,7 @@ public class com.hypixel.hytale.builtin.npccombatactionevaluator.corecomponents.
   public java.lang.String getShortDescription();
   public java.lang.String getLongDescription();
   public com.hypixel.hytale.server.npc.asset.builder.BuilderDescriptorState getBuilderDescriptorState();
+  public com.hypixel.hytale.server.npc.asset.builder.Builder<com.hypixel.hytale.server.npc.instructions.Action> readConfig(com.google.gson.JsonElement);
   public java.lang.Object build(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
 }
 ```
@@ -44,6 +45,7 @@ public class com.hypixel.hytale.builtin.npccombatactionevaluator.corecomponents.
   public java.lang.String getShortDescription();
   public java.lang.String getLongDescription();
   public com.hypixel.hytale.server.npc.asset.builder.BuilderDescriptorState getBuilderDescriptorState();
+  public com.hypixel.hytale.server.npc.asset.builder.Builder<com.hypixel.hytale.server.npc.corecomponents.ISensorEntityCollector> readConfig(com.google.gson.JsonElement);
   public java.lang.Object build(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
 }
 ```
@@ -84,6 +86,7 @@ public class com.hypixel.hytale.builtin.npccombatactionevaluator.corecomponents.
   public java.lang.String getShortDescription();
   public java.lang.String getLongDescription();
   public com.hypixel.hytale.server.npc.asset.builder.BuilderDescriptorState getBuilderDescriptorState();
+  public com.hypixel.hytale.server.npc.asset.builder.Builder<com.hypixel.hytale.server.npc.instructions.Sensor> readConfig(com.google.gson.JsonElement);
   public java.lang.Object build(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
 }
 ```

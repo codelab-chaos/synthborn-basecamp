@@ -19,6 +19,7 @@ public class com.hypixel.hytale.server.core.asset.modifiers.MovementEffects impl
   protected boolean disableSprint;
   protected boolean disableJump;
   protected boolean disableCrouch;
+  protected float speedMultiplier;
   protected com.hypixel.hytale.server.core.asset.modifiers.MovementEffects();
   public boolean isDisableAll();
   public com.hypixel.hytale.protocol.MovementEffects toPacket();

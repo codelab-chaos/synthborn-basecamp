@@ -31,7 +31,7 @@ public class com.hypixel.hytale.server.core.HytaleServer {
   public static final int DEFAULT_PORT;
   public static final java.util.concurrent.ScheduledExecutorService SCHEDULED_EXECUTOR;
   public static final com.hypixel.hytale.metrics.MetricsRegistry<com.hypixel.hytale.server.core.HytaleServer> METRICS_REGISTRY;
-  public com.hypixel.hytale.server.core.HytaleServer() throws java.io.IOException;
+  public com.hypixel.hytale.server.core.HytaleServer();
   public com.hypixel.hytale.event.EventBus getEventBus();
   public com.hypixel.hytale.server.core.plugin.PluginManager getPluginManager();
   public com.hypixel.hytale.server.core.command.system.CommandManager getCommandManager();
@@ -62,6 +62,7 @@ public class com.hypixel.hytale.server.core.HytaleServer {
 public class com.hypixel.hytale.server.core.HytaleServerConfig {
   public static final int VERSION;
   public static final int DEFAULT_MAX_VIEW_RADIUS;
+  public static final int MAX_VIEW_RADIUS_LIMIT;
   public static final java.nio.file.Path PATH;
   public static final com.hypixel.hytale.common.plugin.PluginIdentifier[] PLUGIN_IDENTIFIERS;
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.server.core.HytaleServerConfig> CODEC;
@@ -73,6 +74,8 @@ public class com.hypixel.hytale.server.core.HytaleServerConfig {
   public void setMotd(java.lang.String);
   public java.lang.String getPassword();
   public void setPassword(java.lang.String);
+  public boolean isRequireJoinPermission();
+  public void setRequireJoinPermission(boolean);
   public boolean isDisplayTmpTagsInStrings();
   public void setDisplayTmpTagsInStrings(boolean);
   public int getMaxPlayers();
@@ -96,6 +99,10 @@ public class com.hypixel.hytale.server.core.HytaleServerConfig {
   public com.hypixel.hytale.common.plugin.PluginIdentifier[] getModLoadOrder();
   public com.hypixel.hytale.server.core.universe.playerdata.PlayerStorageProvider getPlayerStorageProvider();
   public void setPlayerStorageProvider(com.hypixel.hytale.server.core.universe.playerdata.PlayerStorageProvider);
+  public com.hypixel.hytale.server.core.universe.resources.IUniverseResourceStorageProvider getUniverseResourceStorageProvider();
+  public void setUniverseResourceStorageProvider(com.hypixel.hytale.server.core.universe.resources.IUniverseResourceStorageProvider);
+  public com.hypixel.hytale.server.core.modules.accesscontrol.provider.BanStorageProvider getBanStorageProvider();
+  public void setBanStorageProvider(com.hypixel.hytale.server.core.modules.accesscontrol.provider.BanStorageProvider);
   public com.hypixel.hytale.server.core.auth.AuthCredentialStoreProvider getAuthCredentialStoreProvider();
   public void setAuthCredentialStoreProvider(com.hypixel.hytale.server.core.auth.AuthCredentialStoreProvider);
   public com.hypixel.hytale.server.core.config.UpdateConfig getUpdateConfig();
@@ -113,6 +120,7 @@ public class com.hypixel.hytale.server.core.HytaleServerConfig {
   public static com.hypixel.hytale.server.core.HytaleServerConfig load(java.nio.file.Path);
   public static java.util.concurrent.CompletableFuture<java.lang.Void> save(com.hypixel.hytale.server.core.HytaleServerConfig);
   public static java.util.concurrent.CompletableFuture<java.lang.Void> save(java.nio.file.Path, com.hypixel.hytale.server.core.HytaleServerConfig);
+  public synchronized com.hypixel.hytale.math.iterator.SphereOffsets getMaxViewSphereOffsets();
 }
 ```
 
@@ -134,6 +142,7 @@ public class com.hypixel.hytale.server.core.Message {
   public com.hypixel.hytale.server.core.Message bold(boolean);
   public com.hypixel.hytale.server.core.Message italic(boolean);
   public com.hypixel.hytale.server.core.Message monospace(boolean);
+  public com.hypixel.hytale.server.core.Message strikethrough(boolean);
   public com.hypixel.hytale.server.core.Message color(java.lang.String);
   public com.hypixel.hytale.server.core.Message color(java.awt.Color);
   public com.hypixel.hytale.server.core.Message link(java.lang.String);
@@ -164,7 +173,7 @@ public final class com.hypixel.hytale.server.core.NameMatching extends java.lang
   public static final com.hypixel.hytale.server.core.NameMatching EXACT_IGNORE_CASE;
   public static final com.hypixel.hytale.server.core.NameMatching STARTS_WITH;
   public static final com.hypixel.hytale.server.core.NameMatching STARTS_WITH_IGNORE_CASE;
-  public static com.hypixel.hytale.server.core.NameMatching DEFAULT;
+  public static final com.hypixel.hytale.server.core.NameMatching DEFAULT;
   public static com.hypixel.hytale.server.core.NameMatching[] values();
   public static com.hypixel.hytale.server.core.NameMatching valueOf(java.lang.String);
   public java.util.Comparator<java.lang.String> getComparator();

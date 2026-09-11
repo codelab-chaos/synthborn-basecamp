@@ -182,11 +182,17 @@ Regenerate reference data when its upstream input changes:
 | Prefab catalog | `_Assets/Server/Prefabs` changes | `cd tools && npm run prefabs:index` |
 | Prefab module analysis | Reference prefab packs change | `cd tools && npm run prefabs:modules` |
 | Asset snapshots | New local `_Assets` drop | `cd tools && npm run assets:toc` |
+| Official patch notes | Hytale publishes an update or hotfix post | `cd tools && npm run notes:port -- <url>` |
 | Builder command catalog | SynthOverseer builder-command JSON changes | `cd tools && npm run builder:catalog` |
 | Mirrored external docs | External reference docs should be refreshed | `cd tools && npm run docs:sync` |
 | Example mod source cache | Example repo list or sources change | `cd tools && npm run examples:sync` |
 | Basecamp landing index | Landing-page config should be rebuilt from repo docs/apps | `cd tools && npm run index:json` |
 | Static Pages apps | App source or generated app data changes | `cd tools && npm run pages:build` |
+
+For Hytale releases, do not manually guess which rows apply. Start with
+`cd tools && npm run update:plan`; after review, `npm run update:apply` syncs assets and
+runs only the affected rows. The SDK SHA-256 check happens before the long class-signature
+extraction.
 
 Run `cd tools && npm run verify` after README edits, docs moves, reference refreshes,
 or app path changes. It checks JavaScript syntax, JSON parse health, stale moved
@@ -206,6 +212,7 @@ paths, local markdown links, and read-only smoke tests.
 | [`docs/hytale-mod-quickref/`](docs/hytale-mod-quickref/) | Curated server-side Hytale modding guide. |
 | [`docs/llm-hytale-modding-kb.md`](docs/llm-hytale-modding-kb.md) | Compact API and workflow router for agents. |
 | [`docs/hytale-version-update-checklist.md`](docs/hytale-version-update-checklist.md) | Checklist for asset and SDK bumps. |
+| [`docs/patch-notes/README.md`](docs/patch-notes/README.md) | Official Hytale patch notes and hotfix history, indexed by game version. |
 | [`docs/hytale-synthetics.md`](docs/hytale-synthetics.md) | Active synth/NPC architecture track. |
 | [`docs/research-bank/README.md`](docs/research-bank/README.md) | Durable NPC, behavior, AI, and world-layout research. |
 | [`docs/idea-bank/README.md`](docs/idea-bank/README.md) | Archived brainstorms and older strategy notes. |

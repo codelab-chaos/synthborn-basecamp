@@ -42,10 +42,16 @@ public class com.hypixel.hytale.server.core.ui.Area {
 ## DropdownEntryInfo
 
 ```java
-public class com.hypixel.hytale.server.core.ui.DropdownEntryInfo {
-  public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.server.core.ui.DropdownEntryInfo> CODEC;
+public final class com.hypixel.hytale.server.core.ui.DropdownEntryInfo extends java.lang.Record {
+  public static final com.hypixel.hytale.codec.record.RecordCodec<com.hypixel.hytale.server.core.ui.DropdownEntryInfo> CODEC;
   public com.hypixel.hytale.server.core.ui.DropdownEntryInfo(com.hypixel.hytale.server.core.ui.LocalizableString, java.lang.String);
   public com.hypixel.hytale.server.core.ui.DropdownEntryInfo(com.hypixel.hytale.server.core.ui.LocalizableString, java.lang.String, com.hypixel.hytale.server.core.ui.LocalizableString);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public com.hypixel.hytale.server.core.ui.LocalizableString label();
+  public java.lang.String value();
+  public com.hypixel.hytale.server.core.ui.LocalizableString tooltip();
 }
 ```
 

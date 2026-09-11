@@ -20,6 +20,7 @@ public abstract class com.hypixel.hytale.builtin.hytalegenerator.worldstructure.
 
 ```java
 public class com.hypixel.hytale.builtin.hytalegenerator.worldstructure.WorldStructure {
+  public static final com.hypixel.hytale.builtin.hytalegenerator.worldstructure.WorldStructure DEFAULT_INSTANCE;
   public com.hypixel.hytale.builtin.hytalegenerator.worldstructure.WorldStructure(com.hypixel.hytale.builtin.hytalegenerator.worldstructure.BiCarta<java.lang.Integer>, com.hypixel.hytale.builtin.hytalegenerator.Registry<com.hypixel.hytale.builtin.hytalegenerator.biome.Biome>, int, int, com.hypixel.hytale.builtin.hytalegenerator.positionproviders.PositionProvider);
   public com.hypixel.hytale.builtin.hytalegenerator.worldstructure.BiCarta<java.lang.Integer> getBiomeMap();
   public com.hypixel.hytale.builtin.hytalegenerator.Registry<com.hypixel.hytale.builtin.hytalegenerator.biome.Biome> getBiomeRegistry();

@@ -34,7 +34,7 @@ public class com.hypixel.hytale.component.Archetype<ECS_TYPE> implements com.hyp
   public void validateComponentType(com.hypixel.hytale.component.ComponentType<ECS_TYPE, ?>);
   public void validateComponents(com.hypixel.hytale.component.Component<ECS_TYPE>[], com.hypixel.hytale.component.ComponentType<ECS_TYPE, com.hypixel.hytale.component.data.unknown.UnknownComponents<ECS_TYPE>>);
   public boolean hasSerializableComponents(com.hypixel.hytale.component.ComponentRegistry$Data<ECS_TYPE>);
-  public com.hypixel.hytale.component.Archetype<ECS_TYPE> getSerializableArchetype(com.hypixel.hytale.component.ComponentRegistry$Data<ECS_TYPE>);
+  public com.hypixel.hytale.component.Archetype<ECS_TYPE> getSerializableArchetype(com.hypixel.hytale.component.ComponentRegistry$Data<ECS_TYPE>, java.util.function.Predicate<com.hypixel.hytale.component.ComponentType<ECS_TYPE, ?>>);
   public com.hypixel.hytale.component.query.ExactArchetypeQuery<ECS_TYPE> asExactQuery();
   public static <ECS_TYPE> com.hypixel.hytale.component.Archetype<ECS_TYPE> of(com.hypixel.hytale.component.ComponentType<ECS_TYPE, ?>);
   public static <ECS_TYPE> com.hypixel.hytale.component.Archetype<ECS_TYPE> of(com.hypixel.hytale.component.ComponentType<ECS_TYPE, ?>...);
@@ -72,7 +72,7 @@ public class com.hypixel.hytale.component.ArchetypeChunk<ECS_TYPE> {
   public void addEntityFrom(com.hypixel.hytale.component.Ref<ECS_TYPE>, com.hypixel.hytale.component.ArchetypeChunk<ECS_TYPE>, int);
   public void addEntityFrom(com.hypixel.hytale.component.Ref<ECS_TYPE>, com.hypixel.hytale.component.ArchetypeChunk<ECS_TYPE>, int, com.hypixel.hytale.component.ComponentType<ECS_TYPE, ?>, com.hypixel.hytale.component.Component<ECS_TYPE>);
   public com.hypixel.hytale.component.Holder<ECS_TYPE> copyEntity(int, com.hypixel.hytale.component.Holder<ECS_TYPE>);
-  public com.hypixel.hytale.component.Holder<ECS_TYPE> copySerializableEntity(com.hypixel.hytale.component.ComponentRegistry$Data<ECS_TYPE>, int, com.hypixel.hytale.component.Holder<ECS_TYPE>);
+  public com.hypixel.hytale.component.Holder<ECS_TYPE> copySerializableEntity(com.hypixel.hytale.component.ComponentRegistry$Data<ECS_TYPE>, int, com.hypixel.hytale.component.Holder<ECS_TYPE>, java.util.function.Predicate<com.hypixel.hytale.component.ComponentType<ECS_TYPE, ?>>);
   public com.hypixel.hytale.component.Holder<ECS_TYPE> removeEntity(int, com.hypixel.hytale.component.Holder<ECS_TYPE>);
   public void transferTo(com.hypixel.hytale.component.Holder<ECS_TYPE>, com.hypixel.hytale.component.ArchetypeChunk<ECS_TYPE>, java.util.function.Consumer<com.hypixel.hytale.component.Holder<ECS_TYPE>>, com.hypixel.hytale.function.consumer.IntObjectConsumer<com.hypixel.hytale.component.Ref<ECS_TYPE>>);
   public void transferSomeTo(com.hypixel.hytale.component.Holder<ECS_TYPE>, com.hypixel.hytale.component.ArchetypeChunk<ECS_TYPE>, java.util.function.IntPredicate, java.util.function.Consumer<com.hypixel.hytale.component.Holder<ECS_TYPE>>, com.hypixel.hytale.function.consumer.IntObjectConsumer<com.hypixel.hytale.component.Ref<ECS_TYPE>>);
@@ -222,7 +222,7 @@ public class com.hypixel.hytale.component.ComponentRegistry<ECS_TYPE> implements
   public com.hypixel.hytale.component.Holder<ECS_TYPE> newHolder();
   public com.hypixel.hytale.component.Holder<ECS_TYPE> newHolder(com.hypixel.hytale.component.Archetype<ECS_TYPE>, com.hypixel.hytale.component.Component<ECS_TYPE>[]);
   protected com.hypixel.hytale.component.Holder<ECS_TYPE> _internal_newEntityHolder();
-  protected com.hypixel.hytale.component.ComponentRegistry$Data<ECS_TYPE> _internal_getData();
+  public com.hypixel.hytale.component.ComponentRegistry$Data<ECS_TYPE> _internal_getData();
   public com.hypixel.hytale.component.ComponentRegistry$Data<ECS_TYPE> getData();
   public com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.component.Holder<ECS_TYPE>> getEntityCodec();
   public void assertInStoreThread();
@@ -323,6 +323,7 @@ public class com.hypixel.hytale.component.Holder<ECS_TYPE> {
   public void updateData(com.hypixel.hytale.component.ComponentRegistry$Data<ECS_TYPE>, com.hypixel.hytale.component.ComponentRegistry$Data<ECS_TYPE>);
   public com.hypixel.hytale.component.Holder<ECS_TYPE> clone();
   public com.hypixel.hytale.component.Holder<ECS_TYPE> cloneSerializable(com.hypixel.hytale.component.ComponentRegistry$Data<ECS_TYPE>);
+  public com.hypixel.hytale.component.Holder<ECS_TYPE> cloneSerializable(com.hypixel.hytale.component.ComponentRegistry$Data<ECS_TYPE>, java.util.function.Predicate<com.hypixel.hytale.component.ComponentType<ECS_TYPE, ?>>);
   public boolean equals(java.lang.Object);
   public int hashCode();
   public java.lang.String toString();
@@ -493,7 +494,7 @@ public class com.hypixel.hytale.component.Store<ECS_TYPE> implements com.hypixel
   public com.hypixel.hytale.component.Holder<ECS_TYPE> copyEntity(com.hypixel.hytale.component.Ref<ECS_TYPE>);
   public com.hypixel.hytale.component.Holder<ECS_TYPE> copyEntity(com.hypixel.hytale.component.Ref<ECS_TYPE>, com.hypixel.hytale.component.Holder<ECS_TYPE>);
   public com.hypixel.hytale.component.Holder<ECS_TYPE> copySerializableEntity(com.hypixel.hytale.component.Ref<ECS_TYPE>);
-  public com.hypixel.hytale.component.Holder<ECS_TYPE> copySerializableEntity(com.hypixel.hytale.component.Ref<ECS_TYPE>, com.hypixel.hytale.component.Holder<ECS_TYPE>);
+  public com.hypixel.hytale.component.Holder<ECS_TYPE> copySerializableEntity(com.hypixel.hytale.component.Ref<ECS_TYPE>, com.hypixel.hytale.component.Holder<ECS_TYPE>, java.util.function.Predicate<com.hypixel.hytale.component.ComponentType<ECS_TYPE, ?>>);
   public com.hypixel.hytale.component.Archetype<ECS_TYPE> getArchetype(com.hypixel.hytale.component.Ref<ECS_TYPE>);
   protected com.hypixel.hytale.component.Archetype<ECS_TYPE> __internal_getArchetype(com.hypixel.hytale.component.Ref<ECS_TYPE>);
   public com.hypixel.hytale.component.Holder<ECS_TYPE> removeEntity(com.hypixel.hytale.component.Ref<ECS_TYPE>, com.hypixel.hytale.component.RemoveReason);

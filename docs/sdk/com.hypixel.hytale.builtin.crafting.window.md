@@ -48,7 +48,6 @@ public abstract class com.hypixel.hytale.builtin.crafting.window.CraftingWindow 
 ```java
 public class com.hypixel.hytale.builtin.crafting.window.DiagramCraftingWindow extends com.hypixel.hytale.builtin.crafting.window.CraftingWindow implements com.hypixel.hytale.server.core.entity.entities.player.windows.ItemContainerWindow {
   public com.hypixel.hytale.builtin.crafting.window.DiagramCraftingWindow(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, int, int, int, int, com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType, com.hypixel.hytale.builtin.crafting.component.BenchBlock);
-  protected void finalize();
   public boolean onOpen0(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public void onClose0(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public void handleAction(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.protocol.packets.window.WindowAction);
@@ -80,8 +79,8 @@ public class com.hypixel.hytale.builtin.crafting.window.ProcessingBenchWindow ex
   public void setFuelTime(float);
   public void setMaxFuel(int);
   public void setProgress(float);
-  public void setProcessingSlots(java.util.Set<java.lang.Short>);
-  public void setProcessingFuelSlots(java.util.Set<java.lang.Short>);
+  public void setProcessingSlots(it.unimi.dsi.fastutil.shorts.ShortSet);
+  public void setProcessingFuelSlots(it.unimi.dsi.fastutil.shorts.ShortSet);
   public void handleAction(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.protocol.packets.window.WindowAction);
   public void updateBenchTierLevel(int);
   public void onClose0(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);

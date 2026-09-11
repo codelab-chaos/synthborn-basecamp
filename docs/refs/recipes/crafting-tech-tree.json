@@ -1,6 +1,6 @@
 {
   "title": "Crafting Tech Tree",
-  "generatedAt": "2026-06-25T03:50:10.580Z",
+  "generatedAt": "2026-09-07T17:13:42.891Z",
   "recipeIndex": "docs/refs/recipes/recipes.json",
   "options": {
     "includeSalvage": false,
@@ -702,6 +702,7 @@
     "Rock_Calcite_Brick_Stairs",
     "Rock_Calcite_Brick_Wall",
     "Rock_Calcite_Cobble_Beam",
+    "Rock_Calcite_Cobble_Half",
     "Rock_Calcite_Cobble_Roof",
     "Rock_Calcite_Cobble_Roof_Flat",
     "Rock_Calcite_Cobble_Roof_Shallow",
@@ -1108,6 +1109,14 @@
     "Rock_Volcanic_Cobble_Stairs",
     "Rock_Volcanic_Cobble_Wall",
     "Rock_Volcanic_Stairs",
+    "Soil_Aqua_Gravel",
+    "Soil_Aqua_Gravel_Half",
+    "Soil_Basalt_Gravel",
+    "Soil_Basalt_Gravel_Half",
+    "Soil_Calcite_Gravel",
+    "Soil_Calcite_Gravel_Half",
+    "Soil_Chalk_Gravel",
+    "Soil_Chalk_Gravel_Half",
     "Soil_Clay",
     "Soil_Clay_Brick",
     "Soil_Clay_Brick_Beam",
@@ -1147,9 +1156,15 @@
     "Soil_Clay_Smooth_White",
     "Soil_Clay_Smooth_Yellow",
     "Soil_Clay_Smooth_Yellow2",
+    "Soil_Dirt_Burnt_Half",
     "Soil_Dirt_Cold",
+    "Soil_Dirt_Cold_Half",
     "Soil_Dirt_Dry",
+    "Soil_Dirt_Dry_Half",
+    "Soil_Dirt_Half",
+    "Soil_Dirt_Lush_Half",
     "Soil_Dirt_Poisoned",
+    "Soil_Dirt_Wet_Half",
     "Soil_Grass",
     "Soil_Grass_Burnt",
     "Soil_Grass_Cold",
@@ -1159,9 +1174,24 @@
     "Soil_Grass_Sunny",
     "Soil_Grass_Wet",
     "Soil_Gravel",
+    "Soil_Gravel_Half",
+    "Soil_Gravel_Lime",
+    "Soil_Gravel_Mossy",
+    "Soil_Gravel_Mossy_Half",
+    "Soil_Gravel_Sand",
+    "Soil_Gravel_Sand_Half",
+    "Soil_Gravel_Sand_Red",
+    "Soil_Gravel_Sand_Red_Half",
+    "Soil_Gravel_Sand_White",
+    "Soil_Gravel_Sand_White_Half",
     "Soil_Hive_Brick_Smooth_Half",
     "Soil_Hive_Corrupted_Brick_Smooth_Half",
     "Soil_Leaves",
+    "Soil_Leaves_Full",
+    "Soil_Lime_Gravel_Half",
+    "Soil_Magma_Cooled_Gravel",
+    "Soil_Magma_Cooled_Gravel_Half",
+    "Soil_Marble_Gravel_Half",
     "Soil_Mud",
     "Soil_Mud_Dry",
     "Soil_Needles",
@@ -1171,12 +1201,19 @@
     "Soil_Pathway_ThreeQuarter",
     "Soil_Pebbles",
     "Soil_Pebbles_Frozen",
+    "Soil_Quartzite_Gravel",
+    "Soil_Quartzite_Gravel_Half",
     "Soil_Sand_White_Path_Half",
+    "Soil_Shale_Gravel_Half",
+    "Soil_Slate_Gravel",
+    "Soil_Slate_Gravel_Half",
     "Soil_Snow_Brick",
     "Soil_Snow_Brick_Beam",
     "Soil_Snow_Brick_Half",
     "Soil_Snow_Brick_Stairs",
     "Soil_Snow_Brick_Wall",
+    "Soil_Volcanic_Gravel",
+    "Soil_Volcanic_Gravel_Half",
     "Survival_Trap_Grass",
     "Survival_Trap_Snapjaw",
     "Survival_Trap_Spike_Iron",
@@ -1650,7 +1687,7 @@
     },
     {
       "id": "Ingredient_Fibre",
-      "quantity": 285274
+      "quantity": 285917
     },
     {
       "id": "Ingredient_Fire_Essence",
@@ -1974,7 +2011,7 @@
     },
     {
       "id": "Rock_Calcite(type)",
-      "quantity": 14
+      "quantity": 15
     },
     {
       "id": "Rock_Chalk_Brick(type)",
@@ -2122,15 +2159,75 @@
     },
     {
       "id": "Rock(type)",
-      "quantity": 79553
+      "quantity": 79670
+    },
+    {
+      "id": "Rubble_Aqua",
+      "quantity": 6
+    },
+    {
+      "id": "Rubble_Basalt",
+      "quantity": 6
+    },
+    {
+      "id": "Rubble_Calcite",
+      "quantity": 6
+    },
+    {
+      "id": "Rubble_Chalk",
+      "quantity": 6
+    },
+    {
+      "id": "Rubble_Lime",
+      "quantity": 6
+    },
+    {
+      "id": "Rubble_Magma_Cooled",
+      "quantity": 6
+    },
+    {
+      "id": "Rubble_Marble",
+      "quantity": 6
+    },
+    {
+      "id": "Rubble_Quartzite",
+      "quantity": 6
+    },
+    {
+      "id": "Rubble_Sandstone",
+      "quantity": 6
+    },
+    {
+      "id": "Rubble_Sandstone_Red",
+      "quantity": 6
+    },
+    {
+      "id": "Rubble_Sandstone_White",
+      "quantity": 6
+    },
+    {
+      "id": "Rubble_Shale",
+      "quantity": 18
+    },
+    {
+      "id": "Rubble_Slate",
+      "quantity": 6
     },
     {
       "id": "Rubble_Stone",
-      "quantity": 3
+      "quantity": 9
+    },
+    {
+      "id": "Rubble_Stone_Mossy",
+      "quantity": 6
+    },
+    {
+      "id": "Rubble_Volcanic",
+      "quantity": 6
     },
     {
       "id": "Rubble(type)",
-      "quantity": 46
+      "quantity": 25
     },
     {
       "id": "Sands(type)",
@@ -2149,6 +2246,22 @@
       "quantity": 11
     },
     {
+      "id": "Soil_Dirt",
+      "quantity": 1
+    },
+    {
+      "id": "Soil_Dirt_Burnt",
+      "quantity": 1
+    },
+    {
+      "id": "Soil_Dirt_Lush",
+      "quantity": 1
+    },
+    {
+      "id": "Soil_Dirt_Wet",
+      "quantity": 1
+    },
+    {
       "id": "Soil_Sand_White",
       "quantity": 1
     },
@@ -2158,7 +2271,7 @@
     },
     {
       "id": "Soils(type)",
-      "quantity": 27
+      "quantity": 30
     },
     {
       "id": "Vegetables(type)",
@@ -2406,7 +2519,7 @@
     },
     {
       "id": "Wood_Trunk(type)",
-      "quantity": 189985
+      "quantity": 190347
     },
     {
       "id": "Wood_Windwillow(type)",
@@ -157962,7 +158075,7 @@
           "quantity": 46
         },
         {
-          "id": "Rubble(type)",
+          "id": "Rubble_Shale",
           "quantity": 12
         },
         {
@@ -158138,14 +158251,13 @@
               "knowledgeRequired": false,
               "children": [
                 {
-                  "kind": "resource",
-                  "id": "Rubble",
+                  "kind": "item",
+                  "id": "Rubble_Shale",
                   "quantity": 3,
-                  "key": "Rubble(type)",
+                  "key": "Rubble_Shale",
                   "dependency": {
-                    "id": "Rubble(type)",
+                    "id": "Rubble_Shale",
                     "leaf": true,
-                    "resource": true,
                     "children": []
                   }
                 },
@@ -239846,6 +239958,108 @@
       }
     },
     {
+      "id": "Rock_Calcite_Cobble_Half",
+      "leaves": [
+        {
+          "id": "Rock_Calcite(type)",
+          "quantity": 1
+        },
+        {
+          "id": "Rock(type)",
+          "quantity": 3
+        },
+        {
+          "id": "Wood_Trunk(type)",
+          "quantity": 6
+        }
+      ],
+      "tree": {
+        "id": "Rock_Calcite_Cobble_Half",
+        "recipeId": "Rock_Calcite_Cobble_Half",
+        "sourceFile": "_Assets/Server/Item/Items/Rock/Calcite/Rock_Calcite_Cobble_Half.json",
+        "bench": [
+          {
+            "type": "StructuralCrafting",
+            "id": "Builders",
+            "categories": [
+              "HalfSlab"
+            ]
+          }
+        ],
+        "timeSeconds": 0,
+        "knowledgeRequired": false,
+        "children": [
+          {
+            "kind": "resource",
+            "id": "Rock_Calcite",
+            "quantity": 1,
+            "key": "Rock_Calcite(type)",
+            "dependency": {
+              "id": "Rock_Calcite(type)",
+              "leaf": true,
+              "resource": true,
+              "children": []
+            }
+          },
+          {
+            "kind": "bench",
+            "id": "Bench_Builders",
+            "quantity": 1,
+            "key": "Bench_Builders",
+            "dependency": {
+              "id": "Bench_Builders",
+              "recipeId": "Bench_Builders",
+              "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_Builders.json",
+              "bench": [
+                {
+                  "type": "Crafting",
+                  "id": "Fieldcraft",
+                  "categories": [
+                    "Tools"
+                  ]
+                },
+                {
+                  "type": "Crafting",
+                  "id": "Workbench",
+                  "categories": [
+                    "Workbench_Crafting"
+                  ]
+                }
+              ],
+              "timeSeconds": null,
+              "knowledgeRequired": false,
+              "children": [
+                {
+                  "kind": "resource",
+                  "id": "Wood_Trunk",
+                  "quantity": 6,
+                  "key": "Wood_Trunk(type)",
+                  "dependency": {
+                    "id": "Wood_Trunk(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "resource",
+                  "id": "Rock",
+                  "quantity": 3,
+                  "key": "Rock(type)",
+                  "dependency": {
+                    "id": "Rock(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
       "id": "Rock_Calcite_Cobble_Roof",
       "leaves": [
         {
@@ -246682,7 +246896,7 @@
             "categories": []
           }
         ],
-        "timeSeconds": 10,
+        "timeSeconds": 0,
         "knowledgeRequired": false,
         "children": [
           {
@@ -282006,6 +282220,1166 @@
       }
     },
     {
+      "id": "Soil_Aqua_Gravel",
+      "leaves": [
+        {
+          "id": "Ingredient_Fibre",
+          "quantity": 20
+        },
+        {
+          "id": "Rock(type)",
+          "quantity": 3
+        },
+        {
+          "id": "Rubble_Aqua",
+          "quantity": 3
+        },
+        {
+          "id": "Wood_Trunk(type)",
+          "quantity": 10
+        }
+      ],
+      "tree": {
+        "id": "Soil_Aqua_Gravel",
+        "recipeId": "Soil_Aqua_Gravel",
+        "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Aqua_Gravel.json",
+        "bench": [
+          {
+            "type": "Crafting",
+            "id": "Farmingbench",
+            "categories": [
+              "Decorative"
+            ]
+          }
+        ],
+        "timeSeconds": 0,
+        "knowledgeRequired": false,
+        "children": [
+          {
+            "kind": "item",
+            "id": "Rubble_Aqua",
+            "quantity": 3,
+            "key": "Rubble_Aqua",
+            "dependency": {
+              "id": "Rubble_Aqua",
+              "leaf": true,
+              "children": []
+            }
+          },
+          {
+            "kind": "bench",
+            "id": "Bench_Farming",
+            "quantity": 1,
+            "key": "Bench_Farming",
+            "dependency": {
+              "id": "Bench_Farming",
+              "recipeId": "Bench_Farming",
+              "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_Farming.json",
+              "bench": [
+                {
+                  "type": "Crafting",
+                  "id": "Workbench",
+                  "categories": [
+                    "Workbench_Crafting"
+                  ]
+                }
+              ],
+              "timeSeconds": 3,
+              "knowledgeRequired": false,
+              "children": [
+                {
+                  "kind": "resource",
+                  "id": "Wood_Trunk",
+                  "quantity": 6,
+                  "key": "Wood_Trunk(type)",
+                  "dependency": {
+                    "id": "Wood_Trunk(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "item",
+                  "id": "Ingredient_Fibre",
+                  "quantity": 20,
+                  "key": "Ingredient_Fibre",
+                  "dependency": {
+                    "id": "Ingredient_Fibre",
+                    "leaf": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "bench",
+                  "id": "Bench_WorkBench",
+                  "quantity": 1,
+                  "key": "Bench_WorkBench",
+                  "dependency": {
+                    "id": "Bench_WorkBench",
+                    "recipeId": "Bench_WorkBench",
+                    "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_WorkBench.json",
+                    "bench": [
+                      {
+                        "type": "Crafting",
+                        "id": "Fieldcraft",
+                        "categories": [
+                          "Tools"
+                        ]
+                      }
+                    ],
+                    "timeSeconds": null,
+                    "knowledgeRequired": false,
+                    "children": [
+                      {
+                        "kind": "resource",
+                        "id": "Wood_Trunk",
+                        "quantity": 4,
+                        "key": "Wood_Trunk(type)",
+                        "dependency": {
+                          "id": "Wood_Trunk(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      },
+                      {
+                        "kind": "resource",
+                        "id": "Rock",
+                        "quantity": 3,
+                        "key": "Rock(type)",
+                        "dependency": {
+                          "id": "Rock(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "Soil_Aqua_Gravel_Half",
+      "leaves": [
+        {
+          "id": "Ingredient_Fibre",
+          "quantity": 20
+        },
+        {
+          "id": "Rock(type)",
+          "quantity": 3
+        },
+        {
+          "id": "Rubble_Aqua",
+          "quantity": 3
+        },
+        {
+          "id": "Wood_Trunk(type)",
+          "quantity": 10
+        }
+      ],
+      "tree": {
+        "id": "Soil_Aqua_Gravel_Half",
+        "recipeId": "Soil_Aqua_Gravel_Half",
+        "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Aqua_Gravel_Half.json",
+        "bench": [
+          {
+            "type": "Crafting",
+            "id": "Farmingbench",
+            "categories": [
+              "Decorative"
+            ]
+          }
+        ],
+        "timeSeconds": 0,
+        "knowledgeRequired": false,
+        "children": [
+          {
+            "kind": "item",
+            "id": "Rubble_Aqua",
+            "quantity": 3,
+            "key": "Rubble_Aqua",
+            "dependency": {
+              "id": "Rubble_Aqua",
+              "leaf": true,
+              "children": []
+            }
+          },
+          {
+            "kind": "bench",
+            "id": "Bench_Farming",
+            "quantity": 1,
+            "key": "Bench_Farming",
+            "dependency": {
+              "id": "Bench_Farming",
+              "recipeId": "Bench_Farming",
+              "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_Farming.json",
+              "bench": [
+                {
+                  "type": "Crafting",
+                  "id": "Workbench",
+                  "categories": [
+                    "Workbench_Crafting"
+                  ]
+                }
+              ],
+              "timeSeconds": 3,
+              "knowledgeRequired": false,
+              "children": [
+                {
+                  "kind": "resource",
+                  "id": "Wood_Trunk",
+                  "quantity": 6,
+                  "key": "Wood_Trunk(type)",
+                  "dependency": {
+                    "id": "Wood_Trunk(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "item",
+                  "id": "Ingredient_Fibre",
+                  "quantity": 20,
+                  "key": "Ingredient_Fibre",
+                  "dependency": {
+                    "id": "Ingredient_Fibre",
+                    "leaf": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "bench",
+                  "id": "Bench_WorkBench",
+                  "quantity": 1,
+                  "key": "Bench_WorkBench",
+                  "dependency": {
+                    "id": "Bench_WorkBench",
+                    "recipeId": "Bench_WorkBench",
+                    "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_WorkBench.json",
+                    "bench": [
+                      {
+                        "type": "Crafting",
+                        "id": "Fieldcraft",
+                        "categories": [
+                          "Tools"
+                        ]
+                      }
+                    ],
+                    "timeSeconds": null,
+                    "knowledgeRequired": false,
+                    "children": [
+                      {
+                        "kind": "resource",
+                        "id": "Wood_Trunk",
+                        "quantity": 4,
+                        "key": "Wood_Trunk(type)",
+                        "dependency": {
+                          "id": "Wood_Trunk(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      },
+                      {
+                        "kind": "resource",
+                        "id": "Rock",
+                        "quantity": 3,
+                        "key": "Rock(type)",
+                        "dependency": {
+                          "id": "Rock(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "Soil_Basalt_Gravel",
+      "leaves": [
+        {
+          "id": "Ingredient_Fibre",
+          "quantity": 20
+        },
+        {
+          "id": "Rock(type)",
+          "quantity": 3
+        },
+        {
+          "id": "Rubble_Basalt",
+          "quantity": 3
+        },
+        {
+          "id": "Wood_Trunk(type)",
+          "quantity": 10
+        }
+      ],
+      "tree": {
+        "id": "Soil_Basalt_Gravel",
+        "recipeId": "Soil_Basalt_Gravel",
+        "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Basalt_Gravel.json",
+        "bench": [
+          {
+            "type": "Crafting",
+            "id": "Farmingbench",
+            "categories": [
+              "Decorative"
+            ]
+          }
+        ],
+        "timeSeconds": 0,
+        "knowledgeRequired": false,
+        "children": [
+          {
+            "kind": "item",
+            "id": "Rubble_Basalt",
+            "quantity": 3,
+            "key": "Rubble_Basalt",
+            "dependency": {
+              "id": "Rubble_Basalt",
+              "leaf": true,
+              "children": []
+            }
+          },
+          {
+            "kind": "bench",
+            "id": "Bench_Farming",
+            "quantity": 1,
+            "key": "Bench_Farming",
+            "dependency": {
+              "id": "Bench_Farming",
+              "recipeId": "Bench_Farming",
+              "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_Farming.json",
+              "bench": [
+                {
+                  "type": "Crafting",
+                  "id": "Workbench",
+                  "categories": [
+                    "Workbench_Crafting"
+                  ]
+                }
+              ],
+              "timeSeconds": 3,
+              "knowledgeRequired": false,
+              "children": [
+                {
+                  "kind": "resource",
+                  "id": "Wood_Trunk",
+                  "quantity": 6,
+                  "key": "Wood_Trunk(type)",
+                  "dependency": {
+                    "id": "Wood_Trunk(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "item",
+                  "id": "Ingredient_Fibre",
+                  "quantity": 20,
+                  "key": "Ingredient_Fibre",
+                  "dependency": {
+                    "id": "Ingredient_Fibre",
+                    "leaf": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "bench",
+                  "id": "Bench_WorkBench",
+                  "quantity": 1,
+                  "key": "Bench_WorkBench",
+                  "dependency": {
+                    "id": "Bench_WorkBench",
+                    "recipeId": "Bench_WorkBench",
+                    "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_WorkBench.json",
+                    "bench": [
+                      {
+                        "type": "Crafting",
+                        "id": "Fieldcraft",
+                        "categories": [
+                          "Tools"
+                        ]
+                      }
+                    ],
+                    "timeSeconds": null,
+                    "knowledgeRequired": false,
+                    "children": [
+                      {
+                        "kind": "resource",
+                        "id": "Wood_Trunk",
+                        "quantity": 4,
+                        "key": "Wood_Trunk(type)",
+                        "dependency": {
+                          "id": "Wood_Trunk(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      },
+                      {
+                        "kind": "resource",
+                        "id": "Rock",
+                        "quantity": 3,
+                        "key": "Rock(type)",
+                        "dependency": {
+                          "id": "Rock(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "Soil_Basalt_Gravel_Half",
+      "leaves": [
+        {
+          "id": "Ingredient_Fibre",
+          "quantity": 20
+        },
+        {
+          "id": "Rock(type)",
+          "quantity": 3
+        },
+        {
+          "id": "Rubble_Basalt",
+          "quantity": 3
+        },
+        {
+          "id": "Wood_Trunk(type)",
+          "quantity": 10
+        }
+      ],
+      "tree": {
+        "id": "Soil_Basalt_Gravel_Half",
+        "recipeId": "Soil_Basalt_Gravel_Half",
+        "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Basalt_Gravel_Half.json",
+        "bench": [
+          {
+            "type": "Crafting",
+            "id": "Farmingbench",
+            "categories": [
+              "Decorative"
+            ]
+          }
+        ],
+        "timeSeconds": 0,
+        "knowledgeRequired": false,
+        "children": [
+          {
+            "kind": "item",
+            "id": "Rubble_Basalt",
+            "quantity": 3,
+            "key": "Rubble_Basalt",
+            "dependency": {
+              "id": "Rubble_Basalt",
+              "leaf": true,
+              "children": []
+            }
+          },
+          {
+            "kind": "bench",
+            "id": "Bench_Farming",
+            "quantity": 1,
+            "key": "Bench_Farming",
+            "dependency": {
+              "id": "Bench_Farming",
+              "recipeId": "Bench_Farming",
+              "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_Farming.json",
+              "bench": [
+                {
+                  "type": "Crafting",
+                  "id": "Workbench",
+                  "categories": [
+                    "Workbench_Crafting"
+                  ]
+                }
+              ],
+              "timeSeconds": 3,
+              "knowledgeRequired": false,
+              "children": [
+                {
+                  "kind": "resource",
+                  "id": "Wood_Trunk",
+                  "quantity": 6,
+                  "key": "Wood_Trunk(type)",
+                  "dependency": {
+                    "id": "Wood_Trunk(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "item",
+                  "id": "Ingredient_Fibre",
+                  "quantity": 20,
+                  "key": "Ingredient_Fibre",
+                  "dependency": {
+                    "id": "Ingredient_Fibre",
+                    "leaf": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "bench",
+                  "id": "Bench_WorkBench",
+                  "quantity": 1,
+                  "key": "Bench_WorkBench",
+                  "dependency": {
+                    "id": "Bench_WorkBench",
+                    "recipeId": "Bench_WorkBench",
+                    "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_WorkBench.json",
+                    "bench": [
+                      {
+                        "type": "Crafting",
+                        "id": "Fieldcraft",
+                        "categories": [
+                          "Tools"
+                        ]
+                      }
+                    ],
+                    "timeSeconds": null,
+                    "knowledgeRequired": false,
+                    "children": [
+                      {
+                        "kind": "resource",
+                        "id": "Wood_Trunk",
+                        "quantity": 4,
+                        "key": "Wood_Trunk(type)",
+                        "dependency": {
+                          "id": "Wood_Trunk(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      },
+                      {
+                        "kind": "resource",
+                        "id": "Rock",
+                        "quantity": 3,
+                        "key": "Rock(type)",
+                        "dependency": {
+                          "id": "Rock(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "Soil_Calcite_Gravel",
+      "leaves": [
+        {
+          "id": "Ingredient_Fibre",
+          "quantity": 20
+        },
+        {
+          "id": "Rock(type)",
+          "quantity": 3
+        },
+        {
+          "id": "Rubble_Calcite",
+          "quantity": 3
+        },
+        {
+          "id": "Wood_Trunk(type)",
+          "quantity": 10
+        }
+      ],
+      "tree": {
+        "id": "Soil_Calcite_Gravel",
+        "recipeId": "Soil_Calcite_Gravel",
+        "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Calcite_Gravel.json",
+        "bench": [
+          {
+            "type": "Crafting",
+            "id": "Farmingbench",
+            "categories": [
+              "Decorative"
+            ]
+          }
+        ],
+        "timeSeconds": 0,
+        "knowledgeRequired": false,
+        "children": [
+          {
+            "kind": "item",
+            "id": "Rubble_Calcite",
+            "quantity": 3,
+            "key": "Rubble_Calcite",
+            "dependency": {
+              "id": "Rubble_Calcite",
+              "leaf": true,
+              "children": []
+            }
+          },
+          {
+            "kind": "bench",
+            "id": "Bench_Farming",
+            "quantity": 1,
+            "key": "Bench_Farming",
+            "dependency": {
+              "id": "Bench_Farming",
+              "recipeId": "Bench_Farming",
+              "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_Farming.json",
+              "bench": [
+                {
+                  "type": "Crafting",
+                  "id": "Workbench",
+                  "categories": [
+                    "Workbench_Crafting"
+                  ]
+                }
+              ],
+              "timeSeconds": 3,
+              "knowledgeRequired": false,
+              "children": [
+                {
+                  "kind": "resource",
+                  "id": "Wood_Trunk",
+                  "quantity": 6,
+                  "key": "Wood_Trunk(type)",
+                  "dependency": {
+                    "id": "Wood_Trunk(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "item",
+                  "id": "Ingredient_Fibre",
+                  "quantity": 20,
+                  "key": "Ingredient_Fibre",
+                  "dependency": {
+                    "id": "Ingredient_Fibre",
+                    "leaf": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "bench",
+                  "id": "Bench_WorkBench",
+                  "quantity": 1,
+                  "key": "Bench_WorkBench",
+                  "dependency": {
+                    "id": "Bench_WorkBench",
+                    "recipeId": "Bench_WorkBench",
+                    "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_WorkBench.json",
+                    "bench": [
+                      {
+                        "type": "Crafting",
+                        "id": "Fieldcraft",
+                        "categories": [
+                          "Tools"
+                        ]
+                      }
+                    ],
+                    "timeSeconds": null,
+                    "knowledgeRequired": false,
+                    "children": [
+                      {
+                        "kind": "resource",
+                        "id": "Wood_Trunk",
+                        "quantity": 4,
+                        "key": "Wood_Trunk(type)",
+                        "dependency": {
+                          "id": "Wood_Trunk(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      },
+                      {
+                        "kind": "resource",
+                        "id": "Rock",
+                        "quantity": 3,
+                        "key": "Rock(type)",
+                        "dependency": {
+                          "id": "Rock(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "Soil_Calcite_Gravel_Half",
+      "leaves": [
+        {
+          "id": "Ingredient_Fibre",
+          "quantity": 20
+        },
+        {
+          "id": "Rock(type)",
+          "quantity": 3
+        },
+        {
+          "id": "Rubble_Calcite",
+          "quantity": 3
+        },
+        {
+          "id": "Wood_Trunk(type)",
+          "quantity": 10
+        }
+      ],
+      "tree": {
+        "id": "Soil_Calcite_Gravel_Half",
+        "recipeId": "Soil_Calcite_Gravel_Half",
+        "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Calcite_Gravel_Half.json",
+        "bench": [
+          {
+            "type": "Crafting",
+            "id": "Farmingbench",
+            "categories": [
+              "Decorative"
+            ]
+          }
+        ],
+        "timeSeconds": 0,
+        "knowledgeRequired": false,
+        "children": [
+          {
+            "kind": "item",
+            "id": "Rubble_Calcite",
+            "quantity": 3,
+            "key": "Rubble_Calcite",
+            "dependency": {
+              "id": "Rubble_Calcite",
+              "leaf": true,
+              "children": []
+            }
+          },
+          {
+            "kind": "bench",
+            "id": "Bench_Farming",
+            "quantity": 1,
+            "key": "Bench_Farming",
+            "dependency": {
+              "id": "Bench_Farming",
+              "recipeId": "Bench_Farming",
+              "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_Farming.json",
+              "bench": [
+                {
+                  "type": "Crafting",
+                  "id": "Workbench",
+                  "categories": [
+                    "Workbench_Crafting"
+                  ]
+                }
+              ],
+              "timeSeconds": 3,
+              "knowledgeRequired": false,
+              "children": [
+                {
+                  "kind": "resource",
+                  "id": "Wood_Trunk",
+                  "quantity": 6,
+                  "key": "Wood_Trunk(type)",
+                  "dependency": {
+                    "id": "Wood_Trunk(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "item",
+                  "id": "Ingredient_Fibre",
+                  "quantity": 20,
+                  "key": "Ingredient_Fibre",
+                  "dependency": {
+                    "id": "Ingredient_Fibre",
+                    "leaf": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "bench",
+                  "id": "Bench_WorkBench",
+                  "quantity": 1,
+                  "key": "Bench_WorkBench",
+                  "dependency": {
+                    "id": "Bench_WorkBench",
+                    "recipeId": "Bench_WorkBench",
+                    "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_WorkBench.json",
+                    "bench": [
+                      {
+                        "type": "Crafting",
+                        "id": "Fieldcraft",
+                        "categories": [
+                          "Tools"
+                        ]
+                      }
+                    ],
+                    "timeSeconds": null,
+                    "knowledgeRequired": false,
+                    "children": [
+                      {
+                        "kind": "resource",
+                        "id": "Wood_Trunk",
+                        "quantity": 4,
+                        "key": "Wood_Trunk(type)",
+                        "dependency": {
+                          "id": "Wood_Trunk(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      },
+                      {
+                        "kind": "resource",
+                        "id": "Rock",
+                        "quantity": 3,
+                        "key": "Rock(type)",
+                        "dependency": {
+                          "id": "Rock(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "Soil_Chalk_Gravel",
+      "leaves": [
+        {
+          "id": "Ingredient_Fibre",
+          "quantity": 20
+        },
+        {
+          "id": "Rock(type)",
+          "quantity": 3
+        },
+        {
+          "id": "Rubble_Chalk",
+          "quantity": 3
+        },
+        {
+          "id": "Wood_Trunk(type)",
+          "quantity": 10
+        }
+      ],
+      "tree": {
+        "id": "Soil_Chalk_Gravel",
+        "recipeId": "Soil_Chalk_Gravel",
+        "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Chalk_Gravel.json",
+        "bench": [
+          {
+            "type": "Crafting",
+            "id": "Farmingbench",
+            "categories": [
+              "Decorative"
+            ]
+          }
+        ],
+        "timeSeconds": 0,
+        "knowledgeRequired": false,
+        "children": [
+          {
+            "kind": "item",
+            "id": "Rubble_Chalk",
+            "quantity": 3,
+            "key": "Rubble_Chalk",
+            "dependency": {
+              "id": "Rubble_Chalk",
+              "leaf": true,
+              "children": []
+            }
+          },
+          {
+            "kind": "bench",
+            "id": "Bench_Farming",
+            "quantity": 1,
+            "key": "Bench_Farming",
+            "dependency": {
+              "id": "Bench_Farming",
+              "recipeId": "Bench_Farming",
+              "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_Farming.json",
+              "bench": [
+                {
+                  "type": "Crafting",
+                  "id": "Workbench",
+                  "categories": [
+                    "Workbench_Crafting"
+                  ]
+                }
+              ],
+              "timeSeconds": 3,
+              "knowledgeRequired": false,
+              "children": [
+                {
+                  "kind": "resource",
+                  "id": "Wood_Trunk",
+                  "quantity": 6,
+                  "key": "Wood_Trunk(type)",
+                  "dependency": {
+                    "id": "Wood_Trunk(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "item",
+                  "id": "Ingredient_Fibre",
+                  "quantity": 20,
+                  "key": "Ingredient_Fibre",
+                  "dependency": {
+                    "id": "Ingredient_Fibre",
+                    "leaf": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "bench",
+                  "id": "Bench_WorkBench",
+                  "quantity": 1,
+                  "key": "Bench_WorkBench",
+                  "dependency": {
+                    "id": "Bench_WorkBench",
+                    "recipeId": "Bench_WorkBench",
+                    "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_WorkBench.json",
+                    "bench": [
+                      {
+                        "type": "Crafting",
+                        "id": "Fieldcraft",
+                        "categories": [
+                          "Tools"
+                        ]
+                      }
+                    ],
+                    "timeSeconds": null,
+                    "knowledgeRequired": false,
+                    "children": [
+                      {
+                        "kind": "resource",
+                        "id": "Wood_Trunk",
+                        "quantity": 4,
+                        "key": "Wood_Trunk(type)",
+                        "dependency": {
+                          "id": "Wood_Trunk(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      },
+                      {
+                        "kind": "resource",
+                        "id": "Rock",
+                        "quantity": 3,
+                        "key": "Rock(type)",
+                        "dependency": {
+                          "id": "Rock(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "Soil_Chalk_Gravel_Half",
+      "leaves": [
+        {
+          "id": "Ingredient_Fibre",
+          "quantity": 20
+        },
+        {
+          "id": "Rock(type)",
+          "quantity": 3
+        },
+        {
+          "id": "Rubble_Chalk",
+          "quantity": 3
+        },
+        {
+          "id": "Wood_Trunk(type)",
+          "quantity": 10
+        }
+      ],
+      "tree": {
+        "id": "Soil_Chalk_Gravel_Half",
+        "recipeId": "Soil_Chalk_Gravel_Half",
+        "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Chalk_Gravel_Half.json",
+        "bench": [
+          {
+            "type": "Crafting",
+            "id": "Farmingbench",
+            "categories": [
+              "Decorative"
+            ]
+          }
+        ],
+        "timeSeconds": 0,
+        "knowledgeRequired": false,
+        "children": [
+          {
+            "kind": "item",
+            "id": "Rubble_Chalk",
+            "quantity": 3,
+            "key": "Rubble_Chalk",
+            "dependency": {
+              "id": "Rubble_Chalk",
+              "leaf": true,
+              "children": []
+            }
+          },
+          {
+            "kind": "bench",
+            "id": "Bench_Farming",
+            "quantity": 1,
+            "key": "Bench_Farming",
+            "dependency": {
+              "id": "Bench_Farming",
+              "recipeId": "Bench_Farming",
+              "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_Farming.json",
+              "bench": [
+                {
+                  "type": "Crafting",
+                  "id": "Workbench",
+                  "categories": [
+                    "Workbench_Crafting"
+                  ]
+                }
+              ],
+              "timeSeconds": 3,
+              "knowledgeRequired": false,
+              "children": [
+                {
+                  "kind": "resource",
+                  "id": "Wood_Trunk",
+                  "quantity": 6,
+                  "key": "Wood_Trunk(type)",
+                  "dependency": {
+                    "id": "Wood_Trunk(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "item",
+                  "id": "Ingredient_Fibre",
+                  "quantity": 20,
+                  "key": "Ingredient_Fibre",
+                  "dependency": {
+                    "id": "Ingredient_Fibre",
+                    "leaf": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "bench",
+                  "id": "Bench_WorkBench",
+                  "quantity": 1,
+                  "key": "Bench_WorkBench",
+                  "dependency": {
+                    "id": "Bench_WorkBench",
+                    "recipeId": "Bench_WorkBench",
+                    "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_WorkBench.json",
+                    "bench": [
+                      {
+                        "type": "Crafting",
+                        "id": "Fieldcraft",
+                        "categories": [
+                          "Tools"
+                        ]
+                      }
+                    ],
+                    "timeSeconds": null,
+                    "knowledgeRequired": false,
+                    "children": [
+                      {
+                        "kind": "resource",
+                        "id": "Wood_Trunk",
+                        "quantity": 4,
+                        "key": "Wood_Trunk(type)",
+                        "dependency": {
+                          "id": "Wood_Trunk(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      },
+                      {
+                        "kind": "resource",
+                        "id": "Rock",
+                        "quantity": 3,
+                        "key": "Rock(type)",
+                        "dependency": {
+                          "id": "Rock(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
       "id": "Soil_Clay",
       "leaves": [
         {
@@ -295663,6 +297037,107 @@
       }
     },
     {
+      "id": "Soil_Dirt_Burnt_Half",
+      "leaves": [
+        {
+          "id": "Rock(type)",
+          "quantity": 3
+        },
+        {
+          "id": "Soil_Dirt_Burnt",
+          "quantity": 1
+        },
+        {
+          "id": "Wood_Trunk(type)",
+          "quantity": 6
+        }
+      ],
+      "tree": {
+        "id": "Soil_Dirt_Burnt_Half",
+        "recipeId": "Soil_Dirt_Burnt_Half",
+        "sourceFile": "_Assets/Server/Item/Items/Soil/Dirt/Soil_Dirt_Burnt_Half.json",
+        "bench": [
+          {
+            "type": "StructuralCrafting",
+            "id": "Builders",
+            "categories": [
+              "HalfSlab"
+            ]
+          }
+        ],
+        "timeSeconds": 0,
+        "knowledgeRequired": false,
+        "children": [
+          {
+            "kind": "item",
+            "id": "Soil_Dirt_Burnt",
+            "quantity": 1,
+            "key": "Soil_Dirt_Burnt",
+            "dependency": {
+              "id": "Soil_Dirt_Burnt",
+              "leaf": true,
+              "children": []
+            }
+          },
+          {
+            "kind": "bench",
+            "id": "Bench_Builders",
+            "quantity": 1,
+            "key": "Bench_Builders",
+            "dependency": {
+              "id": "Bench_Builders",
+              "recipeId": "Bench_Builders",
+              "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_Builders.json",
+              "bench": [
+                {
+                  "type": "Crafting",
+                  "id": "Fieldcraft",
+                  "categories": [
+                    "Tools"
+                  ]
+                },
+                {
+                  "type": "Crafting",
+                  "id": "Workbench",
+                  "categories": [
+                    "Workbench_Crafting"
+                  ]
+                }
+              ],
+              "timeSeconds": null,
+              "knowledgeRequired": false,
+              "children": [
+                {
+                  "kind": "resource",
+                  "id": "Wood_Trunk",
+                  "quantity": 6,
+                  "key": "Wood_Trunk(type)",
+                  "dependency": {
+                    "id": "Wood_Trunk(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "resource",
+                  "id": "Rock",
+                  "quantity": 3,
+                  "key": "Rock(type)",
+                  "dependency": {
+                    "id": "Rock(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
       "id": "Soil_Dirt_Cold",
       "leaves": [
         {
@@ -295811,6 +297286,242 @@
                         }
                       }
                     ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "Soil_Dirt_Cold_Half",
+      "leaves": [
+        {
+          "id": "Ingredient_Fibre",
+          "quantity": 21
+        },
+        {
+          "id": "Rock(type)",
+          "quantity": 6
+        },
+        {
+          "id": "Soils(type)",
+          "quantity": 1
+        },
+        {
+          "id": "Wood_Trunk(type)",
+          "quantity": 16
+        }
+      ],
+      "tree": {
+        "id": "Soil_Dirt_Cold_Half",
+        "recipeId": "Soil_Dirt_Cold_Half",
+        "sourceFile": "_Assets/Server/Item/Items/Soil/Dirt/Soil_Dirt_Cold_Half.json",
+        "bench": [
+          {
+            "type": "StructuralCrafting",
+            "id": "Builders",
+            "categories": [
+              "HalfSlab"
+            ]
+          }
+        ],
+        "timeSeconds": 0,
+        "knowledgeRequired": false,
+        "children": [
+          {
+            "kind": "item",
+            "id": "Soil_Dirt_Cold",
+            "quantity": 1,
+            "key": "Soil_Dirt_Cold",
+            "dependency": {
+              "id": "Soil_Dirt_Cold",
+              "recipeId": "Soil_Dirt_Cold",
+              "sourceFile": "_Assets/Server/Item/Items/Soil/Dirt/Soil_Dirt_Cold.json",
+              "bench": [
+                {
+                  "type": "Crafting",
+                  "id": "Farmingbench",
+                  "categories": [
+                    "Decorative"
+                  ]
+                }
+              ],
+              "timeSeconds": 0,
+              "knowledgeRequired": false,
+              "children": [
+                {
+                  "kind": "resource",
+                  "id": "Soils",
+                  "quantity": 1,
+                  "key": "Soils(type)",
+                  "dependency": {
+                    "id": "Soils(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "item",
+                  "id": "Ingredient_Fibre",
+                  "quantity": 1,
+                  "key": "Ingredient_Fibre",
+                  "dependency": {
+                    "id": "Ingredient_Fibre",
+                    "leaf": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "bench",
+                  "id": "Bench_Farming",
+                  "quantity": 1,
+                  "key": "Bench_Farming",
+                  "dependency": {
+                    "id": "Bench_Farming",
+                    "recipeId": "Bench_Farming",
+                    "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_Farming.json",
+                    "bench": [
+                      {
+                        "type": "Crafting",
+                        "id": "Workbench",
+                        "categories": [
+                          "Workbench_Crafting"
+                        ]
+                      }
+                    ],
+                    "timeSeconds": 3,
+                    "knowledgeRequired": false,
+                    "children": [
+                      {
+                        "kind": "resource",
+                        "id": "Wood_Trunk",
+                        "quantity": 6,
+                        "key": "Wood_Trunk(type)",
+                        "dependency": {
+                          "id": "Wood_Trunk(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      },
+                      {
+                        "kind": "item",
+                        "id": "Ingredient_Fibre",
+                        "quantity": 20,
+                        "key": "Ingredient_Fibre",
+                        "dependency": {
+                          "id": "Ingredient_Fibre",
+                          "leaf": true,
+                          "children": []
+                        }
+                      },
+                      {
+                        "kind": "bench",
+                        "id": "Bench_WorkBench",
+                        "quantity": 1,
+                        "key": "Bench_WorkBench",
+                        "dependency": {
+                          "id": "Bench_WorkBench",
+                          "recipeId": "Bench_WorkBench",
+                          "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_WorkBench.json",
+                          "bench": [
+                            {
+                              "type": "Crafting",
+                              "id": "Fieldcraft",
+                              "categories": [
+                                "Tools"
+                              ]
+                            }
+                          ],
+                          "timeSeconds": null,
+                          "knowledgeRequired": false,
+                          "children": [
+                            {
+                              "kind": "resource",
+                              "id": "Wood_Trunk",
+                              "quantity": 4,
+                              "key": "Wood_Trunk(type)",
+                              "dependency": {
+                                "id": "Wood_Trunk(type)",
+                                "leaf": true,
+                                "resource": true,
+                                "children": []
+                              }
+                            },
+                            {
+                              "kind": "resource",
+                              "id": "Rock",
+                              "quantity": 3,
+                              "key": "Rock(type)",
+                              "dependency": {
+                                "id": "Rock(type)",
+                                "leaf": true,
+                                "resource": true,
+                                "children": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "kind": "bench",
+            "id": "Bench_Builders",
+            "quantity": 1,
+            "key": "Bench_Builders",
+            "dependency": {
+              "id": "Bench_Builders",
+              "recipeId": "Bench_Builders",
+              "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_Builders.json",
+              "bench": [
+                {
+                  "type": "Crafting",
+                  "id": "Fieldcraft",
+                  "categories": [
+                    "Tools"
+                  ]
+                },
+                {
+                  "type": "Crafting",
+                  "id": "Workbench",
+                  "categories": [
+                    "Workbench_Crafting"
+                  ]
+                }
+              ],
+              "timeSeconds": null,
+              "knowledgeRequired": false,
+              "children": [
+                {
+                  "kind": "resource",
+                  "id": "Wood_Trunk",
+                  "quantity": 6,
+                  "key": "Wood_Trunk(type)",
+                  "dependency": {
+                    "id": "Wood_Trunk(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "resource",
+                  "id": "Rock",
+                  "quantity": 3,
+                  "key": "Rock(type)",
+                  "dependency": {
+                    "id": "Rock(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
                   }
                 }
               ]
@@ -295977,6 +297688,444 @@
       }
     },
     {
+      "id": "Soil_Dirt_Dry_Half",
+      "leaves": [
+        {
+          "id": "Ingredient_Fibre",
+          "quantity": 21
+        },
+        {
+          "id": "Rock(type)",
+          "quantity": 6
+        },
+        {
+          "id": "Soils(type)",
+          "quantity": 1
+        },
+        {
+          "id": "Wood_Trunk(type)",
+          "quantity": 16
+        }
+      ],
+      "tree": {
+        "id": "Soil_Dirt_Dry_Half",
+        "recipeId": "Soil_Dirt_Dry_Half",
+        "sourceFile": "_Assets/Server/Item/Items/Soil/Dirt/Soil_Dirt_Dry_Half.json",
+        "bench": [
+          {
+            "type": "StructuralCrafting",
+            "id": "Builders",
+            "categories": [
+              "HalfSlab"
+            ]
+          }
+        ],
+        "timeSeconds": 0,
+        "knowledgeRequired": false,
+        "children": [
+          {
+            "kind": "item",
+            "id": "Soil_Dirt_Dry",
+            "quantity": 1,
+            "key": "Soil_Dirt_Dry",
+            "dependency": {
+              "id": "Soil_Dirt_Dry",
+              "recipeId": "Soil_Dirt_Dry",
+              "sourceFile": "_Assets/Server/Item/Items/Soil/Dirt/Soil_Dirt_Dry.json",
+              "bench": [
+                {
+                  "type": "Crafting",
+                  "id": "Farmingbench",
+                  "categories": [
+                    "Decorative"
+                  ]
+                }
+              ],
+              "timeSeconds": 0,
+              "knowledgeRequired": false,
+              "children": [
+                {
+                  "kind": "resource",
+                  "id": "Soils",
+                  "quantity": 1,
+                  "key": "Soils(type)",
+                  "dependency": {
+                    "id": "Soils(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "item",
+                  "id": "Ingredient_Fibre",
+                  "quantity": 1,
+                  "key": "Ingredient_Fibre",
+                  "dependency": {
+                    "id": "Ingredient_Fibre",
+                    "leaf": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "bench",
+                  "id": "Bench_Farming",
+                  "quantity": 1,
+                  "key": "Bench_Farming",
+                  "dependency": {
+                    "id": "Bench_Farming",
+                    "recipeId": "Bench_Farming",
+                    "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_Farming.json",
+                    "bench": [
+                      {
+                        "type": "Crafting",
+                        "id": "Workbench",
+                        "categories": [
+                          "Workbench_Crafting"
+                        ]
+                      }
+                    ],
+                    "timeSeconds": 3,
+                    "knowledgeRequired": false,
+                    "children": [
+                      {
+                        "kind": "resource",
+                        "id": "Wood_Trunk",
+                        "quantity": 6,
+                        "key": "Wood_Trunk(type)",
+                        "dependency": {
+                          "id": "Wood_Trunk(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      },
+                      {
+                        "kind": "item",
+                        "id": "Ingredient_Fibre",
+                        "quantity": 20,
+                        "key": "Ingredient_Fibre",
+                        "dependency": {
+                          "id": "Ingredient_Fibre",
+                          "leaf": true,
+                          "children": []
+                        }
+                      },
+                      {
+                        "kind": "bench",
+                        "id": "Bench_WorkBench",
+                        "quantity": 1,
+                        "key": "Bench_WorkBench",
+                        "dependency": {
+                          "id": "Bench_WorkBench",
+                          "recipeId": "Bench_WorkBench",
+                          "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_WorkBench.json",
+                          "bench": [
+                            {
+                              "type": "Crafting",
+                              "id": "Fieldcraft",
+                              "categories": [
+                                "Tools"
+                              ]
+                            }
+                          ],
+                          "timeSeconds": null,
+                          "knowledgeRequired": false,
+                          "children": [
+                            {
+                              "kind": "resource",
+                              "id": "Wood_Trunk",
+                              "quantity": 4,
+                              "key": "Wood_Trunk(type)",
+                              "dependency": {
+                                "id": "Wood_Trunk(type)",
+                                "leaf": true,
+                                "resource": true,
+                                "children": []
+                              }
+                            },
+                            {
+                              "kind": "resource",
+                              "id": "Rock",
+                              "quantity": 3,
+                              "key": "Rock(type)",
+                              "dependency": {
+                                "id": "Rock(type)",
+                                "leaf": true,
+                                "resource": true,
+                                "children": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "kind": "bench",
+            "id": "Bench_Builders",
+            "quantity": 1,
+            "key": "Bench_Builders",
+            "dependency": {
+              "id": "Bench_Builders",
+              "recipeId": "Bench_Builders",
+              "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_Builders.json",
+              "bench": [
+                {
+                  "type": "Crafting",
+                  "id": "Fieldcraft",
+                  "categories": [
+                    "Tools"
+                  ]
+                },
+                {
+                  "type": "Crafting",
+                  "id": "Workbench",
+                  "categories": [
+                    "Workbench_Crafting"
+                  ]
+                }
+              ],
+              "timeSeconds": null,
+              "knowledgeRequired": false,
+              "children": [
+                {
+                  "kind": "resource",
+                  "id": "Wood_Trunk",
+                  "quantity": 6,
+                  "key": "Wood_Trunk(type)",
+                  "dependency": {
+                    "id": "Wood_Trunk(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "resource",
+                  "id": "Rock",
+                  "quantity": 3,
+                  "key": "Rock(type)",
+                  "dependency": {
+                    "id": "Rock(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "Soil_Dirt_Half",
+      "leaves": [
+        {
+          "id": "Rock(type)",
+          "quantity": 3
+        },
+        {
+          "id": "Soil_Dirt",
+          "quantity": 1
+        },
+        {
+          "id": "Wood_Trunk(type)",
+          "quantity": 6
+        }
+      ],
+      "tree": {
+        "id": "Soil_Dirt_Half",
+        "recipeId": "Soil_Dirt_Half",
+        "sourceFile": "_Assets/Server/Item/Items/Soil/Dirt/Soil_Dirt_Half.json",
+        "bench": [
+          {
+            "type": "StructuralCrafting",
+            "id": "Builders",
+            "categories": [
+              "HalfSlab"
+            ]
+          }
+        ],
+        "timeSeconds": 0,
+        "knowledgeRequired": false,
+        "children": [
+          {
+            "kind": "item",
+            "id": "Soil_Dirt",
+            "quantity": 1,
+            "key": "Soil_Dirt",
+            "dependency": {
+              "id": "Soil_Dirt",
+              "leaf": true,
+              "children": []
+            }
+          },
+          {
+            "kind": "bench",
+            "id": "Bench_Builders",
+            "quantity": 1,
+            "key": "Bench_Builders",
+            "dependency": {
+              "id": "Bench_Builders",
+              "recipeId": "Bench_Builders",
+              "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_Builders.json",
+              "bench": [
+                {
+                  "type": "Crafting",
+                  "id": "Fieldcraft",
+                  "categories": [
+                    "Tools"
+                  ]
+                },
+                {
+                  "type": "Crafting",
+                  "id": "Workbench",
+                  "categories": [
+                    "Workbench_Crafting"
+                  ]
+                }
+              ],
+              "timeSeconds": null,
+              "knowledgeRequired": false,
+              "children": [
+                {
+                  "kind": "resource",
+                  "id": "Wood_Trunk",
+                  "quantity": 6,
+                  "key": "Wood_Trunk(type)",
+                  "dependency": {
+                    "id": "Wood_Trunk(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "resource",
+                  "id": "Rock",
+                  "quantity": 3,
+                  "key": "Rock(type)",
+                  "dependency": {
+                    "id": "Rock(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "Soil_Dirt_Lush_Half",
+      "leaves": [
+        {
+          "id": "Rock(type)",
+          "quantity": 3
+        },
+        {
+          "id": "Soil_Dirt_Lush",
+          "quantity": 1
+        },
+        {
+          "id": "Wood_Trunk(type)",
+          "quantity": 6
+        }
+      ],
+      "tree": {
+        "id": "Soil_Dirt_Lush_Half",
+        "recipeId": "Soil_Dirt_Lush_Half",
+        "sourceFile": "_Assets/Server/Item/Items/Soil/Dirt/Soil_Dirt_Lush_Half.json",
+        "bench": [
+          {
+            "type": "StructuralCrafting",
+            "id": "Builders",
+            "categories": [
+              "HalfSlab"
+            ]
+          }
+        ],
+        "timeSeconds": 0,
+        "knowledgeRequired": false,
+        "children": [
+          {
+            "kind": "item",
+            "id": "Soil_Dirt_Lush",
+            "quantity": 1,
+            "key": "Soil_Dirt_Lush",
+            "dependency": {
+              "id": "Soil_Dirt_Lush",
+              "leaf": true,
+              "children": []
+            }
+          },
+          {
+            "kind": "bench",
+            "id": "Bench_Builders",
+            "quantity": 1,
+            "key": "Bench_Builders",
+            "dependency": {
+              "id": "Bench_Builders",
+              "recipeId": "Bench_Builders",
+              "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_Builders.json",
+              "bench": [
+                {
+                  "type": "Crafting",
+                  "id": "Fieldcraft",
+                  "categories": [
+                    "Tools"
+                  ]
+                },
+                {
+                  "type": "Crafting",
+                  "id": "Workbench",
+                  "categories": [
+                    "Workbench_Crafting"
+                  ]
+                }
+              ],
+              "timeSeconds": null,
+              "knowledgeRequired": false,
+              "children": [
+                {
+                  "kind": "resource",
+                  "id": "Wood_Trunk",
+                  "quantity": 6,
+                  "key": "Wood_Trunk(type)",
+                  "dependency": {
+                    "id": "Wood_Trunk(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "resource",
+                  "id": "Rock",
+                  "quantity": 3,
+                  "key": "Rock(type)",
+                  "dependency": {
+                    "id": "Rock(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
       "id": "Soil_Dirt_Poisoned",
       "leaves": [
         {
@@ -296125,6 +298274,107 @@
                         }
                       }
                     ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "Soil_Dirt_Wet_Half",
+      "leaves": [
+        {
+          "id": "Rock(type)",
+          "quantity": 3
+        },
+        {
+          "id": "Soil_Dirt_Wet",
+          "quantity": 1
+        },
+        {
+          "id": "Wood_Trunk(type)",
+          "quantity": 6
+        }
+      ],
+      "tree": {
+        "id": "Soil_Dirt_Wet_Half",
+        "recipeId": "Soil_Dirt_Wet_Half",
+        "sourceFile": "_Assets/Server/Item/Items/Soil/Dirt/Soil_Dirt_Wet_Half.json",
+        "bench": [
+          {
+            "type": "StructuralCrafting",
+            "id": "Builders",
+            "categories": [
+              "HalfSlab"
+            ]
+          }
+        ],
+        "timeSeconds": 0,
+        "knowledgeRequired": false,
+        "children": [
+          {
+            "kind": "item",
+            "id": "Soil_Dirt_Wet",
+            "quantity": 1,
+            "key": "Soil_Dirt_Wet",
+            "dependency": {
+              "id": "Soil_Dirt_Wet",
+              "leaf": true,
+              "children": []
+            }
+          },
+          {
+            "kind": "bench",
+            "id": "Bench_Builders",
+            "quantity": 1,
+            "key": "Bench_Builders",
+            "dependency": {
+              "id": "Bench_Builders",
+              "recipeId": "Bench_Builders",
+              "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_Builders.json",
+              "bench": [
+                {
+                  "type": "Crafting",
+                  "id": "Fieldcraft",
+                  "categories": [
+                    "Tools"
+                  ]
+                },
+                {
+                  "type": "Crafting",
+                  "id": "Workbench",
+                  "categories": [
+                    "Workbench_Crafting"
+                  ]
+                }
+              ],
+              "timeSeconds": null,
+              "knowledgeRequired": false,
+              "children": [
+                {
+                  "kind": "resource",
+                  "id": "Wood_Trunk",
+                  "quantity": 6,
+                  "key": "Wood_Trunk(type)",
+                  "dependency": {
+                    "id": "Wood_Trunk(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "resource",
+                  "id": "Rock",
+                  "quantity": 3,
+                  "key": "Rock(type)",
+                  "dependency": {
+                    "id": "Rock(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
                   }
                 }
               ]
@@ -297401,7 +299651,7 @@
           "quantity": 3
         },
         {
-          "id": "Rubble(type)",
+          "id": "Rubble_Stone",
           "quantity": 3
         },
         {
@@ -297426,14 +299676,1463 @@
         "knowledgeRequired": false,
         "children": [
           {
-            "kind": "resource",
-            "id": "Rubble",
+            "kind": "item",
+            "id": "Rubble_Stone",
             "quantity": 3,
-            "key": "Rubble(type)",
+            "key": "Rubble_Stone",
             "dependency": {
-              "id": "Rubble(type)",
+              "id": "Rubble_Stone",
               "leaf": true,
-              "resource": true,
+              "children": []
+            }
+          },
+          {
+            "kind": "bench",
+            "id": "Bench_Farming",
+            "quantity": 1,
+            "key": "Bench_Farming",
+            "dependency": {
+              "id": "Bench_Farming",
+              "recipeId": "Bench_Farming",
+              "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_Farming.json",
+              "bench": [
+                {
+                  "type": "Crafting",
+                  "id": "Workbench",
+                  "categories": [
+                    "Workbench_Crafting"
+                  ]
+                }
+              ],
+              "timeSeconds": 3,
+              "knowledgeRequired": false,
+              "children": [
+                {
+                  "kind": "resource",
+                  "id": "Wood_Trunk",
+                  "quantity": 6,
+                  "key": "Wood_Trunk(type)",
+                  "dependency": {
+                    "id": "Wood_Trunk(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "item",
+                  "id": "Ingredient_Fibre",
+                  "quantity": 20,
+                  "key": "Ingredient_Fibre",
+                  "dependency": {
+                    "id": "Ingredient_Fibre",
+                    "leaf": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "bench",
+                  "id": "Bench_WorkBench",
+                  "quantity": 1,
+                  "key": "Bench_WorkBench",
+                  "dependency": {
+                    "id": "Bench_WorkBench",
+                    "recipeId": "Bench_WorkBench",
+                    "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_WorkBench.json",
+                    "bench": [
+                      {
+                        "type": "Crafting",
+                        "id": "Fieldcraft",
+                        "categories": [
+                          "Tools"
+                        ]
+                      }
+                    ],
+                    "timeSeconds": null,
+                    "knowledgeRequired": false,
+                    "children": [
+                      {
+                        "kind": "resource",
+                        "id": "Wood_Trunk",
+                        "quantity": 4,
+                        "key": "Wood_Trunk(type)",
+                        "dependency": {
+                          "id": "Wood_Trunk(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      },
+                      {
+                        "kind": "resource",
+                        "id": "Rock",
+                        "quantity": 3,
+                        "key": "Rock(type)",
+                        "dependency": {
+                          "id": "Rock(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "Soil_Gravel_Half",
+      "leaves": [
+        {
+          "id": "Ingredient_Fibre",
+          "quantity": 20
+        },
+        {
+          "id": "Rock(type)",
+          "quantity": 3
+        },
+        {
+          "id": "Rubble_Stone",
+          "quantity": 3
+        },
+        {
+          "id": "Wood_Trunk(type)",
+          "quantity": 10
+        }
+      ],
+      "tree": {
+        "id": "Soil_Gravel_Half",
+        "recipeId": "Soil_Gravel_Half",
+        "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Gravel_Half.json",
+        "bench": [
+          {
+            "type": "Crafting",
+            "id": "Farmingbench",
+            "categories": [
+              "Decorative"
+            ]
+          }
+        ],
+        "timeSeconds": 0,
+        "knowledgeRequired": false,
+        "children": [
+          {
+            "kind": "item",
+            "id": "Rubble_Stone",
+            "quantity": 3,
+            "key": "Rubble_Stone",
+            "dependency": {
+              "id": "Rubble_Stone",
+              "leaf": true,
+              "children": []
+            }
+          },
+          {
+            "kind": "bench",
+            "id": "Bench_Farming",
+            "quantity": 1,
+            "key": "Bench_Farming",
+            "dependency": {
+              "id": "Bench_Farming",
+              "recipeId": "Bench_Farming",
+              "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_Farming.json",
+              "bench": [
+                {
+                  "type": "Crafting",
+                  "id": "Workbench",
+                  "categories": [
+                    "Workbench_Crafting"
+                  ]
+                }
+              ],
+              "timeSeconds": 3,
+              "knowledgeRequired": false,
+              "children": [
+                {
+                  "kind": "resource",
+                  "id": "Wood_Trunk",
+                  "quantity": 6,
+                  "key": "Wood_Trunk(type)",
+                  "dependency": {
+                    "id": "Wood_Trunk(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "item",
+                  "id": "Ingredient_Fibre",
+                  "quantity": 20,
+                  "key": "Ingredient_Fibre",
+                  "dependency": {
+                    "id": "Ingredient_Fibre",
+                    "leaf": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "bench",
+                  "id": "Bench_WorkBench",
+                  "quantity": 1,
+                  "key": "Bench_WorkBench",
+                  "dependency": {
+                    "id": "Bench_WorkBench",
+                    "recipeId": "Bench_WorkBench",
+                    "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_WorkBench.json",
+                    "bench": [
+                      {
+                        "type": "Crafting",
+                        "id": "Fieldcraft",
+                        "categories": [
+                          "Tools"
+                        ]
+                      }
+                    ],
+                    "timeSeconds": null,
+                    "knowledgeRequired": false,
+                    "children": [
+                      {
+                        "kind": "resource",
+                        "id": "Wood_Trunk",
+                        "quantity": 4,
+                        "key": "Wood_Trunk(type)",
+                        "dependency": {
+                          "id": "Wood_Trunk(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      },
+                      {
+                        "kind": "resource",
+                        "id": "Rock",
+                        "quantity": 3,
+                        "key": "Rock(type)",
+                        "dependency": {
+                          "id": "Rock(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "Soil_Gravel_Lime",
+      "leaves": [
+        {
+          "id": "Ingredient_Fibre",
+          "quantity": 20
+        },
+        {
+          "id": "Rock(type)",
+          "quantity": 3
+        },
+        {
+          "id": "Rubble_Lime",
+          "quantity": 3
+        },
+        {
+          "id": "Wood_Trunk(type)",
+          "quantity": 10
+        }
+      ],
+      "tree": {
+        "id": "Soil_Gravel_Lime",
+        "recipeId": "Soil_Gravel_Lime",
+        "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Gravel_Lime.json",
+        "bench": [
+          {
+            "type": "Crafting",
+            "id": "Farmingbench",
+            "categories": [
+              "Decorative"
+            ]
+          }
+        ],
+        "timeSeconds": 0,
+        "knowledgeRequired": false,
+        "children": [
+          {
+            "kind": "item",
+            "id": "Rubble_Lime",
+            "quantity": 3,
+            "key": "Rubble_Lime",
+            "dependency": {
+              "id": "Rubble_Lime",
+              "leaf": true,
+              "children": []
+            }
+          },
+          {
+            "kind": "bench",
+            "id": "Bench_Farming",
+            "quantity": 1,
+            "key": "Bench_Farming",
+            "dependency": {
+              "id": "Bench_Farming",
+              "recipeId": "Bench_Farming",
+              "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_Farming.json",
+              "bench": [
+                {
+                  "type": "Crafting",
+                  "id": "Workbench",
+                  "categories": [
+                    "Workbench_Crafting"
+                  ]
+                }
+              ],
+              "timeSeconds": 3,
+              "knowledgeRequired": false,
+              "children": [
+                {
+                  "kind": "resource",
+                  "id": "Wood_Trunk",
+                  "quantity": 6,
+                  "key": "Wood_Trunk(type)",
+                  "dependency": {
+                    "id": "Wood_Trunk(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "item",
+                  "id": "Ingredient_Fibre",
+                  "quantity": 20,
+                  "key": "Ingredient_Fibre",
+                  "dependency": {
+                    "id": "Ingredient_Fibre",
+                    "leaf": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "bench",
+                  "id": "Bench_WorkBench",
+                  "quantity": 1,
+                  "key": "Bench_WorkBench",
+                  "dependency": {
+                    "id": "Bench_WorkBench",
+                    "recipeId": "Bench_WorkBench",
+                    "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_WorkBench.json",
+                    "bench": [
+                      {
+                        "type": "Crafting",
+                        "id": "Fieldcraft",
+                        "categories": [
+                          "Tools"
+                        ]
+                      }
+                    ],
+                    "timeSeconds": null,
+                    "knowledgeRequired": false,
+                    "children": [
+                      {
+                        "kind": "resource",
+                        "id": "Wood_Trunk",
+                        "quantity": 4,
+                        "key": "Wood_Trunk(type)",
+                        "dependency": {
+                          "id": "Wood_Trunk(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      },
+                      {
+                        "kind": "resource",
+                        "id": "Rock",
+                        "quantity": 3,
+                        "key": "Rock(type)",
+                        "dependency": {
+                          "id": "Rock(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "Soil_Gravel_Mossy",
+      "leaves": [
+        {
+          "id": "Ingredient_Fibre",
+          "quantity": 20
+        },
+        {
+          "id": "Rock(type)",
+          "quantity": 3
+        },
+        {
+          "id": "Rubble_Stone_Mossy",
+          "quantity": 3
+        },
+        {
+          "id": "Wood_Trunk(type)",
+          "quantity": 10
+        }
+      ],
+      "tree": {
+        "id": "Soil_Gravel_Mossy",
+        "recipeId": "Soil_Gravel_Mossy",
+        "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Gravel_Mossy.json",
+        "bench": [
+          {
+            "type": "Crafting",
+            "id": "Farmingbench",
+            "categories": [
+              "Decorative"
+            ]
+          }
+        ],
+        "timeSeconds": 0,
+        "knowledgeRequired": false,
+        "children": [
+          {
+            "kind": "item",
+            "id": "Rubble_Stone_Mossy",
+            "quantity": 3,
+            "key": "Rubble_Stone_Mossy",
+            "dependency": {
+              "id": "Rubble_Stone_Mossy",
+              "leaf": true,
+              "children": []
+            }
+          },
+          {
+            "kind": "bench",
+            "id": "Bench_Farming",
+            "quantity": 1,
+            "key": "Bench_Farming",
+            "dependency": {
+              "id": "Bench_Farming",
+              "recipeId": "Bench_Farming",
+              "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_Farming.json",
+              "bench": [
+                {
+                  "type": "Crafting",
+                  "id": "Workbench",
+                  "categories": [
+                    "Workbench_Crafting"
+                  ]
+                }
+              ],
+              "timeSeconds": 3,
+              "knowledgeRequired": false,
+              "children": [
+                {
+                  "kind": "resource",
+                  "id": "Wood_Trunk",
+                  "quantity": 6,
+                  "key": "Wood_Trunk(type)",
+                  "dependency": {
+                    "id": "Wood_Trunk(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "item",
+                  "id": "Ingredient_Fibre",
+                  "quantity": 20,
+                  "key": "Ingredient_Fibre",
+                  "dependency": {
+                    "id": "Ingredient_Fibre",
+                    "leaf": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "bench",
+                  "id": "Bench_WorkBench",
+                  "quantity": 1,
+                  "key": "Bench_WorkBench",
+                  "dependency": {
+                    "id": "Bench_WorkBench",
+                    "recipeId": "Bench_WorkBench",
+                    "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_WorkBench.json",
+                    "bench": [
+                      {
+                        "type": "Crafting",
+                        "id": "Fieldcraft",
+                        "categories": [
+                          "Tools"
+                        ]
+                      }
+                    ],
+                    "timeSeconds": null,
+                    "knowledgeRequired": false,
+                    "children": [
+                      {
+                        "kind": "resource",
+                        "id": "Wood_Trunk",
+                        "quantity": 4,
+                        "key": "Wood_Trunk(type)",
+                        "dependency": {
+                          "id": "Wood_Trunk(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      },
+                      {
+                        "kind": "resource",
+                        "id": "Rock",
+                        "quantity": 3,
+                        "key": "Rock(type)",
+                        "dependency": {
+                          "id": "Rock(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "Soil_Gravel_Mossy_Half",
+      "leaves": [
+        {
+          "id": "Ingredient_Fibre",
+          "quantity": 20
+        },
+        {
+          "id": "Rock(type)",
+          "quantity": 3
+        },
+        {
+          "id": "Rubble_Stone_Mossy",
+          "quantity": 3
+        },
+        {
+          "id": "Wood_Trunk(type)",
+          "quantity": 10
+        }
+      ],
+      "tree": {
+        "id": "Soil_Gravel_Mossy_Half",
+        "recipeId": "Soil_Gravel_Mossy_Half",
+        "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Gravel_Mossy_Half.json",
+        "bench": [
+          {
+            "type": "Crafting",
+            "id": "Farmingbench",
+            "categories": [
+              "Decorative"
+            ]
+          }
+        ],
+        "timeSeconds": 0,
+        "knowledgeRequired": false,
+        "children": [
+          {
+            "kind": "item",
+            "id": "Rubble_Stone_Mossy",
+            "quantity": 3,
+            "key": "Rubble_Stone_Mossy",
+            "dependency": {
+              "id": "Rubble_Stone_Mossy",
+              "leaf": true,
+              "children": []
+            }
+          },
+          {
+            "kind": "bench",
+            "id": "Bench_Farming",
+            "quantity": 1,
+            "key": "Bench_Farming",
+            "dependency": {
+              "id": "Bench_Farming",
+              "recipeId": "Bench_Farming",
+              "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_Farming.json",
+              "bench": [
+                {
+                  "type": "Crafting",
+                  "id": "Workbench",
+                  "categories": [
+                    "Workbench_Crafting"
+                  ]
+                }
+              ],
+              "timeSeconds": 3,
+              "knowledgeRequired": false,
+              "children": [
+                {
+                  "kind": "resource",
+                  "id": "Wood_Trunk",
+                  "quantity": 6,
+                  "key": "Wood_Trunk(type)",
+                  "dependency": {
+                    "id": "Wood_Trunk(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "item",
+                  "id": "Ingredient_Fibre",
+                  "quantity": 20,
+                  "key": "Ingredient_Fibre",
+                  "dependency": {
+                    "id": "Ingredient_Fibre",
+                    "leaf": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "bench",
+                  "id": "Bench_WorkBench",
+                  "quantity": 1,
+                  "key": "Bench_WorkBench",
+                  "dependency": {
+                    "id": "Bench_WorkBench",
+                    "recipeId": "Bench_WorkBench",
+                    "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_WorkBench.json",
+                    "bench": [
+                      {
+                        "type": "Crafting",
+                        "id": "Fieldcraft",
+                        "categories": [
+                          "Tools"
+                        ]
+                      }
+                    ],
+                    "timeSeconds": null,
+                    "knowledgeRequired": false,
+                    "children": [
+                      {
+                        "kind": "resource",
+                        "id": "Wood_Trunk",
+                        "quantity": 4,
+                        "key": "Wood_Trunk(type)",
+                        "dependency": {
+                          "id": "Wood_Trunk(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      },
+                      {
+                        "kind": "resource",
+                        "id": "Rock",
+                        "quantity": 3,
+                        "key": "Rock(type)",
+                        "dependency": {
+                          "id": "Rock(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "Soil_Gravel_Sand",
+      "leaves": [
+        {
+          "id": "Ingredient_Fibre",
+          "quantity": 20
+        },
+        {
+          "id": "Rock(type)",
+          "quantity": 3
+        },
+        {
+          "id": "Rubble_Sandstone",
+          "quantity": 3
+        },
+        {
+          "id": "Wood_Trunk(type)",
+          "quantity": 10
+        }
+      ],
+      "tree": {
+        "id": "Soil_Gravel_Sand",
+        "recipeId": "Soil_Gravel_Sand",
+        "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Gravel_Sand.json",
+        "bench": [
+          {
+            "type": "Crafting",
+            "id": "Farmingbench",
+            "categories": [
+              "Decorative"
+            ]
+          }
+        ],
+        "timeSeconds": 0,
+        "knowledgeRequired": false,
+        "children": [
+          {
+            "kind": "item",
+            "id": "Rubble_Sandstone",
+            "quantity": 3,
+            "key": "Rubble_Sandstone",
+            "dependency": {
+              "id": "Rubble_Sandstone",
+              "leaf": true,
+              "children": []
+            }
+          },
+          {
+            "kind": "bench",
+            "id": "Bench_Farming",
+            "quantity": 1,
+            "key": "Bench_Farming",
+            "dependency": {
+              "id": "Bench_Farming",
+              "recipeId": "Bench_Farming",
+              "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_Farming.json",
+              "bench": [
+                {
+                  "type": "Crafting",
+                  "id": "Workbench",
+                  "categories": [
+                    "Workbench_Crafting"
+                  ]
+                }
+              ],
+              "timeSeconds": 3,
+              "knowledgeRequired": false,
+              "children": [
+                {
+                  "kind": "resource",
+                  "id": "Wood_Trunk",
+                  "quantity": 6,
+                  "key": "Wood_Trunk(type)",
+                  "dependency": {
+                    "id": "Wood_Trunk(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "item",
+                  "id": "Ingredient_Fibre",
+                  "quantity": 20,
+                  "key": "Ingredient_Fibre",
+                  "dependency": {
+                    "id": "Ingredient_Fibre",
+                    "leaf": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "bench",
+                  "id": "Bench_WorkBench",
+                  "quantity": 1,
+                  "key": "Bench_WorkBench",
+                  "dependency": {
+                    "id": "Bench_WorkBench",
+                    "recipeId": "Bench_WorkBench",
+                    "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_WorkBench.json",
+                    "bench": [
+                      {
+                        "type": "Crafting",
+                        "id": "Fieldcraft",
+                        "categories": [
+                          "Tools"
+                        ]
+                      }
+                    ],
+                    "timeSeconds": null,
+                    "knowledgeRequired": false,
+                    "children": [
+                      {
+                        "kind": "resource",
+                        "id": "Wood_Trunk",
+                        "quantity": 4,
+                        "key": "Wood_Trunk(type)",
+                        "dependency": {
+                          "id": "Wood_Trunk(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      },
+                      {
+                        "kind": "resource",
+                        "id": "Rock",
+                        "quantity": 3,
+                        "key": "Rock(type)",
+                        "dependency": {
+                          "id": "Rock(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "Soil_Gravel_Sand_Half",
+      "leaves": [
+        {
+          "id": "Ingredient_Fibre",
+          "quantity": 20
+        },
+        {
+          "id": "Rock(type)",
+          "quantity": 3
+        },
+        {
+          "id": "Rubble_Sandstone",
+          "quantity": 3
+        },
+        {
+          "id": "Wood_Trunk(type)",
+          "quantity": 10
+        }
+      ],
+      "tree": {
+        "id": "Soil_Gravel_Sand_Half",
+        "recipeId": "Soil_Gravel_Sand_Half",
+        "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Gravel_Sand_Half.json",
+        "bench": [
+          {
+            "type": "Crafting",
+            "id": "Farmingbench",
+            "categories": [
+              "Decorative"
+            ]
+          }
+        ],
+        "timeSeconds": 0,
+        "knowledgeRequired": false,
+        "children": [
+          {
+            "kind": "item",
+            "id": "Rubble_Sandstone",
+            "quantity": 3,
+            "key": "Rubble_Sandstone",
+            "dependency": {
+              "id": "Rubble_Sandstone",
+              "leaf": true,
+              "children": []
+            }
+          },
+          {
+            "kind": "bench",
+            "id": "Bench_Farming",
+            "quantity": 1,
+            "key": "Bench_Farming",
+            "dependency": {
+              "id": "Bench_Farming",
+              "recipeId": "Bench_Farming",
+              "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_Farming.json",
+              "bench": [
+                {
+                  "type": "Crafting",
+                  "id": "Workbench",
+                  "categories": [
+                    "Workbench_Crafting"
+                  ]
+                }
+              ],
+              "timeSeconds": 3,
+              "knowledgeRequired": false,
+              "children": [
+                {
+                  "kind": "resource",
+                  "id": "Wood_Trunk",
+                  "quantity": 6,
+                  "key": "Wood_Trunk(type)",
+                  "dependency": {
+                    "id": "Wood_Trunk(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "item",
+                  "id": "Ingredient_Fibre",
+                  "quantity": 20,
+                  "key": "Ingredient_Fibre",
+                  "dependency": {
+                    "id": "Ingredient_Fibre",
+                    "leaf": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "bench",
+                  "id": "Bench_WorkBench",
+                  "quantity": 1,
+                  "key": "Bench_WorkBench",
+                  "dependency": {
+                    "id": "Bench_WorkBench",
+                    "recipeId": "Bench_WorkBench",
+                    "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_WorkBench.json",
+                    "bench": [
+                      {
+                        "type": "Crafting",
+                        "id": "Fieldcraft",
+                        "categories": [
+                          "Tools"
+                        ]
+                      }
+                    ],
+                    "timeSeconds": null,
+                    "knowledgeRequired": false,
+                    "children": [
+                      {
+                        "kind": "resource",
+                        "id": "Wood_Trunk",
+                        "quantity": 4,
+                        "key": "Wood_Trunk(type)",
+                        "dependency": {
+                          "id": "Wood_Trunk(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      },
+                      {
+                        "kind": "resource",
+                        "id": "Rock",
+                        "quantity": 3,
+                        "key": "Rock(type)",
+                        "dependency": {
+                          "id": "Rock(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "Soil_Gravel_Sand_Red",
+      "leaves": [
+        {
+          "id": "Ingredient_Fibre",
+          "quantity": 20
+        },
+        {
+          "id": "Rock(type)",
+          "quantity": 3
+        },
+        {
+          "id": "Rubble_Sandstone_Red",
+          "quantity": 3
+        },
+        {
+          "id": "Wood_Trunk(type)",
+          "quantity": 10
+        }
+      ],
+      "tree": {
+        "id": "Soil_Gravel_Sand_Red",
+        "recipeId": "Soil_Gravel_Sand_Red",
+        "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Gravel_Sand_Red.json",
+        "bench": [
+          {
+            "type": "Crafting",
+            "id": "Farmingbench",
+            "categories": [
+              "Decorative"
+            ]
+          }
+        ],
+        "timeSeconds": 0,
+        "knowledgeRequired": false,
+        "children": [
+          {
+            "kind": "item",
+            "id": "Rubble_Sandstone_Red",
+            "quantity": 3,
+            "key": "Rubble_Sandstone_Red",
+            "dependency": {
+              "id": "Rubble_Sandstone_Red",
+              "leaf": true,
+              "children": []
+            }
+          },
+          {
+            "kind": "bench",
+            "id": "Bench_Farming",
+            "quantity": 1,
+            "key": "Bench_Farming",
+            "dependency": {
+              "id": "Bench_Farming",
+              "recipeId": "Bench_Farming",
+              "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_Farming.json",
+              "bench": [
+                {
+                  "type": "Crafting",
+                  "id": "Workbench",
+                  "categories": [
+                    "Workbench_Crafting"
+                  ]
+                }
+              ],
+              "timeSeconds": 3,
+              "knowledgeRequired": false,
+              "children": [
+                {
+                  "kind": "resource",
+                  "id": "Wood_Trunk",
+                  "quantity": 6,
+                  "key": "Wood_Trunk(type)",
+                  "dependency": {
+                    "id": "Wood_Trunk(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "item",
+                  "id": "Ingredient_Fibre",
+                  "quantity": 20,
+                  "key": "Ingredient_Fibre",
+                  "dependency": {
+                    "id": "Ingredient_Fibre",
+                    "leaf": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "bench",
+                  "id": "Bench_WorkBench",
+                  "quantity": 1,
+                  "key": "Bench_WorkBench",
+                  "dependency": {
+                    "id": "Bench_WorkBench",
+                    "recipeId": "Bench_WorkBench",
+                    "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_WorkBench.json",
+                    "bench": [
+                      {
+                        "type": "Crafting",
+                        "id": "Fieldcraft",
+                        "categories": [
+                          "Tools"
+                        ]
+                      }
+                    ],
+                    "timeSeconds": null,
+                    "knowledgeRequired": false,
+                    "children": [
+                      {
+                        "kind": "resource",
+                        "id": "Wood_Trunk",
+                        "quantity": 4,
+                        "key": "Wood_Trunk(type)",
+                        "dependency": {
+                          "id": "Wood_Trunk(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      },
+                      {
+                        "kind": "resource",
+                        "id": "Rock",
+                        "quantity": 3,
+                        "key": "Rock(type)",
+                        "dependency": {
+                          "id": "Rock(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "Soil_Gravel_Sand_Red_Half",
+      "leaves": [
+        {
+          "id": "Ingredient_Fibre",
+          "quantity": 20
+        },
+        {
+          "id": "Rock(type)",
+          "quantity": 3
+        },
+        {
+          "id": "Rubble_Sandstone_Red",
+          "quantity": 3
+        },
+        {
+          "id": "Wood_Trunk(type)",
+          "quantity": 10
+        }
+      ],
+      "tree": {
+        "id": "Soil_Gravel_Sand_Red_Half",
+        "recipeId": "Soil_Gravel_Sand_Red_Half",
+        "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Gravel_Sand_Red_Half.json",
+        "bench": [
+          {
+            "type": "Crafting",
+            "id": "Farmingbench",
+            "categories": [
+              "Decorative"
+            ]
+          }
+        ],
+        "timeSeconds": 0,
+        "knowledgeRequired": false,
+        "children": [
+          {
+            "kind": "item",
+            "id": "Rubble_Sandstone_Red",
+            "quantity": 3,
+            "key": "Rubble_Sandstone_Red",
+            "dependency": {
+              "id": "Rubble_Sandstone_Red",
+              "leaf": true,
+              "children": []
+            }
+          },
+          {
+            "kind": "bench",
+            "id": "Bench_Farming",
+            "quantity": 1,
+            "key": "Bench_Farming",
+            "dependency": {
+              "id": "Bench_Farming",
+              "recipeId": "Bench_Farming",
+              "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_Farming.json",
+              "bench": [
+                {
+                  "type": "Crafting",
+                  "id": "Workbench",
+                  "categories": [
+                    "Workbench_Crafting"
+                  ]
+                }
+              ],
+              "timeSeconds": 3,
+              "knowledgeRequired": false,
+              "children": [
+                {
+                  "kind": "resource",
+                  "id": "Wood_Trunk",
+                  "quantity": 6,
+                  "key": "Wood_Trunk(type)",
+                  "dependency": {
+                    "id": "Wood_Trunk(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "item",
+                  "id": "Ingredient_Fibre",
+                  "quantity": 20,
+                  "key": "Ingredient_Fibre",
+                  "dependency": {
+                    "id": "Ingredient_Fibre",
+                    "leaf": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "bench",
+                  "id": "Bench_WorkBench",
+                  "quantity": 1,
+                  "key": "Bench_WorkBench",
+                  "dependency": {
+                    "id": "Bench_WorkBench",
+                    "recipeId": "Bench_WorkBench",
+                    "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_WorkBench.json",
+                    "bench": [
+                      {
+                        "type": "Crafting",
+                        "id": "Fieldcraft",
+                        "categories": [
+                          "Tools"
+                        ]
+                      }
+                    ],
+                    "timeSeconds": null,
+                    "knowledgeRequired": false,
+                    "children": [
+                      {
+                        "kind": "resource",
+                        "id": "Wood_Trunk",
+                        "quantity": 4,
+                        "key": "Wood_Trunk(type)",
+                        "dependency": {
+                          "id": "Wood_Trunk(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      },
+                      {
+                        "kind": "resource",
+                        "id": "Rock",
+                        "quantity": 3,
+                        "key": "Rock(type)",
+                        "dependency": {
+                          "id": "Rock(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "Soil_Gravel_Sand_White",
+      "leaves": [
+        {
+          "id": "Ingredient_Fibre",
+          "quantity": 20
+        },
+        {
+          "id": "Rock(type)",
+          "quantity": 3
+        },
+        {
+          "id": "Rubble_Sandstone_White",
+          "quantity": 3
+        },
+        {
+          "id": "Wood_Trunk(type)",
+          "quantity": 10
+        }
+      ],
+      "tree": {
+        "id": "Soil_Gravel_Sand_White",
+        "recipeId": "Soil_Gravel_Sand_White",
+        "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Gravel_Sand_White.json",
+        "bench": [
+          {
+            "type": "Crafting",
+            "id": "Farmingbench",
+            "categories": [
+              "Decorative"
+            ]
+          }
+        ],
+        "timeSeconds": 0,
+        "knowledgeRequired": false,
+        "children": [
+          {
+            "kind": "item",
+            "id": "Rubble_Sandstone_White",
+            "quantity": 3,
+            "key": "Rubble_Sandstone_White",
+            "dependency": {
+              "id": "Rubble_Sandstone_White",
+              "leaf": true,
+              "children": []
+            }
+          },
+          {
+            "kind": "bench",
+            "id": "Bench_Farming",
+            "quantity": 1,
+            "key": "Bench_Farming",
+            "dependency": {
+              "id": "Bench_Farming",
+              "recipeId": "Bench_Farming",
+              "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_Farming.json",
+              "bench": [
+                {
+                  "type": "Crafting",
+                  "id": "Workbench",
+                  "categories": [
+                    "Workbench_Crafting"
+                  ]
+                }
+              ],
+              "timeSeconds": 3,
+              "knowledgeRequired": false,
+              "children": [
+                {
+                  "kind": "resource",
+                  "id": "Wood_Trunk",
+                  "quantity": 6,
+                  "key": "Wood_Trunk(type)",
+                  "dependency": {
+                    "id": "Wood_Trunk(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "item",
+                  "id": "Ingredient_Fibre",
+                  "quantity": 20,
+                  "key": "Ingredient_Fibre",
+                  "dependency": {
+                    "id": "Ingredient_Fibre",
+                    "leaf": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "bench",
+                  "id": "Bench_WorkBench",
+                  "quantity": 1,
+                  "key": "Bench_WorkBench",
+                  "dependency": {
+                    "id": "Bench_WorkBench",
+                    "recipeId": "Bench_WorkBench",
+                    "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_WorkBench.json",
+                    "bench": [
+                      {
+                        "type": "Crafting",
+                        "id": "Fieldcraft",
+                        "categories": [
+                          "Tools"
+                        ]
+                      }
+                    ],
+                    "timeSeconds": null,
+                    "knowledgeRequired": false,
+                    "children": [
+                      {
+                        "kind": "resource",
+                        "id": "Wood_Trunk",
+                        "quantity": 4,
+                        "key": "Wood_Trunk(type)",
+                        "dependency": {
+                          "id": "Wood_Trunk(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      },
+                      {
+                        "kind": "resource",
+                        "id": "Rock",
+                        "quantity": 3,
+                        "key": "Rock(type)",
+                        "dependency": {
+                          "id": "Rock(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "Soil_Gravel_Sand_White_Half",
+      "leaves": [
+        {
+          "id": "Ingredient_Fibre",
+          "quantity": 20
+        },
+        {
+          "id": "Rock(type)",
+          "quantity": 3
+        },
+        {
+          "id": "Rubble_Sandstone_White",
+          "quantity": 3
+        },
+        {
+          "id": "Wood_Trunk(type)",
+          "quantity": 10
+        }
+      ],
+      "tree": {
+        "id": "Soil_Gravel_Sand_White_Half",
+        "recipeId": "Soil_Gravel_Sand_White_Half",
+        "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Gravel_Sand_White_Half.json",
+        "bench": [
+          {
+            "type": "Crafting",
+            "id": "Farmingbench",
+            "categories": [
+              "Decorative"
+            ]
+          }
+        ],
+        "timeSeconds": 0,
+        "knowledgeRequired": false,
+        "children": [
+          {
+            "kind": "item",
+            "id": "Rubble_Sandstone_White",
+            "quantity": 3,
+            "key": "Rubble_Sandstone_White",
+            "dependency": {
+              "id": "Rubble_Sandstone_White",
+              "leaf": true,
               "children": []
             }
           },
@@ -298270,6 +301969,743 @@
             "key": "Ingredient_Fibre",
             "dependency": {
               "id": "Ingredient_Fibre",
+              "leaf": true,
+              "children": []
+            }
+          },
+          {
+            "kind": "bench",
+            "id": "Bench_Farming",
+            "quantity": 1,
+            "key": "Bench_Farming",
+            "dependency": {
+              "id": "Bench_Farming",
+              "recipeId": "Bench_Farming",
+              "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_Farming.json",
+              "bench": [
+                {
+                  "type": "Crafting",
+                  "id": "Workbench",
+                  "categories": [
+                    "Workbench_Crafting"
+                  ]
+                }
+              ],
+              "timeSeconds": 3,
+              "knowledgeRequired": false,
+              "children": [
+                {
+                  "kind": "resource",
+                  "id": "Wood_Trunk",
+                  "quantity": 6,
+                  "key": "Wood_Trunk(type)",
+                  "dependency": {
+                    "id": "Wood_Trunk(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "item",
+                  "id": "Ingredient_Fibre",
+                  "quantity": 20,
+                  "key": "Ingredient_Fibre",
+                  "dependency": {
+                    "id": "Ingredient_Fibre",
+                    "leaf": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "bench",
+                  "id": "Bench_WorkBench",
+                  "quantity": 1,
+                  "key": "Bench_WorkBench",
+                  "dependency": {
+                    "id": "Bench_WorkBench",
+                    "recipeId": "Bench_WorkBench",
+                    "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_WorkBench.json",
+                    "bench": [
+                      {
+                        "type": "Crafting",
+                        "id": "Fieldcraft",
+                        "categories": [
+                          "Tools"
+                        ]
+                      }
+                    ],
+                    "timeSeconds": null,
+                    "knowledgeRequired": false,
+                    "children": [
+                      {
+                        "kind": "resource",
+                        "id": "Wood_Trunk",
+                        "quantity": 4,
+                        "key": "Wood_Trunk(type)",
+                        "dependency": {
+                          "id": "Wood_Trunk(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      },
+                      {
+                        "kind": "resource",
+                        "id": "Rock",
+                        "quantity": 3,
+                        "key": "Rock(type)",
+                        "dependency": {
+                          "id": "Rock(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "Soil_Leaves_Full",
+      "leaves": [
+        {
+          "id": "Ingredient_Fibre",
+          "quantity": 21
+        },
+        {
+          "id": "Rock(type)",
+          "quantity": 3
+        },
+        {
+          "id": "Soils(type)",
+          "quantity": 1
+        },
+        {
+          "id": "Wood_Trunk(type)",
+          "quantity": 10
+        }
+      ],
+      "tree": {
+        "id": "Soil_Leaves_Full",
+        "recipeId": "Soil_Leaves_Full",
+        "sourceFile": "_Assets/Server/Item/Items/Soil/Soil_Leaves_Full.json",
+        "bench": [
+          {
+            "type": "Crafting",
+            "id": "Farmingbench",
+            "categories": [
+              "Decorative"
+            ]
+          }
+        ],
+        "timeSeconds": 0,
+        "knowledgeRequired": false,
+        "children": [
+          {
+            "kind": "resource",
+            "id": "Soils",
+            "quantity": 1,
+            "key": "Soils(type)",
+            "dependency": {
+              "id": "Soils(type)",
+              "leaf": true,
+              "resource": true,
+              "children": []
+            }
+          },
+          {
+            "kind": "item",
+            "id": "Ingredient_Fibre",
+            "quantity": 1,
+            "key": "Ingredient_Fibre",
+            "dependency": {
+              "id": "Ingredient_Fibre",
+              "leaf": true,
+              "children": []
+            }
+          },
+          {
+            "kind": "bench",
+            "id": "Bench_Farming",
+            "quantity": 1,
+            "key": "Bench_Farming",
+            "dependency": {
+              "id": "Bench_Farming",
+              "recipeId": "Bench_Farming",
+              "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_Farming.json",
+              "bench": [
+                {
+                  "type": "Crafting",
+                  "id": "Workbench",
+                  "categories": [
+                    "Workbench_Crafting"
+                  ]
+                }
+              ],
+              "timeSeconds": 3,
+              "knowledgeRequired": false,
+              "children": [
+                {
+                  "kind": "resource",
+                  "id": "Wood_Trunk",
+                  "quantity": 6,
+                  "key": "Wood_Trunk(type)",
+                  "dependency": {
+                    "id": "Wood_Trunk(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "item",
+                  "id": "Ingredient_Fibre",
+                  "quantity": 20,
+                  "key": "Ingredient_Fibre",
+                  "dependency": {
+                    "id": "Ingredient_Fibre",
+                    "leaf": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "bench",
+                  "id": "Bench_WorkBench",
+                  "quantity": 1,
+                  "key": "Bench_WorkBench",
+                  "dependency": {
+                    "id": "Bench_WorkBench",
+                    "recipeId": "Bench_WorkBench",
+                    "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_WorkBench.json",
+                    "bench": [
+                      {
+                        "type": "Crafting",
+                        "id": "Fieldcraft",
+                        "categories": [
+                          "Tools"
+                        ]
+                      }
+                    ],
+                    "timeSeconds": null,
+                    "knowledgeRequired": false,
+                    "children": [
+                      {
+                        "kind": "resource",
+                        "id": "Wood_Trunk",
+                        "quantity": 4,
+                        "key": "Wood_Trunk(type)",
+                        "dependency": {
+                          "id": "Wood_Trunk(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      },
+                      {
+                        "kind": "resource",
+                        "id": "Rock",
+                        "quantity": 3,
+                        "key": "Rock(type)",
+                        "dependency": {
+                          "id": "Rock(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "Soil_Lime_Gravel_Half",
+      "leaves": [
+        {
+          "id": "Ingredient_Fibre",
+          "quantity": 20
+        },
+        {
+          "id": "Rock(type)",
+          "quantity": 3
+        },
+        {
+          "id": "Rubble_Lime",
+          "quantity": 3
+        },
+        {
+          "id": "Wood_Trunk(type)",
+          "quantity": 10
+        }
+      ],
+      "tree": {
+        "id": "Soil_Lime_Gravel_Half",
+        "recipeId": "Soil_Lime_Gravel_Half",
+        "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Lime_Gravel_Half.json",
+        "bench": [
+          {
+            "type": "Crafting",
+            "id": "Farmingbench",
+            "categories": [
+              "Decorative"
+            ]
+          }
+        ],
+        "timeSeconds": 0,
+        "knowledgeRequired": false,
+        "children": [
+          {
+            "kind": "item",
+            "id": "Rubble_Lime",
+            "quantity": 3,
+            "key": "Rubble_Lime",
+            "dependency": {
+              "id": "Rubble_Lime",
+              "leaf": true,
+              "children": []
+            }
+          },
+          {
+            "kind": "bench",
+            "id": "Bench_Farming",
+            "quantity": 1,
+            "key": "Bench_Farming",
+            "dependency": {
+              "id": "Bench_Farming",
+              "recipeId": "Bench_Farming",
+              "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_Farming.json",
+              "bench": [
+                {
+                  "type": "Crafting",
+                  "id": "Workbench",
+                  "categories": [
+                    "Workbench_Crafting"
+                  ]
+                }
+              ],
+              "timeSeconds": 3,
+              "knowledgeRequired": false,
+              "children": [
+                {
+                  "kind": "resource",
+                  "id": "Wood_Trunk",
+                  "quantity": 6,
+                  "key": "Wood_Trunk(type)",
+                  "dependency": {
+                    "id": "Wood_Trunk(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "item",
+                  "id": "Ingredient_Fibre",
+                  "quantity": 20,
+                  "key": "Ingredient_Fibre",
+                  "dependency": {
+                    "id": "Ingredient_Fibre",
+                    "leaf": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "bench",
+                  "id": "Bench_WorkBench",
+                  "quantity": 1,
+                  "key": "Bench_WorkBench",
+                  "dependency": {
+                    "id": "Bench_WorkBench",
+                    "recipeId": "Bench_WorkBench",
+                    "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_WorkBench.json",
+                    "bench": [
+                      {
+                        "type": "Crafting",
+                        "id": "Fieldcraft",
+                        "categories": [
+                          "Tools"
+                        ]
+                      }
+                    ],
+                    "timeSeconds": null,
+                    "knowledgeRequired": false,
+                    "children": [
+                      {
+                        "kind": "resource",
+                        "id": "Wood_Trunk",
+                        "quantity": 4,
+                        "key": "Wood_Trunk(type)",
+                        "dependency": {
+                          "id": "Wood_Trunk(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      },
+                      {
+                        "kind": "resource",
+                        "id": "Rock",
+                        "quantity": 3,
+                        "key": "Rock(type)",
+                        "dependency": {
+                          "id": "Rock(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "Soil_Magma_Cooled_Gravel",
+      "leaves": [
+        {
+          "id": "Ingredient_Fibre",
+          "quantity": 20
+        },
+        {
+          "id": "Rock(type)",
+          "quantity": 3
+        },
+        {
+          "id": "Rubble_Magma_Cooled",
+          "quantity": 3
+        },
+        {
+          "id": "Wood_Trunk(type)",
+          "quantity": 10
+        }
+      ],
+      "tree": {
+        "id": "Soil_Magma_Cooled_Gravel",
+        "recipeId": "Soil_Magma_Cooled_Gravel",
+        "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Magma_Cooled_Gravel.json",
+        "bench": [
+          {
+            "type": "Crafting",
+            "id": "Farmingbench",
+            "categories": [
+              "Decorative"
+            ]
+          }
+        ],
+        "timeSeconds": 0,
+        "knowledgeRequired": false,
+        "children": [
+          {
+            "kind": "item",
+            "id": "Rubble_Magma_Cooled",
+            "quantity": 3,
+            "key": "Rubble_Magma_Cooled",
+            "dependency": {
+              "id": "Rubble_Magma_Cooled",
+              "leaf": true,
+              "children": []
+            }
+          },
+          {
+            "kind": "bench",
+            "id": "Bench_Farming",
+            "quantity": 1,
+            "key": "Bench_Farming",
+            "dependency": {
+              "id": "Bench_Farming",
+              "recipeId": "Bench_Farming",
+              "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_Farming.json",
+              "bench": [
+                {
+                  "type": "Crafting",
+                  "id": "Workbench",
+                  "categories": [
+                    "Workbench_Crafting"
+                  ]
+                }
+              ],
+              "timeSeconds": 3,
+              "knowledgeRequired": false,
+              "children": [
+                {
+                  "kind": "resource",
+                  "id": "Wood_Trunk",
+                  "quantity": 6,
+                  "key": "Wood_Trunk(type)",
+                  "dependency": {
+                    "id": "Wood_Trunk(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "item",
+                  "id": "Ingredient_Fibre",
+                  "quantity": 20,
+                  "key": "Ingredient_Fibre",
+                  "dependency": {
+                    "id": "Ingredient_Fibre",
+                    "leaf": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "bench",
+                  "id": "Bench_WorkBench",
+                  "quantity": 1,
+                  "key": "Bench_WorkBench",
+                  "dependency": {
+                    "id": "Bench_WorkBench",
+                    "recipeId": "Bench_WorkBench",
+                    "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_WorkBench.json",
+                    "bench": [
+                      {
+                        "type": "Crafting",
+                        "id": "Fieldcraft",
+                        "categories": [
+                          "Tools"
+                        ]
+                      }
+                    ],
+                    "timeSeconds": null,
+                    "knowledgeRequired": false,
+                    "children": [
+                      {
+                        "kind": "resource",
+                        "id": "Wood_Trunk",
+                        "quantity": 4,
+                        "key": "Wood_Trunk(type)",
+                        "dependency": {
+                          "id": "Wood_Trunk(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      },
+                      {
+                        "kind": "resource",
+                        "id": "Rock",
+                        "quantity": 3,
+                        "key": "Rock(type)",
+                        "dependency": {
+                          "id": "Rock(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "Soil_Magma_Cooled_Gravel_Half",
+      "leaves": [
+        {
+          "id": "Ingredient_Fibre",
+          "quantity": 20
+        },
+        {
+          "id": "Rock(type)",
+          "quantity": 3
+        },
+        {
+          "id": "Rubble_Magma_Cooled",
+          "quantity": 3
+        },
+        {
+          "id": "Wood_Trunk(type)",
+          "quantity": 10
+        }
+      ],
+      "tree": {
+        "id": "Soil_Magma_Cooled_Gravel_Half",
+        "recipeId": "Soil_Magma_Cooled_Gravel_Half",
+        "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Magma_Cooled_Gravel_Half.json",
+        "bench": [
+          {
+            "type": "Crafting",
+            "id": "Farmingbench",
+            "categories": [
+              "Decorative"
+            ]
+          }
+        ],
+        "timeSeconds": 0,
+        "knowledgeRequired": false,
+        "children": [
+          {
+            "kind": "item",
+            "id": "Rubble_Magma_Cooled",
+            "quantity": 3,
+            "key": "Rubble_Magma_Cooled",
+            "dependency": {
+              "id": "Rubble_Magma_Cooled",
+              "leaf": true,
+              "children": []
+            }
+          },
+          {
+            "kind": "bench",
+            "id": "Bench_Farming",
+            "quantity": 1,
+            "key": "Bench_Farming",
+            "dependency": {
+              "id": "Bench_Farming",
+              "recipeId": "Bench_Farming",
+              "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_Farming.json",
+              "bench": [
+                {
+                  "type": "Crafting",
+                  "id": "Workbench",
+                  "categories": [
+                    "Workbench_Crafting"
+                  ]
+                }
+              ],
+              "timeSeconds": 3,
+              "knowledgeRequired": false,
+              "children": [
+                {
+                  "kind": "resource",
+                  "id": "Wood_Trunk",
+                  "quantity": 6,
+                  "key": "Wood_Trunk(type)",
+                  "dependency": {
+                    "id": "Wood_Trunk(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "item",
+                  "id": "Ingredient_Fibre",
+                  "quantity": 20,
+                  "key": "Ingredient_Fibre",
+                  "dependency": {
+                    "id": "Ingredient_Fibre",
+                    "leaf": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "bench",
+                  "id": "Bench_WorkBench",
+                  "quantity": 1,
+                  "key": "Bench_WorkBench",
+                  "dependency": {
+                    "id": "Bench_WorkBench",
+                    "recipeId": "Bench_WorkBench",
+                    "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_WorkBench.json",
+                    "bench": [
+                      {
+                        "type": "Crafting",
+                        "id": "Fieldcraft",
+                        "categories": [
+                          "Tools"
+                        ]
+                      }
+                    ],
+                    "timeSeconds": null,
+                    "knowledgeRequired": false,
+                    "children": [
+                      {
+                        "kind": "resource",
+                        "id": "Wood_Trunk",
+                        "quantity": 4,
+                        "key": "Wood_Trunk(type)",
+                        "dependency": {
+                          "id": "Wood_Trunk(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      },
+                      {
+                        "kind": "resource",
+                        "id": "Rock",
+                        "quantity": 3,
+                        "key": "Rock(type)",
+                        "dependency": {
+                          "id": "Rock(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "Soil_Marble_Gravel_Half",
+      "leaves": [
+        {
+          "id": "Ingredient_Fibre",
+          "quantity": 20
+        },
+        {
+          "id": "Rock(type)",
+          "quantity": 3
+        },
+        {
+          "id": "Rubble_Marble",
+          "quantity": 3
+        },
+        {
+          "id": "Wood_Trunk(type)",
+          "quantity": 10
+        }
+      ],
+      "tree": {
+        "id": "Soil_Marble_Gravel_Half",
+        "recipeId": "Soil_Marble_Gravel_Half",
+        "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Marble_Gravel_Half.json",
+        "bench": [
+          {
+            "type": "Crafting",
+            "id": "Farmingbench",
+            "categories": [
+              "Decorative"
+            ]
+          }
+        ],
+        "timeSeconds": 0,
+        "knowledgeRequired": false,
+        "children": [
+          {
+            "kind": "item",
+            "id": "Rubble_Marble",
+            "quantity": 3,
+            "key": "Rubble_Marble",
+            "dependency": {
+              "id": "Rubble_Marble",
               "leaf": true,
               "children": []
             }
@@ -299720,7 +304156,7 @@
           "quantity": 3
         },
         {
-          "id": "Rubble(type)",
+          "id": "Rubble_Marble",
           "quantity": 3
         },
         {
@@ -299745,14 +304181,13 @@
         "knowledgeRequired": false,
         "children": [
           {
-            "kind": "resource",
-            "id": "Rubble",
+            "kind": "item",
+            "id": "Rubble_Marble",
             "quantity": 3,
-            "key": "Rubble(type)",
+            "key": "Rubble_Marble",
             "dependency": {
-              "id": "Rubble(type)",
+              "id": "Rubble_Marble",
               "leaf": true,
-              "resource": true,
               "children": []
             }
           },
@@ -299866,7 +304301,7 @@
           "quantity": 3
         },
         {
-          "id": "Rubble(type)",
+          "id": "Rubble_Shale",
           "quantity": 3
         },
         {
@@ -299891,14 +304326,303 @@
         "knowledgeRequired": false,
         "children": [
           {
-            "kind": "resource",
-            "id": "Rubble",
+            "kind": "item",
+            "id": "Rubble_Shale",
             "quantity": 3,
-            "key": "Rubble(type)",
+            "key": "Rubble_Shale",
             "dependency": {
-              "id": "Rubble(type)",
+              "id": "Rubble_Shale",
               "leaf": true,
-              "resource": true,
+              "children": []
+            }
+          },
+          {
+            "kind": "bench",
+            "id": "Bench_Farming",
+            "quantity": 1,
+            "key": "Bench_Farming",
+            "dependency": {
+              "id": "Bench_Farming",
+              "recipeId": "Bench_Farming",
+              "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_Farming.json",
+              "bench": [
+                {
+                  "type": "Crafting",
+                  "id": "Workbench",
+                  "categories": [
+                    "Workbench_Crafting"
+                  ]
+                }
+              ],
+              "timeSeconds": 3,
+              "knowledgeRequired": false,
+              "children": [
+                {
+                  "kind": "resource",
+                  "id": "Wood_Trunk",
+                  "quantity": 6,
+                  "key": "Wood_Trunk(type)",
+                  "dependency": {
+                    "id": "Wood_Trunk(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "item",
+                  "id": "Ingredient_Fibre",
+                  "quantity": 20,
+                  "key": "Ingredient_Fibre",
+                  "dependency": {
+                    "id": "Ingredient_Fibre",
+                    "leaf": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "bench",
+                  "id": "Bench_WorkBench",
+                  "quantity": 1,
+                  "key": "Bench_WorkBench",
+                  "dependency": {
+                    "id": "Bench_WorkBench",
+                    "recipeId": "Bench_WorkBench",
+                    "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_WorkBench.json",
+                    "bench": [
+                      {
+                        "type": "Crafting",
+                        "id": "Fieldcraft",
+                        "categories": [
+                          "Tools"
+                        ]
+                      }
+                    ],
+                    "timeSeconds": null,
+                    "knowledgeRequired": false,
+                    "children": [
+                      {
+                        "kind": "resource",
+                        "id": "Wood_Trunk",
+                        "quantity": 4,
+                        "key": "Wood_Trunk(type)",
+                        "dependency": {
+                          "id": "Wood_Trunk(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      },
+                      {
+                        "kind": "resource",
+                        "id": "Rock",
+                        "quantity": 3,
+                        "key": "Rock(type)",
+                        "dependency": {
+                          "id": "Rock(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "Soil_Quartzite_Gravel",
+      "leaves": [
+        {
+          "id": "Ingredient_Fibre",
+          "quantity": 20
+        },
+        {
+          "id": "Rock(type)",
+          "quantity": 3
+        },
+        {
+          "id": "Rubble_Quartzite",
+          "quantity": 3
+        },
+        {
+          "id": "Wood_Trunk(type)",
+          "quantity": 10
+        }
+      ],
+      "tree": {
+        "id": "Soil_Quartzite_Gravel",
+        "recipeId": "Soil_Quartzite_Gravel",
+        "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Quartzite_Gravel.json",
+        "bench": [
+          {
+            "type": "Crafting",
+            "id": "Farmingbench",
+            "categories": [
+              "Decorative"
+            ]
+          }
+        ],
+        "timeSeconds": 0,
+        "knowledgeRequired": false,
+        "children": [
+          {
+            "kind": "item",
+            "id": "Rubble_Quartzite",
+            "quantity": 3,
+            "key": "Rubble_Quartzite",
+            "dependency": {
+              "id": "Rubble_Quartzite",
+              "leaf": true,
+              "children": []
+            }
+          },
+          {
+            "kind": "bench",
+            "id": "Bench_Farming",
+            "quantity": 1,
+            "key": "Bench_Farming",
+            "dependency": {
+              "id": "Bench_Farming",
+              "recipeId": "Bench_Farming",
+              "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_Farming.json",
+              "bench": [
+                {
+                  "type": "Crafting",
+                  "id": "Workbench",
+                  "categories": [
+                    "Workbench_Crafting"
+                  ]
+                }
+              ],
+              "timeSeconds": 3,
+              "knowledgeRequired": false,
+              "children": [
+                {
+                  "kind": "resource",
+                  "id": "Wood_Trunk",
+                  "quantity": 6,
+                  "key": "Wood_Trunk(type)",
+                  "dependency": {
+                    "id": "Wood_Trunk(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "item",
+                  "id": "Ingredient_Fibre",
+                  "quantity": 20,
+                  "key": "Ingredient_Fibre",
+                  "dependency": {
+                    "id": "Ingredient_Fibre",
+                    "leaf": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "bench",
+                  "id": "Bench_WorkBench",
+                  "quantity": 1,
+                  "key": "Bench_WorkBench",
+                  "dependency": {
+                    "id": "Bench_WorkBench",
+                    "recipeId": "Bench_WorkBench",
+                    "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_WorkBench.json",
+                    "bench": [
+                      {
+                        "type": "Crafting",
+                        "id": "Fieldcraft",
+                        "categories": [
+                          "Tools"
+                        ]
+                      }
+                    ],
+                    "timeSeconds": null,
+                    "knowledgeRequired": false,
+                    "children": [
+                      {
+                        "kind": "resource",
+                        "id": "Wood_Trunk",
+                        "quantity": 4,
+                        "key": "Wood_Trunk(type)",
+                        "dependency": {
+                          "id": "Wood_Trunk(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      },
+                      {
+                        "kind": "resource",
+                        "id": "Rock",
+                        "quantity": 3,
+                        "key": "Rock(type)",
+                        "dependency": {
+                          "id": "Rock(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "Soil_Quartzite_Gravel_Half",
+      "leaves": [
+        {
+          "id": "Ingredient_Fibre",
+          "quantity": 20
+        },
+        {
+          "id": "Rock(type)",
+          "quantity": 3
+        },
+        {
+          "id": "Rubble_Quartzite",
+          "quantity": 3
+        },
+        {
+          "id": "Wood_Trunk(type)",
+          "quantity": 10
+        }
+      ],
+      "tree": {
+        "id": "Soil_Quartzite_Gravel_Half",
+        "recipeId": "Soil_Quartzite_Gravel_Half",
+        "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Quartzite_Gravel_Half.json",
+        "bench": [
+          {
+            "type": "Crafting",
+            "id": "Farmingbench",
+            "categories": [
+              "Decorative"
+            ]
+          }
+        ],
+        "timeSeconds": 0,
+        "knowledgeRequired": false,
+        "children": [
+          {
+            "kind": "item",
+            "id": "Rubble_Quartzite",
+            "quantity": 3,
+            "key": "Rubble_Quartzite",
+            "dependency": {
+              "id": "Rubble_Quartzite",
+              "leaf": true,
               "children": []
             }
           },
@@ -300093,6 +304817,441 @@
                     "leaf": true,
                     "resource": true,
                     "children": []
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "Soil_Shale_Gravel_Half",
+      "leaves": [
+        {
+          "id": "Ingredient_Fibre",
+          "quantity": 20
+        },
+        {
+          "id": "Rock(type)",
+          "quantity": 3
+        },
+        {
+          "id": "Rubble_Shale",
+          "quantity": 3
+        },
+        {
+          "id": "Wood_Trunk(type)",
+          "quantity": 10
+        }
+      ],
+      "tree": {
+        "id": "Soil_Shale_Gravel_Half",
+        "recipeId": "Soil_Shale_Gravel_Half",
+        "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Shale_Gravel_Half.json",
+        "bench": [
+          {
+            "type": "Crafting",
+            "id": "Farmingbench",
+            "categories": [
+              "Decorative"
+            ]
+          }
+        ],
+        "timeSeconds": 0,
+        "knowledgeRequired": false,
+        "children": [
+          {
+            "kind": "item",
+            "id": "Rubble_Shale",
+            "quantity": 3,
+            "key": "Rubble_Shale",
+            "dependency": {
+              "id": "Rubble_Shale",
+              "leaf": true,
+              "children": []
+            }
+          },
+          {
+            "kind": "bench",
+            "id": "Bench_Farming",
+            "quantity": 1,
+            "key": "Bench_Farming",
+            "dependency": {
+              "id": "Bench_Farming",
+              "recipeId": "Bench_Farming",
+              "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_Farming.json",
+              "bench": [
+                {
+                  "type": "Crafting",
+                  "id": "Workbench",
+                  "categories": [
+                    "Workbench_Crafting"
+                  ]
+                }
+              ],
+              "timeSeconds": 3,
+              "knowledgeRequired": false,
+              "children": [
+                {
+                  "kind": "resource",
+                  "id": "Wood_Trunk",
+                  "quantity": 6,
+                  "key": "Wood_Trunk(type)",
+                  "dependency": {
+                    "id": "Wood_Trunk(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "item",
+                  "id": "Ingredient_Fibre",
+                  "quantity": 20,
+                  "key": "Ingredient_Fibre",
+                  "dependency": {
+                    "id": "Ingredient_Fibre",
+                    "leaf": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "bench",
+                  "id": "Bench_WorkBench",
+                  "quantity": 1,
+                  "key": "Bench_WorkBench",
+                  "dependency": {
+                    "id": "Bench_WorkBench",
+                    "recipeId": "Bench_WorkBench",
+                    "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_WorkBench.json",
+                    "bench": [
+                      {
+                        "type": "Crafting",
+                        "id": "Fieldcraft",
+                        "categories": [
+                          "Tools"
+                        ]
+                      }
+                    ],
+                    "timeSeconds": null,
+                    "knowledgeRequired": false,
+                    "children": [
+                      {
+                        "kind": "resource",
+                        "id": "Wood_Trunk",
+                        "quantity": 4,
+                        "key": "Wood_Trunk(type)",
+                        "dependency": {
+                          "id": "Wood_Trunk(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      },
+                      {
+                        "kind": "resource",
+                        "id": "Rock",
+                        "quantity": 3,
+                        "key": "Rock(type)",
+                        "dependency": {
+                          "id": "Rock(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "Soil_Slate_Gravel",
+      "leaves": [
+        {
+          "id": "Ingredient_Fibre",
+          "quantity": 20
+        },
+        {
+          "id": "Rock(type)",
+          "quantity": 3
+        },
+        {
+          "id": "Rubble_Slate",
+          "quantity": 3
+        },
+        {
+          "id": "Wood_Trunk(type)",
+          "quantity": 10
+        }
+      ],
+      "tree": {
+        "id": "Soil_Slate_Gravel",
+        "recipeId": "Soil_Slate_Gravel",
+        "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Slate_Gravel.json",
+        "bench": [
+          {
+            "type": "Crafting",
+            "id": "Farmingbench",
+            "categories": [
+              "Decorative"
+            ]
+          }
+        ],
+        "timeSeconds": 0,
+        "knowledgeRequired": false,
+        "children": [
+          {
+            "kind": "item",
+            "id": "Rubble_Slate",
+            "quantity": 3,
+            "key": "Rubble_Slate",
+            "dependency": {
+              "id": "Rubble_Slate",
+              "leaf": true,
+              "children": []
+            }
+          },
+          {
+            "kind": "bench",
+            "id": "Bench_Farming",
+            "quantity": 1,
+            "key": "Bench_Farming",
+            "dependency": {
+              "id": "Bench_Farming",
+              "recipeId": "Bench_Farming",
+              "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_Farming.json",
+              "bench": [
+                {
+                  "type": "Crafting",
+                  "id": "Workbench",
+                  "categories": [
+                    "Workbench_Crafting"
+                  ]
+                }
+              ],
+              "timeSeconds": 3,
+              "knowledgeRequired": false,
+              "children": [
+                {
+                  "kind": "resource",
+                  "id": "Wood_Trunk",
+                  "quantity": 6,
+                  "key": "Wood_Trunk(type)",
+                  "dependency": {
+                    "id": "Wood_Trunk(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "item",
+                  "id": "Ingredient_Fibre",
+                  "quantity": 20,
+                  "key": "Ingredient_Fibre",
+                  "dependency": {
+                    "id": "Ingredient_Fibre",
+                    "leaf": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "bench",
+                  "id": "Bench_WorkBench",
+                  "quantity": 1,
+                  "key": "Bench_WorkBench",
+                  "dependency": {
+                    "id": "Bench_WorkBench",
+                    "recipeId": "Bench_WorkBench",
+                    "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_WorkBench.json",
+                    "bench": [
+                      {
+                        "type": "Crafting",
+                        "id": "Fieldcraft",
+                        "categories": [
+                          "Tools"
+                        ]
+                      }
+                    ],
+                    "timeSeconds": null,
+                    "knowledgeRequired": false,
+                    "children": [
+                      {
+                        "kind": "resource",
+                        "id": "Wood_Trunk",
+                        "quantity": 4,
+                        "key": "Wood_Trunk(type)",
+                        "dependency": {
+                          "id": "Wood_Trunk(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      },
+                      {
+                        "kind": "resource",
+                        "id": "Rock",
+                        "quantity": 3,
+                        "key": "Rock(type)",
+                        "dependency": {
+                          "id": "Rock(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "Soil_Slate_Gravel_Half",
+      "leaves": [
+        {
+          "id": "Ingredient_Fibre",
+          "quantity": 20
+        },
+        {
+          "id": "Rock(type)",
+          "quantity": 3
+        },
+        {
+          "id": "Rubble_Slate",
+          "quantity": 3
+        },
+        {
+          "id": "Wood_Trunk(type)",
+          "quantity": 10
+        }
+      ],
+      "tree": {
+        "id": "Soil_Slate_Gravel_Half",
+        "recipeId": "Soil_Slate_Gravel_Half",
+        "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Slate_Gravel_Half.json",
+        "bench": [
+          {
+            "type": "Crafting",
+            "id": "Farmingbench",
+            "categories": [
+              "Decorative"
+            ]
+          }
+        ],
+        "timeSeconds": 0,
+        "knowledgeRequired": false,
+        "children": [
+          {
+            "kind": "item",
+            "id": "Rubble_Slate",
+            "quantity": 3,
+            "key": "Rubble_Slate",
+            "dependency": {
+              "id": "Rubble_Slate",
+              "leaf": true,
+              "children": []
+            }
+          },
+          {
+            "kind": "bench",
+            "id": "Bench_Farming",
+            "quantity": 1,
+            "key": "Bench_Farming",
+            "dependency": {
+              "id": "Bench_Farming",
+              "recipeId": "Bench_Farming",
+              "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_Farming.json",
+              "bench": [
+                {
+                  "type": "Crafting",
+                  "id": "Workbench",
+                  "categories": [
+                    "Workbench_Crafting"
+                  ]
+                }
+              ],
+              "timeSeconds": 3,
+              "knowledgeRequired": false,
+              "children": [
+                {
+                  "kind": "resource",
+                  "id": "Wood_Trunk",
+                  "quantity": 6,
+                  "key": "Wood_Trunk(type)",
+                  "dependency": {
+                    "id": "Wood_Trunk(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "item",
+                  "id": "Ingredient_Fibre",
+                  "quantity": 20,
+                  "key": "Ingredient_Fibre",
+                  "dependency": {
+                    "id": "Ingredient_Fibre",
+                    "leaf": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "bench",
+                  "id": "Bench_WorkBench",
+                  "quantity": 1,
+                  "key": "Bench_WorkBench",
+                  "dependency": {
+                    "id": "Bench_WorkBench",
+                    "recipeId": "Bench_WorkBench",
+                    "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_WorkBench.json",
+                    "bench": [
+                      {
+                        "type": "Crafting",
+                        "id": "Fieldcraft",
+                        "categories": [
+                          "Tools"
+                        ]
+                      }
+                    ],
+                    "timeSeconds": null,
+                    "knowledgeRequired": false,
+                    "children": [
+                      {
+                        "kind": "resource",
+                        "id": "Wood_Trunk",
+                        "quantity": 4,
+                        "key": "Wood_Trunk(type)",
+                        "dependency": {
+                          "id": "Wood_Trunk(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      },
+                      {
+                        "kind": "resource",
+                        "id": "Rock",
+                        "quantity": 3,
+                        "key": "Rock(type)",
+                        "dependency": {
+                          "id": "Rock(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      }
+                    ]
                   }
                 }
               ]
@@ -300637,6 +305796,296 @@
                     "leaf": true,
                     "resource": true,
                     "children": []
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "Soil_Volcanic_Gravel",
+      "leaves": [
+        {
+          "id": "Ingredient_Fibre",
+          "quantity": 20
+        },
+        {
+          "id": "Rock(type)",
+          "quantity": 3
+        },
+        {
+          "id": "Rubble_Volcanic",
+          "quantity": 3
+        },
+        {
+          "id": "Wood_Trunk(type)",
+          "quantity": 10
+        }
+      ],
+      "tree": {
+        "id": "Soil_Volcanic_Gravel",
+        "recipeId": "Soil_Volcanic_Gravel",
+        "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Volcanic_Gravel.json",
+        "bench": [
+          {
+            "type": "Crafting",
+            "id": "Farmingbench",
+            "categories": [
+              "Decorative"
+            ]
+          }
+        ],
+        "timeSeconds": 0,
+        "knowledgeRequired": false,
+        "children": [
+          {
+            "kind": "item",
+            "id": "Rubble_Volcanic",
+            "quantity": 3,
+            "key": "Rubble_Volcanic",
+            "dependency": {
+              "id": "Rubble_Volcanic",
+              "leaf": true,
+              "children": []
+            }
+          },
+          {
+            "kind": "bench",
+            "id": "Bench_Farming",
+            "quantity": 1,
+            "key": "Bench_Farming",
+            "dependency": {
+              "id": "Bench_Farming",
+              "recipeId": "Bench_Farming",
+              "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_Farming.json",
+              "bench": [
+                {
+                  "type": "Crafting",
+                  "id": "Workbench",
+                  "categories": [
+                    "Workbench_Crafting"
+                  ]
+                }
+              ],
+              "timeSeconds": 3,
+              "knowledgeRequired": false,
+              "children": [
+                {
+                  "kind": "resource",
+                  "id": "Wood_Trunk",
+                  "quantity": 6,
+                  "key": "Wood_Trunk(type)",
+                  "dependency": {
+                    "id": "Wood_Trunk(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "item",
+                  "id": "Ingredient_Fibre",
+                  "quantity": 20,
+                  "key": "Ingredient_Fibre",
+                  "dependency": {
+                    "id": "Ingredient_Fibre",
+                    "leaf": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "bench",
+                  "id": "Bench_WorkBench",
+                  "quantity": 1,
+                  "key": "Bench_WorkBench",
+                  "dependency": {
+                    "id": "Bench_WorkBench",
+                    "recipeId": "Bench_WorkBench",
+                    "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_WorkBench.json",
+                    "bench": [
+                      {
+                        "type": "Crafting",
+                        "id": "Fieldcraft",
+                        "categories": [
+                          "Tools"
+                        ]
+                      }
+                    ],
+                    "timeSeconds": null,
+                    "knowledgeRequired": false,
+                    "children": [
+                      {
+                        "kind": "resource",
+                        "id": "Wood_Trunk",
+                        "quantity": 4,
+                        "key": "Wood_Trunk(type)",
+                        "dependency": {
+                          "id": "Wood_Trunk(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      },
+                      {
+                        "kind": "resource",
+                        "id": "Rock",
+                        "quantity": 3,
+                        "key": "Rock(type)",
+                        "dependency": {
+                          "id": "Rock(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "Soil_Volcanic_Gravel_Half",
+      "leaves": [
+        {
+          "id": "Ingredient_Fibre",
+          "quantity": 20
+        },
+        {
+          "id": "Rock(type)",
+          "quantity": 3
+        },
+        {
+          "id": "Rubble_Volcanic",
+          "quantity": 3
+        },
+        {
+          "id": "Wood_Trunk(type)",
+          "quantity": 10
+        }
+      ],
+      "tree": {
+        "id": "Soil_Volcanic_Gravel_Half",
+        "recipeId": "Soil_Volcanic_Gravel_Half",
+        "sourceFile": "_Assets/Server/Item/Items/Soil/Gravel/Soil_Volcanic_Gravel_Half.json",
+        "bench": [
+          {
+            "type": "Crafting",
+            "id": "Farmingbench",
+            "categories": [
+              "Decorative"
+            ]
+          }
+        ],
+        "timeSeconds": 0,
+        "knowledgeRequired": false,
+        "children": [
+          {
+            "kind": "item",
+            "id": "Rubble_Volcanic",
+            "quantity": 3,
+            "key": "Rubble_Volcanic",
+            "dependency": {
+              "id": "Rubble_Volcanic",
+              "leaf": true,
+              "children": []
+            }
+          },
+          {
+            "kind": "bench",
+            "id": "Bench_Farming",
+            "quantity": 1,
+            "key": "Bench_Farming",
+            "dependency": {
+              "id": "Bench_Farming",
+              "recipeId": "Bench_Farming",
+              "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_Farming.json",
+              "bench": [
+                {
+                  "type": "Crafting",
+                  "id": "Workbench",
+                  "categories": [
+                    "Workbench_Crafting"
+                  ]
+                }
+              ],
+              "timeSeconds": 3,
+              "knowledgeRequired": false,
+              "children": [
+                {
+                  "kind": "resource",
+                  "id": "Wood_Trunk",
+                  "quantity": 6,
+                  "key": "Wood_Trunk(type)",
+                  "dependency": {
+                    "id": "Wood_Trunk(type)",
+                    "leaf": true,
+                    "resource": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "item",
+                  "id": "Ingredient_Fibre",
+                  "quantity": 20,
+                  "key": "Ingredient_Fibre",
+                  "dependency": {
+                    "id": "Ingredient_Fibre",
+                    "leaf": true,
+                    "children": []
+                  }
+                },
+                {
+                  "kind": "bench",
+                  "id": "Bench_WorkBench",
+                  "quantity": 1,
+                  "key": "Bench_WorkBench",
+                  "dependency": {
+                    "id": "Bench_WorkBench",
+                    "recipeId": "Bench_WorkBench",
+                    "sourceFile": "_Assets/Server/Item/Items/Bench/Bench_WorkBench.json",
+                    "bench": [
+                      {
+                        "type": "Crafting",
+                        "id": "Fieldcraft",
+                        "categories": [
+                          "Tools"
+                        ]
+                      }
+                    ],
+                    "timeSeconds": null,
+                    "knowledgeRequired": false,
+                    "children": [
+                      {
+                        "kind": "resource",
+                        "id": "Wood_Trunk",
+                        "quantity": 4,
+                        "key": "Wood_Trunk(type)",
+                        "dependency": {
+                          "id": "Wood_Trunk(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      },
+                      {
+                        "kind": "resource",
+                        "id": "Rock",
+                        "quantity": 3,
+                        "key": "Rock(type)",
+                        "dependency": {
+                          "id": "Rock(type)",
+                          "leaf": true,
+                          "resource": true,
+                          "children": []
+                        }
+                      }
+                    ]
                   }
                 }
               ]

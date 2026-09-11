@@ -25,7 +25,7 @@ public class com.hypixel.hytale.server.core.asset.type.buildertool.config.BlockT
 ## BuilderTool
 
 ```java
-public class com.hypixel.hytale.server.core.asset.type.buildertool.config.BuilderTool implements com.hypixel.hytale.assetstore.map.JsonAssetWithMap<java.lang.String, com.hypixel.hytale.assetstore.map.DefaultAssetMap<java.lang.String, com.hypixel.hytale.server.core.asset.type.buildertool.config.BuilderTool>>, com.hypixel.hytale.server.core.io.NetworkSerializable<com.hypixel.hytale.protocol.packets.buildertools.BuilderToolState> {
+public class com.hypixel.hytale.server.core.asset.type.buildertool.config.BuilderTool implements com.hypixel.hytale.server.core.io.NetworkSerializable<com.hypixel.hytale.protocol.packets.buildertools.BuilderToolState> {
   public static final java.lang.String TOOL_DATA_KEY;
   public static final java.lang.String MATERIAL_KEY;
   public static final java.lang.String FAVORITE_MATERIALS_KEY;
@@ -51,21 +51,22 @@ public class com.hypixel.hytale.server.core.asset.type.buildertool.config.Builde
   public static final java.lang.String MASK_ENTRIES_KEY;
   public static final java.lang.String MASK_COMMANDS_KEY;
   public static final java.lang.String INVERT_MASK_KEY;
-  public static java.util.HashSet<java.lang.String> MASK_ARGS;
+  public static final java.util.HashSet<java.lang.String> MASK_ARGS;
   public static final com.hypixel.hytale.server.core.asset.type.buildertool.config.BuilderTool DEFAULT;
-  public static final com.hypixel.hytale.assetstore.codec.AssetBuilderCodec<java.lang.String, com.hypixel.hytale.server.core.asset.type.buildertool.config.BuilderTool> CODEC;
+  public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.server.core.asset.type.buildertool.config.BuilderTool> CODEC;
   protected com.hypixel.hytale.assetstore.AssetExtraInfo$Data data;
   protected java.lang.String id;
   protected boolean isBrush;
+  protected boolean survivalAllowed;
   protected java.lang.String brushConfigurationCommand;
   protected java.util.Map<java.lang.String, com.hypixel.hytale.server.core.asset.type.buildertool.config.args.ToolArg> args;
   protected java.util.Map<java.lang.String, java.lang.Object> defaultToolArgs;
   public com.hypixel.hytale.server.core.asset.type.buildertool.config.BuilderTool();
-  public static com.hypixel.hytale.assetstore.map.DefaultAssetMap<java.lang.String, com.hypixel.hytale.server.core.asset.type.buildertool.config.BuilderTool> getAssetMap();
   public static com.hypixel.hytale.server.core.asset.type.buildertool.config.BuilderTool getActiveBuilderTool(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public java.lang.String getId();
   public java.lang.String getBrushConfigurationCommand();
   public boolean isBrush();
+  public boolean isSurvivalAllowed();
   public java.util.Map<java.lang.String, com.hypixel.hytale.server.core.asset.type.buildertool.config.args.ToolArg> getArgs();
   public com.hypixel.hytale.codec.lookup.MapProvidedMapCodec<java.lang.Object, com.hypixel.hytale.server.core.asset.type.buildertool.config.args.ToolArg> getArgsCodec();
   public com.hypixel.hytale.server.core.asset.type.buildertool.config.BuilderTool$ArgData getItemArgData(com.hypixel.hytale.server.core.inventory.ItemStack);
@@ -73,7 +74,6 @@ public class com.hypixel.hytale.server.core.asset.type.buildertool.config.Builde
   public com.hypixel.hytale.server.core.inventory.ItemStack updateArgMetadata(com.hypixel.hytale.server.core.inventory.ItemStack, java.lang.String, java.lang.String) throws com.hypixel.hytale.server.core.asset.type.buildertool.config.args.ToolArgException;
   public com.hypixel.hytale.protocol.packets.buildertools.BuilderToolState toPacket();
   public java.lang.String toString();
-  public java.lang.Object getId();
   public java.lang.Object toPacket();
 }
 ```

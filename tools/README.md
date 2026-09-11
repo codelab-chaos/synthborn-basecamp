@@ -24,6 +24,7 @@ npm run verify
 npm run examples:list
 npm run examples:sync
 npm run docs:sync
+npm run update:plan
 npm run sdk:search -- BlockPlaceUtils
 npm run recipes:gamedata -- source Ingredient_Leather
 ```
@@ -41,8 +42,10 @@ These are stable basecamp tools. They generate or query shared reference materia
 | Tool | Path | Why it exists | Terse instructions |
 |------|------|---------------|--------------------|
 | Basecamp verifier | `verify.js` | Catches drift across reference tools and docs after moves, generated-data refreshes, or README edits. | `cd tools && npm run verify`; read-only health check. |
+| Hytale update planner | `release/plan-hytale-update.js` | Quickly maps asset CRC and server-jar changes to only the Basecamp references/apps that consume them. | `cd tools && npm run update:plan`; add `-- --show-files`, then use `npm run update:apply` after review. |
+| Patch notes porter | `refs/patch-notes/port-hytale-post.js` | Ports an official hytale.com patch-notes or hotfix post to `docs/patch-notes/` so every game version has committed release notes. | `cd tools && npm run notes:port -- https://hytale.com/news/2026/8/update-6-patch-notes`; needs `pandoc` on PATH; then add the version rows to `docs/patch-notes/README.md`. |
 | SDK search | `refs/sdk/sdk-search.js` | Finds SDK classes, methods, inheritance, packages, or text without loading all generated SDK docs. | `node tools/refs/sdk/sdk-search.js BlockPlaceUtils`; use `--method`, `--package`, `--extends`, `--implements`, or `--grep`. |
-| SDK extractor | `refs/sdk/extract-sdk-reference.js` | Rebuilds `docs/sdk/` from the pinned Hytale Server jar so API research matches the current mod compile target. | Run `cd ../synthborn-kyn && ./gradlew compileJava`, return here, then `node tools/refs/sdk/extract-sdk-reference.js --full`. |
+| SDK extractor | `refs/sdk/extract-sdk-reference.js` | Incrementally rebuilds `docs/sdk/` using class fingerprints, cached signatures, and batched javap; no LLM calls. | Use `cd tools && npm run update:plan` first; SDK-only preflight: `node tools/refs/sdk/extract-sdk-reference.js --full --jar <installed-jar> --plan`. |
 | SDK diff | `refs/sdk/diff-sdk-reference.js` | Summarizes package, class, and method signature changes after an SDK refresh. | `node tools/refs/sdk/diff-sdk-reference.js`; add `--against main` or `--against /path/to/old-sdk-reference`. |
 | SDK app data builder | `refs/sdk/build-sdk-app-data.js` | Builds searchable markdown card JSON for the static SDK Explorer app. | `node tools/refs/sdk/build-sdk-app-data.js`; add `--ref-dir docs/sdk` or `--out apps/sdk-explorer/data/sdk-reference.json`. |
 | SDK LLM index builder | `refs/sdk/build-sdk-llms-txt.js` | Rebuilds the compact `llms.txt` package/class router from existing SDK markdown. | `node tools/refs/sdk/build-sdk-llms-txt.js`; add `--out docs/sdk` for an explicit output dir. |

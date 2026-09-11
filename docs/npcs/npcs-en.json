@@ -1626,20 +1626,11 @@
     "dropList": null,
     "appearance": null
   },
-  "Component_Instruction_Attack_Sequence_Spirit": {
-    "id": "Component_Instruction_Attack_Sequence_Spirit",
-    "category": "Elemental/Spirit",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
   "Spirit_Ember": {
     "id": "Spirit_Ember",
     "category": "Elemental/Spirit",
     "attitude": "hostile",
-    "reference": "Template_Spirit",
+    "reference": "Template_Flying_Aggressive",
     "maxHealth": 126,
     "dropList": "Drop_Spirit_Ember",
     "appearance": "Spirit_Ember"
@@ -1648,7 +1639,7 @@
     "id": "Spirit_Frost",
     "category": "Elemental/Spirit",
     "attitude": "hostile",
-    "reference": "Template_Spirit",
+    "reference": "Template_Flying_Aggressive",
     "maxHealth": 81,
     "dropList": "Drop_Spirit_Frost",
     "appearance": "Spirit_Frost"
@@ -1657,7 +1648,7 @@
     "id": "Spirit_Root",
     "category": "Elemental/Spirit",
     "attitude": "hostile",
-    "reference": "Template_Spirit",
+    "reference": "Template_Flying_Aggressive",
     "maxHealth": 49,
     "dropList": "Drop_Spirit_Root",
     "appearance": "Spirit_Root"
@@ -1666,7 +1657,7 @@
     "id": "Spirit_Thunder",
     "category": "Elemental/Spirit",
     "attitude": "hostile",
-    "reference": "Template_Spirit",
+    "reference": "Template_Flying_Aggressive",
     "maxHealth": 249,
     "dropList": "Drop_Spirit_Thunder",
     "appearance": "Spirit_Thunder"
@@ -2287,19 +2278,19 @@
     "id": "Dungeon_Scarak_Seeker",
     "category": "Intelligent/Aggressive/Scarak/Dungeon",
     "attitude": "hostile",
-    "reference": "Template_Scarak_Seeker",
+    "reference": "Template_Flying_Aggressive",
     "maxHealth": 61,
-    "dropList": null,
-    "appearance": null
+    "dropList": "Drop_Scarak_Seeker",
+    "appearance": "Scarak_Seeker"
   },
   "Dungeon_Scarak_Seeker_Patrol": {
     "id": "Dungeon_Scarak_Seeker_Patrol",
     "category": "Intelligent/Aggressive/Scarak/Dungeon",
     "attitude": "hostile",
-    "reference": "Template_Scarak_Seeker",
-    "maxHealth": 63,
-    "dropList": null,
-    "appearance": null
+    "reference": "Template_Flying_Aggressive",
+    "maxHealth": 61,
+    "dropList": "Drop_Scarak_Seeker",
+    "appearance": "Scarak_Seeker"
   },
   "Scarak_Broodmother": {
     "id": "Scarak_Broodmother",
@@ -2368,19 +2359,19 @@
     "id": "Scarak_Seeker",
     "category": "Intelligent/Aggressive/Scarak",
     "attitude": "hostile",
-    "reference": "Template_Scarak_Seeker",
+    "reference": "Template_Flying_Aggressive",
     "maxHealth": 61,
     "dropList": "Drop_Scarak_Seeker",
-    "appearance": null
+    "appearance": "Scarak_Seeker"
   },
   "Scarak_Seeker_Patrol": {
     "id": "Scarak_Seeker_Patrol",
     "category": "Intelligent/Aggressive/Scarak",
     "attitude": "hostile",
-    "reference": "Template_Scarak_Seeker",
+    "reference": "Template_Flying_Aggressive",
     "maxHealth": 61,
     "dropList": "Drop_Scarak_Seeker",
-    "appearance": null
+    "appearance": "Scarak_Seeker"
   },
   "Template_Scarak_Broodmother": {
     "id": "Template_Scarak_Broodmother",
@@ -2402,15 +2393,6 @@
   },
   "Template_Scarak_Louse": {
     "id": "Template_Scarak_Louse",
-    "category": "Intelligent/Aggressive/Scarak/Templates",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Template_Scarak_Seeker": {
-    "id": "Template_Scarak_Seeker",
     "category": "Intelligent/Aggressive/Scarak/Templates",
     "attitude": "hostile",
     "reference": null,
@@ -4429,7 +4411,7 @@
     "id": "Skeleton_Incandescent_Head",
     "category": "Undead/Skeleton/Skeleton_Incandescent",
     "attitude": "hostile",
-    "reference": "Template_Spirit",
+    "reference": "Template_Flying_Aggressive",
     "maxHealth": 81,
     "dropList": "Drop_Skeleton_Incandescent_Head",
     "appearance": "Skeleton_Incandescent_Head"
@@ -4821,56 +4803,11 @@
     "dropList": "Drop_Wraith_Lantern",
     "appearance": "Wraith_Lantern"
   },
-  "Component_Instruction_Attack_Sequence_Zombie": {
-    "id": "Component_Instruction_Attack_Sequence_Zombie",
-    "category": "Undead/Zombie/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Attack_Sequence_Zombie_Burnt": {
-    "id": "Component_Instruction_Attack_Sequence_Zombie_Burnt",
-    "category": "Undead/Zombie/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Attack_Sequence_Zombie_Frost": {
-    "id": "Component_Instruction_Attack_Sequence_Zombie_Frost",
-    "category": "Undead/Zombie/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Attack_Sequence_Zombie_Sand": {
-    "id": "Component_Instruction_Attack_Sequence_Zombie_Sand",
-    "category": "Undead/Zombie/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Template_Aggressive_Zombies": {
-    "id": "Template_Aggressive_Zombies",
-    "category": "Undead/Zombie/Templates",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
   "Zombie": {
     "id": "Zombie",
     "category": "Undead/Zombie",
     "attitude": "hostile",
-    "reference": "Template_Aggressive_Zombies",
+    "reference": "Template_Predator",
     "maxHealth": 49,
     "dropList": "Drop_Zombie",
     "appearance": "Zombie"
@@ -4906,7 +4843,7 @@
     "id": "Zombie_Burnt",
     "category": "Undead/Zombie",
     "attitude": "hostile",
-    "reference": "Template_Aggressive_Zombies",
+    "reference": "Template_Predator",
     "maxHealth": 126,
     "dropList": "Drop_Zombie_Burnt",
     "appearance": "Zombie_Burnt"
@@ -4915,7 +4852,7 @@
     "id": "Zombie_Frost",
     "category": "Undead/Zombie",
     "attitude": "hostile",
-    "reference": "Template_Aggressive_Zombies",
+    "reference": "Template_Predator",
     "maxHealth": 81,
     "dropList": "Drop_Zombie",
     "appearance": "Zombie_Frost"
@@ -4924,14 +4861,14 @@
     "id": "Zombie_Sand",
     "category": "Undead/Zombie",
     "attitude": "hostile",
-    "reference": "Template_Aggressive_Zombies",
+    "reference": "Template_Predator",
     "maxHealth": 49,
     "dropList": "Drop_Zombie_Sand",
     "appearance": "Zombie_Sand"
   },
-  "Component_Instruction_Attack_Sequence_Eye_Void": {
-    "id": "Component_Instruction_Attack_Sequence_Eye_Void",
-    "category": "Void",
+  "Component_Instruction_Void_Eye_Summon": {
+    "id": "Component_Instruction_Void_Eye_Summon",
+    "category": "Void/Components",
     "attitude": "unknown",
     "reference": null,
     "maxHealth": null,
@@ -4951,8 +4888,8 @@
     "id": "Eye_Void",
     "category": "Void",
     "attitude": "unknown",
-    "reference": "Template_Eye",
-    "maxHealth": 61,
+    "reference": "Template_Flying_Aggressive",
+    "maxHealth": 60,
     "dropList": "Drop_Eye_Void",
     "appearance": "Eye_Void"
   },
@@ -4977,15 +4914,6 @@
   "Spectre_Void": {
     "id": "Spectre_Void",
     "category": "Void",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Template_Eye": {
-    "id": "Template_Eye",
-    "category": "Void/Templates",
     "attitude": "unknown",
     "reference": null,
     "maxHealth": null,
@@ -5031,6 +4959,24 @@
   "Component_Instruction_Cactee_Idle_Motion": {
     "id": "Component_Instruction_Cactee_Idle_Motion",
     "category": "_Core/Components",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Attack_Sequence_Eye_Void": {
+    "id": "Component_Instruction_Attack_Sequence_Eye_Void",
+    "category": "_Core/Components/Deprecated",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Attack_Sequence_Spirit": {
+    "id": "Component_Instruction_Attack_Sequence_Spirit",
+    "category": "_Core/Components/Deprecated",
     "attitude": "unknown",
     "reference": null,
     "maxHealth": null,
@@ -5102,6 +5048,15 @@
   },
   "Component_Instruction_Generic_Alerted_With_Friendly": {
     "id": "Component_Instruction_Generic_Alerted_With_Friendly",
+    "category": "_Core/Components/Selectors",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Generic_Detection": {
+    "id": "Component_Instruction_Generic_Detection",
     "category": "_Core/Components/Selectors",
     "attitude": "unknown",
     "reference": null,
@@ -5685,6 +5640,33 @@
     "dropList": null,
     "appearance": null
   },
+  "Template_Eye": {
+    "id": "Template_Eye",
+    "category": "_Core/Templates/Deprecated",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Scarak_Seeker": {
+    "id": "Template_Scarak_Seeker",
+    "category": "_Core/Templates/Deprecated",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Spirit": {
+    "id": "Template_Spirit",
+    "category": "_Core/Templates/Deprecated",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
   "Template_Animal_Neutral": {
     "id": "Template_Animal_Neutral",
     "category": "_Core/Templates",
@@ -5730,6 +5712,15 @@
     "dropList": null,
     "appearance": null
   },
+  "Template_Flying_Aggressive": {
+    "id": "Template_Flying_Aggressive",
+    "category": "_Core/Templates",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
   "Template_Intelligent": {
     "id": "Template_Intelligent",
     "category": "_Core/Templates",
@@ -5750,15 +5741,6 @@
   },
   "Template_Predator": {
     "id": "Template_Predator",
-    "category": "_Core/Templates",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Template_Spirit": {
-    "id": "Template_Spirit",
     "category": "_Core/Templates",
     "attitude": "unknown",
     "reference": null,
@@ -6057,6 +6039,15 @@
   "Test_Sensor_Search_Ray": {
     "id": "Test_Sensor_Search_Ray",
     "category": "_Core/Tests/BlockSensor",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Platform": {
+    "id": "Test_Platform",
+    "category": "_Core/Tests/Collision",
     "attitude": "unknown",
     "reference": null,
     "maxHealth": null,
@@ -6369,6 +6360,60 @@
     "dropList": null,
     "appearance": null
   },
+  "Test_Fail_ForEach_BlockingSequence": {
+    "id": "Test_Fail_ForEach_BlockingSequence",
+    "category": "_Core/Tests/Failing",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Fail_ForEach_CombatAbility": {
+    "id": "Test_Fail_ForEach_CombatAbility",
+    "category": "_Core/Tests/Failing",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Fail_ForEach_NestedIsolateForEach": {
+    "id": "Test_Fail_ForEach_NestedIsolateForEach",
+    "category": "_Core/Tests/Failing",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Fail_ForEach_NestedSpawn": {
+    "id": "Test_Fail_ForEach_NestedSpawn",
+    "category": "_Core/Tests/Failing",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Fail_ForEach_Spawn": {
+    "id": "Test_Fail_ForEach_Spawn",
+    "category": "_Core/Tests/Failing",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Fail_ForEach_Timeout": {
+    "id": "Test_Fail_ForEach_Timeout",
+    "category": "_Core/Tests/Failing",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
   "Test_Fail_ItemInHand": {
     "id": "Test_Fail_ItemInHand",
     "category": "_Core/Tests/Failing",
@@ -6462,6 +6507,42 @@
   "Test_Sheep_Flock2": {
     "id": "Test_Sheep_Flock2",
     "category": "_Core/Tests/Flocking",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Forwarded_Slot_Base": {
+    "id": "Test_Forwarded_Slot_Base",
+    "category": "_Core/Tests/ForwardedModifiers",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Forwarded_Slot_Variant": {
+    "id": "Test_Forwarded_Slot_Variant",
+    "category": "_Core/Tests/ForwardedModifiers",
+    "attitude": "unknown",
+    "reference": "Test_Forwarded_Slot_Base",
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Forwarded_Slot_Variant_Null": {
+    "id": "Test_Forwarded_Slot_Variant_Null",
+    "category": "_Core/Tests/ForwardedModifiers",
+    "attitude": "unknown",
+    "reference": "Test_Forwarded_Slot_Base",
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Role_Macro_Forwardable": {
+    "id": "Test_Role_Macro_Forwardable",
+    "category": "_Core/Tests/ForwardedModifiers",
     "attitude": "unknown",
     "reference": null,
     "maxHealth": null,
@@ -6600,6 +6681,51 @@
     "attitude": "unknown",
     "reference": "Test_Attack_Melee",
     "maxHealth": 100,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Boss_Basic": {
+    "id": "Test_Boss_Basic",
+    "category": "_Core/Tests/Integration",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Boss_Basic_Intro": {
+    "id": "Test_Boss_Basic_Intro",
+    "category": "_Core/Tests/Integration",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Boss_Basic_Wander": {
+    "id": "Test_Boss_Basic_Wander",
+    "category": "_Core/Tests/Integration",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Boss_Minion": {
+    "id": "Test_Boss_Minion",
+    "category": "_Core/Tests/Integration",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Boss_Spawning": {
+    "id": "Test_Boss_Spawning",
+    "category": "_Core/Tests/Integration",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
     "dropList": null,
     "appearance": null
   },
@@ -7278,6 +7404,15 @@
     "dropList": null,
     "appearance": null
   },
+  "Test_State_Evaluator_TimeSinceLastUsed": {
+    "id": "Test_State_Evaluator_TimeSinceLastUsed",
+    "category": "_Core/Tests/States",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
   "Test_State_Evaluator_Toggle": {
     "id": "Test_State_Evaluator_Toggle",
     "category": "_Core/Tests/States",
@@ -7559,6 +7694,24 @@
     "dropList": null,
     "appearance": null
   },
+  "Test_EntityFilter_ExecutingInteraction": {
+    "id": "Test_EntityFilter_ExecutingInteraction",
+    "category": "_Core/Tests",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_EntityFilter_ExecutingInteraction_Observer": {
+    "id": "Test_EntityFilter_ExecutingInteraction_Observer",
+    "category": "_Core/Tests",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
   "Test_Entity_Damage_Event": {
     "id": "Test_Entity_Damage_Event",
     "category": "_Core/Tests",
@@ -7696,6 +7849,15 @@
   },
   "Test_Particle_Emotions": {
     "id": "Test_Particle_Emotions",
+    "category": "_Core/Tests",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Particle_Scale": {
+    "id": "Test_Particle_Scale",
     "category": "_Core/Tests",
     "attitude": "unknown",
     "reference": null,
@@ -8021,6 +8183,15 @@
   "Test_Timer_Repeating": {
     "id": "Test_Timer_Repeating",
     "category": "_Core/Tests/Timer",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Trigger_Volume": {
+    "id": "Test_Trigger_Volume",
+    "category": "_Core/Tests/TriggerVolumes",
     "attitude": "unknown",
     "reference": null,
     "maxHealth": null,
@@ -8477,6 +8648,15 @@
     "dropList": null,
     "appearance": null
   },
+  "Test_Head_Motion_Rotate": {
+    "id": "Test_Head_Motion_Rotate",
+    "category": "_Core/Tests_Development",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
   "Test_Head_Motion_Sequence": {
     "id": "Test_Head_Motion_Sequence",
     "category": "_Core/Tests_Development",
@@ -8567,6 +8747,24 @@
     "dropList": null,
     "appearance": null
   },
+  "Test_Motion_Charge_Path": {
+    "id": "Test_Motion_Charge_Path",
+    "category": "_Core/Tests_Development",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Motion_Charge_Repath": {
+    "id": "Test_Motion_Charge_Repath",
+    "category": "_Core/Tests_Development",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
   "Test_Motion_Charge_Rot": {
     "id": "Test_Motion_Charge_Rot",
     "category": "_Core/Tests_Development",
@@ -8614,6 +8812,15 @@
   },
   "Test_Motion_Charge_Stop": {
     "id": "Test_Motion_Charge_Stop",
+    "category": "_Core/Tests_Development",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Motion_Charge_Stun": {
+    "id": "Test_Motion_Charge_Stun",
     "category": "_Core/Tests_Development",
     "attitude": "unknown",
     "reference": null,
@@ -8731,6 +8938,24 @@
   },
   "Test_Separation_Wander": {
     "id": "Test_Separation_Wander",
+    "category": "_Core/Tests_Development",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Set_Health_Regen": {
+    "id": "Test_Set_Health_Regen",
+    "category": "_Core/Tests_Development",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Set_Invulnerable": {
+    "id": "Test_Set_Invulnerable",
     "category": "_Core/Tests_Development",
     "attitude": "unknown",
     "reference": null,

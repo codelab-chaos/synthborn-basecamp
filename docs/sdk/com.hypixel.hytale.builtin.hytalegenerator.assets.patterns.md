@@ -99,6 +99,7 @@ public class com.hypixel.hytale.builtin.hytalegenerator.assets.patterns.Material
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.builtin.hytalegenerator.assets.patterns.MaterialPatternAsset> CODEC;
   public com.hypixel.hytale.builtin.hytalegenerator.assets.patterns.MaterialPatternAsset();
   public com.hypixel.hytale.builtin.hytalegenerator.patterns.Pattern build(com.hypixel.hytale.builtin.hytalegenerator.assets.patterns.PatternAsset$Argument);
+  public void cleanUp();
 }
 ```
 
@@ -145,7 +146,7 @@ public abstract class com.hypixel.hytale.builtin.hytalegenerator.assets.patterns
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.builtin.hytalegenerator.assets.patterns.PatternAsset> ABSTRACT_CODEC;
   protected com.hypixel.hytale.builtin.hytalegenerator.assets.patterns.PatternAsset();
   public abstract com.hypixel.hytale.builtin.hytalegenerator.patterns.Pattern build(com.hypixel.hytale.builtin.hytalegenerator.assets.patterns.PatternAsset$Argument);
-  public boolean isSkipped();
+  public boolean skip();
   public static com.hypixel.hytale.builtin.hytalegenerator.assets.patterns.PatternAsset getExportedAsset(java.lang.String);
   public java.lang.String getId();
   public void cleanUp();

@@ -22,10 +22,10 @@ public class com.hypixel.hytale.builtin.adventure.farming.states.CoopBlock imple
   public boolean tryPutResident(com.hypixel.hytale.server.npc.metadata.CapturedNPCMetadata, com.hypixel.hytale.server.core.modules.time.WorldTimeResource);
   public boolean tryPutWildResidentFromWild(com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.modules.time.WorldTimeResource, org.joml.Vector3i);
   public boolean getCoopAcceptsNPC(java.lang.String);
-  public void generateProduceToInventory(com.hypixel.hytale.server.core.modules.time.WorldTimeResource);
+  public boolean generateProduceToInventory(com.hypixel.hytale.server.core.modules.time.WorldTimeResource);
   public void gatherProduceFromContainer(com.hypixel.hytale.server.core.inventory.container.ItemContainer);
-  public void ensureSpawnResidentsInWorld(com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, org.joml.Vector3d, org.joml.Vector3d);
-  public void ensureNoResidentsInWorld(com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public boolean ensureSpawnResidentsInWorld(com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, org.joml.Vector3d, org.joml.Vector3d);
+  public boolean ensureNoResidentsInWorld(com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public boolean shouldResidentsBeInCoop(com.hypixel.hytale.server.core.modules.time.WorldTimeResource);
   public java.time.Instant getNextScheduledTick(com.hypixel.hytale.server.core.modules.time.WorldTimeResource);
   public void handleResidentDespawn(java.util.UUID);

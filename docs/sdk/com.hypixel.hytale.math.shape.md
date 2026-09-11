@@ -20,9 +20,9 @@ public class com.hypixel.hytale.math.shape.Box implements com.hypixel.hytale.mat
   public com.hypixel.hytale.math.shape.Box(com.hypixel.hytale.math.shape.Box);
   public com.hypixel.hytale.math.shape.Box(org.joml.Vector3dc, org.joml.Vector3dc);
   public com.hypixel.hytale.math.shape.Box(double, double, double, double, double, double);
-  public static com.hypixel.hytale.math.shape.Box cube(org.joml.Vector3d, double);
-  public static com.hypixel.hytale.math.shape.Box centeredCube(org.joml.Vector3d, double);
-  public com.hypixel.hytale.math.shape.Box setMinMax(org.joml.Vector3d, org.joml.Vector3d);
+  public static com.hypixel.hytale.math.shape.Box cube(org.joml.Vector3dc, double);
+  public static com.hypixel.hytale.math.shape.Box centeredCube(org.joml.Vector3dc, double);
+  public com.hypixel.hytale.math.shape.Box setMinMax(org.joml.Vector3dc, org.joml.Vector3dc);
   public com.hypixel.hytale.math.shape.Box setMinMax(double[], double[]);
   public com.hypixel.hytale.math.shape.Box setMinMax(float[], float[]);
   public com.hypixel.hytale.math.shape.Box setEmpty();
@@ -38,8 +38,8 @@ public class com.hypixel.hytale.math.shape.Box implements com.hypixel.hytale.mat
   public com.hypixel.hytale.math.shape.Box rotateY(float);
   public com.hypixel.hytale.math.shape.Box rotateZ(float);
   public com.hypixel.hytale.math.shape.Box offset(double, double, double);
-  public com.hypixel.hytale.math.shape.Box offset(org.joml.Vector3d);
-  public com.hypixel.hytale.math.shape.Box sweep(org.joml.Vector3d);
+  public com.hypixel.hytale.math.shape.Box offset(org.joml.Vector3dc);
+  public com.hypixel.hytale.math.shape.Box sweep(org.joml.Vector3dc);
   public com.hypixel.hytale.math.shape.Box extend(double, double, double);
   public double width();
   public double height();
@@ -61,11 +61,11 @@ public class com.hypixel.hytale.math.shape.Box implements com.hypixel.hytale.mat
   public boolean containsPosition(double, double, double);
   public void expand(double);
   public boolean containsBlock(int, int, int);
-  public boolean containsBlock(org.joml.Vector3i, int, int, int);
+  public boolean containsBlock(org.joml.Vector3ic, int, int, int);
   public boolean forEachBlock(double, double, double, double, com.hypixel.hytale.function.predicate.TriIntPredicate);
   public <T> boolean forEachBlock(double, double, double, double, T, com.hypixel.hytale.function.predicate.TriIntObjPredicate<T>);
   public double getMaximumExtent();
-  public boolean intersectsLine(org.joml.Vector3d, org.joml.Vector3d);
+  public boolean intersectsLine(org.joml.Vector3dc, org.joml.Vector3dc);
   public java.lang.String toString();
   public java.lang.Object clone() throws java.lang.CloneNotSupportedException;
 }

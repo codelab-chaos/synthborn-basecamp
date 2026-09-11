@@ -36,6 +36,7 @@ public class com.hypixel.hytale.server.core.modules.entity.hitboxcollision.Hitbo
   protected java.lang.String id;
   protected com.hypixel.hytale.protocol.CollisionType collisionType;
   protected float softOffsetRatio;
+  protected boolean rotateHitbox;
   public static com.hypixel.hytale.assetstore.AssetStore<java.lang.String, com.hypixel.hytale.server.core.modules.entity.hitboxcollision.HitboxCollisionConfig, com.hypixel.hytale.assetstore.map.IndexedLookupTableAssetMap<java.lang.String, com.hypixel.hytale.server.core.modules.entity.hitboxcollision.HitboxCollisionConfig>> getAssetStore();
   public static com.hypixel.hytale.assetstore.map.IndexedLookupTableAssetMap<java.lang.String, com.hypixel.hytale.server.core.modules.entity.hitboxcollision.HitboxCollisionConfig> getAssetMap();
   public com.hypixel.hytale.server.core.modules.entity.hitboxcollision.HitboxCollisionConfig(java.lang.String);
@@ -43,6 +44,8 @@ public class com.hypixel.hytale.server.core.modules.entity.hitboxcollision.Hitbo
   public java.lang.String getId();
   public com.hypixel.hytale.protocol.CollisionType getCollisionType();
   public float getSoftOffsetRatio();
+  public boolean getRotateHitbox();
+  public boolean getAllowEntityAnchoring();
   public com.hypixel.hytale.protocol.HitboxCollisionConfig toPacket();
   public java.lang.String toString();
   public java.lang.Object getId();

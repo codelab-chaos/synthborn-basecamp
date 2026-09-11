@@ -27,6 +27,9 @@ public final class com.hypixel.hytale.server.core.permissions.provider.HytalePer
   public void addUserPermissions(java.util.UUID, java.util.Set<java.lang.String>);
   public void removeUserPermissions(java.util.UUID, java.util.Set<java.lang.String>);
   public java.util.Set<java.lang.String> getUserPermissions(java.util.UUID);
+  public java.util.Set<java.util.UUID> getUsersWithPermission(java.lang.String);
+  public java.util.Set<java.util.UUID> addUserPermissions(java.util.Collection<java.util.UUID>, java.util.Set<java.lang.String>);
+  public java.util.Set<java.util.UUID> removeUserPermissionFromAll(java.lang.String);
   public void addGroupPermissions(java.lang.String, java.util.Set<java.lang.String>);
   public void removeGroupPermissions(java.lang.String, java.util.Set<java.lang.String>);
   public java.util.Set<java.lang.String> getGroupPermissions(java.lang.String);
@@ -61,5 +64,8 @@ public interface com.hypixel.hytale.server.core.permissions.provider.PermissionP
   public abstract java.lang.String getGroupParent(java.lang.String);
   public abstract java.util.Set<java.lang.String> getAllRegisteredGroups();
   public abstract java.util.Set<java.lang.String> getEffectiveGroupPermissions(java.lang.String);
+  public abstract java.util.Set<java.util.UUID> getUsersWithPermission(java.lang.String);
+  public default java.util.Set<java.util.UUID> addUserPermissions(java.util.Collection<java.util.UUID>, java.util.Set<java.lang.String>);
+  public default java.util.Set<java.util.UUID> removeUserPermissionFromAll(java.lang.String);
 }
 ```

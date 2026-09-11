@@ -55,6 +55,7 @@ public interface com.hypixel.hytale.builtin.instances.removal.RemovalCondition {
 public class com.hypixel.hytale.builtin.instances.removal.RemovalSystem extends com.hypixel.hytale.component.system.tick.TickingSystem<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore> implements com.hypixel.hytale.component.system.tick.RunWhenPausedSystem<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore> {
   public com.hypixel.hytale.builtin.instances.removal.RemovalSystem();
   public void tick(float, int, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>);
+  public static void setupInstanceRemoval(com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.builtin.instances.config.InstanceWorldConfig);
   public static boolean shouldRemoveWorld(com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>);
 }
 ```

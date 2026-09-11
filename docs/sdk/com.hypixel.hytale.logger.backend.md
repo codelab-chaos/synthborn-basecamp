@@ -16,6 +16,7 @@ public class com.hypixel.hytale.logger.backend.HytaleConsole extends java.lang.T
   public void run();
   public void shutdown();
   public void setTerminal(java.lang.String);
+  public void setAbovePromptPrinter(java.util.function.Consumer<java.lang.String>);
   public com.hypixel.hytale.logger.backend.HytaleLogFormatter getFormatter();
 }
 ```

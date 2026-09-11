@@ -51,3 +51,6 @@ _site/
 
 # macOS
 .DS_Store
+
+# Disposable incremental javap signature cache; rebuilt in batches when absent.
+/docs/sdk/.sdk-cache.json

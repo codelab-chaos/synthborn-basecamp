@@ -13,7 +13,7 @@ public abstract class com.hypixel.hytale.server.core.asset.type.blocktype.config
   public static final com.hypixel.hytale.codec.lookup.CodecMapCodec<com.hypixel.hytale.server.core.asset.type.blocktype.config.fallingblocks.FallingBlockImpact> CODEC;
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.server.core.asset.type.blocktype.config.fallingblocks.FallingBlockImpact> BASE_CODEC;
   public com.hypixel.hytale.server.core.asset.type.blocktype.config.fallingblocks.FallingBlockImpact();
-  public abstract void apply(com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk, com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType, org.joml.Vector3d, com.hypixel.hytale.server.core.asset.type.blocktype.config.RotationTuple, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public abstract void apply(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType, org.joml.Vector3d, com.hypixel.hytale.server.core.asset.type.blocktype.config.RotationTuple, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
 }
 ```
 

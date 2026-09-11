@@ -22,7 +22,7 @@ public class com.hypixel.hytale.server.core.modules.splitvelocity.SplitVelocity 
 
 ```java
 public class com.hypixel.hytale.server.core.modules.splitvelocity.VelocityConfig implements com.hypixel.hytale.server.core.io.NetworkSerializable<com.hypixel.hytale.protocol.VelocityConfig> {
-  public static com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.server.core.modules.splitvelocity.VelocityConfig> CODEC;
+  public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.server.core.modules.splitvelocity.VelocityConfig> CODEC;
   public com.hypixel.hytale.server.core.modules.splitvelocity.VelocityConfig();
   public float getGroundResistance();
   public void setGroundResistance(float);

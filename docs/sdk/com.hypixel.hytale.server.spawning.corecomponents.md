@@ -14,8 +14,8 @@ public class com.hypixel.hytale.server.spawning.corecomponents.ActionTriggerSpaw
   protected final int range;
   protected final int targetSlot;
   public com.hypixel.hytale.server.spawning.corecomponents.ActionTriggerSpawnBeacon(com.hypixel.hytale.server.spawning.corecomponents.builders.BuilderActionTriggerSpawnBeacon, com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
-  public boolean canExecute(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.role.Role, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
-  public void registerWithSupport(com.hypixel.hytale.server.npc.role.Role);
-  public boolean execute(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.role.Role, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public boolean canExecute(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.instructions.ExecutionSupport, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public void registerWithSupport(com.hypixel.hytale.server.npc.instructions.ExecutionSupport);
+  public boolean execute(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.instructions.ExecutionSupport, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
 }
 ```

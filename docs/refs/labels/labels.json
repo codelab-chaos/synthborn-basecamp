@@ -1,11 +1,11 @@
 {
   "locale": "en-US",
   "source": "_Assets/Server/Languages/en-US/server.lang",
-  "generatedAt": "2026-06-25T03:49:59.749Z",
+  "generatedAt": "2026-09-07T17:13:41.589Z",
   "counts": {
-    "items": 3696,
+    "items": 3724,
     "resourceTypes": 118,
-    "npcRoles": 558
+    "npcRoles": 574
   },
   "items": {
     "Alchemy_Cauldron": "Cauldron",
@@ -290,18 +290,39 @@
     "Debug_Armor_O_Chest_Of_Damage_Enhancement": "Debug Steel Cuirass of Damage Enhancement",
     "Debug_Armor_O_Head_Of_Dash_Exhaustion": "Debug Steel Helm of Dash Cost Increase",
     "Debug_Armor_O_Legs_Of_Knockback_Enhancement": "Debug Steel Greaves Of Knockback Enhancements",
+    "Debug_Beacon_Horn": "Debug Beacon Horn",
     "Debug_Block": "Debug Block",
     "Debug_Bow_Two_Handed": "Two-Handed Bow",
     "Debug_Combo": "Debug Combo Item",
+    "Debug_Companion_Block_Spawner": "Debug Companion Block Spawner",
+    "Debug_Companion_Block_Spawner_Explicit": "Debug Companion Block Spawner Explicit",
+    "Debug_Companion_Block_Spawner_Requirement": "Debug Companion Block Spawner Requirement",
     "Debug_Continue": "Debug Interaction Item",
     "Debug_Continue_Equip": "Debug Continue Equip Hands",
     "Debug_Continue_Equip_Legs": "Debug Continue Equip Legs",
+    "Debug_Donut_Selector": "Debug Donut Selector",
     "Debug_Durability_Condition": "Debug Durability Condition Item",
     "Debug_Falling_Barrel": "Debug Falling Barrel",
     "Debug_Falling_Explosive": "Debug Falling Explosive",
+    "Debug_Explosive": "Debug Explosive Block",
     "Debug_Forking": "Debug Block",
     "Debug_Forking_2": "Debug Block",
+    "Debug_MusicEmitter_CaveEncounter": "Debug Music Emitter (Cave Encounter)",
+    "Debug_MusicEmitter_DeepJungles": "Debug Music Emitter (Deep Jungles)",
+    "Debug_MusicEmitter_ForgottenTemple": "Debug Music Emitter (Forgotten Temple)",
+    "Debug_MusicEmitter_HowlingSands": "Debug Music Emitter (Howling Sands)",
+    "Debug_MusicItem_DeepJungles": "Debug Music Item: Deep Jungles",
+    "Debug_MusicItem_ForgottenTemple": "Debug Music Item: Forgotten Temple",
+    "Debug_MusicPlayer": "Debug Music Player",
+    "Debug_Pickaxe_Shaped": "Debug Shaped Pickaxe (3x3)",
+    "Debug_Pickaxe_Shaped_Cylinder": "Debug Shaped Pickaxe (Cylinder 5x5)",
     "Debug_Projectile": "Debug Projectile Item",
+    "Debug_Projectile_TriggerVolume": "Debug Projectile (Trigger Volume)",
+    "Debug_Projectile_Scale": "Debug Projectile (Random Scale)",
+    "Debug_Projectile_Fixed_Pitch": "Debug Projectile (Fixed Pitch)",
+    "Debug_Projectile_Fixed_Yaw": "Debug Projectile (Fixed Yaw)",
+    "Debug_Launch_Projectile_Fixed_Pitch": "Debug Launch Projectile (Fixed Pitch)",
+    "Debug_Launch_Projectile_Fixed_Yaw": "Debug Launch Projectile (Fixed Yaw)",
     "Debug_Raycast": "Debug Raycast Item",
     "Debug_Spawn_Marker_Block": "Debug Spawn Marker Block",
     "Debug_Stick": "The Stick",
@@ -411,6 +432,7 @@
     "Prototype_Cactus_Tall_Thick_Base": "Prototype - Cactus Tall Thick Base",
     "Prototype_Cactus_Tall_Thick_Middle": "Prototype - Cactus Tall Thick Middle",
     "Prototype_Cactus_Tall_Thick_Top": "Prototype - Cactus Tall Thick Top",
+    "Prototype_Spider_Cocoon_Falling": "[TMP] Prototype - Falling Spider Cocoon",
     "Prototype_Succulent_Hanging_One_Corner": "Hanging Succulent One - Corner",
     "Prototype_Succulent_Hanging_One_End": "Hanging Succulent One - End",
     "Prototype_Succulent_Hanging_One_Horizontal": "Hanging Succulent One - Horizontal",
@@ -1845,7 +1867,7 @@
     "Prototype_Wood_Tropicalwood_Fence_Platform": "Prototype - Tropical Wood Fence Platform",
     "Rail_Kart": "Rail Cart",
     "Rail": "Rail",
-    "RecipeItem": "[TMP] Recipe: {itemName}",
+    "RecipeItem": "Recipe: {itemName}",
     "Recipe_Book_Magic_Air": "Air Grimoire",
     "Recipe_Book_Magic_Void": "Void Grimoire",
     "Recipe_Page": "Recipe Page",
@@ -2545,6 +2567,7 @@
     "Soil_Hive_Corrupted_Brick_Smooth_Half": "Corrupted Hive Brick - Smooth Half Slab",
     "Soil_Hive_Corrupted_Brick_Stairs": "Corrupted Hive Brick - Stairs",
     "Soil_Leaves": "Leafy Soil",
+    "Soil_Leaves_Full": "Full Leafy Soil",
     "Soil_Mud": "Mud",
     "Soil_Mud_Dry": "Dry Mud",
     "Ore_Thorium_Mud_Cracked": "Cracked Mud",
@@ -2601,6 +2624,7 @@
     "Test_Spawn_Marker_Trigger": "Test Spawn Marker Trigger",
     "Test_Objective_Line_Interaction": "Treasure Map",
     "Test_Pedestal": "Test Pedestal",
+    "Test_PlaceBlockProcedure": "Test PlaceBlockProcedure",
     "Tinkering_Target_Dummy": "Training Dummy",
     "Tool_Bark_Scraper": "Bark Scraper",
     "Tool_Capture_Crate": "Capture Crate",
@@ -2678,6 +2702,8 @@
     "Weapon_Arrow_Iron": "Iron Arrow",
     "Weapon_Arrow_Trueshot": "Trueshot Arrow",
     "Weapon_Assault_Rifle": "Rifle",
+    "Weapon_Test_Zoom_Rifle": "Test Rifle Zoom",
+    "Weapon_Test_Sniper_Rifle": "Test Sniper Zoom",
     "Weapon_Axe_Adamantite": "Adamantite Axe",
     "Weapon_Axe_Bone": "Feran Bone Axe",
     "Weapon_Axe_Cobalt": "Cobalt Axe",
@@ -2733,6 +2759,7 @@
     "Weapon_Shortbow_Prisma": "Prisma Shortbow",
     "Weapon_Shortbow_Pull": "Pull Shortbow",
     "Weapon_Shortbow_Ricochet": "Ricochet Shortbow",
+    "Weapon_Shortbow_Test_Zoom": "Test Bow Zoom",
     "Weapon_Shortbow_Thorium": "Thorium Shortbow",
     "Weapon_Shortbow_Vampire": "Vampire Shortbow",
     "Weapon_Claws_Tribal": "Tribal Claws",
@@ -3586,9 +3613,9 @@
     "Metal_Gold_Pipe_Corner": "Gold Pipe - Corner",
     "Metal_Gold_Pipe_Large_Corner": "Gold Pipe - Large Corner",
     "Metal_Gold_Pipe_Short": "Gold Pipe - Short",
-    "Metal_Gold_Pipe_Long": "[TMP] Gold Pipe - Long",
-    "Metal_Gold_Pipe_Large": "[TMP] Gold Pipe - Large",
-    "Metal_Gold_Pipe_Large_Mouthpiece": "[TMP] Gold Pipe - Large Mouthpiece",
+    "Metal_Gold_Pipe_Long": "Gold Pipe - Long",
+    "Metal_Gold_Pipe_Large": "Gold Pipe - Large",
+    "Metal_Gold_Pipe_Large_Mouthpiece": "Gold Pipe - Large Mouthpiece",
     "Metal_Zinc_Pipe_Chimney": "Zinc Pipe - Chimney",
     "Metal_Zinc_Pipe_Corner": "Zinc Pipe - Corner",
     "Metal_Zinc_Pipe_Large": "Zinc Pipe - Large",
@@ -3703,7 +3730,8 @@
     "Metal_Iron_Fence": "Iron - Fence",
     "Metal_Bronze_Fence": "Bronze - Fence",
     "Metal_Copper_Fence": "Copper - Fence",
-    "Unknown": "Unknown"
+    "Unknown": "Unknown",
+    "Debug_Movement_Boots": "Debug Movement Boots"
   },
   "resourceTypes": {
     "Bone": "Bone",
@@ -4104,6 +4132,10 @@
     "Test_Block_Sensor_Mobile": "Test Block Sensor Mobile",
     "Test_Block_Sensor_Reservation": "Test Block Sensor Reservation",
     "Test_Blocking_Animation": "Test Blocking Animation",
+    "Test_Boss_Basic": "Test Boss Basic",
+    "Test_Boss_Basic_Intro": "Test Boss Awakening",
+    "Test_Boss_Minion": "Test Boss Minion",
+    "Test_Boss_Spawning": "Test Boss Spawning",
     "Test_Bow_Charge": "Test Bow Charge",
     "Test_Bow_Target": "Test Bow Target",
     "Test_Can_Join_Flock": "Test Can Join Flock",
@@ -4118,20 +4150,20 @@
     "Test_Combat_Sensor_Sheep": "Test Combat Sensor Sheep",
     "Test_Component_Attack_Sequence": "Test Component Attack Sequence",
     "Test_Computable_Component_Template": "Test Computable Component Template",
-    "Test_Constraints_Seek_Breathe": "[TMP] Test Constraints Seek Breathe",
-    "Test_Constraints_Seek_Drop": "[TMP] Test Constraints Seek Drop",
-    "Test_Constraints_Seek_Legacy_Relaxed": "[TMP] Test Constraints Seek Legacy Relaxed",
-    "Test_Constraints_Seek_Legacy_Relaxed_Small": "[TMP] Test Constraints Seek Legacy Relaxed Small",
-    "Test_Constraints_Seek_Legacy_Unrelaxed": "[TMP] Test Constraints Seek Legacy Unrelaxed",
-    "Test_Constraints_Seek_Legacy_Unrelaxed_Small": "[TMP] Test Constraints Seek Legacy Unrelaxed Small",
-    "Test_Constraints_Seek_None": "[TMP] Test Constraints Seek None",
-    "Test_Constraints_Wander_Legacy_Relaxed": "[TMP] Test Constraints Wander Legacy Relaxed",
-    "Test_Constraints_Wander_Legacy_Unrelaxed": "[TMP] Test Constraints Wander Legacy Unrelaxed",
-    "Test_Constraints_Flee_Legacy_Relaxed": "[TMP] Test Constraints Flee Legacy Relaxed",
-    "Test_Constraints_Flee_Legacy_Unrelaxed": "[TMP] Test Constraints Flee Legacy Unrelaxed",
-    "Test_Constraints_Seek_Fence": "[TMP] Test Constraints Seek Fence",
-    "Test_Constraints_Seek_Wade": "[TMP] Test Constraints Seek Wade",
-    "Test_Constraints_Seek_Wade_Breathe": "[TMP] Test Constraints Seek Wade Breathe",
+    "Test_Constraints_Seek_Breathe": "Test Constraints Seek Breathe",
+    "Test_Constraints_Seek_Drop": "Test Constraints Seek Drop",
+    "Test_Constraints_Seek_Legacy_Relaxed": "Test Constraints Seek Legacy Relaxed",
+    "Test_Constraints_Seek_Legacy_Relaxed_Small": "Test Constraints Seek Legacy Relaxed Small",
+    "Test_Constraints_Seek_Legacy_Unrelaxed": "Test Constraints Seek Legacy Unrelaxed",
+    "Test_Constraints_Seek_Legacy_Unrelaxed_Small": "Test Constraints Seek Legacy Unrelaxed Small",
+    "Test_Constraints_Seek_None": "Test Constraints Seek None",
+    "Test_Constraints_Wander_Legacy_Relaxed": "Test Constraints Wander Legacy Relaxed",
+    "Test_Constraints_Wander_Legacy_Unrelaxed": "Test Constraints Wander Legacy Unrelaxed",
+    "Test_Constraints_Flee_Legacy_Relaxed": "Test Constraints Flee Legacy Relaxed",
+    "Test_Constraints_Flee_Legacy_Unrelaxed": "Test Constraints Flee Legacy Unrelaxed",
+    "Test_Constraints_Seek_Fence": "Test Constraints Seek Fence",
+    "Test_Constraints_Seek_Wade": "Test Constraints Seek Wade",
+    "Test_Constraints_Seek_Wade_Breathe": "Test Constraints Seek Wade Breathe",
     "Test_Count_Sheep": "Test Count Sheep",
     "Test_Crouch": "Test Crouch",
     "Test_Deal_Friendly_Damage": "Test Deal Friendly Damage",
@@ -4146,8 +4178,10 @@
     "Test_Dragon_Frost": "Test Dragon Frost",
     "Test_Drop_Item": "Test Drop Item",
     "Test_Dummy": "Test Dummy",
-    "Test_Dummy_Damage": "[TMP] Test Dummy Damage",
+    "Test_Dummy_Damage": "Test Dummy Damage",
     "Test_Dummy_Stationary": "Test Dummy Stationary",
+    "Test_EntityFilter_ExecutingInteraction": "Test EntityFilter Executing Interaction",
+    "Test_EntityFilter_ExecutingInteraction_Observer": "Test EntityFilter Executing Interaction Observer",
     "Test_EntityFilter_Walk": "Test EntityFilter Walk",
     "Test_Entity_Damage_Event": "Test Entity Damage Event",
     "Test_Entity_Effect": "Test Entity Effect",
@@ -4174,6 +4208,7 @@
     "Test_Group_Wolf": "Test Group Wolf",
     "Test_Guided_Block": "Test Guided Block",
     "Test_Guided_Bow": "Test Guided Bow",
+    "Test_Head_Motion_Rotate": "Test Head Motion Rotate",
     "Test_Head_Motion_Sequence": "Test Head Motion Sequence",
     "Test_Hotbar_SetItem": "Test Hotbar SetItem",
     "Test_Hotbar_Weapon_Swap": "Test Hotbar Weapon Swap",
@@ -4209,14 +4244,17 @@
     "Test_Maintain_Distance_Melee": "Test Maintain Distance Melee",
     "Test_Manual_Beacon": "Test Manual Beacon",
     "Test_Model_Change": "Test Model Change",
-    "Test_Motion_Charge_Debug": "[TMP] Test Motion Charge Debug",
-    "Test_Motion_Charge": "[TMP] Test Motion Charge",
-    "Test_Motion_Charge_Rot": "[TMP] Test Motion Charge Rot",
-    "Test_Motion_Charge_Skip": "[TMP] Test Motion Charge Skip",
-    "Test_Motion_Charge_Slope": "[TMP] Test Motion Charge Slope",
-    "Test_Motion_Charge_Speed": "[TMP] Test Motion Charge Speed",
-    "Test_Motion_Charge_States": "[TMP] Test Motion Charge States",
-    "Test_Motion_Charge_Stop": "[TMP] Test Motion Charge Stop",
+    "Test_Motion_Charge_Debug": "Test Motion Charge Debug",
+    "Test_Motion_Charge": "Test Motion Charge",
+    "Test_Motion_Charge_Path": "Test Motion Charge Path",
+    "Test_Motion_Charge_Rot": "Test Motion Charge Rot",
+    "Test_Motion_Charge_Skip": "Test Motion Charge Skip",
+    "Test_Motion_Charge_Slope": "Test Motion Charge Slope",
+    "Test_Motion_Charge_Speed": "Test Motion Charge Speed",
+    "Test_Motion_Charge_States": "Test Motion Charge States",
+    "Test_Motion_Charge_Stop": "Test Motion Charge Stop",
+    "Test_Motion_Charge_Stun": "Test Motion Charge Stun",
+    "Test_Motion_Charge_Repath": "Test Motion Charge Repath",
     "Test_Movement_State_Sheep": "Test Movement State Sheep",
     "Test_NPCGroup_Sensor": "Test NPCGroup Sensor",
     "Test_Notify_Action": "Test Notify Action",
@@ -4225,6 +4263,8 @@
     "Test_Pack_Aggressive": "Test Pack Aggressive",
     "Test_Pack_Tame": "Test Pack Tame",
     "Test_Particle_Emotions": "Test Particle Emotions",
+    "Test_Particle_Scale": "Test Particle Scale",
+    "Test_Platform": "Test Platform",
     "Test_Path": "Test Path",
     "Test_Path_Avoid": "Test Path Avoid",
     "Test_Path_Distance1": "Test Path Distance1",
@@ -4273,6 +4313,8 @@
     "Test_Separation_Seek": "Test Separation Seek",
     "Test_Separation_Stationary": "Test Separation Stationary",
     "Test_Separation_Wander": "Test Separation Wander",
+    "Test_Set_Health_Regen": "Test Set Health Regen",
+    "Test_Set_Invulnerable": "Test Set Invulnerable",
     "Test_Set_Stat": "Test Set Stat",
     "Test_Set_State_From_Component": "Test Set State From Component",
     "Test_ShapeChange": "Test ShapeChange",
@@ -4299,6 +4341,7 @@
     "Test_State_Evaluator_Nearby": "Test State Evaluator Nearby",
     "Test_State_Evaluator_Sleep": "Test State Evaluator Sleep",
     "Test_State_Evaluator_Toggle": "Test State Evaluator Toggle",
+    "Test_State_Evaluator_TimeSinceLastUsed": "Test State Evaluator TimeSinceLastUsed",
     "Test_State_Transitions": "Test State Transitions",
     "Test_Stats_Health": "Test Stats Health",
     "Test_Store_Read_Position": "Test Store Read Position",
@@ -4322,6 +4365,7 @@
     "Test_Transient_Path": "Test Transient Path",
     "Test_TreeMode_Instruction": "Test TreeMode Instruction",
     "Test_Trigger_Spawners": "Test Trigger Spawners",
+    "Test_Trigger_Volume": "Test Trigger Volume",
     "Test_Unified_1": "Test Unified 1",
     "Test_Unified_10": "Test Unified 10",
     "Test_Unified_11": "Test Unified 11",
@@ -6360,6 +6404,13 @@
         "kind": "item"
       }
     ],
+    "debug beacon horn": [
+      {
+        "id": "Debug_Beacon_Horn",
+        "name": "Debug Beacon Horn",
+        "kind": "item"
+      }
+    ],
     "debug block": [
       {
         "id": "Debug_Block",
@@ -6391,6 +6442,27 @@
         "kind": "item"
       }
     ],
+    "debug companion block spawner": [
+      {
+        "id": "Debug_Companion_Block_Spawner",
+        "name": "Debug Companion Block Spawner",
+        "kind": "item"
+      }
+    ],
+    "debug companion block spawner explicit": [
+      {
+        "id": "Debug_Companion_Block_Spawner_Explicit",
+        "name": "Debug Companion Block Spawner Explicit",
+        "kind": "item"
+      }
+    ],
+    "debug companion block spawner requirement": [
+      {
+        "id": "Debug_Companion_Block_Spawner_Requirement",
+        "name": "Debug Companion Block Spawner Requirement",
+        "kind": "item"
+      }
+    ],
     "debug interaction item": [
       {
         "id": "Debug_Continue",
@@ -6409,6 +6481,13 @@
       {
         "id": "Debug_Continue_Equip_Legs",
         "name": "Debug Continue Equip Legs",
+        "kind": "item"
+      }
+    ],
+    "debug donut selector": [
+      {
+        "id": "Debug_Donut_Selector",
+        "name": "Debug Donut Selector",
         "kind": "item"
       }
     ],
@@ -6433,10 +6512,122 @@
         "kind": "item"
       }
     ],
+    "debug explosive block": [
+      {
+        "id": "Debug_Explosive",
+        "name": "Debug Explosive Block",
+        "kind": "item"
+      }
+    ],
+    "debug music emitter (cave encounter)": [
+      {
+        "id": "Debug_MusicEmitter_CaveEncounter",
+        "name": "Debug Music Emitter (Cave Encounter)",
+        "kind": "item"
+      }
+    ],
+    "debug music emitter (deep jungles)": [
+      {
+        "id": "Debug_MusicEmitter_DeepJungles",
+        "name": "Debug Music Emitter (Deep Jungles)",
+        "kind": "item"
+      }
+    ],
+    "debug music emitter (forgotten temple)": [
+      {
+        "id": "Debug_MusicEmitter_ForgottenTemple",
+        "name": "Debug Music Emitter (Forgotten Temple)",
+        "kind": "item"
+      }
+    ],
+    "debug music emitter (howling sands)": [
+      {
+        "id": "Debug_MusicEmitter_HowlingSands",
+        "name": "Debug Music Emitter (Howling Sands)",
+        "kind": "item"
+      }
+    ],
+    "debug music item: deep jungles": [
+      {
+        "id": "Debug_MusicItem_DeepJungles",
+        "name": "Debug Music Item: Deep Jungles",
+        "kind": "item"
+      }
+    ],
+    "debug music item: forgotten temple": [
+      {
+        "id": "Debug_MusicItem_ForgottenTemple",
+        "name": "Debug Music Item: Forgotten Temple",
+        "kind": "item"
+      }
+    ],
+    "debug music player": [
+      {
+        "id": "Debug_MusicPlayer",
+        "name": "Debug Music Player",
+        "kind": "item"
+      }
+    ],
+    "debug shaped pickaxe (3x3)": [
+      {
+        "id": "Debug_Pickaxe_Shaped",
+        "name": "Debug Shaped Pickaxe (3x3)",
+        "kind": "item"
+      }
+    ],
+    "debug shaped pickaxe (cylinder 5x5)": [
+      {
+        "id": "Debug_Pickaxe_Shaped_Cylinder",
+        "name": "Debug Shaped Pickaxe (Cylinder 5x5)",
+        "kind": "item"
+      }
+    ],
     "debug projectile item": [
       {
         "id": "Debug_Projectile",
         "name": "Debug Projectile Item",
+        "kind": "item"
+      }
+    ],
+    "debug projectile (trigger volume)": [
+      {
+        "id": "Debug_Projectile_TriggerVolume",
+        "name": "Debug Projectile (Trigger Volume)",
+        "kind": "item"
+      }
+    ],
+    "debug projectile (random scale)": [
+      {
+        "id": "Debug_Projectile_Scale",
+        "name": "Debug Projectile (Random Scale)",
+        "kind": "item"
+      }
+    ],
+    "debug projectile (fixed pitch)": [
+      {
+        "id": "Debug_Projectile_Fixed_Pitch",
+        "name": "Debug Projectile (Fixed Pitch)",
+        "kind": "item"
+      }
+    ],
+    "debug projectile (fixed yaw)": [
+      {
+        "id": "Debug_Projectile_Fixed_Yaw",
+        "name": "Debug Projectile (Fixed Yaw)",
+        "kind": "item"
+      }
+    ],
+    "debug launch projectile (fixed pitch)": [
+      {
+        "id": "Debug_Launch_Projectile_Fixed_Pitch",
+        "name": "Debug Launch Projectile (Fixed Pitch)",
+        "kind": "item"
+      }
+    ],
+    "debug launch projectile (fixed yaw)": [
+      {
+        "id": "Debug_Launch_Projectile_Fixed_Yaw",
+        "name": "Debug Launch Projectile (Fixed Yaw)",
         "kind": "item"
       }
     ],
@@ -7206,6 +7397,13 @@
       {
         "id": "Prototype_Cactus_Tall_Thick_Top",
         "name": "Prototype - Cactus Tall Thick Top",
+        "kind": "item"
+      }
+    ],
+    "[tmp] prototype - falling spider cocoon": [
+      {
+        "id": "Prototype_Spider_Cocoon_Falling",
+        "name": "[TMP] Prototype - Falling Spider Cocoon",
         "kind": "item"
       }
     ],
@@ -17209,10 +17407,10 @@
         "kind": "item"
       }
     ],
-    "[tmp] recipe: {itemname}": [
+    "recipe: {itemname}": [
       {
         "id": "RecipeItem",
-        "name": "[TMP] Recipe: {itemName}",
+        "name": "Recipe: {itemName}",
         "kind": "item"
       }
     ],
@@ -22169,6 +22367,13 @@
         "kind": "item"
       }
     ],
+    "full leafy soil": [
+      {
+        "id": "Soil_Leaves_Full",
+        "name": "Full Leafy Soil",
+        "kind": "item"
+      }
+    ],
     "mud": [
       {
         "id": "Soil_Mud",
@@ -22549,6 +22754,13 @@
       {
         "id": "Test_Pedestal",
         "name": "Test Pedestal",
+        "kind": "item"
+      }
+    ],
+    "test placeblockprocedure": [
+      {
+        "id": "Test_PlaceBlockProcedure",
+        "name": "Test PlaceBlockProcedure",
         "kind": "item"
       }
     ],
@@ -23091,6 +23303,20 @@
         "kind": "item"
       }
     ],
+    "test rifle zoom": [
+      {
+        "id": "Weapon_Test_Zoom_Rifle",
+        "name": "Test Rifle Zoom",
+        "kind": "item"
+      }
+    ],
+    "test sniper zoom": [
+      {
+        "id": "Weapon_Test_Sniper_Rifle",
+        "name": "Test Sniper Zoom",
+        "kind": "item"
+      }
+    ],
     "adamantite axe": [
       {
         "id": "Weapon_Axe_Adamantite",
@@ -23473,6 +23699,13 @@
       {
         "id": "Weapon_Shortbow_Ricochet",
         "name": "Ricochet Shortbow",
+        "kind": "item"
+      }
+    ],
+    "test bow zoom": [
+      {
+        "id": "Weapon_Shortbow_Test_Zoom",
+        "name": "Test Bow Zoom",
         "kind": "item"
       }
     ],
@@ -29449,24 +29682,24 @@
         "kind": "item"
       }
     ],
-    "[tmp] gold pipe - long": [
+    "gold pipe - long": [
       {
         "id": "Metal_Gold_Pipe_Long",
-        "name": "[TMP] Gold Pipe - Long",
+        "name": "Gold Pipe - Long",
         "kind": "item"
       }
     ],
-    "[tmp] gold pipe - large": [
+    "gold pipe - large": [
       {
         "id": "Metal_Gold_Pipe_Large",
-        "name": "[TMP] Gold Pipe - Large",
+        "name": "Gold Pipe - Large",
         "kind": "item"
       }
     ],
-    "[tmp] gold pipe - large mouthpiece": [
+    "gold pipe - large mouthpiece": [
       {
         "id": "Metal_Gold_Pipe_Large_Mouthpiece",
-        "name": "[TMP] Gold Pipe - Large Mouthpiece",
+        "name": "Gold Pipe - Large Mouthpiece",
         "kind": "item"
       }
     ],
@@ -30272,6 +30505,13 @@
       {
         "id": "Unknown",
         "name": "Unknown",
+        "kind": "item"
+      }
+    ],
+    "debug movement boots": [
+      {
+        "id": "Debug_Movement_Boots",
+        "name": "Debug Movement Boots",
         "kind": "item"
       }
     ],
@@ -32844,6 +33084,34 @@
         "kind": "npc"
       }
     ],
+    "test boss basic": [
+      {
+        "id": "Test_Boss_Basic",
+        "name": "Test Boss Basic",
+        "kind": "npc"
+      }
+    ],
+    "test boss awakening": [
+      {
+        "id": "Test_Boss_Basic_Intro",
+        "name": "Test Boss Awakening",
+        "kind": "npc"
+      }
+    ],
+    "test boss minion": [
+      {
+        "id": "Test_Boss_Minion",
+        "name": "Test Boss Minion",
+        "kind": "npc"
+      }
+    ],
+    "test boss spawning": [
+      {
+        "id": "Test_Boss_Spawning",
+        "name": "Test Boss Spawning",
+        "kind": "npc"
+      }
+    ],
     "test bow charge": [
       {
         "id": "Test_Bow_Charge",
@@ -32942,101 +33210,101 @@
         "kind": "npc"
       }
     ],
-    "[tmp] test constraints seek breathe": [
+    "test constraints seek breathe": [
       {
         "id": "Test_Constraints_Seek_Breathe",
-        "name": "[TMP] Test Constraints Seek Breathe",
+        "name": "Test Constraints Seek Breathe",
         "kind": "npc"
       }
     ],
-    "[tmp] test constraints seek drop": [
+    "test constraints seek drop": [
       {
         "id": "Test_Constraints_Seek_Drop",
-        "name": "[TMP] Test Constraints Seek Drop",
+        "name": "Test Constraints Seek Drop",
         "kind": "npc"
       }
     ],
-    "[tmp] test constraints seek legacy relaxed": [
+    "test constraints seek legacy relaxed": [
       {
         "id": "Test_Constraints_Seek_Legacy_Relaxed",
-        "name": "[TMP] Test Constraints Seek Legacy Relaxed",
+        "name": "Test Constraints Seek Legacy Relaxed",
         "kind": "npc"
       }
     ],
-    "[tmp] test constraints seek legacy relaxed small": [
+    "test constraints seek legacy relaxed small": [
       {
         "id": "Test_Constraints_Seek_Legacy_Relaxed_Small",
-        "name": "[TMP] Test Constraints Seek Legacy Relaxed Small",
+        "name": "Test Constraints Seek Legacy Relaxed Small",
         "kind": "npc"
       }
     ],
-    "[tmp] test constraints seek legacy unrelaxed": [
+    "test constraints seek legacy unrelaxed": [
       {
         "id": "Test_Constraints_Seek_Legacy_Unrelaxed",
-        "name": "[TMP] Test Constraints Seek Legacy Unrelaxed",
+        "name": "Test Constraints Seek Legacy Unrelaxed",
         "kind": "npc"
       }
     ],
-    "[tmp] test constraints seek legacy unrelaxed small": [
+    "test constraints seek legacy unrelaxed small": [
       {
         "id": "Test_Constraints_Seek_Legacy_Unrelaxed_Small",
-        "name": "[TMP] Test Constraints Seek Legacy Unrelaxed Small",
+        "name": "Test Constraints Seek Legacy Unrelaxed Small",
         "kind": "npc"
       }
     ],
-    "[tmp] test constraints seek none": [
+    "test constraints seek none": [
       {
         "id": "Test_Constraints_Seek_None",
-        "name": "[TMP] Test Constraints Seek None",
+        "name": "Test Constraints Seek None",
         "kind": "npc"
       }
     ],
-    "[tmp] test constraints wander legacy relaxed": [
+    "test constraints wander legacy relaxed": [
       {
         "id": "Test_Constraints_Wander_Legacy_Relaxed",
-        "name": "[TMP] Test Constraints Wander Legacy Relaxed",
+        "name": "Test Constraints Wander Legacy Relaxed",
         "kind": "npc"
       }
     ],
-    "[tmp] test constraints wander legacy unrelaxed": [
+    "test constraints wander legacy unrelaxed": [
       {
         "id": "Test_Constraints_Wander_Legacy_Unrelaxed",
-        "name": "[TMP] Test Constraints Wander Legacy Unrelaxed",
+        "name": "Test Constraints Wander Legacy Unrelaxed",
         "kind": "npc"
       }
     ],
-    "[tmp] test constraints flee legacy relaxed": [
+    "test constraints flee legacy relaxed": [
       {
         "id": "Test_Constraints_Flee_Legacy_Relaxed",
-        "name": "[TMP] Test Constraints Flee Legacy Relaxed",
+        "name": "Test Constraints Flee Legacy Relaxed",
         "kind": "npc"
       }
     ],
-    "[tmp] test constraints flee legacy unrelaxed": [
+    "test constraints flee legacy unrelaxed": [
       {
         "id": "Test_Constraints_Flee_Legacy_Unrelaxed",
-        "name": "[TMP] Test Constraints Flee Legacy Unrelaxed",
+        "name": "Test Constraints Flee Legacy Unrelaxed",
         "kind": "npc"
       }
     ],
-    "[tmp] test constraints seek fence": [
+    "test constraints seek fence": [
       {
         "id": "Test_Constraints_Seek_Fence",
-        "name": "[TMP] Test Constraints Seek Fence",
+        "name": "Test Constraints Seek Fence",
         "kind": "npc"
       }
     ],
-    "[tmp] test constraints seek wade": [
+    "test constraints seek wade": [
       {
         "id": "Test_Constraints_Seek_Wade",
-        "name": "[TMP] Test Constraints Seek Wade",
+        "name": "Test Constraints Seek Wade",
         "kind": "npc"
       }
     ],
-    "[tmp] test constraints seek wade breathe": [
+    "test constraints seek wade breathe": [
       {
         "id": "Test_Constraints_Seek_Wade_Breathe",
-        "name": "[TMP] Test Constraints Seek Wade Breathe",
+        "name": "Test Constraints Seek Wade Breathe",
         "kind": "npc"
       }
     ],
@@ -33138,10 +33406,10 @@
         "kind": "npc"
       }
     ],
-    "[tmp] test dummy damage": [
+    "test dummy damage": [
       {
         "id": "Test_Dummy_Damage",
-        "name": "[TMP] Test Dummy Damage",
+        "name": "Test Dummy Damage",
         "kind": "npc"
       }
     ],
@@ -33149,6 +33417,20 @@
       {
         "id": "Test_Dummy_Stationary",
         "name": "Test Dummy Stationary",
+        "kind": "npc"
+      }
+    ],
+    "test entityfilter executing interaction": [
+      {
+        "id": "Test_EntityFilter_ExecutingInteraction",
+        "name": "Test EntityFilter Executing Interaction",
+        "kind": "npc"
+      }
+    ],
+    "test entityfilter executing interaction observer": [
+      {
+        "id": "Test_EntityFilter_ExecutingInteraction_Observer",
+        "name": "Test EntityFilter Executing Interaction Observer",
         "kind": "npc"
       }
     ],
@@ -33331,6 +33613,13 @@
       {
         "id": "Test_Guided_Bow",
         "name": "Test Guided Bow",
+        "kind": "npc"
+      }
+    ],
+    "test head motion rotate": [
+      {
+        "id": "Test_Head_Motion_Rotate",
+        "name": "Test Head Motion Rotate",
         "kind": "npc"
       }
     ],
@@ -33579,59 +33868,80 @@
         "kind": "npc"
       }
     ],
-    "[tmp] test motion charge debug": [
+    "test motion charge debug": [
       {
         "id": "Test_Motion_Charge_Debug",
-        "name": "[TMP] Test Motion Charge Debug",
+        "name": "Test Motion Charge Debug",
         "kind": "npc"
       }
     ],
-    "[tmp] test motion charge": [
+    "test motion charge": [
       {
         "id": "Test_Motion_Charge",
-        "name": "[TMP] Test Motion Charge",
+        "name": "Test Motion Charge",
         "kind": "npc"
       }
     ],
-    "[tmp] test motion charge rot": [
+    "test motion charge path": [
+      {
+        "id": "Test_Motion_Charge_Path",
+        "name": "Test Motion Charge Path",
+        "kind": "npc"
+      }
+    ],
+    "test motion charge rot": [
       {
         "id": "Test_Motion_Charge_Rot",
-        "name": "[TMP] Test Motion Charge Rot",
+        "name": "Test Motion Charge Rot",
         "kind": "npc"
       }
     ],
-    "[tmp] test motion charge skip": [
+    "test motion charge skip": [
       {
         "id": "Test_Motion_Charge_Skip",
-        "name": "[TMP] Test Motion Charge Skip",
+        "name": "Test Motion Charge Skip",
         "kind": "npc"
       }
     ],
-    "[tmp] test motion charge slope": [
+    "test motion charge slope": [
       {
         "id": "Test_Motion_Charge_Slope",
-        "name": "[TMP] Test Motion Charge Slope",
+        "name": "Test Motion Charge Slope",
         "kind": "npc"
       }
     ],
-    "[tmp] test motion charge speed": [
+    "test motion charge speed": [
       {
         "id": "Test_Motion_Charge_Speed",
-        "name": "[TMP] Test Motion Charge Speed",
+        "name": "Test Motion Charge Speed",
         "kind": "npc"
       }
     ],
-    "[tmp] test motion charge states": [
+    "test motion charge states": [
       {
         "id": "Test_Motion_Charge_States",
-        "name": "[TMP] Test Motion Charge States",
+        "name": "Test Motion Charge States",
         "kind": "npc"
       }
     ],
-    "[tmp] test motion charge stop": [
+    "test motion charge stop": [
       {
         "id": "Test_Motion_Charge_Stop",
-        "name": "[TMP] Test Motion Charge Stop",
+        "name": "Test Motion Charge Stop",
+        "kind": "npc"
+      }
+    ],
+    "test motion charge stun": [
+      {
+        "id": "Test_Motion_Charge_Stun",
+        "name": "Test Motion Charge Stun",
+        "kind": "npc"
+      }
+    ],
+    "test motion charge repath": [
+      {
+        "id": "Test_Motion_Charge_Repath",
+        "name": "Test Motion Charge Repath",
         "kind": "npc"
       }
     ],
@@ -33688,6 +33998,20 @@
       {
         "id": "Test_Particle_Emotions",
         "name": "Test Particle Emotions",
+        "kind": "npc"
+      }
+    ],
+    "test particle scale": [
+      {
+        "id": "Test_Particle_Scale",
+        "name": "Test Particle Scale",
+        "kind": "npc"
+      }
+    ],
+    "test platform": [
+      {
+        "id": "Test_Platform",
+        "name": "Test Platform",
         "kind": "npc"
       }
     ],
@@ -34027,6 +34351,20 @@
         "kind": "npc"
       }
     ],
+    "test set health regen": [
+      {
+        "id": "Test_Set_Health_Regen",
+        "name": "Test Set Health Regen",
+        "kind": "npc"
+      }
+    ],
+    "test set invulnerable": [
+      {
+        "id": "Test_Set_Invulnerable",
+        "name": "Test Set Invulnerable",
+        "kind": "npc"
+      }
+    ],
     "test set stat": [
       {
         "id": "Test_Set_Stat",
@@ -34209,6 +34547,13 @@
         "kind": "npc"
       }
     ],
+    "test state evaluator timesincelastused": [
+      {
+        "id": "Test_State_Evaluator_TimeSinceLastUsed",
+        "name": "Test State Evaluator TimeSinceLastUsed",
+        "kind": "npc"
+      }
+    ],
     "test state transitions": [
       {
         "id": "Test_State_Transitions",
@@ -34367,6 +34712,13 @@
       {
         "id": "Test_Trigger_Spawners",
         "name": "Test Trigger Spawners",
+        "kind": "npc"
+      }
+    ],
+    "test trigger volume": [
+      {
+        "id": "Test_Trigger_Volume",
+        "name": "Test Trigger Volume",
         "kind": "npc"
       }
     ],

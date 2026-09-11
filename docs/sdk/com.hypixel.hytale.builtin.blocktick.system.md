@@ -23,6 +23,6 @@ public class com.hypixel.hytale.builtin.blocktick.system.MergeWaitingBlocksSyste
   public com.hypixel.hytale.component.query.Query<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore> getQuery();
   public void onEntityAdded(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, com.hypixel.hytale.component.AddReason, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>);
   public void onEntityRemove(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, com.hypixel.hytale.component.RemoveReason, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>);
-  public static void mergeTickingBlocks(com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, int, int);
+  public static void mergeTickingBlocks(com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, int, int, int);
 }
 ```

@@ -64,6 +64,7 @@ public class com.hypixel.hytale.builtin.hytalegenerator.assets.scanners.LinearSc
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.builtin.hytalegenerator.assets.scanners.LinearScannerAsset> CODEC;
   public com.hypixel.hytale.builtin.hytalegenerator.assets.scanners.LinearScannerAsset();
   public com.hypixel.hytale.builtin.hytalegenerator.scanners.Scanner build(com.hypixel.hytale.builtin.hytalegenerator.assets.scanners.ScannerAsset$Argument);
+  public void cleanUp();
 }
 ```
 
@@ -74,6 +75,7 @@ public class com.hypixel.hytale.builtin.hytalegenerator.assets.scanners.QueueSca
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.builtin.hytalegenerator.assets.scanners.QueueScannerAsset> CODEC;
   public com.hypixel.hytale.builtin.hytalegenerator.assets.scanners.QueueScannerAsset();
   public com.hypixel.hytale.builtin.hytalegenerator.scanners.Scanner build(com.hypixel.hytale.builtin.hytalegenerator.assets.scanners.ScannerAsset$Argument);
+  public void cleanUp();
 }
 ```
 
@@ -84,6 +86,7 @@ public class com.hypixel.hytale.builtin.hytalegenerator.assets.scanners.RadialSc
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.builtin.hytalegenerator.assets.scanners.RadialScannerAsset> CODEC;
   public com.hypixel.hytale.builtin.hytalegenerator.assets.scanners.RadialScannerAsset();
   public com.hypixel.hytale.builtin.hytalegenerator.scanners.Scanner build(com.hypixel.hytale.builtin.hytalegenerator.assets.scanners.ScannerAsset$Argument);
+  public void cleanUp();
 }
 ```
 
@@ -94,6 +97,7 @@ public class com.hypixel.hytale.builtin.hytalegenerator.assets.scanners.RandomSc
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.builtin.hytalegenerator.assets.scanners.RandomScannerAsset> CODEC;
   public com.hypixel.hytale.builtin.hytalegenerator.assets.scanners.RandomScannerAsset();
   public com.hypixel.hytale.builtin.hytalegenerator.scanners.Scanner build(com.hypixel.hytale.builtin.hytalegenerator.assets.scanners.ScannerAsset$Argument);
+  public void cleanUp();
 }
 ```
 

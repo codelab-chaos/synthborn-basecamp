@@ -1,13 +1,15 @@
 # Hytale Loot / Drop Reference
 
-> Generated 2026-06-25T03:49:59.895Z from `_Assets/Server/Drops/` (named drop-lists) and `_Assets/Server/Item/Items/` (block `BlockType.Gathering`).
+> Generated 2026-09-07T17:13:42.828Z from `_Assets/Server/Drops/` (named drop-lists) and `_Assets/Server/Item/Items/` (block `BlockType.Gathering`).
 
 `x<n>~` is the mean count per resolution; `(p%)` is P(at least one). Query with `node tools/refs/recipes/gamedata.js drops <id>` / `source <item>`.
 
 Regenerate: `node tools/refs/recipes/extract-loot.js`
 
-## Blocks (672)
+## Blocks (677)
 
+- Debug_Companion_Block_Spawner (Soft) [list=Barrels] → Plant_Fruit_Apple x0.091~ (9%), Plant_Fruit_Berries_Red x0.091~ (9%), Weapon_Arrow_Crude x0.068~ (2%), Ingredient_Hide_Light x0.046~ (5%), Ingredient_Salt x0.018~ (2%)
+- Debug_Companion_Block_Spawner_Explicit (Soft) [list=Barrels] → Plant_Fruit_Apple x0.091~ (9%), Plant_Fruit_Berries_Red x0.091~ (9%), Weapon_Arrow_Crude x0.068~ (2%), Ingredient_Hide_Light x0.046~ (5%), Ingredient_Salt x0.018~ (2%)
 - Debug_Falling_Barrel (Breaking/Woods) [list=Barrels] → Plant_Fruit_Apple x0.091~ (9%), Plant_Fruit_Berries_Red x0.091~ (9%), Weapon_Arrow_Crude x0.068~ (2%), Ingredient_Hide_Light x0.046~ (5%), Ingredient_Salt x0.018~ (2%)
 - Debug_Falling_Explosive (Soft) [list=Barrels] → Plant_Fruit_Apple x0.091~ (9%), Plant_Fruit_Berries_Red x0.091~ (9%), Weapon_Arrow_Crude x0.068~ (2%), Ingredient_Hide_Light x0.046~ (5%), Ingredient_Salt x0.018~ (2%)
 - Debug_Spawn_Marker_Block (Soft) [list=Plant_Bush] → Ingredient_Fibre x0.7~ (60%), Ingredient_Stick x0.5~ (50%)
@@ -58,7 +60,7 @@ Regenerate: `node tools/refs/recipes/extract-loot.js`
 - Furniture_Jungle_Chest_Large (Breaking/Woods) → Furniture_Jungle_Chest_Small x2~ (100%)
 - Furniture_Jungle_Pot (Soft) [list=Container_Pot_Clay_Tall] → Weapon_Arrow_Crude x0.092~ (3%), Plant_Fruit_Apple x0.088~ (9%), Plant_Fruit_Berries_Red x0.088~ (9%), Ingredient_Hide_Light x0.066~ (7%), Ingredient_Salt x0.026~ (3%)
 - Furniture_Jungle_Pot_Secondary (Soft) [list=Container_Pot_Clay_Tall] → Weapon_Arrow_Crude x0.092~ (3%), Plant_Fruit_Apple x0.088~ (9%), Plant_Fruit_Berries_Red x0.088~ (9%), Ingredient_Hide_Light x0.066~ (7%), Ingredient_Salt x0.026~ (3%)
-- Furniture_Kweebec_Chest_Large (Breaking/SoftBlocks) → Furniture_Kweebec_Chest_Small x2~ (100%)
+- Furniture_Kweebec_Chest_Large (Breaking/Woods) → Furniture_Kweebec_Chest_Small x2~ (100%)
 - Furniture_Lumberjack_Chest_Large (Breaking/Woods) → Furniture_Lumberjack_Chest_Small x2~ (100%)
 - Furniture_Royal_Magic_Carpet (Soft) [list=Plant_Bush] → Ingredient_Fibre x0.7~ (60%), Ingredient_Stick x0.5~ (50%)
 - Furniture_Royal_Magic_Chest_Large (Breaking/Woods) → Furniture_Royal_Magic_Chest_Small x2~ (100%)
@@ -190,6 +192,7 @@ Regenerate: `node tools/refs/recipes/extract-loot.js`
 - Plant_Crop_Rice_Block (Soft) [list=Drops_Plant_Crop_Rice_Block] → Plant_Seeds_Rice x1~ (100%)
 - Plant_Crop_Rice_Block_Eternal (Soft) [list=Drops_Plant_Crop_Rice_Eternal_Block] → Plant_Seeds_Rice_Eternal x1~ (100%)
 - Plant_Crop_Stamina1 (Soft) [list=Plant_Crop_Stamina1] → Plant_Petals_Storm x1~ (100%)
+- Plant_Crop_Stamina1_Block (Soft) [list=Plant_Crop_Stamina1_Stage_0] → Plant_Seeds_Stamina1 x1~ (100%)
 - Plant_Crop_Stamina2 (Soft) [list=Plant_Crop_Stamina2] → Plant_Petals_Storm x1.5~ (100%)
 - Plant_Crop_Stamina2_Block (Soft) [list=Plant_Crop_Stamina2_Stage_0] → Plant_Seeds_Stamina2 x1~ (100%)
 - Plant_Crop_Stamina3 (Soft) [list=Plant_Crop_Stamina3] → Plant_Petals_Storm x2.5~ (100%)
@@ -348,8 +351,8 @@ Regenerate: `node tools/refs/recipes/extract-loot.js`
 - Plant_Leaves_Maple (Soft) [list=Tree_Leaves] → Ingredient_Fibre x1~ (100%)
 - Plant_Leaves_Oak (Soft) [list=Tree_Leaves] → Ingredient_Fibre x1~ (100%)
 - Plant_Leaves_Palm (Soft) [list=Tree_Leaves] → Ingredient_Fibre x1~ (100%)
-- Plant_Leaves_Palm_Arid (Soft) [list=Tree_Leaves] → Ingredient_Fibre x1~ (100%)
-- Plant_Leaves_Palm_Oasis (Soft) [list=Tree_Leaves] → Ingredient_Fibre x1~ (100%)
+- Plant_Leaves_Palm_Arid (Soft) [list=Tree_Leaves_Palm] → Wood_Palm_Trunk x3~ (100%)
+- Plant_Leaves_Palm_Oasis (Soft) [list=Tree_Leaves_Palm] → Wood_Palm_Trunk x3~ (100%)
 - Plant_Leaves_Palo (Soft) [list=Tree_Leaves] → Ingredient_Fibre x1~ (100%)
 - Plant_Leaves_Petrified (Soft) [list=Tree_Leaves] → Ingredient_Fibre x1~ (100%)
 - Plant_Leaves_Poisoned (Soft) [list=Tree_Leaves] → Ingredient_Fibre x1~ (100%)
@@ -444,6 +447,7 @@ Regenerate: `node tools/refs/recipes/extract-loot.js`
 - Prototype_Cactus_Spike_Long (Breaking/Woods) [list=Wood_Beech_Trunk] → @droplist:Wood_Beech_Trunk x0~ (unresolved)
 - Prototype_Cactus_Three (Breaking/Woods) [list=Wood_Beech_Trunk] → @droplist:Wood_Beech_Trunk x0~ (unresolved)
 - Prototype_Cactus_Two (Breaking/Woods) [list=Wood_Beech_Trunk] → @droplist:Wood_Beech_Trunk x0~ (unresolved)
+- Prototype_Spider_Cocoon_Falling (Soft) [list=Spider_Cocoon] → Deco_Bone_Skulls x1.5~ (100%)
 - Prototype_Succulent_Hanging_Vertical (Soft) [list=Plant_Fiber] → Ingredient_Fibre x0.7~ (70%)
 - Prototype_Wood_Beech_Branch_Corner_Sideways (Breaking/Woods) [list=Wood_Beech_Trunk] → @droplist:Wood_Beech_Trunk x0~ (unresolved)
 - Prototype_Wood_Beech_Branch_Five (Breaking/Woods) [list=Wood_Beech_Trunk] → @droplist:Wood_Beech_Trunk x0~ (unresolved)
@@ -546,6 +550,7 @@ Regenerate: `node tools/refs/recipes/extract-loot.js`
 - Soil_Volcanic_Gravel_Half (Breaking/Soils) [list=Soil_Volcanic_Gravel] → @droplist:Soil_Volcanic_Gravel x0~ (unresolved)
 - Template_Crop_Berry_Block (Soft) [list=Drops_Plant_Crop_Berry_Block] → Ingredient_Fibre x1.5~ (100%), Ingredient_Stick x1.5~ (100%)
 - Template_Crop_Block (Soft) [list=Drops_Plant_Crop_Carrot_Block] → Plant_Seeds_Carrot x1~ (100%)
+- Test_PlaceBlockProcedure (Breaking/Soils) [list=Soil_Gravel] → Rubble_Stone x1.5~ (100%)
 - Trap_Ice (Breaking/SoftBlocks) [list=Rock_Ice] → Rock_Ice x1~ (100%)
 - Tree_Sap_Glob (Soft) [list=Tree_Sap_Glob_0] → Ingredient_Tree_Sap x1~ (100%)
 - Wood_Amber_Branch_Corner (Breaking/Woods) [list=Wood_Branch] → Ingredient_Stick x1~ (75%), Ingredient_Tree_Sap x0.25~ (50%)
@@ -685,7 +690,7 @@ Regenerate: `node tools/refs/recipes/extract-loot.js`
 - Wood_Wisteria_Wild_Branch_Short (Breaking/Woods) [list=Wood_Branch] → Ingredient_Stick x1~ (75%), Ingredient_Tree_Sap x0.25~ (50%)
 - Wood_Wisteria_Wild_Roots (Soft) [list=Wood_Aspen_Branch_Physics] → @droplist:Wood_Aspen_Branch_Physics x0~ (unresolved)
 
-## Named drop-lists (620)
+## Named drop-lists (622)
 
 - Bark → Ingredient_Tree_Bark x1.5~ (100%)
 - Barrels → Plant_Fruit_Apple x0.091~ (9%), Plant_Fruit_Berries_Red x0.091~ (9%), Weapon_Arrow_Crude x0.068~ (2%), Ingredient_Hide_Light x0.046~ (5%), Ingredient_Salt x0.018~ (2%)
@@ -1244,7 +1249,9 @@ Regenerate: `node tools/refs/recipes/extract-loot.js`
 - Treasure → Rock_Gem_Emerald x6~ (100%), Rock_Gem_Ruby x6~ (100%)
 - Treasure_Map → Ingredient_Bar_Gold x15~ (100%)
 - Tree_Leaves → Ingredient_Fibre x1~ (100%)
+- Tree_Leaves_Palm → Wood_Palm_Trunk x3~ (100%)
 - Tree_Leaves_Physics → Ingredient_Fibre x0.02~ (2%)
+- Tree_Leaves_Physics_Palm → Wood_Palm_Trunk x3~ (100%)
 - Tree_Sap_Glob_0 → Ingredient_Tree_Sap x1~ (100%)
 - Tree_Sap_Glob_1 → Ingredient_Tree_Sap x3~ (100%)
 - Tree_Sap_Glob_2 → Ingredient_Tree_Sap x5~ (100%)
@@ -1880,6 +1887,7 @@ Regenerate: `node tools/refs/recipes/extract-loot.js`
 - Deco_Scarak_Cocoon (Breaking) — x1.5~ (100%)
 - Deco_Spider_Cocoon (Soft) — x1.5~ (100%)
 - Deco_Spider_Cocoon (Breaking) — x1.5~ (100%)
+- Prototype_Spider_Cocoon_Falling (Soft) — x1.5~ (100%)
 - droplist Container_Coffins — x0.5~ (50%)
 - droplist Container_Human_Ruins_Coffin — x0.5~ (50%)
 - Furniture_Ancient_Coffin (Breaking) — x0.5~ (50%)
@@ -3010,8 +3018,6 @@ Regenerate: `node tools/refs/recipes/extract-loot.js`
 - Plant_Leaves_Maple (Soft) — x1~ (100%)
 - Plant_Leaves_Oak (Soft) — x1~ (100%)
 - Plant_Leaves_Palm (Soft) — x1~ (100%)
-- Plant_Leaves_Palm_Arid (Soft) — x1~ (100%)
-- Plant_Leaves_Palm_Oasis (Soft) — x1~ (100%)
 - Plant_Leaves_Palo (Soft) — x1~ (100%)
 - Plant_Leaves_Petrified (Soft) — x1~ (100%)
 - Plant_Leaves_Poisoned (Soft) — x1~ (100%)
@@ -3312,6 +3318,8 @@ Regenerate: `node tools/refs/recipes/extract-loot.js`
 - droplist Container_Pot_Ancient — x0.046~ (5%)
 - droplist Container_Pot_Clay — x0.046~ (5%)
 - droplist Container_Pot_Jar_Blue — x0.046~ (5%)
+- Debug_Companion_Block_Spawner (Soft) — x0.046~ (5%)
+- Debug_Companion_Block_Spawner_Explicit (Soft) — x0.046~ (5%)
 - Debug_Falling_Barrel (Breaking) — x0.046~ (5%)
 - Debug_Falling_Explosive (Soft) — x0.046~ (5%)
 - Furniture_Ancient_Barrel (Soft) — x0.046~ (5%)
@@ -3676,6 +3684,8 @@ Regenerate: `node tools/refs/recipes/extract-loot.js`
 - droplist Container_Pot_Ancient — x0.018~ (2%)
 - droplist Container_Pot_Clay — x0.018~ (2%)
 - droplist Container_Pot_Jar_Blue — x0.018~ (2%)
+- Debug_Companion_Block_Spawner (Soft) — x0.018~ (2%)
+- Debug_Companion_Block_Spawner_Explicit (Soft) — x0.018~ (2%)
 - Debug_Falling_Barrel (Breaking) — x0.018~ (2%)
 - Debug_Falling_Explosive (Soft) — x0.018~ (2%)
 - Furniture_Ancient_Barrel (Soft) — x0.018~ (2%)
@@ -4555,6 +4565,8 @@ Regenerate: `node tools/refs/recipes/extract-loot.js`
 - droplist Container_Pot_Ancient — x0.091~ (9%)
 - droplist Container_Pot_Clay — x0.091~ (9%)
 - droplist Container_Pot_Jar_Blue — x0.091~ (9%)
+- Debug_Companion_Block_Spawner (Soft) — x0.091~ (9%)
+- Debug_Companion_Block_Spawner_Explicit (Soft) — x0.091~ (9%)
 - Debug_Falling_Barrel (Breaking) — x0.091~ (9%)
 - Debug_Falling_Explosive (Soft) — x0.091~ (9%)
 - Furniture_Ancient_Barrel (Soft) — x0.091~ (9%)
@@ -4631,6 +4643,8 @@ Regenerate: `node tools/refs/recipes/extract-loot.js`
 - droplist Container_Pot_Ancient — x0.091~ (9%)
 - droplist Container_Pot_Clay — x0.091~ (9%)
 - droplist Container_Pot_Jar_Blue — x0.091~ (9%)
+- Debug_Companion_Block_Spawner (Soft) — x0.091~ (9%)
+- Debug_Companion_Block_Spawner_Explicit (Soft) — x0.091~ (9%)
 - Debug_Falling_Barrel (Breaking) — x0.091~ (9%)
 - Debug_Falling_Explosive (Soft) — x0.091~ (9%)
 - Furniture_Ancient_Barrel (Soft) — x0.091~ (9%)
@@ -5155,6 +5169,7 @@ Regenerate: `node tools/refs/recipes/extract-loot.js`
 - droplist Plant_Crop_Stamina1_Stage_0 — x1~ (100%)
 - droplist Plant_Crop_Stamina1_Stage_1 — x1~ (100%)
 - droplist Plant_Crop_Stamina1_Stage_2 — x1~ (100%)
+- Plant_Crop_Stamina1_Block (Soft) — x1~ (100%)
 
 ### Plant_Seeds_Stamina2
 - droplist Plant_Crop_Stamina2_Stage_0 — x1~ (100%)
@@ -5631,6 +5646,7 @@ Regenerate: `node tools/refs/recipes/extract-loot.js`
 - Soil_Gravel_Mossy_Half (Breaking) — x1.5~ (100%)
 - Soil_Pebbles (Breaking) — x1.5~ (100%)
 - Soil_Pebbles_Frozen (Breaking) — x1.5~ (100%)
+- Test_PlaceBlockProcedure (Breaking) — x1.5~ (100%)
 - droplist Rubble_Stone — x1~ (100%)
 - droplist Drops_Fishing_Trap_Crude — x0.091~ (3%)
 
@@ -5969,6 +5985,8 @@ Regenerate: `node tools/refs/recipes/extract-loot.js`
 - droplist Container_Pot_Ancient — x0.068~ (2%)
 - droplist Container_Pot_Clay — x0.068~ (2%)
 - droplist Container_Pot_Jar_Blue — x0.068~ (2%)
+- Debug_Companion_Block_Spawner (Soft) — x0.068~ (2%)
+- Debug_Companion_Block_Spawner_Explicit (Soft) — x0.068~ (2%)
 - Debug_Falling_Barrel (Breaking) — x0.068~ (2%)
 - Debug_Falling_Explosive (Soft) — x0.068~ (2%)
 - Furniture_Ancient_Barrel (Soft) — x0.068~ (2%)
@@ -6923,6 +6941,10 @@ Regenerate: `node tools/refs/recipes/extract-loot.js`
 - droplist Zone1_Undead_Tier1 — x1.375~ (25%)
 
 ### Wood_Palm_Trunk
+- droplist Tree_Leaves_Palm — x3~ (100%)
+- droplist Tree_Leaves_Physics_Palm — x3~ (100%)
+- Plant_Leaves_Palm_Arid (Soft) — x3~ (100%)
+- Plant_Leaves_Palm_Oasis (Soft) — x3~ (100%)
 - droplist Zone2_Encounters_Tier2 — x2.438~ (38%)
 - droplist Zone2_Feran_Tier2 — x2.438~ (38%)
 - droplist Zone2_Undead_Tier2 — x2.438~ (38%)

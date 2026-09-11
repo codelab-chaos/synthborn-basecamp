@@ -73,7 +73,7 @@ public abstract class com.hypixel.hytale.event.EventBusRegistry<KeyType, EventTy
   protected final ConsumerMapType global;
   protected final ConsumerMapType unhandled;
   protected boolean timeEvents;
-  protected boolean shutdown;
+  protected volatile boolean shutdown;
   public com.hypixel.hytale.event.EventBusRegistry(com.hypixel.hytale.logger.HytaleLogger, java.lang.Class<EventType>, ConsumerMapType, ConsumerMapType);
   public java.lang.Class<EventType> getEventClass();
   public boolean isTimeEvents();

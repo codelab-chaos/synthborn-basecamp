@@ -22,7 +22,9 @@ public class com.hypixel.hytale.server.core.modules.LegacyModule extends com.hyp
   public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, com.hypixel.hytale.server.core.universe.world.chunk.ChunkColumn> getChunkColumnComponentType();
   public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, com.hypixel.hytale.server.core.universe.world.chunk.section.ChunkSection> getChunkSectionComponentType();
   public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, com.hypixel.hytale.server.core.universe.world.chunk.section.BlockSection> getBlockSectionComponentType();
+  public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, com.hypixel.hytale.server.core.universe.world.chunk.section.EntitySection> getEntitySectionComponentType();
   public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, com.hypixel.hytale.server.core.universe.world.chunk.section.FluidSection> getFluidSectionComponentType();
+  public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, com.hypixel.hytale.server.core.universe.world.chunk.section.BlockComponentSection> getBlockComponentSectionComponentType();
   public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, com.hypixel.hytale.server.core.universe.world.chunk.section.blockpositions.BlockPositionProvider> getBlockPositionProviderComponentType();
 }
 ```

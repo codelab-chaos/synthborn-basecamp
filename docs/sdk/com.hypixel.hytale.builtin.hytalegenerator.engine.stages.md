@@ -90,9 +90,6 @@ public interface com.hypixel.hytale.builtin.hytalegenerator.engine.stages.Stage 
 ```java
 public class com.hypixel.hytale.builtin.hytalegenerator.engine.stages.TerrainStage implements com.hypixel.hytale.builtin.hytalegenerator.engine.stages.Stage {
   public static final double DEFAULT_BACKGROUND_DENSITY;
-  public static final double ORIGIN_REACH;
-  public static final double ORIGIN_REACH_HALF;
-  public static final double QUARTER_PI;
   public static final java.lang.Class<com.hypixel.hytale.builtin.hytalegenerator.engine.bufferbundle.buffers.CountedPixelBuffer> biomeBufferClass;
   public static final java.lang.Class<java.lang.Integer> biomeClass;
   public static final java.lang.Class<com.hypixel.hytale.builtin.hytalegenerator.engine.bufferbundle.buffers.SimplePixelBuffer> biomeDistanceBufferClass;
@@ -113,9 +110,11 @@ public class com.hypixel.hytale.builtin.hytalegenerator.engine.stages.TerrainSta
 public class com.hypixel.hytale.builtin.hytalegenerator.engine.stages.TintStage implements com.hypixel.hytale.builtin.hytalegenerator.engine.stages.Stage {
   public static final java.lang.Class<com.hypixel.hytale.builtin.hytalegenerator.engine.bufferbundle.buffers.CountedPixelBuffer> biomeBufferClass;
   public static final java.lang.Class<java.lang.Integer> biomeClass;
+  public static final java.lang.Class<com.hypixel.hytale.builtin.hytalegenerator.engine.bufferbundle.buffers.SimplePixelBuffer> biomeDistanceBufferClass;
+  public static final java.lang.Class<com.hypixel.hytale.builtin.hytalegenerator.engine.stages.BiomeDistanceStage$BiomeDistanceEntries> biomeDistanceClass;
   public static final java.lang.Class<com.hypixel.hytale.builtin.hytalegenerator.engine.bufferbundle.buffers.SimplePixelBuffer> tintBufferClass;
   public static final java.lang.Class<java.lang.Integer> tintClass;
-  public com.hypixel.hytale.builtin.hytalegenerator.engine.stages.TintStage(java.lang.String, com.hypixel.hytale.builtin.hytalegenerator.engine.bufferbundle.buffers.type.ParametrizedBufferType, com.hypixel.hytale.builtin.hytalegenerator.engine.bufferbundle.buffers.type.ParametrizedBufferType, com.hypixel.hytale.builtin.hytalegenerator.workerindexer.WorkerIndexer$Data<com.hypixel.hytale.builtin.hytalegenerator.worldstructure.WorldStructure>);
+  public com.hypixel.hytale.builtin.hytalegenerator.engine.stages.TintStage(java.lang.String, com.hypixel.hytale.builtin.hytalegenerator.engine.bufferbundle.buffers.type.ParametrizedBufferType, com.hypixel.hytale.builtin.hytalegenerator.engine.bufferbundle.buffers.type.ParametrizedBufferType, com.hypixel.hytale.builtin.hytalegenerator.engine.bufferbundle.buffers.type.ParametrizedBufferType, int, com.hypixel.hytale.builtin.hytalegenerator.workerindexer.WorkerIndexer$Data<com.hypixel.hytale.builtin.hytalegenerator.worldstructure.WorldStructure>);
   public void run(com.hypixel.hytale.builtin.hytalegenerator.engine.stages.Stage$Context);
   public java.util.Map<com.hypixel.hytale.builtin.hytalegenerator.engine.bufferbundle.buffers.type.BufferType, com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i> getInputTypesAndBounds_bufferGrid();
   public java.util.List<com.hypixel.hytale.builtin.hytalegenerator.engine.bufferbundle.buffers.type.BufferType> getOutputTypes();

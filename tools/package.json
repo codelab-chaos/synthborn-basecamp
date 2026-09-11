@@ -15,6 +15,7 @@
     "examples:sync": "node refs/example-mods/sync-example-mod-repos.js",
     "labels:extract": "node refs/labels/extract-labels.js",
     "labels:lookup": "node refs/labels/lookup.js",
+    "notes:port": "node refs/patch-notes/port-hytale-post.js",
     "npcs:extract": "node refs/npcs/extract-npcs.js",
     "prefabs:index": "node refs/prefabs/index-hytale-prefabs.js",
     "prefabs:modules": "node refs/prefabs/extract-prefab-modules.js",
@@ -30,8 +31,11 @@
     "sdk:list": "node refs/sdk/list-hytale-server-api.js",
     "sdk:llms": "node refs/sdk/build-sdk-llms-txt.js",
     "sdk:search": "node refs/sdk/sdk-search.js",
+    "update:plan": "node release/plan-hytale-update.js",
+    "update:apply": "node release/plan-hytale-update.js --apply",
     "pages:build": "node ../scripts/build-github-pages.js",
     "pages:build:icons": "node ../scripts/build-github-pages.js --icons",
-    "index:json": "node ../scripts/build-basecamp-index-json.js"
+    "index:json": "node ../scripts/build-basecamp-index-json.js",
+    "sdk:test": "node --test refs/sdk/tests/incremental-sdk.test.js"
   }
 }

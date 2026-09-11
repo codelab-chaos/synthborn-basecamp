@@ -128,7 +128,7 @@ public abstract class com.hypixel.hytale.server.core.command.system.arguments.sy
   public boolean provided(com.hypixel.hytale.server.core.command.system.CommandContext);
   public java.lang.String getName();
   public java.lang.String getDescription();
-  public <D extends com.hypixel.hytale.server.core.command.system.arguments.system.WrappedArg<BasicType>> D addAliases(java.lang.String...);
+  public com.hypixel.hytale.server.core.command.system.arguments.system.WrappedArg<BasicType> addAliases(java.lang.String...);
   public com.hypixel.hytale.server.core.command.system.arguments.system.Argument<?, BasicType> getArg();
   protected BasicType get(com.hypixel.hytale.server.core.command.system.CommandContext);
 }

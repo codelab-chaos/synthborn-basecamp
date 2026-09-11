@@ -65,6 +65,7 @@ public class com.hypixel.hytale.server.npc.movement.controllers.builders.Builder
   public double getFastDiveThreshold();
   public double getDesiredDepthWeight();
   public com.hypixel.hytale.server.spawning.SpawnTestResult canSpawn(com.hypixel.hytale.server.spawning.SpawningContext);
+  public boolean requiresSpawnDropHeightCheck(com.hypixel.hytale.server.spawning.SpawningContext);
   public void getMovementModes(com.hypixel.hytale.server.spawning.SpawningContext, java.util.Set<com.hypixel.hytale.server.npc.movement.MovementMode>, java.util.Set<com.hypixel.hytale.server.npc.movement.MovementMode>, java.util.Set<com.hypixel.hytale.server.npc.movement.MovementMode>);
   public java.lang.Class<? extends com.hypixel.hytale.server.npc.movement.controllers.MotionController> getClassType();
   public java.util.Set<com.hypixel.hytale.server.npc.movement.MovementMode> getSupportedMovementModes();
@@ -107,6 +108,7 @@ public class com.hypixel.hytale.server.npc.movement.controllers.builders.Builder
   public java.lang.Class<com.hypixel.hytale.server.npc.movement.controllers.MotionController> category();
   public java.lang.String getType();
   public com.hypixel.hytale.server.spawning.SpawnTestResult canSpawn(com.hypixel.hytale.server.spawning.SpawningContext);
+  public boolean requiresSpawnDropHeightCheck(com.hypixel.hytale.server.spawning.SpawningContext);
   public void getMovementModes(com.hypixel.hytale.server.spawning.SpawningContext, java.util.Set<com.hypixel.hytale.server.npc.movement.MovementMode>, java.util.Set<com.hypixel.hytale.server.npc.movement.MovementMode>, java.util.Set<com.hypixel.hytale.server.npc.movement.MovementMode>);
   public java.lang.Class<? extends com.hypixel.hytale.server.npc.movement.controllers.MotionController> getClassType();
   public java.util.Set<com.hypixel.hytale.server.npc.movement.MovementMode> getSupportedMovementModes();
@@ -129,6 +131,7 @@ public class com.hypixel.hytale.server.npc.movement.controllers.builders.Builder
   public final boolean isEnabled(com.hypixel.hytale.server.npc.util.expression.ExecutionContext);
   public java.lang.String getIdentifier();
   public com.hypixel.hytale.server.spawning.SpawnTestResult canSpawn(com.hypixel.hytale.server.spawning.SpawningContext);
+  public boolean requiresSpawnDropHeightCheck(com.hypixel.hytale.server.spawning.SpawningContext);
   public void getMovementModes(com.hypixel.hytale.server.spawning.SpawningContext, java.util.Set<com.hypixel.hytale.server.npc.movement.MovementMode>, java.util.Set<com.hypixel.hytale.server.npc.movement.MovementMode>, java.util.Set<com.hypixel.hytale.server.npc.movement.MovementMode>);
   public boolean validate(java.lang.String, com.hypixel.hytale.server.npc.validators.NPCLoadTimeValidationHelper, com.hypixel.hytale.server.npc.util.expression.ExecutionContext, com.hypixel.hytale.server.npc.util.expression.Scope, java.util.List<java.lang.String>);
   public java.lang.Object build(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
@@ -186,6 +189,7 @@ public class com.hypixel.hytale.server.npc.movement.controllers.builders.Builder
   public double getMinDescentAnimationHeight(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
   public double[] getJumpRange(com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
   public com.hypixel.hytale.server.spawning.SpawnTestResult canSpawn(com.hypixel.hytale.server.spawning.SpawningContext);
+  public boolean requiresSpawnDropHeightCheck(com.hypixel.hytale.server.spawning.SpawningContext);
   public void getMovementModes(com.hypixel.hytale.server.spawning.SpawningContext, java.util.Set<com.hypixel.hytale.server.npc.movement.MovementMode>, java.util.Set<com.hypixel.hytale.server.npc.movement.MovementMode>, java.util.Set<com.hypixel.hytale.server.npc.movement.MovementMode>);
   public java.lang.Class<? extends com.hypixel.hytale.server.npc.movement.controllers.MotionController> getClassType();
   public java.util.Set<com.hypixel.hytale.server.npc.movement.MovementMode> getSupportedMovementModes();

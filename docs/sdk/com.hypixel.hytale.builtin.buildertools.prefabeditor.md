@@ -149,8 +149,8 @@ public class com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditorCr
   public com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditorCreationSettings(com.hypixel.hytale.builtin.buildertools.prefabeditor.enums.PrefabRootDirectory, java.util.List<java.lang.String>, int, int, com.hypixel.hytale.builtin.buildertools.prefabeditor.enums.WorldGenType, int, com.hypixel.hytale.builtin.buildertools.prefabeditor.enums.PrefabStackingAxis, com.hypixel.hytale.builtin.buildertools.prefabeditor.enums.PrefabAlignment, boolean, boolean, boolean, boolean, com.hypixel.hytale.builtin.buildertools.prefabeditor.enums.PrefabRowSplitMode, java.lang.String, java.lang.String);
   public static boolean stringEndsWithPrefabPath(java.lang.String);
   public static java.util.concurrent.CompletableFuture<com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditorCreationSettings> load(java.lang.String);
-  public static java.util.concurrent.CompletableFuture<java.lang.Void> save(java.lang.String, com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditorCreationSettings);
-  public static java.util.concurrent.CompletableFuture<java.lang.Void> save(java.lang.String, com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditorCreationSettings, com.hypixel.hytale.assetstore.AssetPack);
+  public static java.util.concurrent.CompletableFuture<java.lang.Void> save(java.lang.String, com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditorCreationSettings, com.hypixel.hytale.server.core.universe.PlayerRef);
+  public static java.util.concurrent.CompletableFuture<java.lang.Void> save(java.lang.String, com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditorCreationSettings, com.hypixel.hytale.assetstore.AssetPack, com.hypixel.hytale.server.core.universe.PlayerRef);
   public com.hypixel.hytale.server.core.entity.entities.Player getEditor();
   public com.hypixel.hytale.server.core.universe.PlayerRef getEditorRef();
   public java.util.List<java.nio.file.Path> getPrefabPaths();
@@ -165,6 +165,7 @@ public class com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditorCr
   public java.lang.String getId();
   public com.hypixel.hytale.builtin.buildertools.prefabeditor.enums.PrefabRootDirectory getPrefabRootDirectory();
   public java.util.List<java.lang.String> getUnprocessedPrefabPaths();
+  public com.hypixel.hytale.server.core.Message getFailureMessage();
   public int getPasteYLevelGoal();
   public boolean isRecursive();
   public boolean isLoadChildren();

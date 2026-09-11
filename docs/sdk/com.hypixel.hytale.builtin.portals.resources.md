@@ -21,6 +21,8 @@ public class com.hypixel.hytale.builtin.portals.resources.PortalWorld implements
   public static void setRemainingSeconds(com.hypixel.hytale.server.core.universe.world.World, double);
   public java.util.Set<java.util.UUID> getDiedInWorld();
   public java.util.Set<java.util.UUID> getSeesUi();
+  public boolean isTimeLimitActive();
+  public boolean toggleTimeLimit(com.hypixel.hytale.server.core.universe.world.World);
   public com.hypixel.hytale.builtin.portals.integrations.PortalGameplayConfig getGameplayConfig();
   public com.hypixel.hytale.builtin.portals.components.voidevent.config.VoidEventConfig getVoidEventConfig();
   public com.hypixel.hytale.math.vector.Transform getSpawnPoint();

@@ -15,7 +15,7 @@ public class com.hypixel.hytale.server.npc.corecomponents.timer.ActionSetAlarm e
   protected final long randomVariation;
   protected final boolean cancel;
   public com.hypixel.hytale.server.npc.corecomponents.timer.ActionSetAlarm(com.hypixel.hytale.server.npc.corecomponents.timer.builders.BuilderActionSetAlarm, com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
-  public boolean execute(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.role.Role, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public boolean execute(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.instructions.ExecutionSupport, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
 }
 ```
 
@@ -40,7 +40,7 @@ public class com.hypixel.hytale.server.npc.corecomponents.timer.ActionTimer exte
   public com.hypixel.hytale.server.npc.corecomponents.timer.ActionTimer(com.hypixel.hytale.server.npc.corecomponents.timer.builders.BuilderActionTimerStop, com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
   public com.hypixel.hytale.server.npc.corecomponents.timer.ActionTimer(com.hypixel.hytale.server.npc.corecomponents.timer.builders.BuilderActionTimerContinue, com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
   public com.hypixel.hytale.server.npc.corecomponents.timer.ActionTimer(com.hypixel.hytale.server.npc.corecomponents.timer.builders.BuilderActionTimerRestart, com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
-  public boolean execute(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.role.Role, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public boolean execute(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.instructions.ExecutionSupport, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   protected void executeRestartAction();
   protected void executeModifyAction();
   protected void executeContinueAction();
@@ -78,16 +78,16 @@ public abstract class com.hypixel.hytale.server.npc.corecomponents.timer.MotionT
   protected double activeTime;
   protected double timeToLive;
   public com.hypixel.hytale.server.npc.corecomponents.timer.MotionTimer(com.hypixel.hytale.server.npc.corecomponents.timer.builders.BuilderMotionTimer<T>, com.hypixel.hytale.server.npc.asset.builder.BuilderSupport, T);
-  public void activate(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.role.Role, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
-  public void deactivate(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.role.Role, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
-  public boolean computeSteering(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.role.Role, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, double, com.hypixel.hytale.server.npc.movement.Steering, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
-  public void registerWithSupport(com.hypixel.hytale.server.npc.role.Role);
+  public void activate(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.instructions.ExecutionSupport, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public void deactivate(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.instructions.ExecutionSupport, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public boolean computeSteering(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.instructions.ExecutionSupport, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, double, com.hypixel.hytale.server.npc.movement.Steering, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public void registerWithSupport(com.hypixel.hytale.server.npc.instructions.ExecutionSupport);
   public void motionControllerChanged(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.entities.NPCEntity, com.hypixel.hytale.server.npc.movement.controllers.MotionController, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
-  public void loaded(com.hypixel.hytale.server.npc.role.Role);
-  public void spawned(com.hypixel.hytale.server.npc.role.Role);
-  public void unloaded(com.hypixel.hytale.server.npc.role.Role);
-  public void removed(com.hypixel.hytale.server.npc.role.Role);
-  public void teleported(com.hypixel.hytale.server.npc.role.Role, com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.server.core.universe.world.World);
+  public void loaded(com.hypixel.hytale.server.npc.instructions.ExecutionSupport);
+  public void spawned(com.hypixel.hytale.server.npc.instructions.ExecutionSupport);
+  public void unloaded(com.hypixel.hytale.server.npc.instructions.ExecutionSupport);
+  public void removed(com.hypixel.hytale.server.npc.instructions.ExecutionSupport);
+  public void teleported(com.hypixel.hytale.server.npc.instructions.ExecutionSupport, com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.server.core.universe.world.World);
 }
 ```
 
@@ -99,7 +99,7 @@ public class com.hypixel.hytale.server.npc.corecomponents.timer.SensorAlarm exte
   protected final com.hypixel.hytale.server.npc.corecomponents.timer.SensorAlarm$State state;
   protected final boolean clear;
   public com.hypixel.hytale.server.npc.corecomponents.timer.SensorAlarm(com.hypixel.hytale.server.npc.corecomponents.timer.builders.BuilderSensorAlarm, com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
-  public boolean matches(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.role.Role, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public boolean matches(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.instructions.ExecutionSupport, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public com.hypixel.hytale.server.npc.sensorinfo.InfoProvider getSensorInfo();
 }
 ```
@@ -113,7 +113,7 @@ public class com.hypixel.hytale.server.npc.corecomponents.timer.SensorTimer exte
   protected final com.hypixel.hytale.server.npc.util.Timer timer;
   protected final com.hypixel.hytale.server.npc.util.Timer$TimerState timerState;
   public com.hypixel.hytale.server.npc.corecomponents.timer.SensorTimer(com.hypixel.hytale.server.npc.corecomponents.timer.builders.BuilderSensorTimer, com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
-  public boolean matches(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.role.Role, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public boolean matches(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.instructions.ExecutionSupport, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public com.hypixel.hytale.server.npc.sensorinfo.InfoProvider getSensorInfo();
   protected boolean isBetween(double);
 }

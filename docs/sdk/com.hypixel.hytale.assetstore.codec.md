@@ -71,7 +71,7 @@ public class com.hypixel.hytale.assetstore.codec.AssetCodecMapCodec<K, T extends
   public T decodeJsonAsset(com.hypixel.hytale.codec.util.RawJsonReader, com.hypixel.hytale.assetstore.AssetExtraInfo<K>) throws java.io.IOException;
   public T decodeAndInheritJsonAsset(com.hypixel.hytale.codec.util.RawJsonReader, T, com.hypixel.hytale.assetstore.AssetExtraInfo<K>) throws java.io.IOException;
   public com.hypixel.hytale.codec.schema.config.Schema toSchema(com.hypixel.hytale.codec.schema.SchemaContext);
-  protected void mutateChildSchema(java.lang.String, com.hypixel.hytale.codec.schema.SchemaContext, com.hypixel.hytale.codec.builder.BuilderCodec<? extends T>, com.hypixel.hytale.codec.schema.config.ObjectSchema);
+  protected void mutateChildSchema(java.lang.String, com.hypixel.hytale.codec.schema.SchemaContext, com.hypixel.hytale.codec.Codec<? extends T>, com.hypixel.hytale.codec.schema.config.ObjectSchema);
   public void decodeAndInheritJson(com.hypixel.hytale.codec.util.RawJsonReader, java.lang.Object, java.lang.Object, com.hypixel.hytale.codec.ExtraInfo) throws java.io.IOException;
   public java.lang.Object decodeAndInheritJson(com.hypixel.hytale.codec.util.RawJsonReader, java.lang.Object, com.hypixel.hytale.codec.ExtraInfo) throws java.io.IOException;
   public void decodeAndInherit(org.bson.BsonDocument, java.lang.Object, java.lang.Object, com.hypixel.hytale.codec.ExtraInfo);

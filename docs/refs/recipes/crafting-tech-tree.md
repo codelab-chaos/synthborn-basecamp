@@ -1,6 +1,6 @@
 # Crafting Tech Tree
 
-> Generated 2026-06-25T03:50:10.580Z from `docs/refs/recipes/recipes.json`.
+> Generated 2026-09-07T17:13:42.891Z from `docs/refs/recipes/recipes.json`.
 
 This file is generated. Regenerate with:
 
@@ -12,7 +12,7 @@ The generator uses the asset-derived recipe index and prefers non-salvage crafti
 
 Required craft benches are included as dependency branches when the bench requirement maps to a craftable `Bench_*` item. Free fieldcraft recipes do not add bench branches.
 
-Targets: 1515
+Targets: 1552
 
 ## Aggregate Raw Or Unresolved Inputs
 
@@ -46,7 +46,7 @@ Targets: 1515
 - 280x Ingredient_Fabric_Scrap_Wool
 - 9x Ingredient_Feathers_Dark
 - 100x Ingredient_Feathers_Light
-- 285274x Ingredient_Fibre
+- 285917x Ingredient_Fibre
 - 50x Ingredient_Fire_Essence
 - 3x Ingredient_Hide_Dark
 - 177x Ingredient_Hide_Heavy
@@ -127,7 +127,7 @@ Targets: 1515
 - 11x Rock_Basalt_Brick(type)
 - 17x Rock_Basalt(type)
 - 11x Rock_Calcite_Brick(type)
-- 14x Rock_Calcite(type)
+- 15x Rock_Calcite(type)
 - 9x Rock_Chalk_Brick(type)
 - 13x Rock_Chalk(type)
 - 1x Rock_Gem_Diamond
@@ -164,16 +164,35 @@ Targets: 1515
 - 14x Rock_Stone(type)
 - 11x Rock_Volcanic_Brick(type)
 - 16x Rock_Volcanic(type)
-- 79553x Rock(type)
-- 3x Rubble_Stone
-- 46x Rubble(type)
+- 79670x Rock(type)
+- 6x Rubble_Aqua
+- 6x Rubble_Basalt
+- 6x Rubble_Calcite
+- 6x Rubble_Chalk
+- 6x Rubble_Lime
+- 6x Rubble_Magma_Cooled
+- 6x Rubble_Marble
+- 6x Rubble_Quartzite
+- 6x Rubble_Sandstone
+- 6x Rubble_Sandstone_Red
+- 6x Rubble_Sandstone_White
+- 18x Rubble_Shale
+- 6x Rubble_Slate
+- 9x Rubble_Stone
+- 6x Rubble_Stone_Mossy
+- 6x Rubble_Volcanic
+- 25x Rubble(type)
 - 31x Sands(type)
 - 2x Soil_Clay_Blue
 - 4x Soil_Clay_Ocean
 - 11x Soil_Clay_Ocean_Brick(type)
+- 1x Soil_Dirt
+- 1x Soil_Dirt_Burnt
+- 1x Soil_Dirt_Lush
+- 1x Soil_Dirt_Wet
 - 1x Soil_Sand_White
 - 10x Soil_Snow
-- 27x Soils(type)
+- 30x Soils(type)
 - 20x Vegetables(type)
 - 43x Wood_All(type)
 - 2x Wood_Amber_Trunk
@@ -235,7 +254,7 @@ Targets: 1515
 - 2x Wood_Stormbark(type)
 - 6x Wood_Tropicalwood_Trunk(type)
 - 27x Wood_Tropicalwood(type)
-- 189985x Wood_Trunk(type)
+- 190347x Wood_Trunk(type)
 - 2x Wood_Windwillow(type)
 - 2x Wood_Wisteria_Wild(type)
 
@@ -21565,7 +21584,7 @@ Raw/unresolved inputs:
 - 80x Ingredient_Fibre
 - 6x Rock_Shale(type)
 - 46x Rock(type)
-- 12x Rubble(type)
+- 12x Rubble_Shale
 - 80x Wood_Trunk(type)
 
 - Furniture_Temple_Dark_Bed (bench=Crafting[Furniture_Bench,Furniture_Beds])
@@ -21587,8 +21606,8 @@ Raw/unresolved inputs:
                 - Rock(type) (raw/unknown)
   - needs 4x Soil_Pebbles_Frozen
     - Soil_Pebbles_Frozen (bench=Crafting[Farmingbench,Decorative]; 0s)
-      - needs 3x Rubble(type)
-        - Rubble(type) (raw/unknown)
+      - needs 3x Rubble_Shale
+        - Rubble_Shale (raw/unknown)
       - requires bench 1x Bench_Farming
         - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
           - needs 6x Wood_Trunk(type)
@@ -33372,6 +33391,23 @@ Raw/unresolved inputs:
       - needs 3x Rock(type)
         - Rock(type) (raw/unknown)
 
+### Rock_Calcite_Cobble_Half
+
+Raw/unresolved inputs:
+- 1x Rock_Calcite(type)
+- 3x Rock(type)
+- 6x Wood_Trunk(type)
+
+- Rock_Calcite_Cobble_Half (bench=StructuralCrafting[Builders,HalfSlab]; 0s)
+  - needs 1x Rock_Calcite(type)
+    - Rock_Calcite(type) (raw/unknown)
+  - requires bench 1x Bench_Builders
+    - Bench_Builders (bench=Crafting[Fieldcraft,Tools] or Crafting[Workbench,Workbench_Crafting])
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 3x Rock(type)
+        - Rock(type) (raw/unknown)
+
 ### Rock_Calcite_Cobble_Roof
 
 Raw/unresolved inputs:
@@ -34507,7 +34543,7 @@ Raw/unresolved inputs:
 - 12x Rock(type)
 - 16x Wood_Trunk(type)
 
-- Rock_Gold_Brick (bench=StructuralCrafting[Builders]; 10s)
+- Rock_Gold_Brick (bench=StructuralCrafting[Builders]; 0s)
   - needs 1x Ingredient_Bar_Gold
     - Ingredient_Bar_Gold (bench=Processing[Furnace]; 10s)
       - needs 1x Ore_Gold
@@ -40382,6 +40418,198 @@ Raw/unresolved inputs:
       - needs 3x Rock(type)
         - Rock(type) (raw/unknown)
 
+### Soil_Aqua_Gravel
+
+Raw/unresolved inputs:
+- 20x Ingredient_Fibre
+- 3x Rock(type)
+- 3x Rubble_Aqua
+- 10x Wood_Trunk(type)
+
+- Soil_Aqua_Gravel (bench=Crafting[Farmingbench,Decorative]; 0s)
+  - needs 3x Rubble_Aqua
+    - Rubble_Aqua (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Soil_Aqua_Gravel_Half
+
+Raw/unresolved inputs:
+- 20x Ingredient_Fibre
+- 3x Rock(type)
+- 3x Rubble_Aqua
+- 10x Wood_Trunk(type)
+
+- Soil_Aqua_Gravel_Half (bench=Crafting[Farmingbench,Decorative]; 0s)
+  - needs 3x Rubble_Aqua
+    - Rubble_Aqua (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Soil_Basalt_Gravel
+
+Raw/unresolved inputs:
+- 20x Ingredient_Fibre
+- 3x Rock(type)
+- 3x Rubble_Basalt
+- 10x Wood_Trunk(type)
+
+- Soil_Basalt_Gravel (bench=Crafting[Farmingbench,Decorative]; 0s)
+  - needs 3x Rubble_Basalt
+    - Rubble_Basalt (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Soil_Basalt_Gravel_Half
+
+Raw/unresolved inputs:
+- 20x Ingredient_Fibre
+- 3x Rock(type)
+- 3x Rubble_Basalt
+- 10x Wood_Trunk(type)
+
+- Soil_Basalt_Gravel_Half (bench=Crafting[Farmingbench,Decorative]; 0s)
+  - needs 3x Rubble_Basalt
+    - Rubble_Basalt (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Soil_Calcite_Gravel
+
+Raw/unresolved inputs:
+- 20x Ingredient_Fibre
+- 3x Rock(type)
+- 3x Rubble_Calcite
+- 10x Wood_Trunk(type)
+
+- Soil_Calcite_Gravel (bench=Crafting[Farmingbench,Decorative]; 0s)
+  - needs 3x Rubble_Calcite
+    - Rubble_Calcite (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Soil_Calcite_Gravel_Half
+
+Raw/unresolved inputs:
+- 20x Ingredient_Fibre
+- 3x Rock(type)
+- 3x Rubble_Calcite
+- 10x Wood_Trunk(type)
+
+- Soil_Calcite_Gravel_Half (bench=Crafting[Farmingbench,Decorative]; 0s)
+  - needs 3x Rubble_Calcite
+    - Rubble_Calcite (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Soil_Chalk_Gravel
+
+Raw/unresolved inputs:
+- 20x Ingredient_Fibre
+- 3x Rock(type)
+- 3x Rubble_Chalk
+- 10x Wood_Trunk(type)
+
+- Soil_Chalk_Gravel (bench=Crafting[Farmingbench,Decorative]; 0s)
+  - needs 3x Rubble_Chalk
+    - Rubble_Chalk (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Soil_Chalk_Gravel_Half
+
+Raw/unresolved inputs:
+- 20x Ingredient_Fibre
+- 3x Rock(type)
+- 3x Rubble_Chalk
+- 10x Wood_Trunk(type)
+
+- Soil_Chalk_Gravel_Half (bench=Crafting[Farmingbench,Decorative]; 0s)
+  - needs 3x Rubble_Chalk
+    - Rubble_Chalk (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
 ### Soil_Clay
 
 Raw/unresolved inputs:
@@ -42266,6 +42494,23 @@ Raw/unresolved inputs:
           - needs 3x Rock(type)
             - Rock(type) (raw/unknown)
 
+### Soil_Dirt_Burnt_Half
+
+Raw/unresolved inputs:
+- 3x Rock(type)
+- 1x Soil_Dirt_Burnt
+- 6x Wood_Trunk(type)
+
+- Soil_Dirt_Burnt_Half (bench=StructuralCrafting[Builders,HalfSlab]; 0s)
+  - needs 1x Soil_Dirt_Burnt
+    - Soil_Dirt_Burnt (raw/unknown)
+  - requires bench 1x Bench_Builders
+    - Bench_Builders (bench=Crafting[Fieldcraft,Tools] or Crafting[Workbench,Workbench_Crafting])
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 3x Rock(type)
+        - Rock(type) (raw/unknown)
+
 ### Soil_Dirt_Cold
 
 Raw/unresolved inputs:
@@ -42291,6 +42536,40 @@ Raw/unresolved inputs:
             - Wood_Trunk(type) (raw/unknown)
           - needs 3x Rock(type)
             - Rock(type) (raw/unknown)
+
+### Soil_Dirt_Cold_Half
+
+Raw/unresolved inputs:
+- 21x Ingredient_Fibre
+- 6x Rock(type)
+- 1x Soils(type)
+- 16x Wood_Trunk(type)
+
+- Soil_Dirt_Cold_Half (bench=StructuralCrafting[Builders,HalfSlab]; 0s)
+  - needs 1x Soil_Dirt_Cold
+    - Soil_Dirt_Cold (bench=Crafting[Farmingbench,Decorative]; 0s)
+      - needs 1x Soils(type)
+        - Soils(type) (raw/unknown)
+      - needs 1x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_Farming
+        - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 20x Ingredient_Fibre
+            - Ingredient_Fibre (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Builders
+    - Bench_Builders (bench=Crafting[Fieldcraft,Tools] or Crafting[Workbench,Workbench_Crafting])
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 3x Rock(type)
+        - Rock(type) (raw/unknown)
 
 ### Soil_Dirt_Dry
 
@@ -42318,6 +42597,74 @@ Raw/unresolved inputs:
           - needs 3x Rock(type)
             - Rock(type) (raw/unknown)
 
+### Soil_Dirt_Dry_Half
+
+Raw/unresolved inputs:
+- 21x Ingredient_Fibre
+- 6x Rock(type)
+- 1x Soils(type)
+- 16x Wood_Trunk(type)
+
+- Soil_Dirt_Dry_Half (bench=StructuralCrafting[Builders,HalfSlab]; 0s)
+  - needs 1x Soil_Dirt_Dry
+    - Soil_Dirt_Dry (bench=Crafting[Farmingbench,Decorative]; 0s)
+      - needs 1x Soils(type)
+        - Soils(type) (raw/unknown)
+      - needs 1x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_Farming
+        - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 20x Ingredient_Fibre
+            - Ingredient_Fibre (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Builders
+    - Bench_Builders (bench=Crafting[Fieldcraft,Tools] or Crafting[Workbench,Workbench_Crafting])
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 3x Rock(type)
+        - Rock(type) (raw/unknown)
+
+### Soil_Dirt_Half
+
+Raw/unresolved inputs:
+- 3x Rock(type)
+- 1x Soil_Dirt
+- 6x Wood_Trunk(type)
+
+- Soil_Dirt_Half (bench=StructuralCrafting[Builders,HalfSlab]; 0s)
+  - needs 1x Soil_Dirt
+    - Soil_Dirt (raw/unknown)
+  - requires bench 1x Bench_Builders
+    - Bench_Builders (bench=Crafting[Fieldcraft,Tools] or Crafting[Workbench,Workbench_Crafting])
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 3x Rock(type)
+        - Rock(type) (raw/unknown)
+
+### Soil_Dirt_Lush_Half
+
+Raw/unresolved inputs:
+- 3x Rock(type)
+- 1x Soil_Dirt_Lush
+- 6x Wood_Trunk(type)
+
+- Soil_Dirt_Lush_Half (bench=StructuralCrafting[Builders,HalfSlab]; 0s)
+  - needs 1x Soil_Dirt_Lush
+    - Soil_Dirt_Lush (raw/unknown)
+  - requires bench 1x Bench_Builders
+    - Bench_Builders (bench=Crafting[Fieldcraft,Tools] or Crafting[Workbench,Workbench_Crafting])
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 3x Rock(type)
+        - Rock(type) (raw/unknown)
+
 ### Soil_Dirt_Poisoned
 
 Raw/unresolved inputs:
@@ -42343,6 +42690,23 @@ Raw/unresolved inputs:
             - Wood_Trunk(type) (raw/unknown)
           - needs 3x Rock(type)
             - Rock(type) (raw/unknown)
+
+### Soil_Dirt_Wet_Half
+
+Raw/unresolved inputs:
+- 3x Rock(type)
+- 1x Soil_Dirt_Wet
+- 6x Wood_Trunk(type)
+
+- Soil_Dirt_Wet_Half (bench=StructuralCrafting[Builders,HalfSlab]; 0s)
+  - needs 1x Soil_Dirt_Wet
+    - Soil_Dirt_Wet (raw/unknown)
+  - requires bench 1x Bench_Builders
+    - Bench_Builders (bench=Crafting[Fieldcraft,Tools] or Crafting[Workbench,Workbench_Crafting])
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 3x Rock(type)
+        - Rock(type) (raw/unknown)
 
 ### Soil_Grass
 
@@ -42557,12 +42921,252 @@ Raw/unresolved inputs:
 Raw/unresolved inputs:
 - 20x Ingredient_Fibre
 - 3x Rock(type)
-- 3x Rubble(type)
+- 3x Rubble_Stone
 - 10x Wood_Trunk(type)
 
 - Soil_Gravel (bench=Crafting[Farmingbench,Decorative]; 0s)
-  - needs 3x Rubble(type)
-    - Rubble(type) (raw/unknown)
+  - needs 3x Rubble_Stone
+    - Rubble_Stone (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Soil_Gravel_Half
+
+Raw/unresolved inputs:
+- 20x Ingredient_Fibre
+- 3x Rock(type)
+- 3x Rubble_Stone
+- 10x Wood_Trunk(type)
+
+- Soil_Gravel_Half (bench=Crafting[Farmingbench,Decorative]; 0s)
+  - needs 3x Rubble_Stone
+    - Rubble_Stone (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Soil_Gravel_Lime
+
+Raw/unresolved inputs:
+- 20x Ingredient_Fibre
+- 3x Rock(type)
+- 3x Rubble_Lime
+- 10x Wood_Trunk(type)
+
+- Soil_Gravel_Lime (bench=Crafting[Farmingbench,Decorative]; 0s)
+  - needs 3x Rubble_Lime
+    - Rubble_Lime (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Soil_Gravel_Mossy
+
+Raw/unresolved inputs:
+- 20x Ingredient_Fibre
+- 3x Rock(type)
+- 3x Rubble_Stone_Mossy
+- 10x Wood_Trunk(type)
+
+- Soil_Gravel_Mossy (bench=Crafting[Farmingbench,Decorative]; 0s)
+  - needs 3x Rubble_Stone_Mossy
+    - Rubble_Stone_Mossy (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Soil_Gravel_Mossy_Half
+
+Raw/unresolved inputs:
+- 20x Ingredient_Fibre
+- 3x Rock(type)
+- 3x Rubble_Stone_Mossy
+- 10x Wood_Trunk(type)
+
+- Soil_Gravel_Mossy_Half (bench=Crafting[Farmingbench,Decorative]; 0s)
+  - needs 3x Rubble_Stone_Mossy
+    - Rubble_Stone_Mossy (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Soil_Gravel_Sand
+
+Raw/unresolved inputs:
+- 20x Ingredient_Fibre
+- 3x Rock(type)
+- 3x Rubble_Sandstone
+- 10x Wood_Trunk(type)
+
+- Soil_Gravel_Sand (bench=Crafting[Farmingbench,Decorative]; 0s)
+  - needs 3x Rubble_Sandstone
+    - Rubble_Sandstone (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Soil_Gravel_Sand_Half
+
+Raw/unresolved inputs:
+- 20x Ingredient_Fibre
+- 3x Rock(type)
+- 3x Rubble_Sandstone
+- 10x Wood_Trunk(type)
+
+- Soil_Gravel_Sand_Half (bench=Crafting[Farmingbench,Decorative]; 0s)
+  - needs 3x Rubble_Sandstone
+    - Rubble_Sandstone (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Soil_Gravel_Sand_Red
+
+Raw/unresolved inputs:
+- 20x Ingredient_Fibre
+- 3x Rock(type)
+- 3x Rubble_Sandstone_Red
+- 10x Wood_Trunk(type)
+
+- Soil_Gravel_Sand_Red (bench=Crafting[Farmingbench,Decorative]; 0s)
+  - needs 3x Rubble_Sandstone_Red
+    - Rubble_Sandstone_Red (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Soil_Gravel_Sand_Red_Half
+
+Raw/unresolved inputs:
+- 20x Ingredient_Fibre
+- 3x Rock(type)
+- 3x Rubble_Sandstone_Red
+- 10x Wood_Trunk(type)
+
+- Soil_Gravel_Sand_Red_Half (bench=Crafting[Farmingbench,Decorative]; 0s)
+  - needs 3x Rubble_Sandstone_Red
+    - Rubble_Sandstone_Red (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Soil_Gravel_Sand_White
+
+Raw/unresolved inputs:
+- 20x Ingredient_Fibre
+- 3x Rock(type)
+- 3x Rubble_Sandstone_White
+- 10x Wood_Trunk(type)
+
+- Soil_Gravel_Sand_White (bench=Crafting[Farmingbench,Decorative]; 0s)
+  - needs 3x Rubble_Sandstone_White
+    - Rubble_Sandstone_White (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Soil_Gravel_Sand_White_Half
+
+Raw/unresolved inputs:
+- 20x Ingredient_Fibre
+- 3x Rock(type)
+- 3x Rubble_Sandstone_White
+- 10x Wood_Trunk(type)
+
+- Soil_Gravel_Sand_White_Half (bench=Crafting[Farmingbench,Decorative]; 0s)
+  - needs 3x Rubble_Sandstone_White
+    - Rubble_Sandstone_White (raw/unknown)
   - requires bench 1x Bench_Farming
     - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
       - needs 6x Wood_Trunk(type)
@@ -42679,6 +43283,128 @@ Raw/unresolved inputs:
     - Soils(type) (raw/unknown)
   - needs 1x Ingredient_Fibre
     - Ingredient_Fibre (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Soil_Leaves_Full
+
+Raw/unresolved inputs:
+- 21x Ingredient_Fibre
+- 3x Rock(type)
+- 1x Soils(type)
+- 10x Wood_Trunk(type)
+
+- Soil_Leaves_Full (bench=Crafting[Farmingbench,Decorative]; 0s)
+  - needs 1x Soils(type)
+    - Soils(type) (raw/unknown)
+  - needs 1x Ingredient_Fibre
+    - Ingredient_Fibre (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Soil_Lime_Gravel_Half
+
+Raw/unresolved inputs:
+- 20x Ingredient_Fibre
+- 3x Rock(type)
+- 3x Rubble_Lime
+- 10x Wood_Trunk(type)
+
+- Soil_Lime_Gravel_Half (bench=Crafting[Farmingbench,Decorative]; 0s)
+  - needs 3x Rubble_Lime
+    - Rubble_Lime (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Soil_Magma_Cooled_Gravel
+
+Raw/unresolved inputs:
+- 20x Ingredient_Fibre
+- 3x Rock(type)
+- 3x Rubble_Magma_Cooled
+- 10x Wood_Trunk(type)
+
+- Soil_Magma_Cooled_Gravel (bench=Crafting[Farmingbench,Decorative]; 0s)
+  - needs 3x Rubble_Magma_Cooled
+    - Rubble_Magma_Cooled (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Soil_Magma_Cooled_Gravel_Half
+
+Raw/unresolved inputs:
+- 20x Ingredient_Fibre
+- 3x Rock(type)
+- 3x Rubble_Magma_Cooled
+- 10x Wood_Trunk(type)
+
+- Soil_Magma_Cooled_Gravel_Half (bench=Crafting[Farmingbench,Decorative]; 0s)
+  - needs 3x Rubble_Magma_Cooled
+    - Rubble_Magma_Cooled (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Soil_Marble_Gravel_Half
+
+Raw/unresolved inputs:
+- 20x Ingredient_Fibre
+- 3x Rock(type)
+- 3x Rubble_Marble
+- 10x Wood_Trunk(type)
+
+- Soil_Marble_Gravel_Half (bench=Crafting[Farmingbench,Decorative]; 0s)
+  - needs 3x Rubble_Marble
+    - Rubble_Marble (raw/unknown)
   - requires bench 1x Bench_Farming
     - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
       - needs 6x Wood_Trunk(type)
@@ -42903,12 +43629,12 @@ Raw/unresolved inputs:
 Raw/unresolved inputs:
 - 20x Ingredient_Fibre
 - 3x Rock(type)
-- 3x Rubble(type)
+- 3x Rubble_Marble
 - 10x Wood_Trunk(type)
 
 - Soil_Pebbles (bench=Crafting[Farmingbench,Decorative]; 0s)
-  - needs 3x Rubble(type)
-    - Rubble(type) (raw/unknown)
+  - needs 3x Rubble_Marble
+    - Rubble_Marble (raw/unknown)
   - requires bench 1x Bench_Farming
     - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
       - needs 6x Wood_Trunk(type)
@@ -42927,12 +43653,60 @@ Raw/unresolved inputs:
 Raw/unresolved inputs:
 - 20x Ingredient_Fibre
 - 3x Rock(type)
-- 3x Rubble(type)
+- 3x Rubble_Shale
 - 10x Wood_Trunk(type)
 
 - Soil_Pebbles_Frozen (bench=Crafting[Farmingbench,Decorative]; 0s)
-  - needs 3x Rubble(type)
-    - Rubble(type) (raw/unknown)
+  - needs 3x Rubble_Shale
+    - Rubble_Shale (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Soil_Quartzite_Gravel
+
+Raw/unresolved inputs:
+- 20x Ingredient_Fibre
+- 3x Rock(type)
+- 3x Rubble_Quartzite
+- 10x Wood_Trunk(type)
+
+- Soil_Quartzite_Gravel (bench=Crafting[Farmingbench,Decorative]; 0s)
+  - needs 3x Rubble_Quartzite
+    - Rubble_Quartzite (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Soil_Quartzite_Gravel_Half
+
+Raw/unresolved inputs:
+- 20x Ingredient_Fibre
+- 3x Rock(type)
+- 3x Rubble_Quartzite
+- 10x Wood_Trunk(type)
+
+- Soil_Quartzite_Gravel_Half (bench=Crafting[Farmingbench,Decorative]; 0s)
+  - needs 3x Rubble_Quartzite
+    - Rubble_Quartzite (raw/unknown)
   - requires bench 1x Bench_Farming
     - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
       - needs 6x Wood_Trunk(type)
@@ -42962,6 +43736,78 @@ Raw/unresolved inputs:
         - Wood_Trunk(type) (raw/unknown)
       - needs 3x Rock(type)
         - Rock(type) (raw/unknown)
+
+### Soil_Shale_Gravel_Half
+
+Raw/unresolved inputs:
+- 20x Ingredient_Fibre
+- 3x Rock(type)
+- 3x Rubble_Shale
+- 10x Wood_Trunk(type)
+
+- Soil_Shale_Gravel_Half (bench=Crafting[Farmingbench,Decorative]; 0s)
+  - needs 3x Rubble_Shale
+    - Rubble_Shale (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Soil_Slate_Gravel
+
+Raw/unresolved inputs:
+- 20x Ingredient_Fibre
+- 3x Rock(type)
+- 3x Rubble_Slate
+- 10x Wood_Trunk(type)
+
+- Soil_Slate_Gravel (bench=Crafting[Farmingbench,Decorative]; 0s)
+  - needs 3x Rubble_Slate
+    - Rubble_Slate (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Soil_Slate_Gravel_Half
+
+Raw/unresolved inputs:
+- 20x Ingredient_Fibre
+- 3x Rock(type)
+- 3x Rubble_Slate
+- 10x Wood_Trunk(type)
+
+- Soil_Slate_Gravel_Half (bench=Crafting[Farmingbench,Decorative]; 0s)
+  - needs 3x Rubble_Slate
+    - Rubble_Slate (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
 
 ### Soil_Snow_Brick
 
@@ -43053,6 +43899,54 @@ Raw/unresolved inputs:
         - Wood_Trunk(type) (raw/unknown)
       - needs 3x Rock(type)
         - Rock(type) (raw/unknown)
+
+### Soil_Volcanic_Gravel
+
+Raw/unresolved inputs:
+- 20x Ingredient_Fibre
+- 3x Rock(type)
+- 3x Rubble_Volcanic
+- 10x Wood_Trunk(type)
+
+- Soil_Volcanic_Gravel (bench=Crafting[Farmingbench,Decorative]; 0s)
+  - needs 3x Rubble_Volcanic
+    - Rubble_Volcanic (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Soil_Volcanic_Gravel_Half
+
+Raw/unresolved inputs:
+- 20x Ingredient_Fibre
+- 3x Rock(type)
+- 3x Rubble_Volcanic
+- 10x Wood_Trunk(type)
+
+- Soil_Volcanic_Gravel_Half (bench=Crafting[Farmingbench,Decorative]; 0s)
+  - needs 3x Rubble_Volcanic
+    - Rubble_Volcanic (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
 
 ### Survival_Trap_Grass
 

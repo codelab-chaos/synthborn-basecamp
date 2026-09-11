@@ -17,7 +17,7 @@ public class com.hypixel.hytale.builtin.mounts.npc.ActionMount extends com.hypix
   protected final java.lang.String movementConfigId;
   protected final int emptyRoleIndex;
   public com.hypixel.hytale.builtin.mounts.npc.ActionMount(com.hypixel.hytale.builtin.mounts.npc.builders.BuilderActionMount, com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
-  public boolean canExecute(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.role.Role, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
-  public boolean execute(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.role.Role, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public boolean canExecute(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.instructions.ExecutionSupport, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public boolean execute(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.instructions.ExecutionSupport, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, double, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
 }
 ```
