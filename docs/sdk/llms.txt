@@ -1,4 +1,4 @@
-# Hytale Server SDK Reference v0.6.5
+# Hytale Server SDK Reference v0.6.8
 
 > Flat index of public SDK types by package. Each entry shows the class declaration (kind, extends, implements) so you can pick which file to read for full method signatures.
 
@@ -9626,6 +9626,11 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 
 - `ThrowableIntSupplier` — interface ThrowableIntSupplier<E extends Throwable> extends function.IntSupplier
 - `ThrowableSupplier` — interface ThrowableSupplier<T, E extends Throwable> extends function.Supplier<T>
+
+## com/hypixel/hytale/startup
+[`com.hypixel.hytale.startup.md`](./com.hypixel.hytale.startup.md) (1)
+
+- `InstallDirGuard` — final class InstallDirGuard
 
 ## com/hypixel/hytale/storage
 [`com.hypixel.hytale.storage.md`](./com.hypixel.hytale.storage.md) (1)

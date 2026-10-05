@@ -21,6 +21,9 @@ needs `pandoc` on PATH; see
 
 | Version | Released | Notes | Basecamp trail |
 |---|---|---|---|
+| 0.6.8 | installed Oct 5, 2026 | no published notes yet (hotfix post ends at 0.6.6) | [`assets-toc-0.6.8.json`](../refs/assets/toc/assets-toc-0.6.8.json), [worklog](../hytale-update-0.6.8-worklog.md) |
+| 0.6.7 | | no published notes found | not processed; skipped by the launcher (0.6.5 to 0.6.8) |
+| 0.6.6 | Sep 14, 2026 | [Hotfixes: Update 6](hytale-hotfixes-update-6.md#066) | not processed; skipped by the launcher (0.6.5 to 0.6.8) |
 | 0.6.5 | Sep 10, 2026 | [Hotfixes: Update 6](hytale-hotfixes-update-6.md#065) | [`assets-toc-0.6.5.json`](../refs/assets/toc/assets-toc-0.6.5.json), [worklog](../hytale-update-0.6.5-worklog.md) |
 | 0.6.4 | Sep 7, 2026 | [Hotfixes: Update 6](hytale-hotfixes-update-6.md#064) | [`assets-toc-0.6.4.json`](../refs/assets/toc/assets-toc-0.6.4.json), [worklog](../hytale-update-0.6.4-worklog.md) |
 | 0.6.3 | Aug 31, 2026 | [Hotfixes: Update 6](hytale-hotfixes-update-6.md#063) | not processed |
@@ -35,6 +38,10 @@ needs `pandoc` on PATH; see
 | 0.5.3 | May 29, 2026 | [Hotfixes: Update 5](hytale-hotfixes-update-5.md#053) | not processed |
 | 0.5.2 | May 27, 2026 | [Hotfixes: Update 5](hytale-hotfixes-update-5.md#052) | not processed |
 | 0.5.1 | May 26, 2026 | [Update 5 Patch Notes](hytale-update-5-patch-notes.md), [Hotfixes: Update 5](hytale-hotfixes-update-5.md#051) | not processed |
+
+Update 7 is in pre-release. Its rolling
+[pre-release notes](hytale-pre-release-patch-notes-update-7.md) (ported Oct 5, 2026, through
+Part 5) preview the next modder-facing breaks; see the 0.6.8 worklog for the Synthborn impact.
 
 Update 6 (0.6.1) also has a
 [pre-release notes post](https://hytale.com/news/2026/5/pre-release-patch-notes-update-6)

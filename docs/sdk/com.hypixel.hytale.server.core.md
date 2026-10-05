@@ -198,6 +198,7 @@ public class com.hypixel.hytale.server.core.Options {
   public static final joptsimple.OptionSpec<java.nio.file.Path> PREFAB_CACHE_DIRECTORY;
   public static final joptsimple.OptionSpec<java.nio.file.Path> ASSET_DIRECTORY;
   public static final joptsimple.OptionSpec<java.nio.file.Path> MODS_DIRECTORIES;
+  public static final joptsimple.OptionSpec<java.lang.Void> ALLOW_INSTALL_DIR;
   public static final joptsimple.OptionSpec<java.lang.Void> ACCEPT_EARLY_PLUGINS;
   public static final joptsimple.OptionSpec<java.nio.file.Path> EARLY_PLUGIN_DIRECTORIES;
   public static final joptsimple.OptionSpec<java.lang.Void> VALIDATE_ASSETS;
@@ -257,6 +258,7 @@ public class com.hypixel.hytale.server.core.ShutdownReason {
   public static final com.hypixel.hytale.server.core.ShutdownReason UPDATE;
   public static final com.hypixel.hytale.server.core.ShutdownReason MOD_ERROR;
   public static final com.hypixel.hytale.server.core.ShutdownReason VERIFY_ERROR;
+  public static final com.hypixel.hytale.server.core.ShutdownReason INVALID_INSTALL_DIR;
   public com.hypixel.hytale.server.core.ShutdownReason(int, java.lang.String);
   public com.hypixel.hytale.server.core.ShutdownReason(int, java.lang.String, com.hypixel.hytale.protocol.FormattedMessage);
   public int getExitCode();

@@ -1,7 +1,7 @@
 {
-  "version": "0.6.5",
+  "version": "0.6.8",
   "generatedBy": "tools/refs/sdk/build-sdk-method-index.js",
-  "methodCount": 40980,
+  "methodCount": 40981,
   "uniqueMethods": 13996,
   "entries": [
     {
@@ -15739,6 +15739,13 @@
       "package": "com.hypixel.hytale.builtin.portals.utils.posqueries.predicates",
       "file": "com.hypixel.hytale.builtin.portals.utils.posqueries.predicates.md",
       "signature": "public static boolean check(com.hypixel.hytale.server.core.universe.world.World, org.joml.Vector3d);"
+    },
+    {
+      "method": "check",
+      "class": "InstallDirGuard",
+      "package": "com.hypixel.hytale.startup",
+      "file": "com.hypixel.hytale.startup.md",
+      "signature": "public static void check(joptsimple.OptionSet);"
     },
     {
       "method": "checkArtificialLight",

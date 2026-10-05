@@ -1,4 +1,4 @@
-# Hytale Server SDK method index v0.6.5
+# Hytale Server SDK method index v0.6.8
 
 Grep-friendly: `grep placeBlock methods.txt` then open the listed .md file for context.
 Regenerate: `node tools/refs/sdk/build-sdk-method-index.js` (or full extract — see tools/refs/sdk/README.md)
@@ -2251,6 +2251,7 @@ check	ConnectedBlockOrRule	com.hypixel.hytale.server.core.universe.world.connect
 check	ConnectedBlockRule	com.hypixel.hytale.server.core.universe.world.connectedblocks.config.rule	com.hypixel.hytale.server.core.universe.world.connectedblocks.config.rule.md
 check	ConnectedBlockShapeRule	com.hypixel.hytale.server.core.universe.world.connectedblocks.config.rule	com.hypixel.hytale.server.core.universe.world.connectedblocks.config.rule.md
 check	FitsAPortal	com.hypixel.hytale.builtin.portals.utils.posqueries.predicates	com.hypixel.hytale.builtin.portals.utils.posqueries.predicates.md
+check	InstallDirGuard	com.hypixel.hytale.startup	com.hypixel.hytale.startup.md
 checkArtificialLight	LightLevelGrowthModifierAsset	com.hypixel.hytale.builtin.adventure.farming.config.modifiers	com.hypixel.hytale.builtin.adventure.farming.config.modifiers.md
 checkBounds	BranchEvaluator	com.hypixel.hytale.procedurallib.logic.cell.evaluator	com.hypixel.hytale.procedurallib.logic.cell.evaluator.md
 checkClientPid	SingleplayerModule	com.hypixel.hytale.server.core.modules.singleplayer	com.hypixel.hytale.server.core.modules.singleplayer.md
