@@ -3,10 +3,26 @@
 **Source:** <https://hytale.com/news/2026/8/hotfixes-update-6>  
 **Author:** Hytale Team  
 **Published:** August 27, 2026  
-**Local capture:** Thu, 10 Sep 2026 19:39:05 GMT
+**Local capture:** Mon, 05 Oct 2026 08:05:53 GMT  
 **Ported from:** hytale.com article HTML via `tools/refs/patch-notes/port-hytale-post.js`
 
 # UPDATE 6: HOTFIXES
+
+# 0.6.6
+
+**Sep 14, 2026**
+
+#### Stability Fixes
+
+- Fixed a random crash on PCs and laptops with Intel integrated graphics.
+
+#### Joining & Connecting Fixes
+
+- Leaving or cancelling a join no longer freezes the game for a couple of seconds.
+- Retrying a join now sets up automatic port forwarding again. Before, a failed first attempt could leave the retry without it.
+- If your router does not answer on one connection, the game now tries your other connections instead of giving up.
+- Port forwards are now cleaned up properly when you leave a world.
+- Fixed a case where taking a world private left part of the connection running in the background until you closed the game.
 
 # 0.6.5
 
