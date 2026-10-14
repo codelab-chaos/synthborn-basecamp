@@ -38,6 +38,14 @@ public class com.hypixel.hytale.server.core.entity.entities.player.hud.HudManage
   public void hideHudComponents(com.hypixel.hytale.server.core.universe.PlayerRef, com.hypixel.hytale.protocol.packets.interface_.HudComponent...);
   public void addCustomHud(com.hypixel.hytale.server.core.universe.PlayerRef, com.hypixel.hytale.server.core.entity.entities.player.hud.CustomUIHud);
   public void removeCustomHud(com.hypixel.hytale.server.core.universe.PlayerRef, java.lang.String);
+  public void dev_registerWidget(com.hypixel.hytale.server.core.universe.PlayerRef, com.hypixel.hytale.server.core.modules.ui.UIHudWidget);
+  public void dev_unregisterWidget(com.hypixel.hytale.server.core.universe.PlayerRef, java.lang.String);
+  public void dev_unregisterWidget(com.hypixel.hytale.server.core.universe.PlayerRef, com.hypixel.hytale.server.core.modules.ui.UIHudWidget);
+  public void dev_setWidgetVisible(com.hypixel.hytale.server.core.universe.PlayerRef, java.lang.String, boolean);
+  public void dev_setWidgetVisible(com.hypixel.hytale.server.core.universe.PlayerRef, com.hypixel.hytale.server.core.modules.ui.UIHudWidget, boolean);
+  public void dev_handleWidgetCommand(com.hypixel.hytale.server.core.universe.PlayerRef, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.protocol.packets.interface_.ExecuteServersideHudCommand);
+  public boolean dev_isWidgetVisible(java.lang.String);
+  public java.util.Map<java.lang.String, com.hypixel.hytale.server.core.modules.ui.UIHudWidget> getWidgets();
   public void resetVisibleHudComponents(com.hypixel.hytale.server.core.universe.PlayerRef);
   public void resetHud(com.hypixel.hytale.server.core.universe.PlayerRef);
   public void resetUserInterface(com.hypixel.hytale.server.core.universe.PlayerRef);

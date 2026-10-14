@@ -29,6 +29,7 @@ public interface com.hypixel.hytale.builtin.asseteditor.datasource.DataSource {
   public default void updateRuntimeAssets();
   public abstract java.nio.file.Path getFullPathToAssetData(java.nio.file.Path);
   public abstract boolean isImmutable();
+  public abstract boolean canAssetPackBeDeleted();
   public abstract java.nio.file.Path getRootPath();
   public abstract com.hypixel.hytale.common.plugin.PluginManifest getManifest();
 }

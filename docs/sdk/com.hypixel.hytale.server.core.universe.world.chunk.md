@@ -39,50 +39,25 @@ public class com.hypixel.hytale.server.core.universe.world.chunk.BlockChunk impl
   public static com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, com.hypixel.hytale.server.core.universe.world.chunk.BlockChunk> getComponentType();
   public void load(int, int);
   public com.hypixel.hytale.server.core.universe.world.chunk.BlockChunk(int, int);
-  public com.hypixel.hytale.server.core.universe.world.chunk.BlockChunk(int, int, com.hypixel.hytale.server.core.universe.world.chunk.palette.ShortBytePalette, com.hypixel.hytale.server.core.universe.world.chunk.palette.IntBytePalette, com.hypixel.hytale.server.core.universe.world.chunk.environment.EnvironmentChunk);
-  public com.hypixel.hytale.server.core.universe.world.chunk.BlockChunk(com.hypixel.hytale.server.core.universe.world.chunk.palette.ShortBytePalette, com.hypixel.hytale.server.core.universe.world.chunk.palette.IntBytePalette, com.hypixel.hytale.server.core.universe.world.chunk.environment.EnvironmentChunk, com.hypixel.hytale.server.core.universe.world.chunk.section.BlockSection[]);
+  public com.hypixel.hytale.server.core.universe.world.chunk.BlockChunk(int, int, com.hypixel.hytale.server.core.universe.world.chunk.palette.IntBytePalette);
   public com.hypixel.hytale.component.Component<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore> clone();
   public com.hypixel.hytale.component.Component<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore> cloneSerializable();
   public long getIndex();
   public int getX();
   public int getZ();
-  public com.hypixel.hytale.server.core.universe.world.chunk.environment.EnvironmentChunk getEnvironmentChunk();
-  public void setEnvironmentChunk(com.hypixel.hytale.server.core.universe.world.chunk.environment.EnvironmentChunk);
-  public short getHeight(int, int);
-  public short getHeight(int);
-  public void setHeight(int, int, short);
-  public void updateHeightmap();
-  public short updateHeight(int, int);
-  public short updateHeight(int, int, short);
+  public void setHeightmapColumn(com.hypixel.hytale.server.core.universe.world.chunk.heightmap.HeightmapColumn);
+  public boolean hasLegacyHeightmap();
+  public com.hypixel.hytale.server.core.universe.world.chunk.palette.ShortBytePalette takeLegacyHeightmap();
   public void loadFromHolder(com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>);
   public void refreshSectionRefs(com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>[]);
-  public com.hypixel.hytale.server.core.universe.world.chunk.section.BlockSection getSectionAtIndex(int);
-  public com.hypixel.hytale.server.core.universe.world.chunk.section.ChunkSection getSectionRefAtIndex(int);
-  public com.hypixel.hytale.server.core.universe.world.chunk.section.BlockSection getSectionAtBlockY(int);
   public int getTint(int, int);
   public void setTint(int, int, int);
-  public int getEnvironment(org.joml.Vector3d);
-  public int getEnvironment(org.joml.Vector3i);
-  public int getEnvironment(int, int, int);
-  public com.hypixel.hytale.server.core.universe.world.chunk.environment.EnvironmentColumn getEnvironmentColumn(int, int);
-  public void setEnvironment(int, int, int, int);
-  public int getBlock(int, int, int);
-  public boolean setBlock(int, int, int, int, int, int);
-  public boolean contains(int);
-  public int count(int);
-  public it.unimi.dsi.fastutil.ints.IntSet blocks();
-  public int blockCount();
-  public <T, V> int forEachTicking(T, V, com.hypixel.hytale.function.predicate.ObjectPositionBlockFunction<T, V, com.hypixel.hytale.server.core.asset.type.blocktick.BlockTickStrategy>);
-  public boolean setTicking(int, int, int, boolean);
-  public boolean isTicking(int, int, int);
+  public void readEnvironmentRuns(int, int, com.hypixel.hytale.server.core.universe.world.chunk.BlockChunk$EnvironmentRunCursor);
   public void markNeedsSaving();
   public boolean getNeedsSaving();
   public boolean consumeNeedsSaving();
-  public void markNeedsPhysics();
-  public boolean consumeNeedsPhysics();
-  public void invalidateChunkSection(int);
+  public void invalidateColumnPacket();
   public java.util.concurrent.CompletableFuture<com.hypixel.hytale.protocol.CachedPacket<com.hypixel.hytale.protocol.packets.world.SetChunkTintmap>> getCachedTintsPacket();
-  public java.util.concurrent.CompletableFuture<com.hypixel.hytale.protocol.CachedPacket<com.hypixel.hytale.protocol.packets.world.SetChunkEnvironments>> getCachedEnvironmentsPacket();
   public java.lang.Object clone() throws java.lang.CloneNotSupportedException;
 }
 ```
@@ -107,15 +82,16 @@ public class com.hypixel.hytale.server.core.universe.world.chunk.BlockComponentC
 ```java
 public class com.hypixel.hytale.server.core.universe.world.chunk.BlockOperations {
   public com.hypixel.hytale.server.core.universe.world.chunk.BlockOperations();
-  public static boolean setBlock(com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, com.hypixel.hytale.server.core.universe.world.chunk.section.ChunkSection, com.hypixel.hytale.server.core.universe.world.chunk.section.BlockSection, com.hypixel.hytale.server.core.universe.world.chunk.section.BlockComponentSection, com.hypixel.hytale.server.core.universe.world.chunk.BlockChunk, int, int, int, int, com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType, int, int, int);
+  public static boolean setBlock(com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, com.hypixel.hytale.server.core.universe.world.chunk.section.ChunkSection, com.hypixel.hytale.server.core.universe.world.chunk.section.BlockSection, com.hypixel.hytale.server.core.universe.world.chunk.section.BlockComponentSection, com.hypixel.hytale.server.core.universe.world.chunk.heightmap.HeightmapColumn, int, int, int, int, com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType, int, int, int);
   public static boolean setBlock(com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, int, int, int, int, com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType, int, int, int);
-  public static boolean setBlockPreLoad(com.hypixel.hytale.server.core.universe.world.chunk.section.ChunkSection, com.hypixel.hytale.server.core.universe.world.chunk.section.BlockSection, com.hypixel.hytale.server.core.universe.world.chunk.BlockChunk, int, int, int, int, com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType, int, int);
+  public static boolean setBlockPreLoad(com.hypixel.hytale.server.core.universe.world.chunk.section.ChunkSection, com.hypixel.hytale.server.core.universe.world.chunk.section.BlockSection, int, int, int, int, int, int);
   public static boolean testPlaceBlock(com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, com.hypixel.hytale.server.core.universe.world.chunk.section.BlockSection, int, int, int, com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType, int);
   public static boolean testPlaceBlock(com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, com.hypixel.hytale.server.core.universe.world.chunk.section.BlockSection, int, int, int, com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType, int, com.hypixel.hytale.server.core.universe.world.chunk.BlockOperations$TestBlockFunction);
-  public static void updateBlockArea(com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, com.hypixel.hytale.server.core.universe.world.chunk.section.BlockSection, com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType, int, int, int, int);
-  public static short updateBlockHeight(com.hypixel.hytale.server.core.universe.world.chunk.BlockChunk, int, com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType, int, int, int, short);
+  public static void updateBlockArea(com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, com.hypixel.hytale.server.core.universe.world.chunk.section.ChunkSection, com.hypixel.hytale.server.core.universe.world.chunk.section.BlockSection, com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType, int, int, int, int);
+  public static void updateBlockArea(com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, com.hypixel.hytale.server.core.universe.world.chunk.section.ChunkSection, com.hypixel.hytale.server.core.universe.world.chunk.section.BlockSection, int, int, int);
   public static void spawnBlockParticles(com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, int, int, int, int, int, boolean);
   public static void setBlockInteractionState(com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, int, int, int, com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType, java.lang.String, boolean);
+  public static com.hypixel.hytale.protocol.BlockPosition resolveBaseBlockPosition(com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, com.hypixel.hytale.protocol.BlockPosition);
 }
 ```
 
@@ -126,7 +102,7 @@ public class com.hypixel.hytale.server.core.universe.world.chunk.BlockRotationUt
   public com.hypixel.hytale.server.core.universe.world.chunk.BlockRotationUtil();
   public static com.hypixel.hytale.server.core.asset.type.blocktype.config.RotationTuple getFlipped(com.hypixel.hytale.server.core.asset.type.blocktype.config.RotationTuple, com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockFlipType, com.hypixel.hytale.math.Axis);
   public static com.hypixel.hytale.server.core.asset.type.blocktype.config.RotationTuple getRotated(com.hypixel.hytale.server.core.asset.type.blocktype.config.RotationTuple, com.hypixel.hytale.math.Axis, com.hypixel.hytale.server.core.asset.type.blocktype.config.Rotation, com.hypixel.hytale.server.core.asset.type.blocktype.config.VariantRotation);
-  public static int getFlippedFiller(int, com.hypixel.hytale.math.Axis);
+  public static int getFlippedFiller(int, com.hypixel.hytale.math.Axis, com.hypixel.hytale.server.core.asset.type.blockhitbox.BlockBoundingBoxes$RotatedVariantBoxes, com.hypixel.hytale.server.core.asset.type.blockhitbox.BlockBoundingBoxes$RotatedVariantBoxes);
   public static int getRotatedFiller(int, com.hypixel.hytale.math.Axis, com.hypixel.hytale.server.core.asset.type.blocktype.config.Rotation);
   public static int getRotatedFiller(int, com.hypixel.hytale.server.core.asset.type.blocktype.config.RotationTuple);
 }
@@ -169,13 +145,9 @@ public class com.hypixel.hytale.server.core.universe.world.chunk.ChunkColumn imp
 
 ```java
 public final class com.hypixel.hytale.server.core.universe.world.chunk.ChunkFlag extends java.lang.Enum<com.hypixel.hytale.server.core.universe.world.chunk.ChunkFlag> implements com.hypixel.hytale.common.collection.Flag {
-  public static final com.hypixel.hytale.server.core.universe.world.chunk.ChunkFlag START_INIT;
-  public static final com.hypixel.hytale.server.core.universe.world.chunk.ChunkFlag INIT;
   public static final com.hypixel.hytale.server.core.universe.world.chunk.ChunkFlag NEWLY_GENERATED;
   public static final com.hypixel.hytale.server.core.universe.world.chunk.ChunkFlag ON_DISK;
-  public static final com.hypixel.hytale.server.core.universe.world.chunk.ChunkFlag TICKING;
   public static final com.hypixel.hytale.server.core.universe.world.chunk.ChunkFlag NEEDS_FORMAT_REWRITE;
-  public static final com.hypixel.hytale.server.core.universe.world.chunk.ChunkFlag[] VALUES;
   public static com.hypixel.hytale.server.core.universe.world.chunk.ChunkFlag[] values();
   public static com.hypixel.hytale.server.core.universe.world.chunk.ChunkFlag valueOf(java.lang.String);
   public int mask();
@@ -203,17 +175,14 @@ public class com.hypixel.hytale.server.core.universe.world.chunk.EntityChunk imp
 public class com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk implements com.hypixel.hytale.component.Component<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore> {
   public static final int KEEP_ALIVE_DEFAULT;
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk> CODEC;
-  public final java.util.concurrent.atomic.AtomicLong chunkLightTiming;
   public static com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk> getComponentType();
-  public com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk(com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.common.collection.Flags<com.hypixel.hytale.server.core.universe.world.chunk.ChunkFlag>, com.hypixel.hytale.server.core.universe.world.chunk.BlockChunk);
+  public com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk(com.hypixel.hytale.common.collection.Flags<com.hypixel.hytale.server.core.universe.world.chunk.ChunkFlag>, com.hypixel.hytale.server.core.universe.world.chunk.BlockChunk);
   public void setReference(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>);
   public com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore> getReference();
   public com.hypixel.hytale.component.Component<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore> clone();
   public boolean is(com.hypixel.hytale.server.core.universe.world.chunk.ChunkFlag);
   public void setFlag(com.hypixel.hytale.server.core.universe.world.chunk.ChunkFlag, boolean);
-  public void loadFromHolder(com.hypixel.hytale.server.core.universe.world.World, int, int, com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>);
-  public void initFlags();
-  public com.hypixel.hytale.server.core.universe.world.chunk.BlockChunk getBlockChunk();
+  public void loadFromHolder(int, int, com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>);
   public boolean shouldKeepLoaded();
   public void addKeepLoaded();
   public void removeKeepLoaded();
@@ -221,32 +190,6 @@ public class com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk impl
   public void resetKeepAlive();
   public int pollActiveTimer(int);
   public void resetActiveTimer();
-  public int getBlock(int, int, int);
-  public com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType getBlockType(int, int, int);
-  public com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType getBlockType(org.joml.Vector3ic);
-  public boolean setBlock(int, int, int, java.lang.String);
-  public boolean setBlock(int, int, int, java.lang.String, int);
-  public boolean setBlock(int, int, int, int);
-  public boolean setBlock(int, int, int, int, int);
-  public boolean setBlock(int, int, int, com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType);
-  public boolean setBlock(int, int, int, com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType, int);
-  public boolean breakBlock(int, int, int, int, int);
-  public boolean breakBlock(int, int, int, int);
-  public void setBlockInteractionState(org.joml.Vector3i, com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType, java.lang.String);
-  public void setBlockInteractionState(int, int, int, com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType, java.lang.String, boolean);
-  public boolean setBlock(int, int, int, int, com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType, int, int, int);
-  public int getFiller(int, int, int);
-  public int getRotationIndex(int, int, int);
-  public boolean setTicking(int, int, int, boolean);
-  public boolean isTicking(int, int, int);
-  public short getHeight(int, int);
-  public short getHeight(int);
-  public com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore> getBlockComponentEntity(int, int, int);
-  public com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore> getBlockComponentHolder(int, int, int);
-  public int getFluidId(int, int, int);
-  public byte getFluidLevel(int, int, int);
-  public int getSupportValue(int, int, int);
-  public void setState(int, int, int, com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType, int, com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>);
   public void markNeedsSaving();
   public boolean getNeedsSaving();
   public boolean consumeNeedsSaving();
@@ -255,8 +198,6 @@ public class com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk impl
   public long getIndex();
   public int getX();
   public int getZ();
-  public void setLightingUpdatesEnabled(boolean);
-  public com.hypixel.hytale.server.core.universe.world.World getWorld();
   public java.lang.String toString();
   public java.lang.Object clone() throws java.lang.CloneNotSupportedException;
 }

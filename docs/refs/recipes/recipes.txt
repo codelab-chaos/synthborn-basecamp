@@ -1,12 +1,12 @@
 # Hytale Recipe Reference
 
-> Generated 2026-09-07T17:13:42.568Z from `_Assets/Server/Item/Recipes/` (standalone) and `_Assets/Server/Item/Items/` (embedded `Recipe` blocks).
+> Generated 2026-10-14T19:43:52.974Z from `_Assets/Server/Item/Recipes/` (standalone) and `_Assets/Server/Item/Items/` (embedded `Recipe` blocks).
 
 Each entry: `id | inputs → outputs | bench | time`. `(type)` after an ingredient means it accepts any item of that ResourceType (e.g. `Wood_Trunk(type)` matches any trunk wood). `bench=Type[Id,Categories]`.
 
 Regenerate: `node tools/refs/recipes/extract-recipes.js`
 
-## Recipes (1984)
+## Recipes (2047)
 
 - Alchemy_Cauldron | 6×Ingredient_Bar_Copper + 4×Soil_Clay_Smooth_White + 2×Ingredient_Tree_Sap → 1×Alchemy_Cauldron | bench=Crafting[Furniture_Bench,Furniture_Misc] | —
 - Alchemy_Cauldron_Big | 12×Ingredient_Bar_Iron + 8×Soil_Clay_Smooth_White + 4×Ingredient_Tree_Sap → 1×Alchemy_Cauldron_Big | bench=Crafting[Furniture_Bench,Furniture_Misc] | —
@@ -241,6 +241,7 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Deco_Scarecrow | 3×Wood_All(type) + 3×Ingredient_Tree_Sap + 1×Plant_Crop_Pumpkin_Item + 10×Ingredient_Life_Essence → 1×Deco_Scarecrow | bench=Crafting[Farmingbench,Decorative] | 1s
 - Deco_Scroll | 4×Ingredient_Fibre + 2×Ingredient_Stick → 1×Deco_Scroll | bench=Crafting[Furniture_Bench,Furniture_Misc] | —
 - Deco_Shutter | 2×Wood_Trunk(type) + 2×Ingredient_Tree_Sap → 1×Deco_Shutter | bench=Crafting[Architectsbench] | —
+- Deco_SpiderWeb_Diagonal | 1×Ingredient_Fibre → 1×Deco_SpiderWeb_Diagonal | bench=StructuralCrafting[Builders] | —
 - Deco_Tankard | 1×Wood_Hardwood_Planks + 1×Ingredient_Bar_Iron → 1×Deco_Tankard | bench=Crafting[Farmingbench,Farming] | —
 - Deco_Target | 1×Ingredient_Fibre → 1×Deco_Target | bench=Crafting[Workbench,Workbench_Tinkering] | 1s
 - Deco_Trophy_Harvest | 100×Ingredient_Life_Essence_Concentrated + 100×Plant_Fruit_Berries_Red + 100×Plant_Crop_Wheat_Item + 100×Plant_Crop_Lettuce_Item + 100×Plant_Crop_Carrot_Item + 100×Plant_Crop_Corn_Item + 100×Plant_Crop_Cauliflower_Item + 100×Plant_Crop_Turnip_Item + 100×Plant_Crop_Aubergine_Item + 100×Plant_Crop_Pumpkin_Item + 100×Plant_Crop_Tomato_Item + 100×Plant_Crop_Chilli_Item + 100×Plant_Crop_Cotton_Item + 100×Plant_Crop_Rice_Item + 100×Plant_Crop_Onion_Item + 100×Plant_Crop_Potato_Item + 100×Plant_Fruit_Apple + 100×Food_Egg + 100×Ingredient_Fabric_Scrap_Wool + 100×Fish(type) + 100×Moss(type) + 100×Wood_Trunk(type) + 100×Ingredient_Poop + 100×Ingredient_Feathers_Light + 100×Ingredient_Tree_Sap + 100×Ingredient_Fibre + 8×Milk_Bucket(type) + 8×Milk_Mosshorn_Bucket(type) → 1×Deco_Trophy_Harvest | bench=Crafting[Farmingbench,Farming] | 10s
@@ -336,7 +337,19 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Furniture_Frozen_Castle_Trapdoor | 1×Wood_Ice_Trunk → 1×Furniture_Frozen_Castle_Trapdoor | bench=StructuralCrafting[Builders,Trapdoor] | —
 - Furniture_Frozen_Castle_Wardrobe | 4×Wood_Ice_Trunk → 1×Furniture_Frozen_Castle_Wardrobe | bench=StructuralCrafting[Builders,Wardrobe] | —
 - Furniture_Frozen_Castle_Window | 1×Wood_Ice_Trunk → 1×Furniture_Frozen_Castle_Window | bench=StructuralCrafting[Builders,Window] | —
+- Furniture_Goblin_Bed | 30×Ingredient_Scraps + 10×Wood_Planks(type) + 5×Ingredient_Spider_Silk → 1×Furniture_Goblin_Bed | bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration] | —
+- Furniture_Goblin_Brazier | 20×Ingredient_Scraps + 5×Ingredient_Charcoal → 1×Furniture_Goblin_Brazier | bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration] | —
+- Furniture_Goblin_Candle | 5×Ingredient_Scraps + 2×Ingredient_Charcoal → 1×Furniture_Goblin_Candle | bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration] | —
 - Furniture_Goblin_Chest_Small | 3×Wood_Deadwood_Planks + 1×Ingredient_Bar_Gold → 1×Furniture_Goblin_Chest_Small | bench=Crafting[Furniture_Bench,Furniture_Storage] | —
+- Furniture_Goblin_ChestStolen_Small | 3×Wood_Deadwood_Planks + 1×Ingredient_Bar_Gold → 1×Furniture_Goblin_ChestStolen_Small | bench=Crafting[Furniture_Bench,Furniture_Storage] | —
+- Furniture_Goblin_Door | 25×Ingredient_Scraps + 10×Wood_Planks(type) → 1×Furniture_Goblin_Door | bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration] | —
+- Furniture_Goblin_Door_Medium | 50×Ingredient_Scraps + 20×Wood_Planks(type) + 5×Ingredient_Bar_Iron → 1×Furniture_Goblin_Door_Medium | bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration] | —
+- Furniture_Goblin_Ladder | 5×Ingredient_Scraps + 1×Ingredient_Bar_Iron → 1×Furniture_Goblin_Ladder | bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration] | —
+- Furniture_Goblin_Sign | 15×Ingredient_Scraps + 5×Wood_Planks(type) → 1×Furniture_Goblin_Sign | bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration] | —
+- Furniture_Goblin_Statue_Graffiti | 50×Ingredient_Scraps + 20×Rock_Stone_Cobble_Mossy → 1×Furniture_Goblin_Statue_Graffiti | bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration] | —
+- Furniture_Goblin_Stool | 1×Furniture_Goblin_Brazier → 1×Furniture_Goblin_Stool | bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration] | —
+- Furniture_Goblin_Table | 30×Wood_Planks(type) + 10×Ingredient_Scraps → 1×Furniture_Goblin_Table | bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration] | —
+- Furniture_Goblin_Window | 15×Ingredient_Scraps + 3×Ingredient_Bar_Iron → 1×Furniture_Goblin_Window | bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration] | —
 - Furniture_Jungle_Bed | 2×Wood_Bamboo_Trunk + 4×Ingredient_Fibre + 2×Cloth_Block_Wool_Cyan + 1×Cloth_Block_Wool_Orange + 1×Cloth_Block_Wool_White → 1×Furniture_Jungle_Bed | bench=Crafting[Furniture_Bench,Furniture_Beds] | —
 - Furniture_Jungle_Bench | 1×Wood_Tropicalwood(type) → 1×Furniture_Jungle_Bench | bench=StructuralCrafting[Builders,Bench] | —
 - Furniture_Jungle_Candle | 2×Ingredient_Fibre + 2×Ingredient_Tree_Sap + 1×Wood_Bamboo_Trunk → 1×Furniture_Jungle_Candle | bench=Crafting[Furniture_Bench,Furniture_Lighting] | —
@@ -410,6 +423,7 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Furniture_Temple_Emerald_Platform | 1×Rock_Quartzite(type) → 1×Furniture_Temple_Emerald_Platform | bench=StructuralCrafting[Builders,Platform] | —
 - Furniture_Temple_Emerald_Shelf | 1×Rock_Quartzite(type) → 1×Furniture_Temple_Emerald_Shelf | bench=StructuralCrafting[Builders,Shelf] | —
 - Furniture_Temple_Emerald_Sign | 1×Rock_Quartzite(type) → 1×Furniture_Temple_Emerald_Sign | bench=StructuralCrafting[Builders,Sign] | —
+- Furniture_Temple_Emerald_Statue_Head | 20×Rock_Quartzite_Cobble + 3×Ingredient_Enkindled_Resource → 1×Furniture_Temple_Emerald_Statue_Head | bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration] | —
 - Furniture_Temple_Emerald_Stool | 1×Rock_Quartzite(type) → 1×Furniture_Temple_Emerald_Stool | bench=StructuralCrafting[Builders,Stool] | —
 - Furniture_Temple_Emerald_Table | 4×Rock_Quartzite(type) → 1×Furniture_Temple_Emerald_Table | bench=StructuralCrafting[Builders,Table] | —
 - Furniture_Temple_Emerald_Torch | 1×Rock_Quartzite + 1×Plant_Petals_Green → 1×Furniture_Temple_Emerald_Torch | bench=Crafting[Furniture_Bench,Furniture_Lighting] | —
@@ -454,6 +468,13 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Furniture_Village_Trapdoor | 1×Wood_Hardwood(type) → 1×Furniture_Village_Trapdoor | bench=StructuralCrafting[Builders,Trapdoor] | —
 - Furniture_Village_Wardrobe | 4×Wood_Hardwood(type) → 1×Furniture_Village_Wardrobe | bench=StructuralCrafting[Builders,Wardrobe] | —
 - Furniture_Village_Window | 1×Wood_Hardwood(type) → 1×Furniture_Village_Window | bench=StructuralCrafting[Builders,Window] | —
+- Glider_Scrap | 150×Ingredient_Scraps + 6×Ingredient_Gadget_Assembly + 6×Ingredient_Spider_Silk + 2×Ingredient_Voidtaken_Grizzly_Hide → 1×Glider_Scrap | bench=[GoblinLab_Workbench,GoblinLab_Gadgets] | 1s
+- Goblin_Painting_Breach_Replica | 20×Ingredient_Scraps + 10×Ingredient_Bar_Iron + 2×Mushrooms(type) → 1×Goblin_Painting_Breach_Replica | bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration] | 1s | knowledge-required
+- Goblin_Painting_Fail_Replica | 20×Ingredient_Scraps + 10×Ingredient_Bar_Iron + 2×Mushrooms(type) → 1×Goblin_Painting_Fail_Replica | bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration] | 1s | knowledge-required
+- Goblin_Painting_ForgottenTemple_Replica | 20×Ingredient_Scraps + 10×Wood_Planks(type) + 2×Mushrooms(type) → 1×Goblin_Painting_ForgottenTemple_Replica | bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration] | 1s | knowledge-required
+- Goblin_Painting_Orbis_Replica | 20×Ingredient_Scraps + 10×Ingredient_Bar_Iron + 2×Mushrooms(type) → 1×Goblin_Painting_Orbis_Replica | bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration] | 1s | knowledge-required
+- Goblin_Painting_Portal_Replica | 20×Ingredient_Scraps + 10×Wood_Planks(type) + 2×Mushrooms(type) → 1×Goblin_Painting_Portal_Replica | bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration] | 1s | knowledge-required
+- Goblin_Painting_Repair_Replica | 20×Ingredient_Scraps + 10×Wood_Planks(type) + 2×Mushrooms(type) → 1×Goblin_Painting_Repair_Replica | bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration] | 1s | knowledge-required
 - Halloween_Wagon | 1×Wood_Darkwood_Planks + 2×Wood_Darkwood_Planks_Half + 1×Ingredient_Bar_Iron → 1×Halloween_Wagon | bench=Crafting[Furniture_Bench,Furniture_Seasonal] | —
 - Ingredient_Bar_Adamantite | 1×Ore_Adamantite → 1×Ingredient_Bar_Adamantite | bench=Processing[Furnace] | 20s
 - Ingredient_Bar_Cobalt | 1×Ore_Cobalt → 1×Ingredient_Bar_Cobalt | bench=Processing[Furnace] | 18s
@@ -476,6 +497,7 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Ingredient_Dough | 1×Ingredient_Flour + 2×Food_Egg + 1×*Deco_Tankard_State_Filled_Water → 1×Ingredient_Dough + 1×Deco_Tankard | bench=Crafting[Cookingbench,Ingredients] | 1s
 - Ingredient_Fibre | 1×Salvage_Wood(type) → 1×Ingredient_Fibre | bench=Processing[Salvagebench] | —
 - Ingredient_Flour | 10×Plant_Crop_Wheat_Item → 1×Ingredient_Flour | bench=Crafting[Cookingbench,Ingredients] | 1s
+- Ingredient_Gadget_Assembly | 25×Ingredient_Scraps + 2×Ingredient_Crystal_Void → 1×Ingredient_Gadget_Assembly | bench=Crafting[GoblinLab_Workbench,GoblinLab_Gadgets] | 1s
 - Ingredient_Hay | 1×Deco_Rope + 4×Plant_Crop_Wheat_Item → 1×Ingredient_Hay | bench=Crafting[Farmingbench,Decorative] | 1s
 - Ingredient_Leather_Dark | 1×Ingredient_Hide_Dark → 1×Ingredient_Leather_Dark | bench=Processing[Tannery] | 3.5s
 - Ingredient_Leather_Heavy | 1×Ingredient_Hide_Heavy → 1×Ingredient_Leather_Heavy | bench=Processing[Tannery] | 40s
@@ -501,10 +523,12 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Ingredient_Life_Essence_Tomato | 1×Plant_Crop_Tomato_Item → 3×Ingredient_Life_Essence | bench=Crafting[Farmingbench,Essence] | —
 - Ingredient_Life_Essence_Turnip | 1×Plant_Crop_Turnip_Item → 6×Ingredient_Life_Essence | bench=Crafting[Farmingbench,Essence] | —
 - Ingredient_Life_Essence_Wheat | 1×Plant_Crop_Wheat_Item → 1×Ingredient_Life_Essence | bench=Crafting[Farmingbench,Essence] | —
+- Ingredient_Powder_Boom | 2×Plant_Crop_Mushroom_Boomshroom_Small + 1×Ingredient_Charcoal → 1×Ingredient_Powder_Boom | bench=[GoblinLab_Workbench,GoblinLab_Gadgets] | 1s
 - Ingredient_Salt | 1×Rock_Salt → 5×Ingredient_Salt | bench=Crafting[Cookingbench,Ingredients] | 1s
 - Ingredient_Spices | 1×Vegetables(type) + 5×Flowers(type) → 1×Ingredient_Spices | bench=Crafting[Cookingbench,Ingredients] | 1s
 - Lobby_Wall_Poster_Small01 | 1×Wood_Darkwood_Planks_Half + 1×Ingredient_Bar_Iron + 1×Deco_Iron_Chain_Small → 1×Lobby_Wall_Poster_Small01 | bench=Crafting[Architects,Housing] | —
 - Lobby_Wall_Poster01 | 1×Wood_Darkwood_Planks_Half + 1×Ingredient_Bar_Iron + 1×Deco_Iron_Chain_Small → 1×Lobby_Wall_Poster01 | bench=Crafting[Architects,Housing] | —
+- Metal_Orbis_Copper_Fence | 1×Ingredient_Bar_Copper → 1×Metal_Orbis_Copper_Fence | bench=StructuralCrafting[Builders,Wall] | —
 - Ore_Adamantite | 1×Salvage_Adamantite(type) → 1×Ore_Adamantite | bench=Processing[Salvagebench] | 4s
 - Ore_Cobalt | 1×Salvage_Cobalt(type) → 1×Ore_Cobalt | bench=Processing[Salvagebench] | 4s
 - Ore_Copper | 1×Salvage_Copper(type) → 1×Ore_Copper | bench=Processing[Salvagebench] | 4s
@@ -569,6 +593,7 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Plant_Sapling_Palo | 15×Ingredient_Life_Essence → 1×Plant_Sapling_Palo | bench=Crafting[Farmingbench,Saplings] | 0s
 - Plant_Sapling_Petrified | 30×Ingredient_Life_Essence → 1×Plant_Sapling_Petrified | bench=Crafting[Farmingbench,Saplings] | 0s
 - Plant_Sapling_Redwood | 20×Ingredient_Life_Essence → 1×Plant_Sapling_Redwood | bench=Crafting[Farmingbench,Saplings] | 0s
+- Plant_Sapling_Sadwillow | 15×Ingredient_Life_Essence → 1×Plant_Sapling_Sadwillow | bench=Crafting[Farmingbench,Saplings] | 0s
 - Plant_Sapling_Sallow | 15×Ingredient_Life_Essence → 1×Plant_Sapling_Sallow | bench=Crafting[Farmingbench,Saplings] | 0s
 - Plant_Sapling_Spiral | 20×Ingredient_Life_Essence → 1×Plant_Sapling_Spiral | bench=Crafting[Farmingbench,Saplings] | 0s
 - Plant_Sapling_Spruce | 15×Ingredient_Life_Essence → 1×Plant_Sapling_Spruce | bench=Crafting[Farmingbench,Saplings] | 0s
@@ -622,8 +647,10 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Plant_Vine_Wall_Poisoned | 1×Ingredient_Life_Essence + 2×Ingredient_Fibre → 1×Plant_Vine_Wall_Poisoned | bench=Crafting[Farmingbench,Decorative] | 0s
 - Plant_Vine_Wall_Winter | 1×Ingredient_Life_Essence + 2×Ingredient_Fibre → 1×Plant_Vine_Wall_Winter | bench=Crafting[Farmingbench,Decorative] | 0s
 - Portal_Device | 30×Rock_Stone_Cobble + 10×Ingredient_Bar_Thorium + 10×Ingredient_Life_Essence + 10×Ingredient_Void_Essence → 1×Portal_Device | bench=Crafting[Arcanebench,Arcane_Portals] | 3s
+- PortalKey_Goblin_Breach | 15×Ingredient_Scraps + 10×Ingredient_Void_Essence + 5×Ingredient_Bar_Iron → 1×PortalKey_Goblin_Breach | bench=Crafting[GoblinLab_Workbench,GoblinLab_Fragments] | 1s
 - PortalKey_Hederas_Lair | 10×Ingredient_Bar_Adamantite + 30×Ingredient_Fire_Essence → 1×PortalKey_Hederas_Lair | bench=Crafting[Arcanebench,Arcane_Portals] | 1s
 - PortalKey_Taiga | 10×Ingredient_Bar_Cobalt + 30×Ingredient_Ice_Essence → 1×PortalKey_Taiga | bench=Crafting[Arcanebench,Arcane_Portals] | 1s
+- PortalKey_The_Deepworks | 30×Ingredient_Scraps + 5×Ingredient_Crystal_Void + 1×Ingredient_Voidheart → 1×PortalKey_The_Deepworks | bench=Crafting[GoblinLab_Workbench,GoblinLab_Fragments] | 1s
 - PortalKey_Windsurf_Valley | 10×Ingredient_Bar_Thorium + 30×Ingredient_Life_Essence → 1×PortalKey_Windsurf_Valley | bench=Crafting[Arcanebench,Arcane_Portals] | 1s
 - Potion_Antidote | 1×Potion_Empty + 5×Ingredient_Fibre + 2×Ingredient_Life_Essence + 1×Ingredient_Sac_Venom → 1×Potion_Antidote | bench=Crafting[Alchemybench,Alchemy_Potions] | 1s
 - Potion_Empty | 1×Sands(type) → 1×Potion_Empty | bench=Processing[Furnace] | 10s
@@ -783,6 +810,10 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Rock_Crystal_Red_Large | 6×Ingredient_Crystal_Red → 1×Rock_Crystal_Red_Large | bench=StructuralCrafting[Builders,Decorative] | —
 - Rock_Crystal_Red_Medium | 4×Ingredient_Crystal_Red → 1×Rock_Crystal_Red_Medium | bench=StructuralCrafting[Builders,Decorative] | —
 - Rock_Crystal_Red_Small | 2×Ingredient_Crystal_Red → 1×Rock_Crystal_Red_Small | bench=StructuralCrafting[Builders,Decorative] | —
+- Rock_Crystal_Void_Block | 5×Ingredient_Crystal_Void → 1×Rock_Crystal_Void_Block | bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration] | —
+- Rock_Crystal_Void_Large | 3×Ingredient_Crystal_Void → 1×Rock_Crystal_Void_Large | bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration] | —
+- Rock_Crystal_Void_Medium | 2×Ingredient_Crystal_Void → 1×Rock_Crystal_Void_Medium | bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration] | —
+- Rock_Crystal_Void_Small | 1×Ingredient_Crystal_Void → 1×Rock_Crystal_Void_Small | bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration] | —
 - Rock_Crystal_White_Block | 10×Ingredient_Crystal_White → 1×Rock_Crystal_White_Block | bench=StructuralCrafting[Builders,Decorative] | —
 - Rock_Crystal_White_Large | 6×Ingredient_Crystal_White → 1×Rock_Crystal_White_Large | bench=StructuralCrafting[Builders,Decorative] | —
 - Rock_Crystal_White_Medium | 4×Ingredient_Crystal_White → 1×Rock_Crystal_White_Medium | bench=StructuralCrafting[Builders,Decorative] | —
@@ -809,6 +840,7 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Rock_Gold_Brick_Smooth_Half | 1×Rock_Gold_Brick(type) → 1×Rock_Gold_Brick_Smooth_Half | bench=StructuralCrafting[Builders,SmoothHalfSlab] | 0s
 - Rock_Gold_Brick_Stairs | 1×Rock_Gold_Brick(type) → 1×Rock_Gold_Brick_Stairs | bench=StructuralCrafting[Builders,Stairs] | 0s
 - Rock_Gold_Brick_Wall | 1×Rock_Gold_Brick(type) → 1×Rock_Gold_Brick_Wall | bench=StructuralCrafting[Builders,Wall] | 0s
+- Rock_Kenolite | 2×Rock_Aqua(type) → 1×Rock_Kenolite | bench=Processing[Furnace] | 0s
 - Rock_Ledge_Brick | 1×Rock_Ledge(type) → 1×Rock_Ledge_Brick | bench=StructuralCrafting[Builders,Bricks] | 0s
 - Rock_Ledge_Brick_Decorative | 1×Rock_Ledge(type) → 1×Rock_Ledge_Brick_Decorative | bench=StructuralCrafting[Builders,Decorative] | 0s
 - Rock_Ledge_Brick_Half | 1×Rock_Ledge_Brick(type) → 1×Rock_Ledge_Brick_Half | bench=StructuralCrafting[Builders,HalfSlab] | 0s
@@ -1135,6 +1167,22 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Rock_Volcanic_Cobble_Stairs | 1×Rock_Volcanic(type) → 1×Rock_Volcanic_Cobble_Stairs | bench=StructuralCrafting[Builders,Stairs] | 0s
 - Rock_Volcanic_Cobble_Wall | 1×Rock_Volcanic(type) → 1×Rock_Volcanic_Cobble_Wall | bench=StructuralCrafting[Builders,Wall] | 0s
 - Rock_Volcanic_Stairs | 1×Rock_Volcanic(type) → 1×Rock_Volcanic_Stairs | bench=StructuralCrafting[Builders,Stairs] | 0s
+- Rocket_Boots | 30×Ingredient_Scraps + 4×Ingredient_Gadget_Assembly + 2×Weapon_Bangstick + 1×Ingredient_Voidtaken_Grizzly_Hide → 1×Rocket_Boots | bench=[GoblinLab_Workbench,GoblinLab_Gadgets] | 1s
+- Rune_Aoe_Up | 1×Ingredient_Rune_Shard → 1×Rune_Aoe_Up | bench=Crafting[GoblinLab_Workbench,GoblinLab_Runes] | 1s
+- Rune_ChainHook | 2×Ingredient_Rune_Shard → 1×Rune_ChainHook | bench=Crafting[GoblinLab_Workbench,GoblinLab_Runes] | 1s
+- Rune_ChargedShot | 2×Ingredient_Rune_Shard → 1×Rune_ChargedShot | bench=Crafting[GoblinLab_Workbench,GoblinLab_Runes] | 1s
+- Rune_Duration_Up | 1×Ingredient_Rune_Shard → 1×Rune_Duration_Up | bench=Crafting[GoblinLab_Workbench,GoblinLab_Runes] | 1s
+- Rune_Enrage | 2×Ingredient_Rune_Shard → 1×Rune_Enrage | bench=Crafting[GoblinLab_Workbench,GoblinLab_Runes] | 1s
+- Rune_Fireball | 2×Ingredient_Rune_Shard → 1×Rune_Fireball | bench=Crafting[GoblinLab_Workbench,GoblinLab_Runes] | 1s
+- Rune_Fork | 1×Ingredient_Rune_Shard → 1×Rune_Fork | bench=Crafting[GoblinLab_Workbench,GoblinLab_Runes] | 1s
+- Rune_GroundSlam | 2×Ingredient_Rune_Shard → 1×Rune_GroundSlam | bench=Crafting[GoblinLab_Workbench,GoblinLab_Runes] | 1s
+- Rune_PoisonImbue | 2×Ingredient_Rune_Shard → 1×Rune_PoisonImbue | bench=Crafting[GoblinLab_Workbench,GoblinLab_Runes] | 1s
+- Rune_Quickening | 1×Ingredient_Rune_Shard → 1×Rune_Quickening | bench=Crafting[GoblinLab_Workbench,GoblinLab_Runes] | 1s
+- Rune_Rend | 1×Ingredient_Rune_Shard → 1×Rune_Rend | bench=Crafting[GoblinLab_Workbench,GoblinLab_Runes] | 1s
+- Rune_Ricochet | 1×Ingredient_Rune_Shard → 1×Rune_Ricochet | bench=Crafting[GoblinLab_Workbench,GoblinLab_Runes] | 1s
+- Rune_Thrift | 1×Ingredient_Rune_Shard → 1×Rune_Thrift | bench=Crafting[GoblinLab_Workbench,GoblinLab_Runes] | 1s
+- Rune_WindStrike | 2×Ingredient_Rune_Shard → 1×Rune_WindStrike | bench=Crafting[GoblinLab_Workbench,GoblinLab_Runes] | 1s
+- Rune_Wither | 1×Ingredient_Rune_Shard → 1×Rune_Wither | bench=Crafting[GoblinLab_Workbench,GoblinLab_Runes] | 1s
 - Salvage_Armor_Adamantite_Chest | 1×Armor_Adamantite_Chest → 6×Ore_Adamantite + 2×Ingredient_Hide_Heavy + 2×Ingredient_Fabric_Scrap_Cindercloth | bench=Processing[Salvagebench] | 4s
 - Salvage_Armor_Adamantite_Hands | 1×Armor_Adamantite_Hands → 2×Ore_Adamantite + 1×Ingredient_Hide_Heavy + 1×Ingredient_Fabric_Scrap_Cindercloth | bench=Processing[Salvagebench] | 4s
 - Salvage_Armor_Adamantite_Head | 1×Armor_Adamantite_Head → 3×Ore_Adamantite + 1×Ingredient_Hide_Heavy + 1×Ingredient_Fabric_Scrap_Cindercloth | bench=Processing[Salvagebench] | 4s
@@ -1213,6 +1261,7 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Salvage_Armor_Wood_Hands | 1×Armor_Wood_Hands → 1×Ingredient_Stick + 1×Ingredient_Fibre | bench=Processing[Salvagebench] | 4s
 - Salvage_Armor_Wood_Head | 1×Armor_Wood_Head → 1×Ingredient_Stick + 1×Ingredient_Fibre | bench=Processing[Salvagebench] | 4s
 - Salvage_Armor_Wood_Legs | 1×Armor_Wood_Legs → 1×Ingredient_Stick + 1×Ingredient_Fibre | bench=Processing[Salvagebench] | 4s
+- Salvage_Ingredient_Gobliterator_Core | 1×Ingredient_Gobliterator_Core → 40×Ingredient_Scraps + 2×Ingredient_Gadget_Assembly + 1×Food_Cheese | bench=Processing[Salvagebench] | 4s
 - Salvage_Plant_Crop_Health1 | 1×Plant_Crop_Health1 → 1×Plant_Petals_Blood | bench=Processing[Salvagebench] | 0.5s
 - Salvage_Plant_Crop_Health2 | 1×Plant_Crop_Health2 → 2×Plant_Petals_Blood | bench=Processing[Salvagebench] | 0.5s
 - Salvage_Plant_Crop_Health3 | 1×Plant_Crop_Health3 → 4×Plant_Petals_Blood | bench=Processing[Salvagebench] | 0.5s
@@ -1402,6 +1451,7 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Salvage_Rock_Volcanic_Cobble_Roof_Steep | 1×Rock_Volcanic_Cobble_Roof_Steep → 1×Rubble_Volcanic | bench=Processing[Salvagebench] | 4s
 - Salvage_Rock_Volcanic_Cobble_Stairs | 1×Rock_Volcanic_Cobble_Stairs → 1×Rubble_Volcanic | bench=Processing[Salvagebench] | 4s
 - Salvage_Rock_Volcanic_Cobble_Wall | 1×Rock_Volcanic_Cobble_Wall → 1×Rubble_Volcanic | bench=Processing[Salvagebench] | 4s
+- Salvage_Tool_Drill_Scrap | 1×Tool_Drill_Scrap → 25×Ingredient_Scraps + 5×Ingredient_Bar_Iron + 1×Ingredient_Gadget_Assembly | bench=Processing[Salvagebench] | 4s
 - Salvage_Tool_Hammer_Crude | 1×Tool_Hammer_Crude → 1×Rubble_Stone + 1×Ingredient_Stick + 1×Ingredient_Fibre | bench=Processing[Salvagebench] | 4s
 - Salvage_Tool_Hammer_Iron | 1×Tool_Hammer_Iron → 2×Ore_Iron + 1×Ingredient_Hide_Light + 1×Ingredient_Fabric_Scrap_Linen | bench=Processing[Salvagebench] | 4s
 - Salvage_Tool_Hatchet_Adamantite | 1×Tool_Hatchet_Adamantite → 2×Ore_Adamantite + 1×Ingredient_Fabric_Scrap_Cindercloth | bench=Processing[Salvagebench] | 4s
@@ -1421,6 +1471,7 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Salvage_Tool_Pickaxe_Crude | 1×Tool_Pickaxe_Crude → 1×Rubble_Stone + 1×Ingredient_Fibre + 1×Ingredient_Stick | bench=Processing[Salvagebench] | 4s
 - Salvage_Tool_Pickaxe_Iron | 1×Tool_Pickaxe_Iron → 2×Ore_Iron + 1×Ingredient_Hide_Light + 1×Ingredient_Fabric_Scrap_Linen | bench=Processing[Salvagebench] | 4s
 - Salvage_Tool_Pickaxe_Mithril | 1×Tool_Pickaxe_Mithril → 2×Ore_Mithril | bench=Processing[Salvagebench] | 4s
+- Salvage_Tool_Pickaxe_Scrap | 1×Tool_Pickaxe_Scrap → 3×Ingredient_Scraps + 1×Ingredient_Stick | bench=Processing[Salvagebench] | 4s
 - Salvage_Tool_Pickaxe_Thorium | 1×Tool_Pickaxe_Thorium → 2×Ore_Thorium + 1×Ingredient_Fabric_Scrap_Linen | bench=Processing[Salvagebench] | 4s
 - Salvage_Tool_Repair_Kit_Iron | 1×Tool_Repair_Kit_Iron → 1×Ingredient_Fabric_Scrap_Linen | bench=Processing[Salvagebench] | 4s
 - Salvage_Tool_Shovel_Crude | 1×Tool_Shovel_Crude → 1×Rubble_Stone + 1×Ingredient_Stick + 1×Ingredient_Fibre | bench=Processing[Salvagebench] | 4s
@@ -1460,6 +1511,8 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Salvage_Weapon_Club_Copper | 1×Weapon_Club_Copper → 1×Ore_Copper + 2×Ingredient_Stick + 1×Ingredient_Fibre | bench=Processing[Salvagebench] | 4s
 - Salvage_Weapon_Club_Iron | 1×Weapon_Club_Iron → 1×Ore_Iron + 1×Ingredient_Fabric_Scrap_Linen + 1×Ingredient_Hide_Light | bench=Processing[Salvagebench] | 4s
 - Salvage_Weapon_Club_Iron_Rusty | 1×Weapon_Club_Iron_Rusty → 1×Ore_Iron + 1×Ingredient_Fabric_Scrap_Linen | bench=Processing[Salvagebench] | 4s
+- Salvage_Weapon_Club_Scrap | 1×Weapon_Club_Scrap → 3×Ingredient_Scraps + 1×Ingredient_Stick | bench=Processing[Salvagebench] | 4s
+- Salvage_Weapon_Club_Scrap_Washboard | 1×Weapon_Club_Scrap_Washboard → 4×Ingredient_Scraps + 1×Ingredient_Stick + 2×Wood_Softwood_Planks | bench=Processing[Salvagebench] | 4s
 - Salvage_Weapon_Club_Steel_Flail_Rusty | 1×Weapon_Club_Steel_Flail_Rusty → 1×Ore_Iron + 1×Ingredient_Fabric_Scrap_Linen | bench=Processing[Salvagebench] | 4s
 - Salvage_Weapon_Club_Stone_Trork | 1×Weapon_Club_Stone_Trork → 1×Rock_Stone_Cobble + 1×Wood_Hardwood_Planks + 1×Ingredient_Fibre | bench=Processing[Salvagebench] | 4s
 - Salvage_Weapon_Club_Thorium | 1×Weapon_Club_Thorium → 1×Ore_Thorium + 1×Ingredient_Fabric_Scrap_Linen + 1×Ingredient_Hide_Medium | bench=Processing[Salvagebench] | 4s
@@ -1497,7 +1550,7 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Salvage_Weapon_Mace_Iron | 1×Weapon_Mace_Iron → 3×Ore_Iron + 1×Ingredient_Hide_Light + 1×Ingredient_Fabric_Scrap_Linen | bench=Processing[Salvagebench] | 4s
 - Salvage_Weapon_Mace_Mithril | 1×Weapon_Mace_Mithril → 3×Ore_Mithril + 1×Ingredient_Hide_Storm | bench=Processing[Salvagebench] | 4s
 - Salvage_Weapon_Mace_Onyxium | 1×Weapon_Mace_Onyxium → 1×Ingredient_Stick + 1×Rubble_Stone + 1×Ingredient_Fibre | bench=Processing[Salvagebench] | 4s
-- Salvage_Weapon_Mace_Scrap | 1×Weapon_Mace_Scrap → 1×Deco_Book_Pile_Large + 1×Ingredient_Stick + 3×Ingredient_Fibre | bench=Processing[Salvagebench] | 4s
+- Salvage_Weapon_Mace_Scrap | 1×Weapon_Mace_Scrap → 1×Deco_Book_Pile_Large + 1×Ingredient_Stick + 3×Ingredient_Fibre + 2×Ingredient_Scraps | bench=Processing[Salvagebench] | 4s
 - Salvage_Weapon_Mace_Stone_Trork | 1×Weapon_Mace_Stone_Trork → 3×Rock_Stone_Cobble + 1×Wood_Hardwood_Planks + 1×Ingredient_Fibre | bench=Processing[Salvagebench] | 4s
 - Salvage_Weapon_Mace_Thorium | 1×Weapon_Mace_Thorium → 3×Ore_Thorium + 1×Ingredient_Hide_Medium + 1×Ingredient_Fabric_Scrap_Linen | bench=Processing[Salvagebench] | 4s
 - Salvage_Weapon_Shield_Adamantite | 1×Weapon_Shield_Adamantite → 1×Ore_Adamantite + 1×Ingredient_Hide_Heavy + 1×Ingredient_Fabric_Scrap_Cindercloth | bench=Processing[Salvagebench] | 4s
@@ -1507,7 +1560,8 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Salvage_Weapon_Shield_Iron | 1×Weapon_Shield_Iron → 1×Ore_Iron + 1×Ingredient_Hide_Light + 1×Ingredient_Fabric_Scrap_Linen | bench=Processing[Salvagebench] | 4s
 - Salvage_Weapon_Shield_Mithril | 1×Weapon_Shield_Mithril → 1×Ore_Mithril + 1×Ingredient_Hide_Storm + 1×Ingredient_Fabric_Scrap_Stormsilk | bench=Processing[Salvagebench] | 4s
 - Salvage_Weapon_Shield_Rusty | 1×Weapon_Shield_Rusty → 1×Ore_Iron + 1×Ingredient_Hide_Light + 1×Ingredient_Fabric_Scrap_Linen | bench=Processing[Salvagebench] | 4s
-- Salvage_Weapon_Shield_Scrap | 1×Weapon_Shield_Scrap → 2×Wood_Hardwood_Planks + 1×Ore_Iron | bench=Processing[Salvagebench] | 4s
+- Salvage_Weapon_Shield_Scrap | 1×Weapon_Shield_Scrap → 2×Wood_Hardwood_Planks + 1×Ore_Iron + 2×Ingredient_Scraps | bench=Processing[Salvagebench] | 4s
+- Salvage_Weapon_Shield_Scrap_Spiked | 1×Weapon_Shield_Scrap_Spiked → 4×Ingredient_Scraps + 2×Wood_Softwood_Planks | bench=Processing[Salvagebench] | 4s
 - Salvage_Weapon_Shield_Thorium | 1×Weapon_Shield_Thorium → 1×Ore_Thorium + 1×Ingredient_Hide_Medium + 1×Ingredient_Fabric_Scrap_Linen | bench=Processing[Salvagebench] | 4s
 - Salvage_Weapon_Shield_Wood | 1×Weapon_Shield_Wood → 2×Ingredient_Stick + 1×Ingredient_Fibre | bench=Processing[Salvagebench] | 4s
 - Salvage_Weapon_Shortbow_Adamantite | 1×Weapon_Shortbow_Adamantite → 2×Ore_Adamantite + 1×Ingredient_Hide_Heavy + 1×Ingredient_Fabric_Scrap_Cindercloth | bench=Processing[Salvagebench] | 4s
@@ -1524,6 +1578,7 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Salvage_Weapon_Spear_Bone | 1×Weapon_Spear_Bone → 2×Ingredient_Bone_Fragment + 1×Ingredient_Hide_Medium | bench=Processing[Salvagebench] | 4s
 - Salvage_Weapon_Spear_Crude | 1×Weapon_Spear_Crude → 1×Rubble_Stone + 1×Ingredient_Stick | bench=Processing[Salvagebench] | 4s
 - Salvage_Weapon_Spear_Leaf | 1×Weapon_Spear_Leaf → 2×Ingredient_Fibre + 1×Ingredient_Stick | bench=Processing[Salvagebench] | 4s
+- Salvage_Weapon_Spear_Scrap | 1×Weapon_Spear_Scrap → 2×Ingredient_Scraps + 2×Ingredient_Stick | bench=Processing[Salvagebench] | 4s
 - Salvage_Weapon_Spear_Stone_Trork | 1×Weapon_Spear_Stone_Trork → 2×Rock_Stone_Cobble + 1×Wood_Hardwood_Planks + 1×Ingredient_Fibre | bench=Processing[Salvagebench] | 4s
 - Salvage_Weapon_Staff_Bone | 1×Weapon_Staff_Bone → 2×Ingredient_Bone_Fragment + 1×Ingredient_Hide_Medium | bench=Processing[Salvagebench] | 4s
 - Salvage_Weapon_Sword_Adamantite | 1×Weapon_Sword_Adamantite → 2×Ore_Adamantite + 1×Ingredient_Hide_Heavy + 1×Ingredient_Fabric_Scrap_Cindercloth | bench=Processing[Salvagebench] | 4s
@@ -1534,10 +1589,11 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Salvage_Weapon_Sword_Doomed | 1×Weapon_Sword_Doomed → 3×Ore_Cobalt + 2×Ingredient_Hide_Heavy + 2×Ingredient_Fabric_Scrap_Shadoweave | bench=Processing[Salvagebench] | 4s
 - Salvage_Weapon_Sword_Iron | 1×Weapon_Sword_Iron → 2×Ore_Iron + 1×Ingredient_Hide_Light + 1×Ingredient_Fabric_Scrap_Linen | bench=Processing[Salvagebench] | 4s
 - Salvage_Weapon_Sword_Mithril | 1×Weapon_Sword_Mithril → 2×Ore_Mithril + 1×Ingredient_Hide_Storm | bench=Processing[Salvagebench] | 4s
-- Salvage_Weapon_Sword_Scrap | 1×Weapon_Sword_Scrap → 2×Ore_Iron + 2×Ingredient_Fibre | bench=Processing[Salvagebench] | 4s
+- Salvage_Weapon_Sword_Scrap | 1×Weapon_Sword_Scrap → 2×Ore_Iron + 2×Ingredient_Fibre + 2×Ingredient_Scraps | bench=Processing[Salvagebench] | 4s
 - Salvage_Weapon_Sword_Steel_Rusty | 1×Weapon_Sword_Steel_Rusty → 1×Ore_Iron + 1×Ingredient_Hide_Light + 1×Ingredient_Fabric_Scrap_Linen | bench=Processing[Salvagebench] | 4s
 - Salvage_Weapon_Sword_Stone_Trork | 1×Weapon_Sword_Stone_Trork → 2×Rock_Stone_Cobble + 1×Wood_Hardwood_Planks + 1×Ingredient_Fibre | bench=Processing[Salvagebench] | 4s
 - Salvage_Weapon_Sword_Thorium | 1×Weapon_Sword_Thorium → 2×Ore_Thorium + 1×Ingredient_Hide_Medium + 1×Ingredient_Fabric_Scrap_Linen | bench=Processing[Salvagebench] | 4s
+- Scrap_Hook | 10×Ingredient_Scraps + 3×Ingredient_Bar_Iron → 1×Scrap_Hook | bench=[GoblinLab_Workbench,GoblinLab_Gadgets] | 1s
 - Soil_Aqua_Gravel | 3×Rubble_Aqua → 1×Soil_Aqua_Gravel | bench=Crafting[Farmingbench,Decorative] | 0s
 - Soil_Aqua_Gravel_Half | 3×Rubble_Aqua → 1×Soil_Aqua_Gravel_Half | bench=Crafting[Farmingbench,Decorative] | 0s
 - Soil_Basalt_Gravel | 3×Rubble_Basalt → 1×Soil_Basalt_Gravel | bench=Crafting[Farmingbench,Decorative] | 0s
@@ -1650,6 +1706,7 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Teleporter | 8×Wood_Azure_Trunk + 2×Plant_Crop_Mana3 + 10×Rock(type) → 1×Teleporter | bench=Crafting[Arcanebench,Arcane_Portals] | 2s
 - Tinkering_Target_Dummy | 1×Wood_Trunk(type) + 3×Ingredient_Tree_Sap + 3×Ingredient_Stick → 1×Tinkering_Target_Dummy | bench=Crafting[Workbench,Workbench_Tinkering] | 1s
 - Tool_Capture_Crate | 4×Wood_All(type) + 50×Ingredient_Life_Essence → 1×Tool_Capture_Crate | bench=Crafting[Farmingbench,Farming] | 2s
+- Tool_Drill_Scrap | 100×Ingredient_Scraps + 15×Ingredient_Bar_Iron + 8×Ingredient_Gadget_Assembly + 2×Ingredient_Enkindled_Resource → 1×Tool_Drill_Scrap | bench=[GoblinLab_Workbench,GoblinLab_Gadgets] | 1s
 - Tool_Feedbag | 10×Plant_Crop_Wheat_Item + 5×Vegetables(type) + 5×Fruits(type) + 10×Ingredient_Life_Essence → 1×Tool_Feedbag | bench=Crafting[Farmingbench,Farming] | 4s
 - Tool_Fertilizer | 10×Ingredient_Poop + 10×Ingredient_Life_Essence + 5×Vegetables(type) → 1×Tool_Fertilizer | bench=Crafting[Farmingbench,Farming] | 4s
 - Tool_Fertilizer_Crystal | 25×Crystal_Shards(type) + 1×Ingredient_Void_Essence → 1×Tool_Fertilizer_Crystal | bench=Crafting[Alchemybench,Alchemy_Seeds] | —
@@ -1667,6 +1724,7 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Tool_Hoe_Crude | 4×Wood_Trunk(type) + 3×Rock(type) → 1×Tool_Hoe_Crude | bench=Crafting[Farmingbench,Farming] | 0s
 - Tool_Hoe_Iron | 4×Wood_Trunk(type) + 3×Ingredient_Bar_Iron → 1×Tool_Hoe_Iron | bench=Crafting[Farmingbench,Farming] | 2.5s
 - Tool_Hoe_Thorium | 4×Wood_Trunk(type) + 3×Ingredient_Bar_Thorium → 1×Tool_Hoe_Thorium | bench=Crafting[Farmingbench,Farming] | 2.5s
+- Tool_Hookshot | 30×Ingredient_Scraps + 4×Ingredient_Spider_Silk + 1×Ingredient_Gadget_Assembly + 1×Scrap_Hook → 1×Tool_Hookshot | bench=[GoblinLab_Workbench,GoblinLab_Gadgets] | 1s
 - Tool_Pickaxe_Adamantite | 8×Ingredient_Bar_Adamantite + 3×Ingredient_Leather_Heavy + 4×Ingredient_Fabric_Scrap_Cindercloth → 1×Tool_Pickaxe_Adamantite | bench=Crafting[Workbench,Workbench_Tools] | 4.5s
 - Tool_Pickaxe_Cobalt | 7×Ingredient_Bar_Cobalt + 2×Ingredient_Leather_Heavy + 4×Ingredient_Fabric_Scrap_Shadoweave → 1×Tool_Pickaxe_Cobalt | bench=Crafting[Workbench,Workbench_Tools] | 4s
 - Tool_Pickaxe_Copper | 3×Ingredient_Bar_Copper + 6×Wood_Trunk(type) + 1×Ingredient_Fibre → 1×Tool_Pickaxe_Copper | bench=Crafting[Workbench,Workbench_Tools] | 3s
@@ -1674,17 +1732,19 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Tool_Pickaxe_Iron | 5×Ingredient_Bar_Iron + 2×Ingredient_Leather_Light + 2×Ingredient_Fabric_Scrap_Linen → 1×Tool_Pickaxe_Iron | bench=Crafting[Workbench,Workbench_Tools] | 3.5s
 - Tool_Pickaxe_Mithril | 9×Ingredient_Bar_Mithril + 4×Ingredient_Leather_Storm → 1×Tool_Pickaxe_Mithril | bench=Crafting[Workbench,Workbench_Tools] | 5s
 - Tool_Pickaxe_Thorium | 6×Ingredient_Bar_Thorium + 2×Ingredient_Leather_Medium + 3×Ingredient_Fabric_Scrap_Linen → 1×Tool_Pickaxe_Thorium | bench=Crafting[Workbench,Workbench_Tools] | 4s
+- Tool_Repair_Kit_Goblin | 30×Ingredient_Scraps + 3×Ingredient_Gadget_Assembly + 2×Ingredient_Spider_Silk + 1×Ingredient_Deep_Resource → 1×Tool_Repair_Kit_Goblin | bench=Crafting[GoblinLab_Workbench,GoblinLab_Gadgets] | 1s
 - Tool_Repair_Kit_Iron | 2×Ingredient_Fabric_Scrap_Linen + 1×Ingredient_Bar_Iron + 1×Ingredient_Leather_Light → 1×Tool_Repair_Kit_Iron | bench=Crafting[Workbench,Workbench_Tools] | 1s
 - Tool_Shears_Basic | 1×Ingredient_Bar_Iron → 1×Tool_Shears_Basic | bench=Crafting[Farmingbench,Farming] | 2s
 - Tool_Shovel_Iron | 6×Ingredient_Bar_Iron + 3×Ingredient_Leather_Light + 2×Ingredient_Fabric_Scrap_Linen → 1×Tool_Shovel_Iron | bench=Crafting[Workbench,Workbench_Tools] | 3.5s
 - Tool_Sickle_Copper | 2×Wood_Trunk(type) + 1×Ingredient_Bar_Copper → 1×Tool_Sickle_Copper | bench=Crafting[Farmingbench,Farming] | 1.5s
 - Tool_Sickle_Crude | 2×Wood_Trunk(type) + 1×Rock(type) → 1×Tool_Sickle_Crude | bench=Crafting[Farmingbench,Farming] | 1.5s
 - Tool_Sickle_Iron | 2×Wood_Trunk(type) + 2×Ingredient_Bar_Iron → 1×Tool_Sickle_Iron | bench=Crafting[Farmingbench,Farming] | 1.5s
+- Tool_Spyglass | 25×Ingredient_Scraps + 10×Ingredient_Bar_Copper + 1×Ingredient_Crystal_Void → 1×Tool_Spyglass | bench=Crafting[GoblinLab_Workbench,GoblinLab_Gadgets] | 1s
 - Tool_Trap_Bait | 3×Fruits(type) + 5×Ingredient_Life_Essence → 1×Tool_Trap_Bait | bench=Crafting[Farmingbench,Farming] | 1s
 - Tool_Watering_Can | 3×Ingredient_Bar_Iron → 1×Tool_Watering_Can | bench=Crafting[Farmingbench,Farming] | 1s
 - Upgrade_Backpack_1 | 8×Ingredient_Bar_Iron + 8×Ingredient_Leather_Medium → 1×Upgrade_Backpack_1 | bench=Crafting[Workbench,Workbench_Tinkering] | 2s
 - Upgrade_Backpack_2 | 40×Ingredient_Fabric_Scrap_Cindercloth + 8×Ingredient_Bar_Cobalt + 24×Ingredient_Leather_Heavy → 1×Upgrade_Backpack_2 | bench=Crafting[Workbench,Workbench_Tinkering] | 2s
-- Upgrade_Backpack_3 | 1×Ingredient_Voidheart + 8×Ingredient_Bar_Adamantite + 16×Ingredient_Leather_Storm → 1×Upgrade_Backpack_3 | bench=Crafting[Workbench,Workbench_Tinkering] | 2s
+- Upgrade_Backpack_3 | 150×Ingredient_Scraps + 10×Ingredient_Spider_Silk + 1×Ingredient_Voidtaken_Grizzly_Hide → 1×Upgrade_Backpack_3 | bench=[GoblinLab_Workbench,GoblinLab_Gadgets] | 1s
 - Utility_Helipack | 2×Wood_Trunk(type) + 4×Ingredient_Bar_Iron → 1×Utility_Helipack | bench=Crafting[ArmorBench] | —
 - Utility_Leather_Backpack | 2×Wood_Trunk(type) + 4×Ingredient_Bar_Iron → 1×Utility_Leather_Backpack | bench=Crafting[ArmorBench] | —
 - Utility_Leather_Medium_Backpack | 2×Wood_Trunk(type) + 4×Ingredient_Bar_Iron → 1×Utility_Leather_Medium_Backpack | bench=Crafting[ArmorBench] | —
@@ -1698,6 +1758,7 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Weapon_Axe_Stone_Trork | 2×Wood_Trunk(type) + 6×Rock(type) + 1×Ingredient_Leather_Light → 1×Weapon_Axe_Stone_Trork | bench=DiagramCrafting[Armory,Weapons.Axe] or Crafting[Weapon_Bench,Weapon_Axe] | —
 - Weapon_Axe_Thorium | 4×Ingredient_Bar_Thorium + 3×Ingredient_Fabric_Scrap_Linen + 4×Ingredient_Leather_Medium → 1×Weapon_Axe_Thorium | bench=Crafting[Weapon_Bench,Weapon_Axe] | 4s
 - Weapon_Axe_Tribal | 4×Ingredient_Bar_Iron + 2×Wood_Trunk(type) + 4×Ingredient_Leather_Light → 1×Weapon_Axe_Tribal | bench=— | —
+- Weapon_Bangstick | 10×Ingredient_Scraps + 8×Ingredient_Powder_Boom + 1×Ingredient_Spider_Silk → 1×Weapon_Bangstick | bench=[GoblinLab_Workbench,GoblinLab_Gadgets] | 1s
 - Weapon_Battleaxe_Adamantite | 16×Ingredient_Bar_Adamantite + 5×Ingredient_Leather_Heavy + 3×Ingredient_Fabric_Scrap_Cindercloth → 1×Weapon_Battleaxe_Adamantite | bench=Crafting[Weapon_Bench,Weapon_Battleaxe] | 4.5s
 - Weapon_Battleaxe_Cobalt | 14×Ingredient_Bar_Cobalt + 4×Ingredient_Leather_Heavy + 3×Ingredient_Fabric_Scrap_Shadoweave → 1×Weapon_Battleaxe_Cobalt | bench=Crafting[Weapon_Bench,Weapon_Battleaxe] | 4s
 - Weapon_Battleaxe_Copper | 6×Ingredient_Bar_Copper + 6×Wood_Trunk(type) + 4×Ingredient_Fibre → 1×Weapon_Battleaxe_Copper | bench=Crafting[Weapon_Bench,Weapon_Battleaxe] | 3s
@@ -1941,6 +2002,8 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Wood_Redwood_Stairs | 1×Wood_Redwood(type) → 1×Wood_Redwood_Stairs | bench=StructuralCrafting[Builders,Stairs] | 0s
 - Wood_Redwood_Trunk_Half | 1×Wood_Redwood_Trunk → 1×Wood_Redwood_Trunk_Half | bench=StructuralCrafting[Builders,HalfSlab] | 0s
 - Wood_Redwood_Trunk_Stairs | 1×Wood_Redwood_Trunk → 1×Wood_Redwood_Trunk_Stairs | bench=StructuralCrafting[Builders,Stairs] | 0s
+- Wood_Sadwillow_Trunk_Half | 1×Wood_Sadwillow_Trunk → 1×Wood_Sadwillow_Trunk_Half | bench=StructuralCrafting[Builders,HalfSlab] | 0s
+- Wood_Sadwillow_Trunk_Stairs | 1×Wood_Sadwillow_Trunk → 1×Wood_Sadwillow_Trunk_Stairs | bench=StructuralCrafting[Builders,Stairs] | 0s
 - Wood_Sallow_Trunk_Half | 1×Wood_Sallow_Trunk → 1×Wood_Sallow_Trunk_Half | bench=StructuralCrafting[Builders,HalfSlab] | 0s
 - Wood_Sallow_Trunk_Stairs | 1×Wood_Sallow_Trunk → 1×Wood_Sallow_Trunk_Stairs | bench=StructuralCrafting[Builders,Stairs] | 0s
 - Wood_Softwood_Beam | 1×Wood_Softwood(type) → 1×Wood_Softwood_Beam | bench=StructuralCrafting[Builders,Beam] | —
@@ -1993,7 +2056,7 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Wood_Wisteria_Wild_Trunk_Half | 1×Wood_Wisteria_Wild(type) → 1×Wood_Wisteria_Wild_Trunk_Half | bench=StructuralCrafting[Builders,HalfSlab] | 0s
 - Wood_Wisteria_Wild_Trunk_Stairs | 1×Wood_Wisteria_Wild(type) → 1×Wood_Wisteria_Wild_Trunk_Stairs | bench=StructuralCrafting[Builders,Stairs] | 0s
 
-## By output (1599 items)
+## By output (1655 items)
 
 ### Alchemy_Cauldron
 - Alchemy_Cauldron
@@ -2696,6 +2759,9 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 ### Deco_Shutter
 - Deco_Shutter
 
+### Deco_SpiderWeb_Diagonal
+- Deco_SpiderWeb_Diagonal
+
 ### Deco_Tankard
 - Deco_Tankard
 - Ingredient_Dough
@@ -2714,6 +2780,7 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 
 ### Food_Cheese
 - Food_Cheese
+- Salvage_Ingredient_Gobliterator_Core
 
 ### Food_Fish_Grilled
 - Food_Fish_Grilled
@@ -2974,8 +3041,44 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 ### Furniture_Frozen_Castle_Window
 - Furniture_Frozen_Castle_Window
 
+### Furniture_Goblin_Bed
+- Furniture_Goblin_Bed
+
+### Furniture_Goblin_Brazier
+- Furniture_Goblin_Brazier
+
+### Furniture_Goblin_Candle
+- Furniture_Goblin_Candle
+
+### Furniture_Goblin_ChestStolen_Small
+- Furniture_Goblin_ChestStolen_Small
+
 ### Furniture_Goblin_Chest_Small
 - Furniture_Goblin_Chest_Small
+
+### Furniture_Goblin_Door
+- Furniture_Goblin_Door
+
+### Furniture_Goblin_Door_Medium
+- Furniture_Goblin_Door_Medium
+
+### Furniture_Goblin_Ladder
+- Furniture_Goblin_Ladder
+
+### Furniture_Goblin_Sign
+- Furniture_Goblin_Sign
+
+### Furniture_Goblin_Statue_Graffiti
+- Furniture_Goblin_Statue_Graffiti
+
+### Furniture_Goblin_Stool
+- Furniture_Goblin_Stool
+
+### Furniture_Goblin_Table
+- Furniture_Goblin_Table
+
+### Furniture_Goblin_Window
+- Furniture_Goblin_Window
 
 ### Furniture_Jungle_Bed
 - Furniture_Jungle_Bed
@@ -3196,6 +3299,9 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 ### Furniture_Temple_Emerald_Sign
 - Furniture_Temple_Emerald_Sign
 
+### Furniture_Temple_Emerald_Statue_Head
+- Furniture_Temple_Emerald_Statue_Head
+
 ### Furniture_Temple_Emerald_Stool
 - Furniture_Temple_Emerald_Stool
 
@@ -3328,6 +3434,27 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 ### Furniture_Village_Window
 - Furniture_Village_Window
 
+### Glider_Scrap
+- Glider_Scrap
+
+### Goblin_Painting_Breach_Replica
+- Goblin_Painting_Breach_Replica
+
+### Goblin_Painting_Fail_Replica
+- Goblin_Painting_Fail_Replica
+
+### Goblin_Painting_ForgottenTemple_Replica
+- Goblin_Painting_ForgottenTemple_Replica
+
+### Goblin_Painting_Orbis_Replica
+- Goblin_Painting_Orbis_Replica
+
+### Goblin_Painting_Portal_Replica
+- Goblin_Painting_Portal_Replica
+
+### Goblin_Painting_Repair_Replica
+- Goblin_Painting_Repair_Replica
+
 ### Halloween_Wagon
 - Halloween_Wagon
 
@@ -3345,6 +3472,7 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 
 ### Ingredient_Bar_Iron
 - Ingredient_Bar_Iron
+- Salvage_Tool_Drill_Scrap
 
 ### Ingredient_Bar_Mithril
 - Ingredient_Bar_Mithril
@@ -3593,6 +3721,11 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 ### Ingredient_Flour
 - Ingredient_Flour
 
+### Ingredient_Gadget_Assembly
+- Ingredient_Gadget_Assembly
+- Salvage_Ingredient_Gobliterator_Core
+- Salvage_Tool_Drill_Scrap
+
 ### Ingredient_Hay
 - Ingredient_Hay
 
@@ -3769,6 +3902,7 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Ingredient_Life_Essence_Concentrated
 
 ### Ingredient_Powder_Boom
+- Ingredient_Powder_Boom
 - Salvage_Weapon_Bomb_Fire
 - Salvage_Weapon_Bomb_Popberry
 
@@ -3779,6 +3913,18 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 
 ### Ingredient_Salt
 - Ingredient_Salt
+
+### Ingredient_Scraps
+- Salvage_Ingredient_Gobliterator_Core
+- Salvage_Tool_Drill_Scrap
+- Salvage_Tool_Pickaxe_Scrap
+- Salvage_Weapon_Club_Scrap
+- Salvage_Weapon_Club_Scrap_Washboard
+- Salvage_Weapon_Mace_Scrap
+- Salvage_Weapon_Shield_Scrap
+- Salvage_Weapon_Shield_Scrap_Spiked
+- Salvage_Weapon_Spear_Scrap
+- Salvage_Weapon_Sword_Scrap
 
 ### Ingredient_Spices
 - Ingredient_Spices
@@ -3825,6 +3971,7 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Salvage_Tool_Hoe_Thorium
 - Salvage_Tool_Pickaxe_Copper
 - Salvage_Tool_Pickaxe_Crude
+- Salvage_Tool_Pickaxe_Scrap
 - Salvage_Tool_Shovel_Crude
 - Salvage_Weapon_Arrow_Crude
 - Salvage_Weapon_Axe_Copper
@@ -3835,6 +3982,8 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Salvage_Weapon_Battleaxe_Tribal
 - Salvage_Weapon_Blowgun_Tribal
 - Salvage_Weapon_Club_Copper
+- Salvage_Weapon_Club_Scrap
+- Salvage_Weapon_Club_Scrap_Washboard
 - Salvage_Weapon_Club_Tribal
 - Salvage_Weapon_Daggers_Crude
 - Salvage_Weapon_Longsword_Copper
@@ -3849,6 +3998,7 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Salvage_Weapon_Shortbow_Crude
 - Salvage_Weapon_Spear_Crude
 - Salvage_Weapon_Spear_Leaf
+- Salvage_Weapon_Spear_Scrap
 - Salvage_Weapon_Sword_Crude
 
 ### Ingredient_Tree_Sap
@@ -3867,6 +4017,9 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 
 ### Lobby_Wall_Poster_Small01
 - Lobby_Wall_Poster_Small01
+
+### Metal_Orbis_Copper_Fence
+- Metal_Orbis_Copper_Fence
 
 ### Ore_Adamantite
 - Ore_Adamantite
@@ -4276,6 +4429,9 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 ### Plant_Sapling_Redwood
 - Plant_Sapling_Redwood
 
+### Plant_Sapling_Sadwillow
+- Plant_Sapling_Sadwillow
+
 ### Plant_Sapling_Sallow
 - Plant_Sapling_Sallow
 
@@ -4432,11 +4588,17 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 ### Plant_Vine_Wall_Winter
 - Plant_Vine_Wall_Winter
 
+### PortalKey_Goblin_Breach
+- PortalKey_Goblin_Breach
+
 ### PortalKey_Hederas_Lair
 - PortalKey_Hederas_Lair
 
 ### PortalKey_Taiga
 - PortalKey_Taiga
+
+### PortalKey_The_Deepworks
+- PortalKey_The_Deepworks
 
 ### PortalKey_Windsurf_Valley
 - PortalKey_Windsurf_Valley
@@ -4919,6 +5081,18 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 ### Rock_Crystal_Red_Small
 - Rock_Crystal_Red_Small
 
+### Rock_Crystal_Void_Block
+- Rock_Crystal_Void_Block
+
+### Rock_Crystal_Void_Large
+- Rock_Crystal_Void_Large
+
+### Rock_Crystal_Void_Medium
+- Rock_Crystal_Void_Medium
+
+### Rock_Crystal_Void_Small
+- Rock_Crystal_Void_Small
+
 ### Rock_Crystal_White_Block
 - Rock_Crystal_White_Block
 
@@ -4999,6 +5173,9 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 
 ### Rock_Ice
 - Salvage_Weapon_Deployable_Slowness_Totem
+
+### Rock_Kenolite
+- Rock_Kenolite
 
 ### Rock_Ledge_Brick
 - Rock_Ledge_Brick
@@ -5989,6 +6166,9 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 ### Rock_Volcanic_Stairs
 - Rock_Volcanic_Stairs
 
+### Rocket_Boots
+- Rocket_Boots
+
 ### Rubble_Aqua
 - Salvage_Rock_Aqua_Cobble
 - Salvage_Rock_Aqua_Cobble_Beam
@@ -6156,6 +6336,54 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Salvage_Rock_Volcanic_Cobble_Roof_Steep
 - Salvage_Rock_Volcanic_Cobble_Stairs
 - Salvage_Rock_Volcanic_Cobble_Wall
+
+### Rune_Aoe_Up
+- Rune_Aoe_Up
+
+### Rune_ChainHook
+- Rune_ChainHook
+
+### Rune_ChargedShot
+- Rune_ChargedShot
+
+### Rune_Duration_Up
+- Rune_Duration_Up
+
+### Rune_Enrage
+- Rune_Enrage
+
+### Rune_Fireball
+- Rune_Fireball
+
+### Rune_Fork
+- Rune_Fork
+
+### Rune_GroundSlam
+- Rune_GroundSlam
+
+### Rune_PoisonImbue
+- Rune_PoisonImbue
+
+### Rune_Quickening
+- Rune_Quickening
+
+### Rune_Rend
+- Rune_Rend
+
+### Rune_Ricochet
+- Rune_Ricochet
+
+### Rune_Thrift
+- Rune_Thrift
+
+### Rune_WindStrike
+- Rune_WindStrike
+
+### Rune_Wither
+- Rune_Wither
+
+### Scrap_Hook
+- Scrap_Hook
 
 ### Soil_Aqua_Gravel
 - Soil_Aqua_Gravel
@@ -6493,6 +6721,9 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 ### Tool_Capture_Crate
 - Tool_Capture_Crate
 
+### Tool_Drill_Scrap
+- Tool_Drill_Scrap
+
 ### Tool_Feedbag
 - Tool_Feedbag
 
@@ -6544,6 +6775,9 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 ### Tool_Hoe_Thorium
 - Tool_Hoe_Thorium
 
+### Tool_Hookshot
+- Tool_Hookshot
+
 ### Tool_Pickaxe_Adamantite
 - Tool_Pickaxe_Adamantite
 
@@ -6565,6 +6799,9 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 ### Tool_Pickaxe_Thorium
 - Tool_Pickaxe_Thorium
 
+### Tool_Repair_Kit_Goblin
+- Tool_Repair_Kit_Goblin
+
 ### Tool_Repair_Kit_Iron
 - Tool_Repair_Kit_Iron
 
@@ -6582,6 +6819,9 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 
 ### Tool_Sickle_Iron
 - Tool_Sickle_Iron
+
+### Tool_Spyglass
+- Tool_Spyglass
 
 ### Tool_Trap_Bait
 - Tool_Trap_Bait
@@ -6636,6 +6876,9 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 
 ### Weapon_Axe_Tribal
 - Weapon_Axe_Tribal
+
+### Weapon_Bangstick
+- Weapon_Bangstick
 
 ### Weapon_Battleaxe_Adamantite
 - Weapon_Battleaxe_Adamantite
@@ -7375,6 +7618,12 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 ### Wood_Redwood_Trunk_Stairs
 - Wood_Redwood_Trunk_Stairs
 
+### Wood_Sadwillow_Trunk_Half
+- Wood_Sadwillow_Trunk_Half
+
+### Wood_Sadwillow_Trunk_Stairs
+- Wood_Sadwillow_Trunk_Stairs
+
 ### Wood_Sallow_Trunk_Half
 - Wood_Sallow_Trunk_Half
 
@@ -7397,6 +7646,8 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Wood_Softwood_Ornate
 
 ### Wood_Softwood_Planks
+- Salvage_Weapon_Club_Scrap_Washboard
+- Salvage_Weapon_Shield_Scrap_Spiked
 - Wood_Softwood_Planks
 
 ### Wood_Softwood_Planks_Half
@@ -7528,7 +7779,7 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 ### Wood_Wisteria_Wild_Trunk_Stairs
 - Wood_Wisteria_Wild_Trunk_Stairs
 
-## By input (761 ingredients)
+## By input (782 ingredients)
 
 ### *Deco_Tankard_State_Filled_Water
 - Ingredient_Dough
@@ -8002,6 +8253,9 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 ### Furniture_Feran_Torch
 - Furniture_Feran_Torch_Tall
 
+### Furniture_Goblin_Brazier
+- Furniture_Goblin_Stool
+
 ### Furniture_Jungle_Candle
 - Furniture_Jungle_Torch
 
@@ -8019,7 +8273,6 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - PortalKey_Hederas_Lair
 - Tool_Hatchet_Adamantite
 - Tool_Pickaxe_Adamantite
-- Upgrade_Backpack_3
 - Weapon_Axe_Adamantite
 - Weapon_Battleaxe_Adamantite
 - Weapon_Club_Adamantite
@@ -8083,10 +8336,12 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Furniture_Ancient_Chest_Small
 - Furniture_Crude_Candle
 - Furniture_Temple_Wind_Chandelier
+- Metal_Orbis_Copper_Fence
 - Tool_Hatchet_Copper
 - Tool_Hoe_Copper
 - Tool_Pickaxe_Copper
 - Tool_Sickle_Copper
+- Tool_Spyglass
 - Weapon_Axe_Copper
 - Weapon_Battleaxe_Copper
 - Weapon_Club_Copper
@@ -8100,6 +8355,7 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 ### Ingredient_Bar_Gold
 - Bench_Alchemy
 - Furniture_Dungeon_Chest_Epic
+- Furniture_Goblin_ChestStolen_Small
 - Furniture_Goblin_Chest_Small
 - Furniture_Royal_Magic_Chest_Small
 - Rock_Gold_Brick
@@ -8130,6 +8386,9 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Furniture_Cybercity_Sign_Fruit
 - Furniture_Cybercity_Sign_Tea
 - Furniture_Feran_Chandelier
+- Furniture_Goblin_Door_Medium
+- Furniture_Goblin_Ladder
+- Furniture_Goblin_Window
 - Furniture_Kweebec_Lantern
 - Furniture_Lumberjack_Chest_Small
 - Furniture_Lumberjack_Lamp
@@ -8142,13 +8401,19 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Furniture_Temple_Earth_Door
 - Furniture_Village_Chest_Small
 - Furniture_Village_Counter
+- Goblin_Painting_Breach_Replica
+- Goblin_Painting_Fail_Replica
+- Goblin_Painting_Orbis_Replica
 - Halloween_Wagon
 - Lobby_Wall_Poster01
 - Lobby_Wall_Poster_Small01
+- PortalKey_Goblin_Breach
 - Rail
 - Rail_Kart
+- Scrap_Hook
 - Survival_Trap_Snapjaw
 - Survival_Trap_Spike_Iron
+- Tool_Drill_Scrap
 - Tool_Fishing_Trap
 - Tool_Hammer_Iron
 - Tool_Hatchet_Iron
@@ -8303,8 +8568,11 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Deco_Inkwell
 - Furniture_Desert_Torch
 - Furniture_Feran_Torch_Tall
+- Furniture_Goblin_Brazier
+- Furniture_Goblin_Candle
 - Furniture_Temple_Dark_Brazier
 - Furniture_Temple_Light_Brazier
+- Ingredient_Powder_Boom
 - Plant_Petals_Black
 - WinterHoliday_Snowman
 
@@ -8353,6 +8621,15 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - WinterHoliday_Lights
 - WinterHoliday_Ornament_Bauble
 
+### Ingredient_Crystal_Void
+- Ingredient_Gadget_Assembly
+- PortalKey_The_Deepworks
+- Rock_Crystal_Void_Block
+- Rock_Crystal_Void_Large
+- Rock_Crystal_Void_Medium
+- Rock_Crystal_Void_Small
+- Tool_Spyglass
+
 ### Ingredient_Crystal_White
 - Rock_Crystal_White_Block
 - Rock_Crystal_White_Large
@@ -8368,11 +8645,18 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - WinterHoliday_Ornament_Bauble
 - WinterHoliday_Single_Light
 
+### Ingredient_Deep_Resource
+- Tool_Repair_Kit_Goblin
+
 ### Ingredient_Dough
 - Food_Bread
 - Food_Pie_Apple
 - Food_Pie_Meat
 - Food_Pie_Pumpkin
+
+### Ingredient_Enkindled_Resource
+- Furniture_Temple_Emerald_Statue_Head
+- Tool_Drill_Scrap
 
 ### Ingredient_Fabric_Scrap_Cindercloth
 - Armor_Adamantite_Chest
@@ -8491,6 +8775,7 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Deco_Rope
 - Deco_Rope_Diagonal
 - Deco_Scroll
+- Deco_SpiderWeb_Diagonal
 - Deco_Target
 - Deco_Trophy_Harvest
 - Furniture_Ancient_Candle
@@ -8598,6 +8883,16 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 
 ### Ingredient_Flour
 - Ingredient_Dough
+
+### Ingredient_Gadget_Assembly
+- Glider_Scrap
+- Rocket_Boots
+- Tool_Drill_Scrap
+- Tool_Hookshot
+- Tool_Repair_Kit_Goblin
+
+### Ingredient_Gobliterator_Core
+- Salvage_Ingredient_Gobliterator_Core
 
 ### Ingredient_Hide_Dark
 - Ingredient_Leather_Dark
@@ -8765,7 +9060,6 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Armor_Mithril_Legs
 - Tool_Hatchet_Mithril
 - Tool_Pickaxe_Mithril
-- Upgrade_Backpack_3
 - Weapon_Battleaxe_Mithril
 - Weapon_Daggers_Mithril
 - Weapon_Mace_Mithril
@@ -8806,6 +9100,7 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Plant_Sapling_Palo
 - Plant_Sapling_Petrified
 - Plant_Sapling_Redwood
+- Plant_Sapling_Sadwillow
 - Plant_Sapling_Sallow
 - Plant_Sapling_Spiral
 - Plant_Sapling_Spruce
@@ -8873,8 +9168,26 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Tool_Fertilizer
 
 ### Ingredient_Powder_Boom
+- Weapon_Bangstick
 - Weapon_Bomb_Fire
 - Weapon_Bomb_Popberry
+
+### Ingredient_Rune_Shard
+- Rune_Aoe_Up
+- Rune_ChainHook
+- Rune_ChargedShot
+- Rune_Duration_Up
+- Rune_Enrage
+- Rune_Fireball
+- Rune_Fork
+- Rune_GroundSlam
+- Rune_PoisonImbue
+- Rune_Quickening
+- Rune_Rend
+- Rune_Ricochet
+- Rune_Thrift
+- Rune_WindStrike
+- Rune_Wither
 
 ### Ingredient_Sac_Venom
 - Armor_Thorium_Chest
@@ -8889,11 +9202,49 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Food_Popcorn
 - Food_Salad_Caesar
 
+### Ingredient_Scraps
+- Furniture_Goblin_Bed
+- Furniture_Goblin_Brazier
+- Furniture_Goblin_Candle
+- Furniture_Goblin_Door
+- Furniture_Goblin_Door_Medium
+- Furniture_Goblin_Ladder
+- Furniture_Goblin_Sign
+- Furniture_Goblin_Statue_Graffiti
+- Furniture_Goblin_Table
+- Furniture_Goblin_Window
+- Glider_Scrap
+- Goblin_Painting_Breach_Replica
+- Goblin_Painting_Fail_Replica
+- Goblin_Painting_ForgottenTemple_Replica
+- Goblin_Painting_Orbis_Replica
+- Goblin_Painting_Portal_Replica
+- Goblin_Painting_Repair_Replica
+- Ingredient_Gadget_Assembly
+- PortalKey_Goblin_Breach
+- PortalKey_The_Deepworks
+- Rocket_Boots
+- Scrap_Hook
+- Tool_Drill_Scrap
+- Tool_Hookshot
+- Tool_Repair_Kit_Goblin
+- Tool_Spyglass
+- Upgrade_Backpack_3
+- Weapon_Bangstick
+
 ### Ingredient_Spices
 - Food_Pie_Apple
 - Food_Pie_Meat
 - Food_Pie_Pumpkin
 - Food_Salad_Caesar
+
+### Ingredient_Spider_Silk
+- Furniture_Goblin_Bed
+- Glider_Scrap
+- Tool_Hookshot
+- Tool_Repair_Kit_Goblin
+- Upgrade_Backpack_3
+- Weapon_Bangstick
 
 ### Ingredient_Stick
 - Bench_Campfire
@@ -8970,16 +9321,22 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Plant_Seeds_Stamina1
 - Plant_Seeds_Stamina2
 - Plant_Seeds_Stamina3
+- PortalKey_Goblin_Breach
 - Portal_Device
 - Tool_Fertilizer_Crystal
 
 ### Ingredient_Voidheart
-- Upgrade_Backpack_3
+- PortalKey_The_Deepworks
 - Weapon_Battleaxe_Mithril
 - Weapon_Daggers_Mithril
 - Weapon_Mace_Mithril
 - Weapon_Shortbow_Mithril
 - Weapon_Sword_Mithril
+
+### Ingredient_Voidtaken_Grizzly_Hide
+- Glider_Scrap
+- Rocket_Boots
+- Upgrade_Backpack_3
 
 ### Meats(type)
 - Food_Kebab_Meat
@@ -9000,6 +9357,12 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 ### Mushrooms(type)
 - Food_Kebab_Mushroom
 - Food_Salad_Mushroom
+- Goblin_Painting_Breach_Replica
+- Goblin_Painting_Fail_Replica
+- Goblin_Painting_ForgottenTemple_Replica
+- Goblin_Painting_Orbis_Replica
+- Goblin_Painting_Portal_Replica
+- Goblin_Painting_Repair_Replica
 
 ### Ore_Adamantite
 - Ingredient_Bar_Adamantite
@@ -9105,6 +9468,9 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Potion_Signature_Greater
 - Salvage_Plant_Crop_Mana3
 - Teleporter
+
+### Plant_Crop_Mushroom_Boomshroom_Small
+- Ingredient_Powder_Boom
 
 ### Plant_Crop_Mushroom_Common_Blue
 - Plant_Petals_Cyan
@@ -9611,6 +9977,7 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Rock_Aqua_Cobble_Wall
 - Rock_Aqua_Half
 - Rock_Aqua_Stairs
+- Rock_Kenolite
 - Rock_Stone_Aqua
 
 ### Rock_Aqua_Brick(type)
@@ -10070,6 +10437,7 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Rock_Quartzite_Brick_Wall
 
 ### Rock_Quartzite_Cobble
+- Furniture_Temple_Emerald_Statue_Head
 - Salvage_Rock_Quartzite_Cobble
 
 ### Rock_Quartzite_Cobble_Beam
@@ -10487,6 +10855,9 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 ### Rock_Stone_Cobble_Half
 - Salvage_Rock_Stone_Cobble_Half
 
+### Rock_Stone_Cobble_Mossy
+- Furniture_Goblin_Statue_Graffiti
+
 ### Rock_Stone_Cobble_Roof
 - Salvage_Rock_Stone_Cobble_Roof
 
@@ -10684,6 +11055,9 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 ### Sands(type)
 - Potion_Empty
 
+### Scrap_Hook
+- Tool_Hookshot
+
 ### Soil_Clay
 - Soil_Clay_Cobble_Orange
 - Soil_Clay_Smooth_Black
@@ -10839,6 +11213,9 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Soil_Needles
 - Soil_Pathway
 
+### Tool_Drill_Scrap
+- Salvage_Tool_Drill_Scrap
+
 ### Tool_Hammer_Crude
 - Salvage_Tool_Hammer_Crude
 
@@ -10895,6 +11272,9 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 
 ### Tool_Pickaxe_Mithril
 - Salvage_Tool_Pickaxe_Mithril
+
+### Tool_Pickaxe_Scrap
+- Salvage_Tool_Pickaxe_Scrap
 
 ### Tool_Pickaxe_Thorium
 - Salvage_Tool_Pickaxe_Thorium
@@ -10960,6 +11340,9 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 ### Weapon_Axe_Tribal
 - Salvage_Weapon_Axe_Tribal
 
+### Weapon_Bangstick
+- Rocket_Boots
+
 ### Weapon_Battleaxe_Adamantite
 - Salvage_Weapon_Battleaxe_Adamantite
 
@@ -11019,6 +11402,12 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 
 ### Weapon_Club_Iron_Rusty
 - Salvage_Weapon_Club_Iron_Rusty
+
+### Weapon_Club_Scrap
+- Salvage_Weapon_Club_Scrap
+
+### Weapon_Club_Scrap_Washboard
+- Salvage_Weapon_Club_Scrap_Washboard
 
 ### Weapon_Club_Steel_Flail_Rusty
 - Salvage_Weapon_Club_Steel_Flail_Rusty
@@ -11165,6 +11554,9 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 ### Weapon_Shield_Scrap
 - Salvage_Weapon_Shield_Scrap
 
+### Weapon_Shield_Scrap_Spiked
+- Salvage_Weapon_Shield_Scrap_Spiked
+
 ### Weapon_Shield_Thorium
 - Salvage_Weapon_Shield_Thorium
 
@@ -11212,6 +11604,9 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 
 ### Weapon_Spear_Leaf
 - Salvage_Weapon_Spear_Leaf
+
+### Weapon_Spear_Scrap
+- Salvage_Weapon_Spear_Scrap
 
 ### Weapon_Spear_Stone_Trork
 - Salvage_Weapon_Spear_Stone_Trork
@@ -11419,6 +11814,7 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 
 ### Wood_Deadwood_Planks
 - Furniture_Ancient_Chest_Small
+- Furniture_Goblin_ChestStolen_Small
 - Furniture_Goblin_Chest_Small
 
 ### Wood_Deadwood_Trunk(type)
@@ -11636,6 +12032,14 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 
 ### Wood_Planks(type)
 - Deco_Mug
+- Furniture_Goblin_Bed
+- Furniture_Goblin_Door
+- Furniture_Goblin_Door_Medium
+- Furniture_Goblin_Sign
+- Furniture_Goblin_Table
+- Goblin_Painting_ForgottenTemple_Replica
+- Goblin_Painting_Portal_Replica
+- Goblin_Painting_Repair_Replica
 - Rail
 
 ### Wood_Poisoned(type)
@@ -11674,6 +12078,10 @@ Regenerate: `node tools/refs/recipes/extract-recipes.js`
 - Wood_Redwood_Decorative
 - Wood_Redwood_Ornate
 - Wood_Redwood_Planks
+
+### Wood_Sadwillow_Trunk
+- Wood_Sadwillow_Trunk_Half
+- Wood_Sadwillow_Trunk_Stairs
 
 ### Wood_Sallow_Trunk
 - Wood_Sallow_Trunk_Half

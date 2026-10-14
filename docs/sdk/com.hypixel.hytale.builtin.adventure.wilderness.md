@@ -46,12 +46,14 @@ public class com.hypixel.hytale.builtin.adventure.wilderness.WildernessConfig {
 public class com.hypixel.hytale.builtin.adventure.wilderness.WildernessPlugin extends com.hypixel.hytale.server.core.plugin.JavaPlugin {
   protected static com.hypixel.hytale.builtin.adventure.wilderness.WildernessPlugin instance;
   protected com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.builtin.adventure.wilderness.component.Wilderness> wildernessComponentType;
+  protected com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.builtin.adventure.wilderness.debug.WildernessDebug> wildernessDebugComponentType;
   protected com.hypixel.hytale.component.ResourceType<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, com.hypixel.hytale.builtin.adventure.wilderness.resource.WildernessTracker> wildernessTrackerResourceType;
   protected com.hypixel.hytale.component.ResourceType<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, com.hypixel.hytale.builtin.adventure.wilderness.resource.WildernessVisitor$ChunkVisitor> chunkStoreResourceType;
   protected com.hypixel.hytale.component.ResourceType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.builtin.adventure.wilderness.resource.WildernessVisitor$EntityVisitor> entityStoreResourceType;
   public com.hypixel.hytale.builtin.adventure.wilderness.WildernessPlugin(com.hypixel.hytale.server.core.plugin.JavaPluginInit);
   protected void setup();
   public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.builtin.adventure.wilderness.component.Wilderness> getWildernessComponentType();
+  public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.builtin.adventure.wilderness.debug.WildernessDebug> getWildernessDebugComponentType();
   public com.hypixel.hytale.component.ResourceType<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, com.hypixel.hytale.builtin.adventure.wilderness.resource.WildernessTracker> getWildernessTrackerResourceType();
   public com.hypixel.hytale.component.ResourceType<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, com.hypixel.hytale.builtin.adventure.wilderness.resource.WildernessVisitor$ChunkVisitor> getChunkResourceType();
   public com.hypixel.hytale.component.ResourceType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.builtin.adventure.wilderness.resource.WildernessVisitor$EntityVisitor> getEntityResourceType();

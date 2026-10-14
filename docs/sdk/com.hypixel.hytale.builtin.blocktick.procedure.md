@@ -17,9 +17,9 @@ public class com.hypixel.hytale.builtin.blocktick.procedure.BasicChanceBlockGrow
   protected boolean nextTicking;
   public com.hypixel.hytale.builtin.blocktick.procedure.BasicChanceBlockGrowthProcedure();
   public com.hypixel.hytale.builtin.blocktick.procedure.BasicChanceBlockGrowthProcedure(int, int, java.lang.String, boolean);
-  public com.hypixel.hytale.server.core.asset.type.blocktick.BlockTickStrategy onTick(com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk, int, int, int, int);
+  public com.hypixel.hytale.server.core.asset.type.blocktick.BlockTickStrategy onTick(com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, int, int, int, int);
   protected boolean runChance();
-  protected boolean executeToBlock(com.hypixel.hytale.server.core.universe.world.World, int, int, int, java.lang.String);
+  protected boolean executeToBlock(com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, int, int, int, java.lang.String);
   public java.lang.String toString();
 }
 ```
@@ -34,7 +34,7 @@ public class com.hypixel.hytale.builtin.blocktick.procedure.SplitChanceBlockGrow
   protected int sumChances;
   public com.hypixel.hytale.builtin.blocktick.procedure.SplitChanceBlockGrowthProcedure();
   public com.hypixel.hytale.builtin.blocktick.procedure.SplitChanceBlockGrowthProcedure(int, int, int[], java.lang.String[], boolean);
-  protected boolean executeToBlock(com.hypixel.hytale.server.core.universe.world.World, int, int, int, java.lang.String);
+  protected boolean executeToBlock(com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, int, int, int, java.lang.String);
   public java.lang.String toString();
 }
 ```

@@ -26,6 +26,8 @@ public class com.hypixel.hytale.server.core.entity.knockback.KnockbackComponent 
   public void incrementTimer(float);
   public void setTimer(float);
   public com.hypixel.hytale.component.Component<com.hypixel.hytale.server.core.universe.world.storage.EntityStore> clone();
+  public float getPreMultiplier();
+  public void setPreMultiplier(float);
   public java.lang.Object clone() throws java.lang.CloneNotSupportedException;
 }
 ```

@@ -59,6 +59,7 @@ public class com.hypixel.hytale.server.core.modules.physics.component.Velocity i
   public double getZ();
   public double getSpeed();
   public void addInstruction(org.joml.Vector3d, com.hypixel.hytale.server.core.modules.splitvelocity.VelocityConfig, com.hypixel.hytale.protocol.ChangeVelocityType);
+  public void addInstruction(org.joml.Vector3d, com.hypixel.hytale.server.core.modules.splitvelocity.VelocityConfig, com.hypixel.hytale.protocol.ChangeVelocityType, float);
   public java.util.List<com.hypixel.hytale.server.core.modules.physics.component.Velocity$Instruction> getInstructions();
   public org.joml.Vector3d getVelocity();
   public org.joml.Vector3d getClientVelocity();

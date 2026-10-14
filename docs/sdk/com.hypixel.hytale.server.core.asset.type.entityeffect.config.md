@@ -81,7 +81,6 @@ public class com.hypixel.hytale.server.core.asset.type.entityeffect.config.Entit
   protected boolean infinite;
   protected boolean debuff;
   protected java.lang.String statusEffectIcon;
-  protected java.lang.String locale;
   protected boolean invulnerable;
   protected java.lang.String deathMessageKey;
   protected com.hypixel.hytale.server.core.modules.entity.condition.Condition[] applyConditions;
@@ -89,6 +88,8 @@ public class com.hypixel.hytale.server.core.asset.type.entityeffect.config.Entit
   protected it.unimi.dsi.fastutil.ints.Int2ObjectMap<com.hypixel.hytale.server.core.modules.entitystats.modifier.StaticModifier[]> statModifiers;
   protected java.util.Map<java.lang.String, com.hypixel.hytale.server.core.modules.entity.damage.ResistanceModifier[]> damageResistanceValuesRaw;
   protected java.util.Map<com.hypixel.hytale.server.core.modules.entity.damage.DamageCause, com.hypixel.hytale.server.core.modules.entity.damage.ResistanceModifier[]> damageResistanceValues;
+  protected java.util.Map<java.lang.String, com.hypixel.hytale.server.core.modules.entity.damage.ResistanceModifier[]> outgoingDamageValuesRaw;
+  protected java.util.Map<com.hypixel.hytale.server.core.modules.entity.damage.DamageCause, com.hypixel.hytale.server.core.modules.entity.damage.ResistanceModifier[]> outgoingDamageValues;
   public static com.hypixel.hytale.assetstore.AssetStore<java.lang.String, com.hypixel.hytale.server.core.asset.type.entityeffect.config.EntityEffect, com.hypixel.hytale.assetstore.map.IndexedLookupTableAssetMap<java.lang.String, com.hypixel.hytale.server.core.asset.type.entityeffect.config.EntityEffect>> getAssetStore();
   public static com.hypixel.hytale.assetstore.map.IndexedLookupTableAssetMap<java.lang.String, com.hypixel.hytale.server.core.asset.type.entityeffect.config.EntityEffect> getAssetMap();
   public com.hypixel.hytale.server.core.asset.type.entityeffect.config.EntityEffect(java.lang.String);
@@ -109,11 +110,11 @@ public class com.hypixel.hytale.server.core.asset.type.entityeffect.config.Entit
   public boolean isInfinite();
   public boolean isDebuff();
   public java.lang.String getStatusEffectIcon();
-  public java.lang.String getLocale();
   public com.hypixel.hytale.server.core.asset.type.entityeffect.config.RemovalBehavior getRemovalBehavior();
   public com.hypixel.hytale.protocol.ValueType getValueType();
   public boolean isInvulnerable();
   public java.util.Map<com.hypixel.hytale.server.core.modules.entity.damage.DamageCause, com.hypixel.hytale.server.core.modules.entity.damage.ResistanceModifier[]> getDamageResistanceValues();
+  public java.util.Map<com.hypixel.hytale.server.core.modules.entity.damage.DamageCause, com.hypixel.hytale.server.core.modules.entity.damage.ResistanceModifier[]> getOutgoingDamageValues();
   public java.lang.String getDeathMessageKey();
   public com.hypixel.hytale.server.core.modules.entity.condition.Condition[] getApplyConditions();
   public com.hypixel.hytale.protocol.EntityEffect toPacket();

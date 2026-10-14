@@ -34,6 +34,7 @@ public final class com.hypixel.hytale.server.core.command.system.arguments.types
   public static final com.hypixel.hytale.server.core.command.system.arguments.types.SingleArgumentType<java.util.UUID> PLAYER_UUID;
   public static final com.hypixel.hytale.server.core.command.system.arguments.types.SingleArgumentType<java.util.concurrent.CompletableFuture<com.hypixel.hytale.server.core.auth.ProfileServiceClient$PublicGameProfile>> GAME_PROFILE_LOOKUP_ASYNC;
   public static final com.hypixel.hytale.server.core.command.system.arguments.types.SingleArgumentType<com.hypixel.hytale.server.core.auth.ProfileServiceClient$PublicGameProfile> GAME_PROFILE_LOOKUP;
+  public static final com.hypixel.hytale.server.core.command.system.arguments.types.SingleArgumentType<com.hypixel.hytale.server.core.auth.ProfileServiceClient$PublicGameProfile> CONNECTED_PROFILE_LOOKUP;
   public static final com.hypixel.hytale.server.core.command.system.arguments.types.SingleArgumentType<com.hypixel.hytale.server.core.command.system.arguments.types.Coord> RELATIVE_DOUBLE_COORD;
   public static final com.hypixel.hytale.server.core.command.system.arguments.types.SingleArgumentType<com.hypixel.hytale.server.core.command.system.arguments.types.IntCoord> RELATIVE_INT_COORD;
   public static final com.hypixel.hytale.server.core.command.system.arguments.types.SingleArgumentType<com.hypixel.hytale.server.core.command.system.arguments.types.RelativeInteger> RELATIVE_INTEGER;
@@ -47,6 +48,7 @@ public final class com.hypixel.hytale.server.core.command.system.arguments.types
   public static final com.hypixel.hytale.server.core.command.system.arguments.types.SingleArgumentType<com.hypixel.hytale.server.core.asset.type.entityeffect.config.EntityEffect> EFFECT_ASSET;
   public static final com.hypixel.hytale.server.core.command.system.arguments.types.SingleArgumentType<com.hypixel.hytale.server.core.asset.type.environment.config.Environment> ENVIRONMENT_ASSET;
   public static final com.hypixel.hytale.server.core.command.system.arguments.types.SingleArgumentType<com.hypixel.hytale.server.core.asset.type.item.config.Item> ITEM_ASSET;
+  public static final com.hypixel.hytale.server.core.command.system.arguments.types.SingleArgumentType<com.hypixel.hytale.server.core.asset.type.item.config.ItemQuality> ITEM_QUALITY_ASSET;
   public static final com.hypixel.hytale.server.core.command.system.arguments.types.SingleArgumentType<com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType> BLOCK_TYPE_ASSET;
   public static final com.hypixel.hytale.server.core.command.system.arguments.types.SingleArgumentType<com.hypixel.hytale.server.core.asset.type.particle.config.ParticleSystem> PARTICLE_SYSTEM;
   public static final com.hypixel.hytale.server.core.command.system.arguments.types.SingleArgumentType<com.hypixel.hytale.server.core.modules.entity.hitboxcollision.HitboxCollisionConfig> HITBOX_COLLISION_CONFIG;
@@ -159,6 +161,7 @@ public class com.hypixel.hytale.server.core.command.system.arguments.types.Coord
   public boolean isChunk();
   public double resolveXZ(double);
   public double resolveYAtWorldCoords(double, com.hypixel.hytale.server.core.universe.world.World, double, double) throws com.hypixel.hytale.server.core.command.system.exceptions.GeneralCommandException;
+  public java.util.concurrent.CompletableFuture<java.lang.Void> loadHeightColumn(com.hypixel.hytale.server.core.universe.world.World, double, double);
   protected double resolve(double);
   public static com.hypixel.hytale.server.core.command.system.arguments.types.Coord parse(java.lang.String);
 }

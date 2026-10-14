@@ -36,6 +36,7 @@ public abstract class com.hypixel.hytale.builtin.hytalegenerator.assets.graph.pa
   public static final com.hypixel.hytale.codec.Codec<java.lang.String> CHILD_ASSET_CODEC;
   public static final com.hypixel.hytale.codec.Codec<java.lang.String[]> CHILD_ASSET_CODEC_ARRAY;
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.builtin.hytalegenerator.assets.graph.passes.GraphPassAsset> ABSTRACT_CODEC;
+  protected java.lang.String statsLabel;
   protected com.hypixel.hytale.builtin.hytalegenerator.assets.graph.passes.GraphPassAsset();
   public static com.hypixel.hytale.builtin.hytalegenerator.assets.graph.passes.GraphPassAsset getExportedAsset(java.lang.String);
   public abstract com.hypixel.hytale.builtin.hytalegenerator.graph.passes.GraphPass build(com.hypixel.hytale.builtin.hytalegenerator.assets.graph.GraphGeneratorAsset$Argument);
@@ -53,6 +54,7 @@ public class com.hypixel.hytale.builtin.hytalegenerator.assets.graph.passes.Impo
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.builtin.hytalegenerator.assets.graph.passes.ImportedGraphPassAsset> CODEC;
   public com.hypixel.hytale.builtin.hytalegenerator.assets.graph.passes.ImportedGraphPassAsset();
   public com.hypixel.hytale.builtin.hytalegenerator.graph.passes.GraphPass build(com.hypixel.hytale.builtin.hytalegenerator.assets.graph.GraphGeneratorAsset$Argument);
+  public void cleanUp();
 }
 ```
 

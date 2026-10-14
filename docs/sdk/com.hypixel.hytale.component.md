@@ -56,12 +56,15 @@ public class com.hypixel.hytale.component.Archetype<ECS_TYPE> implements com.hyp
 public class com.hypixel.hytale.component.ArchetypeChunk<ECS_TYPE> {
   protected final com.hypixel.hytale.component.ComponentRegistry<ECS_TYPE> componentRegistry;
   protected final com.hypixel.hytale.component.Archetype<ECS_TYPE> archetype;
+  protected final com.hypixel.hytale.component.Ref<ECS_TYPE> parent;
+  protected final int parentId;
   protected int entitiesSize;
   protected com.hypixel.hytale.component.Ref<ECS_TYPE>[] refs;
   protected com.hypixel.hytale.component.Component<ECS_TYPE>[][] components;
   public static <ECS_TYPE> com.hypixel.hytale.component.ArchetypeChunk<ECS_TYPE>[] emptyArray();
   public com.hypixel.hytale.component.ArchetypeChunk(com.hypixel.hytale.component.Store<ECS_TYPE>, com.hypixel.hytale.component.Archetype<ECS_TYPE>);
   public com.hypixel.hytale.component.Archetype<ECS_TYPE> getArchetype();
+  public com.hypixel.hytale.component.Ref<ECS_TYPE> getParent();
   public int size();
   public com.hypixel.hytale.component.Ref<ECS_TYPE> getReferenceTo(int);
   public <T extends com.hypixel.hytale.component.Component<ECS_TYPE>> void setComponent(int, com.hypixel.hytale.component.ComponentType<ECS_TYPE, T>, T);
@@ -95,8 +98,12 @@ public class com.hypixel.hytale.component.CommandBuffer<ECS_TYPE> implements com
   public ECS_TYPE getExternalData();
   public com.hypixel.hytale.component.Ref<ECS_TYPE>[] addEntities(com.hypixel.hytale.component.Holder<ECS_TYPE>[], com.hypixel.hytale.component.AddReason);
   public com.hypixel.hytale.component.Ref<ECS_TYPE> addEntity(com.hypixel.hytale.component.Holder<ECS_TYPE>, com.hypixel.hytale.component.AddReason);
+  public com.hypixel.hytale.component.Ref<ECS_TYPE> addEntity(com.hypixel.hytale.component.Holder<ECS_TYPE>, com.hypixel.hytale.component.AddReason, com.hypixel.hytale.component.Ref<ECS_TYPE>);
   public void addEntities(com.hypixel.hytale.component.Holder<ECS_TYPE>[], int, com.hypixel.hytale.component.Ref<ECS_TYPE>[], int, int, com.hypixel.hytale.component.AddReason);
+  public void addEntities(com.hypixel.hytale.component.Holder<ECS_TYPE>[], int, com.hypixel.hytale.component.Ref<ECS_TYPE>[], int, int, com.hypixel.hytale.component.AddReason, com.hypixel.hytale.component.Ref<ECS_TYPE>);
   public com.hypixel.hytale.component.Ref<ECS_TYPE> addEntity(com.hypixel.hytale.component.Holder<ECS_TYPE>, com.hypixel.hytale.component.Ref<ECS_TYPE>, com.hypixel.hytale.component.AddReason);
+  public com.hypixel.hytale.component.Ref<ECS_TYPE> addEntity(com.hypixel.hytale.component.Holder<ECS_TYPE>, com.hypixel.hytale.component.Ref<ECS_TYPE>, com.hypixel.hytale.component.AddReason, com.hypixel.hytale.component.Ref<ECS_TYPE>);
+  public void setParent(com.hypixel.hytale.component.Ref<ECS_TYPE>, com.hypixel.hytale.component.Ref<ECS_TYPE>);
   public com.hypixel.hytale.component.Holder<ECS_TYPE> copyEntity(com.hypixel.hytale.component.Ref<ECS_TYPE>, com.hypixel.hytale.component.Holder<ECS_TYPE>);
   public void tryRemoveEntity(com.hypixel.hytale.component.Ref<ECS_TYPE>, com.hypixel.hytale.component.RemoveReason);
   public void removeEntity(com.hypixel.hytale.component.Ref<ECS_TYPE>, com.hypixel.hytale.component.RemoveReason);
@@ -467,6 +474,8 @@ public class com.hypixel.hytale.component.ResourceType<ECS_TYPE, T extends com.h
 ```java
 public class com.hypixel.hytale.component.Store<ECS_TYPE> implements com.hypixel.hytale.component.ComponentAccessor<ECS_TYPE> {
   public static final com.hypixel.hytale.component.Store[] EMPTY_ARRAY;
+  public static final int ROOT_PARENT_ID;
+  public static final int OWNER_ROOT_ID;
   public static final com.hypixel.hytale.metrics.MetricsRegistry<com.hypixel.hytale.component.Store<?>> METRICS_REGISTRY;
   public int getStoreIndex();
   public com.hypixel.hytale.component.ComponentRegistry<ECS_TYPE> getRegistry();
@@ -485,12 +494,16 @@ public class com.hypixel.hytale.component.Store<ECS_TYPE> implements com.hypixel
   public com.hypixel.hytale.component.metric.ArchetypeChunkData[] collectArchetypeChunkData();
   public int getArchetypeChunkCountFor(int);
   public com.hypixel.hytale.component.Ref<ECS_TYPE> addEntity(com.hypixel.hytale.component.Archetype<ECS_TYPE>, com.hypixel.hytale.component.AddReason);
+  public com.hypixel.hytale.component.Ref<ECS_TYPE> addEntity(com.hypixel.hytale.component.Archetype<ECS_TYPE>, com.hypixel.hytale.component.AddReason, com.hypixel.hytale.component.Ref<ECS_TYPE>);
   public com.hypixel.hytale.component.Ref<ECS_TYPE> addEntity(com.hypixel.hytale.component.Holder<ECS_TYPE>, com.hypixel.hytale.component.AddReason);
+  public com.hypixel.hytale.component.Ref<ECS_TYPE> addEntity(com.hypixel.hytale.component.Holder<ECS_TYPE>, com.hypixel.hytale.component.AddReason, com.hypixel.hytale.component.Ref<ECS_TYPE>);
   public com.hypixel.hytale.component.Ref<ECS_TYPE> addEntity(com.hypixel.hytale.component.Holder<ECS_TYPE>, com.hypixel.hytale.component.Ref<ECS_TYPE>, com.hypixel.hytale.component.AddReason);
+  public com.hypixel.hytale.component.Ref<ECS_TYPE> addEntity(com.hypixel.hytale.component.Holder<ECS_TYPE>, com.hypixel.hytale.component.Ref<ECS_TYPE>, com.hypixel.hytale.component.AddReason, com.hypixel.hytale.component.Ref<ECS_TYPE>);
   public com.hypixel.hytale.component.Ref<ECS_TYPE>[] addEntities(com.hypixel.hytale.component.Holder<ECS_TYPE>[], com.hypixel.hytale.component.AddReason);
   public com.hypixel.hytale.component.Ref<ECS_TYPE>[] addEntities(com.hypixel.hytale.component.Holder<ECS_TYPE>[], int, int, com.hypixel.hytale.component.AddReason);
   public void addEntities(com.hypixel.hytale.component.Holder<ECS_TYPE>[], com.hypixel.hytale.component.Ref<ECS_TYPE>[], com.hypixel.hytale.component.AddReason);
   public void addEntities(com.hypixel.hytale.component.Holder<ECS_TYPE>[], int, com.hypixel.hytale.component.Ref<ECS_TYPE>[], int, int, com.hypixel.hytale.component.AddReason);
+  public void addEntities(com.hypixel.hytale.component.Holder<ECS_TYPE>[], int, com.hypixel.hytale.component.Ref<ECS_TYPE>[], int, int, com.hypixel.hytale.component.AddReason, com.hypixel.hytale.component.Ref<ECS_TYPE>);
   public com.hypixel.hytale.component.Holder<ECS_TYPE> copyEntity(com.hypixel.hytale.component.Ref<ECS_TYPE>);
   public com.hypixel.hytale.component.Holder<ECS_TYPE> copyEntity(com.hypixel.hytale.component.Ref<ECS_TYPE>, com.hypixel.hytale.component.Holder<ECS_TYPE>);
   public com.hypixel.hytale.component.Holder<ECS_TYPE> copySerializableEntity(com.hypixel.hytale.component.Ref<ECS_TYPE>);
@@ -503,6 +516,8 @@ public class com.hypixel.hytale.component.Store<ECS_TYPE> implements com.hypixel
   public com.hypixel.hytale.component.Holder<ECS_TYPE>[] removeEntities(com.hypixel.hytale.component.Ref<ECS_TYPE>[], int, int, com.hypixel.hytale.component.RemoveReason);
   public com.hypixel.hytale.component.Holder<ECS_TYPE>[] removeEntities(com.hypixel.hytale.component.Ref<ECS_TYPE>[], com.hypixel.hytale.component.Holder<ECS_TYPE>[], com.hypixel.hytale.component.RemoveReason);
   public com.hypixel.hytale.component.Holder<ECS_TYPE>[] removeEntities(com.hypixel.hytale.component.Ref<ECS_TYPE>[], int, com.hypixel.hytale.component.Holder<ECS_TYPE>[], int, int, com.hypixel.hytale.component.RemoveReason);
+  public com.hypixel.hytale.component.Ref<ECS_TYPE> getParent(com.hypixel.hytale.component.Ref<ECS_TYPE>);
+  public void setParent(com.hypixel.hytale.component.Ref<ECS_TYPE>, com.hypixel.hytale.component.Ref<ECS_TYPE>);
   public <T extends com.hypixel.hytale.component.Component<ECS_TYPE>> void ensureComponent(com.hypixel.hytale.component.Ref<ECS_TYPE>, com.hypixel.hytale.component.ComponentType<ECS_TYPE, T>);
   public <T extends com.hypixel.hytale.component.Component<ECS_TYPE>> T ensureAndGetComponent(com.hypixel.hytale.component.Ref<ECS_TYPE>, com.hypixel.hytale.component.ComponentType<ECS_TYPE, T>);
   public <T extends com.hypixel.hytale.component.Component<ECS_TYPE>> T addComponent(com.hypixel.hytale.component.Ref<ECS_TYPE>, com.hypixel.hytale.component.ComponentType<ECS_TYPE, T>);
@@ -521,11 +536,13 @@ public class com.hypixel.hytale.component.Store<ECS_TYPE> implements com.hypixel
   public void forEachChunk(java.util.function.BiConsumer<com.hypixel.hytale.component.ArchetypeChunk<ECS_TYPE>, com.hypixel.hytale.component.CommandBuffer<ECS_TYPE>>);
   public boolean forEachChunk(java.util.function.BiPredicate<com.hypixel.hytale.component.ArchetypeChunk<ECS_TYPE>, com.hypixel.hytale.component.CommandBuffer<ECS_TYPE>>);
   public void forEachChunk(com.hypixel.hytale.component.query.Query<ECS_TYPE>, java.util.function.BiConsumer<com.hypixel.hytale.component.ArchetypeChunk<ECS_TYPE>, com.hypixel.hytale.component.CommandBuffer<ECS_TYPE>>);
+  public void forEachChunk(com.hypixel.hytale.component.Ref<ECS_TYPE>, com.hypixel.hytale.component.query.Query<ECS_TYPE>, java.util.function.BiConsumer<com.hypixel.hytale.component.ArchetypeChunk<ECS_TYPE>, com.hypixel.hytale.component.CommandBuffer<ECS_TYPE>>);
   public boolean forEachChunk(com.hypixel.hytale.component.query.Query<ECS_TYPE>, java.util.function.BiPredicate<com.hypixel.hytale.component.ArchetypeChunk<ECS_TYPE>, com.hypixel.hytale.component.CommandBuffer<ECS_TYPE>>);
   public void forEachChunk(int, java.util.function.BiConsumer<com.hypixel.hytale.component.ArchetypeChunk<ECS_TYPE>, com.hypixel.hytale.component.CommandBuffer<ECS_TYPE>>);
   public boolean forEachChunk(int, java.util.function.BiPredicate<com.hypixel.hytale.component.ArchetypeChunk<ECS_TYPE>, com.hypixel.hytale.component.CommandBuffer<ECS_TYPE>>);
   public void forEachEntityParallel(com.hypixel.hytale.function.consumer.IntBiObjectConsumer<com.hypixel.hytale.component.ArchetypeChunk<ECS_TYPE>, com.hypixel.hytale.component.CommandBuffer<ECS_TYPE>>);
   public void forEachEntityParallel(com.hypixel.hytale.component.query.Query<ECS_TYPE>, com.hypixel.hytale.function.consumer.IntBiObjectConsumer<com.hypixel.hytale.component.ArchetypeChunk<ECS_TYPE>, com.hypixel.hytale.component.CommandBuffer<ECS_TYPE>>);
+  public void forEachEntityParallel(com.hypixel.hytale.component.Ref<ECS_TYPE>, com.hypixel.hytale.component.query.Query<ECS_TYPE>, com.hypixel.hytale.function.consumer.IntBiObjectConsumer<com.hypixel.hytale.component.ArchetypeChunk<ECS_TYPE>, com.hypixel.hytale.component.CommandBuffer<ECS_TYPE>>);
   public <T extends com.hypixel.hytale.component.system.data.ArchetypeDataSystem<ECS_TYPE, Q, R>, Q, R> void fetch(com.hypixel.hytale.component.SystemType<ECS_TYPE, T>, Q, java.util.List<R>);
   public <T extends com.hypixel.hytale.component.system.data.EntityDataSystem<ECS_TYPE, Q, R>, Q, R> void fetch(java.util.Collection<com.hypixel.hytale.component.Ref<ECS_TYPE>>, com.hypixel.hytale.component.SystemType<ECS_TYPE, T>, Q, java.util.List<R>);
   public <Event extends com.hypixel.hytale.component.system.EcsEvent> void invoke(com.hypixel.hytale.component.Ref<ECS_TYPE>, Event);

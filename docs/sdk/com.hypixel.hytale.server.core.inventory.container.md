@@ -495,6 +495,7 @@ public abstract class com.hypixel.hytale.server.core.inventory.container.ItemCon
 ```java
 public class com.hypixel.hytale.server.core.inventory.container.ItemContainerUtil {
   public com.hypixel.hytale.server.core.inventory.container.ItemContainerUtil();
+  public static <T extends com.hypixel.hytale.server.core.inventory.container.ItemContainer> T trySetAbilityFilters(T, short);
   public static <T extends com.hypixel.hytale.server.core.inventory.container.ItemContainer> T trySetArmorFilters(T);
   public static <T extends com.hypixel.hytale.server.core.inventory.container.ItemContainer> T trySetSlotFilters(T, com.hypixel.hytale.server.core.inventory.container.filter.SlotFilter);
 }

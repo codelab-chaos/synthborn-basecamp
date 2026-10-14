@@ -74,6 +74,7 @@ public class com.hypixel.hytale.builtin.adventure.shop.barter.BarterShopState {
   public static void save();
   public static void shutdown();
   public com.hypixel.hytale.builtin.adventure.shop.barter.BarterShopState();
+  public static java.time.Instant getShopGameTime(com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public com.hypixel.hytale.builtin.adventure.shop.barter.BarterShopState$ShopInstanceState getOrCreateShopState(com.hypixel.hytale.builtin.adventure.shop.barter.BarterShopAsset, java.time.Instant);
   public void checkRefresh(com.hypixel.hytale.builtin.adventure.shop.barter.BarterShopAsset, java.time.Instant);
   public int[] getStockArray(com.hypixel.hytale.builtin.adventure.shop.barter.BarterShopAsset, java.time.Instant);

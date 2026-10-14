@@ -25,18 +25,11 @@ public final class com.hypixel.hytale.builtin.adventure.worldevents.action.effec
 ## SoundFX
 
 ```java
-public final class com.hypixel.hytale.builtin.adventure.worldevents.action.effect.SoundFX extends java.lang.Record {
-  public static final com.hypixel.hytale.codec.record.RecordCodec<com.hypixel.hytale.builtin.adventure.worldevents.action.effect.SoundFX> CODEC;
-  public com.hypixel.hytale.builtin.adventure.worldevents.action.effect.SoundFX(java.lang.String, java.lang.Float, java.lang.Float, java.lang.Float, java.lang.Float);
-  public void send(int, com.hypixel.hytale.protocol.Position, java.util.List<com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>>, com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, java.util.random.RandomGenerator);
-  public final java.lang.String toString();
-  public final int hashCode();
-  public final boolean equals(java.lang.Object);
+public final class com.hypixel.hytale.builtin.adventure.worldevents.action.effect.SoundFX {
+  public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.builtin.adventure.worldevents.action.effect.SoundFX> CODEC;
   public java.lang.String asset();
-  public java.lang.Float volumeMin();
-  public java.lang.Float volumeMax();
-  public java.lang.Float pitchMin();
-  public java.lang.Float pitchMax();
+  public void send(int, com.hypixel.hytale.protocol.Position, java.util.List<com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>>, com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, java.util.random.RandomGenerator);
+  public void sendToPlayers(int, java.util.List<com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>>, com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, java.util.random.RandomGenerator);
 }
 ```
 
@@ -45,7 +38,7 @@ public final class com.hypixel.hytale.builtin.adventure.worldevents.action.effec
 ```java
 public final class com.hypixel.hytale.builtin.adventure.worldevents.action.effect.VisualFX extends java.lang.Record {
   public static final com.hypixel.hytale.codec.record.RecordCodec<com.hypixel.hytale.builtin.adventure.worldevents.action.effect.VisualFX> CODEC;
-  public com.hypixel.hytale.builtin.adventure.worldevents.action.effect.VisualFX(java.lang.String, com.hypixel.hytale.protocol.Color, java.lang.Float, java.lang.Float, java.lang.Float, java.lang.Float);
+  public com.hypixel.hytale.builtin.adventure.worldevents.action.effect.VisualFX(java.lang.String, com.hypixel.hytale.protocol.Color, java.lang.Float, java.lang.Float, org.joml.Vector3d, java.lang.Float, java.lang.Float);
   public void send(com.hypixel.hytale.protocol.Position, com.hypixel.hytale.protocol.Direction, java.util.List<com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>>, com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, java.util.random.RandomGenerator);
   public final java.lang.String toString();
   public final int hashCode();
@@ -54,6 +47,7 @@ public final class com.hypixel.hytale.builtin.adventure.worldevents.action.effec
   public com.hypixel.hytale.protocol.Color color();
   public java.lang.Float scaleMin();
   public java.lang.Float scaleMax();
+  public org.joml.Vector3d offset();
   public java.lang.Float durationMin();
   public java.lang.Float durationMax();
 }

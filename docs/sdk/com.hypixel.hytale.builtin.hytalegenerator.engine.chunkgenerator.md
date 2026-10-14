@@ -48,6 +48,7 @@ public class com.hypixel.hytale.builtin.hytalegenerator.engine.chunkgenerator.St
   public static final int WORLD_MAX_Y_BUFFER_GRID;
   public static final int WORLD_HEIGHT_BUFFER_GRID;
   public static final com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i CHUNK_BOUNDS_BUFFER_GRID;
+  public static final org.joml.Vector3i CHUNK_SIZE_BUFFER_GRID;
   public static final com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i SINGLE_BUFFER_TILE_BOUNDS_BUFFER_GRID;
   public com.hypixel.hytale.server.core.universe.world.worldgen.GeneratedChunk generate(com.hypixel.hytale.builtin.hytalegenerator.engine.chunkgenerator.ChunkRequest$Arguments, java.lang.String);
   public com.hypixel.hytale.builtin.hytalegenerator.positionproviders.PositionProvider getSpawnPositions();

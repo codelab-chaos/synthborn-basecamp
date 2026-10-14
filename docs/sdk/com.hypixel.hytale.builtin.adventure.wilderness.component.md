@@ -23,6 +23,7 @@ public class com.hypixel.hytale.builtin.adventure.wilderness.component.Wildernes
   protected final int sizeXZ2;
   protected final int radiusY;
   protected final int radiusXZ;
+  protected final int size;
   protected final java.util.BitSet chunks;
   protected final transient org.joml.Vector3i vector;
   public com.hypixel.hytale.builtin.adventure.wilderness.component.Wilderness();
@@ -34,6 +35,8 @@ public class com.hypixel.hytale.builtin.adventure.wilderness.component.Wildernes
   public int getChunkX();
   public int getChunkY();
   public int getChunkZ();
+  public int size();
+  public boolean isValid();
   public int begin();
   public int next(int);
   public boolean empty();
@@ -41,6 +44,7 @@ public class com.hypixel.hytale.builtin.adventure.wilderness.component.Wildernes
   public int yFromIndex(int);
   public int zFromIndex(int);
   public boolean test(int, int, int);
+  public boolean test(int);
   public void move(int, int, int, com.hypixel.hytale.builtin.adventure.wilderness.resource.WildernessTracker);
   public com.hypixel.hytale.builtin.adventure.wilderness.component.Wilderness clone();
   protected int index(int, int, int);

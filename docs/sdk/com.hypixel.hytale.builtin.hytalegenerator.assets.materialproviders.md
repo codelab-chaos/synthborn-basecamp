@@ -68,6 +68,7 @@ public class com.hypixel.hytale.builtin.hytalegenerator.assets.materialproviders
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.builtin.hytalegenerator.assets.materialproviders.ImportedMaterialProviderAsset> CODEC;
   public com.hypixel.hytale.builtin.hytalegenerator.assets.materialproviders.ImportedMaterialProviderAsset();
   public com.hypixel.hytale.builtin.hytalegenerator.materialproviders.MaterialProvider<com.hypixel.hytale.builtin.hytalegenerator.material.Material> build(com.hypixel.hytale.builtin.hytalegenerator.assets.materialproviders.MaterialProviderAsset$Argument);
+  public void cleanUp();
 }
 ```
 

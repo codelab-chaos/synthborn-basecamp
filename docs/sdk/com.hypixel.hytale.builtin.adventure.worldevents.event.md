@@ -16,10 +16,12 @@ public class com.hypixel.hytale.builtin.adventure.worldevents.event.Fork {
   protected com.hypixel.hytale.builtin.adventure.worldevents.condition.EventCondition[] conditions;
   protected com.hypixel.hytale.builtin.adventure.worldevents.action.EventAction[] actions;
   protected com.hypixel.hytale.builtin.adventure.worldevents.event.Stage next;
+  protected com.hypixel.hytale.builtin.adventure.worldevents.event.Fork$Mode mode;
   public com.hypixel.hytale.builtin.adventure.worldevents.event.Fork();
   public com.hypixel.hytale.builtin.adventure.worldevents.condition.EventCondition[] conditions();
   public com.hypixel.hytale.builtin.adventure.worldevents.action.EventAction[] actions();
   public com.hypixel.hytale.builtin.adventure.worldevents.event.Stage next();
+  public com.hypixel.hytale.builtin.adventure.worldevents.event.Fork$Mode mode();
 }
 ```
 
@@ -105,17 +107,19 @@ public class com.hypixel.hytale.builtin.adventure.worldevents.event.WorldEvent i
   public static final int MIN_PLAYER_COUNT;
   public static final int INFINITE_INSTANCES;
   public static final int INFINITE_ITERATIONS;
-  public static final int FAIL_COUNT_THRESHOLD;
+  public static final int DEFAULT_RETRY_LIMIT;
+  public static final int INFINITE_RETRIES;
   public java.util.UUID uuid;
   public java.lang.String asset;
   public com.hypixel.hytale.builtin.adventure.worldevents.event.Stage root;
   public com.hypixel.hytale.builtin.adventure.worldevents.event.Stage stage;
-  public int requiredPlayerCount;
   public int repeatCount;
+  public int retryLimit;
+  public int requiredPlayerCount;
   public boolean isTransient;
   public final com.hypixel.hytale.builtin.adventure.worldevents.context.ContextMap context;
   public transient float dt;
-  public transient int failCount;
+  public transient int retryCount;
   public transient boolean init;
   public transient boolean restart;
   public com.hypixel.hytale.builtin.adventure.worldevents.event.WorldEvent();
@@ -146,6 +150,9 @@ public class com.hypixel.hytale.builtin.adventure.worldevents.event.WorldEventAs
   protected int playerCountMin;
   protected int iterationCount;
   protected int instanceCountMax;
+  protected int retryLimit;
+  protected java.lang.String name;
+  protected java.lang.String icon;
   protected transient com.hypixel.hytale.builtin.adventure.worldevents.event.WorldEventAsset$State state;
   public com.hypixel.hytale.builtin.adventure.worldevents.event.WorldEventAsset();
   public java.lang.String getId();
@@ -154,6 +161,8 @@ public class com.hypixel.hytale.builtin.adventure.worldevents.event.WorldEventAs
   public int playerCountMin();
   public int iterationCount();
   public int instanceCountMax();
+  public java.lang.String name();
+  public java.lang.String icon();
   public boolean valid();
   protected java.lang.String getAssetId();
   protected void setAssetId(java.lang.String);

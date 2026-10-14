@@ -19,6 +19,7 @@ public abstract class com.hypixel.hytale.server.core.modules.migrations.ChunkCol
 ```java
 public final class com.hypixel.hytale.server.core.modules.migrations.ChunkMigrations {
   public static boolean migrate(com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, com.hypixel.hytale.component.ComponentRegistry$Data<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, com.hypixel.hytale.component.ComponentRegistry$Data<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public static boolean migrateSections(java.lang.Iterable<com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>>, com.hypixel.hytale.component.ComponentRegistry$Data<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, com.hypixel.hytale.component.ComponentRegistry$Data<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
 }
 ```
 

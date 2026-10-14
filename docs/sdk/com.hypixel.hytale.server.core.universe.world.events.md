@@ -42,9 +42,10 @@ public abstract class com.hypixel.hytale.server.core.universe.world.events.Chunk
 
 ```java
 public class com.hypixel.hytale.server.core.universe.world.events.ChunkPreLoadProcessEvent extends com.hypixel.hytale.server.core.universe.world.events.ChunkEvent implements com.hypixel.hytale.event.IProcessedEvent {
-  public com.hypixel.hytale.server.core.universe.world.events.ChunkPreLoadProcessEvent(com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk, boolean, long);
+  public com.hypixel.hytale.server.core.universe.world.events.ChunkPreLoadProcessEvent(com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk, boolean, long);
   public boolean isNewlyGenerated();
   public com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore> getHolder();
+  public com.hypixel.hytale.server.core.universe.world.World getWorld();
   public void processEvent(java.lang.String);
   public boolean didLog();
   public java.lang.String toString();

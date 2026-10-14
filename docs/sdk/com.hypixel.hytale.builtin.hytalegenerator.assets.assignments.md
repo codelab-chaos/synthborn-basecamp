@@ -53,6 +53,7 @@ public class com.hypixel.hytale.builtin.hytalegenerator.assets.assignments.Impor
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.builtin.hytalegenerator.assets.assignments.ImportedAssignmentsAsset> CODEC;
   public com.hypixel.hytale.builtin.hytalegenerator.assets.assignments.ImportedAssignmentsAsset();
   public com.hypixel.hytale.builtin.hytalegenerator.assignments.Assignments build(com.hypixel.hytale.builtin.hytalegenerator.assets.assignments.AssignmentsAsset$Argument);
+  public void cleanUp();
 }
 ```
 

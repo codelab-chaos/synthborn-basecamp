@@ -25,7 +25,8 @@ public class com.hypixel.hytale.server.core.universe.world.storage.provider.Defa
   public static final java.lang.String ID;
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.server.core.universe.world.storage.provider.DefaultChunkStorageProvider> CODEC;
   public com.hypixel.hytale.server.core.universe.world.storage.provider.DefaultChunkStorageProvider();
-  public java.lang.Object initialize(com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>) throws java.io.IOException;
+  public java.lang.Object initialize(com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, boolean) throws java.io.IOException;
+  public boolean hasStoredChunks(java.nio.file.Path);
   public void delete(java.lang.Object, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>) throws java.io.IOException;
   public void close(java.lang.Object, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>) throws java.io.IOException;
   public com.hypixel.hytale.server.core.universe.world.storage.IChunkLoader getLoader(java.lang.Object, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>) throws java.io.IOException;
@@ -46,7 +47,8 @@ public class com.hypixel.hytale.server.core.universe.world.storage.provider.Empt
   public static final com.hypixel.hytale.server.core.universe.world.storage.provider.EmptyChunkStorageProvider INSTANCE;
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.server.core.universe.world.storage.provider.EmptyChunkStorageProvider> CODEC;
   public com.hypixel.hytale.server.core.universe.world.storage.provider.EmptyChunkStorageProvider();
-  public java.lang.Void initialize(com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>) throws java.io.IOException;
+  public java.lang.Void initialize(com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, boolean) throws java.io.IOException;
+  public boolean hasStoredChunks(java.nio.file.Path);
   public void delete(java.lang.Void, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>) throws java.io.IOException;
   public void close(java.lang.Void, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>) throws java.io.IOException;
   public com.hypixel.hytale.server.core.universe.world.storage.IChunkLoader getLoader(java.lang.Void, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>);
@@ -56,7 +58,7 @@ public class com.hypixel.hytale.server.core.universe.world.storage.provider.Empt
   public com.hypixel.hytale.server.core.universe.world.storage.IChunkLoader getLoader(java.lang.Object, com.hypixel.hytale.component.Store) throws java.io.IOException;
   public void close(java.lang.Object, com.hypixel.hytale.component.Store) throws java.io.IOException;
   public void delete(java.lang.Object, com.hypixel.hytale.component.Store) throws java.io.IOException;
-  public java.lang.Object initialize(com.hypixel.hytale.component.Store) throws java.io.IOException;
+  public java.lang.Object initialize(com.hypixel.hytale.component.Store, boolean) throws java.io.IOException;
 }
 ```
 
@@ -67,7 +69,8 @@ public interface com.hypixel.hytale.server.core.universe.world.storage.provider.
   public static final com.hypixel.hytale.codec.lookup.BuilderCodecMapCodec<com.hypixel.hytale.server.core.universe.world.storage.provider.IChunkStorageProvider<?>> CODEC;
   public static final int MIGRATION_COMPACT_INTERVAL;
   public static final int MIGRATION_MAX_PENDING_COMPACTS;
-  public abstract Data initialize(com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>) throws java.io.IOException;
+  public abstract Data initialize(com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, boolean) throws java.io.IOException;
+  public abstract boolean hasStoredChunks(java.nio.file.Path);
   public default <OtherData> Data migrateFrom(com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, com.hypixel.hytale.server.core.universe.world.storage.provider.IChunkStorageProvider<OtherData>) throws java.io.IOException;
   public abstract void delete(Data, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>) throws java.io.IOException;
   public abstract void close(Data, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>) throws java.io.IOException;
@@ -87,7 +90,8 @@ public class com.hypixel.hytale.server.core.universe.world.storage.provider.Inde
   public static final java.lang.String ID;
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.server.core.universe.world.storage.provider.IndexedStorageChunkStorageProvider> CODEC;
   public com.hypixel.hytale.server.core.universe.world.storage.provider.IndexedStorageChunkStorageProvider();
-  public com.hypixel.hytale.server.core.universe.world.storage.provider.IndexedStorageChunkStorageProvider$IndexedStorageCache initialize(com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>) throws java.io.IOException;
+  public com.hypixel.hytale.server.core.universe.world.storage.provider.IndexedStorageChunkStorageProvider$IndexedStorageCache initialize(com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, boolean) throws java.io.IOException;
+  public boolean hasStoredChunks(java.nio.file.Path);
   public void delete(com.hypixel.hytale.server.core.universe.world.storage.provider.IndexedStorageChunkStorageProvider$IndexedStorageCache, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>) throws java.io.IOException;
   public void close(com.hypixel.hytale.server.core.universe.world.storage.provider.IndexedStorageChunkStorageProvider$IndexedStorageCache, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>) throws java.io.IOException;
   public com.hypixel.hytale.server.core.universe.world.storage.IChunkLoader getLoader(com.hypixel.hytale.server.core.universe.world.storage.provider.IndexedStorageChunkStorageProvider$IndexedStorageCache, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>);
@@ -100,7 +104,7 @@ public class com.hypixel.hytale.server.core.universe.world.storage.provider.Inde
   public com.hypixel.hytale.server.core.universe.world.storage.IChunkLoader getLoader(java.lang.Object, com.hypixel.hytale.component.Store) throws java.io.IOException;
   public void close(java.lang.Object, com.hypixel.hytale.component.Store) throws java.io.IOException;
   public void delete(java.lang.Object, com.hypixel.hytale.component.Store) throws java.io.IOException;
-  public java.lang.Object initialize(com.hypixel.hytale.component.Store) throws java.io.IOException;
+  public java.lang.Object initialize(com.hypixel.hytale.component.Store, boolean) throws java.io.IOException;
 }
 ```
 
@@ -112,7 +116,8 @@ public class com.hypixel.hytale.server.core.universe.world.storage.provider.Migr
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.server.core.universe.world.storage.provider.MigrationChunkStorageProvider> CODEC;
   public com.hypixel.hytale.server.core.universe.world.storage.provider.MigrationChunkStorageProvider();
   public com.hypixel.hytale.server.core.universe.world.storage.provider.MigrationChunkStorageProvider(com.hypixel.hytale.server.core.universe.world.storage.provider.IChunkStorageProvider[], com.hypixel.hytale.server.core.universe.world.storage.provider.IChunkStorageProvider);
-  public com.hypixel.hytale.server.core.universe.world.storage.provider.MigrationChunkStorageProvider$MigrationData initialize(com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>) throws java.io.IOException;
+  public com.hypixel.hytale.server.core.universe.world.storage.provider.MigrationChunkStorageProvider$MigrationData initialize(com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, boolean) throws java.io.IOException;
+  public boolean hasStoredChunks(java.nio.file.Path);
   public void delete(com.hypixel.hytale.server.core.universe.world.storage.provider.MigrationChunkStorageProvider$MigrationData, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>) throws java.io.IOException;
   public void close(com.hypixel.hytale.server.core.universe.world.storage.provider.MigrationChunkStorageProvider$MigrationData, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>) throws java.io.IOException;
   public com.hypixel.hytale.server.core.universe.world.storage.IChunkLoader getLoader(com.hypixel.hytale.server.core.universe.world.storage.provider.MigrationChunkStorageProvider$MigrationData, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>) throws java.io.IOException;
@@ -122,7 +127,7 @@ public class com.hypixel.hytale.server.core.universe.world.storage.provider.Migr
   public com.hypixel.hytale.server.core.universe.world.storage.IChunkLoader getLoader(java.lang.Object, com.hypixel.hytale.component.Store) throws java.io.IOException;
   public void close(java.lang.Object, com.hypixel.hytale.component.Store) throws java.io.IOException;
   public void delete(java.lang.Object, com.hypixel.hytale.component.Store) throws java.io.IOException;
-  public java.lang.Object initialize(com.hypixel.hytale.component.Store) throws java.io.IOException;
+  public java.lang.Object initialize(com.hypixel.hytale.component.Store, boolean) throws java.io.IOException;
 }
 ```
 
@@ -140,15 +145,16 @@ public class com.hypixel.hytale.server.core.universe.world.storage.provider.Rock
   public static final java.lang.String BLOB_CACHE_SIZE_PROPERTY;
   public static final java.lang.String IO_THREADS_PROPERTY;
   public com.hypixel.hytale.server.core.universe.world.storage.provider.RocksDbChunkStorageProvider();
-  public com.hypixel.hytale.server.core.universe.world.storage.provider.RocksDbChunkStorageProvider$RocksDbResource initialize(com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>) throws java.io.IOException;
+  public com.hypixel.hytale.server.core.universe.world.storage.provider.RocksDbChunkStorageProvider$RocksDbResource initialize(com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, boolean) throws java.io.IOException;
   public void delete(com.hypixel.hytale.server.core.universe.world.storage.provider.RocksDbChunkStorageProvider$RocksDbResource, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>) throws java.io.IOException;
   public void close(com.hypixel.hytale.server.core.universe.world.storage.provider.RocksDbChunkStorageProvider$RocksDbResource, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>) throws java.io.IOException;
   public com.hypixel.hytale.server.core.universe.world.storage.IChunkLoader getLoader(com.hypixel.hytale.server.core.universe.world.storage.provider.RocksDbChunkStorageProvider$RocksDbResource, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>) throws java.io.IOException;
   public com.hypixel.hytale.server.core.universe.world.storage.IChunkSaver getSaver(com.hypixel.hytale.server.core.universe.world.storage.provider.RocksDbChunkStorageProvider$RocksDbResource, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>) throws java.io.IOException;
+  public boolean hasStoredChunks(java.nio.file.Path);
   public com.hypixel.hytale.server.core.universe.world.storage.IChunkSaver getSaver(java.lang.Object, com.hypixel.hytale.component.Store) throws java.io.IOException;
   public com.hypixel.hytale.server.core.universe.world.storage.IChunkLoader getLoader(java.lang.Object, com.hypixel.hytale.component.Store) throws java.io.IOException;
   public void close(java.lang.Object, com.hypixel.hytale.component.Store) throws java.io.IOException;
   public void delete(java.lang.Object, com.hypixel.hytale.component.Store) throws java.io.IOException;
-  public java.lang.Object initialize(com.hypixel.hytale.component.Store) throws java.io.IOException;
+  public java.lang.Object initialize(com.hypixel.hytale.component.Store, boolean) throws java.io.IOException;
 }
 ```

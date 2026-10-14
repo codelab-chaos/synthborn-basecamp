@@ -32,14 +32,14 @@ public class com.hypixel.hytale.server.core.universe.world.lighting.ChunkLightin
   public void run();
   public boolean interrupt();
   public void stop();
-  public void init(com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk);
+  public void init(com.hypixel.hytale.server.core.universe.world.storage.ChunkGrid, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>);
   public void addToQueue(org.joml.Vector3i);
   public boolean isQueued(int, int);
   public boolean isQueued(org.joml.Vector3i);
   public int getQueueSize();
-  public boolean invalidateLightAtBlock(com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, int, int, int, com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType, int, int);
-  public boolean invalidateLightInChunk(com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, int, int);
-  public boolean invalidateLightInChunkSection(com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, int, int, int);
+  public boolean invalidateLightAtBlock(com.hypixel.hytale.server.core.universe.world.storage.ChunkGrid, int, int, int, com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType, int, int);
+  public boolean invalidateLightInChunkSection(com.hypixel.hytale.server.core.universe.world.storage.ChunkGrid, int, int, int);
+  public boolean invalidateLightInChunkSections(com.hypixel.hytale.server.core.universe.world.storage.ChunkGrid, int, int, int, int);
   public void invalidateLoadedChunks();
 }
 ```
@@ -52,17 +52,14 @@ public class com.hypixel.hytale.server.core.universe.world.lighting.FloodLightCa
   protected final com.hypixel.hytale.metrics.metric.AverageCollector emptyAvg;
   protected final com.hypixel.hytale.metrics.metric.AverageCollector blocksAvg;
   protected final com.hypixel.hytale.metrics.metric.AverageCollector borderAvg;
-  protected final com.hypixel.hytale.metrics.metric.AverageCollector avgChunk;
   protected final com.hypixel.hytale.server.core.universe.world.chunk.section.BlockSection[][] fromSections;
   public com.hypixel.hytale.server.core.universe.world.lighting.FloodLightCalculation(com.hypixel.hytale.server.core.universe.world.lighting.ChunkLightingManager);
-  public void init(com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk);
+  public void init(com.hypixel.hytale.server.core.universe.world.storage.ChunkGrid, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>);
   public com.hypixel.hytale.server.core.universe.world.lighting.CalculationResult calculateLight(org.joml.Vector3i);
-  public com.hypixel.hytale.server.core.universe.world.lighting.CalculationResult updateLocalLight(com.hypixel.hytale.server.core.universe.world.accessor.LocalCachedChunkAccessor, com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk, int, int, int, com.hypixel.hytale.server.core.universe.world.chunk.section.BlockSection, com.hypixel.hytale.server.core.universe.world.chunk.section.FluidSection, java.util.concurrent.atomic.AtomicLong, boolean);
-  public com.hypixel.hytale.server.core.universe.world.lighting.CalculationResult updateGlobalLight(com.hypixel.hytale.server.core.universe.world.accessor.LocalCachedChunkAccessor, com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk, int, int, int, com.hypixel.hytale.server.core.universe.world.chunk.section.BlockSection, java.util.concurrent.atomic.AtomicLong, boolean);
-  public boolean invalidateLightAtBlock(com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, int, int, int, com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType, int, int);
-  public boolean invalidateLightInChunkSections(com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, int, int, int, int);
-  protected byte getSkyValue(com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk, int, int, int, int, int, int);
-  public boolean testNeighboursForLocalLight(com.hypixel.hytale.server.core.universe.world.accessor.LocalCachedChunkAccessor, com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk, int, int, int);
+  public boolean invalidateLightAtBlock(com.hypixel.hytale.server.core.universe.world.storage.ChunkGrid, int, int, int, com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType, int, int);
+  public boolean invalidateLightInChunkSections(com.hypixel.hytale.server.core.universe.world.storage.ChunkGrid, int, int, int, int);
+  protected byte getSkyValue(int, int, int, int, int, int);
+  public boolean testNeighboursForLocalLight(com.hypixel.hytale.server.core.universe.world.storage.ChunkGrid, com.hypixel.hytale.server.core.universe.world.chunk.section.BlockSection, int, int, int);
   public void propagateSides(com.hypixel.hytale.server.core.universe.world.chunk.section.BlockSection, com.hypixel.hytale.server.core.universe.world.chunk.section.ChunkLightDataBuilder, java.util.BitSet);
   public void propagateEdges(com.hypixel.hytale.server.core.universe.world.chunk.section.BlockSection, com.hypixel.hytale.server.core.universe.world.chunk.section.ChunkLightDataBuilder, java.util.BitSet);
   public void propagateCorners(com.hypixel.hytale.server.core.universe.world.chunk.section.BlockSection, com.hypixel.hytale.server.core.universe.world.chunk.section.ChunkLightDataBuilder, java.util.BitSet);
@@ -74,11 +71,11 @@ public class com.hypixel.hytale.server.core.universe.world.lighting.FloodLightCa
 ```java
 public class com.hypixel.hytale.server.core.universe.world.lighting.FullBrightLightCalculation implements com.hypixel.hytale.server.core.universe.world.lighting.LightCalculation {
   public com.hypixel.hytale.server.core.universe.world.lighting.FullBrightLightCalculation(com.hypixel.hytale.server.core.universe.world.lighting.ChunkLightingManager, com.hypixel.hytale.server.core.universe.world.lighting.LightCalculation);
-  public void init(com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk);
+  public void init(com.hypixel.hytale.server.core.universe.world.storage.ChunkGrid, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>);
   public com.hypixel.hytale.server.core.universe.world.lighting.CalculationResult calculateLight(org.joml.Vector3i);
-  public boolean invalidateLightAtBlock(com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, int, int, int, com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType, int, int);
-  public boolean invalidateLightInChunkSections(com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, int, int, int, int);
-  public static void setFullBright(com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, int, int, int);
+  public boolean invalidateLightAtBlock(com.hypixel.hytale.server.core.universe.world.storage.ChunkGrid, int, int, int, com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType, int, int);
+  public boolean invalidateLightInChunkSections(com.hypixel.hytale.server.core.universe.world.storage.ChunkGrid, int, int, int, int);
+  public static void setFullBright(com.hypixel.hytale.server.core.universe.world.storage.ChunkGrid, int, int, int);
 }
 ```
 
@@ -86,9 +83,9 @@ public class com.hypixel.hytale.server.core.universe.world.lighting.FullBrightLi
 
 ```java
 public interface com.hypixel.hytale.server.core.universe.world.lighting.LightCalculation {
-  public abstract void init(com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk);
+  public abstract void init(com.hypixel.hytale.server.core.universe.world.storage.ChunkGrid, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>);
   public abstract com.hypixel.hytale.server.core.universe.world.lighting.CalculationResult calculateLight(org.joml.Vector3i);
-  public abstract boolean invalidateLightAtBlock(com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, int, int, int, com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType, int, int);
-  public abstract boolean invalidateLightInChunkSections(com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, int, int, int, int);
+  public abstract boolean invalidateLightAtBlock(com.hypixel.hytale.server.core.universe.world.storage.ChunkGrid, int, int, int, com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType, int, int);
+  public abstract boolean invalidateLightInChunkSections(com.hypixel.hytale.server.core.universe.world.storage.ChunkGrid, int, int, int, int);
 }
 ```

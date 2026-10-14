@@ -23,6 +23,7 @@ public class com.hypixel.hytale.server.core.modules.entity.condition.AliveCondit
 ```java
 public class com.hypixel.hytale.server.core.modules.entity.condition.ChargingCondition extends com.hypixel.hytale.server.core.modules.entity.condition.Condition {
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.server.core.modules.entity.condition.ChargingCondition> CODEC;
+  protected boolean useIgnoreFlag;
   protected java.time.Duration delay;
   protected com.hypixel.hytale.server.core.modules.entity.condition.ChargingCondition();
   public boolean eval0(com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, java.time.Instant);
@@ -227,6 +228,7 @@ public class com.hypixel.hytale.server.core.modules.entity.condition.Suffocating
 ```java
 public class com.hypixel.hytale.server.core.modules.entity.condition.WieldingCondition extends com.hypixel.hytale.server.core.modules.entity.condition.Condition {
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.server.core.modules.entity.condition.WieldingCondition> CODEC;
+  protected boolean useIgnoreFlag;
   protected com.hypixel.hytale.server.core.modules.entity.condition.WieldingCondition();
   public com.hypixel.hytale.server.core.modules.entity.condition.WieldingCondition(boolean);
   public boolean eval0(com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, java.time.Instant);

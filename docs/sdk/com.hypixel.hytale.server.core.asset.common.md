@@ -96,6 +96,7 @@ public class com.hypixel.hytale.server.core.asset.common.CommonAssetValidator im
   public static final com.hypixel.hytale.server.core.asset.common.CommonAssetValidator TEXTURE_CHARACTER;
   public static final com.hypixel.hytale.server.core.asset.common.CommonAssetValidator TEXTURE_CHARACTER_ATTACHMENT;
   public static final com.hypixel.hytale.server.core.asset.common.CommonAssetValidator TEXTURE_TRAIL;
+  public static final com.hypixel.hytale.server.core.asset.common.CommonAssetValidator TEXTURE_BEAM;
   public static final com.hypixel.hytale.server.core.asset.common.CommonAssetValidator TEXTURE_SKY;
   public static final com.hypixel.hytale.server.core.asset.common.CommonAssetValidator TEXTURE_PARTICLES;
   public static final com.hypixel.hytale.server.core.asset.common.CommonAssetValidator TEXTURE_ITEM_QUALITY;

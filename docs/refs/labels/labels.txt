@@ -1,7 +1,7 @@
 # Hytale en-US display names — id → English
 # source: _Assets/Server/Languages/en-US/server.lang
 
-# items (3724)
+# items (3984)
 item	Alchemy_Cauldron	Cauldron
 item	Alchemy_Cauldron_Big	Large Cauldron
 item	Arcade_Machine	Arcade Machine
@@ -148,6 +148,7 @@ item	Armor_Wool_Legs	Woolen Boots
 item	Bandage_Crude	Bandage
 item	Bandage_Potion_Test	Bandage Potion Test
 item	Barrier	Barrier Block
+item	Bench_Abilities	Runebinder's Lattice
 item	Bench_Alchemy	Alchemist's Workbench
 item	Bench_Arcane	Arcanist's Workbench
 item	Bench_Architects	Architect's Workbench
@@ -170,9 +171,21 @@ item	Bench_WorkBench	Workbench
 item	Block_Spawner_Block	Block Spawner
 item	Block_Spawner_Block_Large	Large Block Spawner
 item	Block_Spawner_Butterfly	Butterfly Spawner
+item	Block_Spawner_GoblinBreachSpark	Goblin Breach Spark Spawner
+item	Block_Spawner_GoblinInitialBreachMarker	Goblin Initial Breach Map Marker
 item	Block_Spawner_TempleCircle	Circle Spawner
 item	Block_Spawner_TempleCircleSmall	Small Circle Spawner
 item	Block_Spawner_TempleCircleSmallFlipped	Flipped Small Circle Spawner
+item	Block_Spawner_TempleGoblinExplosion	Goblin Explosion Spawner
+item	Block_Spawner_TempleGoblinFirework	Goblin Firework Spawner
+item	Block_Spawner_TempleGoblinFireworkCloser	Goblin Firework Closer Spawner
+item	Block_Spawner_TempleGoblinGeyser	Goblin Geyser Spawner
+item	Block_Spawner_TempleGoblinLightning	Goblin Lightning Spawner
+item	Block_Spawner_TempleGoblinSludge	Goblin Sludge Spawner
+item	Block_Spawner_TempleGoblinSludge2	Goblin Sludge Spawner 2
+item	Block_Spawner_TempleGoblinSmoke	Goblin Smoke Spawner
+item	Block_Spawner_TempleGoblinSparks	Goblin Sparks Spawner
+item	Block_Spawner_TempleGoblinSparksBurst	Goblin Sparks Burst Spawner
 item	Block_Spawner_TempleHelix	Helix Spawner
 item	Block_Spawner_TempleLeaves	Leaf Spawner
 item	Block_Spawner_TempleLeavesSmall	Small Leaf Spawner
@@ -317,11 +330,14 @@ item	Cloth_Roof_Yellow_Flat	Yellow Cloth Roof - Horizontal
 item	Cloth_Roof_Yellow_Shallow	Yellow Cloth Roof - Shallow
 item	Cloth_Roof_Yellow_Steep	Yellow Cloth Roof - Steep
 item	Cloth_Roof_Yellow_Vertical	Yellow Cloth Roof - Vertical
+item	Cocoon_Spider_Cave	Cave Spider Cocoon
+item	Coffer_Key	Veilbound Key
 item	Container_Bucket	Wooden Bucket
 item	Container_Bucket_Milk	Wooden Bucket (Milk)
 item	Container_Bucket_Mosshorn_Milk	Wooden Bucket (Mosshorn Milk)
 item	Container_Bucket_Water	Wooden Bucket (Water)
 item	Coop_Chicken	Chicken Coop
+item	Dead_Fish	Dead Fish
 item	Debug_Armor_D_Chest_Of_Damage_Reduction	Debug Leather Cuirass of Damage Reduction
 item	Debug_Armor_D_Hands_Of_Regeneration	Debug Leather Gauntlets of Regeneration
 item	Debug_Armor_D_Head_Of_Dash_Reduction	Debug Leather Helm of Dash Cost Reduction
@@ -349,7 +365,6 @@ item	Debug_Forking	Debug Block
 item	Debug_Forking_2	Debug Block
 item	Debug_Launch_Projectile_Fixed_Pitch	Debug Launch Projectile (Fixed Pitch)
 item	Debug_Launch_Projectile_Fixed_Yaw	Debug Launch Projectile (Fixed Yaw)
-item	Debug_Movement_Boots	Debug Movement Boots
 item	Debug_MusicEmitter_CaveEncounter	Debug Music Emitter (Cave Encounter)
 item	Debug_MusicEmitter_DeepJungles	Debug Music Emitter (Deep Jungles)
 item	Debug_MusicEmitter_ForgottenTemple	Debug Music Emitter (Forgotten Temple)
@@ -365,6 +380,12 @@ item	Debug_Projectile_Fixed_Yaw	Debug Projectile (Fixed Yaw)
 item	Debug_Projectile_Scale	Debug Projectile (Random Scale)
 item	Debug_Projectile_TriggerVolume	Debug Projectile (Trigger Volume)
 item	Debug_Raycast	Debug Raycast Item
+item	Debug_Rune_Burning	[TMP] Debug Ability: Burning Support
+item	Debug_Rune_Fork	[TMP] Debug Ability: Fork Support
+item	Debug_Rune_Frostbolt	[TMP] Debug Ability: Frostbolt
+item	Debug_Rune_Speed	[TMP] Debug Ability: Modifier Support
+item	Debug_Rune_Test	[TMP] Debug Ability: Support Test
+item	Debug_Rune_Tornado	[TMP] Debug Ability: Tornado
 item	Debug_Spawn_Marker_Block	Debug Spawn Marker Block
 item	Debug_Stick	The Stick
 item	Debug_Stick_Delay	The Stick of Delayed Charging
@@ -399,6 +420,7 @@ item	Deco_Coral_Shell_Sanddollar	Sand Dollar Shell
 item	Deco_Coral_Shell_Swirly	Swirly Coral Shell
 item	Deco_Coral_Shell_Urchin	Urchin Shell
 item	Deco_Fire	Fire
+item	Deco_Goblin_Plush	Goblin Plushie
 item	Deco_Halloween_Lights	Halloween Lights
 item	Deco_Halloween_Pumpkin_Cute	Halloween Pumpkin
 item	Deco_Halloween_Pumpkin_Hypixel	Halloween Pumpkin
@@ -407,7 +429,7 @@ item	Deco_Hive	Hive
 item	Deco_Inkwell	Inkwell
 item	Deco_Iron_Bars	Iron Bars
 item	Deco_Iron_Bars_Corner	Iron Bars - Corner
-item	Deco_Iron_Bars_Platforms	Iron Bar - Horizontal
+item	Deco_Iron_Bars_Platforms	Iron Bars - Horizontal
 item	Deco_Iron_Chain_Small	Iron Chain - Small
 item	Deco_Iron_Chains	Iron Chain - Sloped
 item	Deco_Iron_Chains_Vertical	Iron Chain
@@ -431,19 +453,24 @@ item	Deco_Scarak_Eggsacks	Medium Scarak Egg Sack
 item	Deco_Scarak_Spit	Small Scarak Spit Clump
 item	Deco_Scarak_Spit_Full	Scarak Spit Clump
 item	Deco_Scarecrow	Scarecrow
+item	Deco_Scrap_Pile_Shiny	Shiny Scrap Pile
 item	Deco_Scroll	Old Scroll
 item	Deco_Shutter	Wooden Shutter
 item	Deco_Spider_Cocoon	Spider Cocoon
 item	Deco_SpiderWeb	Small Spiderweb
+item	Deco_SpiderWeb_Diagonal	Spiderweb Rope - Diagonal
 item	Deco_SpiderWeb_Flat	Spiderweb Rug
 item	Deco_SpiderWeb_Full	Spiderweb
+item	Deco_SpiderWeb_Straight	Spiderweb Rope
 item	Deco_Starfish	Starfish
 item	Deco_Tankard	Tankard
 item	Deco_Tankard_Water	Tankard (Water)
 item	Deco_Target	Hay Target
-item	Deco_Trash	Trash
-item	Deco_Trash_Pile_Large	Large Trash Pile
-item	Deco_Trash_Pile_Small	Small Trash Pile
+item	Deco_Trash	Small Scrap Pile
+item	Deco_Trash_Banana_Peel	Half-eaten Banana
+item	Deco_Trash_Eaten_Fish	Half-eaten Fish
+item	Deco_Trash_Pile_Large	Large Scrap Pile
+item	Deco_Trash_Pile_Small	Scrap Pile
 item	Deco_Treasure	Treasure
 item	Deco_Treasure_Pile_Large	Large Treasure Pile
 item	Deco_Treasure_Pile_Small	Small Treasure Pile
@@ -451,6 +478,10 @@ item	Deco_Trophy_Harvest	Harvest Trophy
 item	Deco_Trork_Cage	Trork Cage
 item	Deco_Wallchain	Wall Ring
 item	Decorative_Potion_Template	Template Decorative Potion
+item	Dungeon_Checkpoint_Statue	Dungeon Checkpoint Statue
+item	Dungeon_Portal_Early_Exit	Escape Portal
+item	Dungeon_Portal_End	Dungeon Completion Portal
+item	Dungeon_Signal_Generator	Deepworks Power Generator
 item	Editor_Anchor	Editor Anchor
 item	Editor_Block	Editor Block
 item	Editor_Empty	Editor Empty
@@ -473,13 +504,13 @@ item	Filter_Soils	Filter - Soils
 item	Filter_TreeLeaves	Filter - Tree Leaves
 item	Filter_TreeWood	Filter - Tree Wood
 item	Filter_TreeWoodAndLeaves	Filter - Tree Wood & Leaves
-item	Flamethrower_Goblin	Goblin Flamethrower
 item	Fluid_Fire	Fire
 item	Fluid_Lava	Lava
 item	Fluid_Poison	Poison
 item	Fluid_Slime	Slime
 item	Fluid_Slime_Red	Red Slime
 item	Fluid_Tar	Tar
+item	Fluid_Tar_Void	Void Tar
 item	Fluid_Water	Water
 item	Fluid_Water_Test	Water - Finite
 item	Food_Beef_Raw	Raw Beef
@@ -514,7 +545,6 @@ item	Furniture_Ancient_Bookshelf	Ancient Bookshelf
 item	Furniture_Ancient_Candle	Ancient Candle
 item	Furniture_Ancient_Chair	Ancient Chair
 item	Furniture_Ancient_Chest_Large	Large Ancient Chest
-item	Furniture_Ancient_Chest_Large_Treasure	Large Ancient Chest (Treasure)
 item	Furniture_Ancient_Chest_Small	Small Ancient Chest
 item	Furniture_Ancient_Coffin	Ancient Coffin
 item	Furniture_Ancient_Crate	Broken Ancient Crate
@@ -541,8 +571,8 @@ item	Furniture_Christmas_Chest_Small_White	Small White Christmas Packet
 item	Furniture_Crude_Bed	Crude Bedroll
 item	Furniture_Crude_Brazier	Small Campfire
 item	Furniture_Crude_Candle	Candle
-item	Furniture_Crude_Chest_Large	Crude Double Chest
-item	Furniture_Crude_Chest_Small	Wooden Chest
+item	Furniture_Crude_Chest_Large	Large Crude Chest
+item	Furniture_Crude_Chest_Small	Small Crude Chest
 item	Furniture_Crude_Door	Crude Door
 item	Furniture_Crude_Ladder	Crude Ladder
 item	Furniture_Crude_Platform	Crude Platform
@@ -572,7 +602,7 @@ item	Furniture_Cybercity_Windows_U	Prototype - Cybercity Window - U Shape
 item	Furniture_Cybercity_Windows_Yellow	Prototype - Cybercity Window - Top Bottom Yellow
 item	Furniture_Desert_Bed	Sandswept Bed
 item	Furniture_Desert_Chair	Sandswept Chair
-item	Furniture_Desert_Chest_Large	Sandswept Chest
+item	Furniture_Desert_Chest_Large	Large Sandswept Chest
 item	Furniture_Desert_Chest_Small	Small Sandswept Chest
 item	Furniture_Desert_Door	Sandswept Door
 item	Furniture_Desert_Ladder	Sandswept Ladder
@@ -633,7 +663,22 @@ item	Furniture_Frozen_Castle_Table	Frozen Castle Table
 item	Furniture_Frozen_Castle_Trapdoor	Frozen Castle Trapdoor
 item	Furniture_Frozen_Castle_Wardrobe	Frozen Castle Wardrobe
 item	Furniture_Frozen_Castle_Window	Frozen Castle Window
-item	Furniture_Goblin_Chest_Small	Goblin Chest
+item	Furniture_Goblin_Bed	Goblin Bed
+item	Furniture_Goblin_Brazier	Goblin Brazier
+item	Furniture_Goblin_Candle	Goblin Candle
+item	Furniture_Goblin_Chest_Large	Large Goblin Chest
+item	Furniture_Goblin_Chest_Small	Small Goblin Chest
+item	Furniture_Goblin_Chest_Stolen	Stolen Chest
+item	Furniture_Goblin_Coffer	Veilbound Coffer
+item	Furniture_Goblin_Door	Goblin Door
+item	Furniture_Goblin_Door_Medium	Medium Goblin Door
+item	Furniture_Goblin_Ladder	Goblin Ladder
+item	Furniture_Goblin_Pot_Loot	Goblin Loot Pot
+item	Furniture_Goblin_Sign	Goblin Sign
+item	Furniture_Goblin_Statue_Graffiti	Defaced Statue of a Guardian
+item	Furniture_Goblin_Stool	Goblin Stool
+item	Furniture_Goblin_Table	Goblin Table
+item	Furniture_Goblin_Window	Goblin Window
 item	Furniture_Human_Ruins_Banner	Lost Civilization Banner
 item	Furniture_Human_Ruins_Banner_Double	Prototype - Lost Civilization Double Banner
 item	Furniture_Human_Ruins_Banner_Triple	Prototype - Lost Civilization Triple Banner
@@ -658,6 +703,7 @@ item	Furniture_Human_Ruins_Pot	Lost Civilization Pot
 item	Furniture_Human_Ruins_Pot_Small	Small Lost Civilization Pot
 item	Furniture_Human_Ruins_Shelf	Lost Civilization Shelf
 item	Furniture_Human_Ruins_Sign	Lost Civilization Sign
+item	Furniture_Human_Ruins_Statue	Bearer of Fire Statue
 item	Furniture_Human_Ruins_Statue_Broken	Ruined Statue
 item	Furniture_Human_Ruins_Stool	Lost Civilization Stool
 item	Furniture_Human_Ruins_Table	Lost Civilization Table
@@ -794,6 +840,7 @@ item	Furniture_Temple_Emerald_Platform	Overgrown Temple Platform
 item	Furniture_Temple_Emerald_Shelf	Overgrown Temple Shelf
 item	Furniture_Temple_Emerald_Sign	Overgrown Temple Sign
 item	Furniture_Temple_Emerald_Statue	Overgrown Wooden Figure
+item	Furniture_Temple_Emerald_Statue_Head	Ancient Ruler Statue - Head
 item	Furniture_Temple_Emerald_Stool	Overgrown Temple Stool
 item	Furniture_Temple_Emerald_Table	Overgrown Temple Table
 item	Furniture_Temple_Emerald_Torch	Overgrown Temple Torch
@@ -858,7 +905,7 @@ item	Furniture_Village_Bookcase	Simple Wooden Bookshelf
 item	Furniture_Village_Brazier	Simple Stone Brazier
 item	Furniture_Village_Chair	Simple Wooden Chair
 item	Furniture_Village_Chest_Large	Large Iron Chest
-item	Furniture_Village_Chest_Small	Small Chest
+item	Furniture_Village_Chest_Small	Small Iron Chest
 item	Furniture_Village_Coffin	Stone Coffin
 item	Furniture_Village_Counter	Simple Wooden Counter
 item	Furniture_Village_Crate	Simple Wooden Crate
@@ -874,7 +921,7 @@ item	Furniture_Village_Platform	Simple Wooden Platform
 item	Furniture_Village_Pot	Clay Pot
 item	Furniture_Village_Shelf_Full	Simple Wooden Shelf
 item	Furniture_Village_Sign	Simple Wooden Sign
-item	Furniture_Village_Statue	Statue of an Ancient Knight
+item	Furniture_Village_Statue	Statue of an Ancient Guardian
 item	Furniture_Village_Stool	Simple Wooden Stool
 item	Furniture_Village_Table	Simple Wooden Table
 item	Furniture_Village_Tombstone	Tombstone
@@ -882,7 +929,42 @@ item	Furniture_Village_Trapdoor	Simple Wooden Trapdoor
 item	Furniture_Village_Wardrobe	Simple Wooden Wardrobe
 item	Furniture_Village_Window	Simple Wooden Window
 item	Geyzer_Spawner1	Geyzer Spawner 5 sec
-item	Glider	Glider
+item	Glass_Test_Blue	Test Glass (Blue)
+item	Glass_Test_Green	Test Glass (Green)
+item	Glass_Test_Purple	Test Glass (Purple)
+item	Glass_Test_Red	Test Glass (Red)
+item	Glass_Test_White	Test Glass (White)
+item	Glass_Test_Yellow	Test Glass (Yellow)
+item	Glider_Scrap	Scrap Glider
+item	Goblin_Breach_Portal	Goblin Breach
+item	Goblin_Gobliterator_Difficulty_Button	Gobliterator Difficulty Button
+item	Goblin_Gobliterator_Difficulty_Lever	Gobliterator Difficulty Lever
+item	Goblin_Gobliterator_Difficulty_Lever_Hard	Gobliterator Difficulty Lever (Hard)
+item	Goblin_Graffiti_Fire	Fire Warning Graffiti
+item	Goblin_Graffiti_Large_Overheat	Large Overheat Warning Graffiti
+item	Goblin_Graffiti_Large_Spider	Large Spider Warning Graffiti
+item	Goblin_Graffiti_Skeleton	Skeleton Warning Graffiti
+item	Goblin_Graffiti_Spider	Spider Warning Graffiti
+item	Goblin_Painting_Breach	Goblin Painting: The Breaches
+item	Goblin_Painting_Breach_Replica	Goblin Painting: The Breaches (Replica)
+item	Goblin_Painting_Fail	Goblin Painting: The Failed Excursions
+item	Goblin_Painting_Fail_Replica	Goblin Painting: The Failed Excursions (Replica)
+item	Goblin_Painting_ForgottenTemple	Goblin Painting: The Strange Place
+item	Goblin_Painting_ForgottenTemple_Replica	Goblin Painting: The Strange Place (Replica)
+item	Goblin_Painting_Orbis	Goblin Painting: The Veil of Void
+item	Goblin_Painting_Orbis_Replica	Goblin Painting: The Veil of Void (Replica)
+item	Goblin_Painting_Portal	Goblin Painting: The Traveling Goblin
+item	Goblin_Painting_Portal_Replica	Goblin Painting: The Traveling Goblin (Replica)
+item	Goblin_Painting_Repair	Goblin Painting: The Required Repair
+item	Goblin_Painting_Repair_Replica	Goblin Painting: The Required Repair (Replica)
+item	GoblinLab_Console	Goblin Breach Console
+item	GoblinLab_Fragment_Portal	The Goblin Gateway
+item	GoblinLab_Power_Switch	Goblin Power Generator
+item	GoblinLab_Teleporter	[TMP] Goblin Lab Teleporter
+item	GoblinLab_Tinkering_Bench_Fixed	Goblin Tinkerer's Workbench
+item	GoblinLab_Tinkering_Bench_Recipeset_A	Boiler
+item	GoblinLab_Tinkering_Bench_Recipeset_B	Engine
+item	GoblinLab_Tinkering_Bench_Recipeset_C	Compressor
 item	Greenscreen	Green Screen
 item	Halloween_Basket_Pumpkin	Halloween Pumpkin Basket
 item	Halloween_Basket_Straw	Halloween Straw Basket
@@ -891,6 +973,9 @@ item	Halloween_Wagon	Halloween Wagon
 item	Hub_Portal_Default	Exploration Worldgen Portal
 item	Hub_Portal_Flat	Flat Worldgen Portal
 item	Hub_Portal_Zone3_Taiga1	Zone 3 Taiga Portal
+item	Hunt_Clawmark	Claw Marks
+item	Hunt_Footprint	Predator Tracks
+item	Hunt_Trap	[TMP] Voidheart Bear Trap
 item	Ingredient_Bar_Adamantite	Adamantite Ingot
 item	Ingredient_Bar_Bronze	Bronze Ingot
 item	Ingredient_Bar_Cobalt	Cobalt Ingot
@@ -919,9 +1004,12 @@ item	Ingredient_Crystal_Green	Green Crystal Shards
 item	Ingredient_Crystal_Pink	Pink Crystal Shards
 item	Ingredient_Crystal_Purple	Purple Crystal Shards
 item	Ingredient_Crystal_Red	Red Crystal Shards
+item	Ingredient_Crystal_Void	Void Crystal Shards
 item	Ingredient_Crystal_White	White Crystal Shards
 item	Ingredient_Crystal_Yellow	Yellow Crystal Shards
+item	Ingredient_Deep_Resource	Bundled Treasure
 item	Ingredient_Dough	Dough
+item	Ingredient_Enkindled_Resource	Enkindled Sigil
 item	Ingredient_Fabric_Scrap_Cindercloth	Cindercloth Scraps
 item	Ingredient_Fabric_Scrap_Cotton	Cotton Scraps
 item	Ingredient_Fabric_Scrap_Linen	Linen Scraps
@@ -936,7 +1024,10 @@ item	Ingredient_Feathers_Light	White Feathers
 item	Ingredient_Feathers_Red	Red Feathers
 item	Ingredient_Fibre	Plant Fiber
 item	Ingredient_Fire_Essence	Essence of Fire
+item	Ingredient_Fishbone	Fishbone
 item	Ingredient_Flour	Flour
+item	Ingredient_Gadget_Assembly	Dubious Assembly
+item	Ingredient_Gobliterator_Core	Gobliterator Core
 item	Ingredient_Hay	Hay Bale
 item	Ingredient_Hide_Dark	Dark Hide
 item	Ingredient_Hide_Heavy	Heavy Hide
@@ -961,10 +1052,13 @@ item	Ingredient_Lightning_Essence	Essence of Lightning
 item	Ingredient_Motes_Light	Motes of Light
 item	Ingredient_Poop	Poop
 item	Ingredient_Powder_Boom	Boom Powder
+item	Ingredient_Rune_Shard	Runestone Shard
 item	Ingredient_Sac_Venom	Venom Sac
 item	Ingredient_Salt	Salt
+item	Ingredient_Scraps	Scraps
 item	Ingredient_Sinue_Cindersinue	Cindersinew
 item	Ingredient_Spices	Spices
+item	Ingredient_Spider_Silk	Spider Silk
 item	Ingredient_Stick	Stick
 item	Ingredient_Strap_Leather	Leather Strap
 item	Ingredient_Stud_Iron	Iron Stud
@@ -972,61 +1066,97 @@ item	Ingredient_Tree_Bark	Tree Bark
 item	Ingredient_Tree_Sap	Tree Sap
 item	Ingredient_Void_Essence	Essence of the Void
 item	Ingredient_Voidheart	Voidheart
+item	Ingredient_Voidtaken_Grizzly_Hide	Voidtaken Grizzly Hide
 item	Ingredient_Water_Essence	Essence of Water
 item	Instance_Gateway	Instance Gateway
+item	Klops_Away_Sign	CLOSED
 item	Kweebec_Ancient	Kweebec Ancient
 item	Launchpad	Launch Platform
 item	Leave_Instance	Leave Instance
 item	Lobby_Wall_Poster_Small01	Small Wall Poster
 item	Lobby_Wall_Poster01	Wall Poster
+item	Lore_Note_Died_Improperly	The Ones Who Didn't Die Properly
+item	Lore_Note_Enkindled_Journal_Rite	Old Enkindled Journal: The Rite
+item	Lore_Note_Enkindled_Journal_Vermin	Old Enkindled Journal: Vermin
+item	Lore_Note_Enkindled_Ledger_Trade	Enkindled Trade Ledger
+item	Lore_Note_Enkindled_Letter_Workshops	Enkindled Letter: Workshops of War
+item	Lore_Note_Enkindled_Research_Gateways	Torn Enkindled Research: Strange Gateways
+item	Lore_Note_Goblin_Commission_Abandoned_Parts	Goblin Commission: Abandoned Parts
+item	Lore_Note_Goblin_Feastmaster_Menu	Feastmaster's Menu of the Day
+item	Lore_Note_Goblin_Musings_Too_Heavy	Goblin Musings: Too Heavy
+item	Lore_Note_Goblin_Musings_Translocation	Goblin Musings: Magical Translocation
+item	Lore_Note_Goblin_Poem	Goblin Poem
+item	Lore_Note_Goblin_Why_Purple	Why Purple?
 item	Media_RemoteControl	Media Remote Control
 item	Memory_Particle	Memory
-item	Metal_Bronze	Bronze
-item	Metal_Bronze_Decorative	Bronze - Decorative
-item	Metal_Bronze_Fence	Bronze - Fence
-item	Metal_Bronze_Gutter_Corner	Bronze Gutter - Right Corner
-item	Metal_Bronze_Gutter_Horizontal	Bronze Gutter - Horizontal
-item	Metal_Bronze_Gutter_Vertical	Bronze Gutter - Vertical
-item	Metal_Bronze_Gutter_WaterFilter	Bronze Gutter - Water Filter
-item	Metal_Bronze_Half	Bronze - Half Slab
-item	Metal_Bronze_Ornate	Bronze - Ornate
-item	Metal_Bronze_Pipe_Chimney	Bronze Pipe - Chimney
-item	Metal_Bronze_Pipe_Corner	Bronze Pipe - Corner
-item	Metal_Bronze_Pipe_Large	Bronze Pipe - Large
-item	Metal_Bronze_Pipe_Large_Corner	Bronze Pipe - Large Corner
-item	Metal_Bronze_Pipe_Large_Mouthpiece	Bronze Pipe - Large Mouthpiece
-item	Metal_Bronze_Pipe_Long	Bronze Pipe - Long
-item	Metal_Bronze_Pipe_Short	Bronze Pipe - Short
-item	Metal_Bronze_Roof	Bronze Roof - Sloped
-item	Metal_Bronze_Roof_Flat	Bronze Roof - Flat
-item	Metal_Bronze_Roof_Shallow	Bronze Roof - Shallow
-item	Metal_Bronze_Roof_Steep	Bronze Roof - Steep
-item	Metal_Bronze_Smooth	Bronze - Smooth
-item	Metal_Bronze_Smooth_Half	Bronze - Smooth Half Slab
-item	Metal_Bronze_Stairs	Bronze - Stairs
-item	Metal_Copper	Copper
-item	Metal_Copper_Decorative	Copper - Decorative
-item	Metal_Copper_Fence	Copper - Fence
-item	Metal_Copper_Gutter_Corner	Copper Gutter - Right Corner
-item	Metal_Copper_Gutter_Horizontal	Copper Gutter - Horizontal
-item	Metal_Copper_Gutter_Vertical	Copper Gutter - Vertical
-item	Metal_Copper_Gutter_WaterFilter	Copper Gutter - Water Filter
-item	Metal_Copper_Half	Copper - Half Slab
-item	Metal_Copper_Ornate	Copper - Ornate
-item	Metal_Copper_Pipe_Chimney	Copper Pipe - Chimney
-item	Metal_Copper_Pipe_Corner	Copper Pipe - Corner
-item	Metal_Copper_Pipe_Large	Copper Pipe - Large
-item	Metal_Copper_Pipe_Large_Corner	Copper Pipe - Large Corner
-item	Metal_Copper_Pipe_Large_Mouthpiece	Copper Pipe - Large Mouthpiece
-item	Metal_Copper_Pipe_Long	Copper Pipe - Long
-item	Metal_Copper_Pipe_Short	Copper Pipe - Short
-item	Metal_Copper_Roof	Copper Roof - Sloped
-item	Metal_Copper_Roof_Flat	Copper Roof - Flat
-item	Metal_Copper_Roof_Shallow	Copper Roof - Shallow
-item	Metal_Copper_Roof_Steep	Copper Roof - Steep
-item	Metal_Copper_Smooth	Copper - Smooth
-item	Metal_Copper_Smooth_Half	Copper - Smooth Half Slab
-item	Metal_Copper_Stairs	Copper - Stairs
+item	Metal_Bronze	Cybercity Bronze
+item	Metal_Bronze_Decorative	Cybercity Bronze - Decorative
+item	Metal_Bronze_Fence	Cybercity Bronze - Fence
+item	Metal_Bronze_Half	Cybercity Bronze - Half Slab
+item	Metal_Bronze_Ornate	Cybercity Bronze - Ornate
+item	Metal_Bronze_Pipe_Chimney	Cybercity Bronze Pipe - Chimney
+item	Metal_Bronze_Pipe_Corner	Cybercity Bronze Pipe - Corner
+item	Metal_Bronze_Pipe_Large	Cybercity Bronze Pipe - Large
+item	Metal_Bronze_Pipe_Large_Corner	Cybercity Bronze Pipe - Large Corner
+item	Metal_Bronze_Pipe_Large_Mouthpiece	Cybercity Bronze Pipe - Large Mouthpiece
+item	Metal_Bronze_Pipe_Long	Cybercity Bronze Pipe - Long
+item	Metal_Bronze_Pipe_Short	Cybercity Bronze Pipe - Short
+item	Metal_Bronze_Roof	Cybercity Bronze Roof - Sloped
+item	Metal_Bronze_Roof_Flat	Cybercity Bronze Roof - Flat
+item	Metal_Bronze_Roof_Shallow	Cybercity Bronze Roof - Shallow
+item	Metal_Bronze_Roof_Steep	Cybercity Bronze Roof - Steep
+item	Metal_Bronze_Smooth	Cybercity Bronze - Smooth
+item	Metal_Bronze_Smooth_Half	Cybercity Bronze - Smooth Half Slab
+item	Metal_Bronze_Stairs	Cybercity Bronze - Stairs
+item	Metal_Copper	Cybercity Copper
+item	Metal_Copper_Decorative	Cybercity Copper - Decorative
+item	Metal_Copper_Fence	Cybercity Copper - Fence
+item	Metal_Copper_Half	Cybercity Copper - Half Slab
+item	Metal_Copper_Ornate	Cybercity Copper - Ornate
+item	Metal_Copper_Pipe_Chimney	Cybercity Copper Pipe - Chimney
+item	Metal_Copper_Pipe_Corner	Cybercity Copper Pipe - Corner
+item	Metal_Copper_Pipe_Large	Cybercity Copper Pipe - Large
+item	Metal_Copper_Pipe_Large_Corner	Cybercity Copper Pipe - Large Corner
+item	Metal_Copper_Pipe_Large_Mouthpiece	Cybercity Copper Pipe - Large Mouthpiece
+item	Metal_Copper_Pipe_Long	Cybercity Copper Pipe - Long
+item	Metal_Copper_Pipe_Short	Cybercity Copper Pipe - Short
+item	Metal_Copper_Roof	Cybercity Copper Roof - Sloped
+item	Metal_Copper_Roof_Flat	Cybercity Copper Roof - Flat
+item	Metal_Copper_Roof_Shallow	Cybercity Copper Roof - Shallow
+item	Metal_Copper_Roof_Steep	Cybercity Copper Roof - Steep
+item	Metal_Copper_Smooth	Cybercity Copper - Smooth
+item	Metal_Copper_Smooth_Half	Cybercity Copper - Smooth Half Slab
+item	Metal_Copper_Stairs	Cybercity Copper - Stairs
+item	Metal_Goblin_Iron	Goblin Iron
+item	Metal_Goblin_Iron_Bars	Goblin Iron Bars
+item	Metal_Goblin_Iron_Bars_Corner	Goblin Iron Bars - Corner
+item	Metal_Goblin_Iron_Bars_Platforms	Goblin Iron Bars - Horizontal
+item	Metal_Goblin_Iron_Chain_Small	Goblin Iron Chain - Small
+item	Metal_Goblin_Iron_Chains	Goblin Iron Chain - Sloped
+item	Metal_Goblin_Iron_Chains_Vertical	Goblin Iron Chain
+item	Metal_Goblin_Iron_Decorative	Goblin Iron - Decorative
+item	Metal_Goblin_Iron_Fence	Goblin Iron - Fence
+item	Metal_Goblin_Iron_Half	Goblin Iron - Half Slab
+item	Metal_Goblin_Iron_Ornate	Goblin Iron - Ornate
+item	Metal_Goblin_Iron_Pipe_Chimney	Goblin Iron Pipe - Chimney
+item	Metal_Goblin_Iron_Pipe_Corner	Goblin Iron Pipe - Corner
+item	Metal_Goblin_Iron_Pipe_Glowy	Glowing Goblin Iron Pipe
+item	Metal_Goblin_Iron_Pipe_Large	Goblin Iron Pipe - Large
+item	Metal_Goblin_Iron_Pipe_Large_Corner	Goblin Iron Pipe - Large Corner
+item	Metal_Goblin_Iron_Pipe_Large_Glowy	Glowing Goblin Iron Pipe - Large
+item	Metal_Goblin_Iron_Pipe_Large_Glowy_Corner	Glowing Goblin Iron Pipe - Large Corner
+item	Metal_Goblin_Iron_Pipe_Large_Glowy_Mouthpiece	Glowing Goblin Iron Pipe - Large Mouthpiece
+item	Metal_Goblin_Iron_Pipe_Large_Mouthpiece	Goblin Iron Pipe - Large Mouthpiece
+item	Metal_Goblin_Iron_Pipe_Long	Goblin Iron Pipe - Long
+item	Metal_Goblin_Iron_Pipe_Short	Goblin Iron Pipe - Short
+item	Metal_Goblin_Iron_Roof	Goblin Iron Roof - Sloped
+item	Metal_Goblin_Iron_Roof_Flat	Goblin Iron Roof - Flat
+item	Metal_Goblin_Iron_Roof_Shallow	Goblin Iron Roof - Shallow
+item	Metal_Goblin_Iron_Roof_Steep	Goblin Iron Roof - Steep
+item	Metal_Goblin_Iron_Smooth	Goblin Iron - Smooth
+item	Metal_Goblin_Iron_Smooth_Half	Goblin Iron - Smooth Half Slab
+item	Metal_Goblin_Iron_Stack	Stack of Goblin Iron Bars
+item	Metal_Goblin_Iron_Stairs	Goblin Iron - Stairs
 item	Metal_Gold_Pipe_Chimney	Gold Pipe - Chimney
 item	Metal_Gold_Pipe_Corner	Gold Pipe - Corner
 item	Metal_Gold_Pipe_Large	Gold Pipe - Large
@@ -1034,54 +1164,82 @@ item	Metal_Gold_Pipe_Large_Corner	Gold Pipe - Large Corner
 item	Metal_Gold_Pipe_Large_Mouthpiece	Gold Pipe - Large Mouthpiece
 item	Metal_Gold_Pipe_Long	Gold Pipe - Long
 item	Metal_Gold_Pipe_Short	Gold Pipe - Short
-item	Metal_Iron	Iron
-item	Metal_Iron_Decorative	Iron - Decorative
-item	Metal_Iron_Fence	Iron - Fence
-item	Metal_Iron_Gutter_Corner	Iron Gutter - Right Corner
-item	Metal_Iron_Gutter_Horizontal	Iron Gutter - Horizontal
-item	Metal_Iron_Gutter_Vertical	Iron Gutter - Vertical
-item	Metal_Iron_Gutter_WaterFilter	Iron Gutter - Water Filter
-item	Metal_Iron_Half	Iron - Half Slab
-item	Metal_Iron_Ornate	Iron - Ornate
-item	Metal_Iron_Pipe_Chimney	Iron Pipe - Chimney
-item	Metal_Iron_Pipe_Corner	Iron Pipe - Corner
-item	Metal_Iron_Pipe_Large	Iron Pipe - Large
-item	Metal_Iron_Pipe_Large_Corner	Iron Pipe - Large Corner
-item	Metal_Iron_Pipe_Large_Mouthpiece	Iron Pipe - Large Mouthpiece
-item	Metal_Iron_Pipe_Long	Iron Pipe - Long
-item	Metal_Iron_Pipe_Short	Iron Pipe - Short
-item	Metal_Iron_Roof	Iron Roof - Sloped
-item	Metal_Iron_Roof_Flat	Iron Roof - Flat
-item	Metal_Iron_Roof_Shallow	Iron Roof - Shallow
-item	Metal_Iron_Roof_Steep	Iron Roof - Steep
-item	Metal_Iron_Smooth	Iron - Smooth
-item	Metal_Iron_Smooth_Half	Iron - Smooth Half Slab
-item	Metal_Iron_Stairs	Iron - Stairs
-item	Metal_Zinc	Zinc
-item	Metal_Zinc_Decorative	Zinc - Decorative
-item	Metal_Zinc_Fence	Zinc - Fence
-item	Metal_Zinc_Gutter_Corner	Zinc Gutter - Right Corner
-item	Metal_Zinc_Gutter_Horizontal	Zinc Gutter - Horizontal
-item	Metal_Zinc_Gutter_Vertical	Zinc Gutter - Vertical
-item	Metal_Zinc_Gutter_WaterFilter	Zinc Gutter - Water Filter
-item	Metal_Zinc_Half	Zinc - Half Slab
-item	Metal_Zinc_Ornate	Zinc - Ornate
-item	Metal_Zinc_Pipe_Chimney	Zinc Pipe - Chimney
-item	Metal_Zinc_Pipe_Corner	Zinc Pipe - Corner
-item	Metal_Zinc_Pipe_Large	Zinc Pipe - Large
-item	Metal_Zinc_Pipe_Large_Corner	Zinc Pipe - Large Corner
-item	Metal_Zinc_Pipe_Large_Mouthpiece	Zinc Pipe - Large Mouthpiece
-item	Metal_Zinc_Pipe_Long	Zinc Pipe - Long
-item	Metal_Zinc_Pipe_Short	Zinc Pipe - Short
-item	Metal_Zinc_Roof	Zinc Roof - Sloped
-item	Metal_Zinc_Roof_Flat	Zinc Roof - Flat
-item	Metal_Zinc_Roof_Shallow	Zinc Roof - Shallow
-item	Metal_Zinc_Roof_Steep	Zinc Roof - Steep
-item	Metal_Zinc_Smooth	Zinc - Smooth
-item	Metal_Zinc_Smooth_Half	Zinc - Smooth Half Slab
-item	Metal_Zinc_Stairs	Zinc - Stairs
+item	Metal_Iron	Cybercity Iron
+item	Metal_Iron_Decorative	Cybercity Iron - Decorative
+item	Metal_Iron_Fence	Cybercity Iron - Fence
+item	Metal_Iron_Half	Cybercity Iron - Half Slab
+item	Metal_Iron_Ornate	Cybercity Iron - Ornate
+item	Metal_Iron_Pipe_Chimney	Cybercity Iron Pipe - Chimney
+item	Metal_Iron_Pipe_Corner	Cybercity Iron Pipe - Corner
+item	Metal_Iron_Pipe_Large	Cybercity Iron Pipe - Large
+item	Metal_Iron_Pipe_Large_Corner	Cybercity Iron Pipe - Large Corner
+item	Metal_Iron_Pipe_Large_Mouthpiece	Cybercity Iron Pipe - Large Mouthpiece
+item	Metal_Iron_Pipe_Long	Cybercity Iron Pipe - Long
+item	Metal_Iron_Pipe_Short	Cybercity Iron Pipe - Short
+item	Metal_Iron_Roof	Cybercity Iron Roof - Sloped
+item	Metal_Iron_Roof_Flat	Cybercity Iron Roof - Flat
+item	Metal_Iron_Roof_Shallow	Cybercity Iron Roof - Shallow
+item	Metal_Iron_Roof_Steep	Cybercity Iron Roof - Steep
+item	Metal_Iron_Smooth	Cybercity Iron - Smooth
+item	Metal_Iron_Smooth_Half	Cybercity Iron - Smooth Half Slab
+item	Metal_Iron_Stairs	Cybercity Iron - Stairs
+item	Metal_Orbis_Copper	Enkindled Copper
+item	Metal_Orbis_Copper_Decorative	Enkindled Copper - Decorative
+item	Metal_Orbis_Copper_Fence	Enkindled Copper - Bars
+item	Metal_Orbis_Copper_Half	Enkindled Copper - Half Slab
+item	Metal_Orbis_Copper_Ornate	Enkindled Copper - Ornate
+item	Metal_Orbis_Copper_Pipe_Chimney	Enkindled Copper Pipe - Chimney
+item	Metal_Orbis_Copper_Pipe_Corner	Enkindled Copper Pipe - Corner
+item	Metal_Orbis_Copper_Pipe_Large	Enkindled Copper Pipe - Large
+item	Metal_Orbis_Copper_Pipe_Large_Corner	Enkindled Copper Pipe - Large Corner
+item	Metal_Orbis_Copper_Pipe_Large_Mouthpiece	Enkindled Copper Pipe - Large Mouthpiece
+item	Metal_Orbis_Copper_Pipe_Long	Enkindled Copper Pipe - Long
+item	Metal_Orbis_Copper_Pipe_Short	Enkindled Copper Pipe - Short
+item	Metal_Orbis_Copper_Roof	Enkindled Copper Roof - Sloped
+item	Metal_Orbis_Copper_Roof_Flat	Enkindled Copper Roof - Flat
+item	Metal_Orbis_Copper_Roof_Shallow	Enkindled Copper Roof - Shallow
+item	Metal_Orbis_Copper_Roof_Steep	Enkindled Copper Roof - Steep
+item	Metal_Orbis_Copper_Smooth	Enkindled Copper - Smooth
+item	Metal_Orbis_Copper_Smooth_Half	Enkindled Copper - Smooth Half Slab
+item	Metal_Orbis_Copper_Stairs	Enkindled Copper - Stairs
+item	Metal_Orbis_Iron	Enkindled Iron
+item	Metal_Orbis_Iron_Decorative	Enkindled Iron - Decorative
+item	Metal_Orbis_Iron_Half	Enkindled Iron - Half Slab
+item	Metal_Orbis_Iron_Ornate	Enkindled Iron - Ornate
+item	Metal_Orbis_Iron_Pipe_Chimney	Enkindled Iron Pipe - Chimney
+item	Metal_Orbis_Iron_Pipe_Corner	Enkindled Iron Pipe - Corner
+item	Metal_Orbis_Iron_Pipe_Large	Enkindled Iron Pipe - Large
+item	Metal_Orbis_Iron_Pipe_Large_Corner	Enkindled Iron Pipe - Large Corner
+item	Metal_Orbis_Iron_Pipe_Large_Mouthpiece	Enkindled Iron Pipe - Large Mouthpiece
+item	Metal_Orbis_Iron_Pipe_Long	Enkindled Iron Pipe - Long
+item	Metal_Orbis_Iron_Pipe_Short	Enkindled Iron Pipe - Short
+item	Metal_Orbis_Iron_Roof	Enkindled Iron Roof - Sloped
+item	Metal_Orbis_Iron_Roof_Flat	Enkindled Iron Roof - Flat
+item	Metal_Orbis_Iron_Roof_Shallow	Enkindled Iron Roof - Shallow
+item	Metal_Orbis_Iron_Roof_Steep	Enkindled Iron Roof - Steep
+item	Metal_Orbis_Iron_Smooth	Enkindled Iron - Smooth
+item	Metal_Orbis_Iron_Smooth_Half	Enkindled Iron - Smooth Half Slab
+item	Metal_Orbis_Iron_Stairs	Enkindled Iron - Stairs
+item	Metal_Zinc	Cybercity Zinc
+item	Metal_Zinc_Decorative	Cybercity Zinc - Decorative
+item	Metal_Zinc_Fence	Cybercity Zinc - Fence
+item	Metal_Zinc_Half	Cybercity Zinc - Half Slab
+item	Metal_Zinc_Ornate	Cybercity Zinc - Ornate
+item	Metal_Zinc_Pipe_Chimney	Cybercity Zinc Pipe - Chimney
+item	Metal_Zinc_Pipe_Corner	Cybercity Zinc Pipe - Corner
+item	Metal_Zinc_Pipe_Large	Cybercity Zinc Pipe - Large
+item	Metal_Zinc_Pipe_Large_Corner	Cybercity Zinc Pipe - Large Corner
+item	Metal_Zinc_Pipe_Large_Mouthpiece	Cybercity Zinc Pipe - Large Mouthpiece
+item	Metal_Zinc_Pipe_Long	Cybercity Zinc Pipe - Long
+item	Metal_Zinc_Pipe_Short	Cybercity Zinc Pipe - Short
+item	Metal_Zinc_Roof	Cybercity Zinc Roof - Sloped
+item	Metal_Zinc_Roof_Flat	Cybercity Zinc Roof - Flat
+item	Metal_Zinc_Roof_Shallow	Cybercity Zinc Roof - Shallow
+item	Metal_Zinc_Roof_Steep	Cybercity Zinc Roof - Steep
+item	Metal_Zinc_Smooth	Cybercity Zinc - Smooth
+item	Metal_Zinc_Smooth_Half	Cybercity Zinc - Smooth Half Slab
+item	Metal_Zinc_Stairs	Cybercity Zinc - Stairs
 item	Objective_Bounty	Bounty
-item	Objective_Treasure_Map	Treasure Map
 item	Ore_Adamantite	Adamantite Ore
 item	Ore_Adamantite_Basalt	Adamantite Ore - Basalt
 item	Ore_Adamantite_Magma	Adamantite Ore - Magma
@@ -1351,7 +1509,7 @@ item	Plant_Crop_Mushroom_Flatcap_Blue	Blue Flatcap Mushroom
 item	Plant_Crop_Mushroom_Flatcap_Green	Green Flatcap Mushroom
 item	Plant_Crop_Mushroom_Glowing_Blue	Blue Glowing Mushroom
 item	Plant_Crop_Mushroom_Glowing_Green	Green Glowing Mushroom
-item	Plant_Crop_Mushroom_Glowing_Orange	Orange Glowing Mushroom
+item	Plant_Crop_Mushroom_Glowing_Orange	Baby Boomshrooms
 item	Plant_Crop_Mushroom_Glowing_Purple	Purple Glowing Mushroom
 item	Plant_Crop_Mushroom_Glowing_Red	Red Glowing Mushroom
 item	Plant_Crop_Mushroom_Glowing_Violet	Violet Glowing Mushroom
@@ -1586,12 +1744,14 @@ item	Plant_Leaves_Petrified	Petrified Pine Leaves
 item	Plant_Leaves_Poisoned	Poisoned Leaves
 item	Plant_Leaves_Poisoned_Floor	Poisoned Roots
 item	Plant_Leaves_Redwood	Redwood Leaves
+item	Plant_Leaves_Sadwillow	Sadwillow Leaves
 item	Plant_Leaves_Sallow	Sallow Leaves
 item	Plant_Leaves_Snow	Snowy Leaves
 item	Plant_Leaves_Spiral	Spiral Leaves
 item	Plant_Leaves_Stormbark	Stormbark Leaves
-item	Plant_Leaves_Windwillow	Willow Leaves
+item	Plant_Leaves_Windwillow	Windwillow Leaves
 item	Plant_Leaves_Wisteria_Wild	Wild Wisteria Leaves
+item	Plant_Liana_Void	Void Liana
 item	Plant_Moss_Block_Blue	Blue Moss Block
 item	Plant_Moss_Block_Green	Green Moss Block
 item	Plant_Moss_Block_Green_Dark	Dark Green Moss Block
@@ -1673,12 +1833,13 @@ item	Plant_Sapling_Palo	Palo Sapling
 item	Plant_Sapling_Petrified	Petrified Pine Sapling
 item	Plant_Sapling_Poisoned	Poisoned Sapling
 item	Plant_Sapling_Redwood	Redwood Sapling
+item	Plant_Sapling_Sadwillow	Sadwillow Sapling
 item	Plant_Sapling_Sallow	Sallow Sapling
 item	Plant_Sapling_Spiral	Spiral Sapling
 item	Plant_Sapling_Spruce	Spruce Sapling
 item	Plant_Sapling_Spruce_Frozen	Frozen Spruce Sapling
 item	Plant_Sapling_Stormbark	Stormbark Sapling
-item	Plant_Sapling_Windwillow	Willow Sapling
+item	Plant_Sapling_Windwillow	Windwillow Sapling
 item	Plant_Sapling_Wisteria_Wild	Wild Wisteria Sapling
 item	Plant_Seaweed_Arid_Red	Red Arid Seaweed
 item	Plant_Seaweed_Arid_Short	Short Arid Seaweed
@@ -1761,6 +1922,7 @@ item	Plant_Seeds_Pumpkin_Eternal	Pumpkin Seed Bag (Eternal)
 item	Plant_Seeds_Redwood	Redwood Seed Bag
 item	Plant_Seeds_Rice	Rice Seed Bag
 item	Plant_Seeds_Rice_Eternal	Rice Seed Bag (Eternal)
+item	Plant_Seeds_Sadwillow	Sadwillow Seed Bag
 item	Plant_Seeds_Sallow	Sallow Seed Bag
 item	Plant_Seeds_Spiral	Spiral Seed Bag
 item	Plant_Seeds_Stamina1	Storm Thistle Seed Bag
@@ -1776,7 +1938,7 @@ item	Plant_Seeds_Turnip_Eternal	Turnip Seed Bag (Eternal)
 item	Plant_Seeds_Wheat	Wheat Seed Bag
 item	Plant_Seeds_Wheat_Eternal	Wheat Seed Bag (Eternal)
 item	Plant_Seeds_Wild	Wild Grass Seed Bag
-item	Plant_Seeds_Willow	Willow Seed Bag
+item	Plant_Seeds_Willow	Windwillow Seed Bag
 item	Plant_Seeds_Wisteria_Wild	Wild Wisteria Seed Bag
 item	Plant_Sunflower_Stage_0	Sunflower Seeds
 item	Plant_Test_Tree_Stage_0	Test Tree 0
@@ -1788,6 +1950,7 @@ item	Plant_Vine_Liana	Liana
 item	Plant_Vine_Liana_End	Liana - End
 item	Plant_Vine_Red_Hanging	Carmine Hanging Liana
 item	Plant_Vine_Rug	Vine Rug
+item	Plant_Vine_Sadwillow_Hanging	Sadwillow Weeps
 item	Plant_Vine_Thick_Roots	Thick Vine Roots
 item	Plant_Vine_Thick_Vertical	Thick Vine
 item	Plant_Vine_Wall	Ivy
@@ -1804,10 +1967,12 @@ item	Portal_Pad_Wind	Warp Platform
 item	Portal_Pad_Zone2	Dungeon Portal
 item	Portal_Prefab	Prefab Portal
 item	Portal_Return	Return Portal
+item	PortalKey_Goblin_Breach	Fragment: Orbis - The Guttering Hollows
 item	PortalKey_Hederas_Lair	Fragment: Orbis - The Dread Wade
 item	PortalKey_Henges	Fragment: Orbis - Silent Henges
 item	PortalKey_Jungles	Fragment: Orbis - Tal'Kesi Refuge
 item	PortalKey_Taiga	Fragment: Orbis - Dragonspire Weald
+item	PortalKey_The_Deepworks	Fragment: Orbis - The Deepworks
 item	PortalKey_Windsurf_Valley	Fragment: Orbis - Windrider Valley
 item	Potion_Antidote	Antidote
 item	Potion_Empty	Empty Potion Bottle
@@ -1949,7 +2114,6 @@ item	Prototype_Softwood_Carpet_Side	Prototype - Softwood Planks Carpet Side
 item	Prototype_Softwood_Parquet	Prototype - Softwood Planks Top Parquet
 item	Prototype_Softwood_Roof_Gutter_Slope	Prototype - Softwood Roof - Gutter
 item	Prototype_Softwood_Tile	Prototype - Softwood Planks Top Tiles
-item	Prototype_Spider_Cocoon_Falling	[TMP] Prototype - Falling Spider Cocoon
 item	Prototype_Stone_Tile	Prototype - Stone - Top Tiles
 item	Prototype_Succulent_Hanging_One_Corner	Hanging Succulent One - Corner
 item	Prototype_Succulent_Hanging_One_End	Hanging Succulent One - End
@@ -2029,6 +2193,7 @@ item	Recipe_Book_Magic_Air	Air Grimoire
 item	Recipe_Book_Magic_Void	Void Grimoire
 item	Recipe_Page	Recipe Page
 item	RecipeItem	Recipe: {itemName}
+item	Rock_Anomaly_Shard_Void	Void Anomaly Crystal
 item	Rock_Aqua	Aqua Stone
 item	Rock_Aqua_Beam	Aqua Stone - Beam
 item	Rock_Aqua_Brick	Aqua Brick
@@ -2186,6 +2351,10 @@ item	Rock_Crystal_Red	Red Crystal
 item	Rock_Crystal_Red_Large	Red Crystal - Large
 item	Rock_Crystal_Red_Medium	Red Crystal - Medium
 item	Rock_Crystal_Red_Small	Red Crystal - Small
+item	Rock_Crystal_Void_Block	[TMP]Void Crystal
+item	Rock_Crystal_Void_Large	[TMP]Void Crystal - Large
+item	Rock_Crystal_Void_Medium	[TMP]Void Crystal - Medium
+item	Rock_Crystal_Void_Small	[TMP]Void Crystal - Small
 item	Rock_Crystal_White	White Crystal
 item	Rock_Crystal_White_Large	White Crystal - Large
 item	Rock_Crystal_White_Medium	White Crystal - Medium
@@ -2240,6 +2409,8 @@ item	Rock_Iridescent_Processed_Ornate_Half	Iridescent Processed Brick - Ornate H
 item	Rock_Iridescent_Processed_Ornate_Horizontal	Iridescent Processed Brick - Ornate Horizontal
 item	Rock_Iridescent_Processed_Ornate_Stairs	Iridescent Processed Brick - Ornate Stairs
 item	Rock_Iridescent_Stairs	Iridescent Rock - Stairs
+item	Rock_Kenolite	Kenolite Rock
+item	Rock_Kenolite_Stalactite_Large	Kenolite Stalactite - Large
 item	Rock_Ledgestone_Brick	Ledgestone Brick
 item	Rock_Ledgestone_Brick_Beam	Ledgestone Brick - Beam
 item	Rock_Ledgestone_Brick_Decorative	Ledgestone Brick - Decorative
@@ -2672,6 +2843,7 @@ item	Rock_Volcanic_Half	Volcanic Rock - Half Slab
 item	Rock_Volcanic_Stairs	Volcanic Rock - Stairs
 item	Rock_Volcanic_Stalactite_Large	Volcanic Stalactite - Large
 item	Rock_Volcanic_Stalactite_Small	Volcanic Stalactite - Small
+item	Rocket_Boots	Rocket Boots
 item	Rubble_Aqua	Aqua Rubble
 item	Rubble_Aqua_Medium	Aqua Rubble - Medium
 item	Rubble_Basalt	Basalt Rubble
@@ -2708,6 +2880,26 @@ item	Rubble_Stone_Mossy	Mossy Stone Rubble
 item	Rubble_Stone_Mossy_Medium	Mossy Stone Rubble - Medium
 item	Rubble_Volcanic	Volcanic Rubble
 item	Rubble_Volcanic_Medium	Volcanic Rubble - Medium
+item	Rune_Aoe_Up	Colossal
+item	Rune_ChainHook	Chain Hook
+item	Rune_ChargedShot	Charged Shot
+item	Rune_Convert_Lightning	Lightning Conversion
+item	Rune_Convert_Wind	Wind Conversion
+item	Rune_Damage_Up	Amplify Damage
+item	Rune_Duration_Up	Enduring
+item	Rune_Empty	Empty Runestone
+item	Rune_Enrage	Enrage
+item	Rune_Fireball	Fireball
+item	Rune_Fork	Splinter
+item	Rune_GroundSlam	Ground Slam
+item	Rune_PoisonImbue	Imbue Poison
+item	Rune_Quickening	Quickening
+item	Rune_Rend	Rend
+item	Rune_Ricochet	Rebound
+item	Rune_Thrift	Thrift
+item	Rune_WindStrike	Wind Strike
+item	Rune_Wither	Wither
+item	Scrap_Hook	Hook Anchor
 item	Soil_Aqua_Gravel	Aqua Gravel
 item	Soil_Aqua_Gravel_Half	Aqua Gravel - Half Slab
 item	Soil_Ash	Ashen Soil
@@ -2911,7 +3103,9 @@ item	Soil_Snow_Half	Snow - Half Slab
 item	Soil_Volcanic_Gravel	Volcanic Gravel
 item	Soil_Volcanic_Gravel_Half	Volcanic Gravel - Half Slab
 item	Spawn_Portal	Spawn Portal
+item	Spawn_Temple_Goblin_Fence	Goblin Electric Fence Spawner
 item	Spawner_Rat	Rat Spawner
+item	Spider_Cocoon_Falling	Prototype - Falling Spider Cocoon
 item	Survival_Trap_Grass	Grass Trap
 item	Survival_Trap_Snapjaw	Bear Trap
 item	Survival_Trap_Spike_Iron	Metal Spike Trap
@@ -2927,6 +3121,11 @@ item	Template_Crop_Stage_Start	Template Crop Start
 item	Template_Food	Template Food
 item	Template_Fruit	Template Fruit
 item	Template_Glider	Template Glider
+item	Template_Lore_Note	Template Lore Note
+item	Template_Lore_Note_Goblin_Journal_Open	Template Lore Note - Goblin Journal Open
+item	Template_Lore_Note_Goblin_Pages	Template Lore Note - Goblin Pages
+item	Template_Lore_Note_Pages_A	Template Lore Note - Pages A
+item	Template_Lore_Note_Pages_B	Template Lore Note - Pages B
 item	Template_Seeds	Template Seeds
 item	Template_Soil	Template Soil
 item	Template_Weapon_Battleaxe	Template Battleaxe
@@ -2943,9 +3142,11 @@ item	Test_Objective_Line_Interaction	Treasure Map
 item	Test_Pedestal	Test Pedestal
 item	Test_PlaceBlockProcedure	Test PlaceBlockProcedure
 item	Test_Spawn_Marker_Trigger	Test Spawn Marker Trigger
+item	Throwable_Explosive_Barrel	Goblin Boom Barrel
 item	Tinkering_Target_Dummy	Training Dummy
 item	Tool_Bark_Scraper	Bark Scraper
 item	Tool_Capture_Crate	Capture Crate
+item	Tool_Drill_Scrap	Scrap Drill
 item	Tool_Feedbag	Feed Bag
 item	Tool_Fertilizer	Fertilizer Bag
 item	Tool_Fertilizer_Crystal	Crystal Fertilizer Bag
@@ -2966,6 +3167,7 @@ item	Tool_Hoe_Copper	Copper Hoe
 item	Tool_Hoe_Crude	Crude Hoe
 item	Tool_Hoe_Iron	Iron Hoe
 item	Tool_Hoe_Thorium	Thorium Hoe
+item	Tool_Hookshot	Hookshot
 item	Tool_Map	Map
 item	Tool_Pickaxe_Adamantite	Adamantite Pickaxe
 item	Tool_Pickaxe_Cobalt	Cobalt Pickaxe
@@ -2978,6 +3180,7 @@ item	Tool_Pickaxe_Scrap	Scrap Pickaxe
 item	Tool_Pickaxe_Thorium	Thorium Pickaxe
 item	Tool_Pickaxe_Wood	Wooden Pickaxe
 item	Tool_Repair_Kit_Crude	Crude Repair Kit
+item	Tool_Repair_Kit_Goblin	Goblin Repair Kit
 item	Tool_Repair_Kit_Iron	Repair Kit
 item	Tool_Repair_Kit_Rare	Rare Repair Kit
 item	Tool_Sap_Shunt	Sap Shunt
@@ -2991,6 +3194,7 @@ item	Tool_Sickle_Copper	Copper Sickle
 item	Tool_Sickle_Crude	Crude Sickle
 item	Tool_Sickle_Iron	Iron Sickle
 item	Tool_Sickle_Steel_Rusty	Rusty Steel Sickle
+item	Tool_Spyglass	Spyglass
 item	Tool_Trap_Bait	Fish Bait (Wild)
 item	Tool_Watering_Can	Empty Watering Can
 item	Tool_Watering_Can_Full	Watering Can
@@ -3008,6 +3212,7 @@ item	Unknown	Unknown
 item	UpgradeBackpack_1	Unlock Backpack
 item	UpgradeBackpack_2	Backpack Upgrade I
 item	UpgradeBackpack_3	Backpack Upgrade II
+item	UpgradeBackpack_4	Backpack Upgrade III
 item	Utility_Bag_Seed	Seed Bag
 item	Utility_Helipack	Helipack
 item	Utility_Leather_Backpack	Leather Backpack
@@ -3015,6 +3220,42 @@ item	Utility_Leather_Medium_Backpack	Big Backpack
 item	Utility_Leather_Quiver	Leather Quiver
 item	Vehicle_Wood_Boat	Wooden Boat
 item	Vehicle_Wood_Raft	Wooden Raft
+item	VFX_Dungeon_Goblin_Bouncy_Mushroom	Goblin Bouncy Mushroom Spawner
+item	VFX_Dungeon_Goblin_Cauldron	Goblin Cauldron Spawner
+item	VFX_Dungeon_Goblin_Cave_Drips	Goblin Cave Drip Spawner
+item	VFX_Dungeon_Goblin_Cave_Drips_Stalactite	Goblin Cave Drip Stalactite Spawner
+item	VFX_Dungeon_Goblin_Electric_Fence	Goblin Electric Fence Spawner
+item	VFX_Dungeon_Goblin_Energy_Barrier	Goblin Energy Barrier Spawner
+item	VFX_Dungeon_Goblin_Leaking_Pipe	Goblin Leaking Pipe Spawner
+item	VFX_Dungeon_Goblin_Leaking_Pipe_Fast	Goblin Fast Leaking Pipe Spawner
+item	VFX_Dungeon_Goblin_Polluted_Water	Goblin Polluted Water Spawner
+item	VFX_Dungeon_Goblin_Polluted_Water_Small	Goblin Small Polluted Water Spawner
+item	VFX_Dungeon_Goblin_Puddle_Goo	Goblin Goo Puddle Spawner
+item	VFX_Dungeon_Goblin_Puddle_Slime	Goblin Slime Puddle Spawner
+item	VFX_Dungeon_Goblin_Puddle_Water	Goblin Water Puddle Spawner
+item	VFX_Dungeon_Goblin_Smoke_Pipe_Large	Goblin Large Smoke Pipe Spawner
+item	VFX_Dungeon_Goblin_Smoke_Pipe_Small	Goblin Small Smoke Pipe Spawner
+item	VFX_Dungeon_Goblin_Spores_Blue	Goblin Blue Spores Spawner
+item	VFX_Dungeon_Goblin_Spores_Green	Goblin Green Spores Spawner
+item	VFX_Dungeon_Goblin_Spores_Orange	Goblin Orange Spores Spawner
+item	VFX_Dungeon_Goblin_Spores_Orange_Dense	Goblin Dense Orange Spores Spawner
+item	VFX_Dungeon_Goblin_Spores_Purple	Goblin Purple Spores Spawner
+item	VFX_Dungeon_Goblin_Spores_Skylight	Goblin Skylight Spore Spawner
+item	VFX_Dungeon_Goblin_Stinky_Pile	Goblin Stinky Pile Spawner
+item	VFX_Dungeon_Goblin_Stinky_Pile_Small	Goblin Small Stinky Pile Spawner
+item	VFX_Dungeon_Goblin_Sun_Shafts_Large	Goblin Large Sun Shaft Spawner
+item	VFX_Dungeon_Goblin_Sun_Shafts_Small	Goblin Small Sun Shaft Spawner
+item	VFX_Dungeon_Goblin_Sun_Shafts_Tiny	Goblin Tiny Sun Shaft Spawner
+item	VFX_Dungeon_Goblin_Temple_Motes	Goblin Temple Motes Spawner
+item	VFX_Dungeon_Goblin_Temple_Motes_Floor	Goblin Temple Motes Floor Spawner
+item	VFX_Dungeon_Goblin_Toxic_Water	Goblin Toxic Water Spawner
+item	VFX_Dungeon_Goblin_Toxic_Water_Small	Goblin Small Toxic Water Spawner
+item	VFX_Dungeon_Goblin_Void_Cinematic_Portal	Goblin Void Cinematic Portal Spawner
+item	VFX_Dungeon_Goblin_Void_Motes_Cluster	Goblin Void Motes Cluster Spawner
+item	VFX_Dungeon_Goblin_Void_Rift	Goblin Void Rift Spawner
+item	VFX_Dungeon_Goblin_Void_Rift_Wind	Goblin Void Rift Wind Spawner
+item	VFX_Dungeon_Goblin_Water_Spout	Goblin Water Spout Spawner
+item	VFX_Dungeon_Goblin_Water_Spout_Splash	Goblin Water Spout Splash Spawner
 item	VoidInvasion_Portal	Void Invasion Portal
 item	Weapon_Arrow_Clearshot	Clearshot Arrow
 item	Weapon_Arrow_Crude	Crude Arrow
@@ -3036,6 +3277,7 @@ item	Weapon_Axe_Prisma	Prisma Axe
 item	Weapon_Axe_Stone_Trork	Stone Trork Axe
 item	Weapon_Axe_Thorium	Thorium Axe
 item	Weapon_Axe_Tribal	Tribal Axe
+item	Weapon_Bangstick	Bangstick
 item	Weapon_Battleaxe_Adamantite	Adamantite Battleaxe
 item	Weapon_Battleaxe_Cobalt	Cobalt Battleaxe
 item	Weapon_Battleaxe_Copper	Copper Battleaxe
@@ -3072,6 +3314,7 @@ item	Weapon_Club_Mithril	Mithril Club
 item	Weapon_Club_Onyxium	Onyxium Club
 item	Weapon_Club_Prisma	Prisma Club
 item	Weapon_Club_Scrap	Scrap Club
+item	Weapon_Club_Scrap_Washboard	Scrap Washboard Club
 item	Weapon_Club_Steel_Flail_Rusty	Rusty Steel Flail
 item	Weapon_Club_Stone_Trork	Stone Trork Club
 item	Weapon_Club_Thorium	Thorium Club
@@ -3105,10 +3348,12 @@ item	Weapon_Daggers_Onyxium	Onyxium Daggers
 item	Weapon_Daggers_Prisma	Prisma Daggers
 item	Weapon_Daggers_Stone_Trork	Stone Trork Daggers
 item	Weapon_Daggers_Thorium	Thorium Daggers
+item	Weapon_Daggers_Void_Crystal	Void Crystal Daggers
 item	Weapon_Dart_Tribal	Tribal Dart
 item	Weapon_Deployable_Healing_Totem	Healing Totem
 item	Weapon_Deployable_Slowness_Totem	Slowing Totem
 item	Weapon_Deployable_Turret	Deployable Turret
+item	Weapon_Flamethrower_Scrap	Scrap Flamethrower
 item	Weapon_Grenade_Frag	Frag Grenade
 item	Weapon_Gun	Gun
 item	Weapon_Gun_Blunderbuss	Blunderbuss
@@ -3126,8 +3371,12 @@ item	Weapon_Longsword_Katana	Katana
 item	Weapon_Longsword_Mithril	Mithril Longsword
 item	Weapon_Longsword_Onyxium	Onyxium Longsword
 item	Weapon_Longsword_Praetorian	Praetorian Longsword
-item	Weapon_Longsword_Praetorian_NPC	Skeleton Praetorian's Longsword
+item	Weapon_Longsword_Praetorian_Dual_NPC	Skeleton Praetorian's Dual Swords
+item	Weapon_Longsword_Praetorian_NPC	Skeleton Praetorian's Sword
 item	Weapon_Longsword_Prisma	Prisma Longsword
+item	Weapon_Longsword_Ruined_Giant	Giant Ruined Longsword
+item	Weapon_Longsword_Ruined_Giant_Dual_NPC	Revenant Guardian's Ruined Dual Swords
+item	Weapon_Longsword_Ruined_Giant_NPC	Revenant Guardian's Ruined Sword
 item	Weapon_Longsword_Scarab	Scarab Longsword
 item	Weapon_Longsword_Spectral	Spectral Longsword
 item	Weapon_Longsword_Stone_Trork	Stone Trork Longsword
@@ -3157,6 +3406,7 @@ item	Weapon_Shield_Orbis_Incandescent	Ancient Knight's Incandescent Shield
 item	Weapon_Shield_Orbis_Knight	Ancient Knight's Shield
 item	Weapon_Shield_Praetorian	Praetorian Shield
 item	Weapon_Shield_Prisma	Prisma Shield
+item	Weapon_Shield_Ruined_Giant	Giant Ruined Shield
 item	Weapon_Shield_Rusty	Rusty Shield
 item	Weapon_Shield_Scrap	Scrap Shield
 item	Weapon_Shield_Scrap_Spiked	Spiked Scrap Shield
@@ -3169,7 +3419,7 @@ item	Weapon_Shortbow_Cobalt	Cobalt Shortbow
 item	Weapon_Shortbow_Combat	Combat Shortbow
 item	Weapon_Shortbow_Copper	Copper Shortbow
 item	Weapon_Shortbow_Crude	Crude Shortbow
-item	Weapon_Shortbow_Doomed	Outlander Doomed Shortbow
+item	Weapon_Shortbow_Doomed	Doomed Outlander Shortbow
 item	Weapon_Shortbow_Flame	Flame Shortbow
 item	Weapon_Shortbow_Frost	Frost Shortbow
 item	Weapon_Shortbow_Iron	Iron Shortbow
@@ -3207,8 +3457,8 @@ item	Weapon_Spellbook_Grimoire_Brown	Brown Grimoire
 item	Weapon_Spellbook_Grimoire_Purple	Purple Grimoire
 item	Weapon_Spellbook_Rekindle_Embers	Grimoire: Rekindle Embers
 item	Weapon_Staff_Adamantite	Adamantite Staff
-item	Weapon_Staff_Bo_Bamboo	Bamboo Bo Staff
-item	Weapon_Staff_Bo_Wood	Wooden Bo Staff
+item	Weapon_Staff_Bo_Bamboo	Bamboo Bō Staff
+item	Weapon_Staff_Bo_Wood	Wooden Bō Staff
 item	Weapon_Staff_Bone	Bone Staff
 item	Weapon_Staff_Bronze	Bronze Staff
 item	Weapon_Staff_Cane	Cane
@@ -3225,7 +3475,9 @@ item	Weapon_Staff_Iron	Iron Staff
 item	Weapon_Staff_Mithril	Mithril Staff
 item	Weapon_Staff_Onion	Onion Staff
 item	Weapon_Staff_Onyxium	Onyxium Staff
+item	Weapon_Staff_Scrap_Lightbulb	Scrap Lightbulb Staff
 item	Weapon_Staff_Thorium	Thorium Staff
+item	Weapon_Staff_Voidcrystal	Void Crystal Staff
 item	Weapon_Staff_Wizard	Wizard's Staff
 item	Weapon_Staff_Wood	Wooden Earth Staff
 item	Weapon_Staff_Wood_Kweebec	Wooden Kweebec Staff
@@ -3638,6 +3890,14 @@ item	Wood_Redwood_Trunk	Redwood Log
 item	Wood_Redwood_Trunk_Full	Redwood Tree Trunk
 item	Wood_Redwood_Trunk_Half	Redwood Log - Half Slab
 item	Wood_Redwood_Trunk_Stairs	Redwood Log - Stairs
+item	Wood_Sadwillow_Branch_Corner	Sadwillow Branch - Corner
+item	Wood_Sadwillow_Branch_Long	Sadwillow Branch - Long
+item	Wood_Sadwillow_Branch_Short	Sadwillow Branch - Short
+item	Wood_Sadwillow_Roots	Sadwillow Roots
+item	Wood_Sadwillow_Trunk	Sadwillow Log
+item	Wood_Sadwillow_Trunk_Full	Sadwillow Tree Trunk
+item	Wood_Sadwillow_Trunk_Half	Sadwillow Log - Half Slab
+item	Wood_Sadwillow_Trunk_Stairs	Sadwillow Log - Stairs
 item	Wood_Sallow_Branch_Corner	Sallow Branch - Corner
 item	Wood_Sallow_Branch_Long	Sallow Branch - Long
 item	Wood_Sallow_Branch_Short	Sallow Branch - Short
@@ -3847,7 +4107,7 @@ resource	Wood_Tropicalwood	Tropical Wood
 resource	Wood_Tropicalwood_Trunk	Tropical Wood Log
 resource	Wood_Trunk	Any Tree Log
 
-# npcRoles (574)
+# npcRoles (291)
 npc	Antelope	Antelope
 npc	Archaeopteryx	Archaeopteryx
 npc	Armadillo	Armadillo
@@ -3855,6 +4115,7 @@ npc	Bat	Bat
 npc	Bat_Ice	Ice Bat
 npc	Bear_Grizzly	Grizzly Bear
 npc	Bear_Polar	Polar Bear
+npc	Bear_Voidtaken	Voidtaken Grizzly
 npc	Bison	Bison
 npc	Bison_Calf	Bison Calf
 npc	BlankTemplate	Blank Template
@@ -3874,6 +4135,8 @@ npc	Chicken_Chick	Chick
 npc	Chicken_Desert	Desert Chicken
 npc	Chicken_Desert_Chick	Desert Chick
 npc	Chicken_Undead	Undead Chicken
+npc	Cinematic_Dragon_Void	Void Dragon
+npc	Cinematic_Shrouded_Figure	Shrouded Figure
 npc	Clownfish	Clownfish
 npc	Cow	Cow
 npc	Cow_Calf	Calf
@@ -3887,6 +4150,11 @@ npc	Deer_Stag	Stag
 npc	Dragon_Fire	Ember Dragon
 npc	Dragon_Frost	Frost Dragon
 npc	Duck	Duck
+npc	Dungeon_Feastmaster_Boss	Feastmaster
+npc	Dungeon_Goblin_Food_Carrier	Goblin Food Bearer
+npc	Dungeon_Goblin_Mace	Goblin Guardian Mace
+npc	Dungeon_Goblin_Shroom_Carrier	Goblin Shroom Bearer
+npc	Dungeon_Klops_Scrap_Trader	Klops Scrap Trader
 npc	Dungeon_Scarak_Broodmother_Young	Fledgling Scarak Broodmother
 npc	Dungeon_Skeleton_Sand_Mage	Sandswept Skeleton Warlock
 npc	Eel_Moray	Moray Eel
@@ -3909,13 +4177,20 @@ npc	Gecko	Gecko
 npc	Ghoul	Ghoul
 npc	Goat	Goat
 npc	Goat_Kid	Kid
+npc	Goblin_Burner	Goblin Burner
 npc	Goblin_Duke	Goblin Duke
-npc	Goblin_Hermit	Goblin Hermit
+npc	Goblin_Glutton	Goblin Glutton
+npc	Goblin_Gobliterator	Gobliterator MkIIII
+npc	Goblin_Gobliterator_Explosive_Barrel	Explosive Barrel
+npc	Goblin_Gobliterator_HM	Gobliterator MkIIII Final
+npc	Goblin_Guardian	Goblin Guardian
+npc	Goblin_Launcher	Goblin Launcher
 npc	Goblin_Lobber	Goblin Lobber
 npc	Goblin_Miner	Goblin Miner
-npc	Goblin_Ogre	Goblin Ogre
-npc	Goblin_Scavenger	Goblin Scavenger
+npc	Goblin_Pilot	Goblin Pilot
+npc	Goblin_Scientist	Goblin Makinomagistra
 npc	Goblin_Scrapper	Goblin Scrapper
+npc	Goblin_Spectator	Goblin Spectator
 npc	Goblin_Thief	Goblin Thief
 npc	Golem_Crystal_Earth	Earthen Golem
 npc	Golem_Crystal_Flame	Ember Golem
@@ -4021,6 +4296,7 @@ npc	Skeleton_Burnt_Lancer	Burnt Skeleton Lancer
 npc	Skeleton_Burnt_Praetorian	Burnt Skeleton Praetorian
 npc	Skeleton_Burnt_Soldier	Burnt Skeleton Soldier
 npc	Skeleton_Burnt_Wizard	Burnt Skeleton Wizard
+npc	Skeleton_Elite	Revenant Guardian
 npc	Skeleton_Fighter	Skeleton Fighter
 npc	Skeleton_Frost_Archer	Frost Skeleton Archer
 npc	Skeleton_Frost_Archmage	Frost Skeleton Archmage
@@ -4063,7 +4339,7 @@ npc	Snapdragon	Snapdragon
 npc	Snapjaw	Snapjaw
 npc	Spark_Living	Living Spark
 npc	Sparrow	Sparrow
-npc	Spawn_Void	Void Spawn
+npc	Spawn_Void	Void Fiend
 npc	Spectre_Void	Void Spectre
 npc	Spider	Spider
 npc	Spider_Cave	Cave Spider
@@ -4078,309 +4354,6 @@ npc	Tang_Chevron	Chevron Tang
 npc	Tang_Lemon_Peel	Lemon Peel Tang
 npc	Tang_Sailfin	Sailfin Tang
 npc	Template	Template
-npc	Test_Action_List	Test Action List
-npc	Test_Action_List_Component	Test Action List Component
-npc	Test_Action_Model_Attachment	Test Action Model Attachment
-npc	Test_Action_Random	Test Action Random
-npc	Test_Alarm	Test Alarm
-npc	Test_Altitude_Filter	Test Altitude Filter
-npc	Test_And	Test And
-npc	Test_Animation	Test Animation
-npc	Test_Animation_State_Change	Test Animation State Change
-npc	Test_Apply_EntityEffect	Test Apply EntityEffect
-npc	Test_ApplyForce	Test ApplyForce
-npc	Test_Ascent_Animation	Test Ascent Animation
-npc	Test_Attack_Bow	Test Attack Bow
-npc	Test_Attack_Melee	Test Attack Melee
-npc	Test_Attack_Melee_All	Test Attack Melee All
-npc	Test_Attack_Melee_Charged	Test Attack Melee Charged
-npc	Test_Attack_On_Death	Test Attack On Death
-npc	Test_Attack_Switch	Test Attack Switch
-npc	Test_Attitude_Sensor	Test Attitude Sensor
-npc	Test_Attitude_Sensor_Wolf	Test Attitude Sensor Wolf
-npc	Test_Attributes	Test Attributes
-npc	Test_Beacon	Test Beacon
-npc	Test_Beacon_Bird	Test Beacon Bird
-npc	Test_Beacon_Player	Test Beacon Player
-npc	Test_Beacon_Trork_Hunter	Test Beacon Trork Hunter
-npc	Test_Beacon_Trork_Leader	Test Beacon Trork Leader
-npc	Test_Beacon_Trork_Soldier	Test Beacon Trork Soldier
-npc	Test_Beacon_Trork_Soldier_Path	Test Beacon Trork Soldier Path
-npc	Test_Beacon_Trork_Soldier_Wander	Test Beacon Trork Soldier Wander
-npc	Test_Beacon_Trork_Wolf	Test Beacon Trork Wolf
-npc	Test_Beacon_Wolf	Test Beacon Wolf
-npc	Test_Beacon_Wolf_Leader	Test Beacon Wolf Leader
-npc	Test_Benchmark_Sensor_80	Test Benchmark Sensor 80
-npc	Test_Bird	Test Bird
-npc	Test_Bird_Desired_Altitude_Weight	Test Bird Desired Altitude Weight
-npc	Test_Bird_Flee	Test Bird Flee
-npc	Test_Bird_Land	Test Bird Land
-npc	Test_Bird_Land_Ray	Test Bird Land Ray
-npc	Test_Bird_Land_Seeds	Test Bird Land Seeds
-npc	Test_Bird_Override_Altitude	Test Bird Override Altitude
-npc	Test_Bird_Seek	Test Bird Seek
-npc	Test_Bird_TakeOff	Test Bird TakeOff
-npc	Test_Bird_Wander	Test Bird Wander
-npc	Test_Block_Change	Test Block Change
-npc	Test_Block_Sensor	Test Block Sensor
-npc	Test_Block_Sensor_Mobile	Test Block Sensor Mobile
-npc	Test_Block_Sensor_Reservation	Test Block Sensor Reservation
-npc	Test_Blocking_Animation	Test Blocking Animation
-npc	Test_Boss_Basic	Test Boss Basic
-npc	Test_Boss_Basic_Intro	Test Boss Awakening
-npc	Test_Boss_Minion	Test Boss Minion
-npc	Test_Boss_Spawning	Test Boss Spawning
-npc	Test_Bow_Charge	Test Bow Charge
-npc	Test_Bow_Target	Test Bow Target
-npc	Test_Can_Join_Flock	Test Can Join Flock
-npc	Test_Capped_Beacon	Test Capped Beacon
-npc	Test_Chained_Path	Test Chained Path
-npc	Test_Charge_Aiming	Test Charge Aiming
-npc	Test_Combat_Action_Evaluator	Test Combat Action Evaluator
-npc	Test_Combat_Elite_Goblin	Test Combat Elite Goblin
-npc	Test_Combat_Knight	Test Combat Knight
-npc	Test_Combat_Mitigation	Test Combat Mitigation
-npc	Test_Combat_Sensor_Charge	Test Combat Sensor Charge
-npc	Test_Combat_Sensor_Sheep	Test Combat Sensor Sheep
-npc	Test_Component_Attack_Sequence	Test Component Attack Sequence
-npc	Test_Computable_Component_Template	Test Computable Component Template
-npc	Test_Constraints_Flee_Legacy_Relaxed	Test Constraints Flee Legacy Relaxed
-npc	Test_Constraints_Flee_Legacy_Unrelaxed	Test Constraints Flee Legacy Unrelaxed
-npc	Test_Constraints_Seek_Breathe	Test Constraints Seek Breathe
-npc	Test_Constraints_Seek_Drop	Test Constraints Seek Drop
-npc	Test_Constraints_Seek_Fence	Test Constraints Seek Fence
-npc	Test_Constraints_Seek_Legacy_Relaxed	Test Constraints Seek Legacy Relaxed
-npc	Test_Constraints_Seek_Legacy_Relaxed_Small	Test Constraints Seek Legacy Relaxed Small
-npc	Test_Constraints_Seek_Legacy_Unrelaxed	Test Constraints Seek Legacy Unrelaxed
-npc	Test_Constraints_Seek_Legacy_Unrelaxed_Small	Test Constraints Seek Legacy Unrelaxed Small
-npc	Test_Constraints_Seek_None	Test Constraints Seek None
-npc	Test_Constraints_Seek_Wade	Test Constraints Seek Wade
-npc	Test_Constraints_Seek_Wade_Breathe	Test Constraints Seek Wade Breathe
-npc	Test_Constraints_Wander_Legacy_Relaxed	Test Constraints Wander Legacy Relaxed
-npc	Test_Constraints_Wander_Legacy_Unrelaxed	Test Constraints Wander Legacy Unrelaxed
-npc	Test_Count_Sheep	Test Count Sheep
-npc	Test_Crouch	Test Crouch
-npc	Test_Deal_Friendly_Damage	Test Deal Friendly Damage
-npc	Test_Death_Particles	Test Death Particles
-npc	Test_Delay	Test Delay
-npc	Test_Die	Test Die
-npc	Test_DisplayName_Spam	Test DisplayName Spam
-npc	Test_Dive_Flee	Test Dive Flee
-npc	Test_Dog_Flock	Test Dog Flock
-npc	Test_Dog_Tame	Test Dog Tame
-npc	Test_Dragon	Test Dragon
-npc	Test_Dragon_Frost	Test Dragon Frost
-npc	Test_Drop_Item	Test Drop Item
-npc	Test_Dummy	Test Dummy
-npc	Test_Dummy_Damage	Test Dummy Damage
-npc	Test_Dummy_Stationary	Test Dummy Stationary
-npc	Test_Entity_Damage_Event	Test Entity Damage Event
-npc	Test_Entity_Effect	Test Entity Effect
-npc	Test_Entity_Effect_Condition	Test Entity Effect Condition
-npc	Test_Entity_Effect_Filter	Test Entity Effect Filter
-npc	Test_Entity_Flock_Damage_Event	Test Entity Flock Damage Event
-npc	Test_Entity_Sensor_Crouch	Test Entity Sensor Crouch
-npc	Test_EntityFilter_ExecutingInteraction	Test EntityFilter Executing Interaction
-npc	Test_EntityFilter_ExecutingInteraction_Observer	Test EntityFilter Executing Interaction Observer
-npc	Test_EntityFilter_Walk	Test EntityFilter Walk
-npc	Test_Eval_IsEmpty	Test Eval IsEmpty
-npc	Test_Fail_ItemInHand	Test Fail ItemInHand
-npc	Test_Find_Entity	Test Find Entity
-npc	Test_Find_Entity_Last_Seen	Test Find Entity Last Seen
-npc	Test_Flags	Test Flags
-npc	Test_Flee	Test Flee
-npc	Test_Flock_Damage	Test Flock Damage
-npc	Test_Flock_Mixed	Test Flock Mixed
-npc	Test_Flock_Mixed_Member	Test Flock Mixed Member
-npc	Test_Flock_Mixed_Member_2	Test Flock Mixed Member 2
-npc	Test_Flock_Pos	Test Flock Pos
-npc	Test_Fly	Test Fly
-npc	Test_Fly_Flee	Test Fly Flee
-npc	Test_FX_Trail	Test FX Trail
-npc	Test_Goblin_Attack	Test Goblin Attack
-npc	Test_Group_Sheep	Test Group Sheep
-npc	Test_Group_Wolf	Test Group Wolf
-npc	Test_Guided_Block	Test Guided Block
-npc	Test_Guided_Bow	Test Guided Bow
-npc	Test_Head_Motion_Rotate	Test Head Motion Rotate
-npc	Test_Head_Motion_Sequence	Test Head Motion Sequence
-npc	Test_Hotbar_SetItem	Test Hotbar SetItem
-npc	Test_Hotbar_Weapon_Swap	Test Hotbar Weapon Swap
-npc	Test_Hover_Parrot	Test Hover Parrot
-npc	Test_Implicit_Any	Test Implicit Any
-npc	Test_In_Water	Test In Water
-npc	Test_Inactive_Delay	Test Inactive Delay
-npc	Test_Inferred_Patrol_Path	Test Inferred Patrol Path
-npc	Test_Inflicted_Damage	Test Inflicted Damage
-npc	Test_Inside_Block_Filter	Test Inside Block Filter
-npc	Test_Interaction	Test Interaction
-npc	Test_Interaction_Attitude	Test Interaction Attitude
-npc	Test_Interaction_Complete_Bounty	Test Interaction Complete Bounty
-npc	Test_Interaction_Complete_Task	Test Interaction Complete Task
-npc	Test_Interaction_Component	Test Interaction Component
-npc	Test_Interaction_Follow	Test Interaction Follow
-npc	Test_Interaction_Purchase	Test Interaction Purchase
-npc	Test_Interaction_Shear	Test Interaction Shear
-npc	Test_InteractionVars_Template	Test InteractionVars Template
-npc	Test_Inventory_Actions	Test Inventory Actions
-npc	Test_Inventory_Add	Test Inventory Add
-npc	Test_Inventory_Contents	Test Inventory Contents
-npc	Test_Inventory_Remove	Test Inventory Remove
-npc	Test_Invulnerable	Test Invulnerable
-npc	Test_Is_Indoors_Component	Test Is Indoors Component
-npc	Test_Item_Attitude	Test Item Attitude
-npc	Test_ItemInHand	Test ItemInHand
-npc	Test_Jumping	Test Jumping
-npc	Test_Kweebec_Playing	Test Kweebec Playing
-npc	Test_Light_Sensor	Test Light Sensor
-npc	Test_Locked_Target	Test Locked Target
-npc	Test_Maintain_Distance	Test Maintain Distance
-npc	Test_Maintain_Distance_Melee	Test Maintain Distance Melee
-npc	Test_Manual_Beacon	Test Manual Beacon
-npc	Test_Model_Change	Test Model Change
-npc	Test_Motion_Charge	Test Motion Charge
-npc	Test_Motion_Charge_Debug	Test Motion Charge Debug
-npc	Test_Motion_Charge_Path	Test Motion Charge Path
-npc	Test_Motion_Charge_Repath	Test Motion Charge Repath
-npc	Test_Motion_Charge_Rot	Test Motion Charge Rot
-npc	Test_Motion_Charge_Skip	Test Motion Charge Skip
-npc	Test_Motion_Charge_Slope	Test Motion Charge Slope
-npc	Test_Motion_Charge_Speed	Test Motion Charge Speed
-npc	Test_Motion_Charge_States	Test Motion Charge States
-npc	Test_Motion_Charge_Stop	Test Motion Charge Stop
-npc	Test_Motion_Charge_Stun	Test Motion Charge Stun
-npc	Test_Movement_State_Sheep	Test Movement State Sheep
-npc	Test_Notify_Action	Test Notify Action
-npc	Test_NPCGroup_Sensor	Test NPCGroup Sensor
-npc	Test_OffHand_Swap	Test OffHand Swap
-npc	Test_OffHand_Wielding	Test OffHand Wielding
-npc	Test_Pack_Aggressive	Test Pack Aggressive
-npc	Test_Pack_Tame	Test Pack Tame
-npc	Test_Particle_Emotions	Test Particle Emotions
-npc	Test_Particle_Scale	Test Particle Scale
-npc	Test_Path	Test Path
-npc	Test_Path_Avoid	Test Path Avoid
-npc	Test_Path_Distance1	Test Path Distance1
-npc	Test_Path_Distance2	Test Path Distance2
-npc	Test_Path_Line	Test Path Line
-npc	Test_Path_Loop	Test Path Loop
-npc	Test_Path_View	Test Path View
-npc	Test_Patrol_Path	Test Patrol Path
-npc	Test_Patrol_Path_Sweep	Test Patrol Path Sweep
-npc	Test_Pet	Test Pet
-npc	Test_Pet_Lantern	Test Pet Lantern
-npc	Test_Place_Block	Test Place Block
-npc	Test_Place_Blocks	Test Place Blocks
-npc	Test_Platform	Test Platform
-npc	Test_Player_Hidden_Template	Test Player Hidden Template
-npc	Test_Position_Adjustment_Wrapper	Test Position Adjustment Wrapper
-npc	Test_Prioritiser_Provided_Filter	Test Prioritiser Provided Filter
-npc	Test_Probe	Test Probe
-npc	Test_Random_Display_Name_Sheep	Test Random Display Name Sheep
-npc	Test_Random_Hotbar	Test Random Hotbar
-npc	Test_Random_Instruction	Test Random Instruction
-npc	Test_Random_Sensor	Test Random Sensor
-npc	Test_Read_Position_From_Target	Test Read Position From Target
-npc	Test_Receive_Beacon	Test Receive Beacon
-npc	Test_Reference_Instruction	Test Reference Instruction
-npc	Test_Reference_Instruction_Simple	Test Reference Instruction Simple
-npc	Test_Reference_Required_Feature	Test Reference Required Feature
-npc	Test_Relative_Turn_Speed	Test Relative Turn Speed
-npc	Test_Remove	Test Remove
-npc	Test_Sensor_Age	Test Sensor Age
-npc	Test_Sensor_DroppedItem	Test Sensor DroppedItem
-npc	Test_Sensor_DroppedItem_Vacuum	Test Sensor DroppedItem Vacuum
-npc	Test_Sensor_Height	Test Sensor Height
-npc	Test_Sensor_Height_Bow	Test Sensor Height Bow
-npc	Test_Sensor_Inventory	Test Sensor Inventory
-npc	Test_Sensor_ItemInHand	Test Sensor ItemInHand
-npc	Test_Sensor_ItemInInventory	Test Sensor ItemInInventory
-npc	Test_Sensor_Path	Test Sensor Path
-npc	Test_Sensor_Search_Ray	Test Sensor Search Ray
-npc	Test_Sensor_Stat	Test Sensor Stat
-npc	Test_Separate_Head_Body_Motion	Test Separate Head Body Motion
-npc	Test_Separation_Flee	Test Separation Flee
-npc	Test_Separation_Flock	Test Separation Flock
-npc	Test_Separation_Maintain	Test Separation Maintain
-npc	Test_Separation_Maintain_Melee	Test Separation Maintain Melee
-npc	Test_Separation_Path	Test Separation Path
-npc	Test_Separation_Seek	Test Separation Seek
-npc	Test_Separation_Stationary	Test Separation Stationary
-npc	Test_Separation_Wander	Test Separation Wander
-npc	Test_Set_Health_Regen	Test Set Health Regen
-npc	Test_Set_Invulnerable	Test Set Invulnerable
-npc	Test_Set_Stat	Test Set Stat
-npc	Test_Set_State_From_Component	Test Set State From Component
-npc	Test_ShapeChange	Test ShapeChange
-npc	Test_Sheep_Circle	Test Sheep Circle
-npc	Test_Sheep_Circle1	Test Sheep Circle1
-npc	Test_Sheep_Circle2	Test Sheep Circle2
-npc	Test_Sheep_Circle3	Test Sheep Circle3
-npc	Test_Sheep_Flock	Test Sheep Flock
-npc	Test_Sheep_Flock2	Test Sheep Flock2
-npc	Test_Sheep_Rect	Test Sheep Rect
-npc	Test_Sheep_RectAvoid	Test Sheep RectAvoid
-npc	Test_Sheep_Slow	Test Sheep Slow
-npc	Test_Shoot_At_Block	Test Shoot At Block
-npc	Test_Shooter	Test Shooter
-npc	Test_Soft_Leash	Test Soft Leash
-npc	Test_Spawn	Test Spawn
-npc	Test_Spawn_Action	Test Spawn Action
-npc	Test_Species_Attitude	Test Species Attitude
-npc	Test_Split_Entity_Sensor	Test Split Entity Sensor
-npc	Test_Spots_Me_Sheep	Test Spots Me Sheep
-npc	Test_Standing_On_Block_Sensor	Test Standing On Block Sensor
-npc	Test_Start_Objective	Test Start Objective
-npc	Test_State_Evaluator	Test State Evaluator
-npc	Test_State_Evaluator_Nearby	Test State Evaluator Nearby
-npc	Test_State_Evaluator_Sleep	Test State Evaluator Sleep
-npc	Test_State_Evaluator_TimeSinceLastUsed	Test State Evaluator TimeSinceLastUsed
-npc	Test_State_Evaluator_Toggle	Test State Evaluator Toggle
-npc	Test_State_Transitions	Test State Transitions
-npc	Test_Stats_Health	Test Stats Health
-npc	Test_Store_Read_Position	Test Store Read Position
-npc	Test_Sub_States	Test Sub States
-npc	Test_Switch	Test Switch
-npc	Test_Sword_Attack_Charge	Test Sword Attack Charge
-npc	Test_Tag_PlayerTestModel_G	Test Tag PlayerTestModel_G
-npc	Test_Tag_PlayerTestModel_V	Test Tag PlayerTestModel_V
-npc	Test_Tag_Sensor	Test Tag Sensor
-npc	Test_Tag_Sheep	Test Tag Sheep
-npc	Test_Take_Friendly_Damage	Test Take Friendly Damage
-npc	Test_Teleport	Test Teleport
-npc	Test_Template_Instruction_Culling	Test Template Instruction Culling
-npc	Test_Template_Instruction_Switch	Test Template Instruction Switch
-npc	Test_Template_Sheep	Test Template Sheep
-npc	Test_Throw_NPC	Test Throw NPC
-npc	Test_Timer	Test Timer
-npc	Test_Timer_Random	Test Timer Random
-npc	Test_Timer_Repeating	Test Timer Repeating
-npc	Test_TorchHolder	Test TorchHolder
-npc	Test_Transient_Path	Test Transient Path
-npc	Test_TreeMode_Instruction	Test TreeMode Instruction
-npc	Test_Trigger_Spawners	Test Trigger Spawners
-npc	Test_Trigger_Volume	Test Trigger Volume
-npc	Test_Unified_1	Test Unified 1
-npc	Test_Unified_10	Test Unified 10
-npc	Test_Unified_11	Test Unified 11
-npc	Test_Unified_2	Test Unified 2
-npc	Test_Unified_3	Test Unified 3
-npc	Test_Unified_4	Test Unified 4
-npc	Test_Unified_5	Test Unified 5
-npc	Test_Unified_6	Test Unified 6
-npc	Test_Unified_7	Test Unified 7
-npc	Test_Unified_8	Test Unified 8
-npc	Test_Unified_9	Test Unified 9
-npc	Test_Walk_Base	Test Walk Base
-npc	Test_Walk_Flee	Test Walk Flee
-npc	Test_Walk_Leave	Test Walk Leave
-npc	Test_Walk_Seek	Test Walk Seek
-npc	Test_Walk_Stay	Test Walk Stay
-npc	Test_Watch	Test Watch
-npc	Test_Watch_NPC	Test Watch NPC
-npc	Test_Weapon_Attack	Test Weapon Attack
-npc	Test_Weather_Sensor	Test Weather Sensor
-npc	Test_Wolf_Pack	Test Wolf Pack
 npc	Tetrabird	Tetrabird
 npc	Tiger_Sabertooth	Sabertooth Tiger
 npc	Toad_Rhino	Rhino Toad
@@ -4402,6 +4375,10 @@ npc	Trout_Rainbow	Rainbow Trout
 npc	Tuluk_Fisherman	Tuluk Fisherman
 npc	Turkey	Turkey
 npc	Turkey_Chick	Turkey Chick
+npc	Void_Anomaly_Crystal	Void Crystal
+npc	Void_Anomaly_Stutter	Void Stutter
+npc	Void_Tentacle	Void Tentacle
+npc	Voidtaken_Goblin	Voidtaken Goblin
 npc	Vulture	Vulture
 npc	Warthog	Warthog
 npc	Warthog_Piglet	Warthog Piglet

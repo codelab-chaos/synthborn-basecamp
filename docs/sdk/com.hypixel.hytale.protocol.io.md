@@ -174,6 +174,7 @@ public class com.hypixel.hytale.protocol.io.ProtocolException extends java.lang.
   public static com.hypixel.hytale.protocol.io.ProtocolException invalidOffset(java.lang.String, int, int);
   public static com.hypixel.hytale.protocol.io.ProtocolException nonCanonicalLayout(java.lang.String, int, int);
   public static com.hypixel.hytale.protocol.io.ProtocolException unknownPolymorphicType(java.lang.String, int);
+  public static com.hypixel.hytale.protocol.io.ProtocolException nestingTooDeep(java.lang.String, int);
   public static com.hypixel.hytale.protocol.io.ProtocolException duplicateKey(java.lang.String, java.lang.Object);
   public static com.hypixel.hytale.protocol.io.ProtocolException invalidEnumValue(java.lang.String, int);
   public static com.hypixel.hytale.protocol.io.ProtocolException arrayTooShort(java.lang.String, int, int);
@@ -192,8 +193,11 @@ public class com.hypixel.hytale.protocol.io.ProtocolException extends java.lang.
 
 ```java
 public final class com.hypixel.hytale.protocol.io.ReadCursor {
+  public static final int MAX_NESTING_DEPTH;
   public int position;
   public com.hypixel.hytale.protocol.io.ReadCursor();
+  public void enterNested(java.lang.String);
+  public void exitNested();
 }
 ```
 

@@ -51,7 +51,6 @@ public interface com.hypixel.hytale.builtin.hytalegenerator.engine.performancein
   public static final long CLASS_OBJECT_SIZE;
   public static final long ARRAYLIST_OBJECT_SIZE;
   public static final long VECTOR3I_SIZE;
-  public static final long VECTOR3D_SIZE;
   public static final long HASHMAP_ENTRY_SIZE;
   public abstract com.hypixel.hytale.builtin.hytalegenerator.engine.performanceinstruments.MemInstrument$Report getMemoryUsage();
 }

@@ -14,10 +14,16 @@ public class com.hypixel.hytale.server.core.universe.world.meta.state.BlockMapMa
   public com.hypixel.hytale.server.core.universe.world.meta.state.BlockMapMarker();
   public com.hypixel.hytale.server.core.universe.world.meta.state.BlockMapMarker(java.lang.String, java.lang.String);
   public com.hypixel.hytale.server.core.universe.world.meta.state.BlockMapMarker(java.lang.String, java.lang.String, boolean);
+  public com.hypixel.hytale.server.core.universe.world.meta.state.BlockMapMarker(java.lang.String, java.lang.String, boolean, com.hypixel.hytale.protocol.packets.worldmap.MapMarkerIconSize);
+  public com.hypixel.hytale.server.core.universe.world.meta.state.BlockMapMarker(java.lang.String, java.lang.String, boolean, com.hypixel.hytale.protocol.packets.worldmap.MapMarkerIconSize, java.lang.String);
+  public com.hypixel.hytale.server.core.universe.world.meta.state.BlockMapMarker(java.lang.String, java.lang.String, boolean, com.hypixel.hytale.protocol.packets.worldmap.MapMarkerIconSize, java.lang.String, com.hypixel.hytale.server.core.universe.world.worldmap.markers.MapMarkerAlert);
   public static com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, com.hypixel.hytale.server.core.universe.world.meta.state.BlockMapMarker> getComponentType();
   public java.lang.String getName();
   public java.lang.String getIcon();
   public boolean isDiscoverable();
+  public com.hypixel.hytale.protocol.packets.worldmap.MapMarkerIconSize getIconSize();
+  public java.lang.String getCompassIcon();
+  public com.hypixel.hytale.server.core.universe.world.worldmap.markers.MapMarkerAlert getAlert();
   public com.hypixel.hytale.component.Component<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore> clone();
   public static int retainRevealedMarkers(com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.server.core.entity.entities.player.data.PlayerWorldData);
   public java.lang.Object clone() throws java.lang.CloneNotSupportedException;
@@ -38,6 +44,9 @@ public class com.hypixel.hytale.server.core.universe.world.meta.state.BlockMapMa
   public com.hypixel.hytale.server.core.universe.world.meta.state.BlockMapMarkersResource$BlockMapMarkerData getMarker(org.joml.Vector3ic);
   public com.hypixel.hytale.server.core.universe.world.meta.state.BlockMapMarkersResource$BlockMapMarkerData addMarker(org.joml.Vector3i, java.lang.String, java.lang.String);
   public com.hypixel.hytale.server.core.universe.world.meta.state.BlockMapMarkersResource$BlockMapMarkerData addMarker(org.joml.Vector3i, java.lang.String, java.lang.String, boolean);
+  public com.hypixel.hytale.server.core.universe.world.meta.state.BlockMapMarkersResource$BlockMapMarkerData addMarker(org.joml.Vector3i, java.lang.String, java.lang.String, boolean, com.hypixel.hytale.protocol.packets.worldmap.MapMarkerIconSize);
+  public com.hypixel.hytale.server.core.universe.world.meta.state.BlockMapMarkersResource$BlockMapMarkerData addMarker(org.joml.Vector3i, java.lang.String, java.lang.String, boolean, com.hypixel.hytale.protocol.packets.worldmap.MapMarkerIconSize, java.lang.String);
+  public com.hypixel.hytale.server.core.universe.world.meta.state.BlockMapMarkersResource$BlockMapMarkerData addMarker(org.joml.Vector3i, java.lang.String, java.lang.String, boolean, com.hypixel.hytale.protocol.packets.worldmap.MapMarkerIconSize, java.lang.String, com.hypixel.hytale.server.core.universe.world.worldmap.markers.MapMarkerAlert);
   public com.hypixel.hytale.server.core.universe.world.meta.state.BlockMapMarkersResource$BlockMapMarkerData removeMarker(org.joml.Vector3i);
   public com.hypixel.hytale.component.Resource<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore> clone();
   public java.lang.Object clone() throws java.lang.CloneNotSupportedException;

@@ -25,6 +25,6 @@ public abstract class com.hypixel.hytale.server.core.asset.type.blocktick.config
   protected static final java.lang.ThreadLocal<java.util.SplittableRandom> RANDOM;
   public com.hypixel.hytale.server.core.asset.type.blocktick.config.TickProcedure();
   protected java.util.SplittableRandom getRandom();
-  public abstract com.hypixel.hytale.server.core.asset.type.blocktick.BlockTickStrategy onTick(com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk, int, int, int, int);
+  public abstract com.hypixel.hytale.server.core.asset.type.blocktick.BlockTickStrategy onTick(com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, int, int, int, int);
 }
 ```

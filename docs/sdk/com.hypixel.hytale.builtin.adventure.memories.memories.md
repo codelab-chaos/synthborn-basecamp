@@ -28,10 +28,11 @@ public abstract class com.hypixel.hytale.builtin.adventure.memories.memories.Mem
 
 ```java
 public abstract class com.hypixel.hytale.builtin.adventure.memories.memories.MemoryProvider<T extends com.hypixel.hytale.builtin.adventure.memories.memories.Memory> {
-  public com.hypixel.hytale.builtin.adventure.memories.memories.MemoryProvider(java.lang.String, com.hypixel.hytale.codec.builder.BuilderCodec<T>, double);
+  public com.hypixel.hytale.builtin.adventure.memories.memories.MemoryProvider(java.lang.String, com.hypixel.hytale.codec.builder.BuilderCodec<T>, double, double);
   public java.lang.String getId();
   public com.hypixel.hytale.codec.builder.BuilderCodec<T> getCodec();
   public double getCollectionRadius();
+  public double getKillRange();
   public abstract java.util.Map<java.lang.String, java.util.Set<com.hypixel.hytale.builtin.adventure.memories.memories.Memory>> getAllMemories();
 }
 ```

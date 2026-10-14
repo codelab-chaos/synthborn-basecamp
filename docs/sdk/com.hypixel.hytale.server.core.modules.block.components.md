@@ -14,6 +14,7 @@ public class com.hypixel.hytale.server.core.modules.block.components.ItemContain
   protected java.lang.String droplist;
   protected com.hypixel.hytale.server.core.inventory.container.SimpleItemContainer itemContainer;
   protected short capacity;
+  protected boolean stayOpenWhenEmpty;
   public static com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, com.hypixel.hytale.server.core.modules.block.components.ItemContainerBlock> getComponentType();
   public com.hypixel.hytale.server.core.modules.block.components.ItemContainerBlock(com.hypixel.hytale.server.core.modules.block.components.ItemContainerBlock);
   public void setItemContainer(com.hypixel.hytale.server.core.inventory.container.SimpleItemContainer);
@@ -22,6 +23,8 @@ public class com.hypixel.hytale.server.core.modules.block.components.ItemContain
   public java.util.Map<java.util.UUID, com.hypixel.hytale.server.core.entity.entities.player.windows.ContainerBlockWindow> getWindows();
   public com.hypixel.hytale.server.core.inventory.container.SimpleItemContainer getItemContainer();
   public short getCapacity();
+  public boolean isStayOpenWhenEmpty();
+  public void setStayOpenWhenEmpty(boolean);
   public com.hypixel.hytale.component.Component<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore> clone();
   public java.lang.Object clone() throws java.lang.CloneNotSupportedException;
 }

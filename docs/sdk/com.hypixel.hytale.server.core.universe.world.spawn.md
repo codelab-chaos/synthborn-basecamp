@@ -13,7 +13,7 @@ public class com.hypixel.hytale.server.core.universe.world.spawn.FitToHeightMapS
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.server.core.universe.world.spawn.FitToHeightMapSpawnProvider> CODEC;
   protected com.hypixel.hytale.server.core.universe.world.spawn.FitToHeightMapSpawnProvider();
   public com.hypixel.hytale.server.core.universe.world.spawn.FitToHeightMapSpawnProvider(com.hypixel.hytale.server.core.universe.world.spawn.ISpawnProvider);
-  public com.hypixel.hytale.math.vector.Transform getSpawnPoint(com.hypixel.hytale.server.core.universe.world.World, java.util.UUID);
+  public java.util.concurrent.CompletableFuture<com.hypixel.hytale.math.vector.Transform> getSpawnPointAsync(com.hypixel.hytale.server.core.universe.world.World, java.util.UUID);
   public com.hypixel.hytale.math.vector.Transform[] getSpawnPoints();
   public boolean isWithinSpawnDistance(org.joml.Vector3d, double);
 }
@@ -26,7 +26,8 @@ public class com.hypixel.hytale.server.core.universe.world.spawn.GlobalSpawnProv
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.server.core.universe.world.spawn.GlobalSpawnProvider> CODEC;
   public com.hypixel.hytale.server.core.universe.world.spawn.GlobalSpawnProvider();
   public com.hypixel.hytale.server.core.universe.world.spawn.GlobalSpawnProvider(com.hypixel.hytale.math.vector.Transform);
-  public com.hypixel.hytale.math.vector.Transform getSpawnPoint(com.hypixel.hytale.server.core.universe.world.World, java.util.UUID);
+  public com.hypixel.hytale.math.vector.Transform getGlobalSpawnPoint();
+  public java.util.concurrent.CompletableFuture<com.hypixel.hytale.math.vector.Transform> getSpawnPointAsync(com.hypixel.hytale.server.core.universe.world.World, java.util.UUID);
   public com.hypixel.hytale.math.vector.Transform[] getSpawnPoints();
   public boolean isWithinSpawnDistance(org.joml.Vector3d, double);
 }
@@ -37,9 +38,8 @@ public class com.hypixel.hytale.server.core.universe.world.spawn.GlobalSpawnProv
 ```java
 public interface com.hypixel.hytale.server.core.universe.world.spawn.ISpawnProvider {
   public static final com.hypixel.hytale.codec.lookup.BuilderCodecMapCodec<com.hypixel.hytale.server.core.universe.world.spawn.ISpawnProvider> CODEC;
-  public default com.hypixel.hytale.math.vector.Transform getSpawnPoint(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
-  public default com.hypixel.hytale.math.vector.Transform getSpawnPoint(com.hypixel.hytale.server.core.entity.Entity);
-  public abstract com.hypixel.hytale.math.vector.Transform getSpawnPoint(com.hypixel.hytale.server.core.universe.world.World, java.util.UUID);
+  public default java.util.concurrent.CompletableFuture<com.hypixel.hytale.math.vector.Transform> getSpawnPointAsync(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public abstract java.util.concurrent.CompletableFuture<com.hypixel.hytale.math.vector.Transform> getSpawnPointAsync(com.hypixel.hytale.server.core.universe.world.World, java.util.UUID);
   public abstract com.hypixel.hytale.math.vector.Transform[] getSpawnPoints();
   public abstract boolean isWithinSpawnDistance(org.joml.Vector3d, double);
 }
@@ -53,7 +53,7 @@ public class com.hypixel.hytale.server.core.universe.world.spawn.IndividualSpawn
   public com.hypixel.hytale.server.core.universe.world.spawn.IndividualSpawnProvider();
   public com.hypixel.hytale.server.core.universe.world.spawn.IndividualSpawnProvider(com.hypixel.hytale.math.vector.Transform);
   public com.hypixel.hytale.server.core.universe.world.spawn.IndividualSpawnProvider(com.hypixel.hytale.math.vector.Transform[]);
-  public com.hypixel.hytale.math.vector.Transform getSpawnPoint(com.hypixel.hytale.server.core.universe.world.World, java.util.UUID);
+  public java.util.concurrent.CompletableFuture<com.hypixel.hytale.math.vector.Transform> getSpawnPointAsync(com.hypixel.hytale.server.core.universe.world.World, java.util.UUID);
   public com.hypixel.hytale.math.vector.Transform[] getSpawnPoints();
   public com.hypixel.hytale.math.vector.Transform getFirstSpawnPoint();
   public boolean isWithinSpawnDistance(org.joml.Vector3d, double);

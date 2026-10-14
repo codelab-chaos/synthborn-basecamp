@@ -27,9 +27,11 @@ public class com.hypixel.hytale.server.core.modules.entityui.UIComponentList imp
   protected int[] componentIds;
   public static com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.core.modules.entityui.UIComponentList> getComponentType();
   public com.hypixel.hytale.server.core.modules.entityui.UIComponentList();
+  public com.hypixel.hytale.server.core.modules.entityui.UIComponentList(java.lang.String[]);
   public com.hypixel.hytale.server.core.modules.entityui.UIComponentList(com.hypixel.hytale.server.core.modules.entityui.UIComponentList);
   public void update();
   public int[] getComponentIds();
+  public boolean consumeNetworkOutdated();
   public com.hypixel.hytale.component.Component<com.hypixel.hytale.server.core.universe.world.storage.EntityStore> clone();
   public java.lang.Object clone() throws java.lang.CloneNotSupportedException;
 }

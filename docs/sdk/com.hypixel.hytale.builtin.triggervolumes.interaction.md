@@ -13,6 +13,7 @@ public class com.hypixel.hytale.builtin.triggervolumes.interaction.DestroyTagged
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.builtin.triggervolumes.interaction.DestroyTaggedVolumesInteraction> CODEC;
   public com.hypixel.hytale.builtin.triggervolumes.interaction.DestroyTaggedVolumesInteraction();
   protected void firstRun(com.hypixel.hytale.protocol.InteractionType, com.hypixel.hytale.server.core.entity.InteractionContext, com.hypixel.hytale.server.core.modules.interaction.interaction.CooldownHandler);
+  protected void simulateFirstRun(com.hypixel.hytale.protocol.InteractionType, com.hypixel.hytale.server.core.entity.InteractionContext, com.hypixel.hytale.server.core.modules.interaction.interaction.CooldownHandler);
   public java.lang.String toString();
 }
 ```
@@ -25,6 +26,7 @@ public class com.hypixel.hytale.builtin.triggervolumes.interaction.SignalNearbyV
   public com.hypixel.hytale.builtin.triggervolumes.interaction.SignalNearbyVolumesInteraction();
   public boolean needsRemoteSync();
   protected void firstRun(com.hypixel.hytale.protocol.InteractionType, com.hypixel.hytale.server.core.entity.InteractionContext, com.hypixel.hytale.server.core.modules.interaction.interaction.CooldownHandler);
+  protected void simulateFirstRun(com.hypixel.hytale.protocol.InteractionType, com.hypixel.hytale.server.core.entity.InteractionContext, com.hypixel.hytale.server.core.modules.interaction.interaction.CooldownHandler);
   public java.lang.String toString();
 }
 ```

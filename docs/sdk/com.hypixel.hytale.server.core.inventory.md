@@ -96,6 +96,10 @@ public abstract class com.hypixel.hytale.server.core.inventory.InventoryComponen
   public static final short DEFAULT_STORAGE_ROWS;
   public static final short DEFAULT_STORAGE_COLUMNS;
   public static final short DEFAULT_STORAGE_CAPACITY;
+  public static final short ABILITIES_LINE_WIDTH;
+  public static final short ABILITIES_LINES;
+  public static final short DEFAULT_ABILITIES_CAPACITY;
+  public static final short DEFAULT_RUNE_BAG_CAPACITY;
   public static final int HOTBAR_SECTION_ID;
   public static final int STORAGE_SECTION_ID;
   public static final int ARMOR_SECTION_ID;
@@ -103,6 +107,8 @@ public abstract class com.hypixel.hytale.server.core.inventory.InventoryComponen
   public static final int TOOLS_SECTION_ID;
   public static final int BACKPACK_SECTION_ID;
   public static final int DUMMY_SECTION_ID;
+  public static final int ABILITIES_SECTION_ID;
+  public static final int RUNE_BAG_SECTION_ID;
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.server.core.inventory.InventoryComponent> CODEC;
   protected final java.util.concurrent.atomic.AtomicBoolean isDirty;
   protected final java.util.concurrent.atomic.AtomicBoolean needsSaving;
@@ -157,6 +163,7 @@ public class com.hypixel.hytale.server.core.inventory.InventoryUtils {
   public static com.hypixel.hytale.server.core.inventory.container.ItemContainer getContainerForItemPickup(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.asset.type.item.config.Item, com.hypixel.hytale.server.core.modules.entity.player.PlayerSettings, com.hypixel.hytale.protocol.PickupLocation, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public static void smartMoveItem(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, int, int, int, com.hypixel.hytale.protocol.SmartMoveType, com.hypixel.hytale.server.core.modules.entity.player.PlayerSettings, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public static void moveItem(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, int, int, int, int, int, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public static boolean prepareAbilityCoreRemoval(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.inventory.container.ItemContainer, int, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public static com.hypixel.hytale.server.core.inventory.transaction.MoveTransaction<com.hypixel.hytale.server.core.inventory.transaction.ItemStackTransaction> moveItemFromCheckToInventory(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.inventory.ItemStack, com.hypixel.hytale.server.core.inventory.container.ItemContainer, short, int, com.hypixel.hytale.server.core.modules.entity.player.PlayerSettings, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public static com.hypixel.hytale.server.core.inventory.transaction.ListTransaction<com.hypixel.hytale.server.core.inventory.transaction.MoveTransaction<com.hypixel.hytale.server.core.inventory.transaction.ItemStackTransaction>> takeAll(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, int, com.hypixel.hytale.server.core.modules.entity.player.PlayerSettings, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public static com.hypixel.hytale.server.core.inventory.transaction.ListTransaction<com.hypixel.hytale.server.core.inventory.transaction.MoveTransaction<com.hypixel.hytale.server.core.inventory.transaction.ItemStackTransaction>> takeAllWithPriority(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.inventory.container.ItemContainer, com.hypixel.hytale.server.core.modules.entity.player.PlayerSettings, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
@@ -196,7 +203,7 @@ public class com.hypixel.hytale.server.core.inventory.ItemStack implements com.h
   protected int quantity;
   protected double durability;
   protected double maxDurability;
-  protected int qualityIndex;
+  protected int qualityIndexOverride;
   protected boolean overrideDroppedItemAnimation;
   protected org.bson.BsonDocument metadata;
   public com.hypixel.hytale.server.core.inventory.ItemStack(java.lang.String, int, org.bson.BsonDocument);

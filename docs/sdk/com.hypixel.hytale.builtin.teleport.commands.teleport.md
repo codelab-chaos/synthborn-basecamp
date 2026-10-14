@@ -98,8 +98,8 @@ public class com.hypixel.hytale.builtin.teleport.commands.teleport.TeleportTopCo
 ## TeleportWorldCommand
 
 ```java
-public class com.hypixel.hytale.builtin.teleport.commands.teleport.TeleportWorldCommand extends com.hypixel.hytale.server.core.command.system.basecommands.AbstractPlayerCommand {
+public class com.hypixel.hytale.builtin.teleport.commands.teleport.TeleportWorldCommand extends com.hypixel.hytale.server.core.command.system.basecommands.AbstractTargetPlayerCommand {
   public com.hypixel.hytale.builtin.teleport.commands.teleport.TeleportWorldCommand();
-  protected void execute(com.hypixel.hytale.server.core.command.system.CommandContext, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.universe.PlayerRef, com.hypixel.hytale.server.core.universe.world.World);
+  protected void execute(com.hypixel.hytale.server.core.command.system.CommandContext, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.universe.PlayerRef, com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
 }
 ```

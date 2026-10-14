@@ -24,6 +24,10 @@ public class com.hypixel.hytale.server.core.entity.effect.ActiveEntityEffect imp
   public com.hypixel.hytale.server.core.entity.effect.ActiveEntityEffect(java.lang.String, int, float, boolean, java.lang.String, boolean);
   public com.hypixel.hytale.server.core.entity.effect.ActiveEntityEffect(java.lang.String, int, boolean, boolean);
   public void tick(com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.asset.type.entityeffect.config.EntityEffect, com.hypixel.hytale.server.core.modules.entitystats.EntityStatMap, float);
+  public float getDamageMultiplier();
+  public void setDamageMultiplier(float);
+  public com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore> getOwner();
+  public void setOwner(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public int getEntityEffectIndex();
   public float getInitialDuration();
   public float getRemainingDuration();
@@ -31,6 +35,7 @@ public class com.hypixel.hytale.server.core.entity.effect.ActiveEntityEffect imp
   public boolean isDebuff();
   public boolean isInvulnerable();
   public com.hypixel.hytale.server.core.Message getDeathMessage(com.hypixel.hytale.server.core.modules.entity.damage.Damage, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public com.hypixel.hytale.server.core.modules.entity.damage.DamageSourceType getSourceType();
   public java.lang.String toString();
 }
 ```
@@ -53,9 +58,12 @@ public class com.hypixel.hytale.server.core.entity.effect.EffectControllerCompon
   public boolean isInvulnerable();
   public void setInvulnerable(boolean);
   public boolean addEffect(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.asset.type.entityeffect.config.EntityEffect, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public boolean addEffect(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.asset.type.entityeffect.config.EntityEffect, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public boolean addEffect(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, int, com.hypixel.hytale.server.core.asset.type.entityeffect.config.EntityEffect, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public boolean addEffect(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.asset.type.entityeffect.config.EntityEffect, float, com.hypixel.hytale.server.core.asset.type.entityeffect.config.OverlapBehavior, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public boolean addEffect(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.asset.type.entityeffect.config.EntityEffect, float, com.hypixel.hytale.server.core.asset.type.entityeffect.config.OverlapBehavior, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public boolean addEffect(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, int, com.hypixel.hytale.server.core.asset.type.entityeffect.config.EntityEffect, float, com.hypixel.hytale.server.core.asset.type.entityeffect.config.OverlapBehavior, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public boolean addEffect(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, int, com.hypixel.hytale.server.core.asset.type.entityeffect.config.EntityEffect, float, com.hypixel.hytale.server.core.asset.type.entityeffect.config.OverlapBehavior, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public boolean addInfiniteEffect(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, int, com.hypixel.hytale.server.core.asset.type.entityeffect.config.EntityEffect, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public void setModelChange(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.asset.type.entityeffect.config.EntityEffect, int, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public void tryResetModelChange(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, int, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);

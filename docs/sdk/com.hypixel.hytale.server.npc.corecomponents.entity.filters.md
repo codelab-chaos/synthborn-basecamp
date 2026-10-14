@@ -117,13 +117,12 @@ public class com.hypixel.hytale.server.npc.corecomponents.entity.filters.EntityF
   public static final int COST;
   protected static final com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.core.modules.entity.component.TransformComponent> TRANSFORM_COMPONENT_TYPE;
   protected static final com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.core.modules.entity.component.BoundingBox> BOUNDING_BOX_COMPONENT_TYPE;
-  protected static final com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, com.hypixel.hytale.server.core.universe.world.chunk.BlockChunk> BLOCK_CHUNK_COMPONENT_TYPE;
   protected final int blockSet;
   protected com.hypixel.hytale.server.core.universe.world.storage.ChunkStore chunkStore;
-  protected long chunkIndex;
-  protected com.hypixel.hytale.server.core.universe.world.chunk.BlockChunk blockChunk;
-  protected int chunkSectionIndex;
-  protected com.hypixel.hytale.server.core.universe.world.chunk.section.BlockSection chunkSection;
+  protected int sectionX;
+  protected int sectionY;
+  protected int sectionZ;
+  protected com.hypixel.hytale.server.core.universe.world.chunk.section.BlockSection section;
   protected boolean matches;
   public com.hypixel.hytale.server.npc.corecomponents.entity.filters.EntityFilterInsideBlock(com.hypixel.hytale.server.npc.corecomponents.entity.filters.builders.BuilderEntityFilterInsideBlock, com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
   public boolean matchesEntity(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.instructions.ExecutionSupport, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);

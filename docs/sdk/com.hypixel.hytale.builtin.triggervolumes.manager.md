@@ -129,6 +129,8 @@ public class com.hypixel.hytale.builtin.triggervolumes.manager.TriggerVolumeMana
   public <T extends com.hypixel.hytale.builtin.triggervolumes.effect.TriggerRule> java.util.List<com.hypixel.hytale.builtin.triggervolumes.manager.TriggerVolumeManager$ActiveRule<T>> getActiveRulesWithVolume(org.joml.Vector3d, java.lang.Class<T>);
   public com.hypixel.hytale.builtin.triggervolumes.system.VolumeSpatialIndex getSpatialIndex();
   public com.hypixel.hytale.builtin.triggervolumes.system.DelayedEffectScheduler getDelayedEffectScheduler();
+  public long getNowNanos();
+  public long stampClock(java.time.Instant);
   public void setWorld(com.hypixel.hytale.server.core.universe.world.World);
   public com.hypixel.hytale.server.core.universe.world.World getWorld();
   public void registerGroup(java.lang.String, com.hypixel.hytale.builtin.triggervolumes.manager.GroupEntry);

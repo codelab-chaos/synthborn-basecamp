@@ -37,7 +37,6 @@ public class com.hypixel.hytale.builtin.hytalegenerator.assets.SettingsAsset imp
   public double getBufferCapacityFactor();
   public double getTargetViewDistance();
   public double getTargetPlayerCount();
-  public static int getSampleBits(int);
   public java.lang.String getId();
   public java.lang.Object getId();
 }
@@ -50,7 +49,7 @@ public class com.hypixel.hytale.builtin.hytalegenerator.assets.ThreadBridge {
   public com.hypixel.hytale.builtin.hytalegenerator.assets.ThreadBridge();
   public <T> T get(java.lang.Class<T>, java.lang.String);
   public <T> void put(java.lang.Class<T>, java.lang.String, T);
-  public void aquire();
+  public void acquire();
   public void release();
 }
 ```

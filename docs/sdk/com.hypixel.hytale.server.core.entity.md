@@ -159,10 +159,12 @@ public class com.hypixel.hytale.server.core.entity.ExplosionConfig {
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.server.core.entity.ExplosionConfig> CODEC;
   protected boolean damageEntities;
   protected boolean damageBlocks;
+  protected boolean detonateExplosiveBlocks;
   protected int blockDamageRadius;
   protected float blockDamageFalloff;
   protected float entityDamageRadius;
   protected float entityDamage;
+  protected java.lang.String entityDamageCauseId;
   protected float entityDamageFalloff;
   protected float blockDropChance;
   protected com.hypixel.hytale.server.core.modules.interaction.interaction.config.server.combat.Knockback knockback;

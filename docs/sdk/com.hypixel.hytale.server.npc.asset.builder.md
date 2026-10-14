@@ -443,6 +443,7 @@ public class com.hypixel.hytale.server.npc.asset.builder.BuilderFactory<T> imple
   public java.lang.String getSchemaName();
   public com.hypixel.hytale.codec.schema.config.Schema toSchema(com.hypixel.hytale.codec.schema.SchemaContext);
   public com.hypixel.hytale.codec.schema.config.Schema toSchema(com.hypixel.hytale.codec.schema.SchemaContext, boolean);
+  public com.hypixel.hytale.codec.schema.config.Schema toSchema(com.hypixel.hytale.codec.schema.SchemaContext, boolean, com.hypixel.hytale.server.npc.asset.builder.BuilderFactory$ClassKey);
 }
 ```
 
@@ -473,6 +474,7 @@ public class com.hypixel.hytale.server.npc.asset.builder.BuilderInfo {
 ```java
 public class com.hypixel.hytale.server.npc.asset.builder.BuilderManager {
   public static final java.lang.String CONTENT_KEY;
+  public static final java.lang.String CLASS_KEY;
   public static com.hypixel.hytale.server.npc.asset.builder.BuilderManager SCHEMA_BUILDER_MANAGER;
   public com.hypixel.hytale.server.npc.asset.builder.BuilderManager();
   public <T> void registerFactory(com.hypixel.hytale.server.npc.asset.builder.BuilderFactory<T>);

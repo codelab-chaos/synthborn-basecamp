@@ -25,6 +25,7 @@ public abstract class com.hypixel.hytale.server.core.universe.world.chunk.sectio
   public abstract void find(it.unimi.dsi.fastutil.ints.IntList, java.util.function.IntConsumer);
   public abstract void find(it.unimi.dsi.fastutil.ints.IntList, com.hypixel.hytale.function.consumer.BiIntConsumer);
   public void find(it.unimi.dsi.fastutil.ints.IntList, it.unimi.dsi.fastutil.ints.IntSet, java.util.function.IntConsumer);
+  public abstract void columnOccupancy(java.util.function.IntUnaryOperator, int[], int[]);
   public abstract boolean shouldDemote();
   public abstract com.hypixel.hytale.server.core.universe.world.chunk.section.palette.AbstractSectionPalette demote();
   public abstract com.hypixel.hytale.server.core.universe.world.chunk.section.palette.AbstractSectionPalette promote();
@@ -55,6 +56,7 @@ public final class com.hypixel.hytale.server.core.universe.world.chunk.section.p
   public it.unimi.dsi.fastutil.ints.IntSet values();
   public void forEachValue(java.util.function.IntConsumer);
   public it.unimi.dsi.fastutil.ints.Int2ShortMap valueCounts();
+  public void columnOccupancy(java.util.function.IntUnaryOperator, int[], int[]);
   public boolean shouldDemote();
   public com.hypixel.hytale.server.core.universe.world.chunk.section.palette.HalfByteSectionPalette demote();
   public com.hypixel.hytale.server.core.universe.world.chunk.section.palette.ShortSectionPalette promote();
@@ -81,6 +83,7 @@ public final class com.hypixel.hytale.server.core.universe.world.chunk.section.p
   public com.hypixel.hytale.protocol.packets.world.PaletteType getPaletteType();
   public com.hypixel.hytale.server.core.universe.world.chunk.section.palette.AbstractSectionPalette$SetResult set(int, int);
   public int get(int);
+  public void columnOccupancy(java.util.function.IntUnaryOperator, int[], int[]);
   public boolean shouldDemote();
   public com.hypixel.hytale.server.core.universe.world.chunk.section.palette.AbstractSectionPalette demote();
   public com.hypixel.hytale.server.core.universe.world.chunk.section.palette.AbstractSectionPalette promote();
@@ -119,6 +122,7 @@ public final class com.hypixel.hytale.server.core.universe.world.chunk.section.p
   public it.unimi.dsi.fastutil.ints.IntSet values();
   public void forEachValue(java.util.function.IntConsumer);
   public it.unimi.dsi.fastutil.ints.Int2ShortMap valueCounts();
+  public void columnOccupancy(java.util.function.IntUnaryOperator, int[], int[]);
   public boolean shouldDemote();
   public com.hypixel.hytale.server.core.universe.world.chunk.section.palette.AbstractSectionPalette demote();
   public com.hypixel.hytale.server.core.universe.world.chunk.section.palette.ByteSectionPalette promote();
@@ -158,7 +162,6 @@ public final class com.hypixel.hytale.server.core.universe.world.chunk.section.p
   public static com.hypixel.hytale.server.core.universe.world.chunk.section.palette.PaletteTypeEnum get(byte);
   public com.hypixel.hytale.protocol.packets.world.PaletteType getPaletteType();
   public java.util.function.Supplier<? extends com.hypixel.hytale.server.core.universe.world.chunk.section.palette.AbstractSectionPalette> getConstructor();
-  public byte getPaletteId();
 }
 ```
 
@@ -180,6 +183,7 @@ public final class com.hypixel.hytale.server.core.universe.world.chunk.section.p
   public it.unimi.dsi.fastutil.ints.IntSet values();
   public void forEachValue(java.util.function.IntConsumer);
   public it.unimi.dsi.fastutil.ints.Int2ShortMap valueCounts();
+  public void columnOccupancy(java.util.function.IntUnaryOperator, int[], int[]);
   public boolean shouldDemote();
   public com.hypixel.hytale.server.core.universe.world.chunk.section.palette.ByteSectionPalette demote();
   public com.hypixel.hytale.server.core.universe.world.chunk.section.palette.AbstractSectionPalette promote();

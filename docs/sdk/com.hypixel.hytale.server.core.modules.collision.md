@@ -156,6 +156,7 @@ public class com.hypixel.hytale.server.core.modules.collision.BlockDataProvider 
   protected static int FULL_LEVEL;
   protected com.hypixel.hytale.server.core.universe.world.World world;
   protected com.hypixel.hytale.server.core.universe.world.chunk.section.BlockSection chunkSection;
+  protected com.hypixel.hytale.server.core.universe.world.chunk.section.FluidSection fluidSection;
   protected int chunkX;
   protected int chunkY;
   protected int chunkZ;
@@ -164,11 +165,6 @@ public class com.hypixel.hytale.server.core.modules.collision.BlockDataProvider 
   public void initialize(com.hypixel.hytale.server.core.universe.world.World);
   public void cleanup();
   public void read(int, int, int);
-  protected int readBlockId(int, int, int);
-  protected int readRotation(int, int, int);
-  protected int readFiller(int, int, int);
-  protected int readFluidId(int, int, int);
-  protected byte readFluidLevel(int, int, int);
   protected void refreshSection(int, int, int);
   protected void setBlock(int, com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType, int, int, com.hypixel.hytale.server.core.asset.type.blockhitbox.BlockBoundingBoxes);
   protected void setBlock(int, com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType, int, int);
@@ -707,11 +703,11 @@ public final class com.hypixel.hytale.server.core.modules.collision.WorldUtil {
   public static boolean isFluidOnlyBlock(com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType, int);
   public static boolean isSolidOnlyBlock(com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType, int);
   public static boolean isEmptyOnlyBlock(com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType, int);
-  public static int getFluidIdAtPosition(com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, com.hypixel.hytale.server.core.universe.world.chunk.ChunkColumn, int, int, int);
-  public static long getPackedMaterialAndFluidAtPosition(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, double, double, double);
-  public static int findFluidBlock(com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, com.hypixel.hytale.server.core.universe.world.chunk.ChunkColumn, com.hypixel.hytale.server.core.universe.world.chunk.BlockChunk, int, int, int, boolean);
-  public static int getWaterLevel(com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, com.hypixel.hytale.server.core.universe.world.chunk.ChunkColumn, com.hypixel.hytale.server.core.universe.world.chunk.BlockChunk, int, int, int);
-  public static int findFarthestEmptySpaceBelow(com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, com.hypixel.hytale.server.core.universe.world.chunk.ChunkColumn, com.hypixel.hytale.server.core.universe.world.chunk.BlockChunk, int, int, int, int);
-  public static int findFarthestEmptySpaceAbove(com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, com.hypixel.hytale.server.core.universe.world.chunk.ChunkColumn, com.hypixel.hytale.server.core.universe.world.chunk.BlockChunk, int, int, int, int);
+  public static int getFluidIdAtPosition(com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, int, int, int);
+  public static long getPackedMaterialAndFluidAtPosition(com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, double, double, double);
+  public static int findFluidBlock(com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, int, int, int, boolean);
+  public static int getWaterLevel(com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, int, int, int, int);
+  public static int findFarthestEmptySpaceBelow(com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, int, int, int, int, int);
+  public static int findFarthestEmptySpaceAbove(com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, int, int, int, int, int);
 }
 ```

@@ -37,7 +37,6 @@ public class com.hypixel.hytale.builtin.hytalegenerator.graph.GraphSpace impleme
   public com.hypixel.hytale.builtin.hytalegenerator.graph.GraphSpace$Node createNode(org.joml.Vector3d);
   public com.hypixel.hytale.builtin.hytalegenerator.graph.GraphSpace$Edge getOrCreateEdge(com.hypixel.hytale.builtin.hytalegenerator.graph.GraphSpace$Node, com.hypixel.hytale.builtin.hytalegenerator.graph.GraphSpace$Node);
   public void moveNode(com.hypixel.hytale.builtin.hytalegenerator.graph.GraphSpace$Node, org.joml.Vector3dc);
-  public com.hypixel.hytale.builtin.hytalegenerator.graph.GraphSpace$Edge getEdge(com.hypixel.hytale.builtin.hytalegenerator.graph.GraphSpace$Node, com.hypixel.hytale.builtin.hytalegenerator.graph.GraphSpace$Node);
   public void deleteNode(com.hypixel.hytale.builtin.hytalegenerator.graph.GraphSpace$Node);
   public void deleteEdge(com.hypixel.hytale.builtin.hytalegenerator.graph.GraphSpace$Node, com.hypixel.hytale.builtin.hytalegenerator.graph.GraphSpace$Node);
   public void deleteEdge(com.hypixel.hytale.builtin.hytalegenerator.graph.GraphSpace$Edge);

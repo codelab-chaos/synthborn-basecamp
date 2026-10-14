@@ -57,6 +57,7 @@ public interface com.hypixel.hytale.server.npc.movement.controllers.MotionContro
   public default void setDebugEntityId(int);
   public abstract void setInertia(double);
   public abstract void setKnockbackScale(double);
+  public abstract void setUseFixedKnockback(boolean);
   public abstract double getGravity();
   public abstract void setHeadPitchAngleRange(float[]);
   public abstract void spawned();
@@ -100,11 +101,14 @@ public interface com.hypixel.hytale.server.npc.movement.controllers.MotionContro
   public abstract boolean is2D();
   public abstract org.joml.Vector3dc getWorldNormal();
   public abstract org.joml.Vector3dc getWorldAntiNormal();
-  public abstract void addVelocity(org.joml.Vector3d, com.hypixel.hytale.server.core.modules.splitvelocity.VelocityConfig);
+  public default void addVelocity(org.joml.Vector3d, com.hypixel.hytale.server.core.modules.splitvelocity.VelocityConfig);
+  public abstract void addVelocity(org.joml.Vector3d, com.hypixel.hytale.server.core.modules.splitvelocity.VelocityConfig, float);
+  public abstract org.joml.Vector3d preScaleKnockback(org.joml.Vector3dc);
   public abstract org.joml.Vector3d getExternalVelocity();
   public abstract double getCombinedExternalVelocityLength();
   public abstract void clearExternalForces();
   public abstract void setVelocity(org.joml.Vector3dc, com.hypixel.hytale.server.core.modules.splitvelocity.VelocityConfig, boolean);
+  public default void setVelocity(org.joml.Vector3dc, com.hypixel.hytale.server.core.modules.splitvelocity.VelocityConfig, boolean, float);
   public abstract com.hypixel.hytale.server.npc.movement.controllers.MotionController$VerticalRange getDesiredVerticalRange(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public abstract double getWanderVerticalMovementRatio();
   public abstract boolean isAvoidingBlockDamage();
@@ -157,6 +161,7 @@ public abstract class com.hypixel.hytale.server.npc.movement.controllers.MotionC
   protected com.hypixel.hytale.server.npc.role.Role role;
   protected double inertia;
   protected double knockbackScale;
+  protected boolean useFixedKnockback;
   protected double gravity;
   protected float[] headPitchAngleRange;
   protected boolean debugModeSteer;
@@ -219,6 +224,7 @@ public abstract class com.hypixel.hytale.server.npc.movement.controllers.MotionC
   public void setDebugEntityId(int);
   public void setInertia(double);
   public void setKnockbackScale(double);
+  public void setUseFixedKnockback(boolean);
   public void updateModelParameters(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.asset.type.model.config.Model, com.hypixel.hytale.math.shape.Box, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public void setHeadPitchAngleRange(float[]);
   protected void readEntityPosition(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
@@ -241,6 +247,13 @@ public abstract class com.hypixel.hytale.server.npc.movement.controllers.MotionC
   public double steer0(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.role.Role, com.hypixel.hytale.server.npc.movement.Steering, com.hypixel.hytale.server.npc.movement.Steering, double, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   protected boolean shouldDampenAppliedVelocitiesY();
   protected boolean shouldAlwaysUseGroundResistance();
+  protected boolean isAffectedByGravityForKnockback();
+  protected boolean useGroundResistanceForAppliedVelocityDecay();
+  protected double appliedVelocityDecayExponent(double, double);
+  protected boolean shouldDampAppliedVelocityYForKnockback();
+  protected boolean shouldDampExternalVelocityThisTick();
+  protected boolean isFixedKnockbackAppliedVelocitiesPath();
+  protected void applyPlayerStyleAirDragToExternalVelocity();
   protected void calculateYaw(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.movement.Steering, com.hypixel.hytale.server.npc.movement.Steering, float, float, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   protected float blendBodyYaw(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, float, float, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   protected void calculatePitch(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.movement.Steering, com.hypixel.hytale.server.npc.movement.Steering, float, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
@@ -273,8 +286,10 @@ public abstract class com.hypixel.hytale.server.npc.movement.controllers.MotionC
   public org.joml.Vector3d getExternalVelocity();
   public double getCombinedExternalVelocityLength();
   public void clearExternalForces();
-  public void addVelocity(org.joml.Vector3d, com.hypixel.hytale.server.core.modules.splitvelocity.VelocityConfig);
+  public void addVelocity(org.joml.Vector3d, com.hypixel.hytale.server.core.modules.splitvelocity.VelocityConfig, float);
+  public org.joml.Vector3d preScaleKnockback(org.joml.Vector3dc);
   public void setVelocity(org.joml.Vector3dc, com.hypixel.hytale.server.core.modules.splitvelocity.VelocityConfig, boolean);
+  public void setVelocity(org.joml.Vector3dc, com.hypixel.hytale.server.core.modules.splitvelocity.VelocityConfig, boolean, float);
   public void clearExternalVelocity();
   protected void dumpCollisionResults();
   public void setEnableTriggers(boolean);
@@ -415,6 +430,7 @@ public class com.hypixel.hytale.server.npc.movement.controllers.MotionController
   public static final double DAMPING_FACTOR;
   public static final int COLLISION_MATERIALS_PASSIVE;
   public static final int COLLISION_MATERIALS_ACTIVE;
+  public static final int MAX_ALTITUDE_SEARCH_DISTANCE;
   protected final double minAirSpeed;
   protected final double maxClimbSpeed;
   protected final double maxSinkSpeed;
@@ -440,7 +456,9 @@ public class com.hypixel.hytale.server.npc.movement.controllers.MotionController
   protected final com.hypixel.hytale.server.npc.util.PositionProbeAir moveProbe;
   protected final com.hypixel.hytale.server.npc.util.PositionProbeAir probeMoveProbe;
   protected int lastVerticalPositionX;
+  protected int lastVerticalPositionY;
   protected int lastVerticalPositionZ;
+  protected boolean verticalRangeFloorClamped;
   protected final org.joml.Vector3d lastVelocity;
   protected double lastSpeed;
   protected float lastRoll;
@@ -576,6 +594,7 @@ public class com.hypixel.hytale.server.npc.movement.controllers.MotionController
   protected final org.joml.Vector3d tmpClimbPosition;
   protected final org.joml.Vector3d tmpClimbMovement;
   protected final org.joml.Vector3d tmpMovePosition;
+  protected final org.joml.Vector3d tmpProbeStepStart;
   protected final com.hypixel.hytale.server.core.modules.collision.CollisionResult tmpResults;
   protected final org.joml.Vector2d tmpClimbHeightResults;
   public com.hypixel.hytale.server.npc.movement.controllers.MotionControllerWalk(com.hypixel.hytale.server.npc.movement.controllers.builders.BuilderMotionControllerWalk, com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
@@ -596,6 +615,7 @@ public class com.hypixel.hytale.server.npc.movement.controllers.MotionController
   public void updateModelParameters(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.asset.type.model.config.Model, com.hypixel.hytale.math.shape.Box, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public void constrainRotations(com.hypixel.hytale.server.npc.role.Role, com.hypixel.hytale.server.core.modules.entity.component.TransformComponent);
   public void setVelocity(org.joml.Vector3dc, com.hypixel.hytale.server.core.modules.splitvelocity.VelocityConfig, boolean);
+  public void setVelocity(org.joml.Vector3dc, com.hypixel.hytale.server.core.modules.splitvelocity.VelocityConfig, boolean, float);
   public boolean inAir();
   public boolean onGround();
   public boolean standingOnBlockOfType(int);
@@ -648,8 +668,8 @@ public class com.hypixel.hytale.server.npc.movement.controllers.ProbeMoveData {
   public void setRelaxedConstraints(java.util.EnumSet<com.hypixel.hytale.server.npc.movement.constraints.RelaxedConstraint>);
   public java.util.function.Predicate<com.hypixel.hytale.server.core.modules.collision.CollisionConfig> getBlockCollisionFilter();
   public void setBlockCollisionFilter(java.util.function.Predicate<com.hypixel.hytale.server.core.modules.collision.CollisionConfig>);
-  public java.util.function.IntPredicate getBreathableBlockOverride();
-  public void setBreathableBlockOverride(java.util.function.IntPredicate);
+  public int getBreathableBlockSet();
+  public void setBreathableBlockSet(int);
   public com.hypixel.hytale.server.npc.movement.controllers.ProbeMoveData setPosition(org.joml.Vector3dc);
   public com.hypixel.hytale.server.npc.movement.controllers.ProbeMoveData setDirection(org.joml.Vector3dc);
   public com.hypixel.hytale.server.npc.movement.controllers.ProbeMoveData setTargetPosition(org.joml.Vector3dc);
@@ -672,6 +692,7 @@ public class com.hypixel.hytale.server.npc.movement.controllers.ProbeMoveData {
   public void addBlockedDropSegment(org.joml.Vector3d, double);
   public void changeSegmentToBlockedWall();
   public void changeSegmentToBlockedEdge();
+  public double truncateBeforeInvalidPosition(com.hypixel.hytale.server.npc.movement.controllers.MotionController, org.joml.Vector3dc);
   public double getLastDistance();
   public java.lang.String dump();
   protected com.hypixel.hytale.server.npc.movement.controllers.ProbeMoveData$Segment newSegment();

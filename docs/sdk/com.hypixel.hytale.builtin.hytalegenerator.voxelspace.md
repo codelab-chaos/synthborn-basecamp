@@ -97,7 +97,6 @@ public class com.hypixel.hytale.builtin.hytalegenerator.voxelspace.WindowVoxelSp
   public com.hypixel.hytale.builtin.hytalegenerator.voxelspace.WindowVoxelSpace(com.hypixel.hytale.builtin.hytalegenerator.voxelspace.VoxelSpace<T>);
   public void setBounds(com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i);
   public void setBounds(int, int, int, int, int, int);
-  public com.hypixel.hytale.builtin.hytalegenerator.voxelspace.VoxelSpace<T> getSourceVoxelSpace();
   public void set(T, int, int, int);
   public void set(T, org.joml.Vector3i);
   public void setAll(T);

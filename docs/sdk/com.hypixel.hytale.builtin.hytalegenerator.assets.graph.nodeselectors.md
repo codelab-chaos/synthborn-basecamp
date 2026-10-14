@@ -67,6 +67,7 @@ public class com.hypixel.hytale.builtin.hytalegenerator.assets.graph.nodeselecto
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.builtin.hytalegenerator.assets.graph.nodeselectors.ImportedNodeSelectorAsset> CODEC;
   public com.hypixel.hytale.builtin.hytalegenerator.assets.graph.nodeselectors.ImportedNodeSelectorAsset();
   public com.hypixel.hytale.builtin.hytalegenerator.graph.nodeselectors.NodeSelector build(com.hypixel.hytale.builtin.hytalegenerator.assets.graph.GraphGeneratorAsset$Argument);
+  public void cleanUp();
 }
 ```
 

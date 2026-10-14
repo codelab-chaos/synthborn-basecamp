@@ -97,6 +97,7 @@ public abstract class com.hypixel.hytale.builtin.triggervolumes.effect.TriggerEf
   public void rotateInPlace(float, org.joml.Vector3d);
   public void onEntityExit(java.util.UUID);
   protected static com.hypixel.hytale.server.core.Message withTagParams(com.hypixel.hytale.builtin.triggervolumes.effect.TriggerContext, com.hypixel.hytale.server.core.Message);
+  protected static com.hypixel.hytale.server.core.Message resolveTaggedMessage(com.hypixel.hytale.builtin.triggervolumes.effect.TriggerContext, java.lang.String);
 }
 ```
 

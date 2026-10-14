@@ -26,7 +26,7 @@ public class com.hypixel.hytale.builtin.asseteditor.AssetEditorPacketHandler ext
   public com.hypixel.hytale.builtin.asseteditor.AssetEditorPacketHandler(com.hypixel.hytale.protocol.io.ChannelConnection, com.hypixel.hytale.server.core.io.ProtocolVersion, java.lang.String, java.util.UUID, java.lang.String, byte[], com.hypixel.hytale.protocol.HostAddress);
   public com.hypixel.hytale.builtin.asseteditor.EditorClient getEditorClient();
   public java.lang.String getIdentifier();
-  protected java.util.UUID getAccountUuid();
+  public com.hypixel.hytale.server.core.auth.ProfileServiceClient$PublicGameProfile getAccountProfile();
   protected void registered0(com.hypixel.hytale.protocol.io.ConnectionHandler);
   public void handle(com.hypixel.hytale.protocol.ToServerPacket);
   public void disconnect(com.hypixel.hytale.protocol.FormattedMessage);
@@ -56,7 +56,7 @@ public class com.hypixel.hytale.builtin.asseteditor.AssetEditorPacketHandler ext
   public void handle(com.hypixel.hytale.protocol.packets.interface_.UpdateLanguage);
   public void handle(com.hypixel.hytale.protocol.packets.asseteditor.AssetEditorSetGameTime);
   public void handle(com.hypixel.hytale.protocol.packets.asseteditor.AssetEditorUpdateWeatherPreviewLock);
-  public void handle(com.hypixel.hytale.protocol.packets.asseteditor.AssetEditorUpdateAssetPack);
+  public void handle(com.hypixel.hytale.protocol.packets.asseteditor.AssetEditorUpdateAssetPackManifest);
   public void handle(com.hypixel.hytale.protocol.packets.asseteditor.AssetEditorDeleteAssetPack);
   public void handle(com.hypixel.hytale.protocol.packets.asseteditor.AssetEditorCreateAssetPack);
   public void handle(com.hypixel.hytale.protocol.packets.asseteditor.AssetEditorRequestAssetInheritance);
@@ -235,7 +235,6 @@ public class com.hypixel.hytale.builtin.asseteditor.Messages {
   public static final com.hypixel.hytale.server.core.Message RENAME_DIRECTORY_UNSUPPORTED;
   public static final com.hypixel.hytale.server.core.Message CREATE_DIRECTORY_NO_DATA_SOURCE;
   public static final com.hypixel.hytale.server.core.Message CREATE_DIRECTORY_NO_PATH;
-  public static final com.hypixel.hytale.server.core.Message PARENT_DIRECTORY_MISSING;
   public static final com.hypixel.hytale.server.core.Message FAILED_TO_CREATE_DIRECTORY;
   public static final com.hypixel.hytale.server.core.Message CREATE_ASSET_ID_ALREADY_EXISTS;
   public static final com.hypixel.hytale.server.core.Message MANIFEST_NOT_FOUND;

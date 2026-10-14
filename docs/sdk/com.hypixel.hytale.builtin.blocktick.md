@@ -14,6 +14,6 @@ public class com.hypixel.hytale.builtin.blocktick.BlockTickPlugin extends com.hy
   public com.hypixel.hytale.builtin.blocktick.BlockTickPlugin(com.hypixel.hytale.server.core.plugin.JavaPluginInit);
   protected void setup();
   public com.hypixel.hytale.server.core.asset.type.blocktick.config.TickProcedure getTickProcedure(int);
-  public int discoverTickingBlocks(com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk);
+  public int discoverTickingBlocks(com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>);
 }
 ```

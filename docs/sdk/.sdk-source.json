@@ -1,8 +1,8 @@
 {
   "jar": "HytaleServer.jar",
-  "size": 110451990,
-  "mtimeMs": 1791187325698,
-  "sha256": "dcd2956cc65b950084650eadd56b889cf51f7610c127c3daac1f74dc471fec97",
-  "version": "0.6.8",
+  "size": 112406344,
+  "mtimeMs": 1792006792187,
+  "sha256": "23f71f03763422ce7c04df191db49cd0e7d87d43b12baad75c43fdc202410aff",
+  "version": "0.7.2",
   "full": true
 }

@@ -78,6 +78,7 @@ public class com.hypixel.hytale.builtin.hytalegenerator.assets.graph.nodeactions
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.builtin.hytalegenerator.assets.graph.nodeactions.ImportedNodeActionAsset> CODEC;
   public com.hypixel.hytale.builtin.hytalegenerator.assets.graph.nodeactions.ImportedNodeActionAsset();
   public com.hypixel.hytale.builtin.hytalegenerator.graph.nodeactions.NodeAction build(com.hypixel.hytale.builtin.hytalegenerator.assets.graph.GraphGeneratorAsset$Argument);
+  public void cleanUp();
 }
 ```
 

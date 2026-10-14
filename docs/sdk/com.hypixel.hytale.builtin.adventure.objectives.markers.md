@@ -23,10 +23,14 @@ public class com.hypixel.hytale.builtin.adventure.objectives.markers.ObjectiveTa
   public static final com.hypixel.hytale.codec.codecs.array.ArrayCodec<com.hypixel.hytale.builtin.adventure.objectives.markers.ObjectiveTaskMarker> ARRAY_CODEC;
   public com.hypixel.hytale.builtin.adventure.objectives.markers.ObjectiveTaskMarker();
   public com.hypixel.hytale.builtin.adventure.objectives.markers.ObjectiveTaskMarker(java.lang.String, com.hypixel.hytale.math.vector.Transform, java.lang.String, com.hypixel.hytale.server.core.Message);
+  public com.hypixel.hytale.builtin.adventure.objectives.markers.ObjectiveTaskMarker(java.lang.String, com.hypixel.hytale.math.vector.Transform, java.lang.String, com.hypixel.hytale.server.core.Message, com.hypixel.hytale.protocol.packets.worldmap.MapMarkerIconSize);
+  public com.hypixel.hytale.builtin.adventure.objectives.markers.ObjectiveTaskMarker(java.lang.String, com.hypixel.hytale.math.vector.Transform, java.lang.String, com.hypixel.hytale.server.core.Message, com.hypixel.hytale.protocol.packets.worldmap.MapMarkerIconSize, java.lang.String);
   public java.lang.String getId();
   public com.hypixel.hytale.math.vector.Transform getTransform();
   public java.lang.String getIcon();
   public com.hypixel.hytale.server.core.Message getName();
+  public com.hypixel.hytale.protocol.packets.worldmap.MapMarkerIconSize getIconSize();
+  public java.lang.String getCompassIcon();
   public com.hypixel.hytale.protocol.packets.worldmap.MapMarker toProto();
 }
 ```

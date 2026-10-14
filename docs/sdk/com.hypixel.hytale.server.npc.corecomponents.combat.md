@@ -106,14 +106,18 @@ public class com.hypixel.hytale.server.npc.corecomponents.combat.BodyMotionCharg
   protected final boolean skipLockedOnState;
   protected final boolean skipWindingUpState;
   protected final double[] chargeDistanceRange;
+  protected final com.hypixel.hytale.server.npc.corecomponents.combat.BodyMotionCharge$ChargeDistanceMode chargeDistanceMode;
+  protected final double[] targetDistanceRange;
   protected final boolean windingUpUninterruptable;
   protected final double windingUpRelativeTurnSpeed;
   protected final double chargeRelativeSpeed;
   protected final int ignoredBlockSet;
-  protected final int removedBlockSet;
   protected final boolean clearOnceOnStateChange;
   protected final double chargeAbsoluteSpeed;
-  protected final double chargeAcceleration;
+  protected final double chargeAccelerationDistance;
+  protected final double chargeAccelerationMinimumRelativeSpeed;
+  protected final double chargeDecelerationDistance;
+  protected final double chargeDecelerationMinimumRelativeSpeed;
   protected final boolean ignoredBlockSetTriggers;
   protected final boolean entityStopsCharge;
   protected final double climbSlope;
@@ -123,6 +127,7 @@ public class com.hypixel.hytale.server.npc.corecomponents.combat.BodyMotionCharg
   protected final double probeMinInterval;
   protected final double probeMaxInterval;
   protected final double probeMinDirectionChange;
+  protected final java.util.EnumSet<com.hypixel.hytale.server.npc.movement.constraints.RelaxedConstraint> probeRelaxedConstraints;
   protected final double probeChargeRecomputeDistance;
   protected final double knockbackThreshold;
   protected final com.hypixel.hytale.server.npc.util.AimingData aimingData;
@@ -171,7 +176,7 @@ public class com.hypixel.hytale.server.npc.corecomponents.combat.HeadMotionAim e
   protected final org.joml.Vector3d startOffset;
   protected final org.joml.Vector3d targetPosition;
   protected final org.joml.Vector3d targetOffset;
-  protected final org.joml.Vector3d relativeVelocity;
+  protected final org.joml.Vector3d targetVelocity;
   protected final org.joml.Vector3d spreadOffset;
   public com.hypixel.hytale.server.npc.corecomponents.combat.HeadMotionAim(com.hypixel.hytale.server.npc.corecomponents.combat.builders.BuilderHeadMotionAim, com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
   public void preComputeSteering(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.instructions.ExecutionSupport, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
@@ -223,6 +228,7 @@ public class com.hypixel.hytale.server.npc.corecomponents.combat.SensorChargeSta
 public class com.hypixel.hytale.server.npc.corecomponents.combat.SensorDamage extends com.hypixel.hytale.server.npc.corecomponents.SensorBase {
   protected final boolean combatDamage;
   protected final boolean friendlyDamage;
+  protected final boolean includeDoT;
   protected final boolean drowningDamage;
   protected final boolean environmentDamage;
   protected final boolean otherDamage;

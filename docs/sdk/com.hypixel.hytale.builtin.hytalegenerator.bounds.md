@@ -33,7 +33,6 @@ public class com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3d implemen
   public com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3d offsetOpposite(org.joml.Vector3d);
   public com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3d intersect(com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3d);
   public com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3d encompass(com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3d);
-  public com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3d encompass(org.joml.Vector3d);
   public com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3d stack(com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3d);
   public com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3d stackOrAssign(com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3d);
   public com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3d expand(double);
@@ -44,6 +43,7 @@ public class com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3d implemen
   public com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3d clone();
   public boolean isCorrect();
   public void correct();
+  public java.lang.String toString();
   public com.hypixel.hytale.builtin.hytalegenerator.engine.performanceinstruments.MemInstrument$Report getMemoryUsage();
   public java.lang.Object clone() throws java.lang.CloneNotSupportedException;
 }
@@ -87,6 +87,7 @@ public class com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i implemen
   public com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i clone();
   public boolean isCorrect();
   public void correct();
+  public java.lang.String toString();
   public com.hypixel.hytale.builtin.hytalegenerator.engine.performanceinstruments.MemInstrument$Report getMemoryUsage();
   public java.lang.Object clone() throws java.lang.CloneNotSupportedException;
 }

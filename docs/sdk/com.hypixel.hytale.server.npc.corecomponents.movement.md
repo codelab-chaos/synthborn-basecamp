@@ -77,9 +77,6 @@ public class com.hypixel.hytale.server.npc.corecomponents.movement.BodyMotionFin
 public abstract class com.hypixel.hytale.server.npc.corecomponents.movement.BodyMotionFindBase<T extends com.hypixel.hytale.server.npc.navigation.AStarBase> extends com.hypixel.hytale.server.npc.corecomponents.BodyMotionBase implements com.hypixel.hytale.server.npc.navigation.AStarEvaluator, com.hypixel.hytale.server.npc.role.support.DebugSupport$DebugFlagsChangeListener {
   protected final int nodesPerTick;
   protected final boolean useBestPath;
-  protected final double throttleDelayMin;
-  protected final double throttleDelayMax;
-  protected final int throttleIgnoreCount;
   protected final boolean useSteering;
   protected final boolean usePathfinder;
   protected final boolean skipSteering;
@@ -100,12 +97,10 @@ public abstract class com.hypixel.hytale.server.npc.corecomponents.movement.Body
   protected final com.hypixel.hytale.server.npc.navigation.AStarDebugBase aStarDebug;
   protected final com.hypixel.hytale.server.npc.navigation.PathFollower pathFollower;
   protected final com.hypixel.hytale.server.npc.movement.controllers.ProbeMoveData probeMoveData;
+  protected final com.hypixel.hytale.server.npc.util.PathRetryThrottle pathRetryThrottle;
   protected com.hypixel.hytale.server.npc.navigation.AStarNodePoolProvider sharedNodePoolProvider;
-  protected int throttleCount;
-  protected double throttleTime;
   protected double targetDeltaSquared;
   protected boolean wasSteering;
-  protected double throttleDelay;
   protected boolean passedWaypoint;
   protected boolean wasAvoidingBlockDamage;
   protected boolean wasUnableToBreathe;
@@ -149,7 +144,6 @@ public abstract class com.hypixel.hytale.server.npc.corecomponents.movement.Body
   protected void setNavStateAborted(com.hypixel.hytale.server.npc.movement.controllers.MotionController);
   protected void setNavStateThrottling(com.hypixel.hytale.server.npc.movement.controllers.MotionController);
   protected void setPath(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, org.joml.Vector3d, com.hypixel.hytale.server.npc.movement.controllers.MotionController, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
-  protected void resetThrottleCount();
   protected com.hypixel.hytale.server.npc.navigation.AStarBase$Progress startComputePath(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.instructions.ExecutionSupport, com.hypixel.hytale.server.npc.movement.controllers.MotionController, org.joml.Vector3d, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   protected boolean shouldDeferPathComputation(com.hypixel.hytale.server.npc.movement.controllers.MotionController, org.joml.Vector3d, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   protected boolean canComputeMotion(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.instructions.ExecutionSupport, com.hypixel.hytale.server.npc.sensorinfo.InfoProvider, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);

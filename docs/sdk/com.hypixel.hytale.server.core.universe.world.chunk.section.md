@@ -16,13 +16,13 @@ public class com.hypixel.hytale.server.core.universe.world.chunk.section.BlockCo
   public it.unimi.dsi.fastutil.shorts.Short2ObjectMap<com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>> getBlockHolders();
   public com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore> getBlockHolder(int);
   public com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore> getBlockHolder(short);
+  public com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore> copyBlockHolder(int);
   public void addBlockHolder(int, com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>);
   public void addBlockHolder(short, com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>);
   public void storeBlockHolder(int, com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>);
   public void storeBlockHolder(short, com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>);
   public com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore> removeBlockHolder(int);
   public com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore> removeBlockHolder(short);
-  public it.unimi.dsi.fastutil.shorts.Short2ReferenceMap<com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>> getBlockReferences();
   public com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore> getBlockReference(int);
   public com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore> getBlockReference(short);
   public void addBlockReference(int, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>);
@@ -62,7 +62,6 @@ public class com.hypixel.hytale.server.core.universe.world.chunk.section.BlockSe
   public com.hypixel.hytale.server.core.universe.world.chunk.section.BlockSection();
   public com.hypixel.hytale.server.core.universe.world.chunk.section.BlockSection(com.hypixel.hytale.server.core.universe.world.chunk.section.palette.AbstractSectionPalette, com.hypixel.hytale.server.core.universe.world.chunk.section.palette.AbstractSectionPalette, com.hypixel.hytale.server.core.universe.world.chunk.section.palette.AbstractSectionPalette);
   public com.hypixel.hytale.server.core.universe.world.chunk.section.palette.AbstractSectionPalette getChunkSection();
-  public void setChunkSection(com.hypixel.hytale.server.core.universe.world.chunk.section.palette.AbstractSectionPalette);
   public void setLocalLight(com.hypixel.hytale.server.core.universe.world.chunk.section.ChunkLightDataBuilder);
   public void setGlobalLight(com.hypixel.hytale.server.core.universe.world.chunk.section.ChunkLightDataBuilder);
   public com.hypixel.hytale.server.core.universe.world.chunk.section.ChunkLightData getLocalLight();
@@ -73,6 +72,8 @@ public class com.hypixel.hytale.server.core.universe.world.chunk.section.BlockSe
   public void invalidateGlobalLight();
   public short getLocalChangeCounter();
   public short getGlobalChangeCounter();
+  public long getSkyLitStamp();
+  public void setSkyLitStamp(long);
   public void invalidate();
   public int get(int);
   public int getFiller(int);
@@ -94,6 +95,7 @@ public class com.hypixel.hytale.server.core.universe.world.chunk.section.BlockSe
   public void find(it.unimi.dsi.fastutil.ints.IntList, it.unimi.dsi.fastutil.ints.IntSet, java.util.function.IntConsumer);
   public void find(it.unimi.dsi.fastutil.ints.IntList, java.util.function.IntConsumer);
   public void find(it.unimi.dsi.fastutil.ints.IntList, com.hypixel.hytale.function.consumer.BiIntConsumer);
+  public void columnOccupancy(java.util.function.IntUnaryOperator, int[], int[]);
   public boolean setTicking(int, boolean);
   public int setTicking(it.unimi.dsi.fastutil.ints.IntList, boolean);
   public int getTickingBlocksCount();
@@ -103,8 +105,8 @@ public class com.hypixel.hytale.server.core.universe.world.chunk.section.BlockSe
   public void scheduleTick(int, java.time.Instant);
   public void preTick(java.time.Instant);
   public <T, V> int forEachTicking(T, V, int, com.hypixel.hytale.function.predicate.ObjectPositionBlockFunction<T, V, com.hypixel.hytale.server.core.asset.type.blocktick.BlockTickStrategy>);
+  public <T, U, V> int forEachTicking(T, U, V, int, int, int, com.hypixel.hytale.function.predicate.TriObjectPositionBlockFunction<T, U, V, com.hypixel.hytale.server.core.asset.type.blocktick.BlockTickStrategy>);
   public void mergeTickingBlocks();
-  public double getMaximumHitboxExtent();
   public void invalidateBlock(int, int, int);
   public byte[] serializeForPacket();
   public byte[] serialize(com.hypixel.hytale.codec.ExtraInfo);
@@ -210,23 +212,15 @@ public class com.hypixel.hytale.server.core.universe.world.chunk.section.ChunkSe
   public int getX();
   public int getY();
   public int getZ();
+  public boolean shouldKeepLoaded();
+  public void addKeepLoaded();
+  public void removeKeepLoaded();
   public int pollKeepAlive(int);
   public void resetKeepAlive();
   public int pollActiveTimer(int);
   public void resetActiveTimer();
   public com.hypixel.hytale.component.Component<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore> clone();
   public java.lang.Object clone() throws java.lang.CloneNotSupportedException;
-}
-```
-
-## ChunkSectionReference
-
-```java
-public class com.hypixel.hytale.server.core.universe.world.chunk.section.ChunkSectionReference {
-  public com.hypixel.hytale.server.core.universe.world.chunk.section.ChunkSectionReference(com.hypixel.hytale.server.core.universe.world.chunk.BlockChunk, com.hypixel.hytale.server.core.universe.world.chunk.section.BlockSection, int);
-  public com.hypixel.hytale.server.core.universe.world.chunk.BlockChunk getChunk();
-  public com.hypixel.hytale.server.core.universe.world.chunk.section.BlockSection getSection();
-  public int getSectionIndex();
 }
 ```
 
@@ -250,6 +244,32 @@ public class com.hypixel.hytale.server.core.universe.world.chunk.section.EntityS
   public void unloadEntityReference(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>[] takeEntityHolders();
   public com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>[] takeEntityReferences();
+  public java.lang.Object clone() throws java.lang.CloneNotSupportedException;
+}
+```
+
+## EnvironmentSection
+
+```java
+public class com.hypixel.hytale.server.core.universe.world.chunk.section.EnvironmentSection implements com.hypixel.hytale.component.Component<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore> {
+  public static final int VERSION;
+  public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.server.core.universe.world.chunk.section.EnvironmentSection> CODEC;
+  public static com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, com.hypixel.hytale.server.core.universe.world.chunk.section.EnvironmentSection> getComponentType();
+  public com.hypixel.hytale.server.core.universe.world.chunk.section.EnvironmentSection();
+  public com.hypixel.hytale.server.core.universe.world.chunk.section.EnvironmentSection(int);
+  public com.hypixel.hytale.component.Component<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore> clone();
+  public int get(int, int, int);
+  public boolean isUniform();
+  public boolean wasDeserialized();
+  public boolean contains(int);
+  public void readColumnRuns(int, int, com.hypixel.hytale.server.core.universe.world.chunk.section.EnvironmentSection$ColumnRuns);
+  public boolean set(int, int, int, int);
+  public boolean setRange(int, int, int, int, int);
+  public boolean setColumn(int, int, int);
+  public boolean setUniform(int);
+  public byte[] serialize(com.hypixel.hytale.codec.ExtraInfo);
+  public java.util.concurrent.CompletableFuture<com.hypixel.hytale.protocol.CachedPacket<com.hypixel.hytale.protocol.packets.world.SetChunkEnvironments>> getCachedPacket(int, int, int);
+  public void deserialize(byte[], com.hypixel.hytale.codec.ExtraInfo);
   public java.lang.Object clone() throws java.lang.CloneNotSupportedException;
 }
 ```

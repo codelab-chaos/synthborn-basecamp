@@ -18,7 +18,7 @@ public class com.hypixel.hytale.server.core.asset.type.modelvfx.config.ModelVFX 
   protected java.lang.String id;
   public static com.hypixel.hytale.assetstore.AssetStore<java.lang.String, com.hypixel.hytale.server.core.asset.type.modelvfx.config.ModelVFX, com.hypixel.hytale.assetstore.map.IndexedLookupTableAssetMap<java.lang.String, com.hypixel.hytale.server.core.asset.type.modelvfx.config.ModelVFX>> getAssetStore();
   public static com.hypixel.hytale.assetstore.map.IndexedLookupTableAssetMap<java.lang.String, com.hypixel.hytale.server.core.asset.type.modelvfx.config.ModelVFX> getAssetMap();
-  public com.hypixel.hytale.server.core.asset.type.modelvfx.config.ModelVFX(java.lang.String, com.hypixel.hytale.protocol.SwitchTo, com.hypixel.hytale.protocol.EffectDirection, float, org.joml.Vector2f, com.hypixel.hytale.protocol.LoopOption, com.hypixel.hytale.protocol.CurveType, com.hypixel.hytale.protocol.Color, float, boolean, boolean, org.joml.Vector2f, org.joml.Vector2f, com.hypixel.hytale.protocol.Color, float);
+  public com.hypixel.hytale.server.core.asset.type.modelvfx.config.ModelVFX(java.lang.String, com.hypixel.hytale.protocol.SwitchTo, com.hypixel.hytale.protocol.EffectDirection, float, org.joml.Vector2f, com.hypixel.hytale.protocol.LoopOption, com.hypixel.hytale.protocol.CurveType, com.hypixel.hytale.protocol.Color, float, boolean, boolean, org.joml.Vector2f, org.joml.Vector2f, com.hypixel.hytale.protocol.Color, float, float);
   public com.hypixel.hytale.server.core.asset.type.modelvfx.config.ModelVFX(java.lang.String);
   protected com.hypixel.hytale.server.core.asset.type.modelvfx.config.ModelVFX();
   public com.hypixel.hytale.protocol.ModelVFX toPacket();
@@ -37,6 +37,7 @@ public class com.hypixel.hytale.server.core.asset.type.modelvfx.config.ModelVFX 
   public org.joml.Vector2f getNoiseScrollSpeed();
   public com.hypixel.hytale.protocol.Color getPostColor();
   public float getPostColorOpacity();
+  public float getOpacity();
   public java.lang.String toString();
   public java.lang.Object getId();
   public java.lang.Object toPacket();
