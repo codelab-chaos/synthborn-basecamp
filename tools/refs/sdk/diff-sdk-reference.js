@@ -117,6 +117,51 @@ function methodSet(cls) {
   return new Set(cls.methods.map((m) => m.signature));
 }
 
+// The signature view lists declared members only. A class that gains a superclass (or whose
+// methods are hoisted into one) would otherwise report the moved methods as removed, so
+// removals are judged against own + inherited members, resolved inside the same snapshot.
+function stripGenerics(text) {
+  let depth = 0;
+  let out = "";
+  for (const ch of text) {
+    if (ch === "<") depth++;
+    else if (ch === ">") depth = Math.max(0, depth - 1);
+    else if (depth === 0) out += ch;
+  }
+  return out;
+}
+
+function ancestorNames(decl) {
+  const flat = stripGenerics(decl.replace(/\s*\{\s*$/, ""));
+  const names = [];
+  for (const m of flat.matchAll(/\b(?:extends|implements)\s+([^]*?)(?=\s+(?:extends|implements|permits)\b|$)/g)) {
+    for (const part of m[1].split(",")) {
+      const name = part.trim();
+      if (name) names.push(name);
+    }
+  }
+  return names;
+}
+
+function indexClasses(snapshot) {
+  const index = new Map();
+  for (const entry of snapshot.values()) {
+    for (const cls of entry.classes) index.set(`${entry.pkg}.${cls.name}`, cls);
+  }
+  return index;
+}
+
+function effectiveMethodSet(fqcn, index, seen = new Set()) {
+  const cls = index.get(fqcn);
+  if (!cls || seen.has(fqcn)) return new Set();
+  seen.add(fqcn);
+  const sigs = methodSet(cls);
+  for (const parent of ancestorNames(cls.decl)) {
+    for (const sig of effectiveMethodSet(parent, index, seen)) sigs.add(sig);
+  }
+  return sigs;
+}
+
 function compareSnapshots(current, baseline) {
   const addedPackages = [];
   const removedPackages = [];
@@ -125,6 +170,8 @@ function compareSnapshots(current, baseline) {
   const changedClasses = [];
 
   const allFiles = new Set([...current.keys(), ...baseline.keys()]);
+  const curIndex = indexClasses(current);
+  const baseIndex = indexClasses(baseline);
 
   for (const file of [...allFiles].sort()) {
     const cur = current.get(file);
@@ -157,8 +204,13 @@ function compareSnapshots(current, baseline) {
       if (!prev) continue;
       const curMethods = methodSet(cls);
       const prevMethods = methodSet(prev);
-      const added = [...curMethods].filter((m) => !prevMethods.has(m));
-      const removed = [...prevMethods].filter((m) => !curMethods.has(m));
+      const curEffective = effectiveMethodSet(`${cur.pkg}.${name}`, curIndex);
+      const prevEffective = effectiveMethodSet(`${base.pkg}.${name}`, baseIndex);
+      // Declared-only diff, then drop members that merely moved up to or down from a superclass.
+      const added = [...curMethods].filter((m) => !prevMethods.has(m) && !prevEffective.has(m));
+      const removed = [...prevMethods].filter((m) => !curMethods.has(m) && !curEffective.has(m));
+      const moved = [...prevMethods].filter((m) => !curMethods.has(m) && curEffective.has(m)).length
+        + [...curMethods].filter((m) => !prevMethods.has(m) && prevEffective.has(m)).length;
       if (added.length || removed.length || cls.decl !== prev.decl) {
         changedClasses.push({
           file,
@@ -167,6 +219,7 @@ function compareSnapshots(current, baseline) {
           added,
           removed,
           declChanged: cls.decl !== prev.decl,
+          moved,
         });
       }
     }
@@ -217,6 +270,7 @@ function main() {
   printSection("Changed classes", diff.changedClasses, (r) => {
     const lines = [`~ ${r.class} in ${r.pkg} (${r.file})`];
     if (r.declChanged) lines.push("    declaration changed");
+    if (r.moved) lines.push(`    ${r.moved} member(s) moved to or from a superclass (not removed)`);
     for (const sig of r.added) lines.push(`    + ${sig}`);
     for (const sig of r.removed) lines.push(`    - ${sig}`);
     return lines.join("\n");

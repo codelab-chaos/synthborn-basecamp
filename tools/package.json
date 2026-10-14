@@ -36,6 +36,6 @@
     "pages:build": "node ../scripts/build-github-pages.js",
     "pages:build:icons": "node ../scripts/build-github-pages.js --icons",
     "index:json": "node ../scripts/build-basecamp-index-json.js",
-    "sdk:test": "node --test refs/sdk/tests/incremental-sdk.test.js"
+    "sdk:test": "node --test refs/sdk/tests/*.test.js"
   }
 }
