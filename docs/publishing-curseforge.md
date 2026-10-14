@@ -26,3 +26,11 @@ submitting so the upload passes moderation on the first try.
   Chaos Atlas agrees: its CurseForge service doc treats release channel as upload metadata,
   and its reader labels files by `displayName` (falling back to `fileName`) with the channel
   from `releaseType`, so the beta label still shows there with a plain jar name.
+- Game version target: upload each file against the Hytale Update it was built for (for
+  example `0.7`), never the "Early Access" wildcard. The mods use server internals, and those
+  APIs change between Updates (0.6 to 0.7 removed the column accessors), so a wildcard
+  promises compatibility the jar does not have. CurseForge now lists a version per Update, so
+  target the latest one. The manifest `ServerVersion` minimum drives it: Terrascape's
+  `publish-curseforge.yml` takes the major.minor of `ServerVersion` (`>=0.7.2` gives `0.7`)
+  and fails with the list of available names if CurseForge has no match. Raise the manifest
+  minimum with each Update migration so the target moves with it.
