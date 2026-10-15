@@ -13,7 +13,7 @@ public class com.hypixel.hytale.builtin.hytalegenerator.scanners.DirectScanner e
   public com.hypixel.hytale.builtin.hytalegenerator.scanners.DirectScanner();
   public void scan(com.hypixel.hytale.builtin.hytalegenerator.scanners.Scanner$Context);
   public void scan(org.joml.Vector3i, com.hypixel.hytale.builtin.hytalegenerator.pipe.Pipe$One<org.joml.Vector3i>);
-  public com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i getBounds_voxelGrid();
+  public com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i getScanBounds_voxelGrid();
 }
 ```
 
@@ -24,7 +24,7 @@ public class com.hypixel.hytale.builtin.hytalegenerator.scanners.EmptyScanner ex
   public static final com.hypixel.hytale.builtin.hytalegenerator.scanners.EmptyScanner INSTANCE;
   public void scan(com.hypixel.hytale.builtin.hytalegenerator.scanners.Scanner$Context);
   public void scan(org.joml.Vector3i, com.hypixel.hytale.builtin.hytalegenerator.pipe.Pipe$One<org.joml.Vector3i>);
-  public com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i getBounds_voxelGrid();
+  public com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i getScanBounds_voxelGrid();
 }
 ```
 
@@ -35,7 +35,7 @@ public class com.hypixel.hytale.builtin.hytalegenerator.scanners.LinearScanner e
   public com.hypixel.hytale.builtin.hytalegenerator.scanners.LinearScanner(com.hypixel.hytale.math.Axis, com.hypixel.hytale.builtin.hytalegenerator.delimiters.RangeInt, com.hypixel.hytale.builtin.hytalegenerator.scanners.Scanner, boolean);
   public void scan(com.hypixel.hytale.builtin.hytalegenerator.scanners.Scanner$Context);
   public void scan(org.joml.Vector3i, com.hypixel.hytale.builtin.hytalegenerator.pipe.Pipe$One<org.joml.Vector3i>);
-  public com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i getBounds_voxelGrid();
+  public com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i getScanBounds_voxelGrid();
 }
 ```
 
@@ -46,7 +46,7 @@ public class com.hypixel.hytale.builtin.hytalegenerator.scanners.QueueScanner ex
   public com.hypixel.hytale.builtin.hytalegenerator.scanners.QueueScanner(java.util.List<com.hypixel.hytale.builtin.hytalegenerator.scanners.Scanner>);
   public void scan(com.hypixel.hytale.builtin.hytalegenerator.scanners.Scanner$Context);
   public void scan(org.joml.Vector3i, com.hypixel.hytale.builtin.hytalegenerator.pipe.Pipe$One<org.joml.Vector3i>);
-  public com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i getBounds_voxelGrid();
+  public com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i getScanBounds_voxelGrid();
 }
 ```
 
@@ -57,7 +57,7 @@ public class com.hypixel.hytale.builtin.hytalegenerator.scanners.RadialScanner e
   public com.hypixel.hytale.builtin.hytalegenerator.scanners.RadialScanner(com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i, com.hypixel.hytale.builtin.hytalegenerator.scanners.Scanner);
   public void scan(com.hypixel.hytale.builtin.hytalegenerator.scanners.Scanner$Context);
   public void scan(org.joml.Vector3i, com.hypixel.hytale.builtin.hytalegenerator.pipe.Pipe$One<org.joml.Vector3i>);
-  public com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i getBounds_voxelGrid();
+  public com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i getScanBounds_voxelGrid();
 }
 ```
 
@@ -68,7 +68,7 @@ public class com.hypixel.hytale.builtin.hytalegenerator.scanners.RandomScanner e
   public com.hypixel.hytale.builtin.hytalegenerator.scanners.RandomScanner(com.hypixel.hytale.math.Axis, com.hypixel.hytale.builtin.hytalegenerator.delimiters.RangeInt, com.hypixel.hytale.builtin.hytalegenerator.scanners.Scanner, int);
   public void scan(com.hypixel.hytale.builtin.hytalegenerator.scanners.Scanner$Context);
   public void scan(org.joml.Vector3i, com.hypixel.hytale.builtin.hytalegenerator.pipe.Pipe$One<org.joml.Vector3i>);
-  public com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i getBounds_voxelGrid();
+  public com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i getScanBounds_voxelGrid();
 }
 ```
 
@@ -79,7 +79,7 @@ public abstract class com.hypixel.hytale.builtin.hytalegenerator.scanners.Scanne
   public com.hypixel.hytale.builtin.hytalegenerator.scanners.Scanner();
   public abstract void scan(com.hypixel.hytale.builtin.hytalegenerator.scanners.Scanner$Context);
   public abstract void scan(org.joml.Vector3i, com.hypixel.hytale.builtin.hytalegenerator.pipe.Pipe$One<org.joml.Vector3i>);
-  public abstract com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i getBounds_voxelGrid();
-  public com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i getBoundsWithPattern_voxelGrid(com.hypixel.hytale.builtin.hytalegenerator.patterns.Pattern);
+  public abstract com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i getScanBounds_voxelGrid();
+  public com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i getReadBoundsWithPattern_voxelGrid(com.hypixel.hytale.builtin.hytalegenerator.patterns.Pattern);
 }
 ```

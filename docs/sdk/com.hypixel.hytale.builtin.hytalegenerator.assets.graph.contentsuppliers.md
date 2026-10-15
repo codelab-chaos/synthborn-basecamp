@@ -43,6 +43,7 @@ public class com.hypixel.hytale.builtin.hytalegenerator.assets.graph.contentsupp
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.builtin.hytalegenerator.assets.graph.contentsuppliers.ImportedContentSupplierAsset> CODEC;
   public com.hypixel.hytale.builtin.hytalegenerator.assets.graph.contentsuppliers.ImportedContentSupplierAsset();
   public com.hypixel.hytale.builtin.hytalegenerator.graph.contentsuppliers.ContentSupplier build(com.hypixel.hytale.builtin.hytalegenerator.assets.graph.GraphGeneratorAsset$Argument);
+  public void cleanUp();
 }
 ```
 

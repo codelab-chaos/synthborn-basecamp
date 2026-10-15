@@ -17,6 +17,7 @@ public class com.hypixel.hytale.builtin.weather.resources.WeatherResource implem
   public it.unimi.dsi.fastutil.ints.Int2IntMap getEnvironmentWeather();
   public int getWeatherIndexForEnvironment(int);
   public int getForcedWeatherIndex();
+  public int getEffectiveWeatherIndex(int);
   public void setForcedWeather(java.lang.String);
   public boolean consumeForcedWeatherChange();
   public boolean compareAndSwapHour(int);

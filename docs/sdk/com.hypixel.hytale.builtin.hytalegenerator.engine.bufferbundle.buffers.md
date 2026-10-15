@@ -22,8 +22,8 @@ public class com.hypixel.hytale.builtin.hytalegenerator.engine.bufferbundle.buff
   public static final org.joml.Vector3i SIZE_VOXEL_GRID;
   public static final com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i BOUNDS_VOXEL_GRID;
   public com.hypixel.hytale.builtin.hytalegenerator.engine.bufferbundle.buffers.CountedPixelBuffer(java.lang.Class<T>);
-  public T getPixelContent(org.joml.Vector3i);
-  public void setPixelContent(org.joml.Vector3i, T);
+  public T getPixelContent(int, int, int);
+  public void setPixelContent(int, int, int, T);
   public java.lang.Class<T> getPixelType();
   public java.util.List<T> getUniqueEntries();
   public void copyFrom(com.hypixel.hytale.builtin.hytalegenerator.engine.bufferbundle.buffers.CountedPixelBuffer<T>);
@@ -50,8 +50,10 @@ public abstract class com.hypixel.hytale.builtin.hytalegenerator.engine.bufferbu
   public static final int BUFFER_SIZE_BITS;
   public static final org.joml.Vector3i SIZE;
   public com.hypixel.hytale.builtin.hytalegenerator.engine.bufferbundle.buffers.PixelBuffer();
-  public abstract T getPixelContent(org.joml.Vector3i);
-  public abstract void setPixelContent(org.joml.Vector3i, T);
+  public abstract T getPixelContent(int, int, int);
+  public T getPixelContent(org.joml.Vector3i);
+  public abstract void setPixelContent(int, int, int, T);
+  public void setPixelContent(org.joml.Vector3i, T);
   public abstract java.lang.Class<T> getPixelType();
 }
 ```
@@ -61,8 +63,8 @@ public abstract class com.hypixel.hytale.builtin.hytalegenerator.engine.bufferbu
 ```java
 public class com.hypixel.hytale.builtin.hytalegenerator.engine.bufferbundle.buffers.SimplePixelBuffer<T> extends com.hypixel.hytale.builtin.hytalegenerator.engine.bufferbundle.buffers.PixelBuffer<T> {
   public com.hypixel.hytale.builtin.hytalegenerator.engine.bufferbundle.buffers.SimplePixelBuffer(java.lang.Class<T>);
-  public T getPixelContent(org.joml.Vector3i);
-  public void setPixelContent(org.joml.Vector3i, T);
+  public T getPixelContent(int, int, int);
+  public void setPixelContent(int, int, int, T);
   public java.lang.Class<T> getPixelType();
   public void copyFrom(com.hypixel.hytale.builtin.hytalegenerator.engine.bufferbundle.buffers.SimplePixelBuffer<T>);
   public com.hypixel.hytale.builtin.hytalegenerator.engine.performanceinstruments.MemInstrument$Report getMemoryUsage();

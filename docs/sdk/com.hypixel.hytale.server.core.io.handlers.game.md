@@ -15,7 +15,7 @@ public class com.hypixel.hytale.server.core.io.handlers.game.GamePacketHandler e
   public com.hypixel.hytale.server.core.universe.PlayerRef getPlayerRef();
   public void setPlayerRef(com.hypixel.hytale.server.core.universe.PlayerRef);
   public java.lang.String getIdentifier();
-  protected java.util.UUID getAccountUuid();
+  public com.hypixel.hytale.server.core.auth.ProfileServiceClient$PublicGameProfile getAccountProfile();
   protected void registered0(com.hypixel.hytale.protocol.io.ConnectionHandler);
   public void sendCommandTree();
   protected void registerHandlers();
@@ -27,6 +27,10 @@ public class com.hypixel.hytale.server.core.io.handlers.game.GamePacketHandler e
   public void handle(com.hypixel.hytale.protocol.packets.interface_.ChatMessage);
   public void handle(com.hypixel.hytale.protocol.packets.interface_.ArgValuesRequest);
   public void handle(com.hypixel.hytale.protocol.packets.interface_.CustomPageEvent);
+  public void handle(com.hypixel.hytale.protocol.packets.interface_.ExecuteServersidePageCommand);
+  public void handle(com.hypixel.hytale.protocol.packets.interface_.DismissServersidePage);
+  public void handle(com.hypixel.hytale.protocol.packets.interface_.ExecuteServersideHudCommand);
+  public void handleChapterRewardsPageResult(com.hypixel.hytale.protocol.packets.interface_.ChapterRewardsPageResult, com.hypixel.hytale.server.core.universe.PlayerRef, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public void handleViewRadius(com.hypixel.hytale.protocol.packets.setup.ViewRadius, com.hypixel.hytale.server.core.universe.PlayerRef, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public void handleUpdateLanguage(com.hypixel.hytale.protocol.packets.interface_.UpdateLanguage, com.hypixel.hytale.server.core.universe.PlayerRef, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   protected void handleClientOpenWindow(com.hypixel.hytale.protocol.packets.window.ClientOpenWindow, com.hypixel.hytale.server.core.universe.PlayerRef, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);

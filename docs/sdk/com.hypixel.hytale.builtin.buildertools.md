@@ -70,10 +70,12 @@ public class com.hypixel.hytale.builtin.buildertools.BuilderToolsPlugin extends 
   public static final int STREAM_TO_CLIENT_LIMIT;
   public static final int SHAPE_PREVIEW_THRESHOLD;
   public static final int SHAPE_PREVIEW_MAX_VOLUME;
+  public static final com.hypixel.hytale.builtin.buildertools.BuilderToolsPlugin$TaskRegion SELECTION_REGION;
   public static java.util.List<com.hypixel.hytale.builtin.buildertools.BuilderToolsPlugin$ColorGradientMaterial> parseGradientMaterials(java.lang.String);
   public java.util.concurrent.ExecutorService getPrefabSaveExecutor();
   public com.hypixel.hytale.builtin.buildertools.BuilderToolsPlugin(com.hypixel.hytale.server.core.plugin.JavaPluginInit);
   public static com.hypixel.hytale.builtin.buildertools.BuilderToolsPlugin get();
+  public static com.hypixel.hytale.builtin.buildertools.world.Prefetch$Budget prefetchBudget();
   public void registerPrefabSaveContributor(com.hypixel.hytale.builtin.buildertools.prefabeditor.saving.PrefabSaveContributor);
   public java.util.List<com.hypixel.hytale.builtin.buildertools.prefabeditor.saving.PrefabSaveContributor> getPrefabSaveContributors();
   public void registerClipboardContributor(com.hypixel.hytale.builtin.buildertools.prefabeditor.saving.PrefabSaveContributor);
@@ -86,10 +88,13 @@ public class com.hypixel.hytale.builtin.buildertools.BuilderToolsPlugin extends 
   public java.util.function.BiConsumer<com.hypixel.hytale.server.core.universe.PlayerRef, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>> getSelectionClearedCallback();
   public com.hypixel.hytale.builtin.buildertools.BlockColorIndex getBlockColorIndex();
   public static void invalidateWorldMapForSelection(com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection, com.hypixel.hytale.server.core.universe.world.World);
+  public static void invalidateWorldMapForBounds(org.joml.Vector3i, org.joml.Vector3i, com.hypixel.hytale.server.core.universe.world.World);
   public static com.hypixel.hytale.builtin.buildertools.BuilderToolsPlugin$BuilderState getState(com.hypixel.hytale.server.core.entity.entities.Player, com.hypixel.hytale.server.core.universe.PlayerRef);
   public static com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection getMaskSelection(com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection);
   public static <T extends java.lang.Throwable> void addToQueue(com.hypixel.hytale.server.core.entity.entities.Player, com.hypixel.hytale.server.core.universe.PlayerRef, com.hypixel.hytale.sneakythrow.consumer.ThrowableTriConsumer<com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.builtin.buildertools.BuilderToolsPlugin$BuilderState, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, T>);
   public static <T extends java.lang.Throwable> void addToQueue(com.hypixel.hytale.server.core.entity.entities.Player, com.hypixel.hytale.server.core.universe.PlayerRef, long, com.hypixel.hytale.sneakythrow.consumer.ThrowableTriConsumer<com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.builtin.buildertools.BuilderToolsPlugin$BuilderState, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, T>);
+  public static <T extends java.lang.Throwable> void addToQueue(com.hypixel.hytale.server.core.entity.entities.Player, com.hypixel.hytale.server.core.universe.PlayerRef, com.hypixel.hytale.builtin.buildertools.BuilderToolsPlugin$TaskRegion, com.hypixel.hytale.sneakythrow.consumer.ThrowableTriConsumer<com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.builtin.buildertools.BuilderToolsPlugin$BuilderState, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, T>);
+  public static <T extends java.lang.Throwable> void addToQueue(com.hypixel.hytale.server.core.entity.entities.Player, com.hypixel.hytale.server.core.universe.PlayerRef, long, com.hypixel.hytale.builtin.buildertools.BuilderToolsPlugin$TaskRegion, com.hypixel.hytale.sneakythrow.consumer.ThrowableTriConsumer<com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.builtin.buildertools.BuilderToolsPlugin$BuilderState, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, T>);
   public static com.hypixel.hytale.assetstore.AssetPack resolveTargetPack(java.lang.String, com.hypixel.hytale.server.core.entity.entities.Player, com.hypixel.hytale.server.core.command.system.CommandContext);
   public static com.hypixel.hytale.assetstore.AssetPack resolveTargetPack(java.lang.String, java.nio.file.Path, com.hypixel.hytale.server.core.entity.entities.Player, com.hypixel.hytale.server.core.command.system.CommandContext);
   protected void setup();
@@ -109,7 +114,7 @@ public class com.hypixel.hytale.builtin.buildertools.BuilderToolsPlugin extends 
   public com.hypixel.hytale.metrics.MetricResults toMetricResults();
   public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabAnchor> getPrefabAnchorComponentType();
   public com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditSessionManager getPrefabEditSessionManager();
-  public static com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore> createBlockComponent(com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk, int, int, int, int, int, com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, boolean);
+  public static com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore> createBlockComponent(int, int, com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, boolean);
   public static void forEachCopyableInSelection(com.hypixel.hytale.server.core.universe.world.World, int, int, int, int, int, int, java.util.function.Consumer<com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>>);
   public java.util.UUID getNewPathIdOnPrefabPasted(java.util.UUID, java.lang.String, int);
   public static boolean onPasteStart(int, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
@@ -184,7 +189,8 @@ public class com.hypixel.hytale.builtin.buildertools.EditOperation {
   public org.joml.Vector3i getSelectionMax();
   public com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection getBefore();
   public com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection getAfter();
-  public com.hypixel.hytale.server.core.universe.world.accessor.OverridableChunkAccessor getAccessor();
+  public com.hypixel.hytale.builtin.buildertools.world.SectionAccessor getAccessor();
+  public long getSkippedUnloaded();
   public int getBlock(int, int, int);
   public boolean setBlock(int, int, int, int);
   public boolean setBlock(int, int, int, int, int);
@@ -193,6 +199,7 @@ public class com.hypixel.hytale.builtin.buildertools.EditOperation {
   public int getFluid(int, int, int);
   public boolean setMaterial(int, int, int, com.hypixel.hytale.builtin.buildertools.utils.Material);
   public boolean setTint(int, int, int, double);
+  public boolean hasColumn(int, int);
   public int getTint(int, int);
   public void removeEntity(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public void trackSpawnedEntity(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
@@ -237,10 +244,10 @@ public class com.hypixel.hytale.builtin.buildertools.PrototypePlayerBuilderToolS
   public void setLastTransformEntityRefs(java.util.List<com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>>);
   public java.util.List<com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>> getLastTransformEntityRefs();
   public void clearLastTransformEntityRefs();
-  public it.unimi.dsi.fastutil.longs.LongOpenHashSet addIgnoredPaintOperation();
+  public com.hypixel.hytale.math.data.Int3OpenHashSet addIgnoredPaintOperation();
   public void clearHistoryUntilFitMaxLength();
   public boolean containsLocation(int, int, int);
-  public java.util.Deque<it.unimi.dsi.fastutil.longs.LongOpenHashSet> getIgnoredPaintOperations();
+  public java.util.Deque<com.hypixel.hytale.math.data.Int3OpenHashSet> getIgnoredPaintOperations();
   public int getMaxLengthOfIgnoredPaintOperations();
   public void setMaxLengthOfIgnoredPaintOperations(int);
   public boolean usePrototypeBrushConfigurations();

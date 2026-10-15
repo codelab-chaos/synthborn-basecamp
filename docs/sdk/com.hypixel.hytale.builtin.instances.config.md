@@ -34,6 +34,8 @@ public class com.hypixel.hytale.builtin.instances.config.InstanceDiscoveryConfig
   public void setDiscoverySoundEventId(java.lang.String);
   public java.lang.String getIcon();
   public void setIcon(java.lang.String);
+  public com.hypixel.hytale.protocol.packets.interface_.EventTitleStyle getStyle();
+  public void setStyle(com.hypixel.hytale.protocol.packets.interface_.EventTitleStyle);
   public boolean isMajor();
   public void setMajor(boolean);
   public float getDuration();
@@ -81,6 +83,7 @@ public class com.hypixel.hytale.builtin.instances.config.InstanceWorldConfig {
   public static com.hypixel.hytale.builtin.instances.config.InstanceWorldConfig get(com.hypixel.hytale.server.core.universe.world.WorldConfig);
   public static com.hypixel.hytale.builtin.instances.config.InstanceWorldConfig ensureAndGet(com.hypixel.hytale.server.core.universe.world.WorldConfig);
   public boolean shouldPreventReconnection();
+  public boolean shouldInheritWorldSettings();
   public com.hypixel.hytale.builtin.instances.removal.RemovalCondition[] getRemovalConditions();
   public void setRemovalConditions(com.hypixel.hytale.builtin.instances.removal.RemovalCondition...);
   public com.hypixel.hytale.builtin.instances.config.WorldReturnPoint getReturnPoint();
@@ -91,8 +94,10 @@ public class com.hypixel.hytale.builtin.instances.config.InstanceWorldConfig {
   public java.lang.String getInstanceKey();
   public java.lang.String getInstanceName();
   public void setInstanceName(java.lang.String);
-  public java.lang.String getDocumentDisplayOnRemoval();
-  public void setDocumentDisplayOnRemoval(java.lang.String);
+  public com.hypixel.hytale.server.core.util.EventTitleConfig getEventTitleOnRemoval();
+  public void setEventTitleOnRemoval(com.hypixel.hytale.server.core.util.EventTitleConfig);
+  public boolean isEditMode();
+  public void setEditMode(boolean);
 }
 ```
 

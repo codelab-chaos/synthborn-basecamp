@@ -14,6 +14,8 @@ public class com.hypixel.hytale.server.spawning.assets.spawns.config.BeaconNPCSp
   public static final int[] DEFAULT_Y_RANGE;
   public static final int[] DEFAULT_CONCURRENT_SPAWNS_RANGE;
   protected java.lang.String model;
+  protected java.lang.String[] weatherIds;
+  protected it.unimi.dsi.fastutil.ints.IntSet weatherIndexes;
   protected double targetDistanceFromPlayer;
   protected double minDistanceFromPlayer;
   protected int[] yRange;
@@ -42,6 +44,8 @@ public class com.hypixel.hytale.server.spawning.assets.spawns.config.BeaconNPCSp
   public static com.hypixel.hytale.assetstore.map.IndexedLookupTableAssetMap<java.lang.String, com.hypixel.hytale.server.spawning.assets.spawns.config.BeaconNPCSpawn> getAssetMap();
   public java.lang.String getId();
   public java.lang.String getModel();
+  public java.lang.String[] getWeatherIds();
+  public it.unimi.dsi.fastutil.ints.IntSet getWeatherIndexes();
   public double getTargetDistanceFromPlayer();
   public double getMinDistanceFromPlayer();
   public int[] getYRange();

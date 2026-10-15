@@ -38,6 +38,7 @@ public class com.hypixel.hytale.server.core.util.io.FileUtil {
   public static void extractZip(java.nio.file.Path, java.nio.file.Path) throws java.io.IOException;
   public static void extractZip(java.io.InputStream, java.nio.file.Path) throws java.io.IOException;
   public static void writeStringAtomic(java.nio.file.Path, java.lang.String, boolean) throws java.io.IOException;
+  public static void copyToBackup(java.nio.file.Path);
   public static void atomicMove(java.nio.file.Path, java.nio.file.Path) throws java.io.IOException;
   public static void writeStringAtomic(java.nio.file.Path, java.lang.String) throws java.io.IOException;
 }

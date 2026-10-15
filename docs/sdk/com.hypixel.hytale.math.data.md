@@ -22,6 +22,8 @@ public class com.hypixel.hytale.math.data.Int3ObjectOpenHashMap<V> {
   public boolean isEmpty();
   public void clear();
   public void forEach(com.hypixel.hytale.function.consumer.TriIntObjectConsumer<? super V>);
+  public boolean allMatch(com.hypixel.hytale.function.predicate.TriIntObjPredicate<? super V>);
+  public void trim();
 }
 ```
 

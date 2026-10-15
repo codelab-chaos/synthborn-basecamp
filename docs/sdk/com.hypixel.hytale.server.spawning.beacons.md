@@ -40,6 +40,8 @@ public class com.hypixel.hytale.server.spawning.beacons.LegacySpawnBeaconEntity 
   public int getSpawnAttempts();
   public int getLastPlayerCount();
   public void setLastPlayerCount(int);
+  public int getEnvironmentIndex();
+  public void setEnvironmentIndex(int);
   public java.util.UUID getObjectiveUUID();
   public void setObjectiveUUID(java.util.UUID);
   public boolean isHiddenFromLivingEntity(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);

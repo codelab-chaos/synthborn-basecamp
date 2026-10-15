@@ -31,9 +31,9 @@ public final class com.hypixel.hytale.builtin.portals.systems.voidevent.VoidEven
 ```java
 public final class com.hypixel.hytale.builtin.portals.systems.voidevent.VoidEventRefSystem extends com.hypixel.hytale.component.system.RefSystem<com.hypixel.hytale.server.core.universe.world.storage.EntityStore> {
   public com.hypixel.hytale.builtin.portals.systems.voidevent.VoidEventRefSystem();
+  public com.hypixel.hytale.component.query.Query<com.hypixel.hytale.server.core.universe.world.storage.EntityStore> getQuery();
   public void onEntityAdded(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.AddReason, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public void onEntityRemove(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.RemoveReason, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
-  public com.hypixel.hytale.component.query.Query<com.hypixel.hytale.server.core.universe.world.storage.EntityStore> getQuery();
 }
 ```
 
@@ -41,11 +41,12 @@ public final class com.hypixel.hytale.builtin.portals.systems.voidevent.VoidEven
 
 ```java
 public class com.hypixel.hytale.builtin.portals.systems.voidevent.VoidEventStagesSystem extends com.hypixel.hytale.component.system.tick.DelayedEntitySystem<com.hypixel.hytale.server.core.universe.world.storage.EntityStore> {
+  protected final com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.builtin.portals.components.voidevent.VoidEvent> voidEventComponentType;
+  protected final com.hypixel.hytale.component.ResourceType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.builtin.portals.resources.PortalWorld> portalWorldComponentType;
   public com.hypixel.hytale.builtin.portals.systems.voidevent.VoidEventStagesSystem();
-  public void tick(float, int, com.hypixel.hytale.component.ArchetypeChunk<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
-  public static void startStage(com.hypixel.hytale.builtin.portals.components.voidevent.config.VoidEventStage, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
-  public static void stopStage(com.hypixel.hytale.builtin.portals.components.voidevent.config.VoidEventStage, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public com.hypixel.hytale.component.query.Query<com.hypixel.hytale.server.core.universe.world.storage.EntityStore> getQuery();
+  public void tick(float, int, com.hypixel.hytale.component.ArchetypeChunk<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public static void applyForcedMusicToWorld(com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, int);
 }
 ```
 
@@ -54,8 +55,8 @@ public class com.hypixel.hytale.builtin.portals.systems.voidevent.VoidEventStage
 ```java
 public class com.hypixel.hytale.builtin.portals.systems.voidevent.VoidInvasionPortalsSpawnSystem extends com.hypixel.hytale.component.system.tick.DelayedEntitySystem<com.hypixel.hytale.server.core.universe.world.storage.EntityStore> {
   public com.hypixel.hytale.builtin.portals.systems.voidevent.VoidInvasionPortalsSpawnSystem();
-  public void tick(float, int, com.hypixel.hytale.component.ArchetypeChunk<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public com.hypixel.hytale.component.query.Query<com.hypixel.hytale.server.core.universe.world.storage.EntityStore> getQuery();
+  public void tick(float, int, com.hypixel.hytale.component.ArchetypeChunk<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
 }
 ```
 
@@ -64,5 +65,6 @@ public class com.hypixel.hytale.builtin.portals.systems.voidevent.VoidInvasionPo
 ```java
 public final class com.hypixel.hytale.builtin.portals.systems.voidevent.VoidSpawnerSystems {
   public com.hypixel.hytale.builtin.portals.systems.voidevent.VoidSpawnerSystems();
+  public static void attachAdditionalBeacons(com.hypixel.hytale.builtin.portals.components.voidevent.VoidEvent, com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.builtin.portals.components.voidevent.config.VoidEventStage);
 }
 ```

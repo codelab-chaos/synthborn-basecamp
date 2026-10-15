@@ -63,7 +63,6 @@ public class com.hypixel.hytale.server.worldgen.chunk.ChunkGenerator implements 
   public void putHeight(int, int, int, int);
   public com.hypixel.hytale.server.worldgen.cache.InterpolatedBiomeCountList getInterpolatedBiomeCountAt(int, int, int);
   public com.hypixel.hytale.server.worldgen.cave.Cave getCave(com.hypixel.hytale.server.worldgen.cave.CaveType, int, int, int);
-  public java.util.concurrent.CompletableFuture<com.hypixel.hytale.server.worldgen.cave.Cave> getCaveAsync(com.hypixel.hytale.server.worldgen.cave.CaveType, int, int, int);
   public com.hypixel.hytale.server.worldgen.prefab.PrefabLoadingCache getPrefabLoadingCache();
   public com.hypixel.hytale.server.worldgen.container.UniquePrefabContainer$UniquePrefabEntry[] getUniquePrefabs(int);
   public java.util.concurrent.CompletableFuture<com.hypixel.hytale.server.core.universe.world.worldgen.GeneratedChunk> generate(int, long, int, int, java.util.function.LongPredicate, it.unimi.dsi.fastutil.longs.Long2FloatFunction);

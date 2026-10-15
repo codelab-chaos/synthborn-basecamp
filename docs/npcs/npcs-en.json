@@ -449,6 +449,24 @@
     "dropList": "Drop_Vulture",
     "appearance": "Vulture"
   },
+  "Cinematic_Dragon_Void": {
+    "id": "Cinematic_Dragon_Void",
+    "category": "Boss",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Cinematic_Shrouded_Figure": {
+    "id": "Cinematic_Shrouded_Figure",
+    "category": "Boss",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
   "Dragon_Fire": {
     "id": "Dragon_Fire",
     "category": "Boss",
@@ -466,6 +484,195 @@
     "maxHealth": 400,
     "dropList": null,
     "appearance": "Dragon_Frost"
+  },
+  "Dungeon_Feastmaster_Boss": {
+    "id": "Dungeon_Feastmaster_Boss",
+    "category": "Boss/Dungeon_Feastmaster",
+    "attitude": "unknown",
+    "reference": "Template_Dungeon_Feastmaster_Boss",
+    "maxHealth": 1950,
+    "dropList": "Drop_Dungeon_Feastmaster",
+    "appearance": "Dungeon_Feastmaster_Boss"
+  },
+  "Dungeon_Feastmaster_Feeding": {
+    "id": "Dungeon_Feastmaster_Feeding",
+    "category": "Boss/Dungeon_Feastmaster",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Dungeon_Feastmaster_Boss": {
+    "id": "Template_Dungeon_Feastmaster_Boss",
+    "category": "Boss/Dungeon_Feastmaster/Templates",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Goblin_Gobliterator_Bottom_Phase3": {
+    "id": "Goblin_Gobliterator_Bottom_Phase3",
+    "category": "Boss/Goblin_Gobliterator",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Goblin_Gobliterator_Explosive_Barrel": {
+    "id": "Goblin_Gobliterator_Explosive_Barrel",
+    "category": "Boss/Goblin_Gobliterator",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Goblin_Gobliterator_Intro": {
+    "id": "Goblin_Gobliterator_Intro",
+    "category": "Boss/Goblin_Gobliterator",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Goblin_Gobliterator_Phase1": {
+    "id": "Goblin_Gobliterator_Phase1",
+    "category": "Boss/Goblin_Gobliterator",
+    "attitude": "unknown",
+    "reference": "Template_Boss_Goblin_Gobliterator",
+    "maxHealth": 5000,
+    "dropList": null,
+    "appearance": "Goblin_Gobliterator_Phase1"
+  },
+  "Goblin_Gobliterator_Phase1_HM": {
+    "id": "Goblin_Gobliterator_Phase1_HM",
+    "category": "Boss/Goblin_Gobliterator",
+    "attitude": "unknown",
+    "reference": "Template_Boss_Goblin_Gobliterator",
+    "maxHealth": 9000,
+    "dropList": null,
+    "appearance": "Goblin_Gobliterator_Phase1"
+  },
+  "Goblin_Gobliterator_Phase2": {
+    "id": "Goblin_Gobliterator_Phase2",
+    "category": "Boss/Goblin_Gobliterator",
+    "attitude": "unknown",
+    "reference": "Template_Boss_Goblin_Gobliterator",
+    "maxHealth": 5000,
+    "dropList": null,
+    "appearance": "Goblin_Gobliterator_Phase2"
+  },
+  "Goblin_Gobliterator_Phase2_HM": {
+    "id": "Goblin_Gobliterator_Phase2_HM",
+    "category": "Boss/Goblin_Gobliterator",
+    "attitude": "unknown",
+    "reference": "Template_Boss_Goblin_Gobliterator",
+    "maxHealth": 9000,
+    "dropList": null,
+    "appearance": "Goblin_Gobliterator_Phase2"
+  },
+  "Goblin_Gobliterator_Phase3": {
+    "id": "Goblin_Gobliterator_Phase3",
+    "category": "Boss/Goblin_Gobliterator",
+    "attitude": "unknown",
+    "reference": "Template_Boss_Goblin_Gobliterator_Phase3",
+    "maxHealth": 5000,
+    "dropList": null,
+    "appearance": null
+  },
+  "Goblin_Gobliterator_Phase3_HM": {
+    "id": "Goblin_Gobliterator_Phase3_HM",
+    "category": "Boss/Goblin_Gobliterator",
+    "attitude": "unknown",
+    "reference": "Template_Boss_Goblin_Gobliterator_Phase3",
+    "maxHealth": 9000,
+    "dropList": null,
+    "appearance": null
+  },
+  "Goblin_Gobliterator_SawTransition": {
+    "id": "Goblin_Gobliterator_SawTransition",
+    "category": "Boss/Goblin_Gobliterator",
+    "attitude": "unknown",
+    "reference": "Template_Boss_Goblin_Gobliterator_SawTransition",
+    "maxHealth": 5000,
+    "dropList": null,
+    "appearance": "Goblin_Gobliterator_SawTransition"
+  },
+  "Goblin_Gobliterator_SawTransition_HM": {
+    "id": "Goblin_Gobliterator_SawTransition_HM",
+    "category": "Boss/Goblin_Gobliterator",
+    "attitude": "unknown",
+    "reference": "Template_Boss_Goblin_Gobliterator_SawTransition",
+    "maxHealth": 9000,
+    "dropList": null,
+    "appearance": "Goblin_Gobliterator_SawTransition"
+  },
+  "Goblin_Gobliterator_Transition_Phase3": {
+    "id": "Goblin_Gobliterator_Transition_Phase3",
+    "category": "Boss/Goblin_Gobliterator",
+    "attitude": "unknown",
+    "reference": "Template_Boss_Goblin_Gobliterator_Transition_Phase3",
+    "maxHealth": 5000,
+    "dropList": null,
+    "appearance": "Goblin_Gobliterator_Transition_Phase3"
+  },
+  "Goblin_Gobliterator_Transition_Phase3_HM": {
+    "id": "Goblin_Gobliterator_Transition_Phase3_HM",
+    "category": "Boss/Goblin_Gobliterator",
+    "attitude": "unknown",
+    "reference": "Template_Boss_Goblin_Gobliterator_Transition_Phase3",
+    "maxHealth": 9000,
+    "dropList": null,
+    "appearance": "Goblin_Gobliterator_Transition_Phase3"
+  },
+  "Goblin_Pilot": {
+    "id": "Goblin_Pilot",
+    "category": "Boss/Goblin_Gobliterator",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Boss_Goblin_Gobliterator": {
+    "id": "Template_Boss_Goblin_Gobliterator",
+    "category": "Boss/Goblin_Gobliterator/Templates",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Boss_Goblin_Gobliterator_Phase3": {
+    "id": "Template_Boss_Goblin_Gobliterator_Phase3",
+    "category": "Boss/Goblin_Gobliterator/Templates",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Boss_Goblin_Gobliterator_SawTransition": {
+    "id": "Template_Boss_Goblin_Gobliterator_SawTransition",
+    "category": "Boss/Goblin_Gobliterator/Templates",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Boss_Goblin_Gobliterator_Transition_Phase3": {
+    "id": "Template_Boss_Goblin_Gobliterator_Transition_Phase3",
+    "category": "Boss/Goblin_Gobliterator/Templates",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
   },
   "Frog_Blue": {
     "id": "Frog_Blue",
@@ -529,6 +736,60 @@
     "maxHealth": 15,
     "dropList": "Drop_Squirrel",
     "appearance": "Squirrel"
+  },
+  "Bear_Voidtaken": {
+    "id": "Bear_Voidtaken",
+    "category": "Creature/Hunt",
+    "attitude": "unknown",
+    "reference": "Template_Bear_Voidtaken_Boss",
+    "maxHealth": 850,
+    "dropList": "Drop_Hunt",
+    "appearance": "Bear_Grizzly_Voidtaken"
+  },
+  "Bear_Voidtaken_Tentacle": {
+    "id": "Bear_Voidtaken_Tentacle",
+    "category": "Creature/Hunt",
+    "attitude": "unknown",
+    "reference": "Template_Bear_Voidtaken_Tentacle",
+    "maxHealth": 36,
+    "dropList": null,
+    "appearance": "Bear_Voidtaken_Tentacle"
+  },
+  "Bear_Voidtaken_Tentacle_Marker": {
+    "id": "Bear_Voidtaken_Tentacle_Marker",
+    "category": "Creature/Hunt",
+    "attitude": "unknown",
+    "reference": "Template_Bear_Voidtaken_Tentacle_Marker",
+    "maxHealth": 1000000,
+    "dropList": null,
+    "appearance": "Bear_Voidtaken_Tentacle_Marker"
+  },
+  "Template_Bear_Voidtaken_Boss": {
+    "id": "Template_Bear_Voidtaken_Boss",
+    "category": "Creature/Hunt",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Bear_Voidtaken_Tentacle": {
+    "id": "Template_Bear_Voidtaken_Tentacle",
+    "category": "Creature/Hunt",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Bear_Voidtaken_Tentacle_Marker": {
+    "id": "Template_Bear_Voidtaken_Tentacle_Marker",
+    "category": "Creature/Hunt",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
   },
   "Bison": {
     "id": "Bison",
@@ -1470,7 +1731,7 @@
     "category": "Creature/Vermin",
     "attitude": "unknown",
     "reference": "Template_Predator",
-    "maxHealth": 21,
+    "maxHealth": 10,
     "dropList": "Drop_Rat",
     "appearance": "Rat"
   },
@@ -1545,23 +1806,48 @@
     "id": "Spider",
     "category": "Creature/Vermin",
     "attitude": "unknown",
-    "reference": "Template_Predator",
-    "maxHealth": 61,
-    "dropList": {
-      "Compute": "DropList"
-    },
-    "appearance": {
-      "Compute": "Appearance"
-    }
+    "reference": "Template_Spider",
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
   },
   "Spider_Cave": {
     "id": "Spider_Cave",
     "category": "Creature/Vermin",
     "attitude": "unknown",
-    "reference": "Spider",
-    "maxHealth": 74,
-    "dropList": "Drop_Spider_Cave",
+    "reference": "Template_Spider",
+    "maxHealth": 120,
+    "dropList": {
+      "Compute": "DropList"
+    },
     "appearance": "Spider_Cave"
+  },
+  "Spider_Cave_Ambush": {
+    "id": "Spider_Cave_Ambush",
+    "category": "Creature/Vermin",
+    "attitude": "unknown",
+    "reference": "Spider_Cave",
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Spider_Cave_Spiderling": {
+    "id": "Spider_Cave_Spiderling",
+    "category": "Creature/Vermin",
+    "attitude": "unknown",
+    "reference": "Template_Spider",
+    "maxHealth": 10,
+    "dropList": "Drop_Spider_Cave_Spiderling",
+    "appearance": "Spider_Cave_Spiderling"
+  },
+  "Template_Spider": {
+    "id": "Template_Spider",
+    "category": "Creature/Vermin/Templates",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
   },
   "Golem_Crystal_Earth": {
     "id": "Golem_Crystal_Earth",
@@ -1671,1197 +1957,9 @@
     "dropList": null,
     "appearance": null
   },
-  "Component_Goblin_Instruction_Alerted": {
-    "id": "Component_Goblin_Instruction_Alerted",
-    "category": "Intelligent/Aggressive/Goblin/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Goblin_Instruction_Pre_Checks": {
-    "id": "Component_Goblin_Instruction_Pre_Checks",
-    "category": "Intelligent/Aggressive/Goblin/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Goblin_Panic": {
-    "id": "Component_Instruction_Goblin_Panic",
-    "category": "Intelligent/Aggressive/Goblin/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Intelligent_Idle_Goblin": {
-    "id": "Component_Instruction_Intelligent_Idle_Goblin",
-    "category": "Intelligent/Aggressive/Goblin/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Edible_Goblin_Scrapper": {
-    "id": "Edible_Goblin_Scrapper",
-    "category": "Intelligent/Aggressive/Goblin",
-    "attitude": "hostile",
-    "reference": "Template_Edible_Critter",
-    "maxHealth": 100,
-    "dropList": null,
-    "appearance": "Goblin_Scrapper"
-  },
-  "Edible_Rat": {
-    "id": "Edible_Rat",
-    "category": "Intelligent/Aggressive/Goblin",
-    "attitude": "hostile",
-    "reference": "Template_Edible_Critter",
-    "maxHealth": 100,
-    "dropList": null,
-    "appearance": "Rat"
-  },
-  "Goblin_Duke": {
-    "id": "Goblin_Duke",
-    "category": "Intelligent/Aggressive/Goblin",
-    "attitude": "hostile",
-    "reference": "Template_Intelligent",
-    "maxHealth": 226,
-    "dropList": "Empty",
-    "appearance": "Goblin_Duke"
-  },
-  "Goblin_Duke_Phase_2": {
-    "id": "Goblin_Duke_Phase_2",
-    "category": "Intelligent/Aggressive/Goblin",
-    "attitude": "hostile",
-    "reference": "Template_Goblin_Duke_Phase_2",
-    "maxHealth": 320,
-    "dropList": "Empty",
-    "appearance": "Goblin_Duke"
-  },
-  "Goblin_Duke_Phase_3_Fast": {
-    "id": "Goblin_Duke_Phase_3_Fast",
-    "category": "Intelligent/Aggressive/Goblin",
-    "attitude": "hostile",
-    "reference": "Template_Goblin_Duke_Phase_3",
-    "maxHealth": 200,
-    "dropList": "Empty",
-    "appearance": "Goblin_Duke"
-  },
-  "Goblin_Duke_Phase_3_Slow": {
-    "id": "Goblin_Duke_Phase_3_Slow",
-    "category": "Intelligent/Aggressive/Goblin",
-    "attitude": "hostile",
-    "reference": "Template_Goblin_Duke_Phase_3",
-    "maxHealth": 200,
-    "dropList": "Empty",
-    "appearance": "Goblin_Duke_Large"
-  },
-  "Goblin_Hermit": {
-    "id": "Goblin_Hermit",
-    "category": "Intelligent/Aggressive/Goblin",
-    "attitude": "hostile",
-    "reference": "Template_Goblin_Scavenger",
-    "maxHealth": 38,
-    "dropList": "Empty",
-    "appearance": "Goblin_Hermit"
-  },
-  "Goblin_Lobber": {
-    "id": "Goblin_Lobber",
-    "category": "Intelligent/Aggressive/Goblin",
-    "attitude": "hostile",
-    "reference": "Template_Goblin_Lobber",
-    "maxHealth": 48,
-    "dropList": null,
-    "appearance": "Goblin_Lobber"
-  },
-  "Goblin_Lobber_Patrol": {
-    "id": "Goblin_Lobber_Patrol",
-    "category": "Intelligent/Aggressive/Goblin",
-    "attitude": "hostile",
-    "reference": "Template_Goblin_Lobber",
-    "maxHealth": 48,
-    "dropList": null,
-    "appearance": "Goblin_Lobber"
-  },
-  "Goblin_Miner": {
-    "id": "Goblin_Miner",
-    "category": "Intelligent/Aggressive/Goblin",
-    "attitude": "hostile",
-    "reference": "Template_Goblin_Miner",
-    "maxHealth": 38,
-    "dropList": null,
-    "appearance": "Goblin_Miner"
-  },
-  "Goblin_Miner_Patrol": {
-    "id": "Goblin_Miner_Patrol",
-    "category": "Intelligent/Aggressive/Goblin",
-    "attitude": "hostile",
-    "reference": "Template_Goblin_Miner",
-    "maxHealth": 38,
-    "dropList": null,
-    "appearance": "Goblin_Miner"
-  },
-  "Goblin_Ogre": {
-    "id": "Goblin_Ogre",
-    "category": "Intelligent/Aggressive/Goblin",
-    "attitude": "hostile",
-    "reference": "Template_Goblin_Ogre",
-    "maxHealth": 124,
-    "dropList": null,
-    "appearance": "Goblin_Ogre"
-  },
-  "Goblin_Ogre_Tutorial": {
-    "id": "Goblin_Ogre_Tutorial",
-    "category": "Intelligent/Aggressive/Goblin",
-    "attitude": "hostile",
-    "reference": "Template_Goblin_Ogre_Tutorial",
-    "maxHealth": 124,
-    "dropList": null,
-    "appearance": "Goblin"
-  },
-  "Goblin_Scavenger": {
-    "id": "Goblin_Scavenger",
-    "category": "Intelligent/Aggressive/Goblin",
-    "attitude": "hostile",
-    "reference": "Template_Goblin_Scavenger",
-    "maxHealth": 54,
-    "dropList": null,
-    "appearance": "Goblin_Hermit"
-  },
-  "Goblin_Scavenger_Battleaxe": {
-    "id": "Goblin_Scavenger_Battleaxe",
-    "category": "Intelligent/Aggressive/Goblin",
-    "attitude": "hostile",
-    "reference": "Template_Goblin_Scavenger",
-    "maxHealth": 54,
-    "dropList": null,
-    "appearance": "Goblin_Hermit"
-  },
-  "Goblin_Scavenger_Sword": {
-    "id": "Goblin_Scavenger_Sword",
-    "category": "Intelligent/Aggressive/Goblin",
-    "attitude": "hostile",
-    "reference": "Template_Goblin_Scavenger",
-    "maxHealth": 54,
-    "dropList": null,
-    "appearance": "Goblin_Hermit"
-  },
-  "Goblin_Scrapper": {
-    "id": "Goblin_Scrapper",
-    "category": "Intelligent/Aggressive/Goblin",
-    "attitude": "hostile",
-    "reference": "Template_Goblin_Scrapper",
-    "maxHealth": 38,
-    "dropList": null,
-    "appearance": null
-  },
-  "Goblin_Scrapper_Patrol": {
-    "id": "Goblin_Scrapper_Patrol",
-    "category": "Intelligent/Aggressive/Goblin",
-    "attitude": "hostile",
-    "reference": "Template_Goblin_Scrapper",
-    "maxHealth": 38,
-    "dropList": null,
-    "appearance": null
-  },
-  "Goblin_Thief": {
-    "id": "Goblin_Thief",
-    "category": "Intelligent/Aggressive/Goblin",
-    "attitude": "hostile",
-    "reference": "Template_Goblin_Thief",
-    "maxHealth": 38,
-    "dropList": null,
-    "appearance": null
-  },
-  "Goblin_Thief_Patrol": {
-    "id": "Goblin_Thief_Patrol",
-    "category": "Intelligent/Aggressive/Goblin",
-    "attitude": "hostile",
-    "reference": "Template_Goblin_Thief",
-    "maxHealth": 38,
-    "dropList": null,
-    "appearance": null
-  },
-  "Template_Goblin": {
-    "id": "Template_Goblin",
-    "category": "Intelligent/Aggressive/Goblin/Templates",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Template_Goblin_Duke_Phase_1": {
-    "id": "Template_Goblin_Duke_Phase_1",
-    "category": "Intelligent/Aggressive/Goblin/Templates",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Template_Goblin_Duke_Phase_2": {
-    "id": "Template_Goblin_Duke_Phase_2",
-    "category": "Intelligent/Aggressive/Goblin/Templates",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Template_Goblin_Duke_Phase_3": {
-    "id": "Template_Goblin_Duke_Phase_3",
-    "category": "Intelligent/Aggressive/Goblin/Templates",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Template_Goblin_Lobber": {
-    "id": "Template_Goblin_Lobber",
-    "category": "Intelligent/Aggressive/Goblin/Templates",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Template_Goblin_Miner": {
-    "id": "Template_Goblin_Miner",
-    "category": "Intelligent/Aggressive/Goblin/Templates",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Template_Goblin_Ogre": {
-    "id": "Template_Goblin_Ogre",
-    "category": "Intelligent/Aggressive/Goblin/Templates",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Template_Goblin_Ogre_Tutorial": {
-    "id": "Template_Goblin_Ogre_Tutorial",
-    "category": "Intelligent/Aggressive/Goblin/Templates",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Template_Goblin_Scavenger": {
-    "id": "Template_Goblin_Scavenger",
-    "category": "Intelligent/Aggressive/Goblin/Templates",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Template_Goblin_Scrapper": {
-    "id": "Template_Goblin_Scrapper",
-    "category": "Intelligent/Aggressive/Goblin/Templates",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Template_Goblin_Thief": {
-    "id": "Template_Goblin_Thief",
-    "category": "Intelligent/Aggressive/Goblin/Templates",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Hedera": {
-    "id": "Hedera",
-    "category": "Intelligent/Aggressive",
-    "attitude": "hostile",
-    "reference": "Template_Intelligent",
-    "maxHealth": 226,
-    "dropList": "Drop_Hedera",
-    "appearance": "Hedera"
-  },
-  "Component_Instruction_Attack_Sequence_Outlander_Berserker": {
-    "id": "Component_Instruction_Attack_Sequence_Outlander_Berserker",
-    "category": "Intelligent/Aggressive/Outlander/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Attack_Sequence_Outlander_Brute": {
-    "id": "Component_Instruction_Attack_Sequence_Outlander_Brute",
-    "category": "Intelligent/Aggressive/Outlander/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Attack_Sequence_Outlander_Cultist": {
-    "id": "Component_Instruction_Attack_Sequence_Outlander_Cultist",
-    "category": "Intelligent/Aggressive/Outlander/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Attack_Sequence_Outlander_Cultist_Ranged": {
-    "id": "Component_Instruction_Attack_Sequence_Outlander_Cultist_Ranged",
-    "category": "Intelligent/Aggressive/Outlander/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Attack_Sequence_Outlander_Hunter": {
-    "id": "Component_Instruction_Attack_Sequence_Outlander_Hunter",
-    "category": "Intelligent/Aggressive/Outlander/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Attack_Sequence_Outlander_Hunter_Ranged": {
-    "id": "Component_Instruction_Attack_Sequence_Outlander_Hunter_Ranged",
-    "category": "Intelligent/Aggressive/Outlander/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Attack_Sequence_Outlander_Marauder": {
-    "id": "Component_Instruction_Attack_Sequence_Outlander_Marauder",
-    "category": "Intelligent/Aggressive/Outlander/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Attack_Sequence_Outlander_Peon": {
-    "id": "Component_Instruction_Attack_Sequence_Outlander_Peon",
-    "category": "Intelligent/Aggressive/Outlander/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Attack_Sequence_Outlander_Priest": {
-    "id": "Component_Instruction_Attack_Sequence_Outlander_Priest",
-    "category": "Intelligent/Aggressive/Outlander/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Attack_Sequence_Outlander_Priest_Ranged": {
-    "id": "Component_Instruction_Attack_Sequence_Outlander_Priest_Ranged",
-    "category": "Intelligent/Aggressive/Outlander/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Attack_Sequence_Outlander_Sorcerer_Ranged": {
-    "id": "Component_Instruction_Attack_Sequence_Outlander_Sorcerer_Ranged",
-    "category": "Intelligent/Aggressive/Outlander/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Attack_Sequence_Outlander_Stalker": {
-    "id": "Component_Instruction_Attack_Sequence_Outlander_Stalker",
-    "category": "Intelligent/Aggressive/Outlander/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Attack_Sequence_Outlander_Stalker_Ranged": {
-    "id": "Component_Instruction_Attack_Sequence_Outlander_Stalker_Ranged",
-    "category": "Intelligent/Aggressive/Outlander/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Outlander_Berserker": {
-    "id": "Outlander_Berserker",
-    "category": "Intelligent/Aggressive/Outlander",
-    "attitude": "hostile",
-    "reference": "Template_Trork_Melee",
-    "maxHealth": 103,
-    "dropList": "Drop_Outlander_Berserker",
-    "appearance": "Outlander_Berserker"
-  },
-  "Outlander_Brute": {
-    "id": "Outlander_Brute",
-    "category": "Intelligent/Aggressive/Outlander",
-    "attitude": "hostile",
-    "reference": "Template_Trork_Melee",
-    "maxHealth": 124,
-    "dropList": "Drop_Outlander_Brute",
-    "appearance": "Outlander_Brute"
-  },
-  "Outlander_Cultist": {
-    "id": "Outlander_Cultist",
-    "category": "Intelligent/Aggressive/Outlander",
-    "attitude": "hostile",
-    "reference": "Template_Trork_Hybrid",
-    "maxHealth": 81,
-    "dropList": "Drop_Outlander_Cultist",
-    "appearance": "Outlander_Cultist"
-  },
-  "Outlander_Hunter": {
-    "id": "Outlander_Hunter",
-    "category": "Intelligent/Aggressive/Outlander",
-    "attitude": "hostile",
-    "reference": "Template_Trork_Hybrid",
-    "maxHealth": 61,
-    "dropList": "Drop_Outlander_Hunter",
-    "appearance": "Outlander_Hunter"
-  },
-  "Outlander_Marauder": {
-    "id": "Outlander_Marauder",
-    "category": "Intelligent/Aggressive/Outlander",
-    "attitude": "hostile",
-    "reference": "Template_Trork_Chieftain",
-    "maxHealth": 103,
-    "dropList": "Drop_Outlander_Marauder",
-    "appearance": "Outlander_Marauder"
-  },
-  "Outlander_Peon": {
-    "id": "Outlander_Peon",
-    "category": "Intelligent/Aggressive/Outlander",
-    "attitude": "hostile",
-    "reference": "Template_Trork_Melee",
-    "maxHealth": 81,
-    "dropList": "Drop_Outlander_Peon",
-    "appearance": "Outlander_Peon"
-  },
-  "Outlander_Priest": {
-    "id": "Outlander_Priest",
-    "category": "Intelligent/Aggressive/Outlander",
-    "attitude": "hostile",
-    "reference": "Template_Trork_Mage",
-    "maxHealth": 103,
-    "dropList": "Drop_Outlander_Priest",
-    "appearance": "Outlander_Priest"
-  },
-  "Outlander_Sorcerer": {
-    "id": "Outlander_Sorcerer",
-    "category": "Intelligent/Aggressive/Outlander",
-    "attitude": "hostile",
-    "reference": "Template_Trork_Mage",
-    "maxHealth": 103,
-    "dropList": "Drop_Outlander_Sorcerer",
-    "appearance": "Outlander_Sorcerer"
-  },
-  "Outlander_Stalker": {
-    "id": "Outlander_Stalker",
-    "category": "Intelligent/Aggressive/Outlander",
-    "attitude": "hostile",
-    "reference": "Template_Trork_Hybrid",
-    "maxHealth": 61,
-    "dropList": "Drop_Outlander_Stalker",
-    "appearance": "Outlander_Stalker"
-  },
-  "Wolf_Outlander_Priest": {
-    "id": "Wolf_Outlander_Priest",
-    "category": "Intelligent/Aggressive/Outlander",
-    "attitude": "hostile",
-    "reference": "Template_Trork_Companion",
-    "maxHealth": 107,
-    "dropList": "Drop_Wolf_Outlander_Priest",
-    "appearance": "Wolf_Outlander_Priest"
-  },
-  "Wolf_Outlander_Sorcerer": {
-    "id": "Wolf_Outlander_Sorcerer",
-    "category": "Intelligent/Aggressive/Outlander",
-    "attitude": "hostile",
-    "reference": "Template_Trork_Companion",
-    "maxHealth": 118,
-    "dropList": "Drop_Wolf_Outlander_Sorcerer",
-    "appearance": "Wolf_Outlander_Sorcerer"
-  },
-  "Dungeon_Scarak_Broodmother": {
-    "id": "Dungeon_Scarak_Broodmother",
-    "category": "Intelligent/Aggressive/Scarak/Dungeon",
-    "attitude": "hostile",
-    "reference": "Template_Scarak_Broodmother",
-    "maxHealth": 145,
-    "dropList": null,
-    "appearance": null
-  },
-  "Dungeon_Scarak_Broodmother_Young": {
-    "id": "Dungeon_Scarak_Broodmother_Young",
-    "category": "Intelligent/Aggressive/Scarak/Dungeon",
-    "attitude": "hostile",
-    "reference": "Template_Scarak_Broodmother",
-    "maxHealth": 124,
-    "dropList": null,
-    "appearance": null
-  },
-  "Dungeon_Scarak_Defender": {
-    "id": "Dungeon_Scarak_Defender",
-    "category": "Intelligent/Aggressive/Scarak/Dungeon",
-    "attitude": "hostile",
-    "reference": "Template_Scarak_Defender",
-    "maxHealth": 103,
-    "dropList": null,
-    "appearance": "Scarak_Defender"
-  },
-  "Dungeon_Scarak_Defender_Patrol": {
-    "id": "Dungeon_Scarak_Defender_Patrol",
-    "category": "Intelligent/Aggressive/Scarak/Dungeon",
-    "attitude": "hostile",
-    "reference": "Template_Scarak_Defender",
-    "maxHealth": 158,
-    "dropList": null,
-    "appearance": "Scarak_Defender"
-  },
-  "Dungeon_Scarak_Fighter": {
-    "id": "Dungeon_Scarak_Fighter",
-    "category": "Intelligent/Aggressive/Scarak/Dungeon",
-    "attitude": "hostile",
-    "reference": "Template_Intelligent",
-    "maxHealth": 81,
-    "dropList": null,
-    "appearance": "Scarak_Fighter"
-  },
-  "Dungeon_Scarak_Fighter_Patrol": {
-    "id": "Dungeon_Scarak_Fighter_Patrol",
-    "category": "Intelligent/Aggressive/Scarak/Dungeon",
-    "attitude": "hostile",
-    "reference": "Dungeon_Scarak_Fighter",
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Dungeon_Scarak_Louse": {
-    "id": "Dungeon_Scarak_Louse",
-    "category": "Intelligent/Aggressive/Scarak/Dungeon",
-    "attitude": "hostile",
-    "reference": "Template_Scarak_Louse",
-    "maxHealth": 21,
-    "dropList": "Drop_Scarak_Louse",
-    "appearance": "Scarak_Louse"
-  },
-  "Dungeon_Scarak_Seeker": {
-    "id": "Dungeon_Scarak_Seeker",
-    "category": "Intelligent/Aggressive/Scarak/Dungeon",
-    "attitude": "hostile",
-    "reference": "Template_Flying_Aggressive",
-    "maxHealth": 61,
-    "dropList": "Drop_Scarak_Seeker",
-    "appearance": "Scarak_Seeker"
-  },
-  "Dungeon_Scarak_Seeker_Patrol": {
-    "id": "Dungeon_Scarak_Seeker_Patrol",
-    "category": "Intelligent/Aggressive/Scarak/Dungeon",
-    "attitude": "hostile",
-    "reference": "Template_Flying_Aggressive",
-    "maxHealth": 61,
-    "dropList": "Drop_Scarak_Seeker",
-    "appearance": "Scarak_Seeker"
-  },
-  "Scarak_Broodmother": {
-    "id": "Scarak_Broodmother",
-    "category": "Intelligent/Aggressive/Scarak",
-    "attitude": "hostile",
-    "reference": "Template_Scarak_Broodmother",
-    "maxHealth": 145,
-    "dropList": null,
-    "appearance": null
-  },
-  "Scarak_Defender": {
-    "id": "Scarak_Defender",
-    "category": "Intelligent/Aggressive/Scarak",
-    "attitude": "hostile",
-    "reference": "Template_Scarak_Defender",
-    "maxHealth": 103,
-    "dropList": "Drop_Scarak_Defender",
-    "appearance": "Scarak_Defender"
-  },
-  "Scarak_Defender_Patrol": {
-    "id": "Scarak_Defender_Patrol",
-    "category": "Intelligent/Aggressive/Scarak",
-    "attitude": "hostile",
-    "reference": "Template_Scarak_Defender",
-    "maxHealth": 103,
-    "dropList": "Drop_Scarak_Defender",
-    "appearance": "Scarak_Defender"
-  },
-  "Scarak_Fighter": {
-    "id": "Scarak_Fighter",
-    "category": "Intelligent/Aggressive/Scarak",
-    "attitude": "hostile",
-    "reference": "Template_Intelligent",
-    "maxHealth": 81,
-    "dropList": "Drop_Scarak_Fighter",
-    "appearance": "Scarak_Fighter"
-  },
-  "Scarak_Fighter_Patrol": {
-    "id": "Scarak_Fighter_Patrol",
-    "category": "Intelligent/Aggressive/Scarak",
-    "attitude": "hostile",
-    "reference": "Scarak_Fighter",
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Scarak_Fighter_Royal_Guard": {
-    "id": "Scarak_Fighter_Royal_Guard",
-    "category": "Intelligent/Aggressive/Scarak",
-    "attitude": "hostile",
-    "reference": "Template_Intelligent",
-    "maxHealth": 81,
-    "dropList": "Drop_Scarak_Fighter_Royal_Guard",
-    "appearance": "Scarak_Fighter_Royal_Guard"
-  },
-  "Scarak_Louse": {
-    "id": "Scarak_Louse",
-    "category": "Intelligent/Aggressive/Scarak",
-    "attitude": "hostile",
-    "reference": "Template_Scarak_Louse",
-    "maxHealth": 21,
-    "dropList": "Drop_Scarak_Louse",
-    "appearance": "Scarak_Louse"
-  },
-  "Scarak_Seeker": {
-    "id": "Scarak_Seeker",
-    "category": "Intelligent/Aggressive/Scarak",
-    "attitude": "hostile",
-    "reference": "Template_Flying_Aggressive",
-    "maxHealth": 61,
-    "dropList": "Drop_Scarak_Seeker",
-    "appearance": "Scarak_Seeker"
-  },
-  "Scarak_Seeker_Patrol": {
-    "id": "Scarak_Seeker_Patrol",
-    "category": "Intelligent/Aggressive/Scarak",
-    "attitude": "hostile",
-    "reference": "Template_Flying_Aggressive",
-    "maxHealth": 61,
-    "dropList": "Drop_Scarak_Seeker",
-    "appearance": "Scarak_Seeker"
-  },
-  "Template_Scarak_Broodmother": {
-    "id": "Template_Scarak_Broodmother",
-    "category": "Intelligent/Aggressive/Scarak/Templates",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Template_Scarak_Defender": {
-    "id": "Template_Scarak_Defender",
-    "category": "Intelligent/Aggressive/Scarak/Templates",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Template_Scarak_Louse": {
-    "id": "Template_Scarak_Louse",
-    "category": "Intelligent/Aggressive/Scarak/Templates",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Attack_Sequence_Trork_Chieftain": {
-    "id": "Component_Instruction_Attack_Sequence_Trork_Chieftain",
-    "category": "Intelligent/Aggressive/Trork/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Attack_Sequence_Trork_Hunter": {
-    "id": "Component_Instruction_Attack_Sequence_Trork_Hunter",
-    "category": "Intelligent/Aggressive/Trork/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Attack_Sequence_Trork_Hunter_Ranged": {
-    "id": "Component_Instruction_Attack_Sequence_Trork_Hunter_Ranged",
-    "category": "Intelligent/Aggressive/Trork/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Attack_Sequence_Trork_Sentry": {
-    "id": "Component_Instruction_Attack_Sequence_Trork_Sentry",
-    "category": "Intelligent/Aggressive/Trork/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Attack_Sequence_Trork_Sentry_Ranged": {
-    "id": "Component_Instruction_Attack_Sequence_Trork_Sentry_Ranged",
-    "category": "Intelligent/Aggressive/Trork/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Attack_Sequence_Trork_Warrior": {
-    "id": "Component_Instruction_Attack_Sequence_Trork_Warrior",
-    "category": "Intelligent/Aggressive/Trork/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Flee_Trork_Shaman": {
-    "id": "Component_Instruction_Flee_Trork_Shaman",
-    "category": "Intelligent/Aggressive/Trork/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Trork_Instruction_Alerted": {
-    "id": "Component_Trork_Instruction_Alerted",
-    "category": "Intelligent/Aggressive/Trork/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Trork_Instruction_Converge": {
-    "id": "Component_Trork_Instruction_Converge",
-    "category": "Intelligent/Aggressive/Trork/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Trork_Instruction_Dropped_Meat": {
-    "id": "Component_Trork_Instruction_Dropped_Meat",
-    "category": "Intelligent/Aggressive/Trork/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Trork_Instruction_Greeting": {
-    "id": "Component_Trork_Instruction_Greeting",
-    "category": "Intelligent/Aggressive/Trork/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Trork_Instruction_Hybrid_Idle_Extra": {
-    "id": "Component_Trork_Instruction_Hybrid_Idle_Extra",
-    "category": "Intelligent/Aggressive/Trork/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Trork_Instruction_Idle": {
-    "id": "Component_Trork_Instruction_Idle",
-    "category": "Intelligent/Aggressive/Trork/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Trork_Instruction_Idle_Motion_Follow_Path": {
-    "id": "Component_Trork_Instruction_Idle_Motion_Follow_Path",
-    "category": "Intelligent/Aggressive/Trork/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Trork_Instruction_Idle_Motion_Wander": {
-    "id": "Component_Trork_Instruction_Idle_Motion_Wander",
-    "category": "Intelligent/Aggressive/Trork/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Trork_Instruction_Offensive_Default": {
-    "id": "Component_Trork_Instruction_Offensive_Default",
-    "category": "Intelligent/Aggressive/Trork/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Trork_Instruction_Panic": {
-    "id": "Component_Trork_Instruction_Panic",
-    "category": "Intelligent/Aggressive/Trork/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Trork_Instruction_Pre_Checks": {
-    "id": "Component_Trork_Instruction_Pre_Checks",
-    "category": "Intelligent/Aggressive/Trork/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Trork_Instruction_Reputation_Switch": {
-    "id": "Component_Trork_Instruction_Reputation_Switch",
-    "category": "Intelligent/Aggressive/Trork/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Trork_Instruction_Return_Home": {
-    "id": "Component_Trork_Instruction_Return_Home",
-    "category": "Intelligent/Aggressive/Trork/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Trork_Instruction_Search": {
-    "id": "Component_Trork_Instruction_Search",
-    "category": "Intelligent/Aggressive/Trork/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Trork_Instruction_Shoot_Bush": {
-    "id": "Component_Trork_Instruction_Shoot_Bush",
-    "category": "Intelligent/Aggressive/Trork/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Trork_Instruction_Sleep": {
-    "id": "Component_Trork_Instruction_Sleep",
-    "category": "Intelligent/Aggressive/Trork/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Trork_Instruction_Spar": {
-    "id": "Component_Trork_Instruction_Spar",
-    "category": "Intelligent/Aggressive/Trork/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Trork_Instruction_Warn": {
-    "id": "Component_Trork_Instruction_Warn",
-    "category": "Intelligent/Aggressive/Trork/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Trork_Instruction_Warning_Shot": {
-    "id": "Component_Trork_Instruction_Warning_Shot",
-    "category": "Intelligent/Aggressive/Trork/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Trork_Ranger_Instruction_Idle_Motion_Wander": {
-    "id": "Component_Trork_Ranger_Instruction_Idle_Motion_Wander",
-    "category": "Intelligent/Aggressive/Trork/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Trork_Sensor_Can_Sleep": {
-    "id": "Component_Trork_Sensor_Can_Sleep",
-    "category": "Intelligent/Aggressive/Trork/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Trork_Sensor_Dropped_Meat": {
-    "id": "Component_Trork_Sensor_Dropped_Meat",
-    "category": "Intelligent/Aggressive/Trork/Components",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Template_Trork_Chieftain": {
-    "id": "Template_Trork_Chieftain",
-    "category": "Intelligent/Aggressive/Trork/Templates",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Template_Trork_Companion": {
-    "id": "Template_Trork_Companion",
-    "category": "Intelligent/Aggressive/Trork/Templates",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Template_Trork_Hybrid": {
-    "id": "Template_Trork_Hybrid",
-    "category": "Intelligent/Aggressive/Trork/Templates",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Template_Trork_Mage": {
-    "id": "Template_Trork_Mage",
-    "category": "Intelligent/Aggressive/Trork/Templates",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Template_Trork_Melee": {
-    "id": "Template_Trork_Melee",
-    "category": "Intelligent/Aggressive/Trork/Templates",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Template_Trork_Ranger": {
-    "id": "Template_Trork_Ranger",
-    "category": "Intelligent/Aggressive/Trork/Templates",
-    "attitude": "hostile",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Trork_Brawler": {
-    "id": "Trork_Brawler",
-    "category": "Intelligent/Aggressive/Trork",
-    "attitude": "hostile",
-    "reference": "Template_Trork_Melee",
-    "maxHealth": 61,
-    "dropList": "Drop_Trork_Brawler",
-    "appearance": "Trork_Brawler"
-  },
-  "Trork_Chieftain": {
-    "id": "Trork_Chieftain",
-    "category": "Intelligent/Aggressive/Trork",
-    "attitude": "hostile",
-    "reference": "Template_Trork_Chieftain",
-    "maxHealth": 124,
-    "dropList": "Drop_Trork_Chieftain",
-    "appearance": "Trork_Chieftain"
-  },
-  "Trork_Doctor_Witch": {
-    "id": "Trork_Doctor_Witch",
-    "category": "Intelligent/Aggressive/Trork",
-    "attitude": "hostile",
-    "reference": "Template_Trork_Mage",
-    "maxHealth": 74,
-    "dropList": "Drop_Trork_Doctor_Witch",
-    "appearance": "Trork_Doctor_Witch"
-  },
-  "Trork_Guard": {
-    "id": "Trork_Guard",
-    "category": "Intelligent/Aggressive/Trork",
-    "attitude": "hostile",
-    "reference": "Template_Trork_Ranger",
-    "maxHealth": 61,
-    "dropList": "Drop_Trork_Guard",
-    "appearance": "Trork_Guard"
-  },
-  "Trork_Hunter": {
-    "id": "Trork_Hunter",
-    "category": "Intelligent/Aggressive/Trork",
-    "attitude": "hostile",
-    "reference": "Template_Trork_Ranger",
-    "maxHealth": 61,
-    "dropList": "Drop_Trork_Hunter",
-    "appearance": "Trork_Hunter"
-  },
-  "Trork_Mauler": {
-    "id": "Trork_Mauler",
-    "category": "Intelligent/Aggressive/Trork",
-    "attitude": "hostile",
-    "reference": "Template_Trork_Melee",
-    "maxHealth": 61,
-    "dropList": "Drop_Trork_Mauler",
-    "appearance": "Trork_Mauler"
-  },
-  "Trork_Sentry": {
-    "id": "Trork_Sentry",
-    "category": "Intelligent/Aggressive/Trork",
-    "attitude": "hostile",
-    "reference": "Template_Trork_Hybrid",
-    "maxHealth": 61,
-    "dropList": "Drop_Trork_Sentry",
-    "appearance": "Trork_Sentry"
-  },
-  "Trork_Sentry_Patrol": {
-    "id": "Trork_Sentry_Patrol",
-    "category": "Intelligent/Aggressive/Trork",
-    "attitude": "hostile",
-    "reference": "Template_Trork_Hybrid",
-    "maxHealth": 61,
-    "dropList": "Drop_Trork_Sentry",
-    "appearance": "Trork_Sentry"
-  },
-  "Trork_Shaman": {
-    "id": "Trork_Shaman",
-    "category": "Intelligent/Aggressive/Trork",
-    "attitude": "hostile",
-    "reference": "Template_Trork_Mage",
-    "maxHealth": 61,
-    "dropList": "Drop_Trork_Shaman",
-    "appearance": "Trork_Shaman"
-  },
-  "Trork_Unarmed": {
-    "id": "Trork_Unarmed",
-    "category": "Intelligent/Aggressive/Trork",
-    "attitude": "hostile",
-    "reference": "Template_Trork_Melee",
-    "maxHealth": 42,
-    "dropList": "Drop_Trork_Brawler",
-    "appearance": "Trork_Hunter"
-  },
-  "Trork_Warrior": {
-    "id": "Trork_Warrior",
-    "category": "Intelligent/Aggressive/Trork",
-    "attitude": "hostile",
-    "reference": "Template_Trork_Melee",
-    "maxHealth": 61,
-    "dropList": "Drop_Trork_Warrior",
-    "appearance": "Trork_Warrior"
-  },
-  "Trork_Warrior_Patrol": {
-    "id": "Trork_Warrior_Patrol",
-    "category": "Intelligent/Aggressive/Trork",
-    "attitude": "hostile",
-    "reference": "Template_Trork_Melee",
-    "maxHealth": 61,
-    "dropList": "Drop_Trork_Warrior",
-    "appearance": "Trork_Warrior"
-  },
-  "Wolf_Trork_Hunter": {
-    "id": "Wolf_Trork_Hunter",
-    "category": "Intelligent/Aggressive/Trork",
-    "attitude": "hostile",
-    "reference": "Template_Trork_Companion",
-    "maxHealth": 38,
-    "dropList": "Drop_Wolf_Trork_Hunter",
-    "appearance": "Wolf_Trork_Hunter"
-  },
-  "Wolf_Trork_Shaman": {
-    "id": "Wolf_Trork_Shaman",
-    "category": "Intelligent/Aggressive/Trork",
-    "attitude": "hostile",
-    "reference": "Template_Trork_Companion",
-    "maxHealth": 118,
-    "dropList": "Drop_Wolf_Trork_Shaman",
-    "appearance": "Wolf_Trork_Shaman"
-  },
-  "Bramblekin": {
-    "id": "Bramblekin",
-    "category": "Intelligent/Neutral",
-    "attitude": "neutral",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Bramblekin_Shaman": {
-    "id": "Bramblekin_Shaman",
-    "category": "Intelligent/Neutral",
-    "attitude": "neutral",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
   "Component_Feran_Instruction_Search": {
     "id": "Component_Feran_Instruction_Search",
-    "category": "Intelligent/Neutral/Feran",
+    "category": "Intelligent/Faction/Feran",
     "attitude": "neutral",
     "reference": null,
     "maxHealth": null,
@@ -2870,7 +1968,7 @@
   },
   "Component_Feran_Instruction_Threaten": {
     "id": "Component_Feran_Instruction_Threaten",
-    "category": "Intelligent/Neutral/Feran",
+    "category": "Intelligent/Faction/Feran",
     "attitude": "neutral",
     "reference": null,
     "maxHealth": null,
@@ -2879,7 +1977,7 @@
   },
   "Component_Feran_Sensor_Low_HP": {
     "id": "Component_Feran_Sensor_Low_HP",
-    "category": "Intelligent/Neutral/Feran",
+    "category": "Intelligent/Faction/Feran",
     "attitude": "neutral",
     "reference": null,
     "maxHealth": null,
@@ -2888,7 +1986,7 @@
   },
   "Component_Feran_Sensor_Scarak": {
     "id": "Component_Feran_Sensor_Scarak",
-    "category": "Intelligent/Neutral/Feran",
+    "category": "Intelligent/Faction/Feran",
     "attitude": "neutral",
     "reference": null,
     "maxHealth": null,
@@ -2897,7 +1995,7 @@
   },
   "Component_Instruction_Attack_Sequence_Feran_Burrower": {
     "id": "Component_Instruction_Attack_Sequence_Feran_Burrower",
-    "category": "Intelligent/Neutral/Feran",
+    "category": "Intelligent/Faction/Feran",
     "attitude": "neutral",
     "reference": null,
     "maxHealth": null,
@@ -2906,7 +2004,7 @@
   },
   "Component_Instruction_Attack_Sequence_Feran_Civilian": {
     "id": "Component_Instruction_Attack_Sequence_Feran_Civilian",
-    "category": "Intelligent/Neutral/Feran",
+    "category": "Intelligent/Faction/Feran",
     "attitude": "neutral",
     "reference": null,
     "maxHealth": null,
@@ -2915,7 +2013,7 @@
   },
   "Component_Instruction_Attack_Sequence_Feran_Cub": {
     "id": "Component_Instruction_Attack_Sequence_Feran_Cub",
-    "category": "Intelligent/Neutral/Feran",
+    "category": "Intelligent/Faction/Feran",
     "attitude": "neutral",
     "reference": null,
     "maxHealth": null,
@@ -2924,7 +2022,7 @@
   },
   "Component_Instruction_Attack_Sequence_Feran_Longtooth": {
     "id": "Component_Instruction_Attack_Sequence_Feran_Longtooth",
-    "category": "Intelligent/Neutral/Feran",
+    "category": "Intelligent/Faction/Feran",
     "attitude": "neutral",
     "reference": null,
     "maxHealth": null,
@@ -2933,7 +2031,7 @@
   },
   "Component_Instruction_Attack_Sequence_Feran_Longtooth_Ranged": {
     "id": "Component_Instruction_Attack_Sequence_Feran_Longtooth_Ranged",
-    "category": "Intelligent/Neutral/Feran",
+    "category": "Intelligent/Faction/Feran",
     "attitude": "neutral",
     "reference": null,
     "maxHealth": null,
@@ -2942,7 +2040,7 @@
   },
   "Component_Instruction_Attack_Sequence_Feran_Sharptooth": {
     "id": "Component_Instruction_Attack_Sequence_Feran_Sharptooth",
-    "category": "Intelligent/Neutral/Feran",
+    "category": "Intelligent/Faction/Feran",
     "attitude": "neutral",
     "reference": null,
     "maxHealth": null,
@@ -2951,7 +2049,7 @@
   },
   "Component_Instruction_Attack_Sequence_Feran_Sharptooth_Ranged": {
     "id": "Component_Instruction_Attack_Sequence_Feran_Sharptooth_Ranged",
-    "category": "Intelligent/Neutral/Feran",
+    "category": "Intelligent/Faction/Feran",
     "attitude": "neutral",
     "reference": null,
     "maxHealth": null,
@@ -2960,7 +2058,7 @@
   },
   "Component_Instruction_Attack_Sequence_Feran_Windwalker": {
     "id": "Component_Instruction_Attack_Sequence_Feran_Windwalker",
-    "category": "Intelligent/Neutral/Feran",
+    "category": "Intelligent/Faction/Feran",
     "attitude": "neutral",
     "reference": null,
     "maxHealth": null,
@@ -2969,7 +2067,7 @@
   },
   "Component_Sensor_Feran_Day": {
     "id": "Component_Sensor_Feran_Day",
-    "category": "Intelligent/Neutral/Feran",
+    "category": "Intelligent/Faction/Feran",
     "attitude": "neutral",
     "reference": null,
     "maxHealth": null,
@@ -2978,7 +2076,7 @@
   },
   "Component_Sensor_Feran_Sharptooth_Wakeup": {
     "id": "Component_Sensor_Feran_Sharptooth_Wakeup",
-    "category": "Intelligent/Neutral/Feran",
+    "category": "Intelligent/Faction/Feran",
     "attitude": "neutral",
     "reference": null,
     "maxHealth": null,
@@ -2987,7 +2085,7 @@
   },
   "Feran_Burrower": {
     "id": "Feran_Burrower",
-    "category": "Intelligent/Neutral/Feran",
+    "category": "Intelligent/Faction/Feran",
     "attitude": "neutral",
     "reference": "Template_Feran_Burrower",
     "maxHealth": 61,
@@ -2996,7 +2094,7 @@
   },
   "Feran_Civilian": {
     "id": "Feran_Civilian",
-    "category": "Intelligent/Neutral/Feran",
+    "category": "Intelligent/Faction/Feran",
     "attitude": "neutral",
     "reference": "Template_Feran_Civilian",
     "maxHealth": 49,
@@ -3005,7 +2103,7 @@
   },
   "Feran_Cub": {
     "id": "Feran_Cub",
-    "category": "Intelligent/Neutral/Feran",
+    "category": "Intelligent/Faction/Feran",
     "attitude": "neutral",
     "reference": "Template_Feran_Cub",
     "maxHealth": 29,
@@ -3014,7 +2112,7 @@
   },
   "Feran_Longtooth": {
     "id": "Feran_Longtooth",
-    "category": "Intelligent/Neutral/Feran",
+    "category": "Intelligent/Faction/Feran",
     "attitude": "neutral",
     "reference": "Template_Feran_Sharptooth",
     "maxHealth": 61,
@@ -3023,7 +2121,7 @@
   },
   "Feran_Sharptooth": {
     "id": "Feran_Sharptooth",
-    "category": "Intelligent/Neutral/Feran",
+    "category": "Intelligent/Faction/Feran",
     "attitude": "neutral",
     "reference": "Template_Feran_Sharptooth",
     "maxHealth": 61,
@@ -3032,7 +2130,7 @@
   },
   "Feran_Windwalker": {
     "id": "Feran_Windwalker",
-    "category": "Intelligent/Neutral/Feran",
+    "category": "Intelligent/Faction/Feran",
     "attitude": "neutral",
     "reference": "Template_Feran_Windwalker",
     "maxHealth": 61,
@@ -3041,7 +2139,7 @@
   },
   "Template_Feran_Burrower": {
     "id": "Template_Feran_Burrower",
-    "category": "Intelligent/Neutral/Feran/Templates",
+    "category": "Intelligent/Faction/Feran/Templates",
     "attitude": "neutral",
     "reference": null,
     "maxHealth": null,
@@ -3050,7 +2148,7 @@
   },
   "Template_Feran_Civilian": {
     "id": "Template_Feran_Civilian",
-    "category": "Intelligent/Neutral/Feran/Templates",
+    "category": "Intelligent/Faction/Feran/Templates",
     "attitude": "neutral",
     "reference": null,
     "maxHealth": null,
@@ -3059,7 +2157,7 @@
   },
   "Template_Feran_Cub": {
     "id": "Template_Feran_Cub",
-    "category": "Intelligent/Neutral/Feran/Templates",
+    "category": "Intelligent/Faction/Feran/Templates",
     "attitude": "neutral",
     "reference": null,
     "maxHealth": null,
@@ -3068,7 +2166,7 @@
   },
   "Template_Feran_Sharptooth": {
     "id": "Template_Feran_Sharptooth",
-    "category": "Intelligent/Neutral/Feran/Templates",
+    "category": "Intelligent/Faction/Feran/Templates",
     "attitude": "neutral",
     "reference": null,
     "maxHealth": null,
@@ -3077,7 +2175,646 @@
   },
   "Template_Feran_Windwalker": {
     "id": "Template_Feran_Windwalker",
-    "category": "Intelligent/Neutral/Feran/Templates",
+    "category": "Intelligent/Faction/Feran/Templates",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Coffer_Goblin_Burner": {
+    "id": "Coffer_Goblin_Burner",
+    "category": "Intelligent/Faction/Goblin",
+    "attitude": "neutral",
+    "reference": "Template_Goblin_Burner",
+    "maxHealth": 80,
+    "dropList": "Empty",
+    "appearance": "Coffer_Goblin_Burner"
+  },
+  "Coffer_Goblin_Glutton": {
+    "id": "Coffer_Goblin_Glutton",
+    "category": "Intelligent/Faction/Goblin",
+    "attitude": "neutral",
+    "reference": "Template_Goblin_Glutton",
+    "maxHealth": 700,
+    "dropList": "Empty",
+    "appearance": "Coffer_Goblin_Glutton"
+  },
+  "Coffer_Goblin_Guardian": {
+    "id": "Coffer_Goblin_Guardian",
+    "category": "Intelligent/Faction/Goblin",
+    "attitude": "neutral",
+    "reference": "Template_Goblin_Guardian",
+    "maxHealth": 110,
+    "dropList": null,
+    "appearance": "Coffer_Goblin_Guardian"
+  },
+  "Coffer_Goblin_Lobber": {
+    "id": "Coffer_Goblin_Lobber",
+    "category": "Intelligent/Faction/Goblin",
+    "attitude": "neutral",
+    "reference": "Template_Goblin_Lobber",
+    "maxHealth": 100,
+    "dropList": null,
+    "appearance": "Coffer_Goblin_Lobber"
+  },
+  "Coffer_Goblin_Miner": {
+    "id": "Coffer_Goblin_Miner",
+    "category": "Intelligent/Faction/Goblin",
+    "attitude": "neutral",
+    "reference": "Template_Goblin_Miner",
+    "maxHealth": 170,
+    "dropList": null,
+    "appearance": "Coffer_Goblin_Miner"
+  },
+  "Coffer_Goblin_Scrapper": {
+    "id": "Coffer_Goblin_Scrapper",
+    "category": "Intelligent/Faction/Goblin",
+    "attitude": "neutral",
+    "reference": "Template_Goblin_Scrapper",
+    "maxHealth": 44,
+    "dropList": null,
+    "appearance": "Coffer_Goblin_Scrapper"
+  },
+  "Coffer_Goblin_Turret": {
+    "id": "Coffer_Goblin_Turret",
+    "category": "Intelligent/Faction/Goblin",
+    "attitude": "neutral",
+    "reference": "Template_Goblin_Turret",
+    "maxHealth": 22,
+    "dropList": null,
+    "appearance": "Coffer_Goblin_Scrapper"
+  },
+  "Component_Instruction_Dungeon_Goblin_Scale_Health": {
+    "id": "Component_Instruction_Dungeon_Goblin_Scale_Health",
+    "category": "Intelligent/Faction/Goblin/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Goblin_Eat": {
+    "id": "Component_Instruction_Goblin_Eat",
+    "category": "Intelligent/Faction/Goblin/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Goblin_Flee_Void": {
+    "id": "Component_Instruction_Goblin_Flee_Void",
+    "category": "Intelligent/Faction/Goblin/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Goblin_Idles": {
+    "id": "Component_Instruction_Goblin_Idles",
+    "category": "Intelligent/Faction/Goblin/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Dungeon_Feastmaster_Scrapper": {
+    "id": "Dungeon_Feastmaster_Scrapper",
+    "category": "Intelligent/Faction/Goblin/Dungeon",
+    "attitude": "neutral",
+    "reference": "Template_Dungeon_Goblin_Scrapper",
+    "maxHealth": 36,
+    "dropList": null,
+    "appearance": "Goblin_Scrapper"
+  },
+  "Dungeon_Goblin_Arena_Spectator": {
+    "id": "Dungeon_Goblin_Arena_Spectator",
+    "category": "Intelligent/Faction/Goblin/Dungeon",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Dungeon_Goblin_Burner": {
+    "id": "Dungeon_Goblin_Burner",
+    "category": "Intelligent/Faction/Goblin/Dungeon",
+    "attitude": "neutral",
+    "reference": "Template_Dungeon_Goblin_Burner",
+    "maxHealth": 160,
+    "dropList": null,
+    "appearance": "Goblin_Burner"
+  },
+  "Dungeon_Goblin_Burner_Patrol": {
+    "id": "Dungeon_Goblin_Burner_Patrol",
+    "category": "Intelligent/Faction/Goblin/Dungeon",
+    "attitude": "neutral",
+    "reference": "Dungeon_Goblin_Burner",
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Dungeon_Goblin_Food_Carrier": {
+    "id": "Dungeon_Goblin_Food_Carrier",
+    "category": "Intelligent/Faction/Goblin/Dungeon",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Dungeon_Goblin_Glutton": {
+    "id": "Dungeon_Goblin_Glutton",
+    "category": "Intelligent/Faction/Goblin/Dungeon",
+    "attitude": "neutral",
+    "reference": "Template_Goblin_Glutton",
+    "maxHealth": 700,
+    "dropList": null,
+    "appearance": "Goblin_Glutton"
+  },
+  "Dungeon_Goblin_Guardian": {
+    "id": "Dungeon_Goblin_Guardian",
+    "category": "Intelligent/Faction/Goblin/Dungeon",
+    "attitude": "neutral",
+    "reference": "Template_Dungeon_Goblin_Guardian",
+    "maxHealth": 90,
+    "dropList": null,
+    "appearance": "Goblin_Guardian"
+  },
+  "Dungeon_Goblin_Lobber": {
+    "id": "Dungeon_Goblin_Lobber",
+    "category": "Intelligent/Faction/Goblin/Dungeon",
+    "attitude": "neutral",
+    "reference": "Template_Dungeon_Goblin_Lobber",
+    "maxHealth": 80,
+    "dropList": null,
+    "appearance": "Goblin_Lobber"
+  },
+  "Dungeon_Goblin_Lobber_Patrol": {
+    "id": "Dungeon_Goblin_Lobber_Patrol",
+    "category": "Intelligent/Faction/Goblin/Dungeon",
+    "attitude": "neutral",
+    "reference": "Dungeon_Goblin_Lobber",
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Dungeon_Goblin_Lobber_Turret": {
+    "id": "Dungeon_Goblin_Lobber_Turret",
+    "category": "Intelligent/Faction/Goblin/Dungeon",
+    "attitude": "neutral",
+    "reference": "Template_Dungeon_Goblin_Turret",
+    "maxHealth": 70,
+    "dropList": null,
+    "appearance": "Goblin_Lobber"
+  },
+  "Dungeon_Goblin_Mace": {
+    "id": "Dungeon_Goblin_Mace",
+    "category": "Intelligent/Faction/Goblin/Dungeon",
+    "attitude": "neutral",
+    "reference": "Template_Dungeon_Goblin_Mace",
+    "maxHealth": 160,
+    "dropList": null,
+    "appearance": "Dungeon_Goblin_Mace"
+  },
+  "Dungeon_Goblin_Miner": {
+    "id": "Dungeon_Goblin_Miner",
+    "category": "Intelligent/Faction/Goblin/Dungeon",
+    "attitude": "neutral",
+    "reference": "Template_Dungeon_Goblin_Miner",
+    "maxHealth": 140,
+    "dropList": null,
+    "appearance": "Goblin_Miner"
+  },
+  "Dungeon_Goblin_Miner_Patrol": {
+    "id": "Dungeon_Goblin_Miner_Patrol",
+    "category": "Intelligent/Faction/Goblin/Dungeon",
+    "attitude": "neutral",
+    "reference": "Dungeon_Goblin_Miner",
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Dungeon_Goblin_Scrapper": {
+    "id": "Dungeon_Goblin_Scrapper",
+    "category": "Intelligent/Faction/Goblin/Dungeon",
+    "attitude": "neutral",
+    "reference": "Template_Dungeon_Goblin_Scrapper",
+    "maxHealth": 45,
+    "dropList": null,
+    "appearance": "Goblin_Scrapper"
+  },
+  "Dungeon_Goblin_Scrapper_Enrage": {
+    "id": "Dungeon_Goblin_Scrapper_Enrage",
+    "category": "Intelligent/Faction/Goblin/Dungeon",
+    "attitude": "neutral",
+    "reference": "Template_Dungeon_Goblin_Scrapper",
+    "maxHealth": 45,
+    "dropList": null,
+    "appearance": "Dungeon_Goblin_Scrapper_Enrage"
+  },
+  "Dungeon_Goblin_Scrapper_Patrol": {
+    "id": "Dungeon_Goblin_Scrapper_Patrol",
+    "category": "Intelligent/Faction/Goblin/Dungeon",
+    "attitude": "neutral",
+    "reference": "Dungeon_Goblin_Scrapper",
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Dungeon_Goblin_Shroom_Carrier": {
+    "id": "Dungeon_Goblin_Shroom_Carrier",
+    "category": "Intelligent/Faction/Goblin/Dungeon",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Dungeon_Goblin_Spectator": {
+    "id": "Dungeon_Goblin_Spectator",
+    "category": "Intelligent/Faction/Goblin/Dungeon",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Dungeon_Goblin_Thief": {
+    "id": "Dungeon_Goblin_Thief",
+    "category": "Intelligent/Faction/Goblin/Dungeon",
+    "attitude": "neutral",
+    "reference": "Template_Dungeon_Goblin_Thief",
+    "maxHealth": 30,
+    "dropList": null,
+    "appearance": "Goblin_Thief"
+  },
+  "Dungeon_Goblin_Thief_Patrol": {
+    "id": "Dungeon_Goblin_Thief_Patrol",
+    "category": "Intelligent/Faction/Goblin/Dungeon",
+    "attitude": "neutral",
+    "reference": "Dungeon_Goblin_Thief",
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Dungeon_Goblin_Thrower_Spectator": {
+    "id": "Dungeon_Goblin_Thrower_Spectator",
+    "category": "Intelligent/Faction/Goblin/Dungeon",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Dungeon_Goblin_Turret": {
+    "id": "Dungeon_Goblin_Turret",
+    "category": "Intelligent/Faction/Goblin/Dungeon",
+    "attitude": "neutral",
+    "reference": "Template_Dungeon_Goblin_Turret",
+    "maxHealth": 20,
+    "dropList": null,
+    "appearance": null
+  },
+  "Dungeon_Klops_Scrap_Trader": {
+    "id": "Dungeon_Klops_Scrap_Trader",
+    "category": "Intelligent/Faction/Goblin/Dungeon",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Dungeon_Goblin_Burner": {
+    "id": "Template_Dungeon_Goblin_Burner",
+    "category": "Intelligent/Faction/Goblin/Dungeon/Templates",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Dungeon_Goblin_Guardian": {
+    "id": "Template_Dungeon_Goblin_Guardian",
+    "category": "Intelligent/Faction/Goblin/Dungeon/Templates",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Dungeon_Goblin_Lobber": {
+    "id": "Template_Dungeon_Goblin_Lobber",
+    "category": "Intelligent/Faction/Goblin/Dungeon/Templates",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Dungeon_Goblin_Mace": {
+    "id": "Template_Dungeon_Goblin_Mace",
+    "category": "Intelligent/Faction/Goblin/Dungeon/Templates",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Dungeon_Goblin_Miner": {
+    "id": "Template_Dungeon_Goblin_Miner",
+    "category": "Intelligent/Faction/Goblin/Dungeon/Templates",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Dungeon_Goblin_Scrapper": {
+    "id": "Template_Dungeon_Goblin_Scrapper",
+    "category": "Intelligent/Faction/Goblin/Dungeon/Templates",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Dungeon_Goblin_Thief": {
+    "id": "Template_Dungeon_Goblin_Thief",
+    "category": "Intelligent/Faction/Goblin/Dungeon/Templates",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Dungeon_Goblin_Turret": {
+    "id": "Template_Dungeon_Goblin_Turret",
+    "category": "Intelligent/Faction/Goblin/Dungeon/Templates",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Goblin_Burner": {
+    "id": "Goblin_Burner",
+    "category": "Intelligent/Faction/Goblin",
+    "attitude": "neutral",
+    "reference": "Template_Goblin_Burner",
+    "maxHealth": 160,
+    "dropList": "Drop_Goblin_Burner",
+    "appearance": "Goblin_Burner"
+  },
+  "Goblin_Glutton": {
+    "id": "Goblin_Glutton",
+    "category": "Intelligent/Faction/Goblin",
+    "attitude": "neutral",
+    "reference": "Template_Goblin_Glutton",
+    "maxHealth": 700,
+    "dropList": "Drop_Goblin_Glutton",
+    "appearance": "Goblin_Glutton"
+  },
+  "Goblin_Guardian": {
+    "id": "Goblin_Guardian",
+    "category": "Intelligent/Faction/Goblin",
+    "attitude": "neutral",
+    "reference": "Template_Goblin_Guardian",
+    "maxHealth": 90,
+    "dropList": "Drop_Goblin_Guardian",
+    "appearance": "Goblin_Guardian"
+  },
+  "Goblin_Launcher": {
+    "id": "Goblin_Launcher",
+    "category": "Intelligent/Faction/Goblin",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Goblin_Lobber": {
+    "id": "Goblin_Lobber",
+    "category": "Intelligent/Faction/Goblin",
+    "attitude": "neutral",
+    "reference": "Template_Goblin_Lobber",
+    "maxHealth": 80,
+    "dropList": "Drop_Goblin_Lobber",
+    "appearance": "Goblin_Lobber"
+  },
+  "Goblin_Lobber_Turret": {
+    "id": "Goblin_Lobber_Turret",
+    "category": "Intelligent/Faction/Goblin",
+    "attitude": "neutral",
+    "reference": "Template_Goblin_Turret",
+    "maxHealth": 70,
+    "dropList": "Drop_Goblin_Lobber",
+    "appearance": "Goblin_Lobber"
+  },
+  "Goblin_Miner": {
+    "id": "Goblin_Miner",
+    "category": "Intelligent/Faction/Goblin",
+    "attitude": "neutral",
+    "reference": "Template_Goblin_Miner",
+    "maxHealth": 140,
+    "dropList": "Drop_Goblin_Miner",
+    "appearance": "Goblin_Miner"
+  },
+  "Goblin_Scrapper": {
+    "id": "Goblin_Scrapper",
+    "category": "Intelligent/Faction/Goblin",
+    "attitude": "neutral",
+    "reference": "Template_Goblin_Scrapper",
+    "maxHealth": 36,
+    "dropList": "Drop_Goblin_Scrapper",
+    "appearance": "Goblin_Scrapper"
+  },
+  "Goblin_Spectator": {
+    "id": "Goblin_Spectator",
+    "category": "Intelligent/Faction/Goblin",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Goblin_Thief": {
+    "id": "Goblin_Thief",
+    "category": "Intelligent/Faction/Goblin",
+    "attitude": "neutral",
+    "reference": "Template_Goblin_Thief",
+    "maxHealth": 30,
+    "dropList": null,
+    "appearance": "Goblin_Thief"
+  },
+  "Goblin_Turret": {
+    "id": "Goblin_Turret",
+    "category": "Intelligent/Faction/Goblin",
+    "attitude": "neutral",
+    "reference": "Template_Goblin_Turret",
+    "maxHealth": 20,
+    "dropList": "Drop_Goblin_Scrapper",
+    "appearance": null
+  },
+  "Template_Goblin_Burner": {
+    "id": "Template_Goblin_Burner",
+    "category": "Intelligent/Faction/Goblin/Templates",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Goblin_Glutton": {
+    "id": "Template_Goblin_Glutton",
+    "category": "Intelligent/Faction/Goblin/Templates",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Goblin_Guardian": {
+    "id": "Template_Goblin_Guardian",
+    "category": "Intelligent/Faction/Goblin/Templates",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Goblin_Lobber": {
+    "id": "Template_Goblin_Lobber",
+    "category": "Intelligent/Faction/Goblin/Templates",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Goblin_Miner": {
+    "id": "Template_Goblin_Miner",
+    "category": "Intelligent/Faction/Goblin/Templates",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Goblin_Scrapper": {
+    "id": "Template_Goblin_Scrapper",
+    "category": "Intelligent/Faction/Goblin/Templates",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Goblin_Thief": {
+    "id": "Template_Goblin_Thief",
+    "category": "Intelligent/Faction/Goblin/Templates",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Goblin_Turret": {
+    "id": "Template_Goblin_Turret",
+    "category": "Intelligent/Faction/Goblin/Templates",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Voidtaken_Goblin_Surge": {
+    "id": "Voidtaken_Goblin_Surge",
+    "category": "Intelligent/Faction/Goblin",
+    "attitude": "neutral",
+    "reference": "Template_Goblin_Scrapper",
+    "maxHealth": 36,
+    "dropList": "Drop_Voidtaken_Goblin",
+    "appearance": "Voidtaken_Goblin"
+  },
+  "Edible_Goblin_Scrapper": {
+    "id": "Edible_Goblin_Scrapper",
+    "category": "Intelligent/Faction/Goblin/_Deprecated",
+    "attitude": "neutral",
+    "reference": "Template_Edible_Critter",
+    "maxHealth": 100,
+    "dropList": null,
+    "appearance": "Goblin_Scrapper"
+  },
+  "Edible_Rat": {
+    "id": "Edible_Rat",
+    "category": "Intelligent/Faction/Goblin/_Deprecated",
+    "attitude": "neutral",
+    "reference": "Template_Edible_Critter",
+    "maxHealth": 100,
+    "dropList": null,
+    "appearance": "Rat"
+  },
+  "Goblin_Duke": {
+    "id": "Goblin_Duke",
+    "category": "Intelligent/Faction/Goblin/_Deprecated",
+    "attitude": "neutral",
+    "reference": "Template_Intelligent",
+    "maxHealth": 226,
+    "dropList": "Empty",
+    "appearance": "Goblin_Duke"
+  },
+  "Goblin_Duke_Phase_2": {
+    "id": "Goblin_Duke_Phase_2",
+    "category": "Intelligent/Faction/Goblin/_Deprecated",
+    "attitude": "neutral",
+    "reference": "Template_Goblin_Duke_Phase_2",
+    "maxHealth": 320,
+    "dropList": "Empty",
+    "appearance": "Goblin_Duke"
+  },
+  "Goblin_Duke_Phase_3_Fast": {
+    "id": "Goblin_Duke_Phase_3_Fast",
+    "category": "Intelligent/Faction/Goblin/_Deprecated",
+    "attitude": "neutral",
+    "reference": "Template_Goblin_Duke_Phase_3",
+    "maxHealth": 200,
+    "dropList": "Empty",
+    "appearance": "Goblin_Duke"
+  },
+  "Goblin_Duke_Phase_3_Slow": {
+    "id": "Goblin_Duke_Phase_3_Slow",
+    "category": "Intelligent/Faction/Goblin/_Deprecated",
+    "attitude": "neutral",
+    "reference": "Template_Goblin_Duke_Phase_3",
+    "maxHealth": 200,
+    "dropList": "Empty",
+    "appearance": "Goblin_Duke_Large"
+  },
+  "Template_Goblin_Duke_Phase_1": {
+    "id": "Template_Goblin_Duke_Phase_1",
+    "category": "Intelligent/Faction/Goblin/_Deprecated/Templates",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Goblin_Duke_Phase_2": {
+    "id": "Template_Goblin_Duke_Phase_2",
+    "category": "Intelligent/Faction/Goblin/_Deprecated/Templates",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Goblin_Duke_Phase_3": {
+    "id": "Template_Goblin_Duke_Phase_3",
+    "category": "Intelligent/Faction/Goblin/_Deprecated/Templates",
     "attitude": "neutral",
     "reference": null,
     "maxHealth": null,
@@ -3086,7 +2823,7 @@
   },
   "Component_Instruction_Attack_Sequence_Kweebec_Sapling_Razorleaf": {
     "id": "Component_Instruction_Attack_Sequence_Kweebec_Sapling_Razorleaf",
-    "category": "Intelligent/Neutral/Kweebec",
+    "category": "Intelligent/Faction/Kweebec",
     "attitude": "neutral",
     "reference": null,
     "maxHealth": null,
@@ -3095,7 +2832,7 @@
   },
   "Component_Kweebec_Instruction_Panic": {
     "id": "Component_Kweebec_Instruction_Panic",
-    "category": "Intelligent/Neutral/Kweebec",
+    "category": "Intelligent/Faction/Kweebec",
     "attitude": "neutral",
     "reference": null,
     "maxHealth": null,
@@ -3104,7 +2841,7 @@
   },
   "Component_Kweebec_Instruction_Search": {
     "id": "Component_Kweebec_Instruction_Search",
-    "category": "Intelligent/Neutral/Kweebec",
+    "category": "Intelligent/Faction/Kweebec",
     "attitude": "neutral",
     "reference": null,
     "maxHealth": null,
@@ -3113,7 +2850,7 @@
   },
   "Kweebec_Elder": {
     "id": "Kweebec_Elder",
-    "category": "Intelligent/Neutral/Kweebec",
+    "category": "Intelligent/Faction/Kweebec",
     "attitude": "neutral",
     "reference": "Template_Kweebec_Sapling",
     "maxHealth": 38,
@@ -3122,7 +2859,7 @@
   },
   "Kweebec_Merchant": {
     "id": "Kweebec_Merchant",
-    "category": "Intelligent/Neutral/Kweebec",
+    "category": "Intelligent/Faction/Kweebec",
     "attitude": "neutral",
     "reference": null,
     "maxHealth": null,
@@ -3131,7 +2868,7 @@
   },
   "Kweebec_Prisoner": {
     "id": "Kweebec_Prisoner",
-    "category": "Intelligent/Neutral/Kweebec",
+    "category": "Intelligent/Faction/Kweebec",
     "attitude": "neutral",
     "reference": null,
     "maxHealth": null,
@@ -3140,7 +2877,7 @@
   },
   "Kweebec_Razorleaf": {
     "id": "Kweebec_Razorleaf",
-    "category": "Intelligent/Neutral/Kweebec",
+    "category": "Intelligent/Faction/Kweebec",
     "attitude": "neutral",
     "reference": "Template_Kweebec_Razorleaf",
     "maxHealth": 105,
@@ -3149,7 +2886,7 @@
   },
   "Kweebec_Razorleaf_Patrol": {
     "id": "Kweebec_Razorleaf_Patrol",
-    "category": "Intelligent/Neutral/Kweebec",
+    "category": "Intelligent/Faction/Kweebec",
     "attitude": "neutral",
     "reference": "Template_Kweebec_Razorleaf",
     "maxHealth": 105,
@@ -3158,7 +2895,7 @@
   },
   "Kweebec_Rootling": {
     "id": "Kweebec_Rootling",
-    "category": "Intelligent/Neutral/Kweebec",
+    "category": "Intelligent/Faction/Kweebec",
     "attitude": "neutral",
     "reference": "Template_Kweebec_Sapling",
     "maxHealth": 62,
@@ -3167,7 +2904,7 @@
   },
   "Kweebec_Sapling": {
     "id": "Kweebec_Sapling",
-    "category": "Intelligent/Neutral/Kweebec",
+    "category": "Intelligent/Faction/Kweebec",
     "attitude": "neutral",
     "reference": "Template_Kweebec_Sapling",
     "maxHealth": 74,
@@ -3176,7 +2913,7 @@
   },
   "Kweebec_Sapling_Orange": {
     "id": "Kweebec_Sapling_Orange",
-    "category": "Intelligent/Neutral/Kweebec",
+    "category": "Intelligent/Faction/Kweebec",
     "attitude": "neutral",
     "reference": "Template_Kweebec_Sapling",
     "maxHealth": 38,
@@ -3185,7 +2922,7 @@
   },
   "Kweebec_Sapling_Pink": {
     "id": "Kweebec_Sapling_Pink",
-    "category": "Intelligent/Neutral/Kweebec",
+    "category": "Intelligent/Faction/Kweebec",
     "attitude": "neutral",
     "reference": "Template_Kweebec_Sapling",
     "maxHealth": 38,
@@ -3194,7 +2931,7 @@
   },
   "Kweebec_Seedling": {
     "id": "Kweebec_Seedling",
-    "category": "Intelligent/Neutral/Kweebec",
+    "category": "Intelligent/Faction/Kweebec",
     "attitude": "neutral",
     "reference": "Template_Kweebec_Youngling",
     "maxHealth": 20,
@@ -3203,7 +2940,7 @@
   },
   "Kweebec_Sproutling": {
     "id": "Kweebec_Sproutling",
-    "category": "Intelligent/Neutral/Kweebec",
+    "category": "Intelligent/Faction/Kweebec",
     "attitude": "neutral",
     "reference": "Template_Kweebec_Youngling",
     "maxHealth": 29,
@@ -3212,7 +2949,7 @@
   },
   "Kweebec_Sproutling_Patrol": {
     "id": "Kweebec_Sproutling_Patrol",
-    "category": "Intelligent/Neutral/Kweebec",
+    "category": "Intelligent/Faction/Kweebec",
     "attitude": "neutral",
     "reference": "Template_Kweebec_Youngling",
     "maxHealth": 29,
@@ -3221,7 +2958,7 @@
   },
   "Template_Kweebec_Razorleaf": {
     "id": "Template_Kweebec_Razorleaf",
-    "category": "Intelligent/Neutral/Kweebec/Templates",
+    "category": "Intelligent/Faction/Kweebec/Templates",
     "attitude": "neutral",
     "reference": null,
     "maxHealth": null,
@@ -3230,7 +2967,7 @@
   },
   "Template_Kweebec_Sapling": {
     "id": "Template_Kweebec_Sapling",
-    "category": "Intelligent/Neutral/Kweebec/Templates",
+    "category": "Intelligent/Faction/Kweebec/Templates",
     "attitude": "neutral",
     "reference": null,
     "maxHealth": null,
@@ -3239,25 +2976,898 @@
   },
   "Template_Kweebec_Youngling": {
     "id": "Template_Kweebec_Youngling",
-    "category": "Intelligent/Neutral/Kweebec/Templates",
+    "category": "Intelligent/Faction/Kweebec/Templates",
     "attitude": "neutral",
     "reference": null,
     "maxHealth": null,
     "dropList": null,
     "appearance": null
   },
+  "Component_Instruction_Attack_Sequence_Outlander_Berserker": {
+    "id": "Component_Instruction_Attack_Sequence_Outlander_Berserker",
+    "category": "Intelligent/Faction/Outlander/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Attack_Sequence_Outlander_Brute": {
+    "id": "Component_Instruction_Attack_Sequence_Outlander_Brute",
+    "category": "Intelligent/Faction/Outlander/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Attack_Sequence_Outlander_Cultist": {
+    "id": "Component_Instruction_Attack_Sequence_Outlander_Cultist",
+    "category": "Intelligent/Faction/Outlander/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Attack_Sequence_Outlander_Cultist_Ranged": {
+    "id": "Component_Instruction_Attack_Sequence_Outlander_Cultist_Ranged",
+    "category": "Intelligent/Faction/Outlander/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Attack_Sequence_Outlander_Hunter": {
+    "id": "Component_Instruction_Attack_Sequence_Outlander_Hunter",
+    "category": "Intelligent/Faction/Outlander/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Attack_Sequence_Outlander_Hunter_Ranged": {
+    "id": "Component_Instruction_Attack_Sequence_Outlander_Hunter_Ranged",
+    "category": "Intelligent/Faction/Outlander/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Attack_Sequence_Outlander_Marauder": {
+    "id": "Component_Instruction_Attack_Sequence_Outlander_Marauder",
+    "category": "Intelligent/Faction/Outlander/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Attack_Sequence_Outlander_Peon": {
+    "id": "Component_Instruction_Attack_Sequence_Outlander_Peon",
+    "category": "Intelligent/Faction/Outlander/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Attack_Sequence_Outlander_Priest": {
+    "id": "Component_Instruction_Attack_Sequence_Outlander_Priest",
+    "category": "Intelligent/Faction/Outlander/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Attack_Sequence_Outlander_Priest_Ranged": {
+    "id": "Component_Instruction_Attack_Sequence_Outlander_Priest_Ranged",
+    "category": "Intelligent/Faction/Outlander/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Attack_Sequence_Outlander_Sorcerer_Ranged": {
+    "id": "Component_Instruction_Attack_Sequence_Outlander_Sorcerer_Ranged",
+    "category": "Intelligent/Faction/Outlander/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Attack_Sequence_Outlander_Stalker": {
+    "id": "Component_Instruction_Attack_Sequence_Outlander_Stalker",
+    "category": "Intelligent/Faction/Outlander/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Attack_Sequence_Outlander_Stalker_Ranged": {
+    "id": "Component_Instruction_Attack_Sequence_Outlander_Stalker_Ranged",
+    "category": "Intelligent/Faction/Outlander/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Outlander_Berserker": {
+    "id": "Outlander_Berserker",
+    "category": "Intelligent/Faction/Outlander",
+    "attitude": "neutral",
+    "reference": "Template_Trork_Melee",
+    "maxHealth": 103,
+    "dropList": "Drop_Outlander_Berserker",
+    "appearance": "Outlander_Berserker"
+  },
+  "Outlander_Brute": {
+    "id": "Outlander_Brute",
+    "category": "Intelligent/Faction/Outlander",
+    "attitude": "neutral",
+    "reference": "Template_Trork_Melee",
+    "maxHealth": 124,
+    "dropList": "Drop_Outlander_Brute",
+    "appearance": "Outlander_Brute"
+  },
+  "Outlander_Cultist": {
+    "id": "Outlander_Cultist",
+    "category": "Intelligent/Faction/Outlander",
+    "attitude": "neutral",
+    "reference": "Template_Trork_Hybrid",
+    "maxHealth": 81,
+    "dropList": "Drop_Outlander_Cultist",
+    "appearance": "Outlander_Cultist"
+  },
+  "Outlander_Hunter": {
+    "id": "Outlander_Hunter",
+    "category": "Intelligent/Faction/Outlander",
+    "attitude": "neutral",
+    "reference": "Template_Trork_Hybrid",
+    "maxHealth": 61,
+    "dropList": "Drop_Outlander_Hunter",
+    "appearance": "Outlander_Hunter"
+  },
+  "Outlander_Marauder": {
+    "id": "Outlander_Marauder",
+    "category": "Intelligent/Faction/Outlander",
+    "attitude": "neutral",
+    "reference": "Template_Trork_Chieftain",
+    "maxHealth": 103,
+    "dropList": "Drop_Outlander_Marauder",
+    "appearance": "Outlander_Marauder"
+  },
+  "Outlander_Peon": {
+    "id": "Outlander_Peon",
+    "category": "Intelligent/Faction/Outlander",
+    "attitude": "neutral",
+    "reference": "Template_Trork_Melee",
+    "maxHealth": 81,
+    "dropList": "Drop_Outlander_Peon",
+    "appearance": "Outlander_Peon"
+  },
+  "Outlander_Priest": {
+    "id": "Outlander_Priest",
+    "category": "Intelligent/Faction/Outlander",
+    "attitude": "neutral",
+    "reference": "Template_Trork_Mage",
+    "maxHealth": 103,
+    "dropList": "Drop_Outlander_Priest",
+    "appearance": "Outlander_Priest"
+  },
+  "Outlander_Sorcerer": {
+    "id": "Outlander_Sorcerer",
+    "category": "Intelligent/Faction/Outlander",
+    "attitude": "neutral",
+    "reference": "Template_Trork_Mage",
+    "maxHealth": 103,
+    "dropList": "Drop_Outlander_Sorcerer",
+    "appearance": "Outlander_Sorcerer"
+  },
+  "Outlander_Stalker": {
+    "id": "Outlander_Stalker",
+    "category": "Intelligent/Faction/Outlander",
+    "attitude": "neutral",
+    "reference": "Template_Trork_Hybrid",
+    "maxHealth": 61,
+    "dropList": "Drop_Outlander_Stalker",
+    "appearance": "Outlander_Stalker"
+  },
+  "Wolf_Outlander_Priest": {
+    "id": "Wolf_Outlander_Priest",
+    "category": "Intelligent/Faction/Outlander",
+    "attitude": "neutral",
+    "reference": "Template_Trork_Companion",
+    "maxHealth": 107,
+    "dropList": "Drop_Wolf_Outlander_Priest",
+    "appearance": "Wolf_Outlander_Priest"
+  },
+  "Wolf_Outlander_Sorcerer": {
+    "id": "Wolf_Outlander_Sorcerer",
+    "category": "Intelligent/Faction/Outlander",
+    "attitude": "neutral",
+    "reference": "Template_Trork_Companion",
+    "maxHealth": 118,
+    "dropList": "Drop_Wolf_Outlander_Sorcerer",
+    "appearance": "Wolf_Outlander_Sorcerer"
+  },
+  "Dungeon_Scarak_Broodmother": {
+    "id": "Dungeon_Scarak_Broodmother",
+    "category": "Intelligent/Faction/Scarak/Dungeon",
+    "attitude": "neutral",
+    "reference": "Template_Scarak_Broodmother",
+    "maxHealth": 145,
+    "dropList": null,
+    "appearance": null
+  },
+  "Dungeon_Scarak_Broodmother_Young": {
+    "id": "Dungeon_Scarak_Broodmother_Young",
+    "category": "Intelligent/Faction/Scarak/Dungeon",
+    "attitude": "neutral",
+    "reference": "Template_Scarak_Broodmother",
+    "maxHealth": 124,
+    "dropList": null,
+    "appearance": null
+  },
+  "Dungeon_Scarak_Defender": {
+    "id": "Dungeon_Scarak_Defender",
+    "category": "Intelligent/Faction/Scarak/Dungeon",
+    "attitude": "neutral",
+    "reference": "Template_Scarak_Defender",
+    "maxHealth": 103,
+    "dropList": null,
+    "appearance": "Scarak_Defender"
+  },
+  "Dungeon_Scarak_Defender_Patrol": {
+    "id": "Dungeon_Scarak_Defender_Patrol",
+    "category": "Intelligent/Faction/Scarak/Dungeon",
+    "attitude": "neutral",
+    "reference": "Template_Scarak_Defender",
+    "maxHealth": 158,
+    "dropList": null,
+    "appearance": "Scarak_Defender"
+  },
+  "Dungeon_Scarak_Fighter": {
+    "id": "Dungeon_Scarak_Fighter",
+    "category": "Intelligent/Faction/Scarak/Dungeon",
+    "attitude": "neutral",
+    "reference": "Template_Intelligent",
+    "maxHealth": 81,
+    "dropList": null,
+    "appearance": "Scarak_Fighter"
+  },
+  "Dungeon_Scarak_Fighter_Patrol": {
+    "id": "Dungeon_Scarak_Fighter_Patrol",
+    "category": "Intelligent/Faction/Scarak/Dungeon",
+    "attitude": "neutral",
+    "reference": "Dungeon_Scarak_Fighter",
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Dungeon_Scarak_Louse": {
+    "id": "Dungeon_Scarak_Louse",
+    "category": "Intelligent/Faction/Scarak/Dungeon",
+    "attitude": "neutral",
+    "reference": "Template_Scarak_Louse",
+    "maxHealth": 21,
+    "dropList": "Drop_Scarak_Louse",
+    "appearance": "Scarak_Louse"
+  },
+  "Dungeon_Scarak_Seeker": {
+    "id": "Dungeon_Scarak_Seeker",
+    "category": "Intelligent/Faction/Scarak/Dungeon",
+    "attitude": "neutral",
+    "reference": "Template_Flying_Aggressive",
+    "maxHealth": 61,
+    "dropList": "Drop_Scarak_Seeker",
+    "appearance": "Scarak_Seeker"
+  },
+  "Dungeon_Scarak_Seeker_Patrol": {
+    "id": "Dungeon_Scarak_Seeker_Patrol",
+    "category": "Intelligent/Faction/Scarak/Dungeon",
+    "attitude": "neutral",
+    "reference": "Template_Flying_Aggressive",
+    "maxHealth": 61,
+    "dropList": "Drop_Scarak_Seeker",
+    "appearance": "Scarak_Seeker"
+  },
+  "Scarak_Broodmother": {
+    "id": "Scarak_Broodmother",
+    "category": "Intelligent/Faction/Scarak",
+    "attitude": "neutral",
+    "reference": "Template_Scarak_Broodmother",
+    "maxHealth": 145,
+    "dropList": null,
+    "appearance": null
+  },
+  "Scarak_Defender": {
+    "id": "Scarak_Defender",
+    "category": "Intelligent/Faction/Scarak",
+    "attitude": "neutral",
+    "reference": "Template_Scarak_Defender",
+    "maxHealth": 103,
+    "dropList": "Drop_Scarak_Defender",
+    "appearance": "Scarak_Defender"
+  },
+  "Scarak_Defender_Patrol": {
+    "id": "Scarak_Defender_Patrol",
+    "category": "Intelligent/Faction/Scarak",
+    "attitude": "neutral",
+    "reference": "Template_Scarak_Defender",
+    "maxHealth": 103,
+    "dropList": "Drop_Scarak_Defender",
+    "appearance": "Scarak_Defender"
+  },
+  "Scarak_Fighter": {
+    "id": "Scarak_Fighter",
+    "category": "Intelligent/Faction/Scarak",
+    "attitude": "neutral",
+    "reference": "Template_Intelligent",
+    "maxHealth": 81,
+    "dropList": "Drop_Scarak_Fighter",
+    "appearance": "Scarak_Fighter"
+  },
+  "Scarak_Fighter_Patrol": {
+    "id": "Scarak_Fighter_Patrol",
+    "category": "Intelligent/Faction/Scarak",
+    "attitude": "neutral",
+    "reference": "Scarak_Fighter",
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Scarak_Fighter_Royal_Guard": {
+    "id": "Scarak_Fighter_Royal_Guard",
+    "category": "Intelligent/Faction/Scarak",
+    "attitude": "neutral",
+    "reference": "Template_Intelligent",
+    "maxHealth": 81,
+    "dropList": "Drop_Scarak_Fighter_Royal_Guard",
+    "appearance": "Scarak_Fighter_Royal_Guard"
+  },
+  "Scarak_Louse": {
+    "id": "Scarak_Louse",
+    "category": "Intelligent/Faction/Scarak",
+    "attitude": "neutral",
+    "reference": "Template_Scarak_Louse",
+    "maxHealth": 21,
+    "dropList": "Drop_Scarak_Louse",
+    "appearance": "Scarak_Louse"
+  },
+  "Scarak_Seeker": {
+    "id": "Scarak_Seeker",
+    "category": "Intelligent/Faction/Scarak",
+    "attitude": "neutral",
+    "reference": "Template_Flying_Aggressive",
+    "maxHealth": 61,
+    "dropList": "Drop_Scarak_Seeker",
+    "appearance": "Scarak_Seeker"
+  },
+  "Scarak_Seeker_Patrol": {
+    "id": "Scarak_Seeker_Patrol",
+    "category": "Intelligent/Faction/Scarak",
+    "attitude": "neutral",
+    "reference": "Template_Flying_Aggressive",
+    "maxHealth": 61,
+    "dropList": "Drop_Scarak_Seeker",
+    "appearance": "Scarak_Seeker"
+  },
+  "Template_Scarak_Broodmother": {
+    "id": "Template_Scarak_Broodmother",
+    "category": "Intelligent/Faction/Scarak/Templates",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Scarak_Defender": {
+    "id": "Template_Scarak_Defender",
+    "category": "Intelligent/Faction/Scarak/Templates",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Scarak_Louse": {
+    "id": "Template_Scarak_Louse",
+    "category": "Intelligent/Faction/Scarak/Templates",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Attack_Sequence_Trork_Chieftain": {
+    "id": "Component_Instruction_Attack_Sequence_Trork_Chieftain",
+    "category": "Intelligent/Faction/Trork/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Attack_Sequence_Trork_Hunter": {
+    "id": "Component_Instruction_Attack_Sequence_Trork_Hunter",
+    "category": "Intelligent/Faction/Trork/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Attack_Sequence_Trork_Hunter_Ranged": {
+    "id": "Component_Instruction_Attack_Sequence_Trork_Hunter_Ranged",
+    "category": "Intelligent/Faction/Trork/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Attack_Sequence_Trork_Sentry": {
+    "id": "Component_Instruction_Attack_Sequence_Trork_Sentry",
+    "category": "Intelligent/Faction/Trork/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Attack_Sequence_Trork_Sentry_Ranged": {
+    "id": "Component_Instruction_Attack_Sequence_Trork_Sentry_Ranged",
+    "category": "Intelligent/Faction/Trork/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Attack_Sequence_Trork_Warrior": {
+    "id": "Component_Instruction_Attack_Sequence_Trork_Warrior",
+    "category": "Intelligent/Faction/Trork/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Flee_Trork_Shaman": {
+    "id": "Component_Instruction_Flee_Trork_Shaman",
+    "category": "Intelligent/Faction/Trork/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Trork_Instruction_Alerted": {
+    "id": "Component_Trork_Instruction_Alerted",
+    "category": "Intelligent/Faction/Trork/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Trork_Instruction_Converge": {
+    "id": "Component_Trork_Instruction_Converge",
+    "category": "Intelligent/Faction/Trork/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Trork_Instruction_Dropped_Meat": {
+    "id": "Component_Trork_Instruction_Dropped_Meat",
+    "category": "Intelligent/Faction/Trork/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Trork_Instruction_Greeting": {
+    "id": "Component_Trork_Instruction_Greeting",
+    "category": "Intelligent/Faction/Trork/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Trork_Instruction_Hybrid_Idle_Extra": {
+    "id": "Component_Trork_Instruction_Hybrid_Idle_Extra",
+    "category": "Intelligent/Faction/Trork/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Trork_Instruction_Idle": {
+    "id": "Component_Trork_Instruction_Idle",
+    "category": "Intelligent/Faction/Trork/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Trork_Instruction_Idle_Motion_Follow_Path": {
+    "id": "Component_Trork_Instruction_Idle_Motion_Follow_Path",
+    "category": "Intelligent/Faction/Trork/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Trork_Instruction_Idle_Motion_Wander": {
+    "id": "Component_Trork_Instruction_Idle_Motion_Wander",
+    "category": "Intelligent/Faction/Trork/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Trork_Instruction_Offensive_Default": {
+    "id": "Component_Trork_Instruction_Offensive_Default",
+    "category": "Intelligent/Faction/Trork/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Trork_Instruction_Panic": {
+    "id": "Component_Trork_Instruction_Panic",
+    "category": "Intelligent/Faction/Trork/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Trork_Instruction_Pre_Checks": {
+    "id": "Component_Trork_Instruction_Pre_Checks",
+    "category": "Intelligent/Faction/Trork/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Trork_Instruction_Reputation_Switch": {
+    "id": "Component_Trork_Instruction_Reputation_Switch",
+    "category": "Intelligent/Faction/Trork/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Trork_Instruction_Return_Home": {
+    "id": "Component_Trork_Instruction_Return_Home",
+    "category": "Intelligent/Faction/Trork/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Trork_Instruction_Search": {
+    "id": "Component_Trork_Instruction_Search",
+    "category": "Intelligent/Faction/Trork/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Trork_Instruction_Shoot_Bush": {
+    "id": "Component_Trork_Instruction_Shoot_Bush",
+    "category": "Intelligent/Faction/Trork/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Trork_Instruction_Sleep": {
+    "id": "Component_Trork_Instruction_Sleep",
+    "category": "Intelligent/Faction/Trork/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Trork_Instruction_Spar": {
+    "id": "Component_Trork_Instruction_Spar",
+    "category": "Intelligent/Faction/Trork/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Trork_Instruction_Warn": {
+    "id": "Component_Trork_Instruction_Warn",
+    "category": "Intelligent/Faction/Trork/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Trork_Instruction_Warning_Shot": {
+    "id": "Component_Trork_Instruction_Warning_Shot",
+    "category": "Intelligent/Faction/Trork/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Trork_Ranger_Instruction_Idle_Motion_Wander": {
+    "id": "Component_Trork_Ranger_Instruction_Idle_Motion_Wander",
+    "category": "Intelligent/Faction/Trork/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Trork_Sensor_Can_Sleep": {
+    "id": "Component_Trork_Sensor_Can_Sleep",
+    "category": "Intelligent/Faction/Trork/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Trork_Sensor_Dropped_Meat": {
+    "id": "Component_Trork_Sensor_Dropped_Meat",
+    "category": "Intelligent/Faction/Trork/Components",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Trork_Chieftain": {
+    "id": "Template_Trork_Chieftain",
+    "category": "Intelligent/Faction/Trork/Templates",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Trork_Companion": {
+    "id": "Template_Trork_Companion",
+    "category": "Intelligent/Faction/Trork/Templates",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Trork_Hybrid": {
+    "id": "Template_Trork_Hybrid",
+    "category": "Intelligent/Faction/Trork/Templates",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Trork_Mage": {
+    "id": "Template_Trork_Mage",
+    "category": "Intelligent/Faction/Trork/Templates",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Trork_Melee": {
+    "id": "Template_Trork_Melee",
+    "category": "Intelligent/Faction/Trork/Templates",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Trork_Ranger": {
+    "id": "Template_Trork_Ranger",
+    "category": "Intelligent/Faction/Trork/Templates",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Trork_Brawler": {
+    "id": "Trork_Brawler",
+    "category": "Intelligent/Faction/Trork",
+    "attitude": "neutral",
+    "reference": "Template_Trork_Melee",
+    "maxHealth": 61,
+    "dropList": "Drop_Trork_Brawler",
+    "appearance": "Trork_Brawler"
+  },
+  "Trork_Chieftain": {
+    "id": "Trork_Chieftain",
+    "category": "Intelligent/Faction/Trork",
+    "attitude": "neutral",
+    "reference": "Template_Trork_Chieftain",
+    "maxHealth": 124,
+    "dropList": "Drop_Trork_Chieftain",
+    "appearance": "Trork_Chieftain"
+  },
+  "Trork_Doctor_Witch": {
+    "id": "Trork_Doctor_Witch",
+    "category": "Intelligent/Faction/Trork",
+    "attitude": "neutral",
+    "reference": "Template_Trork_Mage",
+    "maxHealth": 74,
+    "dropList": "Drop_Trork_Doctor_Witch",
+    "appearance": "Trork_Doctor_Witch"
+  },
+  "Trork_Guard": {
+    "id": "Trork_Guard",
+    "category": "Intelligent/Faction/Trork",
+    "attitude": "neutral",
+    "reference": "Template_Trork_Ranger",
+    "maxHealth": 61,
+    "dropList": "Drop_Trork_Guard",
+    "appearance": "Trork_Guard"
+  },
+  "Trork_Hunter": {
+    "id": "Trork_Hunter",
+    "category": "Intelligent/Faction/Trork",
+    "attitude": "neutral",
+    "reference": "Template_Trork_Ranger",
+    "maxHealth": 61,
+    "dropList": "Drop_Trork_Hunter",
+    "appearance": "Trork_Hunter"
+  },
+  "Trork_Mauler": {
+    "id": "Trork_Mauler",
+    "category": "Intelligent/Faction/Trork",
+    "attitude": "neutral",
+    "reference": "Template_Trork_Melee",
+    "maxHealth": 61,
+    "dropList": "Drop_Trork_Mauler",
+    "appearance": "Trork_Mauler"
+  },
+  "Trork_Sentry": {
+    "id": "Trork_Sentry",
+    "category": "Intelligent/Faction/Trork",
+    "attitude": "neutral",
+    "reference": "Template_Trork_Hybrid",
+    "maxHealth": 61,
+    "dropList": "Drop_Trork_Sentry",
+    "appearance": "Trork_Sentry"
+  },
+  "Trork_Sentry_Patrol": {
+    "id": "Trork_Sentry_Patrol",
+    "category": "Intelligent/Faction/Trork",
+    "attitude": "neutral",
+    "reference": "Template_Trork_Hybrid",
+    "maxHealth": 61,
+    "dropList": "Drop_Trork_Sentry",
+    "appearance": "Trork_Sentry"
+  },
+  "Trork_Shaman": {
+    "id": "Trork_Shaman",
+    "category": "Intelligent/Faction/Trork",
+    "attitude": "neutral",
+    "reference": "Template_Trork_Mage",
+    "maxHealth": 61,
+    "dropList": "Drop_Trork_Shaman",
+    "appearance": "Trork_Shaman"
+  },
+  "Trork_Unarmed": {
+    "id": "Trork_Unarmed",
+    "category": "Intelligent/Faction/Trork",
+    "attitude": "neutral",
+    "reference": "Template_Trork_Melee",
+    "maxHealth": 42,
+    "dropList": "Drop_Trork_Brawler",
+    "appearance": "Trork_Hunter"
+  },
+  "Trork_Warrior": {
+    "id": "Trork_Warrior",
+    "category": "Intelligent/Faction/Trork",
+    "attitude": "neutral",
+    "reference": "Template_Trork_Melee",
+    "maxHealth": 61,
+    "dropList": "Drop_Trork_Warrior",
+    "appearance": "Trork_Warrior"
+  },
+  "Trork_Warrior_Patrol": {
+    "id": "Trork_Warrior_Patrol",
+    "category": "Intelligent/Faction/Trork",
+    "attitude": "neutral",
+    "reference": "Template_Trork_Melee",
+    "maxHealth": 61,
+    "dropList": "Drop_Trork_Warrior",
+    "appearance": "Trork_Warrior"
+  },
+  "Wolf_Trork_Hunter": {
+    "id": "Wolf_Trork_Hunter",
+    "category": "Intelligent/Faction/Trork",
+    "attitude": "neutral",
+    "reference": "Template_Trork_Companion",
+    "maxHealth": 38,
+    "dropList": "Drop_Wolf_Trork_Hunter",
+    "appearance": "Wolf_Trork_Hunter"
+  },
+  "Wolf_Trork_Shaman": {
+    "id": "Wolf_Trork_Shaman",
+    "category": "Intelligent/Faction/Trork",
+    "attitude": "neutral",
+    "reference": "Template_Trork_Companion",
+    "maxHealth": 118,
+    "dropList": "Drop_Wolf_Trork_Shaman",
+    "appearance": "Wolf_Trork_Shaman"
+  },
   "Tuluk_Fisherman": {
     "id": "Tuluk_Fisherman",
-    "category": "Intelligent/Neutral/Tuluk",
+    "category": "Intelligent/Faction/Tuluk",
     "attitude": "neutral",
     "reference": "Template_Placeholder",
     "maxHealth": null,
     "dropList": null,
     "appearance": "Tuluk_Fisherman"
   },
+  "Bramblekin": {
+    "id": "Bramblekin",
+    "category": "Intelligent/Other",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Bramblekin_Shaman": {
+    "id": "Bramblekin_Shaman",
+    "category": "Intelligent/Other",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Hedera": {
+    "id": "Hedera",
+    "category": "Intelligent/Other",
+    "attitude": "neutral",
+    "reference": "Template_Intelligent",
+    "maxHealth": 226,
+    "dropList": "Drop_Hedera",
+    "appearance": "Hedera"
+  },
   "Component_Instruction_Klops_Idle": {
     "id": "Component_Instruction_Klops_Idle",
-    "category": "Intelligent/Passive",
+    "category": "Intelligent/Other/Klops/Component",
     "attitude": "neutral",
     "reference": null,
     "maxHealth": null,
@@ -3266,7 +3876,7 @@
   },
   "Klops_Gentleman": {
     "id": "Klops_Gentleman",
-    "category": "Intelligent/Passive",
+    "category": "Intelligent/Other/Klops",
     "attitude": "neutral",
     "reference": "Template_Intelligent",
     "maxHealth": 74,
@@ -3275,7 +3885,7 @@
   },
   "Klops_Merchant": {
     "id": "Klops_Merchant",
-    "category": "Intelligent/Passive",
+    "category": "Intelligent/Other/Klops",
     "attitude": "neutral",
     "reference": null,
     "maxHealth": null,
@@ -3284,7 +3894,7 @@
   },
   "Klops_Merchant_Patrol": {
     "id": "Klops_Merchant_Patrol",
-    "category": "Intelligent/Passive",
+    "category": "Intelligent/Other/Klops",
     "attitude": "neutral",
     "reference": "Klops_Merchant",
     "maxHealth": null,
@@ -3293,7 +3903,7 @@
   },
   "Klops_Merchant_Wandering": {
     "id": "Klops_Merchant_Wandering",
-    "category": "Intelligent/Passive",
+    "category": "Intelligent/Other/Klops",
     "attitude": "neutral",
     "reference": null,
     "maxHealth": null,
@@ -3302,7 +3912,7 @@
   },
   "Klops_Miner": {
     "id": "Klops_Miner",
-    "category": "Intelligent/Passive",
+    "category": "Intelligent/Other/Klops",
     "attitude": "neutral",
     "reference": "Template_Intelligent",
     "maxHealth": 74,
@@ -3311,7 +3921,7 @@
   },
   "Klops_Miner_Patrol": {
     "id": "Klops_Miner_Patrol",
-    "category": "Intelligent/Passive",
+    "category": "Intelligent/Other/Klops",
     "attitude": "neutral",
     "reference": "Klops_Miner",
     "maxHealth": null,
@@ -3320,7 +3930,7 @@
   },
   "Quest_Master": {
     "id": "Quest_Master",
-    "category": "Intelligent/Passive",
+    "category": "Intelligent/Other",
     "attitude": "neutral",
     "reference": null,
     "maxHealth": null,
@@ -3329,7 +3939,88 @@
   },
   "Slothian": {
     "id": "Slothian",
-    "category": "Intelligent/Passive",
+    "category": "Intelligent/Other",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Goblin_Lab_Scrapper": {
+    "id": "Goblin_Lab_Scrapper",
+    "category": "Intelligent/Temple",
+    "attitude": "neutral",
+    "reference": "Template_Goblin_Lab_Scrapper",
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Goblin_Scientist": {
+    "id": "Goblin_Scientist",
+    "category": "Intelligent/Temple",
+    "attitude": "neutral",
+    "reference": "Template_Goblin_Scientist",
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Goblin_Lab_Scrapper": {
+    "id": "Template_Goblin_Lab_Scrapper",
+    "category": "Intelligent/Temple/Templates",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Goblin_Scientist": {
+    "id": "Template_Goblin_Scientist",
+    "category": "Intelligent/Temple/Templates",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Temple": {
+    "id": "Template_Temple",
+    "category": "Intelligent/Temple/Templates",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Temple_Goblin_Lab_Repair_Static": {
+    "id": "Template_Temple_Goblin_Lab_Repair_Static",
+    "category": "Intelligent/Temple/Templates",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Temple_Goblin_Scrapper": {
+    "id": "Template_Temple_Goblin_Scrapper",
+    "category": "Intelligent/Temple/Templates",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Temple_Kweebec_Guard": {
+    "id": "Template_Temple_Kweebec_Guard",
+    "category": "Intelligent/Temple/Templates",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Temple_Kweebec_Scared": {
+    "id": "Template_Temple_Kweebec_Scared",
+    "category": "Intelligent/Temple/Templates",
     "attitude": "neutral",
     "reference": null,
     "maxHealth": null,
@@ -3338,7 +4029,7 @@
   },
   "Temple_Bluebird": {
     "id": "Temple_Bluebird",
-    "category": "Intelligent/Passive/Temple",
+    "category": "Intelligent/Temple",
     "attitude": "neutral",
     "reference": "Template_Birds_Passive",
     "maxHealth": 18,
@@ -3347,7 +4038,7 @@
   },
   "Temple_Bunny": {
     "id": "Temple_Bunny",
-    "category": "Intelligent/Passive/Temple",
+    "category": "Intelligent/Temple",
     "attitude": "neutral",
     "reference": "Template_Temple",
     "maxHealth": null,
@@ -3356,7 +4047,7 @@
   },
   "Temple_Deer_Doe": {
     "id": "Temple_Deer_Doe",
-    "category": "Intelligent/Passive/Temple",
+    "category": "Intelligent/Temple",
     "attitude": "neutral",
     "reference": "Template_Temple",
     "maxHealth": null,
@@ -3365,7 +4056,7 @@
   },
   "Temple_Deer_Stag": {
     "id": "Temple_Deer_Stag",
-    "category": "Intelligent/Passive/Temple",
+    "category": "Intelligent/Temple",
     "attitude": "neutral",
     "reference": "Template_Temple",
     "maxHealth": null,
@@ -3374,7 +4065,7 @@
   },
   "Temple_Duck": {
     "id": "Temple_Duck",
-    "category": "Intelligent/Passive/Temple",
+    "category": "Intelligent/Temple",
     "attitude": "neutral",
     "reference": "Template_Birds_Passive",
     "maxHealth": 18,
@@ -3383,7 +4074,7 @@
   },
   "Temple_Feran": {
     "id": "Temple_Feran",
-    "category": "Intelligent/Passive/Temple",
+    "category": "Intelligent/Temple",
     "attitude": "neutral",
     "reference": "Template_Temple",
     "maxHealth": null,
@@ -3392,7 +4083,7 @@
   },
   "Temple_Feran_Longtooth": {
     "id": "Temple_Feran_Longtooth",
-    "category": "Intelligent/Passive/Temple",
+    "category": "Intelligent/Temple",
     "attitude": "neutral",
     "reference": "Template_Temple",
     "maxHealth": null,
@@ -3401,7 +4092,7 @@
   },
   "Temple_Finch_Green": {
     "id": "Temple_Finch_Green",
-    "category": "Intelligent/Passive/Temple",
+    "category": "Intelligent/Temple",
     "attitude": "neutral",
     "reference": "Template_Birds_Passive",
     "maxHealth": 13,
@@ -3410,7 +4101,7 @@
   },
   "Temple_Frog_Blue": {
     "id": "Temple_Frog_Blue",
-    "category": "Intelligent/Passive/Temple",
+    "category": "Intelligent/Temple",
     "attitude": "neutral",
     "reference": "Template_Temple",
     "maxHealth": null,
@@ -3419,7 +4110,7 @@
   },
   "Temple_Frog_Green": {
     "id": "Temple_Frog_Green",
-    "category": "Intelligent/Passive/Temple",
+    "category": "Intelligent/Temple",
     "attitude": "neutral",
     "reference": "Template_Temple",
     "maxHealth": null,
@@ -3428,16 +4119,43 @@
   },
   "Temple_Frog_Orange": {
     "id": "Temple_Frog_Orange",
-    "category": "Intelligent/Passive/Temple",
+    "category": "Intelligent/Temple",
     "attitude": "neutral",
     "reference": "Template_Temple",
     "maxHealth": null,
     "dropList": null,
     "appearance": "Frog_Orange"
   },
+  "Temple_Goblin_Lab_Repair_Static": {
+    "id": "Temple_Goblin_Lab_Repair_Static",
+    "category": "Intelligent/Temple",
+    "attitude": "neutral",
+    "reference": "Template_Temple_Goblin_Lab_Repair_Static",
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Temple_Goblin_Scrapper": {
+    "id": "Temple_Goblin_Scrapper",
+    "category": "Intelligent/Temple",
+    "attitude": "neutral",
+    "reference": "Template_Temple_Goblin_Scrapper",
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Temple_Goblin_Scrapper_Sleep_Static": {
+    "id": "Temple_Goblin_Scrapper_Sleep_Static",
+    "category": "Intelligent/Temple",
+    "attitude": "neutral",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
   "Temple_Klops": {
     "id": "Temple_Klops",
-    "category": "Intelligent/Passive/Temple",
+    "category": "Intelligent/Temple",
     "attitude": "neutral",
     "reference": "Template_Temple",
     "maxHealth": null,
@@ -3446,7 +4164,7 @@
   },
   "Temple_Klops_Merchant": {
     "id": "Temple_Klops_Merchant",
-    "category": "Intelligent/Passive/Temple",
+    "category": "Intelligent/Temple",
     "attitude": "neutral",
     "reference": "Klops_Merchant",
     "maxHealth": null,
@@ -3455,7 +4173,7 @@
   },
   "Temple_Kweebec": {
     "id": "Temple_Kweebec",
-    "category": "Intelligent/Passive/Temple",
+    "category": "Intelligent/Temple",
     "attitude": "neutral",
     "reference": "Template_Temple",
     "maxHealth": null,
@@ -3464,7 +4182,7 @@
   },
   "Temple_Kweebec_Elder": {
     "id": "Temple_Kweebec_Elder",
-    "category": "Intelligent/Passive/Temple",
+    "category": "Intelligent/Temple",
     "attitude": "neutral",
     "reference": "Template_Temple",
     "maxHealth": null,
@@ -3473,7 +4191,7 @@
   },
   "Temple_Kweebec_Merchant": {
     "id": "Temple_Kweebec_Merchant",
-    "category": "Intelligent/Passive/Temple",
+    "category": "Intelligent/Temple",
     "attitude": "neutral",
     "reference": "Kweebec_Merchant",
     "maxHealth": null,
@@ -3482,16 +4200,25 @@
   },
   "Temple_Kweebec_Razorleaf": {
     "id": "Temple_Kweebec_Razorleaf",
-    "category": "Intelligent/Passive/Temple",
+    "category": "Intelligent/Temple",
     "attitude": "neutral",
     "reference": "Template_Temple",
     "maxHealth": null,
     "dropList": null,
     "appearance": "Kweebec_Sapling_Razorleaf"
   },
+  "Temple_Kweebec_Razorleaf_Guard": {
+    "id": "Temple_Kweebec_Razorleaf_Guard",
+    "category": "Intelligent/Temple",
+    "attitude": "neutral",
+    "reference": "Template_Temple_Kweebec_Guard",
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
   "Temple_Kweebec_Razorleaf_Patrol": {
     "id": "Temple_Kweebec_Razorleaf_Patrol",
-    "category": "Intelligent/Passive/Temple",
+    "category": "Intelligent/Temple",
     "attitude": "neutral",
     "reference": "Template_Temple",
     "maxHealth": null,
@@ -3500,7 +4227,7 @@
   },
   "Temple_Kweebec_Razorleaf_Patrol1": {
     "id": "Temple_Kweebec_Razorleaf_Patrol1",
-    "category": "Intelligent/Passive/Temple",
+    "category": "Intelligent/Temple",
     "attitude": "neutral",
     "reference": "Temple_Kweebec_Razorleaf_Patrol",
     "maxHealth": null,
@@ -3509,7 +4236,7 @@
   },
   "Temple_Kweebec_Razorleaf_Patrol2": {
     "id": "Temple_Kweebec_Razorleaf_Patrol2",
-    "category": "Intelligent/Passive/Temple",
+    "category": "Intelligent/Temple",
     "attitude": "neutral",
     "reference": "Temple_Kweebec_Razorleaf_Patrol",
     "maxHealth": null,
@@ -3518,7 +4245,7 @@
   },
   "Temple_Kweebec_Razorleaf_Patrol3": {
     "id": "Temple_Kweebec_Razorleaf_Patrol3",
-    "category": "Intelligent/Passive/Temple",
+    "category": "Intelligent/Temple",
     "attitude": "neutral",
     "reference": "Temple_Kweebec_Razorleaf_Patrol",
     "maxHealth": null,
@@ -3527,7 +4254,7 @@
   },
   "Temple_Kweebec_Razorleaf_Patrol4": {
     "id": "Temple_Kweebec_Razorleaf_Patrol4",
-    "category": "Intelligent/Passive/Temple",
+    "category": "Intelligent/Temple",
     "attitude": "neutral",
     "reference": "Temple_Kweebec_Razorleaf_Patrol",
     "maxHealth": null,
@@ -3536,7 +4263,7 @@
   },
   "Temple_Kweebec_Razorleaf_Patrol5": {
     "id": "Temple_Kweebec_Razorleaf_Patrol5",
-    "category": "Intelligent/Passive/Temple",
+    "category": "Intelligent/Temple",
     "attitude": "neutral",
     "reference": "Temple_Kweebec_Razorleaf_Patrol",
     "maxHealth": null,
@@ -3545,16 +4272,25 @@
   },
   "Temple_Kweebec_Rootling_Static": {
     "id": "Temple_Kweebec_Rootling_Static",
-    "category": "Intelligent/Passive/Temple",
+    "category": "Intelligent/Temple",
     "attitude": "neutral",
     "reference": "Template_Temple",
     "maxHealth": null,
     "dropList": null,
     "appearance": "Kweebec_Rootling"
   },
+  "Temple_Kweebec_Scared": {
+    "id": "Temple_Kweebec_Scared",
+    "category": "Intelligent/Temple",
+    "attitude": "neutral",
+    "reference": "Template_Temple_Kweebec_Scared",
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
   "Temple_Kweebec_Seedling": {
     "id": "Temple_Kweebec_Seedling",
-    "category": "Intelligent/Passive/Temple",
+    "category": "Intelligent/Temple",
     "attitude": "neutral",
     "reference": "Template_Temple",
     "maxHealth": null,
@@ -3563,7 +4299,7 @@
   },
   "Temple_Kweebec_Seedling_Static": {
     "id": "Temple_Kweebec_Seedling_Static",
-    "category": "Intelligent/Passive/Temple",
+    "category": "Intelligent/Temple",
     "attitude": "neutral",
     "reference": "Template_Temple",
     "maxHealth": null,
@@ -3572,7 +4308,7 @@
   },
   "Temple_Kweebec_Static": {
     "id": "Temple_Kweebec_Static",
-    "category": "Intelligent/Passive/Temple",
+    "category": "Intelligent/Temple",
     "attitude": "neutral",
     "reference": "Template_Temple",
     "maxHealth": null,
@@ -3581,7 +4317,7 @@
   },
   "Temple_Mithril_Guard": {
     "id": "Temple_Mithril_Guard",
-    "category": "Intelligent/Passive/Temple",
+    "category": "Intelligent/Temple",
     "attitude": "neutral",
     "reference": "Template_Temple",
     "maxHealth": null,
@@ -3590,7 +4326,7 @@
   },
   "Temple_Owl_Brown": {
     "id": "Temple_Owl_Brown",
-    "category": "Intelligent/Passive/Temple",
+    "category": "Intelligent/Temple",
     "attitude": "neutral",
     "reference": "Template_Birds_Passive",
     "maxHealth": 29,
@@ -3599,7 +4335,7 @@
   },
   "Temple_Squirrel": {
     "id": "Temple_Squirrel",
-    "category": "Intelligent/Passive/Temple",
+    "category": "Intelligent/Temple",
     "attitude": "neutral",
     "reference": "Template_Temple",
     "maxHealth": null,
@@ -3701,7 +4437,7 @@
     "category": "Undead/Skeleton/Skeleton",
     "attitude": "hostile",
     "reference": "Template_Intelligent",
-    "maxHealth": 36,
+    "maxHealth": 60,
     "dropList": "Drop_Skeleton_Archer",
     "appearance": "Skeleton_Archer"
   },
@@ -3713,6 +4449,15 @@
     "maxHealth": null,
     "dropList": null,
     "appearance": null
+  },
+  "Skeleton_Archer_Turret": {
+    "id": "Skeleton_Archer_Turret",
+    "category": "Undead/Skeleton/Skeleton",
+    "attitude": "hostile",
+    "reference": "Template_Skeleton_Turret",
+    "maxHealth": 60,
+    "dropList": "Drop_Skeleton_Archer",
+    "appearance": "Skeleton_Archer"
   },
   "Skeleton_Archer_Wander": {
     "id": "Skeleton_Archer_Wander",
@@ -3750,12 +4495,30 @@
     "dropList": null,
     "appearance": null
   },
+  "Skeleton_Elite": {
+    "id": "Skeleton_Elite",
+    "category": "Undead/Skeleton/Skeleton",
+    "attitude": "hostile",
+    "reference": "Template_Intelligent",
+    "maxHealth": 350,
+    "dropList": null,
+    "appearance": "Skeleton_Elite"
+  },
+  "Skeleton_Elite_Phase_2": {
+    "id": "Skeleton_Elite_Phase_2",
+    "category": "Undead/Skeleton/Skeleton",
+    "attitude": "hostile",
+    "reference": "Template_Skeleton_Elite_Phase_2",
+    "maxHealth": 350,
+    "dropList": "Drop_Skeleton_Elite",
+    "appearance": "Skeleton_Elite"
+  },
   "Skeleton_Fighter": {
     "id": "Skeleton_Fighter",
     "category": "Undead/Skeleton/Skeleton",
     "attitude": "hostile",
     "reference": "Template_Intelligent",
-    "maxHealth": 36,
+    "maxHealth": 70,
     "dropList": "Drop_Skeleton_Fighter",
     "appearance": "Skeleton_Fighter"
   },
@@ -3782,7 +4545,7 @@
     "category": "Undead/Skeleton/Skeleton",
     "attitude": "hostile",
     "reference": "Template_Intelligent",
-    "maxHealth": 74,
+    "maxHealth": 130,
     "dropList": "Drop_Skeleton_Knight",
     "appearance": "Skeleton_Knight"
   },
@@ -3890,7 +4653,7 @@
     "category": "Undead/Skeleton/Skeleton",
     "attitude": "hostile",
     "reference": "Template_Intelligent",
-    "maxHealth": 61,
+    "maxHealth": 100,
     "dropList": "Drop_Skeleton_Soldier",
     "appearance": "Skeleton_Soldier"
   },
@@ -3916,10 +4679,10 @@
     "id": "Skeleton",
     "category": "Undead/Skeleton",
     "attitude": "hostile",
-    "reference": "Template_Intelligent",
-    "maxHealth": 92,
-    "dropList": "Drop_Skeleton",
-    "appearance": "Skeleton"
+    "reference": "Template_Skeleton",
+    "maxHealth": 70,
+    "dropList": null,
+    "appearance": null
   },
   "Skeleton_Burnt_Alchemist": {
     "id": "Skeleton_Burnt_Alchemist",
@@ -4776,6 +5539,33 @@
     "dropList": null,
     "appearance": null
   },
+  "Template_Skeleton": {
+    "id": "Template_Skeleton",
+    "category": "Undead/Skeleton/Templates",
+    "attitude": "hostile",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Skeleton_Elite_Phase_2": {
+    "id": "Template_Skeleton_Elite_Phase_2",
+    "category": "Undead/Skeleton/Templates",
+    "attitude": "hostile",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Skeleton_Turret": {
+    "id": "Template_Skeleton_Turret",
+    "category": "Undead/Skeleton/Templates",
+    "attitude": "hostile",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
   "Werewolf": {
     "id": "Werewolf",
     "category": "Undead",
@@ -4808,7 +5598,7 @@
     "category": "Undead/Zombie",
     "attitude": "hostile",
     "reference": "Template_Predator",
-    "maxHealth": 49,
+    "maxHealth": 90,
     "dropList": "Drop_Zombie",
     "appearance": "Zombie"
   },
@@ -4866,6 +5656,15 @@
     "dropList": "Drop_Zombie_Sand",
     "appearance": "Zombie_Sand"
   },
+  "Component_Instruction_Void_Anomaly_Death": {
+    "id": "Component_Instruction_Void_Anomaly_Death",
+    "category": "Void/Components",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
   "Component_Instruction_Void_Eye_Summon": {
     "id": "Component_Instruction_Void_Eye_Summon",
     "category": "Void/Components",
@@ -4880,7 +5679,25 @@
     "category": "Void",
     "attitude": "unknown",
     "reference": "Template_Predator",
-    "maxHealth": 74,
+    "maxHealth": 70,
+    "dropList": "Drop_Crawler_Void",
+    "appearance": "Crawler_Void"
+  },
+  "Crawler_Void_Anomaly": {
+    "id": "Crawler_Void_Anomaly",
+    "category": "Void",
+    "attitude": "unknown",
+    "reference": "Crawler_Void",
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Crawler_Void_Surge": {
+    "id": "Crawler_Void_Surge",
+    "category": "Void",
+    "attitude": "unknown",
+    "reference": "Template_Predator",
+    "maxHealth": 50,
     "dropList": "Drop_Crawler_Void",
     "appearance": "Crawler_Void"
   },
@@ -4889,7 +5706,16 @@
     "category": "Void",
     "attitude": "unknown",
     "reference": "Template_Flying_Aggressive",
-    "maxHealth": 60,
+    "maxHealth": 100,
+    "dropList": "Drop_Eye_Void",
+    "appearance": "Eye_Void"
+  },
+  "Eye_Void_Surge": {
+    "id": "Eye_Void_Surge",
+    "category": "Void",
+    "attitude": "unknown",
+    "reference": "Template_Flying_Aggressive",
+    "maxHealth": 100,
     "dropList": "Drop_Eye_Void",
     "appearance": "Eye_Void"
   },
@@ -4898,27 +5724,182 @@
     "category": "Void",
     "attitude": "unknown",
     "reference": "Template_Predator",
-    "maxHealth": 36,
-    "dropList": "Drop_Larva_Void",
+    "maxHealth": 15,
+    "dropList": "Empty",
     "appearance": "Larva_Void"
   },
-  "Spawn_Void": {
-    "id": "Spawn_Void",
+  "Larva_Void_Surge": {
+    "id": "Larva_Void_Surge",
     "category": "Void",
     "attitude": "unknown",
-    "reference": "Template_Intelligent",
-    "maxHealth": 193,
-    "dropList": "Drop_Spawn_Void",
-    "appearance": "Spawn_Void"
+    "reference": "Template_Predator",
+    "maxHealth": 15,
+    "dropList": "Empty",
+    "appearance": "Larva_Void"
   },
-  "Spectre_Void": {
-    "id": "Spectre_Void",
+  "Template_Void_Anomaly_Crystal": {
+    "id": "Template_Void_Anomaly_Crystal",
+    "category": "Void/Templates",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Void_Spawn_Entombed": {
+    "id": "Template_Void_Spawn_Entombed",
+    "category": "Void/Templates",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Void_Spectre": {
+    "id": "Template_Void_Spectre",
+    "category": "Void/Templates",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Void_Tentacle": {
+    "id": "Template_Void_Tentacle",
+    "category": "Void/Templates",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Void_Anomaly_Crystal_Keystone": {
+    "id": "Void_Anomaly_Crystal_Keystone",
+    "category": "Void",
+    "attitude": "unknown",
+    "reference": "Template_Void_Anomaly_Crystal",
+    "maxHealth": 25,
+    "dropList": "Drop_Void_Anomaly_Crystal_Keystone",
+    "appearance": "Void_Anomaly_Crystal_Small"
+  },
+  "Void_Anomaly_Crystal_Large": {
+    "id": "Void_Anomaly_Crystal_Large",
+    "category": "Void",
+    "attitude": "unknown",
+    "reference": "Template_Void_Anomaly_Crystal",
+    "maxHealth": 150,
+    "dropList": "Drop_Void_Anomaly_Crystal_Large",
+    "appearance": "Void_Anomaly_Crystal_Large"
+  },
+  "Void_Anomaly_Crystal_Medium": {
+    "id": "Void_Anomaly_Crystal_Medium",
+    "category": "Void",
+    "attitude": "unknown",
+    "reference": "Template_Void_Anomaly_Crystal",
+    "maxHealth": 75,
+    "dropList": "Drop_Void_Anomaly_Crystal_Medium",
+    "appearance": "Void_Anomaly_Crystal_Medium"
+  },
+  "Void_Anomaly_Crystal_Small": {
+    "id": "Void_Anomaly_Crystal_Small",
+    "category": "Void",
+    "attitude": "unknown",
+    "reference": "Template_Void_Anomaly_Crystal",
+    "maxHealth": 25,
+    "dropList": "Drop_Void_Anomaly_Crystal_Small",
+    "appearance": "Void_Anomaly_Crystal_Small"
+  },
+  "Void_Anomaly_Crystal_Stutter": {
+    "id": "Void_Anomaly_Crystal_Stutter",
     "category": "Void",
     "attitude": "unknown",
     "reference": null,
     "maxHealth": null,
     "dropList": null,
     "appearance": null
+  },
+  "Void_Spawn": {
+    "id": "Void_Spawn",
+    "category": "Void",
+    "attitude": "unknown",
+    "reference": "Void_Spawn_Surge",
+    "maxHealth": null,
+    "dropList": "Drop_Void_Spawn",
+    "appearance": null
+  },
+  "Void_Spawn_Entombed": {
+    "id": "Void_Spawn_Entombed",
+    "category": "Void",
+    "attitude": "unknown",
+    "reference": "Template_Void_Spawn_Entombed",
+    "maxHealth": null,
+    "dropList": "Drop_Void_Spawn_Entombed",
+    "appearance": null
+  },
+  "Void_Spawn_Entombed_Anomaly": {
+    "id": "Void_Spawn_Entombed_Anomaly",
+    "category": "Void",
+    "attitude": "unknown",
+    "reference": "Void_Spawn_Entombed",
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Void_Spawn_Surge": {
+    "id": "Void_Spawn_Surge",
+    "category": "Void",
+    "attitude": "unknown",
+    "reference": "Template_Void_Spawn_Entombed",
+    "maxHealth": 700,
+    "dropList": {
+      "Compute": "DropList"
+    },
+    "appearance": null
+  },
+  "Void_Spectre": {
+    "id": "Void_Spectre",
+    "category": "Void",
+    "attitude": "unknown",
+    "reference": "Template_Void_Spectre",
+    "maxHealth": null,
+    "dropList": "Drop_Void_Spectre",
+    "appearance": null
+  },
+  "Void_Spectre_Static": {
+    "id": "Void_Spectre_Static",
+    "category": "Void",
+    "attitude": "unknown",
+    "reference": "Template_Void_Spectre",
+    "maxHealth": 120,
+    "dropList": "Drop_Void_Spectre",
+    "appearance": null
+  },
+  "Void_Tentacle": {
+    "id": "Void_Tentacle",
+    "category": "Void",
+    "attitude": "unknown",
+    "reference": "Template_Void_Tentacle",
+    "maxHealth": 75,
+    "dropList": "Drop_Void_Tentacle",
+    "appearance": "Void_Tentacle"
+  },
+  "Void_Tentacle_Surge": {
+    "id": "Void_Tentacle_Surge",
+    "category": "Void",
+    "attitude": "unknown",
+    "reference": "Template_Bear_Voidtaken_Tentacle",
+    "maxHealth": 36,
+    "dropList": "Drop_Void_Tentacle",
+    "appearance": "Bear_Voidtaken_Tentacle"
+  },
+  "Void_Tentacle_Surge_Anomaly": {
+    "id": "Void_Tentacle_Surge_Anomaly",
+    "category": "Void",
+    "attitude": "unknown",
+    "reference": "Template_Bear_Voidtaken_Tentacle",
+    "maxHealth": 36,
+    "dropList": null,
+    "appearance": "Bear_Voidtaken_Tentacle"
   },
   "BlankTemplate": {
     "id": "BlankTemplate",
@@ -4941,24 +5922,6 @@
   "Component_ActionList_Wake": {
     "id": "Component_ActionList_Wake",
     "category": "_Core/Components/ActionLists",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Attack_Sequence_Cactee": {
-    "id": "Component_Instruction_Attack_Sequence_Cactee",
-    "category": "_Core/Components",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Cactee_Idle_Motion": {
-    "id": "Component_Instruction_Cactee_Idle_Motion",
-    "category": "_Core/Components",
     "attitude": "unknown",
     "reference": null,
     "maxHealth": null,
@@ -5019,9 +5982,54 @@
     "dropList": null,
     "appearance": null
   },
-  "Component_Path_Square": {
-    "id": "Component_Path_Square",
-    "category": "_Core/Components/Paths",
+  "Component_Instruction_Attack_Sequence_Temp": {
+    "id": "Component_Instruction_Attack_Sequence_Temp",
+    "category": "_Core/Components/Instructions/Combat",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Attack_Sequence_Temp_Ranged": {
+    "id": "Component_Instruction_Attack_Sequence_Temp_Ranged",
+    "category": "_Core/Components/Instructions/Combat",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Combat_Back_Off": {
+    "id": "Component_Instruction_Combat_Back_Off",
+    "category": "_Core/Components/Instructions/Combat",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Combat_Flock_Take_Turns": {
+    "id": "Component_Instruction_Combat_Flock_Take_Turns",
+    "category": "_Core/Components/Instructions/Combat",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Combat_Retreat": {
+    "id": "Component_Instruction_Combat_Retreat",
+    "category": "_Core/Components/Instructions/Combat",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Combat_Target_Swap": {
+    "id": "Component_Instruction_Combat_Target_Swap",
+    "category": "_Core/Components/Instructions/Combat",
     "attitude": "unknown",
     "reference": null,
     "maxHealth": null,
@@ -5030,16 +6038,106 @@
   },
   "Component_Instruction_Combat_Throw_NPC": {
     "id": "Component_Instruction_Combat_Throw_NPC",
-    "category": "_Core/Components/Selectors/Combat",
+    "category": "_Core/Components/Instructions/Combat",
     "attitude": "unknown",
     "reference": null,
     "maxHealth": null,
     "dropList": null,
     "appearance": null
   },
-  "Component_Instruction_Generic_Alerted": {
-    "id": "Component_Instruction_Generic_Alerted",
-    "category": "_Core/Components/Selectors",
+  "Component_Instruction_Hit_Interrupt": {
+    "id": "Component_Instruction_Hit_Interrupt",
+    "category": "_Core/Components/Instructions/Combat",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Intelligent_Chase": {
+    "id": "Component_Instruction_Intelligent_Chase",
+    "category": "_Core/Components/Instructions/Combat",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Intelligent_Switch_To_Ranged_Attack": {
+    "id": "Component_Instruction_Intelligent_Switch_To_Ranged_Attack",
+    "category": "_Core/Components/Instructions/Combat",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Ranged_When_Unreachable": {
+    "id": "Component_Instruction_Ranged_When_Unreachable",
+    "category": "_Core/Components/Instructions/Combat",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Simple_Combat_Action_Evaluator": {
+    "id": "Component_Instruction_Simple_Combat_Action_Evaluator",
+    "category": "_Core/Components/Instructions/Combat",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Target_Adjusted_Attack": {
+    "id": "Component_Instruction_Target_Adjusted_Attack",
+    "category": "_Core/Components/Instructions/Combat",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Target_Adjusted_Attack_Melee": {
+    "id": "Component_Instruction_Target_Adjusted_Attack_Melee",
+    "category": "_Core/Components/Instructions/Combat",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Attack_Sequence_Cactee": {
+    "id": "Component_Instruction_Attack_Sequence_Cactee",
+    "category": "_Core/Components/Instructions",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Cactee_Idle_Motion": {
+    "id": "Component_Instruction_Cactee_Idle_Motion",
+    "category": "_Core/Components/Instructions",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Allied_Damage_Check": {
+    "id": "Component_Instruction_Allied_Damage_Check",
+    "category": "_Core/Components/Instructions/Detection",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Damage_Check": {
+    "id": "Component_Instruction_Damage_Check",
+    "category": "_Core/Components/Instructions/Detection",
     "attitude": "unknown",
     "reference": null,
     "maxHealth": null,
@@ -5048,7 +6146,7 @@
   },
   "Component_Instruction_Generic_Alerted_With_Friendly": {
     "id": "Component_Instruction_Generic_Alerted_With_Friendly",
-    "category": "_Core/Components/Selectors",
+    "category": "_Core/Components/Instructions/Detection",
     "attitude": "unknown",
     "reference": null,
     "maxHealth": null,
@@ -5057,70 +6155,16 @@
   },
   "Component_Instruction_Generic_Detection": {
     "id": "Component_Instruction_Generic_Detection",
-    "category": "_Core/Components/Selectors",
+    "category": "_Core/Components/Instructions/Detection",
     "attitude": "unknown",
     "reference": null,
     "maxHealth": null,
     "dropList": null,
     "appearance": null
   },
-  "Component_Instruction_Generic_Greet": {
-    "id": "Component_Instruction_Generic_Greet",
-    "category": "_Core/Components/Selectors",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Generic_Idle": {
-    "id": "Component_Instruction_Generic_Idle",
-    "category": "_Core/Components/Selectors",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Generic_Multitarget_Flee": {
-    "id": "Component_Instruction_Generic_Multitarget_Flee",
-    "category": "_Core/Components/Selectors",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Generic_Panic": {
-    "id": "Component_Instruction_Generic_Panic",
-    "category": "_Core/Components/Selectors",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Generic_Return_Home": {
-    "id": "Component_Instruction_Generic_Return_Home",
-    "category": "_Core/Components/Selectors",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Generic_Search": {
-    "id": "Component_Instruction_Generic_Search",
-    "category": "_Core/Components/Selectors",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Intelligent_Idle": {
-    "id": "Component_Instruction_Intelligent_Idle",
-    "category": "_Core/Components/Selectors",
+  "Component_Instruction_Sight_Or_Sound_Check": {
+    "id": "Component_Instruction_Sight_Or_Sound_Check",
+    "category": "_Core/Components/Instructions/Detection",
     "attitude": "unknown",
     "reference": null,
     "maxHealth": null,
@@ -5129,7 +6173,7 @@
   },
   "Component_Instruction_Interaction_Complete_Task_Simple": {
     "id": "Component_Instruction_Interaction_Complete_Task_Simple",
-    "category": "_Core/Components/Selectors",
+    "category": "_Core/Components/Instructions/Interaction",
     "attitude": "unknown",
     "reference": null,
     "maxHealth": null,
@@ -5138,7 +6182,7 @@
   },
   "Component_Instruction_Interaction_Mount": {
     "id": "Component_Instruction_Interaction_Mount",
-    "category": "_Core/Components/Selectors",
+    "category": "_Core/Components/Instructions/Interaction",
     "attitude": "unknown",
     "reference": null,
     "maxHealth": null,
@@ -5147,7 +6191,7 @@
   },
   "Component_Instruction_Interaction_Reputation": {
     "id": "Component_Instruction_Interaction_Reputation",
-    "category": "_Core/Components/Selectors",
+    "category": "_Core/Components/Instructions/Interaction",
     "attitude": "unknown",
     "reference": null,
     "maxHealth": null,
@@ -5156,7 +6200,178 @@
   },
   "Component_Instruction_Interaction_Simple": {
     "id": "Component_Instruction_Interaction_Simple",
-    "category": "_Core/Components/Selectors",
+    "category": "_Core/Components/Instructions/Interaction",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Intelligent_Idle_Motion_Configurable_Leashed_Wander": {
+    "id": "Component_Instruction_Intelligent_Idle_Motion_Configurable_Leashed_Wander",
+    "category": "_Core/Components/Instructions/Motion",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Intelligent_Idle_Motion_Follow_Path": {
+    "id": "Component_Instruction_Intelligent_Idle_Motion_Follow_Path",
+    "category": "_Core/Components/Instructions/Motion",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Intelligent_Idle_Motion_Leashed_Wander": {
+    "id": "Component_Instruction_Intelligent_Idle_Motion_Leashed_Wander",
+    "category": "_Core/Components/Instructions/Motion",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Intelligent_Idle_Motion_Wander": {
+    "id": "Component_Instruction_Intelligent_Idle_Motion_Wander",
+    "category": "_Core/Components/Instructions/Motion",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Intelligent_Idle_Motion_Wander_Far": {
+    "id": "Component_Instruction_Intelligent_Idle_Motion_Wander_Far",
+    "category": "_Core/Components/Instructions/Motion",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Leash_To_Flock_Leader": {
+    "id": "Component_Instruction_Leash_To_Flock_Leader",
+    "category": "_Core/Components/Instructions/Motion",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Simple_Soft_Leash": {
+    "id": "Component_Instruction_Simple_Soft_Leash",
+    "category": "_Core/Components/Instructions/Motion",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Soft_Leash": {
+    "id": "Component_Instruction_Soft_Leash",
+    "category": "_Core/Components/Instructions/Motion",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Spread_Out": {
+    "id": "Component_Instruction_Spread_Out",
+    "category": "_Core/Components/Instructions/Motion",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Stationary_Idle": {
+    "id": "Component_Instruction_Stationary_Idle",
+    "category": "_Core/Components/Instructions/Motion",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Waking_Idle": {
+    "id": "Component_Instruction_Waking_Idle",
+    "category": "_Core/Components/Instructions/Motion",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Generic_Alerted": {
+    "id": "Component_Instruction_Generic_Alerted",
+    "category": "_Core/Components/Instructions/State",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Generic_Greet": {
+    "id": "Component_Instruction_Generic_Greet",
+    "category": "_Core/Components/Instructions/State",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Generic_Idle": {
+    "id": "Component_Instruction_Generic_Idle",
+    "category": "_Core/Components/Instructions/State",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Generic_Multitarget_Flee": {
+    "id": "Component_Instruction_Generic_Multitarget_Flee",
+    "category": "_Core/Components/Instructions/State",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Generic_Panic": {
+    "id": "Component_Instruction_Generic_Panic",
+    "category": "_Core/Components/Instructions/State",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Generic_Return_Home": {
+    "id": "Component_Instruction_Generic_Return_Home",
+    "category": "_Core/Components/Instructions/State",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Generic_Search": {
+    "id": "Component_Instruction_Generic_Search",
+    "category": "_Core/Components/Instructions/State",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Intelligent_Idle": {
+    "id": "Component_Instruction_Intelligent_Idle",
+    "category": "_Core/Components/Instructions/State",
     "attitude": "unknown",
     "reference": null,
     "maxHealth": null,
@@ -5165,7 +6380,7 @@
   },
   "Component_Instruction_Wild_Panic_Aggressive": {
     "id": "Component_Instruction_Wild_Panic_Aggressive",
-    "category": "_Core/Components/Selectors",
+    "category": "_Core/Components/Instructions/State",
     "attitude": "unknown",
     "reference": null,
     "maxHealth": null,
@@ -5174,7 +6389,7 @@
   },
   "Component_Instruction_Wild_Panic_Passive": {
     "id": "Component_Instruction_Wild_Panic_Passive",
-    "category": "_Core/Components/Selectors",
+    "category": "_Core/Components/Instructions/State",
     "attitude": "unknown",
     "reference": null,
     "maxHealth": null,
@@ -5183,7 +6398,70 @@
   },
   "Component_Instruction_Wild_Sleep_State": {
     "id": "Component_Instruction_Wild_Sleep_State",
-    "category": "_Core/Components/Selectors",
+    "category": "_Core/Components/Instructions/State",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Clear_Status_Animation": {
+    "id": "Component_Instruction_Clear_Status_Animation",
+    "category": "_Core/Components/Instructions/Util",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Graze": {
+    "id": "Component_Instruction_Graze",
+    "category": "_Core/Components/Instructions/Util",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Null": {
+    "id": "Component_Instruction_Null",
+    "category": "_Core/Components/Instructions/Util",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Play_Animation": {
+    "id": "Component_Instruction_Play_Animation",
+    "category": "_Core/Components/Instructions/Util",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_Play_Animation_In_State_For_Duration": {
+    "id": "Component_Instruction_Play_Animation_In_State_For_Duration",
+    "category": "_Core/Components/Instructions/Util",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Instruction_State_Timeout": {
+    "id": "Component_Instruction_State_Timeout",
+    "category": "_Core/Components/Instructions/Util",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Path_Square": {
+    "id": "Component_Path_Square",
+    "category": "_Core/Components/Path",
     "attitude": "unknown",
     "reference": null,
     "maxHealth": null,
@@ -5192,6 +6470,15 @@
   },
   "Component_Sensor_Day": {
     "id": "Component_Sensor_Day",
+    "category": "_Core/Components/Sensors",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Sensor_Hit_Interrupted": {
+    "id": "Component_Sensor_Hit_Interrupted",
     "category": "_Core/Components/Sensors",
     "attitude": "unknown",
     "reference": null,
@@ -5253,26 +6540,8 @@
     "dropList": null,
     "appearance": null
   },
-  "Component_Sensor_Sight": {
-    "id": "Component_Sensor_Sight",
-    "category": "_Core/Components/Sensors",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
   "Component_Sensor_Sight_By_Attitude": {
     "id": "Component_Sensor_Sight_By_Attitude",
-    "category": "_Core/Components/Sensors",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Sensor_Sight_Or_Sound_Combined": {
-    "id": "Component_Sensor_Sight_Or_Sound_Combined",
     "category": "_Core/Components/Sensors",
     "attitude": "unknown",
     "reference": null,
@@ -5325,6 +6594,33 @@
     "dropList": null,
     "appearance": null
   },
+  "Component_Sensor_Target_Sight": {
+    "id": "Component_Sensor_Target_Sight",
+    "category": "_Core/Components/Sensors",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Sensor_Target_Sight_Or_Sound": {
+    "id": "Component_Sensor_Target_Sight_Or_Sound",
+    "category": "_Core/Components/Sensors",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Component_Sensor_Target_Sound": {
+    "id": "Component_Sensor_Target_Sound",
+    "category": "_Core/Components/Sensors",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
   "Component_Sensor_Threatened": {
     "id": "Component_Sensor_Threatened",
     "category": "_Core/Components/Sensors",
@@ -5343,8 +6639,8 @@
     "dropList": null,
     "appearance": null
   },
-  "Test_Is_Indoors_Component": {
-    "id": "Test_Is_Indoors_Component",
+  "Component_Sensor_Unreachable_Target": {
+    "id": "Component_Sensor_Unreachable_Target",
     "category": "_Core/Components/Sensors",
     "attitude": "unknown",
     "reference": null,
@@ -5352,279 +6648,9 @@
     "dropList": null,
     "appearance": null
   },
-  "Component_Instruction_Allied_Damage_Check": {
-    "id": "Component_Instruction_Allied_Damage_Check",
-    "category": "_Core/Components/Steps",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Attack_Sequence_Temp": {
-    "id": "Component_Instruction_Attack_Sequence_Temp",
-    "category": "_Core/Components/Steps",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Attack_Sequence_Temp_Ranged": {
-    "id": "Component_Instruction_Attack_Sequence_Temp_Ranged",
-    "category": "_Core/Components/Steps",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Clear_Status_Animation": {
-    "id": "Component_Instruction_Clear_Status_Animation",
-    "category": "_Core/Components/Steps",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Combat_Back_Off": {
-    "id": "Component_Instruction_Combat_Back_Off",
-    "category": "_Core/Components/Steps",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Combat_Flock_Take_Turns": {
-    "id": "Component_Instruction_Combat_Flock_Take_Turns",
-    "category": "_Core/Components/Steps",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Combat_Retreat": {
-    "id": "Component_Instruction_Combat_Retreat",
-    "category": "_Core/Components/Steps",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Combat_Target_Swap": {
-    "id": "Component_Instruction_Combat_Target_Swap",
-    "category": "_Core/Components/Steps",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Damage_Check": {
-    "id": "Component_Instruction_Damage_Check",
-    "category": "_Core/Components/Steps",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Graze": {
-    "id": "Component_Instruction_Graze",
-    "category": "_Core/Components/Steps",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Intelligent_Chase": {
-    "id": "Component_Instruction_Intelligent_Chase",
-    "category": "_Core/Components/Steps",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Intelligent_Idle_Motion_Configurable_Leashed_Wander": {
-    "id": "Component_Instruction_Intelligent_Idle_Motion_Configurable_Leashed_Wander",
-    "category": "_Core/Components/Steps",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Intelligent_Idle_Motion_Follow_Path": {
-    "id": "Component_Instruction_Intelligent_Idle_Motion_Follow_Path",
-    "category": "_Core/Components/Steps",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Intelligent_Idle_Motion_Leashed_Wander": {
-    "id": "Component_Instruction_Intelligent_Idle_Motion_Leashed_Wander",
-    "category": "_Core/Components/Steps",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Intelligent_Idle_Motion_Wander": {
-    "id": "Component_Instruction_Intelligent_Idle_Motion_Wander",
-    "category": "_Core/Components/Steps",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Intelligent_Idle_Motion_Wander_Far": {
-    "id": "Component_Instruction_Intelligent_Idle_Motion_Wander_Far",
-    "category": "_Core/Components/Steps",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Intelligent_Switch_To_Ranged_Attack": {
-    "id": "Component_Instruction_Intelligent_Switch_To_Ranged_Attack",
-    "category": "_Core/Components/Steps",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Leash_To_Flock_Leader": {
-    "id": "Component_Instruction_Leash_To_Flock_Leader",
-    "category": "_Core/Components/Steps",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Null": {
-    "id": "Component_Instruction_Null",
-    "category": "_Core/Components/Steps",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Play_Animation": {
-    "id": "Component_Instruction_Play_Animation",
-    "category": "_Core/Components/Steps",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Play_Animation_In_State_For_Duration": {
-    "id": "Component_Instruction_Play_Animation_In_State_For_Duration",
-    "category": "_Core/Components/Steps",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Sight_Or_Sound_Check": {
-    "id": "Component_Instruction_Sight_Or_Sound_Check",
-    "category": "_Core/Components/Steps",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Simple_Combat_Action_Evaluator": {
-    "id": "Component_Instruction_Simple_Combat_Action_Evaluator",
-    "category": "_Core/Components/Steps",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Simple_Soft_Leash": {
-    "id": "Component_Instruction_Simple_Soft_Leash",
-    "category": "_Core/Components/Steps",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Soft_Leash": {
-    "id": "Component_Instruction_Soft_Leash",
-    "category": "_Core/Components/Steps",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Spread_Out": {
-    "id": "Component_Instruction_Spread_Out",
-    "category": "_Core/Components/Steps",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_State_Timeout": {
-    "id": "Component_Instruction_State_Timeout",
-    "category": "_Core/Components/Steps",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Stationary_Idle": {
-    "id": "Component_Instruction_Stationary_Idle",
-    "category": "_Core/Components/Steps",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Target_Adjusted_Attack": {
-    "id": "Component_Instruction_Target_Adjusted_Attack",
-    "category": "_Core/Components/Steps",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Target_Adjusted_Attack_Melee": {
-    "id": "Component_Instruction_Target_Adjusted_Attack_Melee",
-    "category": "_Core/Components/Steps",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Component_Instruction_Waking_Idle": {
-    "id": "Component_Instruction_Waking_Idle",
-    "category": "_Core/Components/Steps",
+  "Test_Is_Indoors_Component": {
+    "id": "Test_Is_Indoors_Component",
+    "category": "_Core/Components/Sensors",
     "attitude": "unknown",
     "reference": null,
     "maxHealth": null,
@@ -5703,6 +6729,15 @@
     "dropList": null,
     "appearance": null
   },
+  "Template_Boss_Proto": {
+    "id": "Template_Boss_Proto",
+    "category": "_Core/Templates",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
   "Template_Edible_Critter": {
     "id": "Template_Edible_Critter",
     "category": "_Core/Templates",
@@ -5768,15 +6803,6 @@
   },
   "Template_Swimming_Passive": {
     "id": "Template_Swimming_Passive",
-    "category": "_Core/Templates",
-    "attitude": "unknown",
-    "reference": null,
-    "maxHealth": null,
-    "dropList": null,
-    "appearance": null
-  },
-  "Template_Temple": {
-    "id": "Template_Temple",
     "category": "_Core/Templates",
     "attitude": "unknown",
     "reference": null,
@@ -6056,6 +7082,15 @@
   },
   "Test_Attack_Bow": {
     "id": "Test_Attack_Bow",
+    "category": "_Core/Tests/Combat",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Attack_Bow_No_Deflection": {
+    "id": "Test_Attack_Bow_No_Deflection",
     "category": "_Core/Tests/Combat",
     "attitude": "unknown",
     "reference": null,
@@ -6729,6 +7764,33 @@
     "dropList": null,
     "appearance": null
   },
+  "Test_Crawler_Stationary": {
+    "id": "Test_Crawler_Stationary",
+    "category": "_Core/Tests/Integration",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Dive_Stationary": {
+    "id": "Test_Dive_Stationary",
+    "category": "_Core/Tests/Integration",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Dragon_Stationary": {
+    "id": "Test_Dragon_Stationary",
+    "category": "_Core/Tests/Integration",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
   "Test_Dummy": {
     "id": "Test_Dummy",
     "category": "_Core/Tests/Integration",
@@ -6747,8 +7809,44 @@
     "dropList": null,
     "appearance": null
   },
+  "Test_Dummy_Guarding": {
+    "id": "Test_Dummy_Guarding",
+    "category": "_Core/Tests/Integration",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Dummy_Guarding_Stationary": {
+    "id": "Test_Dummy_Guarding_Stationary",
+    "category": "_Core/Tests/Integration",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Dummy_Knockback": {
+    "id": "Test_Dummy_Knockback",
+    "category": "_Core/Tests/Integration",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
   "Test_Dummy_Stationary": {
     "id": "Test_Dummy_Stationary",
+    "category": "_Core/Tests/Integration",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Scarak_Broodmother_Young_Stationary": {
+    "id": "Test_Scarak_Broodmother_Young_Stationary",
     "category": "_Core/Tests/Integration",
     "attitude": "unknown",
     "reference": null,
@@ -8306,6 +9404,24 @@
     "dropList": null,
     "appearance": null
   },
+  "Template_Motion_Charge_Accel": {
+    "id": "Template_Motion_Charge_Accel",
+    "category": "_Core/Tests_Development",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Template_Motion_Charge_Pos": {
+    "id": "Template_Motion_Charge_Pos",
+    "category": "_Core/Tests_Development",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
   "Test_Action_Random": {
     "id": "Test_Action_Random",
     "category": "_Core/Tests_Development",
@@ -8738,8 +9854,71 @@
     "dropList": null,
     "appearance": null
   },
-  "Test_Motion_Charge_Debug": {
-    "id": "Test_Motion_Charge_Debug",
+  "Test_Motion_Charge_Accel_Distance": {
+    "id": "Test_Motion_Charge_Accel_Distance",
+    "category": "_Core/Tests_Development",
+    "attitude": "unknown",
+    "reference": "Template_Motion_Charge_Accel",
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Motion_Charge_Accel_Ease": {
+    "id": "Test_Motion_Charge_Accel_Ease",
+    "category": "_Core/Tests_Development",
+    "attitude": "unknown",
+    "reference": "Template_Motion_Charge_Accel",
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Motion_Charge_Accel_Fast": {
+    "id": "Test_Motion_Charge_Accel_Fast",
+    "category": "_Core/Tests_Development",
+    "attitude": "unknown",
+    "reference": "Template_Motion_Charge_Accel",
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Motion_Charge_Accel_Mixed": {
+    "id": "Test_Motion_Charge_Accel_Mixed",
+    "category": "_Core/Tests_Development",
+    "attitude": "unknown",
+    "reference": "Template_Motion_Charge_Accel",
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Motion_Charge_Accel_Slow": {
+    "id": "Test_Motion_Charge_Accel_Slow",
+    "category": "_Core/Tests_Development",
+    "attitude": "unknown",
+    "reference": "Template_Motion_Charge_Accel",
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Motion_Charge_Accel_Velocity": {
+    "id": "Test_Motion_Charge_Accel_Velocity",
+    "category": "_Core/Tests_Development",
+    "attitude": "unknown",
+    "reference": "Template_Motion_Charge_Accel",
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Motion_Charge_Decel_Zero": {
+    "id": "Test_Motion_Charge_Decel_Zero",
+    "category": "_Core/Tests_Development",
+    "attitude": "unknown",
+    "reference": "Template_Motion_Charge_Accel",
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Motion_Charge_Path": {
+    "id": "Test_Motion_Charge_Path",
     "category": "_Core/Tests_Development",
     "attitude": "unknown",
     "reference": null,
@@ -8747,8 +9926,80 @@
     "dropList": null,
     "appearance": null
   },
-  "Test_Motion_Charge_Path": {
-    "id": "Test_Motion_Charge_Path",
+  "Test_Motion_Charge_Pos-1": {
+    "id": "Test_Motion_Charge_Pos-1",
+    "category": "_Core/Tests_Development",
+    "attitude": "unknown",
+    "reference": "Template_Motion_Charge_Pos",
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Motion_Charge_Pos_1": {
+    "id": "Test_Motion_Charge_Pos_1",
+    "category": "_Core/Tests_Development",
+    "attitude": "unknown",
+    "reference": "Template_Motion_Charge_Pos",
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Motion_Charge_Pos_At": {
+    "id": "Test_Motion_Charge_Pos_At",
+    "category": "_Core/Tests_Development",
+    "attitude": "unknown",
+    "reference": "Template_Motion_Charge_Pos",
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Motion_Charge_Pos_Max": {
+    "id": "Test_Motion_Charge_Pos_Max",
+    "category": "_Core/Tests_Development",
+    "attitude": "unknown",
+    "reference": "Template_Motion_Charge_Pos",
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Motion_Charge_Pos_Mid": {
+    "id": "Test_Motion_Charge_Pos_Mid",
+    "category": "_Core/Tests_Development",
+    "attitude": "unknown",
+    "reference": "Template_Motion_Charge_Pos",
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Motion_Charge_Pos_Min-1": {
+    "id": "Test_Motion_Charge_Pos_Min-1",
+    "category": "_Core/Tests_Development",
+    "attitude": "unknown",
+    "reference": "Template_Motion_Charge_Pos",
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Motion_Charge_Pos_Min": {
+    "id": "Test_Motion_Charge_Pos_Min",
+    "category": "_Core/Tests_Development",
+    "attitude": "unknown",
+    "reference": "Template_Motion_Charge_Pos",
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Motion_Charge_Pos_Stop_Range": {
+    "id": "Test_Motion_Charge_Pos_Stop_Range",
+    "category": "_Core/Tests_Development",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Motion_Charge_Pos_Wade": {
+    "id": "Test_Motion_Charge_Pos_Wade",
     "category": "_Core/Tests_Development",
     "attitude": "unknown",
     "reference": null,
@@ -8848,6 +10099,42 @@
   },
   "Test_Prioritiser_Provided_Filter": {
     "id": "Test_Prioritiser_Provided_Filter",
+    "category": "_Core/Tests_Development",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Properties_Change": {
+    "id": "Test_Properties_Change",
+    "category": "_Core/Tests_Development",
+    "attitude": "unknown",
+    "reference": "Test_Properties_Template",
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Properties_Default": {
+    "id": "Test_Properties_Default",
+    "category": "_Core/Tests_Development",
+    "attitude": "unknown",
+    "reference": "Test_Properties_Template",
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Properties_Empty": {
+    "id": "Test_Properties_Empty",
+    "category": "_Core/Tests_Development",
+    "attitude": "unknown",
+    "reference": "Test_Properties_Template",
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_Properties_Template": {
+    "id": "Test_Properties_Template",
     "category": "_Core/Tests_Development",
     "attitude": "unknown",
     "reference": null,
@@ -8992,6 +10279,51 @@
   },
   "Test_TorchHolder": {
     "id": "Test_TorchHolder",
+    "category": "_Core/Tests_Development",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_UI_Components_Hide_All": {
+    "id": "Test_UI_Components_Hide_All",
+    "category": "_Core/Tests_Development",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_UI_Components_Hide_CombatText": {
+    "id": "Test_UI_Components_Hide_CombatText",
+    "category": "_Core/Tests_Development",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_UI_Components_Hide_Empty": {
+    "id": "Test_UI_Components_Hide_Empty",
+    "category": "_Core/Tests_Development",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_UI_Components_Hide_Healthbar": {
+    "id": "Test_UI_Components_Hide_Healthbar",
+    "category": "_Core/Tests_Development",
+    "attitude": "unknown",
+    "reference": null,
+    "maxHealth": null,
+    "dropList": null,
+    "appearance": null
+  },
+  "Test_UI_Components_Hide_Nothing": {
+    "id": "Test_UI_Components_Hide_Nothing",
     "category": "_Core/Tests_Development",
     "attitude": "unknown",
     "reference": null,

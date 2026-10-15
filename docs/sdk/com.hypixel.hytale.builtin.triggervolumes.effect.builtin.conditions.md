@@ -99,6 +99,7 @@ public class com.hypixel.hytale.builtin.triggervolumes.effect.builtin.conditions
   public static com.hypixel.hytale.builtin.triggervolumes.effect.builtin.conditions.TagCondition forSelf(com.hypixel.hytale.builtin.triggervolumes.effect.TriggerEventType, java.lang.String, java.lang.String);
   public static com.hypixel.hytale.builtin.triggervolumes.effect.builtin.conditions.TagCondition forGroup(com.hypixel.hytale.builtin.triggervolumes.effect.TriggerEventType, java.lang.String, java.lang.String, int);
   public com.hypixel.hytale.builtin.triggervolumes.effect.builtin.conditions.TagCondition$Source getSource();
+  public com.hypixel.hytale.builtin.triggervolumes.effect.builtin.conditions.TagCondition$CompareAgainst getCompareAgainst();
   public void setComparison(com.hypixel.hytale.builtin.triggervolumes.effect.builtin.conditions.PlayerCountCondition$Comparison);
   public boolean test(com.hypixel.hytale.builtin.triggervolumes.effect.TriggerContext);
 }

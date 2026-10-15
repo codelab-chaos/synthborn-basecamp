@@ -13,7 +13,7 @@ public class com.hypixel.hytale.builtin.hytalegenerator.scanners.deprecated.Area
   public com.hypixel.hytale.builtin.hytalegenerator.scanners.deprecated.AreaScanner(int, com.hypixel.hytale.builtin.hytalegenerator.scanners.deprecated.AreaScanner$ScanShape, int, com.hypixel.hytale.builtin.hytalegenerator.scanners.Scanner);
   public void scan(com.hypixel.hytale.builtin.hytalegenerator.scanners.Scanner$Context);
   public void scan(org.joml.Vector3i, com.hypixel.hytale.builtin.hytalegenerator.pipe.Pipe$One<org.joml.Vector3i>);
-  public com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i getBounds_voxelGrid();
+  public com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i getScanBounds_voxelGrid();
 }
 ```
 
@@ -24,7 +24,7 @@ public class com.hypixel.hytale.builtin.hytalegenerator.scanners.deprecated.Colu
   public com.hypixel.hytale.builtin.hytalegenerator.scanners.deprecated.ColumnLinearScanner(int, int, int, boolean, boolean, double);
   public void scan(com.hypixel.hytale.builtin.hytalegenerator.scanners.Scanner$Context);
   public void scan(org.joml.Vector3i, com.hypixel.hytale.builtin.hytalegenerator.pipe.Pipe$One<org.joml.Vector3i>);
-  public com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i getBounds_voxelGrid();
+  public com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i getScanBounds_voxelGrid();
 }
 ```
 
@@ -36,6 +36,6 @@ public class com.hypixel.hytale.builtin.hytalegenerator.scanners.deprecated.Colu
   public void scan(com.hypixel.hytale.builtin.hytalegenerator.scanners.Scanner$Context);
   public void scan(org.joml.Vector3i, com.hypixel.hytale.builtin.hytalegenerator.pipe.Pipe$One<org.joml.Vector3i>);
   public void scanDartThrow(com.hypixel.hytale.builtin.hytalegenerator.scanners.Scanner$Context);
-  public com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i getBounds_voxelGrid();
+  public com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i getScanBounds_voxelGrid();
 }
 ```

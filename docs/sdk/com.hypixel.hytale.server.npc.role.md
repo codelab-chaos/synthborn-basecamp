@@ -66,6 +66,7 @@ public class com.hypixel.hytale.server.npc.role.Role implements com.hypixel.hyta
   protected final boolean corpseStaysInFlock;
   protected final double inertia;
   protected final double knockbackScale;
+  protected final boolean useFixedKnockback;
   protected final boolean breathesInAir;
   protected final boolean breathesInWater;
   protected final boolean pickupDropOnDeath;
@@ -78,6 +79,7 @@ public class com.hypixel.hytale.server.npc.role.Role implements com.hypixel.hyta
   protected final java.lang.String dropListId;
   protected final java.lang.String deathInteraction;
   protected final boolean invulnerable;
+  protected final boolean ignoreDisableNPCIncomingDamage;
   protected final int inventorySlots;
   protected final java.lang.String inventoryContentsDropList;
   protected final int hotbarSlots;
@@ -105,6 +107,8 @@ public class com.hypixel.hytale.server.npc.role.Role implements com.hypixel.hyta
   protected final boolean isMemory;
   protected final java.lang.String memoriesNameOverride;
   protected final boolean isMemoriesNameOverriden;
+  protected final com.hypixel.hytale.server.npc.role.Role$MemoriesUnlockMethod memoriesUnlockedBy;
+  protected final double memoriesKillRange;
   protected final float spawnLockTime;
   protected final java.lang.String nameTranslationKey;
   protected boolean backingAway;
@@ -128,6 +132,8 @@ public class com.hypixel.hytale.server.npc.role.Role implements com.hypixel.hyta
   public java.lang.String getMemoriesNameOverride();
   public java.lang.String getNameTranslationKey();
   public boolean isMemoriesNameOverriden();
+  public com.hypixel.hytale.server.npc.role.Role$MemoriesUnlockMethod getMemoriesUnlockedBy();
+  public double getMemoriesKillRange();
   public float getSpawnLockTime();
   public void postRoleBuilt(com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.npc.asset.builder.BuilderSupport);
   public com.hypixel.hytale.server.npc.instructions.ExecutionSupport acquireExecutionSupport(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
@@ -158,6 +164,7 @@ public class com.hypixel.hytale.server.npc.role.Role implements com.hypixel.hyta
   public int getRoleIndex();
   public void setRoleIndex(com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, int, java.lang.String);
   public boolean isInvulnerable();
+  public boolean isIgnoreDisableNPCIncomingDamage();
   public boolean isBreathesInAir();
   public boolean isBreathesInWater();
   public double getInertia();
@@ -165,10 +172,9 @@ public class com.hypixel.hytale.server.npc.role.Role implements com.hypixel.hyta
   public boolean canBreathe(com.hypixel.hytale.protocol.BlockMaterial, int);
   public boolean couldBreathe(com.hypixel.hytale.protocol.BlockMaterial, int);
   public boolean couldBreatheCached(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
-  public void addVelocity(org.joml.Vector3d, com.hypixel.hytale.server.core.modules.splitvelocity.VelocityConfig);
   public void setVelocity(org.joml.Vector3d, com.hypixel.hytale.server.core.modules.splitvelocity.VelocityConfig, boolean);
-  public void processAddVelocityInstruction(org.joml.Vector3d, com.hypixel.hytale.server.core.modules.splitvelocity.VelocityConfig);
-  public void processSetVelocityInstruction(org.joml.Vector3d, com.hypixel.hytale.server.core.modules.splitvelocity.VelocityConfig);
+  public void processAddVelocityInstruction(org.joml.Vector3d, com.hypixel.hytale.server.core.modules.splitvelocity.VelocityConfig, float);
+  public void processSetVelocityInstruction(org.joml.Vector3d, com.hypixel.hytale.server.core.modules.splitvelocity.VelocityConfig, float);
   public boolean isOnGround();
   public void setArmor(com.hypixel.hytale.server.npc.entities.NPCEntity, java.lang.String[]);
   public boolean isPickupDropOnDeath();

@@ -53,6 +53,7 @@ public class com.hypixel.hytale.builtin.hytalegenerator.assets.graph.contentpred
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.builtin.hytalegenerator.assets.graph.contentpredicates.ImportedContentPredicateAsset> CODEC;
   public com.hypixel.hytale.builtin.hytalegenerator.assets.graph.contentpredicates.ImportedContentPredicateAsset();
   public java.util.function.Predicate<it.unimi.dsi.fastutil.ints.IntSet> build();
+  public void cleanUp();
 }
 ```
 

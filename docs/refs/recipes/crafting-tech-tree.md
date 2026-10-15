@@ -1,6 +1,6 @@
 # Crafting Tech Tree
 
-> Generated 2026-09-07T17:13:42.891Z from `docs/refs/recipes/recipes.json`.
+> Generated 2026-10-14T19:43:53.295Z from `docs/refs/recipes/recipes.json`.
 
 This file is generated. Regenerate with:
 
@@ -12,7 +12,7 @@ The generator uses the asset-derived recipe index and prefers non-salvage crafti
 
 Required craft benches are included as dependency branches when the bench requirement maps to a craftable `Bench_*` item. Free fieldcraft recipes do not add bench branches.
 
-Targets: 1552
+Targets: 1608
 
 ## Aggregate Raw Or Unresolved Inputs
 
@@ -28,7 +28,7 @@ Targets: 1552
 - 15x Fuel(type)
 - 41x Ingredient_Bar_Bronze
 - 656x Ingredient_Bone_Fragment
-- 34x Ingredient_Charcoal
+- 79x Ingredient_Charcoal
 - 3x Ingredient_Chitin_Sturdy
 - 24x Ingredient_Crystal_Blue
 - 22x Ingredient_Crystal_Cyan
@@ -36,8 +36,11 @@ Targets: 1552
 - 22x Ingredient_Crystal_Pink
 - 24x Ingredient_Crystal_Purple
 - 27x Ingredient_Crystal_Red
+- 63x Ingredient_Crystal_Void
 - 22x Ingredient_Crystal_White
 - 28x Ingredient_Crystal_Yellow
+- 1x Ingredient_Deep_Resource
+- 5x Ingredient_Enkindled_Resource
 - 95x Ingredient_Fabric_Scrap_Cindercloth
 - 225x Ingredient_Fabric_Scrap_Cotton
 - 423x Ingredient_Fabric_Scrap_Linen
@@ -46,36 +49,39 @@ Targets: 1552
 - 280x Ingredient_Fabric_Scrap_Wool
 - 9x Ingredient_Feathers_Dark
 - 100x Ingredient_Feathers_Light
-- 285917x Ingredient_Fibre
+- 286538x Ingredient_Fibre
 - 50x Ingredient_Fire_Essence
 - 3x Ingredient_Hide_Dark
 - 177x Ingredient_Hide_Heavy
-- 1692x Ingredient_Hide_Light
+- 1644x Ingredient_Hide_Light
 - 92x Ingredient_Hide_Medium
 - 1x Ingredient_Hide_Prismic
 - 1x Ingredient_Hide_Scaled
 - 1x Ingredient_Hide_Soft
-- 64x Ingredient_Hide_Storm
+- 48x Ingredient_Hide_Storm
 - 83x Ingredient_Ice_Essence
-- 189200x Ingredient_Life_Essence
+- 190700x Ingredient_Life_Essence
 - 10200x Ingredient_Life_Essence_Concentrated
 - 110x Ingredient_Poop
-- 8x Ingredient_Powder_Boom
+- 22x Ingredient_Rune_Shard
 - 641x Ingredient_Sac_Venom
+- 1550x Ingredient_Scraps
+- 30x Ingredient_Spider_Silk
 - 71x Ingredient_Stick
 - 170x Ingredient_Tree_Sap
-- 455x Ingredient_Void_Essence
+- 465x Ingredient_Void_Essence
 - 6x Ingredient_Voidheart
+- 4x Ingredient_Voidtaken_Grizzly_Hide
 - 7x Meats(type)
 - 11x Milk_Bucket(type)
 - 8x Milk_Mosshorn_Bucket(type)
 - 100x Moss(type)
-- 6x Mushrooms(type)
-- 216x Ore_Adamantite
+- 18x Mushrooms(type)
+- 208x Ore_Adamantite
 - 190x Ore_Cobalt
-- 365x Ore_Copper
-- 330x Ore_Gold
-- 297x Ore_Iron
+- 376x Ore_Copper
+- 331x Ore_Gold
+- 362x Ore_Iron
 - 127x Ore_Mithril
 - 1x Ore_Onyxium
 - 1x Ore_Prisma
@@ -94,6 +100,7 @@ Targets: 1552
 - 1x Plant_Crop_Mana1
 - 2x Plant_Crop_Mana2
 - 3x Plant_Crop_Mana3
+- 66x Plant_Crop_Mushroom_Boomshroom_Small
 - 17x Plant_Crop_Mushroom_Common_Blue
 - 17x Plant_Crop_Mushroom_Flatcap_Blue
 - 150x Plant_Crop_Onion_Item
@@ -123,7 +130,7 @@ Targets: 1552
 - 7x Plant_Seeds_Pine
 - 10x Prototype_Rock_Concrete_Brick(type)
 - 12x Rock_Aqua_Brick(type)
-- 19x Rock_Aqua(type)
+- 21x Rock_Aqua(type)
 - 11x Rock_Basalt_Brick(type)
 - 17x Rock_Basalt(type)
 - 11x Rock_Calcite_Brick(type)
@@ -146,6 +153,7 @@ Targets: 1552
 - 6x Rock_Peach_Brick(type)
 - 7x Rock_Peach(type)
 - 11x Rock_Quartzite_Brick(type)
+- 20x Rock_Quartzite_Cobble
 - 50x Rock_Quartzite(type)
 - 4x Rock_Salt
 - 11x Rock_Sandstone_Brick(type)
@@ -160,11 +168,12 @@ Targets: 1552
 - 17x Rock_Slate(type)
 - 12x Rock_Stone_Brick(type)
 - 30x Rock_Stone_Cobble
+- 20x Rock_Stone_Cobble_Mossy
 - 2x Rock_Stone_Mossy(type)
 - 14x Rock_Stone(type)
 - 11x Rock_Volcanic_Brick(type)
 - 16x Rock_Volcanic(type)
-- 79670x Rock(type)
+- 80322x Rock(type)
 - 6x Rubble_Aqua
 - 6x Rubble_Basalt
 - 6x Rubble_Calcite
@@ -215,7 +224,7 @@ Targets: 1552
 - 2x Wood_Crystal(type)
 - 12x Wood_Darkwood_Trunk(type)
 - 35x Wood_Darkwood(type)
-- 9x Wood_Deadwood_Trunk(type)
+- 12x Wood_Deadwood_Trunk(type)
 - 9x Wood_Deadwood(type)
 - 2x Wood_Dry_Trunk
 - 22x Wood_Drywood_Goldenwood(type)
@@ -242,11 +251,12 @@ Targets: 1552
 - 2x Wood_Palm_Trunk
 - 2x Wood_Palo_Trunk
 - 2x Wood_Petrified_Trunk
-- 3x Wood_Planks(type)
+- 108x Wood_Planks(type)
 - 2x Wood_Poisoned(type)
 - 2x Wood_Redwood_Trunk
 - 6x Wood_Redwood_Trunk(type)
 - 27x Wood_Redwood(type)
+- 2x Wood_Sadwillow_Trunk
 - 2x Wood_Sallow_Trunk
 - 3x Wood_Softwood_Trunk(type)
 - 9x Wood_Softwood(type)
@@ -254,7 +264,7 @@ Targets: 1552
 - 2x Wood_Stormbark(type)
 - 6x Wood_Tropicalwood_Trunk(type)
 - 27x Wood_Tropicalwood(type)
-- 190347x Wood_Trunk(type)
+- 191245x Wood_Trunk(type)
 - 2x Wood_Windwillow(type)
 - 2x Wood_Wisteria_Wild(type)
 
@@ -15608,6 +15618,23 @@ Raw/unresolved inputs:
       - needs 3x Rock(type)
         - Rock(type) (raw/unknown)
 
+### Deco_SpiderWeb_Diagonal
+
+Raw/unresolved inputs:
+- 1x Ingredient_Fibre
+- 3x Rock(type)
+- 6x Wood_Trunk(type)
+
+- Deco_SpiderWeb_Diagonal (bench=StructuralCrafting[Builders])
+  - needs 1x Ingredient_Fibre
+    - Ingredient_Fibre (raw/unknown)
+  - requires bench 1x Bench_Builders
+    - Bench_Builders (bench=Crafting[Fieldcraft,Tools] or Crafting[Workbench,Workbench_Crafting])
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 3x Rock(type)
+        - Rock(type) (raw/unknown)
+
 ### Deco_Tankard
 
 Raw/unresolved inputs:
@@ -19515,6 +19542,93 @@ Raw/unresolved inputs:
       - needs 3x Rock(type)
         - Rock(type) (raw/unknown)
 
+### Furniture_Goblin_Bed
+
+Raw/unresolved inputs:
+- 30x Ingredient_Scraps
+- 5x Ingredient_Spider_Silk
+- 10x Wood_Planks(type)
+
+- Furniture_Goblin_Bed (bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration])
+  - needs 30x Ingredient_Scraps
+    - Ingredient_Scraps (raw/unknown)
+  - needs 10x Wood_Planks(type)
+    - Wood_Planks(type) (raw/unknown)
+  - needs 5x Ingredient_Spider_Silk
+    - Ingredient_Spider_Silk (raw/unknown)
+
+### Furniture_Goblin_Brazier
+
+Raw/unresolved inputs:
+- 5x Ingredient_Charcoal
+- 20x Ingredient_Scraps
+
+- Furniture_Goblin_Brazier (bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration])
+  - needs 20x Ingredient_Scraps
+    - Ingredient_Scraps (raw/unknown)
+  - needs 5x Ingredient_Charcoal
+    - Ingredient_Charcoal (raw/unknown)
+
+### Furniture_Goblin_Candle
+
+Raw/unresolved inputs:
+- 2x Ingredient_Charcoal
+- 5x Ingredient_Scraps
+
+- Furniture_Goblin_Candle (bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration])
+  - needs 5x Ingredient_Scraps
+    - Ingredient_Scraps (raw/unknown)
+  - needs 2x Ingredient_Charcoal
+    - Ingredient_Charcoal (raw/unknown)
+
+### Furniture_Goblin_ChestStolen_Small
+
+Raw/unresolved inputs:
+- 1x Ore_Gold
+- 25x Rock(type)
+- 3x Wood_Deadwood_Trunk(type)
+- 38x Wood_Trunk(type)
+
+- Furniture_Goblin_ChestStolen_Small (bench=Crafting[Furniture_Bench,Furniture_Storage])
+  - needs 3x Wood_Deadwood_Planks
+    - Wood_Deadwood_Planks (bench=StructuralCrafting[Builders,WoodPlanks])
+      - needs 1x Wood_Deadwood_Trunk(type)
+        - Wood_Deadwood_Trunk(type) (raw/unknown)
+      - requires bench 1x Bench_Builders
+        - Bench_Builders (bench=Crafting[Fieldcraft,Tools] or Crafting[Workbench,Workbench_Crafting])
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+  - needs 1x Ingredient_Bar_Gold
+    - Ingredient_Bar_Gold (bench=Processing[Furnace]; 10s)
+      - needs 1x Ore_Gold
+        - Ore_Gold (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Furniture
+    - Bench_Furniture (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 4x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
 ### Furniture_Goblin_Chest_Small
 
 Raw/unresolved inputs:
@@ -19562,6 +19676,155 @@ Raw/unresolved inputs:
             - Wood_Trunk(type) (raw/unknown)
           - needs 3x Rock(type)
             - Rock(type) (raw/unknown)
+
+### Furniture_Goblin_Door
+
+Raw/unresolved inputs:
+- 25x Ingredient_Scraps
+- 10x Wood_Planks(type)
+
+- Furniture_Goblin_Door (bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration])
+  - needs 25x Ingredient_Scraps
+    - Ingredient_Scraps (raw/unknown)
+  - needs 10x Wood_Planks(type)
+    - Wood_Planks(type) (raw/unknown)
+
+### Furniture_Goblin_Door_Medium
+
+Raw/unresolved inputs:
+- 50x Ingredient_Scraps
+- 5x Ore_Iron
+- 45x Rock(type)
+- 20x Wood_Planks(type)
+- 50x Wood_Trunk(type)
+
+- Furniture_Goblin_Door_Medium (bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration])
+  - needs 50x Ingredient_Scraps
+    - Ingredient_Scraps (raw/unknown)
+  - needs 20x Wood_Planks(type)
+    - Wood_Planks(type) (raw/unknown)
+  - needs 5x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Furniture_Goblin_Ladder
+
+Raw/unresolved inputs:
+- 5x Ingredient_Scraps
+- 1x Ore_Iron
+- 9x Rock(type)
+- 10x Wood_Trunk(type)
+
+- Furniture_Goblin_Ladder (bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration])
+  - needs 5x Ingredient_Scraps
+    - Ingredient_Scraps (raw/unknown)
+  - needs 1x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
+### Furniture_Goblin_Sign
+
+Raw/unresolved inputs:
+- 15x Ingredient_Scraps
+- 5x Wood_Planks(type)
+
+- Furniture_Goblin_Sign (bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration])
+  - needs 15x Ingredient_Scraps
+    - Ingredient_Scraps (raw/unknown)
+  - needs 5x Wood_Planks(type)
+    - Wood_Planks(type) (raw/unknown)
+
+### Furniture_Goblin_Statue_Graffiti
+
+Raw/unresolved inputs:
+- 50x Ingredient_Scraps
+- 20x Rock_Stone_Cobble_Mossy
+
+- Furniture_Goblin_Statue_Graffiti (bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration])
+  - needs 50x Ingredient_Scraps
+    - Ingredient_Scraps (raw/unknown)
+  - needs 20x Rock_Stone_Cobble_Mossy
+    - Rock_Stone_Cobble_Mossy (raw/unknown)
+
+### Furniture_Goblin_Stool
+
+Raw/unresolved inputs:
+- 5x Ingredient_Charcoal
+- 20x Ingredient_Scraps
+
+- Furniture_Goblin_Stool (bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration])
+  - needs 1x Furniture_Goblin_Brazier
+    - Furniture_Goblin_Brazier (bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration])
+      - needs 20x Ingredient_Scraps
+        - Ingredient_Scraps (raw/unknown)
+      - needs 5x Ingredient_Charcoal
+        - Ingredient_Charcoal (raw/unknown)
+
+### Furniture_Goblin_Table
+
+Raw/unresolved inputs:
+- 10x Ingredient_Scraps
+- 30x Wood_Planks(type)
+
+- Furniture_Goblin_Table (bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration])
+  - needs 30x Wood_Planks(type)
+    - Wood_Planks(type) (raw/unknown)
+  - needs 10x Ingredient_Scraps
+    - Ingredient_Scraps (raw/unknown)
+
+### Furniture_Goblin_Window
+
+Raw/unresolved inputs:
+- 15x Ingredient_Scraps
+- 3x Ore_Iron
+- 27x Rock(type)
+- 30x Wood_Trunk(type)
+
+- Furniture_Goblin_Window (bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration])
+  - needs 15x Ingredient_Scraps
+    - Ingredient_Scraps (raw/unknown)
+  - needs 3x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
 
 ### Furniture_Jungle_Bed
 
@@ -22060,6 +22323,18 @@ Raw/unresolved inputs:
       - needs 3x Rock(type)
         - Rock(type) (raw/unknown)
 
+### Furniture_Temple_Emerald_Statue_Head
+
+Raw/unresolved inputs:
+- 3x Ingredient_Enkindled_Resource
+- 20x Rock_Quartzite_Cobble
+
+- Furniture_Temple_Emerald_Statue_Head (bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration])
+  - needs 20x Rock_Quartzite_Cobble
+    - Rock_Quartzite_Cobble (raw/unknown)
+  - needs 3x Ingredient_Enkindled_Resource
+    - Ingredient_Enkindled_Resource (raw/unknown)
+
 ### Furniture_Temple_Emerald_Stool
 
 Raw/unresolved inputs:
@@ -23197,6 +23472,166 @@ Raw/unresolved inputs:
       - needs 3x Rock(type)
         - Rock(type) (raw/unknown)
 
+### Glider_Scrap
+
+Raw/unresolved inputs:
+- 12x Ingredient_Crystal_Void
+- 300x Ingredient_Scraps
+- 6x Ingredient_Spider_Silk
+- 2x Ingredient_Voidtaken_Grizzly_Hide
+
+- Glider_Scrap (bench=?[GoblinLab_Workbench,GoblinLab_Gadgets]; 1s)
+  - needs 150x Ingredient_Scraps
+    - Ingredient_Scraps (raw/unknown)
+  - needs 6x Ingredient_Gadget_Assembly
+    - Ingredient_Gadget_Assembly (bench=Crafting[GoblinLab_Workbench,GoblinLab_Gadgets]; 1s)
+      - needs 25x Ingredient_Scraps
+        - Ingredient_Scraps (raw/unknown)
+      - needs 2x Ingredient_Crystal_Void
+        - Ingredient_Crystal_Void (raw/unknown)
+  - needs 6x Ingredient_Spider_Silk
+    - Ingredient_Spider_Silk (raw/unknown)
+  - needs 2x Ingredient_Voidtaken_Grizzly_Hide
+    - Ingredient_Voidtaken_Grizzly_Hide (raw/unknown)
+
+### Goblin_Painting_Breach_Replica
+
+Raw/unresolved inputs:
+- 20x Ingredient_Scraps
+- 2x Mushrooms(type)
+- 10x Ore_Iron
+- 90x Rock(type)
+- 100x Wood_Trunk(type)
+
+- Goblin_Painting_Breach_Replica (bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration]; 1s; knowledge-required)
+  - needs 20x Ingredient_Scraps
+    - Ingredient_Scraps (raw/unknown)
+  - needs 10x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 2x Mushrooms(type)
+    - Mushrooms(type) (raw/unknown)
+
+### Goblin_Painting_Fail_Replica
+
+Raw/unresolved inputs:
+- 20x Ingredient_Scraps
+- 2x Mushrooms(type)
+- 10x Ore_Iron
+- 90x Rock(type)
+- 100x Wood_Trunk(type)
+
+- Goblin_Painting_Fail_Replica (bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration]; 1s; knowledge-required)
+  - needs 20x Ingredient_Scraps
+    - Ingredient_Scraps (raw/unknown)
+  - needs 10x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 2x Mushrooms(type)
+    - Mushrooms(type) (raw/unknown)
+
+### Goblin_Painting_ForgottenTemple_Replica
+
+Raw/unresolved inputs:
+- 20x Ingredient_Scraps
+- 2x Mushrooms(type)
+- 10x Wood_Planks(type)
+
+- Goblin_Painting_ForgottenTemple_Replica (bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration]; 1s; knowledge-required)
+  - needs 20x Ingredient_Scraps
+    - Ingredient_Scraps (raw/unknown)
+  - needs 10x Wood_Planks(type)
+    - Wood_Planks(type) (raw/unknown)
+  - needs 2x Mushrooms(type)
+    - Mushrooms(type) (raw/unknown)
+
+### Goblin_Painting_Orbis_Replica
+
+Raw/unresolved inputs:
+- 20x Ingredient_Scraps
+- 2x Mushrooms(type)
+- 10x Ore_Iron
+- 90x Rock(type)
+- 100x Wood_Trunk(type)
+
+- Goblin_Painting_Orbis_Replica (bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration]; 1s; knowledge-required)
+  - needs 20x Ingredient_Scraps
+    - Ingredient_Scraps (raw/unknown)
+  - needs 10x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 2x Mushrooms(type)
+    - Mushrooms(type) (raw/unknown)
+
+### Goblin_Painting_Portal_Replica
+
+Raw/unresolved inputs:
+- 20x Ingredient_Scraps
+- 2x Mushrooms(type)
+- 10x Wood_Planks(type)
+
+- Goblin_Painting_Portal_Replica (bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration]; 1s; knowledge-required)
+  - needs 20x Ingredient_Scraps
+    - Ingredient_Scraps (raw/unknown)
+  - needs 10x Wood_Planks(type)
+    - Wood_Planks(type) (raw/unknown)
+  - needs 2x Mushrooms(type)
+    - Mushrooms(type) (raw/unknown)
+
+### Goblin_Painting_Repair_Replica
+
+Raw/unresolved inputs:
+- 20x Ingredient_Scraps
+- 2x Mushrooms(type)
+- 10x Wood_Planks(type)
+
+- Goblin_Painting_Repair_Replica (bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration]; 1s; knowledge-required)
+  - needs 20x Ingredient_Scraps
+    - Ingredient_Scraps (raw/unknown)
+  - needs 10x Wood_Planks(type)
+    - Wood_Planks(type) (raw/unknown)
+  - needs 2x Mushrooms(type)
+    - Mushrooms(type) (raw/unknown)
+
 ### Halloween_Wagon
 
 Raw/unresolved inputs:
@@ -23744,6 +24179,18 @@ Raw/unresolved inputs:
           - needs 3x Rock(type)
             - Rock(type) (raw/unknown)
 
+### Ingredient_Gadget_Assembly
+
+Raw/unresolved inputs:
+- 2x Ingredient_Crystal_Void
+- 25x Ingredient_Scraps
+
+- Ingredient_Gadget_Assembly (bench=Crafting[GoblinLab_Workbench,GoblinLab_Gadgets]; 1s)
+  - needs 25x Ingredient_Scraps
+    - Ingredient_Scraps (raw/unknown)
+  - needs 2x Ingredient_Crystal_Void
+    - Ingredient_Crystal_Void (raw/unknown)
+
 ### Ingredient_Hay
 
 Raw/unresolved inputs:
@@ -24061,6 +24508,18 @@ Raw/unresolved inputs:
           - needs 3x Rock(type)
             - Rock(type) (raw/unknown)
 
+### Ingredient_Powder_Boom
+
+Raw/unresolved inputs:
+- 1x Ingredient_Charcoal
+- 2x Plant_Crop_Mushroom_Boomshroom_Small
+
+- Ingredient_Powder_Boom (bench=?[GoblinLab_Workbench,GoblinLab_Gadgets]; 1s)
+  - needs 2x Plant_Crop_Mushroom_Boomshroom_Small
+    - Plant_Crop_Mushroom_Boomshroom_Small (raw/unknown)
+  - needs 1x Ingredient_Charcoal
+    - Ingredient_Charcoal (raw/unknown)
+
 ### Ingredient_Salt
 
 Raw/unresolved inputs:
@@ -24269,6 +24728,37 @@ Raw/unresolved inputs:
             - Wood_Trunk(type) (raw/unknown)
           - needs 3x Rock(type)
             - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Builders
+    - Bench_Builders (bench=Crafting[Fieldcraft,Tools] or Crafting[Workbench,Workbench_Crafting])
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 3x Rock(type)
+        - Rock(type) (raw/unknown)
+
+### Metal_Orbis_Copper_Fence
+
+Raw/unresolved inputs:
+- 1x Ore_Copper
+- 12x Rock(type)
+- 16x Wood_Trunk(type)
+
+- Metal_Orbis_Copper_Fence (bench=StructuralCrafting[Builders,Wall])
+  - needs 1x Ingredient_Bar_Copper
+    - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+      - needs 1x Ore_Copper
+        - Ore_Copper (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
   - requires bench 1x Bench_Builders
     - Bench_Builders (bench=Crafting[Fieldcraft,Tools] or Crafting[Workbench,Workbench_Crafting])
       - needs 6x Wood_Trunk(type)
@@ -26401,6 +26891,58 @@ Raw/unresolved inputs:
 
 - Plant_Sapling_Redwood (bench=Crafting[Farmingbench,Saplings]; 0s)
   - needs 20x Ingredient_Life_Essence
+    - Ingredient_Life_Essence (recipe=Ingredient_Life_Essence_100; bench=Crafting[Farmingbench,Essence])
+      - needs 1x Ingredient_Life_Essence_Concentrated
+        - Ingredient_Life_Essence_Concentrated (bench=Crafting[Farmingbench,Essence])
+          - needs 100x Ingredient_Life_Essence
+            - Ingredient_Life_Essence (cycle)
+          - requires bench 1x Bench_Farming
+            - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 20x Ingredient_Fibre
+                - Ingredient_Fibre (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_Farming
+        - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 20x Ingredient_Fibre
+            - Ingredient_Fibre (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - requires bench 1x Bench_Farming
+    - Bench_Farming (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 20x Ingredient_Fibre
+        - Ingredient_Fibre (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
+
+### Plant_Sapling_Sadwillow
+
+Raw/unresolved inputs:
+- 620x Ingredient_Fibre
+- 1500x Ingredient_Life_Essence
+- 93x Rock(type)
+- 310x Wood_Trunk(type)
+
+- Plant_Sapling_Sadwillow (bench=Crafting[Farmingbench,Saplings]; 0s)
+  - needs 15x Ingredient_Life_Essence
     - Ingredient_Life_Essence (recipe=Ingredient_Life_Essence_100; bench=Crafting[Farmingbench,Essence])
       - needs 1x Ingredient_Life_Essence_Concentrated
         - Ingredient_Life_Essence_Concentrated (bench=Crafting[Farmingbench,Essence])
@@ -29750,6 +30292,37 @@ Raw/unresolved inputs:
           - needs 3x Rock(type)
             - Rock(type) (raw/unknown)
 
+### PortalKey_Goblin_Breach
+
+Raw/unresolved inputs:
+- 15x Ingredient_Scraps
+- 10x Ingredient_Void_Essence
+- 5x Ore_Iron
+- 45x Rock(type)
+- 50x Wood_Trunk(type)
+
+- PortalKey_Goblin_Breach (bench=Crafting[GoblinLab_Workbench,GoblinLab_Fragments]; 1s)
+  - needs 15x Ingredient_Scraps
+    - Ingredient_Scraps (raw/unknown)
+  - needs 10x Ingredient_Void_Essence
+    - Ingredient_Void_Essence (raw/unknown)
+  - needs 5x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
 ### PortalKey_Hederas_Lair
 
 Raw/unresolved inputs:
@@ -29867,6 +30440,21 @@ Raw/unresolved inputs:
             - Wood_Trunk(type) (raw/unknown)
           - needs 3x Rock(type)
             - Rock(type) (raw/unknown)
+
+### PortalKey_The_Deepworks
+
+Raw/unresolved inputs:
+- 5x Ingredient_Crystal_Void
+- 30x Ingredient_Scraps
+- 1x Ingredient_Voidheart
+
+- PortalKey_The_Deepworks (bench=Crafting[GoblinLab_Workbench,GoblinLab_Fragments]; 1s)
+  - needs 30x Ingredient_Scraps
+    - Ingredient_Scraps (raw/unknown)
+  - needs 5x Ingredient_Crystal_Void
+    - Ingredient_Crystal_Void (raw/unknown)
+  - needs 1x Ingredient_Voidheart
+    - Ingredient_Voidheart (raw/unknown)
 
 ### PortalKey_Windsurf_Valley
 
@@ -34326,6 +34914,42 @@ Raw/unresolved inputs:
       - needs 3x Rock(type)
         - Rock(type) (raw/unknown)
 
+### Rock_Crystal_Void_Block
+
+Raw/unresolved inputs:
+- 5x Ingredient_Crystal_Void
+
+- Rock_Crystal_Void_Block (bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration])
+  - needs 5x Ingredient_Crystal_Void
+    - Ingredient_Crystal_Void (raw/unknown)
+
+### Rock_Crystal_Void_Large
+
+Raw/unresolved inputs:
+- 3x Ingredient_Crystal_Void
+
+- Rock_Crystal_Void_Large (bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration])
+  - needs 3x Ingredient_Crystal_Void
+    - Ingredient_Crystal_Void (raw/unknown)
+
+### Rock_Crystal_Void_Medium
+
+Raw/unresolved inputs:
+- 2x Ingredient_Crystal_Void
+
+- Rock_Crystal_Void_Medium (bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration])
+  - needs 2x Ingredient_Crystal_Void
+    - Ingredient_Crystal_Void (raw/unknown)
+
+### Rock_Crystal_Void_Small
+
+Raw/unresolved inputs:
+- 1x Ingredient_Crystal_Void
+
+- Rock_Crystal_Void_Small (bench=Crafting[GoblinLab_Workbench,GoblinLab_Decoration])
+  - needs 1x Ingredient_Crystal_Void
+    - Ingredient_Crystal_Void (raw/unknown)
+
 ### Rock_Crystal_White_Block
 
 Raw/unresolved inputs:
@@ -34821,6 +35445,29 @@ Raw/unresolved inputs:
         - Wood_Trunk(type) (raw/unknown)
       - needs 3x Rock(type)
         - Rock(type) (raw/unknown)
+
+### Rock_Kenolite
+
+Raw/unresolved inputs:
+- 2x Rock_Aqua(type)
+- 9x Rock(type)
+- 10x Wood_Trunk(type)
+
+- Rock_Kenolite (bench=Processing[Furnace]; 0s)
+  - needs 2x Rock_Aqua(type)
+    - Rock_Aqua(type) (raw/unknown)
+  - requires bench 1x Bench_Furnace
+    - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 6x Rock(type)
+        - Rock(type) (raw/unknown)
+      - requires bench 1x Bench_WorkBench
+        - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+          - needs 4x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 3x Rock(type)
+            - Rock(type) (raw/unknown)
 
 ### Rock_Ledge_Brick
 
@@ -40418,6 +41065,203 @@ Raw/unresolved inputs:
       - needs 3x Rock(type)
         - Rock(type) (raw/unknown)
 
+### Rocket_Boots
+
+Raw/unresolved inputs:
+- 16x Ingredient_Charcoal
+- 8x Ingredient_Crystal_Void
+- 150x Ingredient_Scraps
+- 2x Ingredient_Spider_Silk
+- 1x Ingredient_Voidtaken_Grizzly_Hide
+- 32x Plant_Crop_Mushroom_Boomshroom_Small
+
+- Rocket_Boots (bench=?[GoblinLab_Workbench,GoblinLab_Gadgets]; 1s)
+  - needs 30x Ingredient_Scraps
+    - Ingredient_Scraps (raw/unknown)
+  - needs 4x Ingredient_Gadget_Assembly
+    - Ingredient_Gadget_Assembly (bench=Crafting[GoblinLab_Workbench,GoblinLab_Gadgets]; 1s)
+      - needs 25x Ingredient_Scraps
+        - Ingredient_Scraps (raw/unknown)
+      - needs 2x Ingredient_Crystal_Void
+        - Ingredient_Crystal_Void (raw/unknown)
+  - needs 2x Weapon_Bangstick
+    - Weapon_Bangstick (bench=?[GoblinLab_Workbench,GoblinLab_Gadgets]; 1s)
+      - needs 10x Ingredient_Scraps
+        - Ingredient_Scraps (raw/unknown)
+      - needs 8x Ingredient_Powder_Boom
+        - Ingredient_Powder_Boom (bench=?[GoblinLab_Workbench,GoblinLab_Gadgets]; 1s)
+          - needs 2x Plant_Crop_Mushroom_Boomshroom_Small
+            - Plant_Crop_Mushroom_Boomshroom_Small (raw/unknown)
+          - needs 1x Ingredient_Charcoal
+            - Ingredient_Charcoal (raw/unknown)
+      - needs 1x Ingredient_Spider_Silk
+        - Ingredient_Spider_Silk (raw/unknown)
+  - needs 1x Ingredient_Voidtaken_Grizzly_Hide
+    - Ingredient_Voidtaken_Grizzly_Hide (raw/unknown)
+
+### Rune_Aoe_Up
+
+Raw/unresolved inputs:
+- 1x Ingredient_Rune_Shard
+
+- Rune_Aoe_Up (bench=Crafting[GoblinLab_Workbench,GoblinLab_Runes]; 1s)
+  - needs 1x Ingredient_Rune_Shard
+    - Ingredient_Rune_Shard (raw/unknown)
+
+### Rune_ChainHook
+
+Raw/unresolved inputs:
+- 2x Ingredient_Rune_Shard
+
+- Rune_ChainHook (bench=Crafting[GoblinLab_Workbench,GoblinLab_Runes]; 1s)
+  - needs 2x Ingredient_Rune_Shard
+    - Ingredient_Rune_Shard (raw/unknown)
+
+### Rune_ChargedShot
+
+Raw/unresolved inputs:
+- 2x Ingredient_Rune_Shard
+
+- Rune_ChargedShot (bench=Crafting[GoblinLab_Workbench,GoblinLab_Runes]; 1s)
+  - needs 2x Ingredient_Rune_Shard
+    - Ingredient_Rune_Shard (raw/unknown)
+
+### Rune_Duration_Up
+
+Raw/unresolved inputs:
+- 1x Ingredient_Rune_Shard
+
+- Rune_Duration_Up (bench=Crafting[GoblinLab_Workbench,GoblinLab_Runes]; 1s)
+  - needs 1x Ingredient_Rune_Shard
+    - Ingredient_Rune_Shard (raw/unknown)
+
+### Rune_Enrage
+
+Raw/unresolved inputs:
+- 2x Ingredient_Rune_Shard
+
+- Rune_Enrage (bench=Crafting[GoblinLab_Workbench,GoblinLab_Runes]; 1s)
+  - needs 2x Ingredient_Rune_Shard
+    - Ingredient_Rune_Shard (raw/unknown)
+
+### Rune_Fireball
+
+Raw/unresolved inputs:
+- 2x Ingredient_Rune_Shard
+
+- Rune_Fireball (bench=Crafting[GoblinLab_Workbench,GoblinLab_Runes]; 1s)
+  - needs 2x Ingredient_Rune_Shard
+    - Ingredient_Rune_Shard (raw/unknown)
+
+### Rune_Fork
+
+Raw/unresolved inputs:
+- 1x Ingredient_Rune_Shard
+
+- Rune_Fork (bench=Crafting[GoblinLab_Workbench,GoblinLab_Runes]; 1s)
+  - needs 1x Ingredient_Rune_Shard
+    - Ingredient_Rune_Shard (raw/unknown)
+
+### Rune_GroundSlam
+
+Raw/unresolved inputs:
+- 2x Ingredient_Rune_Shard
+
+- Rune_GroundSlam (bench=Crafting[GoblinLab_Workbench,GoblinLab_Runes]; 1s)
+  - needs 2x Ingredient_Rune_Shard
+    - Ingredient_Rune_Shard (raw/unknown)
+
+### Rune_PoisonImbue
+
+Raw/unresolved inputs:
+- 2x Ingredient_Rune_Shard
+
+- Rune_PoisonImbue (bench=Crafting[GoblinLab_Workbench,GoblinLab_Runes]; 1s)
+  - needs 2x Ingredient_Rune_Shard
+    - Ingredient_Rune_Shard (raw/unknown)
+
+### Rune_Quickening
+
+Raw/unresolved inputs:
+- 1x Ingredient_Rune_Shard
+
+- Rune_Quickening (bench=Crafting[GoblinLab_Workbench,GoblinLab_Runes]; 1s)
+  - needs 1x Ingredient_Rune_Shard
+    - Ingredient_Rune_Shard (raw/unknown)
+
+### Rune_Rend
+
+Raw/unresolved inputs:
+- 1x Ingredient_Rune_Shard
+
+- Rune_Rend (bench=Crafting[GoblinLab_Workbench,GoblinLab_Runes]; 1s)
+  - needs 1x Ingredient_Rune_Shard
+    - Ingredient_Rune_Shard (raw/unknown)
+
+### Rune_Ricochet
+
+Raw/unresolved inputs:
+- 1x Ingredient_Rune_Shard
+
+- Rune_Ricochet (bench=Crafting[GoblinLab_Workbench,GoblinLab_Runes]; 1s)
+  - needs 1x Ingredient_Rune_Shard
+    - Ingredient_Rune_Shard (raw/unknown)
+
+### Rune_Thrift
+
+Raw/unresolved inputs:
+- 1x Ingredient_Rune_Shard
+
+- Rune_Thrift (bench=Crafting[GoblinLab_Workbench,GoblinLab_Runes]; 1s)
+  - needs 1x Ingredient_Rune_Shard
+    - Ingredient_Rune_Shard (raw/unknown)
+
+### Rune_WindStrike
+
+Raw/unresolved inputs:
+- 2x Ingredient_Rune_Shard
+
+- Rune_WindStrike (bench=Crafting[GoblinLab_Workbench,GoblinLab_Runes]; 1s)
+  - needs 2x Ingredient_Rune_Shard
+    - Ingredient_Rune_Shard (raw/unknown)
+
+### Rune_Wither
+
+Raw/unresolved inputs:
+- 1x Ingredient_Rune_Shard
+
+- Rune_Wither (bench=Crafting[GoblinLab_Workbench,GoblinLab_Runes]; 1s)
+  - needs 1x Ingredient_Rune_Shard
+    - Ingredient_Rune_Shard (raw/unknown)
+
+### Scrap_Hook
+
+Raw/unresolved inputs:
+- 10x Ingredient_Scraps
+- 3x Ore_Iron
+- 27x Rock(type)
+- 30x Wood_Trunk(type)
+
+- Scrap_Hook (bench=?[GoblinLab_Workbench,GoblinLab_Gadgets]; 1s)
+  - needs 10x Ingredient_Scraps
+    - Ingredient_Scraps (raw/unknown)
+  - needs 3x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+
 ### Soil_Aqua_Gravel
 
 Raw/unresolved inputs:
@@ -44162,6 +45006,44 @@ Raw/unresolved inputs:
           - needs 3x Rock(type)
             - Rock(type) (raw/unknown)
 
+### Tool_Drill_Scrap
+
+Raw/unresolved inputs:
+- 16x Ingredient_Crystal_Void
+- 2x Ingredient_Enkindled_Resource
+- 300x Ingredient_Scraps
+- 15x Ore_Iron
+- 135x Rock(type)
+- 150x Wood_Trunk(type)
+
+- Tool_Drill_Scrap (bench=?[GoblinLab_Workbench,GoblinLab_Gadgets]; 1s)
+  - needs 100x Ingredient_Scraps
+    - Ingredient_Scraps (raw/unknown)
+  - needs 15x Ingredient_Bar_Iron
+    - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+      - needs 1x Ore_Iron
+        - Ore_Iron (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 8x Ingredient_Gadget_Assembly
+    - Ingredient_Gadget_Assembly (bench=Crafting[GoblinLab_Workbench,GoblinLab_Gadgets]; 1s)
+      - needs 25x Ingredient_Scraps
+        - Ingredient_Scraps (raw/unknown)
+      - needs 2x Ingredient_Crystal_Void
+        - Ingredient_Crystal_Void (raw/unknown)
+  - needs 2x Ingredient_Enkindled_Resource
+    - Ingredient_Enkindled_Resource (raw/unknown)
+
 ### Tool_Feedbag
 
 Raw/unresolved inputs:
@@ -44940,6 +45822,48 @@ Raw/unresolved inputs:
           - needs 3x Rock(type)
             - Rock(type) (raw/unknown)
 
+### Tool_Hookshot
+
+Raw/unresolved inputs:
+- 2x Ingredient_Crystal_Void
+- 65x Ingredient_Scraps
+- 4x Ingredient_Spider_Silk
+- 3x Ore_Iron
+- 27x Rock(type)
+- 30x Wood_Trunk(type)
+
+- Tool_Hookshot (bench=?[GoblinLab_Workbench,GoblinLab_Gadgets]; 1s)
+  - needs 30x Ingredient_Scraps
+    - Ingredient_Scraps (raw/unknown)
+  - needs 4x Ingredient_Spider_Silk
+    - Ingredient_Spider_Silk (raw/unknown)
+  - needs 1x Ingredient_Gadget_Assembly
+    - Ingredient_Gadget_Assembly (bench=Crafting[GoblinLab_Workbench,GoblinLab_Gadgets]; 1s)
+      - needs 25x Ingredient_Scraps
+        - Ingredient_Scraps (raw/unknown)
+      - needs 2x Ingredient_Crystal_Void
+        - Ingredient_Crystal_Void (raw/unknown)
+  - needs 1x Scrap_Hook
+    - Scrap_Hook (bench=?[GoblinLab_Workbench,GoblinLab_Gadgets]; 1s)
+      - needs 10x Ingredient_Scraps
+        - Ingredient_Scraps (raw/unknown)
+      - needs 3x Ingredient_Bar_Iron
+        - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
+          - needs 1x Ore_Iron
+            - Ore_Iron (raw/unknown)
+          - requires bench 1x Bench_Furnace
+            - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+              - needs 6x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 6x Rock(type)
+                - Rock(type) (raw/unknown)
+              - requires bench 1x Bench_WorkBench
+                - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+                  - needs 4x Wood_Trunk(type)
+                    - Wood_Trunk(type) (raw/unknown)
+                  - needs 3x Rock(type)
+                    - Rock(type) (raw/unknown)
+
 ### Tool_Pickaxe_Adamantite
 
 Raw/unresolved inputs:
@@ -45257,6 +46181,28 @@ Raw/unresolved inputs:
       - needs 3x Rock(type)
         - Rock(type) (raw/unknown)
 
+### Tool_Repair_Kit_Goblin
+
+Raw/unresolved inputs:
+- 6x Ingredient_Crystal_Void
+- 1x Ingredient_Deep_Resource
+- 105x Ingredient_Scraps
+- 2x Ingredient_Spider_Silk
+
+- Tool_Repair_Kit_Goblin (bench=Crafting[GoblinLab_Workbench,GoblinLab_Gadgets]; 1s)
+  - needs 30x Ingredient_Scraps
+    - Ingredient_Scraps (raw/unknown)
+  - needs 3x Ingredient_Gadget_Assembly
+    - Ingredient_Gadget_Assembly (bench=Crafting[GoblinLab_Workbench,GoblinLab_Gadgets]; 1s)
+      - needs 25x Ingredient_Scraps
+        - Ingredient_Scraps (raw/unknown)
+      - needs 2x Ingredient_Crystal_Void
+        - Ingredient_Crystal_Void (raw/unknown)
+  - needs 2x Ingredient_Spider_Silk
+    - Ingredient_Spider_Silk (raw/unknown)
+  - needs 1x Ingredient_Deep_Resource
+    - Ingredient_Deep_Resource (raw/unknown)
+
 ### Tool_Repair_Kit_Iron
 
 Raw/unresolved inputs:
@@ -45506,6 +46452,37 @@ Raw/unresolved inputs:
           - needs 3x Rock(type)
             - Rock(type) (raw/unknown)
 
+### Tool_Spyglass
+
+Raw/unresolved inputs:
+- 1x Ingredient_Crystal_Void
+- 25x Ingredient_Scraps
+- 10x Ore_Copper
+- 90x Rock(type)
+- 100x Wood_Trunk(type)
+
+- Tool_Spyglass (bench=Crafting[GoblinLab_Workbench,GoblinLab_Gadgets]; 1s)
+  - needs 25x Ingredient_Scraps
+    - Ingredient_Scraps (raw/unknown)
+  - needs 10x Ingredient_Bar_Copper
+    - Ingredient_Bar_Copper (bench=Processing[Furnace]; 10s)
+      - needs 1x Ore_Copper
+        - Ore_Copper (raw/unknown)
+      - requires bench 1x Bench_Furnace
+        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
+          - needs 6x Wood_Trunk(type)
+            - Wood_Trunk(type) (raw/unknown)
+          - needs 6x Rock(type)
+            - Rock(type) (raw/unknown)
+          - requires bench 1x Bench_WorkBench
+            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
+              - needs 4x Wood_Trunk(type)
+                - Wood_Trunk(type) (raw/unknown)
+              - needs 3x Rock(type)
+                - Rock(type) (raw/unknown)
+  - needs 1x Ingredient_Crystal_Void
+    - Ingredient_Crystal_Void (raw/unknown)
+
 ### Tool_Trap_Bait
 
 Raw/unresolved inputs:
@@ -45707,56 +46684,17 @@ Raw/unresolved inputs:
 ### Upgrade_Backpack_3
 
 Raw/unresolved inputs:
-- 48x Ingredient_Hide_Light
-- 16x Ingredient_Hide_Storm
-- 1x Ingredient_Voidheart
-- 8x Ore_Adamantite
-- 171x Rock(type)
-- 244x Wood_Trunk(type)
+- 150x Ingredient_Scraps
+- 10x Ingredient_Spider_Silk
+- 1x Ingredient_Voidtaken_Grizzly_Hide
 
-- Upgrade_Backpack_3 (bench=Crafting[Workbench,Workbench_Tinkering]; 2s)
-  - needs 1x Ingredient_Voidheart
-    - Ingredient_Voidheart (raw/unknown)
-  - needs 8x Ingredient_Bar_Adamantite
-    - Ingredient_Bar_Adamantite (bench=Processing[Furnace]; 20s)
-      - needs 1x Ore_Adamantite
-        - Ore_Adamantite (raw/unknown)
-      - requires bench 1x Bench_Furnace
-        - Bench_Furnace (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
-          - needs 6x Wood_Trunk(type)
-            - Wood_Trunk(type) (raw/unknown)
-          - needs 6x Rock(type)
-            - Rock(type) (raw/unknown)
-          - requires bench 1x Bench_WorkBench
-            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
-              - needs 4x Wood_Trunk(type)
-                - Wood_Trunk(type) (raw/unknown)
-              - needs 3x Rock(type)
-                - Rock(type) (raw/unknown)
-  - needs 16x Ingredient_Leather_Storm
-    - Ingredient_Leather_Storm (bench=Processing[Tannery]; 60s)
-      - needs 1x Ingredient_Hide_Storm
-        - Ingredient_Hide_Storm (raw/unknown)
-      - requires bench 1x Bench_Tannery
-        - Bench_Tannery (bench=Crafting[Workbench,Workbench_Crafting]; 3s)
-          - needs 6x Wood_Trunk(type)
-            - Wood_Trunk(type) (raw/unknown)
-          - needs 3x Rock(type)
-            - Rock(type) (raw/unknown)
-          - needs 3x Ingredient_Hide_Light
-            - Ingredient_Hide_Light (raw/unknown)
-          - requires bench 1x Bench_WorkBench
-            - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
-              - needs 4x Wood_Trunk(type)
-                - Wood_Trunk(type) (raw/unknown)
-              - needs 3x Rock(type)
-                - Rock(type) (raw/unknown)
-  - requires bench 1x Bench_WorkBench
-    - Bench_WorkBench (bench=Crafting[Fieldcraft,Tools])
-      - needs 4x Wood_Trunk(type)
-        - Wood_Trunk(type) (raw/unknown)
-      - needs 3x Rock(type)
-        - Rock(type) (raw/unknown)
+- Upgrade_Backpack_3 (bench=?[GoblinLab_Workbench,GoblinLab_Gadgets]; 1s)
+  - needs 150x Ingredient_Scraps
+    - Ingredient_Scraps (raw/unknown)
+  - needs 10x Ingredient_Spider_Silk
+    - Ingredient_Spider_Silk (raw/unknown)
+  - needs 1x Ingredient_Voidtaken_Grizzly_Hide
+    - Ingredient_Voidtaken_Grizzly_Hide (raw/unknown)
 
 ### Utility_Helipack
 
@@ -46523,6 +47461,26 @@ Raw/unresolved inputs:
               - needs 3x Rock(type)
                 - Rock(type) (raw/unknown)
 
+### Weapon_Bangstick
+
+Raw/unresolved inputs:
+- 8x Ingredient_Charcoal
+- 10x Ingredient_Scraps
+- 1x Ingredient_Spider_Silk
+- 16x Plant_Crop_Mushroom_Boomshroom_Small
+
+- Weapon_Bangstick (bench=?[GoblinLab_Workbench,GoblinLab_Gadgets]; 1s)
+  - needs 10x Ingredient_Scraps
+    - Ingredient_Scraps (raw/unknown)
+  - needs 8x Ingredient_Powder_Boom
+    - Ingredient_Powder_Boom (bench=?[GoblinLab_Workbench,GoblinLab_Gadgets]; 1s)
+      - needs 2x Plant_Crop_Mushroom_Boomshroom_Small
+        - Plant_Crop_Mushroom_Boomshroom_Small (raw/unknown)
+      - needs 1x Ingredient_Charcoal
+        - Ingredient_Charcoal (raw/unknown)
+  - needs 1x Ingredient_Spider_Silk
+    - Ingredient_Spider_Silk (raw/unknown)
+
 ### Weapon_Battleaxe_Adamantite
 
 Raw/unresolved inputs:
@@ -47084,14 +48042,19 @@ Raw/unresolved inputs:
 ### Weapon_Bomb_Fire
 
 Raw/unresolved inputs:
-- 6x Ingredient_Powder_Boom
+- 6x Ingredient_Charcoal
 - 2x Ore_Iron
+- 12x Plant_Crop_Mushroom_Boomshroom_Small
 - 18x Rock(type)
 - 20x Wood_Trunk(type)
 
 - Weapon_Bomb_Fire
   - needs 6x Ingredient_Powder_Boom
-    - Ingredient_Powder_Boom (raw/unknown)
+    - Ingredient_Powder_Boom (bench=?[GoblinLab_Workbench,GoblinLab_Gadgets]; 1s)
+      - needs 2x Plant_Crop_Mushroom_Boomshroom_Small
+        - Plant_Crop_Mushroom_Boomshroom_Small (raw/unknown)
+      - needs 1x Ingredient_Charcoal
+        - Ingredient_Charcoal (raw/unknown)
   - needs 2x Ingredient_Bar_Iron
     - Ingredient_Bar_Iron (bench=Processing[Furnace]; 14s)
       - needs 1x Ore_Iron
@@ -47113,10 +48076,11 @@ Raw/unresolved inputs:
 
 Raw/unresolved inputs:
 - 10x Ingredient_Bone_Fragment
+- 2x Ingredient_Charcoal
 - 4x Ingredient_Fibre
-- 2x Ingredient_Powder_Boom
 - 10x Ingredient_Sac_Venom
 - 5x Ore_Gold
+- 4x Plant_Crop_Mushroom_Boomshroom_Small
 - 6x Plant_Fruit_Berries_Red
 - 68x Rock(type)
 - 54x Wood_Trunk(type)
@@ -47125,7 +48089,11 @@ Raw/unresolved inputs:
   - needs 6x Plant_Fruit_Berries_Red
     - Plant_Fruit_Berries_Red (raw/unknown)
   - needs 2x Ingredient_Powder_Boom
-    - Ingredient_Powder_Boom (raw/unknown)
+    - Ingredient_Powder_Boom (bench=?[GoblinLab_Workbench,GoblinLab_Gadgets]; 1s)
+      - needs 2x Plant_Crop_Mushroom_Boomshroom_Small
+        - Plant_Crop_Mushroom_Boomshroom_Small (raw/unknown)
+      - needs 1x Ingredient_Charcoal
+        - Ingredient_Charcoal (raw/unknown)
   - needs 4x Ingredient_Fibre
     - Ingredient_Fibre (raw/unknown)
   - requires bench 1x Bench_Alchemy
@@ -54276,6 +55244,40 @@ Raw/unresolved inputs:
 - Wood_Redwood_Trunk_Stairs (bench=StructuralCrafting[Builders,Stairs]; 0s)
   - needs 1x Wood_Redwood_Trunk
     - Wood_Redwood_Trunk (raw/unknown)
+  - requires bench 1x Bench_Builders
+    - Bench_Builders (bench=Crafting[Fieldcraft,Tools] or Crafting[Workbench,Workbench_Crafting])
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 3x Rock(type)
+        - Rock(type) (raw/unknown)
+
+### Wood_Sadwillow_Trunk_Half
+
+Raw/unresolved inputs:
+- 3x Rock(type)
+- 1x Wood_Sadwillow_Trunk
+- 6x Wood_Trunk(type)
+
+- Wood_Sadwillow_Trunk_Half (bench=StructuralCrafting[Builders,HalfSlab]; 0s)
+  - needs 1x Wood_Sadwillow_Trunk
+    - Wood_Sadwillow_Trunk (raw/unknown)
+  - requires bench 1x Bench_Builders
+    - Bench_Builders (bench=Crafting[Fieldcraft,Tools] or Crafting[Workbench,Workbench_Crafting])
+      - needs 6x Wood_Trunk(type)
+        - Wood_Trunk(type) (raw/unknown)
+      - needs 3x Rock(type)
+        - Rock(type) (raw/unknown)
+
+### Wood_Sadwillow_Trunk_Stairs
+
+Raw/unresolved inputs:
+- 3x Rock(type)
+- 1x Wood_Sadwillow_Trunk
+- 6x Wood_Trunk(type)
+
+- Wood_Sadwillow_Trunk_Stairs (bench=StructuralCrafting[Builders,Stairs]; 0s)
+  - needs 1x Wood_Sadwillow_Trunk
+    - Wood_Sadwillow_Trunk (raw/unknown)
   - requires bench 1x Bench_Builders
     - Bench_Builders (bench=Crafting[Fieldcraft,Tools] or Crafting[Workbench,Workbench_Crafting])
       - needs 6x Wood_Trunk(type)

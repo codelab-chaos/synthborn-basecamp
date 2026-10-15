@@ -148,12 +148,14 @@ public class com.hypixel.hytale.server.core.modules.interaction.interaction.conf
   protected java.util.Map<com.hypixel.hytale.protocol.InteractionType, java.lang.String> forks;
   protected com.hypixel.hytale.protocol.ChargingDelay chargingDelay;
   protected float highestChargeValue;
+  protected boolean ignoreForConditions;
   public com.hypixel.hytale.server.core.modules.interaction.interaction.config.client.ChargingInteraction();
   public com.hypixel.hytale.protocol.WaitForDataFrom getWaitForDataFrom();
   protected void tick0(boolean, float, com.hypixel.hytale.protocol.InteractionType, com.hypixel.hytale.server.core.entity.InteractionContext, com.hypixel.hytale.server.core.modules.interaction.interaction.CooldownHandler);
   protected void simulateTick0(boolean, float, com.hypixel.hytale.protocol.InteractionType, com.hypixel.hytale.server.core.entity.InteractionContext, com.hypixel.hytale.server.core.modules.interaction.interaction.CooldownHandler);
   public void compile(com.hypixel.hytale.server.core.modules.interaction.interaction.operation.OperationsBuilder);
   public boolean walk(com.hypixel.hytale.server.core.modules.interaction.interaction.config.data.Collector, com.hypixel.hytale.server.core.entity.InteractionContext);
+  public boolean getIgnoreForConditions();
   protected com.hypixel.hytale.protocol.Interaction generatePacket();
   protected void configurePacket(com.hypixel.hytale.protocol.Interaction);
   public boolean needsRemoteSync();
@@ -401,7 +403,6 @@ public abstract class com.hypixel.hytale.server.core.modules.interaction.interac
   protected abstract void interactWithBlock(com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.protocol.InteractionType, com.hypixel.hytale.server.core.entity.InteractionContext, com.hypixel.hytale.server.core.inventory.ItemStack, org.joml.Vector3i, com.hypixel.hytale.server.core.modules.interaction.interaction.CooldownHandler);
   protected void simulateTick0(boolean, float, com.hypixel.hytale.protocol.InteractionType, com.hypixel.hytale.server.core.entity.InteractionContext, com.hypixel.hytale.server.core.modules.interaction.interaction.CooldownHandler);
   protected abstract void simulateInteractWithBlock(com.hypixel.hytale.protocol.InteractionType, com.hypixel.hytale.server.core.entity.InteractionContext, com.hypixel.hytale.server.core.inventory.ItemStack, com.hypixel.hytale.server.core.universe.world.World, org.joml.Vector3i);
-  public static com.hypixel.hytale.protocol.BlockPosition resolveBaseBlockPosition(com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.protocol.BlockPosition);
   protected static boolean hasRemovedBlockContext(com.hypixel.hytale.server.core.entity.InteractionContext);
   protected static void computeCurrentBlockSyncData(com.hypixel.hytale.server.core.entity.InteractionContext);
   protected com.hypixel.hytale.protocol.Interaction generatePacket();

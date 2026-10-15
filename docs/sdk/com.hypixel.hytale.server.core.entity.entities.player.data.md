@@ -58,9 +58,11 @@ public final class com.hypixel.hytale.server.core.entity.entities.player.data.Pl
 public final class com.hypixel.hytale.server.core.entity.entities.player.data.PlayerRespawnPointData {
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.server.core.entity.entities.player.data.PlayerRespawnPointData> CODEC;
   public com.hypixel.hytale.server.core.entity.entities.player.data.PlayerRespawnPointData(org.joml.Vector3i, org.joml.Vector3d, java.lang.String);
+  public com.hypixel.hytale.server.core.entity.entities.player.data.PlayerRespawnPointData(org.joml.Vector3i, org.joml.Vector3d, java.lang.String, float);
   public org.joml.Vector3i getBlockPosition();
   public org.joml.Vector3d getRespawnPosition();
   public java.lang.String getName();
+  public float getYaw();
   public void setName(java.lang.String);
 }
 ```

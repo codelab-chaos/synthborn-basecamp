@@ -15,9 +15,11 @@ public class com.hypixel.hytale.server.core.codec.protocol.ColorAlphaCodec imple
   public com.hypixel.hytale.protocol.ColorAlpha decode(org.bson.BsonValue, com.hypixel.hytale.codec.ExtraInfo);
   public com.hypixel.hytale.protocol.ColorAlpha decodeJson(com.hypixel.hytale.codec.util.RawJsonReader, com.hypixel.hytale.codec.ExtraInfo) throws java.io.IOException;
   public com.hypixel.hytale.codec.schema.config.Schema toSchema(com.hypixel.hytale.codec.schema.SchemaContext);
+  public com.hypixel.hytale.codec.schema.config.Schema toSchema(com.hypixel.hytale.codec.schema.SchemaContext, com.hypixel.hytale.protocol.ColorAlpha);
   public java.lang.Object decodeJson(com.hypixel.hytale.codec.util.RawJsonReader, com.hypixel.hytale.codec.ExtraInfo) throws java.io.IOException;
   public org.bson.BsonValue encode(java.lang.Object, com.hypixel.hytale.codec.ExtraInfo);
   public java.lang.Object decode(org.bson.BsonValue, com.hypixel.hytale.codec.ExtraInfo);
+  public com.hypixel.hytale.codec.schema.config.Schema toSchema(com.hypixel.hytale.codec.schema.SchemaContext, java.lang.Object);
 }
 ```
 
@@ -30,8 +32,10 @@ public class com.hypixel.hytale.server.core.codec.protocol.ColorCodec implements
   public com.hypixel.hytale.protocol.Color decode(org.bson.BsonValue, com.hypixel.hytale.codec.ExtraInfo);
   public com.hypixel.hytale.protocol.Color decodeJson(com.hypixel.hytale.codec.util.RawJsonReader, com.hypixel.hytale.codec.ExtraInfo) throws java.io.IOException;
   public com.hypixel.hytale.codec.schema.config.Schema toSchema(com.hypixel.hytale.codec.schema.SchemaContext);
+  public com.hypixel.hytale.codec.schema.config.Schema toSchema(com.hypixel.hytale.codec.schema.SchemaContext, com.hypixel.hytale.protocol.Color);
   public java.lang.Object decodeJson(com.hypixel.hytale.codec.util.RawJsonReader, com.hypixel.hytale.codec.ExtraInfo) throws java.io.IOException;
   public org.bson.BsonValue encode(java.lang.Object, com.hypixel.hytale.codec.ExtraInfo);
   public java.lang.Object decode(org.bson.BsonValue, com.hypixel.hytale.codec.ExtraInfo);
+  public com.hypixel.hytale.codec.schema.config.Schema toSchema(com.hypixel.hytale.codec.schema.SchemaContext, java.lang.Object);
 }
 ```

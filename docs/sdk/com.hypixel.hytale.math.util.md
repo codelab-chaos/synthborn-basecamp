@@ -161,6 +161,7 @@ public class com.hypixel.hytale.math.util.MathUtil {
   public static int unpackRight(long);
   public static org.joml.Vector3i rotateVectorYAxis(org.joml.Vector3i, int, boolean);
   public static org.joml.Vector3d rotateVectorYAxis(org.joml.Vector3d, int, boolean);
+  public static org.joml.Vector3d rotateVectorYAxis(org.joml.Vector3d, double, boolean);
   public static float wrapAngle(float);
   public static float lerp(float, float, float);
   public static float lerpUnclamped(float, float, float);

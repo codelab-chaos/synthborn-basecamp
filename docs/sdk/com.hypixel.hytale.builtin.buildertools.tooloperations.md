@@ -66,6 +66,8 @@ public class com.hypixel.hytale.builtin.buildertools.tooloperations.PaintOperati
 ```java
 public class com.hypixel.hytale.builtin.buildertools.tooloperations.RevolveOperation extends com.hypixel.hytale.builtin.buildertools.tooloperations.ToolOperation {
   public com.hypixel.hytale.builtin.buildertools.tooloperations.RevolveOperation(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.entity.entities.Player, com.hypixel.hytale.server.core.universe.PlayerRef, com.hypixel.hytale.protocol.packets.buildertools.BuilderToolOnUseInteraction, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public static boolean centersOnPlayer(java.util.Map<java.lang.String, java.lang.Object>);
+  public static int configuredDistance(java.util.Map<java.lang.String, java.lang.Object>);
   public void execute(com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public void executeAt(int, int, int, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   protected boolean executeBlock(int, int, int);
@@ -111,7 +113,7 @@ public class com.hypixel.hytale.builtin.buildertools.tooloperations.SculptOperat
   protected boolean executeBlock(int, int, int);
   public static int[][] preCalcBuffer(int, int[][][]);
   public static int filterFullBlockForBuffer(int, it.unimi.dsi.fastutil.ints.Int2IntOpenHashMap);
-  public static int[][][] bufferRegion(com.hypixel.hytale.server.core.universe.world.accessor.ChunkAccessor, com.hypixel.hytale.protocol.Vector3i, int, int, int, int[][][]);
+  public static int[][][] bufferRegion(com.hypixel.hytale.builtin.buildertools.world.SectionAccessor, com.hypixel.hytale.protocol.Vector3i, int, int, int, int[][][]);
 }
 ```
 
@@ -138,6 +140,7 @@ public class com.hypixel.hytale.builtin.buildertools.tooloperations.SmootherOper
 ```java
 public class com.hypixel.hytale.builtin.buildertools.tooloperations.TintOperation extends com.hypixel.hytale.builtin.buildertools.tooloperations.ToolOperation {
   public com.hypixel.hytale.builtin.buildertools.tooloperations.TintOperation(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.entity.entities.Player, com.hypixel.hytale.server.core.universe.PlayerRef, com.hypixel.hytale.protocol.packets.buildertools.BuilderToolOnUseInteraction, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public long getSkippedTints();
   protected boolean executeBlock(int, int, int);
 }
 ```
@@ -151,6 +154,7 @@ public abstract class com.hypixel.hytale.builtin.buildertools.tooloperations.Too
   public static final java.util.Map<java.util.UUID, com.hypixel.hytale.builtin.buildertools.PrototypePlayerBuilderToolSettings> PROTOTYPE_TOOL_SETTINGS;
   public static final double MAX_DISTANCE;
   public static final int DEFAULT_BRUSH_SPACING;
+  public static final int DEFAULT_BRUSH_SIZE;
   protected final int x;
   protected final int y;
   protected final int z;
@@ -190,6 +194,7 @@ public abstract class com.hypixel.hytale.builtin.buildertools.tooloperations.Too
   public com.hypixel.hytale.builtin.buildertools.EditOperation getEditOperation();
   public final boolean test(int, int, int, java.lang.Void);
   public boolean showEditNotification();
+  public long getSkippedTints();
   protected abstract boolean executeBlock(int, int, int);
   public void execute(com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public void executeAt(int, int, int, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);

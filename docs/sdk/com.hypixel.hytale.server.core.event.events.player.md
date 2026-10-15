@@ -24,13 +24,17 @@ public class com.hypixel.hytale.server.core.event.events.player.AddPlayerToWorld
 ## DrainPlayerFromWorldEvent
 
 ```java
-public class com.hypixel.hytale.server.core.event.events.player.DrainPlayerFromWorldEvent implements com.hypixel.hytale.event.IEvent<java.lang.String> {
-  public com.hypixel.hytale.server.core.event.events.player.DrainPlayerFromWorldEvent(com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.math.vector.Transform);
+public class com.hypixel.hytale.server.core.event.events.player.DrainPlayerFromWorldEvent implements com.hypixel.hytale.event.IAsyncEvent<java.lang.String> {
+  public com.hypixel.hytale.server.core.event.events.player.DrainPlayerFromWorldEvent(com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.math.vector.Transform, com.hypixel.hytale.server.core.Message, boolean);
   public com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.EntityStore> getHolder();
-  public com.hypixel.hytale.server.core.universe.world.World getWorld();
-  public void setWorld(com.hypixel.hytale.server.core.universe.world.World);
+  public com.hypixel.hytale.server.core.universe.world.World getSourceWorld();
+  public com.hypixel.hytale.server.core.universe.world.World getDestinationWorld();
+  public void setDestinationWorld(com.hypixel.hytale.server.core.universe.world.World);
   public com.hypixel.hytale.math.vector.Transform getTransform();
   public void setTransform(com.hypixel.hytale.math.vector.Transform);
+  public com.hypixel.hytale.server.core.Message getMessage();
+  public void setMessage(com.hypixel.hytale.server.core.Message);
+  public boolean isRemovalExceptional();
   public java.lang.String toString();
 }
 ```
@@ -58,7 +62,7 @@ public class com.hypixel.hytale.server.core.event.events.player.PlayerChatEvent 
 ## PlayerConnectEvent
 
 ```java
-public class com.hypixel.hytale.server.core.event.events.player.PlayerConnectEvent implements com.hypixel.hytale.event.IEvent<java.lang.Void> {
+public class com.hypixel.hytale.server.core.event.events.player.PlayerConnectEvent implements com.hypixel.hytale.event.IAsyncEvent<java.lang.Void> {
   public com.hypixel.hytale.server.core.event.events.player.PlayerConnectEvent(com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.universe.PlayerRef, com.hypixel.hytale.server.core.universe.world.World);
   public com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.EntityStore> getHolder();
   public com.hypixel.hytale.server.core.universe.PlayerRef getPlayerRef();

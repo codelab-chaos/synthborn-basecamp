@@ -85,6 +85,7 @@ public abstract class com.hypixel.hytale.event.EventBusRegistry<KeyType, EventTy
   public abstract com.hypixel.hytale.event.EventRegistration<KeyType, EventType> registerGlobal(short, java.util.function.Consumer<EventType>);
   public abstract com.hypixel.hytale.event.EventRegistration<KeyType, EventType> registerUnhandled(short, java.util.function.Consumer<EventType>);
   public abstract com.hypixel.hytale.event.IEventDispatcher<EventType, ?> dispatchFor(KeyType);
+  protected static boolean isThirdPartyConsumer(java.lang.Object);
 }
 ```
 

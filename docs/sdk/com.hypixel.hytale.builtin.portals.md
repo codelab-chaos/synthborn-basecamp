@@ -33,9 +33,13 @@ public class com.hypixel.hytale.builtin.portals.PortalsPlugin extends com.hypixe
   public com.hypixel.hytale.builtin.portals.PortalsPlugin(com.hypixel.hytale.server.core.plugin.JavaPluginInit);
   protected void setup();
   public int countActiveFragments();
+  public int nextPromptId();
   public com.hypixel.hytale.component.ResourceType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.builtin.portals.resources.PortalWorld> getPortalResourceType();
+  public com.hypixel.hytale.component.ResourceType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.builtin.portals.resources.VoidEventResource> getVoidEventResourceType();
   public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, com.hypixel.hytale.builtin.portals.components.PortalDevice> getPortalDeviceComponentType();
   public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.builtin.portals.components.voidevent.VoidEvent> getVoidEventComponentType();
   public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.builtin.portals.components.voidevent.VoidSpawner> getVoidPortalComponentType();
+  public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.builtin.portals.ui.PortalSummonPrompt> getPortalSummonPromptComponentType();
+  public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.builtin.portals.ui.PortalActivePrompt> getPortalActivePromptComponentType();
 }
 ```

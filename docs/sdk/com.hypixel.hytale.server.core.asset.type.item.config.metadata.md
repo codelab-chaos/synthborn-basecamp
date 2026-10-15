@@ -14,8 +14,10 @@ public class com.hypixel.hytale.server.core.asset.type.item.config.metadata.Adve
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.server.core.asset.type.item.config.metadata.AdventureMetadata> CODEC;
   public static final com.hypixel.hytale.codec.KeyedCodec<com.hypixel.hytale.server.core.asset.type.item.config.metadata.AdventureMetadata> KEYED_CODEC;
   public com.hypixel.hytale.server.core.asset.type.item.config.metadata.AdventureMetadata();
-  public boolean isCursed();
-  public void setCursed(boolean);
+  public boolean isEphemeral();
+  public void setEphemeral(boolean);
+  public java.util.UUID getEphemeralWorld();
+  public void setEphemeralWorld(java.util.UUID);
 }
 ```
 

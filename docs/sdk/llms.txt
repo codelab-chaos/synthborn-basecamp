@@ -1,4 +1,4 @@
-# Hytale Server SDK Reference v0.6.8
+# Hytale Server SDK Reference v0.7.2
 
 > Flat index of public SDK types by package. Each entry shows the class declaration (kind, extends, implements) so you can pick which file to read for full method signatures.
 
@@ -79,6 +79,81 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `JsonAssetWithMap` — interface JsonAssetWithMap<K, M extends AssetMap<K, ?>> extends JsonAsset<K>
 - `LookupTableAssetMap` — class LookupTableAssetMap<K, T extends JsonAssetWithMap<K, LookupTableAssetMap<K, T>>> extends AssetMapWithIndexes<K, T>
 - `ProvidedIndexAssetMap` — class ProvidedIndexAssetMap<K, T extends JsonAssetWithMap<K, ProvidedIndexAssetMap<K, T>>> extends AssetMapWithIndexes<K, T>
+
+## com/hypixel/hytale/builtin/abilities
+[`com.hypixel.hytale.builtin.abilities.md`](./com.hypixel.hytale.builtin.abilities.md) (1)
+
+- `AbilitiesPlugin` — class AbilitiesPlugin extends JavaPlugin
+
+## com/hypixel/hytale/builtin/abilities/command
+[`com.hypixel.hytale.builtin.abilities.command.md`](./com.hypixel.hytale.builtin.abilities.command.md) (1)
+
+- `AbilitiesCommand` — class AbilitiesCommand extends AbstractPlayerCommand
+
+## com/hypixel/hytale/builtin/abilities/component
+[`com.hypixel.hytale.builtin.abilities.component.md`](./com.hypixel.hytale.builtin.abilities.component.md) (1)
+
+- `AbilityBenchIntro` — class AbilityBenchIntro implements Component<EntityStore>
+
+## com/hypixel/hytale/builtin/abilities/element
+[`com.hypixel.hytale.builtin.abilities.element.md`](./com.hypixel.hytale.builtin.abilities.element.md) (2)
+
+- `Element` — class Element implements JsonAssetWithMap<String, IndexedLookupTableAssetMap<String, Element>>
+- `ReactionDamageSystem` — class ReactionDamageSystem extends DamageEventSystem
+
+## com/hypixel/hytale/builtin/abilities/entity
+[`com.hypixel.hytale.builtin.abilities.entity.md`](./com.hypixel.hytale.builtin.abilities.entity.md) (3)
+
+- `AbilityEntityRepeat` — class AbilityEntityRepeat implements Component<EntityStore>
+- `AbilityEntityRepeatSystem` — class AbilityEntityRepeatSystem extends EntityTickingSystem<EntityStore>
+- `AbilityEntitySpawner` — final class AbilityEntitySpawner
+
+## com/hypixel/hytale/builtin/abilities/interaction
+[`com.hypixel.hytale.builtin.abilities.interaction.md`](./com.hypixel.hytale.builtin.abilities.interaction.md) (9)
+
+- `ApplyAbilityEffectsInteraction` — class ApplyAbilityEffectsInteraction extends SimpleInstantInteraction implements AbilityAttributeBinding
+- `GrantAbilityChargesInteraction` — class GrantAbilityChargesInteraction extends SimpleInstantInteraction implements AbilityAttributeBinding
+- `LaunchAbilityProjectileInteraction` — class LaunchAbilityProjectileInteraction extends SimpleInstantInteraction implements AbilityAttributeBinding
+- `MarkAbilityBenchIntroSeenInteraction` — class MarkAbilityBenchIntroSeenInteraction extends SimpleInstantInteraction
+- `OpenAbilityBenchInteraction` — class OpenAbilityBenchInteraction extends SimpleInstantInteraction
+- `PullEntityAbilityInteraction` — class PullEntityAbilityInteraction extends SimpleInstantInteraction implements AbilityAttributeBinding
+- `SpawnAbilityEntityInteraction` — class SpawnAbilityEntityInteraction extends SimpleInstantInteraction implements AbilityAttributeBinding
+- `SplitAbilityProjectileInteraction` — class SplitAbilityProjectileInteraction extends SimpleInstantInteraction
+- `TriggerAbilityFXInteraction` — class TriggerAbilityFXInteraction extends SimpleInstantInteraction implements AbilityAttributeBinding
+
+## com/hypixel/hytale/builtin/abilities/keyword
+[`com.hypixel.hytale.builtin.abilities.keyword.md`](./com.hypixel.hytale.builtin.abilities.keyword.md) (1)
+
+- `AbilityKeywordAudit` — final class AbilityKeywordAudit
+
+## com/hypixel/hytale/builtin/abilities/page
+[`com.hypixel.hytale.builtin.abilities.page.md`](./com.hypixel.hytale.builtin.abilities.page.md) (1)
+
+- `AbilityBenchIntroPage` — class AbilityBenchIntroPage extends InteractiveCustomUIPage<AbilityBenchIntroPage$PageEventData>
+
+## com/hypixel/hytale/builtin/abilities/trigger
+[`com.hypixel.hytale.builtin.abilities.trigger.md`](./com.hypixel.hytale.builtin.abilities.trigger.md) (15)
+
+- `AbilityChargeActivator` — final class AbilityChargeActivator
+- `AbilityChargeHitSystem` — class AbilityChargeHitSystem extends DamageEventSystem
+- `AbilityChargeMeleeAttackSystem` — class AbilityChargeMeleeAttackSystem extends EntityEventSystem<EntityStore, InteractionChainStartEvent>
+- `AbilityChargeRangedAttackSystem` — class AbilityChargeRangedAttackSystem extends EntityEventSystem<EntityStore, ProjectileLaunchEvent>
+- `AbilityChargeTrigger` — final class AbilityChargeTrigger extends Enum<AbilityChargeTrigger>
+- `AbilityCharges` — class AbilityCharges implements Component<EntityStore>
+- `AbilityProjectileConfig` — class AbilityProjectileConfig implements AbilityAttributeBinding
+- `AbilityProjectileLaunchData` — final class AbilityProjectileLaunchData extends Record
+- `AbilityProjectileLauncher` — final class AbilityProjectileLauncher
+- `AbilityProjectileSplit` — class AbilityProjectileSplit implements Component<EntityStore>
+- `AbilityProjectileTrail` — class AbilityProjectileTrail implements Component<EntityStore>
+- `AbilityProjectileTrailSystem` — class AbilityProjectileTrailSystem extends EntityTickingSystem<EntityStore>
+- `AbilityPullSystem` — class AbilityPullSystem extends EntityTickingSystem<EntityStore>
+- `PulledByAbility` — class PulledByAbility implements Component<EntityStore>
+- `RuneEffectDamageSystem` — class RuneEffectDamageSystem extends DamageEventSystem
+
+## com/hypixel/hytale/builtin/abilities/window
+[`com.hypixel.hytale.builtin.abilities.window.md`](./com.hypixel.hytale.builtin.abilities.window.md) (1)
+
+- `AbilityBenchWindow` — class AbilityBenchWindow extends Window implements ItemContainerWindow
 
 ## com/hypixel/hytale/builtin/adventure/camera
 [`com.hypixel.hytale.builtin.adventure.camera.md`](./com.hypixel.hytale.builtin.adventure.camera.md) (3)
@@ -182,6 +257,12 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `CoopBlock` — class CoopBlock implements Component<ChunkStore>
 - `FarmingBlock` — class FarmingBlock implements Component<ChunkStore>
 - `TilledSoilBlock` — class TilledSoilBlock implements Component<ChunkStore>
+
+## com/hypixel/hytale/builtin/adventure/goblinlab
+[`com.hypixel.hytale.builtin.adventure.goblinlab.md`](./com.hypixel.hytale.builtin.adventure.goblinlab.md) (2)
+
+- `GoblinLabConsolePage` — class GoblinLabConsolePage extends InteractiveCustomUIPage<GoblinLabConsolePage$PageData>
+- `GoblinLabPlugin` — class GoblinLabPlugin extends JavaPlugin
 
 ## com/hypixel/hytale/builtin/adventure/memories
 [`com.hypixel.hytale.builtin.adventure.memories.md`](./com.hypixel.hytale.builtin.adventure.memories.md) (2)
@@ -354,11 +435,6 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 
 - `ObjectiveAdminPanelPage` — class ObjectiveAdminPanelPage extends BasicCustomUIPage
 
-## com/hypixel/hytale/builtin/adventure/objectives/blockstates
-[`com.hypixel.hytale.builtin.adventure.objectives.blockstates.md`](./com.hypixel.hytale.builtin.adventure.objectives.blockstates.md) (1)
-
-- `TreasureChestBlock` — class TreasureChestBlock implements Component<ChunkStore>
-
 ## com/hypixel/hytale/builtin/adventure/objectives/commands
 [`com.hypixel.hytale.builtin.adventure.objectives.commands.md`](./com.hypixel.hytale.builtin.adventure.objectives.commands.md) (7)
 
@@ -416,7 +492,7 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `SetupObjectiveLine` — class SetupObjectiveLine extends ObjectiveTypeSetup
 
 ## com/hypixel/hytale/builtin/adventure/objectives/config/task
-[`com.hypixel.hytale.builtin.adventure.objectives.config.task.md`](./com.hypixel.hytale.builtin.adventure.objectives.config.task.md) (10)
+[`com.hypixel.hytale.builtin.adventure.objectives.config.task.md`](./com.hypixel.hytale.builtin.adventure.objectives.config.task.md) (9)
 
 - `BlockTagOrItemIdField` — class BlockTagOrItemIdField
 - `CountObjectiveTaskAsset` — abstract class CountObjectiveTaskAsset extends ObjectiveTaskAsset
@@ -425,7 +501,6 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `ObjectiveTaskAsset` — abstract class ObjectiveTaskAsset
 - `ReachLocationTaskAsset` — class ReachLocationTaskAsset extends ObjectiveTaskAsset
 - `TaskSet` — class TaskSet
-- `TreasureMapObjectiveTaskAsset` — class TreasureMapObjectiveTaskAsset extends ObjectiveTaskAsset
 - `UseBlockObjectiveTaskAsset` — class UseBlockObjectiveTaskAsset extends CountObjectiveTaskAsset
 - `UseEntityObjectiveTaskAsset` — class UseEntityObjectiveTaskAsset extends CountObjectiveTaskAsset
 
@@ -443,17 +518,10 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `WeatherTriggerCondition` — class WeatherTriggerCondition extends ObjectiveLocationTriggerCondition
 
 ## com/hypixel/hytale/builtin/adventure/objectives/config/worldlocationproviders
-[`com.hypixel.hytale.builtin.adventure.objectives.config.worldlocationproviders.md`](./com.hypixel.hytale.builtin.adventure.objectives.config.worldlocationproviders.md) (4)
+[`com.hypixel.hytale.builtin.adventure.objectives.config.worldlocationproviders.md`](./com.hypixel.hytale.builtin.adventure.objectives.config.worldlocationproviders.md) (2)
 
-- `CheckTagWorldHeightRadiusProvider` — class CheckTagWorldHeightRadiusProvider extends WorldLocationProvider
 - `LocationRadiusProvider` — class LocationRadiusProvider extends WorldLocationProvider
-- `LookBlocksBelowProvider` — class LookBlocksBelowProvider extends WorldLocationProvider
 - `WorldLocationProvider` — abstract class WorldLocationProvider
-
-## com/hypixel/hytale/builtin/adventure/objectives/events
-[`com.hypixel.hytale.builtin.adventure.objectives.events.md`](./com.hypixel.hytale.builtin.adventure.objectives.events.md) (1)
-
-- `TreasureChestOpeningEvent` — class TreasureChestOpeningEvent implements IEvent<String>
 
 ## com/hypixel/hytale/builtin/adventure/objectives/historydata
 [`com.hypixel.hytale.builtin.adventure.objectives.historydata.md`](./com.hypixel.hytale.builtin.adventure.objectives.historydata.md) (5)
@@ -465,11 +533,9 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `ObjectiveRewardHistoryData` — abstract class ObjectiveRewardHistoryData
 
 ## com/hypixel/hytale/builtin/adventure/objectives/interactions
-[`com.hypixel.hytale.builtin.adventure.objectives.interactions.md`](./com.hypixel.hytale.builtin.adventure.objectives.interactions.md) (4)
+[`com.hypixel.hytale.builtin.adventure.objectives.interactions.md`](./com.hypixel.hytale.builtin.adventure.objectives.interactions.md) (2)
 
 - `CanBreakRespawnPointInteraction` — class CanBreakRespawnPointInteraction extends SimpleBlockInteraction
-- `DestroyTreasureConditionInteraction` — class DestroyTreasureConditionInteraction extends SimpleBlockInteraction
-- `OpenTreasureContainerInteraction` — class OpenTreasureContainerInteraction extends SimpleBlockInteraction
 - `StartObjectiveInteraction` — class StartObjectiveInteraction extends SimpleInstantInteraction
 
 ## com/hypixel/hytale/builtin/adventure/objectives/markers
@@ -499,7 +565,7 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `ObjectivePlayerSetupSystem` — class ObjectivePlayerSetupSystem extends RefSystem<EntityStore>
 
 ## com/hypixel/hytale/builtin/adventure/objectives/task
-[`com.hypixel.hytale.builtin.adventure.objectives.task.md`](./com.hypixel.hytale.builtin.adventure.objectives.task.md) (10)
+[`com.hypixel.hytale.builtin.adventure.objectives.task.md`](./com.hypixel.hytale.builtin.adventure.objectives.task.md) (9)
 
 - `CountObjectiveTask` — abstract class CountObjectiveTask extends ObjectiveTask
 - `CraftObjectiveTask` — class CraftObjectiveTask extends CountObjectiveTask
@@ -508,16 +574,14 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `ObjectiveTask` — abstract class ObjectiveTask implements NetworkSerializer<Objective, ObjectiveTask>
 - `ObjectiveTaskRef` — class ObjectiveTaskRef<T extends ObjectiveTask>
 - `ReachLocationTask` — class ReachLocationTask extends ObjectiveTask
-- `TreasureMapObjectiveTask` — class TreasureMapObjectiveTask extends ObjectiveTask
 - `UseBlockObjectiveTask` — class UseBlockObjectiveTask extends CountObjectiveTask
 - `UseEntityObjectiveTask` — class UseEntityObjectiveTask extends CountObjectiveTask
 
 ## com/hypixel/hytale/builtin/adventure/objectives/transaction
-[`com.hypixel.hytale.builtin.adventure.objectives.transaction.md`](./com.hypixel.hytale.builtin.adventure.objectives.transaction.md) (7)
+[`com.hypixel.hytale.builtin.adventure.objectives.transaction.md`](./com.hypixel.hytale.builtin.adventure.objectives.transaction.md) (6)
 
 - `RegistrationTransactionRecord` — class RegistrationTransactionRecord extends TransactionRecord
 - `SpawnEntityTransactionRecord` — class SpawnEntityTransactionRecord extends TransactionRecord
-- `SpawnTreasureChestTransactionRecord` — class SpawnTreasureChestTransactionRecord extends TransactionRecord
 - `TransactionRecord` — abstract class TransactionRecord
 - `TransactionUtil` — class TransactionUtil
 - `UseEntityTransactionRecord` — class UseEntityTransactionRecord extends TransactionRecord
@@ -643,6 +707,16 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `Wilderness` — class Wilderness implements Component<EntityStore>
 - `WildernessLocation` — class WildernessLocation implements EventLocation
 
+## com/hypixel/hytale/builtin/adventure/wilderness/debug
+[`com.hypixel.hytale.builtin.adventure.wilderness.debug.md`](./com.hypixel.hytale.builtin.adventure.wilderness.debug.md) (6)
+
+- `WildernessCommand` — class WildernessCommand extends AbstractCommandCollection
+- `WildernessDebug` — class WildernessDebug implements Component<EntityStore>
+- `WildernessDebugCommand` — class WildernessDebugCommand extends AbstractTargetPlayerCommand
+- `WildernessDebugMapSystem` — class WildernessDebugMapSystem extends ArchetypeTickingSystem<EntityStore>
+- `WildernessDebugShapeSystem` — class WildernessDebugShapeSystem extends ArchetypeTickingSystem<EntityStore>
+- `WildernessDebugTint` — final class WildernessDebugTint
+
 ## com/hypixel/hytale/builtin/adventure/wilderness/resource
 [`com.hypixel.hytale.builtin.adventure.wilderness.resource.md`](./com.hypixel.hytale.builtin.adventure.wilderness.resource.md) (2)
 
@@ -656,17 +730,19 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `WildernessTrackerSystems` — class WildernessTrackerSystems
 
 ## com/hypixel/hytale/builtin/adventure/worldevents
-[`com.hypixel.hytale.builtin.adventure.worldevents.md`](./com.hypixel.hytale.builtin.adventure.worldevents.md) (6)
+[`com.hypixel.hytale.builtin.adventure.worldevents.md`](./com.hypixel.hytale.builtin.adventure.worldevents.md) (8)
 
 - `GlobalWorldEventManager` — final class GlobalWorldEventManager
+- `RecurringWorldEventTracker` — final class RecurringWorldEventTracker implements Resource<EntityStore>
 - `WorldEventManager` — class WorldEventManager implements Resource<EntityStore>
 - `WorldEventRecord` — final class WorldEventRecord extends Record
 - `WorldEventStorage` — class WorldEventStorage implements Resource<EntityStore>
 - `WorldEventsConfig` — class WorldEventsConfig
 - `WorldEventsPlugin` — class WorldEventsPlugin extends JavaPlugin
+- `WorldEventsWorldConfig` — class WorldEventsWorldConfig
 
 ## com/hypixel/hytale/builtin/adventure/worldevents/action
-[`com.hypixel.hytale.builtin.adventure.worldevents.action.md`](./com.hypixel.hytale.builtin.adventure.worldevents.action.md) (12)
+[`com.hypixel.hytale.builtin.adventure.worldevents.action.md`](./com.hypixel.hytale.builtin.adventure.worldevents.action.md) (13)
 
 - `EffectsAction` — final class EffectsAction extends Record implements EventAction
 - `EventAction` — interface EventAction
@@ -680,12 +756,13 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `NoAction` — final class NoAction extends Record implements EventAction
 - `PrefabPasteAction` — final class PrefabPasteAction extends Record implements EventAction
 - `PrefabRemoveAction` — final class PrefabRemoveAction extends Record implements EventAction
+- `ShowEventTitleAction` — final class ShowEventTitleAction implements EventAction
 
 ## com/hypixel/hytale/builtin/adventure/worldevents/action/effect
 [`com.hypixel.hytale.builtin.adventure.worldevents.action.effect.md`](./com.hypixel.hytale.builtin.adventure.worldevents.action.effect.md) (3)
 
 - `CameraFX` — final class CameraFX extends Record
-- `SoundFX` — final class SoundFX extends Record
+- `SoundFX` — final class SoundFX
 - `VisualFX` — final class VisualFX extends Record
 
 ## com/hypixel/hytale/builtin/adventure/worldevents/action/effect/shape
@@ -696,9 +773,10 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `Shape` — interface Shape
 
 ## com/hypixel/hytale/builtin/adventure/worldevents/command
-[`com.hypixel.hytale.builtin.adventure.worldevents.command.md`](./com.hypixel.hytale.builtin.adventure.worldevents.command.md) (6)
+[`com.hypixel.hytale.builtin.adventure.worldevents.command.md`](./com.hypixel.hytale.builtin.adventure.worldevents.command.md) (7)
 
 - `CancelCommand` — class CancelCommand extends AbstractCommandCollection
+- `EnableCommand` — class EnableCommand extends AbstractWorldCommand
 - `ListCommand` — class ListCommand extends AbstractAsyncWorldCommand
 - `PanelCommand` — class PanelCommand extends AbstractAsyncPlayerCommand
 - `ResetCommand` — class ResetCommand extends AbstractAsyncWorldCommand
@@ -715,7 +793,7 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `WorldEventSignal` — final class WorldEventSignal extends EcsEvent
 
 ## com/hypixel/hytale/builtin/adventure/worldevents/condition
-[`com.hypixel.hytale.builtin.adventure.worldevents.condition.md`](./com.hypixel.hytale.builtin.adventure.worldevents.condition.md) (8)
+[`com.hypixel.hytale.builtin.adventure.worldevents.condition.md`](./com.hypixel.hytale.builtin.adventure.worldevents.condition.md) (9)
 
 - `EventCondition` — interface EventCondition
 - `EventEndCondition` — class EventEndCondition implements EventCondition$Event<EventEndEcsEvent>
@@ -724,6 +802,7 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `NoCondition` — class NoCondition implements EventCondition
 - `ProximityCondition` — class ProximityCondition implements EventCondition$Ticking
 - `SignalCondition` — class SignalCondition implements EventCondition$Event<WorldEventSignal>
+- `TimeCondition` — class TimeCondition implements EventCondition$Ticking
 - `WorldClosedCondition` — class WorldClosedCondition implements EventCondition$Ticking
 
 ## com/hypixel/hytale/builtin/adventure/worldevents/condition/location
@@ -883,6 +962,11 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `AssetEditorUpdateWeatherPreviewLockEvent` — class AssetEditorUpdateWeatherPreviewLockEvent extends EditorClientEvent<Void>
 - `EditorClientEvent` — abstract class EditorClientEvent<KeyType> implements IEvent<KeyType>
 
+## com/hypixel/hytale/builtin/asseteditor/propertygallery
+[`com.hypixel.hytale.builtin.asseteditor.propertygallery.md`](./com.hypixel.hytale.builtin.asseteditor.propertygallery.md) (1)
+
+- `EditorPropertyGallery` — class EditorPropertyGallery implements JsonAssetWithMap<String, DefaultAssetMap<String, EditorPropertyGallery>>
+
 ## com/hypixel/hytale/builtin/asseteditor/util
 [`com.hypixel.hytale.builtin.asseteditor.util.md`](./com.hypixel.hytale.builtin.asseteditor.util.md) (3)
 
@@ -922,13 +1006,14 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `MusicPlayerSystems` — class MusicPlayerSystems
 
 ## com/hypixel/hytale/builtin/augmentblocks
-[`com.hypixel.hytale.builtin.augmentblocks.md`](./com.hypixel.hytale.builtin.augmentblocks.md) (5)
+[`com.hypixel.hytale.builtin.augmentblocks.md`](./com.hypixel.hytale.builtin.augmentblocks.md) (6)
 
 - `AugmentBlock` — class AugmentBlock implements Component<ChunkStore>
 - `AugmentBlocksPlugin` — class AugmentBlocksPlugin extends JavaPlugin
 - `AugmentBlocksSpatialSystem` — class AugmentBlocksSpatialSystem extends SpatialSystem<ChunkStore>
 - `AugmentBlocksUtils` — final class AugmentBlocksUtils
 - `AugmentConditionInteraction` — class AugmentConditionInteraction extends SimpleInstantInteraction
+- `AugmentUpgrades` — final class AugmentUpgrades
 
 ## com/hypixel/hytale/builtin/augmentblocks/config
 [`com.hypixel.hytale.builtin.augmentblocks.config.md`](./com.hypixel.hytale.builtin.augmentblocks.config.md) (1)
@@ -940,6 +1025,36 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 
 - `AugmentProgression` — final class AugmentProgression
 - `AugmentProgressionRestoreSystem` — class AugmentProgressionRestoreSystem extends RefSystem<ChunkStore>
+
+## com/hypixel/hytale/builtin/augmentblocks/ui
+[`com.hypixel.hytale.builtin.augmentblocks.ui.md`](./com.hypixel.hytale.builtin.augmentblocks.ui.md) (2)
+
+- `AugmentMessagePage` — class AugmentMessagePage extends CustomUIPage
+- `AugmentUpgradePage` — class AugmentUpgradePage extends InteractiveCustomUIPage<AugmentUpgradePage$PageData>
+
+## com/hypixel/hytale/builtin/beam
+[`com.hypixel.hytale.builtin.beam.md`](./com.hypixel.hytale.builtin.beam.md) (4)
+
+- `AttachedBeam` — final class AttachedBeam extends Record
+- `BeamComponent` — class BeamComponent implements Component<EntityStore>
+- `BeamPlugin` — class BeamPlugin extends JavaPlugin
+- `BeamSystems` — class BeamSystems
+
+## com/hypixel/hytale/builtin/beam/asset
+[`com.hypixel.hytale.builtin.beam.asset.md`](./com.hypixel.hytale.builtin.beam.asset.md) (2)
+
+- `Beam` — class Beam implements JsonAssetWithMap<String, IndexedLookupTableAssetMap<String, Beam>>, NetworkSerializable<BeamConfig>
+- `BeamPacketGenerator` — class BeamPacketGenerator extends AssetPacketGenerator<String, Beam, IndexedLookupTableAssetMap<String, Beam>>
+
+## com/hypixel/hytale/builtin/beam/command
+[`com.hypixel.hytale.builtin.beam.command.md`](./com.hypixel.hytale.builtin.beam.command.md) (1)
+
+- `BeamCommand` — class BeamCommand extends AbstractCommandCollection
+
+## com/hypixel/hytale/builtin/beam/interaction
+[`com.hypixel.hytale.builtin.beam.interaction.md`](./com.hypixel.hytale.builtin.beam.interaction.md) (1)
+
+- `AttachBeamInteraction` — class AttachBeamInteraction extends SimpleInstantInteraction
 
 ## com/hypixel/hytale/builtin/beds
 [`com.hypixel.hytale.builtin.beds.md`](./com.hypixel.hytale.builtin.beds.md) (1)
@@ -990,14 +1105,13 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `UpdateWorldSlumberSystem` — class UpdateWorldSlumberSystem extends TickingSystem<EntityStore>
 
 ## com/hypixel/hytale/builtin/blockphysics
-[`com.hypixel.hytale.builtin.blockphysics.md`](./com.hypixel.hytale.builtin.blockphysics.md) (6)
+[`com.hypixel.hytale.builtin.blockphysics.md`](./com.hypixel.hytale.builtin.blockphysics.md) (5)
 
 - `BlockPhysicsPlugin` — class BlockPhysicsPlugin extends JavaPlugin
 - `BlockPhysicsSystems` — class BlockPhysicsSystems
 - `BlockPhysicsUtil` — class BlockPhysicsUtil
 - `BlockSelectionSupportUtil` — final class BlockSelectionSupportUtil
 - `PrefabBufferValidator` — class PrefabBufferValidator
-- `WorldValidationUtil` — class WorldValidationUtil
 
 ## com/hypixel/hytale/builtin/blockspawner
 [`com.hypixel.hytale.builtin.blockspawner.md`](./com.hypixel.hytale.builtin.blockspawner.md) (3)
@@ -1194,9 +1308,9 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 [`com.hypixel.hytale.builtin.buildertools.scriptedbrushes.md`](./com.hypixel.hytale.builtin.buildertools.scriptedbrushes.md) (5)
 
 - `BrushConfig` — class BrushConfig
-- `BrushConfigChunkAccessor` — class BrushConfigChunkAccessor extends LocalCachedChunkAccessor
 - `BrushConfigCommandExecutor` — class BrushConfigCommandExecutor
 - `BrushConfigEditStore` — class BrushConfigEditStore
+- `BrushConfigSectionAccessor` — class BrushConfigSectionAccessor extends SectionAccessor
 - `ScriptedBrushAsset` — class ScriptedBrushAsset implements JsonAssetWithMap<String, DefaultAssetMap<String, ScriptedBrushAsset>>
 
 ## com/hypixel/hytale/builtin/buildertools/scriptedbrushes/commands
@@ -1366,6 +1480,17 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `RecursivePrefabLoader` — abstract class RecursivePrefabLoader<T> implements function.BiFunction<String, Random, T>
 - `Sample` — class Sample
 
+## com/hypixel/hytale/builtin/buildertools/world
+[`com.hypixel.hytale.builtin.buildertools.world.md`](./com.hypixel.hytale.builtin.buildertools.world.md) (7)
+
+- `ColumnAccessor` — final class ColumnAccessor
+- `Int3Stack` — final class Int3Stack
+- `Prefetch` — final class Prefetch
+- `PrefetchLease` — final class PrefetchLease
+- `RegionReader` — final class RegionReader
+- `SectionAccessor` — class SectionAccessor extends SectionReader implements RegionReader$StorageSource
+- `SectionKeys` — final class SectionKeys
+
 ## com/hypixel/hytale/builtin/commandmacro
 [`com.hypixel.hytale.builtin.commandmacro.md`](./com.hypixel.hytale.builtin.commandmacro.md) (8)
 
@@ -1509,29 +1634,33 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `DeployablesSystem` — class DeployablesSystem
 
 ## com/hypixel/hytale/builtin/encountermanager
-[`com.hypixel.hytale.builtin.encountermanager.md`](./com.hypixel.hytale.builtin.encountermanager.md) (13)
+[`com.hypixel.hytale.builtin.encountermanager.md`](./com.hypixel.hytale.builtin.encountermanager.md) (14)
 
 - `BuilderEncounterManager` — class BuilderEncounterManager extends SupportConfigBuilder<EncounterManager> implements EncounterBuilder, OfflineValidatable
 - `BuilderEncounterManagerAbstract` — class BuilderEncounterManagerAbstract extends BuilderEncounterManager
 - `BuilderEncounterManagerVariant` — class BuilderEncounterManagerVariant extends DependencyTrackingBuilder<EncounterManager> implements EncounterBuilder, OfflineValidatable
-- `EncounterAudioState` — class EncounterAudioState implements Component<EntityStore>, EncounterMemberConsumer
-- `EncounterBossBarState` — class EncounterBossBarState implements Component<EntityStore>, EncounterMemberConsumer
+- `EncounterAudioState` — class EncounterAudioState implements EncounterMemberConsumer
+- `EncounterBossBarState` — class EncounterBossBarState implements EncounterMemberConsumer
 - `EncounterBuilder` — interface EncounterBuilder
 - `EncounterCommand` — class EncounterCommand extends AbstractCommandCollection
 - `EncounterManager` — class EncounterManager implements Component<EntityStore>, IAnnotatedComponent
 - `EncounterManagerPlugin` — class EncounterManagerPlugin extends JavaPlugin
 - `EncounterManagerSystems` — class EncounterManagerSystems
-- `EncounterMemberConsumer` — interface EncounterMemberConsumer
+- `EncounterMemberConsumer` — interface EncounterMemberConsumer extends Component<EntityStore>
 - `EncounterMemberSystems` — class EncounterMemberSystems
 - `EncounterMembers` — class EncounterMembers implements Component<EntityStore>
+- `EncounterWeatherState` — class EncounterWeatherState implements EncounterMemberConsumer
 
 ## com/hypixel/hytale/builtin/encountermanager/npc
-[`com.hypixel.hytale.builtin.encountermanager.npc.md`](./com.hypixel.hytale.builtin.encountermanager.npc.md) (9)
+[`com.hypixel.hytale.builtin.encountermanager.npc.md`](./com.hypixel.hytale.builtin.encountermanager.npc.md) (12)
 
 - `ActionChangeTargetRole` — class ActionChangeTargetRole extends ActionBase
 - `ActionClearEncounterBossBar` — class ActionClearEncounterBossBar extends ActionBase
+- `ActionClearEncounterWeather` — class ActionClearEncounterWeather extends ActionBase
+- `ActionGrantReward` — class ActionGrantReward extends ActionBase
 - `ActionSetEncounterAudioState` — class ActionSetEncounterAudioState extends ActionBase
 - `ActionSetEncounterBossBar` — class ActionSetEncounterBossBar extends ActionBase
+- `ActionSetEncounterWeather` — class ActionSetEncounterWeather extends ActionBase
 - `ActionSetTargetNPCInvulnerable` — class ActionSetTargetNPCInvulnerable extends ActionBase
 - `ActionSignalWorldEvent` — class ActionSignalWorldEvent extends ActionBase
 - `ActionStartEncounterMusic` — class ActionStartEncounterMusic extends ActionBase
@@ -1539,12 +1668,15 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `EncounterMemberCollector` — class EncounterMemberCollector implements ISensorEntityCollector
 
 ## com/hypixel/hytale/builtin/encountermanager/npc/builders
-[`com.hypixel.hytale.builtin.encountermanager.npc.builders.md`](./com.hypixel.hytale.builtin.encountermanager.npc.builders.md) (9)
+[`com.hypixel.hytale.builtin.encountermanager.npc.builders.md`](./com.hypixel.hytale.builtin.encountermanager.npc.builders.md) (12)
 
 - `BuilderActionChangeTargetRole` — class BuilderActionChangeTargetRole extends BuilderActionBase
 - `BuilderActionClearEncounterBossBar` — class BuilderActionClearEncounterBossBar extends BuilderActionBase
+- `BuilderActionClearEncounterWeather` — class BuilderActionClearEncounterWeather extends BuilderActionBase
+- `BuilderActionGrantReward` — class BuilderActionGrantReward extends BuilderActionBase
 - `BuilderActionSetEncounterAudioState` — class BuilderActionSetEncounterAudioState extends BuilderActionBase
 - `BuilderActionSetEncounterBossBar` — class BuilderActionSetEncounterBossBar extends BuilderActionBase
+- `BuilderActionSetEncounterWeather` — class BuilderActionSetEncounterWeather extends BuilderActionBase
 - `BuilderActionSetTargetNPCInvulnerable` — class BuilderActionSetTargetNPCInvulnerable extends BuilderActionBase
 - `BuilderActionSignalWorldEvent` — class BuilderActionSignalWorldEvent extends BuilderActionBase
 - `BuilderActionStartEncounterMusic` — class BuilderActionStartEncounterMusic extends BuilderActionBase
@@ -1582,6 +1714,21 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 [`com.hypixel.hytale.builtin.gameflags.command.md`](./com.hypixel.hytale.builtin.gameflags.command.md) (1)
 
 - `GameFlagsCommand` — class GameFlagsCommand extends AbstractCommandCollection
+
+## com/hypixel/hytale/builtin/gameflags/integration
+[`com.hypixel.hytale.builtin.gameflags.integration.md`](./com.hypixel.hytale.builtin.gameflags.integration.md) (1)
+
+- `GameFlagLevelCondition` — class GameFlagLevelCondition implements EventCondition$Ticking
+
+## com/hypixel/hytale/builtin/gameflags/integration/npc
+[`com.hypixel.hytale.builtin.gameflags.integration.npc.md`](./com.hypixel.hytale.builtin.gameflags.integration.npc.md) (1)
+
+- `SensorGameFlag` — class SensorGameFlag extends SensorBase
+
+## com/hypixel/hytale/builtin/gameflags/integration/npc/builders
+[`com.hypixel.hytale.builtin.gameflags.integration.npc.builders.md`](./com.hypixel.hytale.builtin.gameflags.integration.npc.builders.md) (1)
+
+- `BuilderSensorGameFlag` — class BuilderSensorGameFlag extends BuilderSensorBase
 
 ## com/hypixel/hytale/builtin/hytalegenerator
 [`com.hypixel.hytale.builtin.hytalegenerator.md`](./com.hypixel.hytale.builtin.hytalegenerator.md) (17)
@@ -2207,11 +2354,10 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `WeightedThicknessLayer` — class WeightedThicknessLayer<V> extends SpaceAndDepthMaterialProvider$Layer<V>
 
 ## com/hypixel/hytale/builtin/hytalegenerator/math
-[`com.hypixel.hytale.builtin.hytalegenerator.math.md`](./com.hypixel.hytale.builtin.hytalegenerator.math.md) (5)
+[`com.hypixel.hytale.builtin.hytalegenerator.math.md`](./com.hypixel.hytale.builtin.hytalegenerator.math.md) (4)
 
 - `Calculator` — class Calculator
 - `InterpolatedCurve` — class InterpolatedCurve implements it.unimi.dsi.fastutil.doubles.Double2DoubleFunction
-- `Interpolation` — class Interpolation
 - `NodeFunction` — class NodeFunction implements function.Function<Double, Double>, it.unimi.dsi.fastutil.doubles.Double2DoubleFunction
 - `Normalizer` — class Normalizer
 
@@ -2270,10 +2416,9 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `BiomeEditorPage` — class BiomeEditorPage extends InteractiveCustomUIPage<BiomeEditor$Config>
 
 ## com/hypixel/hytale/builtin/hytalegenerator/positionproviders
-[`com.hypixel.hytale.builtin.hytalegenerator.positionproviders.md`](./com.hypixel.hytale.builtin.hytalegenerator.positionproviders.md) (21)
+[`com.hypixel.hytale.builtin.hytalegenerator.positionproviders.md`](./com.hypixel.hytale.builtin.hytalegenerator.positionproviders.md) (20)
 
 - `AnchorPositionProvider` — class AnchorPositionProvider extends PositionProvider
-- `BaseHeightPositionProvider` — class BaseHeightPositionProvider extends PositionProvider
 - `BoundPositionProvider` — class BoundPositionProvider extends PositionProvider
 - `ClustersPositionProvider` — class ClustersPositionProvider extends PositionProvider
 - `DirectionalJitterPositionProvider` — class DirectionalJitterPositionProvider extends PositionProvider
@@ -2505,15 +2650,15 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `WorldReturnPoint` — class WorldReturnPoint
 
 ## com/hypixel/hytale/builtin/instances/event
-[`com.hypixel.hytale.builtin.instances.event.md`](./com.hypixel.hytale.builtin.instances.event.md) (1)
+[`com.hypixel.hytale.builtin.instances.event.md`](./com.hypixel.hytale.builtin.instances.event.md) (2)
 
 - `DiscoverInstanceEvent` — abstract class DiscoverInstanceEvent extends EcsEvent
+- `EnterInstanceTeleporterEvent` — final class EnterInstanceTeleporterEvent extends EcsEvent
 
-## com/hypixel/hytale/builtin/instances/hud
-[`com.hypixel.hytale.builtin.instances.hud.md`](./com.hypixel.hytale.builtin.instances.hud.md) (2)
+## com/hypixel/hytale/builtin/instances/integrations
+[`com.hypixel.hytale.builtin.instances.integrations.md`](./com.hypixel.hytale.builtin.instances.integrations.md) (1)
 
-- `InstanceRemovalHud` — class InstanceRemovalHud extends CustomUIHud
-- `InstanceRemovalHudSystem` — class InstanceRemovalHudSystem extends RefSystem<EntityStore>
+- `EnterInstanceTeleporterCondition` — class EnterInstanceTeleporterCondition implements EventCondition$TrackedEvent<EnterInstanceTeleporterEvent>
 
 ## com/hypixel/hytale/builtin/instances/interactions
 [`com.hypixel.hytale.builtin.instances.interactions.md`](./com.hypixel.hytale.builtin.instances.interactions.md) (3)
@@ -2529,10 +2674,11 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `InstanceListPage` — class InstanceListPage extends InteractiveCustomUIPage<InstanceListPage$PageData>
 
 ## com/hypixel/hytale/builtin/instances/removal
-[`com.hypixel.hytale.builtin.instances.removal.md`](./com.hypixel.hytale.builtin.instances.removal.md) (6)
+[`com.hypixel.hytale.builtin.instances.removal.md`](./com.hypixel.hytale.builtin.instances.removal.md) (7)
 
 - `IdleTimeoutCondition` — class IdleTimeoutCondition implements RemovalCondition
 - `InstanceDataResource` — class InstanceDataResource implements Resource<ChunkStore>
+- `InstanceRemovalTitleSystem` — class InstanceRemovalTitleSystem extends RefSystem<EntityStore>
 - `RemovalCondition` — interface RemovalCondition
 - `RemovalSystem` — class RemovalSystem extends TickingSystem<ChunkStore> implements RunWhenPausedSystem<ChunkStore>
 - `TimeoutCondition` — class TimeoutCondition implements RemovalCondition
@@ -2545,19 +2691,17 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `LANDiscoveryPlugin` — class LANDiscoveryPlugin extends JavaPlugin
 
 ## com/hypixel/hytale/builtin/locate
-[`com.hypixel.hytale.builtin.locate.md`](./com.hypixel.hytale.builtin.locate.md) (4)
+[`com.hypixel.hytale.builtin.locate.md`](./com.hypixel.hytale.builtin.locate.md) (3)
 
-- `CaveDungeonSearchUtil` — final class CaveDungeonSearchUtil
 - `LocatePlugin` — class LocatePlugin extends JavaPlugin
 - `PrefabPatternSearchUtil` — final class PrefabPatternSearchUtil
 - `SpiralSearchUtil` — final class SpiralSearchUtil
 
 ## com/hypixel/hytale/builtin/locate/command
-[`com.hypixel.hytale.builtin.locate.command.md`](./com.hypixel.hytale.builtin.locate.command.md) (6)
+[`com.hypixel.hytale.builtin.locate.command.md`](./com.hypixel.hytale.builtin.locate.command.md) (5)
 
 - `LocateBiomeCommand` — class LocateBiomeCommand extends AbstractLocateSubcommand
 - `LocateCommand` — class LocateCommand extends AbstractCommandCollection
-- `LocateDungeonCommand` — class LocateDungeonCommand extends AbstractLocateSubcommand
 - `LocatePrefabCommand` — class LocatePrefabCommand extends AbstractLocateSubcommand
 - `LocateRegionCommand` — class LocateRegionCommand extends AbstractLocateSubcommand
 - `LocateZoneCommand` — class LocateZoneCommand extends AbstractLocateSubcommand
@@ -2632,11 +2776,12 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `Positioning` — final class Positioning extends Enum<Positioning>
 
 ## com/hypixel/hytale/builtin/npccombatactionevaluator/conditions
-[`com.hypixel.hytale.builtin.npccombatactionevaluator.conditions.md`](./com.hypixel.hytale.builtin.npccombatactionevaluator.conditions.md) (3)
+[`com.hypixel.hytale.builtin.npccombatactionevaluator.conditions.md`](./com.hypixel.hytale.builtin.npccombatactionevaluator.conditions.md) (4)
 
-- `RecentSustainedDamageCondition` — class RecentSustainedDamageCondition extends ScaledCurveCondition
+- `RecentSustainedDamageCondition` — class RecentSustainedDamageCondition extends SustainedDamageCondition
+- `SustainedDamageCondition` — abstract class SustainedDamageCondition extends ScaledCurveCondition
 - `TargetMemoryCountCondition` — class TargetMemoryCountCondition extends ScaledCurveCondition
-- `TotalSustainedDamageCondition` — class TotalSustainedDamageCondition extends ScaledCurveCondition
+- `TotalSustainedDamageCondition` — class TotalSustainedDamageCondition extends SustainedDamageCondition
 
 ## com/hypixel/hytale/builtin/npccombatactionevaluator/config
 [`com.hypixel.hytale.builtin.npccombatactionevaluator.config.md`](./com.hypixel.hytale.builtin.npccombatactionevaluator.config.md) (1)
@@ -2688,6 +2833,16 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 
 - `NPCEditorPlugin` — class NPCEditorPlugin extends JavaPlugin
 - `NPCRoleAssetTypeHandler` — class NPCRoleAssetTypeHandler extends JsonTypeHandler
+
+## com/hypixel/hytale/builtin/npcknockbackdebug
+[`com.hypixel.hytale.builtin.npcknockbackdebug.md`](./com.hypixel.hytale.builtin.npcknockbackdebug.md) (6)
+
+- `KnockbackApplyCommand` — class KnockbackApplyCommand extends AbstractCommandCollection
+- `KnockbackCommand` — class KnockbackCommand extends AbstractCommandCollection
+- `KnockbackPresetsCommand` — class KnockbackPresetsCommand extends CommandBase
+- `KnockbackTraceComponent` — class KnockbackTraceComponent implements Component<EntityStore>
+- `NPCKnockbackDebugPlugin` — class NPCKnockbackDebugPlugin extends JavaPlugin
+- `TraceKnockbackSystem` — class TraceKnockbackSystem extends EntityTickingSystem<EntityStore>
 
 ## com/hypixel/hytale/builtin/parkour
 [`com.hypixel.hytale.builtin.parkour.md`](./com.hypixel.hytale.builtin.parkour.md) (4)
@@ -2804,28 +2959,21 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `PortalInstanceRelinker` — final class PortalInstanceRelinker
 - `PortalsPlugin` — class PortalsPlugin extends JavaPlugin
 
-## com/hypixel/hytale/builtin/portals/commands
-[`com.hypixel.hytale.builtin.portals.commands.md`](./com.hypixel.hytale.builtin.portals.commands.md) (1)
-
-- `FragmentCommands` — class FragmentCommands extends AbstractCommandCollection
-
 ## com/hypixel/hytale/builtin/portals/commands/fragment
-[`com.hypixel.hytale.builtin.portals.commands.fragment.md`](./com.hypixel.hytale.builtin.portals.commands.fragment.md) (4)
+[`com.hypixel.hytale.builtin.portals.commands.fragment.md`](./com.hypixel.hytale.builtin.portals.commands.fragment.md) (7)
 
+- `LeavePortalCommand` — class LeavePortalCommand extends PortalWorldCommandBase
+- `PortalCommands` — class PortalCommands extends AbstractCommandCollection
 - `PortalWorldCommandBase` — abstract class PortalWorldCommandBase extends AbstractWorldCommand
-- `TimerFragmentCommand` — class TimerFragmentCommand extends PortalWorldCommandBase
-- `TimerToggleFragmentCommand` — class TimerToggleFragmentCommand extends PortalWorldCommandBase
-- `UiToggleFragmentCommand` — class UiToggleFragmentCommand extends PortalWorldCommandBase
-
-## com/hypixel/hytale/builtin/portals/commands/player
-[`com.hypixel.hytale.builtin.portals.commands.player.md`](./com.hypixel.hytale.builtin.portals.commands.player.md) (1)
-
-- `LeaveCommand` — class LeaveCommand extends AbstractPlayerCommand
+- `TimerAddPortalCommand` — class TimerAddPortalCommand extends PortalWorldCommandBase
+- `TimerPortalCommand` — class TimerPortalCommand extends PortalWorldCommandBase
+- `ToggleTimerPortalCommand` — class ToggleTimerPortalCommand extends PortalWorldCommandBase
+- `ToggleUiPortalCommand` — class ToggleUiPortalCommand extends PortalWorldCommandBase
 
 ## com/hypixel/hytale/builtin/portals/commands/utils
 [`com.hypixel.hytale.builtin.portals.commands.utils.md`](./com.hypixel.hytale.builtin.portals.commands.utils.md) (1)
 
-- `CursedHeldItemCommand` — class CursedHeldItemCommand extends AbstractPlayerCommand
+- `EphemeralHeldItemCommand` — class EphemeralHeldItemCommand extends AbstractPlayerCommand
 
 ## com/hypixel/hytale/builtin/portals/commands/voidevent
 [`com.hypixel.hytale.builtin.portals.commands.voidevent.md`](./com.hypixel.hytale.builtin.portals.commands.voidevent.md) (2)
@@ -2846,11 +2994,12 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `VoidSpawner` — class VoidSpawner implements Component<EntityStore>
 
 ## com/hypixel/hytale/builtin/portals/components/voidevent/config
-[`com.hypixel.hytale.builtin.portals.components.voidevent.config.md`](./com.hypixel.hytale.builtin.portals.components.voidevent.config.md) (3)
+[`com.hypixel.hytale.builtin.portals.components.voidevent.config.md`](./com.hypixel.hytale.builtin.portals.components.voidevent.config.md) (4)
 
 - `InvasionPortalConfig` — class InvasionPortalConfig
 - `VoidEventConfig` — class VoidEventConfig
 - `VoidEventStage` — class VoidEventStage
+- `VoidEventTitle` — final class VoidEventTitle extends Record
 
 ## com/hypixel/hytale/builtin/portals/events
 [`com.hypixel.hytale.builtin.portals.events.md`](./com.hypixel.hytale.builtin.portals.events.md) (1)
@@ -2858,13 +3007,15 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `EnterPortalEvent` — class EnterPortalEvent extends EcsEvent
 
 ## com/hypixel/hytale/builtin/portals/integrations
-[`com.hypixel.hytale.builtin.portals.integrations.md`](./com.hypixel.hytale.builtin.portals.integrations.md) (5)
+[`com.hypixel.hytale.builtin.portals.integrations.md`](./com.hypixel.hytale.builtin.portals.integrations.md) (7)
 
 - `EnterPortalCondition` — class EnterPortalCondition implements EventCondition$TrackedEvent<EnterPortalEvent>
 - `FragmentOriginGameplayConfig` — class FragmentOriginGameplayConfig
 - `PortalGameplayConfig` — class PortalGameplayConfig
 - `PortalMarkerProvider` — class PortalMarkerProvider implements WorldMapManager$MarkerProvider
 - `PortalRemovalCondition` — class PortalRemovalCondition implements RemovalCondition
+- `PortalUpgradesConfig` — class PortalUpgradesConfig
+- `PortalWorldConfig` — class PortalWorldConfig
 
 ## com/hypixel/hytale/builtin/portals/interactions
 [`com.hypixel.hytale.builtin.portals.interactions.md`](./com.hypixel.hytale.builtin.portals.interactions.md) (2)
@@ -2883,23 +3034,26 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `BuilderActionAdjustPortalTimer` — class BuilderActionAdjustPortalTimer extends BuilderActionBase
 
 ## com/hypixel/hytale/builtin/portals/resources
-[`com.hypixel.hytale.builtin.portals.resources.md`](./com.hypixel.hytale.builtin.portals.resources.md) (1)
+[`com.hypixel.hytale.builtin.portals.resources.md`](./com.hypixel.hytale.builtin.portals.resources.md) (2)
 
 - `PortalWorld` — class PortalWorld implements Resource<EntityStore>
+- `VoidEventResource` — class VoidEventResource implements Resource<EntityStore>
 
 ## com/hypixel/hytale/builtin/portals/systems
-[`com.hypixel.hytale.builtin.portals.systems.md`](./com.hypixel.hytale.builtin.portals.systems.md) (3)
+[`com.hypixel.hytale.builtin.portals.systems.md`](./com.hypixel.hytale.builtin.portals.systems.md) (5)
 
 - `CloseWorldWhenBreakingDeviceSystems` — final class CloseWorldWhenBreakingDeviceSystems
+- `LeavePortalButtonSystem` — class LeavePortalButtonSystem extends RefSystem<EntityStore>
+- `PortalEntryCountSystem` — final class PortalEntryCountSystem extends HolderSystem<EntityStore>
 - `PortalInvalidDestinationSystem` — class PortalInvalidDestinationSystem extends RefSystem<ChunkStore>
 - `PortalTrackerSystems` — final class PortalTrackerSystems
 
 ## com/hypixel/hytale/builtin/portals/systems/curse
 [`com.hypixel.hytale.builtin.portals.systems.curse.md`](./com.hypixel.hytale.builtin.portals.systems.curse.md) (3)
 
-- `CurseItemDropsSystem` — class CurseItemDropsSystem extends RefSystem<EntityStore>
-- `DeleteCursedItemsOnSpawnSystem` — class DeleteCursedItemsOnSpawnSystem extends RefSystem<EntityStore>
-- `DiedInPortalSystem` — class DiedInPortalSystem extends DeathSystems$OnDeathSystem
+- `CheckInteractionChainStartSystem` — class CheckInteractionChainStartSystem extends EntityEventSystem<EntityStore, InteractionChainStartEvent>
+- `DeleteEphemeralItemsOnSpawnSystem` — class DeleteEphemeralItemsOnSpawnSystem extends RefSystem<EntityStore>
+- `EphemeralItemDropsSystem` — class EphemeralItemDropsSystem extends RefSystem<EntityStore>
 
 ## com/hypixel/hytale/builtin/portals/systems/voidevent
 [`com.hypixel.hytale.builtin.portals.systems.voidevent.md`](./com.hypixel.hytale.builtin.portals.systems.voidevent.md) (6)
@@ -2912,22 +3066,30 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `VoidSpawnerSystems` — final class VoidSpawnerSystems
 
 ## com/hypixel/hytale/builtin/portals/ui
-[`com.hypixel.hytale.builtin.portals.ui.md`](./com.hypixel.hytale.builtin.portals.ui.md) (4)
+[`com.hypixel.hytale.builtin.portals.ui.md`](./com.hypixel.hytale.builtin.portals.ui.md) (9)
 
-- `PortalDeviceActivePage` — class PortalDeviceActivePage extends InteractiveCustomUIPage<PortalDeviceActivePage$PageData>
+- `LeavePortalButtonUI` — final class LeavePortalButtonUI
+- `PortalActivePrompt` — class PortalActivePrompt extends PortalPrompt
+- `PortalDeviceActivePage` — final class PortalDeviceActivePage
 - `PortalDevicePageSupplier` — class PortalDevicePageSupplier implements OpenCustomUIInteraction$CustomPageSupplier
-- `PortalDeviceSummonPage` — class PortalDeviceSummonPage extends InteractiveCustomUIPage<PortalDeviceSummonPage$Data>
+- `PortalDeviceSummonPage` — final class PortalDeviceSummonPage
+- `PortalPagePacketHandler` — class PortalPagePacketHandler implements SubPacketHandler
+- `PortalPrompt` — abstract class PortalPrompt implements Component<EntityStore>
 - `PortalSpawnFinder` — final class PortalSpawnFinder
+- `PortalSummonPrompt` — class PortalSummonPrompt extends PortalPrompt
 
 ## com/hypixel/hytale/builtin/portals/utils
-[`com.hypixel.hytale.builtin.portals.utils.md`](./com.hypixel.hytale.builtin.portals.utils.md) (2)
+[`com.hypixel.hytale.builtin.portals.utils.md`](./com.hypixel.hytale.builtin.portals.utils.md) (3)
 
 - `BlockTypeUtils` — final class BlockTypeUtils
-- `CursedItems` — final class CursedItems
+- `EphemeralItems` — final class EphemeralItems
+- `PortalWorldUtils` — final class PortalWorldUtils
 
 ## com/hypixel/hytale/builtin/portals/utils/posqueries
-[`com.hypixel.hytale.builtin.portals.utils.posqueries.md`](./com.hypixel.hytale.builtin.portals.utils.posqueries.md) (3)
+[`com.hypixel.hytale.builtin.portals.utils.posqueries.md`](./com.hypixel.hytale.builtin.portals.utils.posqueries.md) (5)
 
+- `AsyncPositionPredicate` — interface AsyncPositionPredicate
+- `AsyncSpatialSearch` — final class AsyncSpatialSearch
 - `PositionPredicate` — interface PositionPredicate
 - `SpatialQuery` — interface SpatialQuery
 - `SpatialQueryDebug` — class SpatialQueryDebug
@@ -2987,6 +3149,17 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 
 - `ExplosiveSystems` — class ExplosiveSystems
 
+## com/hypixel/hytale/builtin/rewards
+[`com.hypixel.hytale.builtin.rewards.md`](./com.hypixel.hytale.builtin.rewards.md) (1)
+
+- `RewardModule` — class RewardModule extends JavaPlugin
+
+## com/hypixel/hytale/builtin/rewards/asset
+[`com.hypixel.hytale.builtin.rewards.asset.md`](./com.hypixel.hytale.builtin.rewards.asset.md) (2)
+
+- `EntitlementReward` — class EntitlementReward extends RewardAsset
+- `RewardAsset` — abstract class RewardAsset implements JsonAssetWithMap<String, DefaultAssetMap<String, RewardAsset>>
+
 ## com/hypixel/hytale/builtin/safetyroll
 [`com.hypixel.hytale.builtin.safetyroll.md`](./com.hypixel.hytale.builtin.safetyroll.md) (1)
 
@@ -3036,7 +3209,7 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `TeleportHistoryCommand` — class TeleportHistoryCommand extends AbstractPlayerCommand
 - `TeleportHomeCommand` — class TeleportHomeCommand extends AbstractPlayerCommand
 - `TeleportTopCommand` — class TeleportTopCommand extends AbstractPlayerCommand
-- `TeleportWorldCommand` — class TeleportWorldCommand extends AbstractPlayerCommand
+- `TeleportWorldCommand` — class TeleportWorldCommand extends AbstractTargetPlayerCommand
 
 ## com/hypixel/hytale/builtin/teleport/commands/teleport/variant
 [`com.hypixel.hytale.builtin.teleport.commands.teleport.variant.md`](./com.hypixel.hytale.builtin.teleport.commands.teleport.variant.md) (4)
@@ -3132,9 +3305,10 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `TriggerVolumeEntityQuery` — final class TriggerVolumeEntityQuery
 
 ## com/hypixel/hytale/builtin/triggervolumes/effect/builtin
-[`com.hypixel.hytale.builtin.triggervolumes.effect.builtin.md`](./com.hypixel.hytale.builtin.triggervolumes.effect.builtin.md) (32)
+[`com.hypixel.hytale.builtin.triggervolumes.effect.builtin.md`](./com.hypixel.hytale.builtin.triggervolumes.effect.builtin.md) (36)
 
 - `CancelParticlesEffect` — class CancelParticlesEffect extends TriggerEffect
+- `ClearRespawnPointsEffect` — class ClearRespawnPointsEffect extends TriggerEffect
 - `ControlDoorsEffect` — class ControlDoorsEffect extends TriggerEffect
 - `DamageEntityEffect` — class DamageEntityEffect extends TriggerEffect
 - `DeleteVolumeEffect` — class DeleteVolumeEffect extends VolumeStateEffect
@@ -3152,13 +3326,16 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `PlayVfxEffect` — class PlayVfxEffect extends TriggerEffect
 - `RemoveEntitiesEffect` — class RemoveEntitiesEffect extends TriggerEffect
 - `ReplaceBlockTypeEffect` — class ReplaceBlockTypeEffect extends TriggerEffect
+- `RespawnPointEffectUtil` — final class RespawnPointEffectUtil
 - `RunRootInteractionEffect` — class RunRootInteractionEffect extends TriggerEffect
 - `SendMessageEffect` — class SendMessageEffect extends TriggerEffect
 - `SendSignalEffect` — class SendSignalEffect extends TriggerEffect
 - `SetGameModeEffect` — class SetGameModeEffect extends TriggerEffect
 - `SetMusicEffect` — class SetMusicEffect extends TriggerEffect
+- `SetRespawnPointEffect` — class SetRespawnPointEffect extends TriggerEffect
 - `SetVelocityEffect` — class SetVelocityEffect extends TriggerEffect
 - `SetWeatherEffect` — class SetWeatherEffect extends TriggerEffect
+- `SetWorldSpawnEffect` — class SetWorldSpawnEffect extends TriggerEffect
 - `ShowEventTitleEffect` — class ShowEventTitleEffect extends TriggerEffect
 - `SpawnNpcEffect` — class SpawnNpcEffect extends TriggerEffect
 - `TaggedVolumeEffectUtil` — final class TaggedVolumeEffectUtil
@@ -3596,7 +3773,7 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `SpatialSystem` — abstract class SpatialSystem<ECS_TYPE> extends TickingSystem<ECS_TYPE> implements QuerySystem<ECS_TYPE>
 
 ## com/hypixel/hytale/component/system
-[`com.hypixel.hytale.component.system.md`](./com.hypixel.hytale.component.system.md) (17)
+[`com.hypixel.hytale.component.system.md`](./com.hypixel.hytale.component.system.md) (18)
 
 - `ArchetypeChunkSystem` — abstract class ArchetypeChunkSystem<ECS_TYPE> extends System<ECS_TYPE> implements QuerySystem<ECS_TYPE>
 - `CancellableEcsEvent` — abstract class CancellableEcsEvent extends EcsEvent implements ICancellableEcsEvent
@@ -3605,6 +3782,7 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `EntityEventSystem` — abstract class EntityEventSystem<ECS_TYPE, EventType extends EcsEvent> extends EventSystem<EventType> implements QuerySystem<ECS_TYPE>
 - `EntityHolderEventSystem` — abstract class EntityHolderEventSystem<ECS_TYPE, EventType extends EcsEvent> extends EventSystem<EventType> implements QuerySystem<ECS_TYPE>
 - `EventSystem` — abstract class EventSystem<EventType extends EcsEvent>
+- `HierarchyScope` — final class HierarchyScope extends Enum<HierarchyScope>
 - `HolderSystem` — abstract class HolderSystem<ECS_TYPE> extends System<ECS_TYPE> implements QuerySystem<ECS_TYPE>
 - `ICancellableEcsEvent` — interface ICancellableEcsEvent
 - `ISystem` — interface ISystem<ECS_TYPE>
@@ -3698,7 +3876,7 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `TriToIntFunction` — interface TriToIntFunction<T, U, V>
 
 ## com/hypixel/hytale/function/predicate
-[`com.hypixel.hytale.function.predicate.md`](./com.hypixel.hytale.function.predicate.md) (12)
+[`com.hypixel.hytale.function.predicate.md`](./com.hypixel.hytale.function.predicate.md) (13)
 
 - `BiFloatPredicate` — interface BiFloatPredicate
 - `BiIntPredicate` — interface BiIntPredicate
@@ -3710,6 +3888,7 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `TriIntObjPredicate` — interface TriIntObjPredicate<T>
 - `TriIntPredicate` — interface TriIntPredicate
 - `TriObjectDoublePredicate` — interface TriObjectDoublePredicate<T, U, V>
+- `TriObjectPositionBlockFunction` — interface TriObjectPositionBlockFunction<T, U, V, K>
 - `TriPredicate` — interface TriPredicate<T, R, S>
 - `UnaryBiPredicate` — interface UnaryBiPredicate<J> extends function.BiPredicate<J, J>
 
@@ -4130,11 +4309,14 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `IntToIntFunction` — interface IntToIntFunction
 
 ## com/hypixel/hytale/protocol
-*Wire types — FormattedMessage, PlayerSkin, etc.* — [`com.hypixel.hytale.protocol.md`](./com.hypixel.hytale.protocol.md) (476)
+*Wire types — FormattedMessage, PlayerSkin, etc.* — [`com.hypixel.hytale.protocol.md`](./com.hypixel.hytale.protocol.md) (486)
 
 - `AOECircleSelector` — class AOECircleSelector extends Selector
 - `AOECylinderSelector` — class AOECylinderSelector extends Selector
+- `AbilityCostType` — final class AbilityCostType extends Enum<AbilityCostType>
 - `AbilityEffects` — class AbilityEffects
+- `AbilityKeyword` — class AbilityKeyword
+- `AbilitySlot` — final class AbilitySlot extends Enum<AbilitySlot>
 - `AccumulationMode` — final class AccumulationMode extends Enum<AccumulationMode>
 - `ActiveAnimationsUpdate` — class ActiveAnimationsUpdate extends ComponentUpdate
 - `AmbienceFX` — class AmbienceFX
@@ -4171,6 +4353,9 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `AudioUpdate` — class AudioUpdate extends ComponentUpdate
 - `BarBeatDuration` — class BarBeatDuration
 - `BarBeatPosition` — class BarBeatPosition
+- `BeamConfig` — class BeamConfig
+- `BeamInstance` — class BeamInstance
+- `BeamsUpdate` — class BeamsUpdate extends ComponentUpdate
 - `Bench` — class Bench
 - `BenchRequirement` — class BenchRequirement
 - `BenchTierLevel` — class BenchTierLevel
@@ -4249,6 +4434,7 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `CombatTextEntityUIAnimationEventType` — final class CombatTextEntityUIAnimationEventType extends Enum<CombatTextEntityUIAnimationEventType>
 - `CombatTextEntityUIComponentAnimationEvent` — class CombatTextEntityUIComponentAnimationEvent
 - `CombatTextUpdate` — class CombatTextUpdate extends ComponentUpdate
+- `ComparisonOperator` — final class ComparisonOperator extends Enum<ComparisonOperator>
 - `ComponentUpdate` — abstract class ComponentUpdate
 - `ComponentUpdateType` — final class ComponentUpdateType extends Enum<ComponentUpdateType>
 - `ConditionInteraction` — class ConditionInteraction extends SimpleInteraction
@@ -4284,7 +4470,6 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `DragPlaceBlockInteraction` — class DragPlaceBlockInteraction extends SimpleInteraction
 - `DrawType` — final class DrawType extends Enum<DrawType>
 - `DurabilityConditionInteraction` — class DurabilityConditionInteraction extends SimpleInteraction
-- `DurabilityOperator` — final class DurabilityOperator extends Enum<DurabilityOperator>
 - `DynamicLightUpdate` — class DynamicLightUpdate extends ComponentUpdate
 - `EasingConfig` — class EasingConfig
 - `EasingType` — final class EasingType extends Enum<EasingType>
@@ -4332,6 +4517,7 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `FormattedMessage` — class FormattedMessage
 - `FormattedMessageImage` — class FormattedMessageImage
 - `GameMode` — final class GameMode extends Enum<GameMode>
+- `GroundedConditionInteraction` — class GroundedConditionInteraction extends SimpleInteraction
 - `HalfFloatPosition` — class HalfFloatPosition
 - `Harvesting` — class Harvesting
 - `HitEntity` — class HitEntity
@@ -4368,6 +4554,7 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `InventoryActionType` — final class InventoryActionType extends Enum<InventoryActionType>
 - `InventorySection` — class InventorySection
 - `InvulnerableUpdate` — class InvulnerableUpdate extends ComponentUpdate
+- `ItemAbility` — class ItemAbility
 - `ItemAnimation` — class ItemAnimation
 - `ItemAppearanceCondition` — class ItemAppearanceCondition
 - `ItemArmor` — class ItemArmor
@@ -4486,6 +4673,7 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `PositionType` — final class PositionType extends Enum<PositionType>
 - `PredictionUpdate` — class PredictionUpdate extends ComponentUpdate
 - `PrefabPreviewUpdate` — class PrefabPreviewUpdate extends ComponentUpdate
+- `PreventDebugScreensUpdate` — class PreventDebugScreensUpdate extends ComponentUpdate
 - `PreventEmotesUpdate` — class PreventEmotesUpdate extends ComponentUpdate
 - `PreventInventoryAccessUpdate` — class PreventInventoryAccessUpdate extends ComponentUpdate
 - `PrioritySlot` — final class PrioritySlot extends Enum<PrioritySlot>
@@ -4558,6 +4746,7 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `StairConnectedBlockRuleSet` — class StairConnectedBlockRuleSet extends ConnectedBlockRuleSet
 - `StateBinding` — class StateBinding
 - `StateDelta` — class StateDelta
+- `StateFade` — class StateFade
 - `StateTransition` — class StateTransition
 - `StatsConditionInteraction` — class StatsConditionInteraction extends SimpleInteraction
 - `Stinger` — class Stinger
@@ -4745,7 +4934,7 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `AudioStatePacketGenerator` — class AudioStatePacketGenerator extends SimpleAssetPacketGenerator<String, AudioState, IndexedLookupTableAssetMap<String, AudioState>>
 
 ## com/hypixel/hytale/server/core/asset/type/audiostate/config
-[`com.hypixel.hytale.server.core.asset.type.audiostate.config.md`](./com.hypixel.hytale.server.core.asset.type.audiostate.config.md) (7)
+[`com.hypixel.hytale.server.core.asset.type.audiostate.config.md`](./com.hypixel.hytale.server.core.asset.type.audiostate.config.md) (8)
 
 - `AmbienceStateWriteConfig` — class AmbienceStateWriteConfig
 - `AudioState` — class AudioState implements JsonAssetWithMap<String, IndexedLookupTableAssetMap<String, AudioState>>, NetworkSerializable<AudioState>
@@ -4753,6 +4942,7 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `AudioStateResolver` — final class AudioStateResolver
 - `StateBindingConfig` — class StateBindingConfig
 - `StateDeltaConfig` — class StateDeltaConfig
+- `StateFadeConfig` — class StateFadeConfig
 - `StateTransitionConfig` — class StateTransitionConfig
 
 ## com/hypixel/hytale/server/core/asset/type/blockbreakingdecal
@@ -4974,18 +5164,18 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 
 - `BrokenPenalties` — class BrokenPenalties
 - `CameraEffectsConfig` — class CameraEffectsConfig
-- `CombatConfig` — class CombatConfig
+- `CombatConfig` — class CombatConfig implements NetworkSerializable<CombatConfig>
 - `CraftingConfig` — class CraftingConfig
 - `DeathConfig` — class DeathConfig
-- `GameplayConfig` — class GameplayConfig implements JsonAssetWithMap<String, DefaultAssetMap<String, GameplayConfig>>
+- `GameplayConfig` — class GameplayConfig implements JsonAssetWithMap<String, DefaultAssetMap<String, GameplayConfig>>, NetworkSerializable<WorldGameplayConfig>
 - `GatheringConfig` — class GatheringConfig
 - `GatheringEffectsConfig` — class GatheringEffectsConfig
 - `ItemDurabilityConfig` — class ItemDurabilityConfig
 - `MutableDeathConfig` — class MutableDeathConfig extends DeathConfig
-- `PlayerConfig` — class PlayerConfig
+- `PlayerConfig` — class PlayerConfig implements NetworkSerializable<PlayerConfig>
 - `RespawnConfig` — class RespawnConfig
 - `SpawnConfig` — class SpawnConfig
-- `WorldConfig` — class WorldConfig
+- `WorldConfig` — class WorldConfig implements NetworkSerializable<WorldConfig>
 - `WorldMapConfig` — class WorldMapConfig
 
 ## com/hypixel/hytale/server/core/asset/type/gameplay/respawn
@@ -5016,16 +5206,19 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `ResourceTypePacketGenerator` — class ResourceTypePacketGenerator extends DefaultAssetPacketGenerator<String, ResourceType>
 
 ## com/hypixel/hytale/server/core/asset/type/item/config
-[`com.hypixel.hytale.server.core.asset.type.item.config.md`](./com.hypixel.hytale.server.core.asset.type.item.config.md) (29)
+[`com.hypixel.hytale.server.core.asset.type.item.config.md`](./com.hypixel.hytale.server.core.asset.type.item.config.md) (33)
 
+- `AbilityKeyword` — class AbilityKeyword implements JsonAssetWithMap<String, IndexedLookupTableAssetMap<String, AbilityKeyword>>
 - `AssetIconProperties` — class AssetIconProperties implements NetworkSerializable<AssetIconProperties>
 - `BlockGroup` — class BlockGroup implements JsonAssetWithMap<String, DefaultAssetMap<String, BlockGroup>>, NetworkSerializable<BlockGroup>
 - `BlockSelectorToolData` — class BlockSelectorToolData implements NetworkSerializable<BlockSelectorToolData>
 - `BreakShapeDurabilityMode` — final class BreakShapeDurabilityMode extends Enum<BreakShapeDurabilityMode>
 - `BuilderToolItemReferenceAsset` — class BuilderToolItemReferenceAsset implements JsonAssetWithMap<String, DefaultAssetMap<String, BuilderToolItemReferenceAsset>>
+- `CoreItemAbility` — class CoreItemAbility extends ItemAbility
 - `CraftingRecipe` — class CraftingRecipe implements JsonAssetWithMap<String, DefaultAssetMap<String, CraftingRecipe>>
 - `FieldcraftCategory` — class FieldcraftCategory implements JsonAssetWithMap<String, DefaultAssetMap<String, FieldcraftCategory>>, NetworkSerializable<ItemCategory>
 - `Item` — class Item implements JsonAssetWithMap<String, DefaultAssetMap<String, Item>>, NetworkSerializable<ItemBase>
+- `ItemAbility` — abstract class ItemAbility implements NetworkSerializable<ItemAbility>
 - `ItemAppearanceCondition` — class ItemAppearanceCondition implements NetworkSerializable<ItemAppearanceCondition>
 - `ItemArmor` — class ItemArmor implements NetworkSerializable<ItemArmor>
 - `ItemCategory` — class ItemCategory implements JsonAssetWithMap<String, DefaultAssetMap<String, ItemCategory>>, NetworkSerializable<ItemCategory>
@@ -5047,6 +5240,7 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `ItemWeapon` — class ItemWeapon implements NetworkSerializable<ItemWeapon>
 - `PortalKey` — class PortalKey
 - `ResourceType` — class ResourceType implements JsonAssetWithMap<String, DefaultAssetMap<String, ResourceType>>, NetworkSerializable<ResourceType>
+- `SupportItemAbility` — class SupportItemAbility extends ItemAbility
 
 ## com/hypixel/hytale/server/core/asset/type/item/config/container
 [`com.hypixel.hytale.server.core.asset.type.item.config.container.md`](./com.hypixel.hytale.server.core.asset.type.item.config.container.md) (6)
@@ -5126,16 +5320,31 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `MusicContainerPacketGenerator` — class MusicContainerPacketGenerator extends SimpleAssetPacketGenerator<String, MusicContainer, IndexedAssetMap<String, MusicContainer>>
 
 ## com/hypixel/hytale/server/core/asset/type/musiccontainer/config
-[`com.hypixel.hytale.server.core.asset.type.musiccontainer.config.md`](./com.hypixel.hytale.server.core.asset.type.musiccontainer.config.md) (8)
+[`com.hypixel.hytale.server.core.asset.type.musiccontainer.config.md`](./com.hypixel.hytale.server.core.asset.type.musiccontainer.config.md) (12)
 
 - `BarBeatDuration` — class BarBeatDuration
+- `BarBeatPosition` — class BarBeatPosition
 - `HorizontalMusicContainer` — class HorizontalMusicContainer extends MusicContainer
 - `LayerPlacement` — class LayerPlacement
 - `MusicContainer` — abstract class MusicContainer implements JsonAssetWithMap<String, IndexedAssetMap<String, MusicContainer>>, NetworkSerializable<MusicContainer>
+- `MusicMarkerConfig` — class MusicMarkerConfig
+- `MusicSyncConfig` — class MusicSyncConfig
 - `RandomMusicContainer` — class RandomMusicContainer extends MusicContainer
 - `SegmentMusicContainer` — class SegmentMusicContainer extends MusicContainer
 - `SequenceMusicContainer` — class SequenceMusicContainer extends MusicContainer
 - `SingleTrackMusicContainer` — class SingleTrackMusicContainer extends MusicContainer
+- `StingerBindingConfig` — class StingerBindingConfig
+
+## com/hypixel/hytale/server/core/asset/type/musictransition
+[`com.hypixel.hytale.server.core.asset.type.musictransition.md`](./com.hypixel.hytale.server.core.asset.type.musictransition.md) (1)
+
+- `MusicTransitionPacketGenerator` — class MusicTransitionPacketGenerator extends SimpleAssetPacketGenerator<String, MusicTransition, IndexedLookupTableAssetMap<String, MusicTransition>>
+
+## com/hypixel/hytale/server/core/asset/type/musictransition/config
+[`com.hypixel.hytale.server.core.asset.type.musictransition.config.md`](./com.hypixel.hytale.server.core.asset.type.musictransition.config.md) (2)
+
+- `MusicMatchConfig` — class MusicMatchConfig
+- `MusicTransition` — class MusicTransition implements JsonAssetWithMap<String, IndexedLookupTableAssetMap<String, MusicTransition>>, NetworkSerializable<MusicTransition>
 
 ## com/hypixel/hytale/server/core/asset/type/particle
 [`com.hypixel.hytale.server.core.asset.type.particle.md`](./com.hypixel.hytale.server.core.asset.type.particle.md) (2)
@@ -5241,6 +5450,16 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 [`com.hypixel.hytale.server.core.asset.type.soundset.config.md`](./com.hypixel.hytale.server.core.asset.type.soundset.config.md) (1)
 
 - `SoundSet` — class SoundSet implements JsonAssetWithMap<String, IndexedLookupTableAssetMap<String, SoundSet>>, NetworkSerializable<SoundSet>
+
+## com/hypixel/hytale/server/core/asset/type/stinger
+[`com.hypixel.hytale.server.core.asset.type.stinger.md`](./com.hypixel.hytale.server.core.asset.type.stinger.md) (1)
+
+- `StingerPacketGenerator` — class StingerPacketGenerator extends SimpleAssetPacketGenerator<String, Stinger, IndexedLookupTableAssetMap<String, Stinger>>
+
+## com/hypixel/hytale/server/core/asset/type/stinger/config
+[`com.hypixel.hytale.server.core.asset.type.stinger.config.md`](./com.hypixel.hytale.server.core.asset.type.stinger.config.md) (1)
+
+- `Stinger` — class Stinger implements JsonAssetWithMap<String, IndexedLookupTableAssetMap<String, Stinger>>, NetworkSerializable<Stinger>
 
 ## com/hypixel/hytale/server/core/asset/type/tagpattern
 [`com.hypixel.hytale.server.core.asset.type.tagpattern.md`](./com.hypixel.hytale.server.core.asset.type.tagpattern.md) (1)
@@ -5380,10 +5599,9 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `HitboxCollisionRemoveCommand` — class HitboxCollisionRemoveCommand extends AbstractCommandCollection
 
 ## com/hypixel/hytale/server/core/command/commands/debug/component/knockback
-[`com.hypixel.hytale.server.core.command.commands.debug.component.knockback.md`](./com.hypixel.hytale.server.core.command.commands.debug.component.knockback.md) (2)
+[`com.hypixel.hytale.server.core.command.commands.debug.component.knockback.md`](./com.hypixel.hytale.server.core.command.commands.debug.component.knockback.md) (1)
 
 - `KnockbackApplyCommand` — class KnockbackApplyCommand extends AbstractCommandCollection
-- `KnockbackCommand` — class KnockbackCommand extends AbstractCommandCollection
 
 ## com/hypixel/hytale/server/core/command/commands/debug/component/repulsion
 [`com.hypixel.hytale.server.core.command.commands.debug.component.repulsion.md`](./com.hypixel.hytale.server.core.command.commands.debug.component.repulsion.md) (3)
@@ -5589,11 +5807,12 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `SpawnBlockCommand` — class SpawnBlockCommand extends AbstractWorldCommand
 
 ## com/hypixel/hytale/server/core/command/commands/world/chunk
-[`com.hypixel.hytale.server.core.command.commands.world.chunk.md`](./com.hypixel.hytale.server.core.command.commands.world.chunk.md) (16)
+[`com.hypixel.hytale.server.core.command.commands.world.chunk.md`](./com.hypixel.hytale.server.core.command.commands.world.chunk.md) (17)
 
 - `ChunkCommand` — class ChunkCommand extends AbstractCommandCollection
 - `ChunkFixHeightMapCommand` — class ChunkFixHeightMapCommand extends AbstractWorldCommand
 - `ChunkForceTickCommand` — class ChunkForceTickCommand extends AbstractWorldCommand
+- `ChunkHeightCommand` — class ChunkHeightCommand extends AbstractWorldCommand
 - `ChunkInfoCommand` — class ChunkInfoCommand extends AbstractWorldCommand
 - `ChunkLightingCommand` — class ChunkLightingCommand extends AbstractWorldCommand
 - `ChunkLoadCommand` — class ChunkLoadCommand extends AbstractWorldCommand
@@ -5879,9 +6098,11 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `MovementManager` — class MovementManager implements Component<EntityStore>
 
 ## com/hypixel/hytale/server/core/entity/entities/player/pages
-[`com.hypixel.hytale.server.core.entity.entities.player.pages.md`](./com.hypixel.hytale.server.core.entity.entities.player.pages.md) (5)
+[`com.hypixel.hytale.server.core.entity.entities.player.pages.md`](./com.hypixel.hytale.server.core.entity.entities.player.pages.md) (7)
 
 - `BasicCustomUIPage` — abstract class BasicCustomUIPage extends CustomUIPage
+- `BlockLorePage` — class BlockLorePage extends CustomUIPage
+- `ConfirmationPage` — class ConfirmationPage extends InteractiveCustomUIPage<ConfirmationPage$PageData>
 - `CustomUIPage` — abstract class CustomUIPage
 - `InteractiveCustomUIPage` — abstract class InteractiveCustomUIPage<T> extends CustomUIPage
 - `PageManager` — class PageManager
@@ -5998,9 +6219,9 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 [`com.hypixel.hytale.server.core.event.events.player.md`](./com.hypixel.hytale.server.core.event.events.player.md) (15)
 
 - `AddPlayerToWorldEvent` — class AddPlayerToWorldEvent implements IEvent<String>
-- `DrainPlayerFromWorldEvent` — class DrainPlayerFromWorldEvent implements IEvent<String>
+- `DrainPlayerFromWorldEvent` — class DrainPlayerFromWorldEvent implements IAsyncEvent<String>
 - `PlayerChatEvent` — class PlayerChatEvent implements IAsyncEvent<String>, ICancellable
-- `PlayerConnectEvent` — class PlayerConnectEvent implements IEvent<Void>
+- `PlayerConnectEvent` — class PlayerConnectEvent implements IAsyncEvent<Void>
 - `PlayerCraftEvent` — class PlayerCraftEvent extends PlayerEvent<String>
 - `PlayerDisconnectEvent` — class PlayerDisconnectEvent extends PlayerRefEvent<Void>
 - `PlayerEvent` — abstract class PlayerEvent<KeyType> implements IEvent<KeyType>
@@ -6046,8 +6267,11 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `TestRemoveItemSlotResult` — class TestRemoveItemSlotResult
 
 ## com/hypixel/hytale/server/core/inventory/container/filter
-[`com.hypixel.hytale.server.core.inventory.container.filter.md`](./com.hypixel.hytale.server.core.inventory.container.filter.md) (8)
+[`com.hypixel.hytale.server.core.inventory.container.filter.md`](./com.hypixel.hytale.server.core.inventory.container.filter.md) (11)
 
+- `AbilityCoreSlotFilter` — class AbilityCoreSlotFilter implements SlotFilter
+- `AbilityItemAddFilter` — class AbilityItemAddFilter implements ItemSlotFilter
+- `AbilitySupportSlotFilter` — class AbilitySupportSlotFilter implements SlotFilter
 - `ArmorSlotAddFilter` — class ArmorSlotAddFilter implements ItemSlotFilter
 - `FilterActionType` — final class FilterActionType extends Enum<FilterActionType>
 - `FilterType` — final class FilterType extends Enum<FilterType>
@@ -6230,8 +6454,9 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `AnchorActionModule` — class AnchorActionModule extends JavaPlugin
 
 ## com/hypixel/hytale/server/core/modules/block
-*Block module — block placement, removal, runtime queries* — [`com.hypixel.hytale.server.core.modules.block.md`](./com.hypixel.hytale.server.core.modules.block.md) (3)
+*Block module — block placement, removal, runtime queries* — [`com.hypixel.hytale.server.core.modules.block.md`](./com.hypixel.hytale.server.core.modules.block.md) (4)
 
+- `BlockCarriedEvent` — class BlockCarriedEvent extends EcsEvent
 - `BlockEntity` — class BlockEntity
 - `BlockModule` — class BlockModule extends JavaPlugin
 - `BlockReplaceEvent` — class BlockReplaceEvent extends EcsEvent
@@ -6265,7 +6490,7 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `BlockHealth` — class BlockHealth implements Cloneable
 - `BlockHealthChunk` — class BlockHealthChunk implements Component<ChunkStore>
 - `BlockHealthModule` — class BlockHealthModule extends JavaPlugin
-- `FragileBlock` — class FragileBlock implements Cloneable
+- `BlockHealthSection` — class BlockHealthSection implements Component<ChunkStore>
 
 ## com/hypixel/hytale/server/core/modules/blockset
 *BlockSet registry and operations* — [`com.hypixel.hytale.server.core.modules.blockset.md`](./com.hypixel.hytale.server.core.modules.blockset.md) (2)
@@ -6358,7 +6583,7 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `LegacyProjectileSystems` — class LegacyProjectileSystems
 
 ## com/hypixel/hytale/server/core/modules/entity/component
-*Built-in entity components (TransformComponent, etc.)* — [`com.hypixel.hytale.server.core.modules.entity.component.md`](./com.hypixel.hytale.server.core.modules.entity.component.md) (40)
+*Built-in entity components (TransformComponent, etc.)* — [`com.hypixel.hytale.server.core.modules.entity.component.md`](./com.hypixel.hytale.server.core.modules.entity.component.md) (43)
 
 - `ActiveAnimationComponent` — class ActiveAnimationComponent implements Component<EntityStore>
 - `AudioComponent` — class AudioComponent implements Component<EntityStore>
@@ -6375,6 +6600,7 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `HeadRotation` — class HeadRotation implements Component<EntityStore>
 - `HealthRegenState` — class HealthRegenState implements Component<EntityStore>
 - `HiddenFromAdventurePlayers` — class HiddenFromAdventurePlayers implements Component<EntityStore>
+- `IgnoreDisableNPCIncomingDamage` — class IgnoreDisableNPCIncomingDamage implements Component<EntityStore>
 - `Intangible` — class Intangible implements Component<EntityStore>
 - `Interactable` — class Interactable implements Component<EntityStore>
 - `Invulnerable` — class Invulnerable implements Component<EntityStore>
@@ -6391,8 +6617,10 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `PlayerLives` — class PlayerLives implements Component<EntityStore>
 - `PositionDataComponent` — class PositionDataComponent implements Component<EntityStore>
 - `PrefabPreview` — class PrefabPreview implements Component<EntityStore>
+- `PreventDebugScreens` — class PreventDebugScreens implements Component<EntityStore>
 - `PreventEmotes` — class PreventEmotes implements Component<EntityStore>
 - `PreventInventoryAccess` — class PreventInventoryAccess implements Component<EntityStore>
+- `ProjectilePassthrough` — class ProjectilePassthrough implements Component<EntityStore>
 - `PropComponent` — class PropComponent implements Component<EntityStore>
 - `RespondToHit` — class RespondToHit implements Component<EntityStore>
 - `RotateObjectComponent` — class RotateObjectComponent implements Component<EntityStore>
@@ -6424,13 +6652,14 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `WieldingCondition` — class WieldingCondition extends Condition
 
 ## com/hypixel/hytale/server/core/modules/entity/damage
-[`com.hypixel.hytale.server.core.modules.entity.damage.md`](./com.hypixel.hytale.server.core.modules.entity.damage.md) (12)
+[`com.hypixel.hytale.server.core.modules.entity.damage.md`](./com.hypixel.hytale.server.core.modules.entity.damage.md) (13)
 
 - `Damage` — class Damage extends CancellableEcsEvent implements IMetaStore<Damage>
 - `DamageCalculatorSystems` — class DamageCalculatorSystems
 - `DamageCause` — class DamageCause implements JsonAssetWithMap<String, IndexedLookupTableAssetMap<String, DamageCause>>
 - `DamageEventSystem` — abstract class DamageEventSystem extends EntityEventSystem<EntityStore, Damage>
 - `DamageModule` — class DamageModule extends JavaPlugin
+- `DamageSourceType` — final class DamageSourceType extends Enum<DamageSourceType>
 - `DamageSystems` — class DamageSystems
 - `DeathComponent` — class DeathComponent implements Component<EntityStore>
 - `DeathItemLoss` — class DeathItemLoss
@@ -6492,7 +6721,7 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `LivingEntityEffectSystem` — class LivingEntityEffectSystem extends EntityTickingSystem<EntityStore> implements DisableProcessingAssert
 
 ## com/hypixel/hytale/server/core/modules/entity/player
-[`com.hypixel.hytale.server.core.modules.entity.player.md`](./com.hypixel.hytale.server.core.modules.entity.player.md) (23)
+[`com.hypixel.hytale.server.core.modules.entity.player.md`](./com.hypixel.hytale.server.core.modules.entity.player.md) (24)
 
 - `ApplyRandomSkinPersistedComponent` — class ApplyRandomSkinPersistedComponent implements Component<EntityStore>
 - `ChunkTracker` — class ChunkTracker implements Component<EntityStore>
@@ -6516,6 +6745,7 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `PlayerSettings` — final class PlayerSettings extends Record implements Component<EntityStore>
 - `PlayerSkinComponent` — class PlayerSkinComponent implements Component<EntityStore>
 - `PlayerSystems` — class PlayerSystems
+- `PlayerVelocityEstimator` — final class PlayerVelocityEstimator
 - `PlayerVoiceSettings` — final class PlayerVoiceSettings extends Record
 
 ## com/hypixel/hytale/server/core/modules/entity/prefabpreview
@@ -6547,11 +6777,12 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `StaminaSystems` — class StaminaSystems
 
 ## com/hypixel/hytale/server/core/modules/entity/system
-[`com.hypixel.hytale.server.core.modules.entity.system.md`](./com.hypixel.hytale.server.core.modules.entity.system.md) (22)
+[`com.hypixel.hytale.server.core.modules.entity.system.md`](./com.hypixel.hytale.server.core.modules.entity.system.md) (24)
 
 - `AudioSystems` — class AudioSystems
 - `DisplayNameSystems` — class DisplayNameSystems
 - `EntityInteractableSystems` — class EntityInteractableSystems
+- `EntityScaleBoundingBoxSystem` — class EntityScaleBoundingBoxSystem extends EntityTickingSystem<EntityStore>
 - `EntitySpatialSystem` — class EntitySpatialSystem extends SpatialSystem<EntityStore>
 - `EntitySystems` — class EntitySystems
 - `HideEntitySystems` — class HideEntitySystems
@@ -6563,6 +6794,7 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `NetworkSendableSpatialSystem` — class NetworkSendableSpatialSystem extends SpatialSystem<EntityStore>
 - `PlayerCollisionResultAddSystem` — class PlayerCollisionResultAddSystem extends HolderSystem<EntityStore>
 - `PlayerSpatialSystem` — class PlayerSpatialSystem extends SpatialSystem<EntityStore>
+- `PreventDebugScreensSystems` — class PreventDebugScreensSystems
 - `PreventEmotesSystems` — class PreventEmotesSystems
 - `PreventInventoryAccessSystems` — class PreventInventoryAccessSystems
 - `RespondToHitSystems` — class RespondToHitSystems
@@ -6705,6 +6937,11 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `CarriedBlockSystems` — final class CarriedBlockSystems
 - `PlacedByInteractionComponent` — class PlacedByInteractionComponent implements Component<ChunkStore>
 
+## com/hypixel/hytale/server/core/modules/interaction/event
+[`com.hypixel.hytale.server.core.modules.interaction.event.md`](./com.hypixel.hytale.server.core.modules.interaction.event.md) (1)
+
+- `InteractionChainStartEvent` — class InteractionChainStartEvent extends CancellableEcsEvent
+
 ## com/hypixel/hytale/server/core/modules/interaction/host
 [`com.hypixel.hytale.server.core.modules.interaction.host.md`](./com.hypixel.hytale.server.core.modules.interaction.host.md) (2)
 
@@ -6773,8 +7010,9 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `WieldingInteraction` — class WieldingInteraction extends ChargingInteraction
 
 ## com/hypixel/hytale/server/core/modules/interaction/interaction/config/data
-[`com.hypixel.hytale.server.core.modules.interaction.interaction.config.data.md`](./com.hypixel.hytale.server.core.modules.interaction.interaction.config.data.md) (6)
+[`com.hypixel.hytale.server.core.modules.interaction.interaction.config.data.md`](./com.hypixel.hytale.server.core.modules.interaction.interaction.config.data.md) (7)
 
+- `AbilityAttributeBinding` — interface AbilityAttributeBinding
 - `Collector` — interface Collector
 - `CollectorTag` — interface CollectorTag
 - `ListCollector` — class ListCollector<T> implements Collector
@@ -6783,7 +7021,7 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `TreeCollector` — class TreeCollector<T> implements Collector
 
 ## com/hypixel/hytale/server/core/modules/interaction/interaction/config/none
-[`com.hypixel.hytale.server.core.modules.interaction.interaction.config.none.md`](./com.hypixel.hytale.server.core.modules.interaction.interaction.config.none.md) (18)
+[`com.hypixel.hytale.server.core.modules.interaction.interaction.config.none.md`](./com.hypixel.hytale.server.core.modules.interaction.interaction.config.none.md) (19)
 
 - `BuilderToolInteraction` — class BuilderToolInteraction extends SimpleInteraction
 - `CameraInteraction` — class CameraInteraction extends SimpleInteraction
@@ -6793,12 +7031,13 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `ConditionInteraction` — class ConditionInteraction extends SimpleInteraction
 - `DurabilityConditionInteraction` — class DurabilityConditionInteraction extends SimpleInstantInteraction
 - `EffectConditionInteraction` — class EffectConditionInteraction extends SimpleInstantInteraction
+- `GroundedConditionInteraction` — class GroundedConditionInteraction extends SimpleInstantInteraction
 - `ParallelInteraction` — class ParallelInteraction extends Interaction
 - `PlaceModeSelectInteraction` — class PlaceModeSelectInteraction extends SimpleInteraction
 - `RepeatInteraction` — class RepeatInteraction extends SimpleInteraction
 - `ReplaceInteraction` — class ReplaceInteraction extends Interaction
 - `RunRootInteraction` — class RunRootInteraction extends SimpleInstantInteraction
-- `SelectInteraction` — class SelectInteraction extends SimpleInteraction
+- `SelectInteraction` — class SelectInteraction extends SimpleInteraction implements AbilityAttributeBinding
 - `SerialInteraction` — class SerialInteraction extends Interaction
 - `StatsConditionBaseInteraction` — abstract class StatsConditionBaseInteraction extends SimpleInstantInteraction
 - `StatsConditionInteraction` — class StatsConditionInteraction extends StatsConditionBaseInteraction
@@ -6807,27 +7046,27 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 ## com/hypixel/hytale/server/core/modules/interaction/interaction/config/none/simple
 [`com.hypixel.hytale.server.core.modules.interaction.interaction.config.none.simple.md`](./com.hypixel.hytale.server.core.modules.interaction.interaction.config.none.simple.md) (3)
 
-- `ApplyEffectInteraction` — class ApplyEffectInteraction extends SimpleInstantInteraction
+- `ApplyEffectInteraction` — class ApplyEffectInteraction extends SimpleInstantInteraction implements AbilityAttributeBinding
 - `RemoveEntityInteraction` — class RemoveEntityInteraction extends SimpleInstantInteraction
 - `SendMessageInteraction` — class SendMessageInteraction extends SimpleInstantInteraction
 
 ## com/hypixel/hytale/server/core/modules/interaction/interaction/config/selector
 [`com.hypixel.hytale.server.core.modules.interaction.interaction.config.selector.md`](./com.hypixel.hytale.server.core.modules.interaction.interaction.config.selector.md) (11)
 
-- `AOECircleSelector` — class AOECircleSelector extends SelectorType
+- `AOECircleSelector` — class AOECircleSelector extends SelectorType implements AbilityAttributeBinding
 - `AOECylinderSelector` — class AOECylinderSelector extends AOECircleSelector
 - `ClientSourcedSelector` — class ClientSourcedSelector implements Selector
 - `DonutSelector` — class DonutSelector extends SelectorType
 - `HorizontalSelector` — class HorizontalSelector extends SelectorType
 - `PlayerMatcher` — class PlayerMatcher extends SelectInteraction$EntityMatcher
-- `RaycastSelector` — class RaycastSelector extends SelectorType
+- `RaycastSelector` — class RaycastSelector extends SelectorType implements AbilityAttributeBinding
 - `Selector` — interface Selector
 - `SelectorType` — abstract class SelectorType implements NetworkSerializable<Selector>
-- `StabSelector` — class StabSelector extends SelectorType
+- `StabSelector` — class StabSelector extends SelectorType implements AbilityAttributeBinding
 - `VulnerableMatcher` — class VulnerableMatcher extends SelectInteraction$EntityMatcher
 
 ## com/hypixel/hytale/server/core/modules/interaction/interaction/config/server
-[`com.hypixel.hytale.server.core.modules.interaction.interaction.config.server.md`](./com.hypixel.hytale.server.core.modules.interaction.interaction.config.server.md) (26)
+[`com.hypixel.hytale.server.core.modules.interaction.interaction.config.server.md`](./com.hypixel.hytale.server.core.modules.interaction.interaction.config.server.md) (28)
 
 - `CarryBlockInteraction` — class CarryBlockInteraction extends SimpleBlockInteraction
 - `CarryDroppedBlockInteraction` — class CarryDroppedBlockInteraction extends SimpleInstantInteraction
@@ -6836,8 +7075,9 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `ChangeStatInteraction` — class ChangeStatInteraction extends ChangeStatBaseInteraction
 - `ChangeStatWithModifierInteraction` — class ChangeStatWithModifierInteraction extends ChangeStatBaseInteraction
 - `CheckUniqueItemUsageInteraction` — class CheckUniqueItemUsageInteraction extends SimpleInstantInteraction
+- `ClearCarriedBlockInteraction` — class ClearCarriedBlockInteraction extends SimpleInstantInteraction
 - `ClearEntityEffectInteraction` — class ClearEntityEffectInteraction extends SimpleInstantInteraction
-- `DamageEntityInteraction` — class DamageEntityInteraction extends Interaction
+- `DamageEntityInteraction` — class DamageEntityInteraction extends Interaction implements AbilityAttributeBinding
 - `DoorInteraction` — class DoorInteraction extends SimpleBlockInteraction
 - `EquipItemInteraction` — class EquipItemInteraction extends SimpleInstantInteraction
 - `IncreaseBackpackCapacityInteraction` — class IncreaseBackpackCapacityInteraction extends SimpleInstantInteraction
@@ -6845,6 +7085,7 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `LaunchPadInteraction` — class LaunchPadInteraction extends SimpleBlockInteraction
 - `LaunchProjectileInteraction` — class LaunchProjectileInteraction extends SimpleInstantInteraction implements BallisticDataProvider
 - `ModifyInventoryInteraction` — class ModifyInventoryInteraction extends SimpleInstantInteraction
+- `OpenChapterRewardsInteraction` — class OpenChapterRewardsInteraction extends SimpleInstantInteraction
 - `OpenContainerInteraction` — class OpenContainerInteraction extends SimpleBlockInteraction
 - `OpenCustomUIInteraction` — class OpenCustomUIInteraction extends SimpleInstantInteraction
 - `OpenItemStackContainerInteraction` — class OpenItemStackContainerInteraction extends SimpleInstantInteraction
@@ -6877,14 +7118,17 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `OperationsBuilder` — class OperationsBuilder
 
 ## com/hypixel/hytale/server/core/modules/interaction/interaction/util
-[`com.hypixel.hytale.server.core.modules.interaction.interaction.util.md`](./com.hypixel.hytale.server.core.modules.interaction.interaction.util.md) (2)
+[`com.hypixel.hytale.server.core.modules.interaction.interaction.util.md`](./com.hypixel.hytale.server.core.modules.interaction.interaction.util.md) (3)
 
+- `AbilityCastUtil` — final class AbilityCastUtil
 - `InteractionTarget` — final class InteractionTarget extends Enum<InteractionTarget>
 - `InteractionValidation` — class InteractionValidation
 
 ## com/hypixel/hytale/server/core/modules/interaction/suppliers
-[`com.hypixel.hytale.server.core.modules.interaction.suppliers.md`](./com.hypixel.hytale.server.core.modules.interaction.suppliers.md) (1)
+[`com.hypixel.hytale.server.core.modules.interaction.suppliers.md`](./com.hypixel.hytale.server.core.modules.interaction.suppliers.md) (3)
 
+- `BlockLorePageSupplier` — class BlockLorePageSupplier implements OpenCustomUIInteraction$CustomPageSupplier
+- `ConfirmationPageSupplier` — class ConfirmationPageSupplier implements OpenCustomUIInteraction$CustomPageSupplier
 - `ItemRepairPageSupplier` — class ItemRepairPageSupplier implements OpenCustomUIInteraction$CustomPageSupplier
 
 ## com/hypixel/hytale/server/core/modules/interaction/system
@@ -6893,8 +7137,9 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `InteractionSystems` — class InteractionSystems
 
 ## com/hypixel/hytale/server/core/modules/item
-*Item module + item-related commands* — [`com.hypixel.hytale.server.core.modules.item.md`](./com.hypixel.hytale.server.core.modules.item.md) (6)
+*Item module + item-related commands* — [`com.hypixel.hytale.server.core.modules.item.md`](./com.hypixel.hytale.server.core.modules.item.md) (7)
 
+- `AbilityKeywordPacketGenerator` — class AbilityKeywordPacketGenerator extends SimpleAssetPacketGenerator<String, AbilityKeyword, IndexedLookupTableAssetMap<String, AbilityKeyword>>
 - `CraftingRecipePacketGenerator` — class CraftingRecipePacketGenerator extends AssetPacketGenerator<String, CraftingRecipe, DefaultAssetMap<String, CraftingRecipe>>
 - `ItemModule` — class ItemModule extends JavaPlugin
 - `ItemPacketGenerator` — class ItemPacketGenerator extends AssetPacketGenerator<String, Item, DefaultAssetMap<String, Item>>
@@ -6974,17 +7219,26 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `ProjectileModule` — class ProjectileModule extends JavaPlugin
 
 ## com/hypixel/hytale/server/core/modules/projectile/component
-[`com.hypixel.hytale.server.core.modules.projectile.component.md`](./com.hypixel.hytale.server.core.modules.projectile.component.md) (2)
+[`com.hypixel.hytale.server.core.modules.projectile.component.md`](./com.hypixel.hytale.server.core.modules.projectile.component.md) (9)
 
+- `DirectionalHitBox` — class DirectionalHitBox implements Component<EntityStore>
+- `GroundFollowProjectile` — class GroundFollowProjectile implements Component<EntityStore>
+- `ImpactModifiers` — class ImpactModifiers implements Component<EntityStore>
+- `PierceProjectile` — class PierceProjectile implements Component<EntityStore>
 - `PredictedProjectile` — class PredictedProjectile implements Component<EntityStore>
 - `Projectile` — class Projectile implements Component<EntityStore>
+- `ProjectileHitExclusions` — class ProjectileHitExclusions implements Component<EntityStore>
+- `ProjectileLaunchContext` — class ProjectileLaunchContext implements Component<EntityStore>
+- `SpectralProjectile` — class SpectralProjectile implements Component<EntityStore>
 
 ## com/hypixel/hytale/server/core/modules/projectile/config
-[`com.hypixel.hytale.server.core.modules.projectile.config.md`](./com.hypixel.hytale.server.core.modules.projectile.config.md) (9)
+[`com.hypixel.hytale.server.core.modules.projectile.config.md`](./com.hypixel.hytale.server.core.modules.projectile.config.md) (11)
 
 - `BallisticData` — interface BallisticData
 - `BallisticDataProvider` — interface BallisticDataProvider
 - `BounceConsumer` — interface BounceConsumer
+- `DirectionalHitBoxConfig` — class DirectionalHitBoxConfig
+- `GroundFollowPhysicsConfig` — class GroundFollowPhysicsConfig extends StandardPhysicsConfig
 - `ImpactConsumer` — interface ImpactConsumer
 - `PhysicsConfig` — interface PhysicsConfig extends NetworkSerializable<PhysicsConfig>
 - `ProjectileConfig` — class ProjectileConfig implements JsonAssetWithMap<String, DefaultAssetMap<String, ProjectileConfig>>, NetworkSerializable<ProjectileConfig>, BallisticData
@@ -6992,14 +7246,20 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `StandardPhysicsConfig` — class StandardPhysicsConfig implements PhysicsConfig
 - `StandardPhysicsProvider` — class StandardPhysicsProvider implements IBlockCollisionConsumer, Component<EntityStore>
 
+## com/hypixel/hytale/server/core/modules/projectile/event
+[`com.hypixel.hytale.server.core.modules.projectile.event.md`](./com.hypixel.hytale.server.core.modules.projectile.event.md) (1)
+
+- `ProjectileLaunchEvent` — class ProjectileLaunchEvent extends EcsEvent
+
 ## com/hypixel/hytale/server/core/modules/projectile/interaction
 [`com.hypixel.hytale.server.core.modules.projectile.interaction.md`](./com.hypixel.hytale.server.core.modules.projectile.interaction.md) (1)
 
 - `ProjectileInteraction` — class ProjectileInteraction extends SimpleInstantInteraction implements BallisticDataProvider
 
 ## com/hypixel/hytale/server/core/modules/projectile/system
-[`com.hypixel.hytale.server.core.modules.projectile.system.md`](./com.hypixel.hytale.server.core.modules.projectile.system.md) (2)
+[`com.hypixel.hytale.server.core.modules.projectile.system.md`](./com.hypixel.hytale.server.core.modules.projectile.system.md) (3)
 
+- `AbilityCastSnapshotSystem` — class AbilityCastSnapshotSystem extends EntityEventSystem<EntityStore, InteractionChainStartEvent>
 - `PredictedProjectileSystems` — class PredictedProjectileSystems
 - `StandardPhysicsTickSystem` — class StandardPhysicsTickSystem extends EntityTickingSystem<EntityStore>
 
@@ -7044,6 +7304,21 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 [`com.hypixel.hytale.server.core.modules.time.commands.md`](./com.hypixel.hytale.server.core.modules.time.commands.md) (1)
 
 - `TimeCommand` — class TimeCommand extends AbstractWorldCommand
+
+## com/hypixel/hytale/server/core/modules/ui
+[`com.hypixel.hytale.server.core.modules.ui.md`](./com.hypixel.hytale.server.core.modules.ui.md) (11)
+
+- `CommandDefinition` — final class CommandDefinition
+- `ServersideUIDemoCommand` — class ServersideUIDemoCommand extends AbstractPlayerCommand
+- `UICommandHandler` — interface UICommandHandler
+- `UIDataValues` — final class UIDataValues
+- `UIHudWidget` — abstract class UIHudWidget extends UISurface
+- `UIModule` — class UIModule extends JavaPlugin
+- `UIPage` — abstract class UIPage extends UISurface
+- `UISurface` — abstract class UISurface
+- `UITypes` — final class UITypes
+- `Ui` — final class Ui
+- `ViewModelTypeRegistry` — final class ViewModelTypeRegistry
 
 ## com/hypixel/hytale/server/core/modules/voice
 [`com.hypixel.hytale.server.core.modules.voice.md`](./com.hypixel.hytale.server.core.modules.voice.md) (11)
@@ -7319,11 +7594,9 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `WorldConfigSaveSystem` — class WorldConfigSaveSystem extends DelayedSystem<EntityStore>
 
 ## com/hypixel/hytale/server/core/universe/world
-*World runtime context* — [`com.hypixel.hytale.server.core.universe.world.md`](./com.hypixel.hytale.server.core.universe.world.md) (18)
+*World runtime context* — [`com.hypixel.hytale.server.core.universe.world.md`](./com.hypixel.hytale.server.core.universe.world.md) (16)
 
 - `ClientEffectWorldSettings` — class ClientEffectWorldSettings
-- `IWorldChunks` — interface IWorldChunks extends IChunkAccessorSync,IWorldChunksAsync
-- `IWorldChunksAsync` — interface IWorldChunksAsync
 - `ParticleUtil` — class ParticleUtil
 - `PlaceBlockSettings` — class PlaceBlockSettings
 - `PlayerUtil` — class PlayerUtil
@@ -7332,7 +7605,7 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `SpawnUtil` — final class SpawnUtil
 - `TickSuppressionRegistry` — final class TickSuppressionRegistry implements Resource<EntityStore>
 - `ValidationOption` — final class ValidationOption extends Enum<ValidationOption>
-- `World` — class World extends TickingThread implements concurrent.Executor,ExecutorMetricsRegistry$ExecutorMetric,ChunkAccessor,IWorldChunks,IMessageReceiver
+- `World` — class World extends TickingThread implements concurrent.Executor,ExecutorMetricsRegistry$ExecutorMetric,IMessageReceiver
 - `WorldConfig` — class WorldConfig
 - `WorldConfigProvider` — interface WorldConfigProvider
 - `WorldCrashRecovery` — final class WorldCrashRecovery extends Enum<WorldCrashRecovery>
@@ -7341,12 +7614,10 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `WorldProvider` — interface WorldProvider
 
 ## com/hypixel/hytale/server/core/universe/world/accessor
-[`com.hypixel.hytale.server.core.universe.world.accessor.md`](./com.hypixel.hytale.server.core.universe.world.accessor.md) (4)
+[`com.hypixel.hytale.server.core.universe.world.accessor.md`](./com.hypixel.hytale.server.core.universe.world.accessor.md) (2)
 
-- `ChunkAccessor` — interface ChunkAccessor extends IChunkAccessorSync
-- `IChunkAccessorSync` — interface IChunkAccessorSync
-- `LocalCachedChunkAccessor` — class LocalCachedChunkAccessor implements OverridableChunkAccessor
-- `OverridableChunkAccessor` — interface OverridableChunkAccessor extends ChunkAccessor
+- `BlockReader` — interface BlockReader
+- `SectionReader` — class SectionReader implements BlockReader
 
 ## com/hypixel/hytale/server/core/universe/world/chunk
 [`com.hypixel.hytale.server.core.universe.world.chunk.md`](./com.hypixel.hytale.server.core.universe.world.chunk.md) (10)
@@ -7363,11 +7634,22 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `WorldChunk` — class WorldChunk implements Component<ChunkStore>
 
 ## com/hypixel/hytale/server/core/universe/world/chunk/environment
-[`com.hypixel.hytale.server.core.universe.world.chunk.environment.md`](./com.hypixel.hytale.server.core.universe.world.chunk.environment.md) (3)
+[`com.hypixel.hytale.server.core.universe.world.chunk.environment.md`](./com.hypixel.hytale.server.core.universe.world.chunk.environment.md) (4)
 
 - `EnvironmentChunk` — class EnvironmentChunk implements Component<ChunkStore>
 - `EnvironmentColumn` — class EnvironmentColumn
+- `EnvironmentColumnSlicer` — final class EnvironmentColumnSlicer
 - `EnvironmentRange` — class EnvironmentRange
+
+## com/hypixel/hytale/server/core/universe/world/chunk/heightmap
+[`com.hypixel.hytale.server.core.universe.world.chunk.heightmap.md`](./com.hypixel.hytale.server.core.universe.world.chunk.heightmap.md) (6)
+
+- `GapReservoir` — final class GapReservoir
+- `HeightmapColumn` — final class HeightmapColumn implements Component<ChunkStore>
+- `HeightmapSystems` — class HeightmapSystems
+- `IHeightmap` — interface IHeightmap
+- `LegacyHeightmap` — final class LegacyHeightmap implements IHeightmap
+- `TreeHeightmap` — final class TreeHeightmap implements IHeightmap
 
 ## com/hypixel/hytale/server/core/universe/world/chunk/palette
 [`com.hypixel.hytale.server.core.universe.world.chunk.palette.md`](./com.hypixel.hytale.server.core.universe.world.chunk.palette.md) (3)
@@ -7384,8 +7666,8 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `ChunkLightData` — class ChunkLightData
 - `ChunkLightDataBuilder` — class ChunkLightDataBuilder extends ChunkLightData
 - `ChunkSection` — class ChunkSection extends Savable implements Component<ChunkStore>
-- `ChunkSectionReference` — class ChunkSectionReference
 - `EntitySection` — class EntitySection extends Savable implements Component<ChunkStore>
+- `EnvironmentSection` — class EnvironmentSection implements Component<ChunkStore>
 - `FluidSection` — class FluidSection implements Component<ChunkStore>
 
 ## com/hypixel/hytale/server/core/universe/world/chunk/section/blockpositions
@@ -7444,7 +7726,7 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 ## com/hypixel/hytale/server/core/universe/world/commands/world
 [`com.hypixel.hytale.server.core.universe.world.commands.world.md`](./com.hypixel.hytale.server.core.universe.world.commands.world.md) (9)
 
-- `WorldAddCommand` — class WorldAddCommand extends CommandBase
+- `WorldAddCommand` — class WorldAddCommand extends AbstractAsyncCommand
 - `WorldCommand` — class WorldCommand extends AbstractCommandCollection
 - `WorldListCommand` — class WorldListCommand extends CommandBase
 - `WorldLoadCommand` — class WorldLoadCommand extends CommandBase
@@ -7605,15 +7887,17 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `IndividualSpawnProvider` — class IndividualSpawnProvider implements ISpawnProvider
 
 ## com/hypixel/hytale/server/core/universe/world/storage
-*EntityStore and entity-component access* — [`com.hypixel.hytale.server.core.universe.world.storage.md`](./com.hypixel.hytale.server.core.universe.world.storage.md) (8)
+*EntityStore and entity-component access* — [`com.hypixel.hytale.server.core.universe.world.storage.md`](./com.hypixel.hytale.server.core.universe.world.storage.md) (10)
 
 - `BufferChunkLoader` — abstract class BufferChunkLoader implements IChunkLoader
 - `BufferChunkSaver` — abstract class BufferChunkSaver implements IChunkSaver
-- `ChunkStore` — class ChunkStore implements WorldProvider
+- `ChunkGrid` — class ChunkGrid implements WorldProvider
+- `ChunkStore` — class ChunkStore extends ChunkGrid
 - `EntityStore` — class EntityStore implements WorldProvider
 - `GetChunkFlags` — class GetChunkFlags
 - `IChunkLoader` — interface IChunkLoader extends java.io.Closeable
 - `IChunkSaver` — interface IChunkSaver extends java.io.Closeable
+- `ReadOnlyChunkSaver` — class ReadOnlyChunkSaver implements IChunkSaver
 - `Savable` — class Savable
 
 ## com/hypixel/hytale/server/core/universe/world/storage/component
@@ -7648,13 +7932,21 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 
 - `WorldPregenerateSystem` — class WorldPregenerateSystem extends StoreSystem<ChunkStore>
 
+## com/hypixel/hytale/server/core/universe/world/validation
+[`com.hypixel.hytale.server.core.universe.world.validation.md`](./com.hypixel.hytale.server.core.universe.world.validation.md) (2)
+
+- `BlockValidator` — final class BlockValidator
+- `ChunkStorageValidator` — final class ChunkStorageValidator
+
 ## com/hypixel/hytale/server/core/universe/world/worldgen
-[`com.hypixel.hytale.server.core.universe.world.worldgen.md`](./com.hypixel.hytale.server.core.universe.world.worldgen.md) (10)
+[`com.hypixel.hytale.server.core.universe.world.worldgen.md`](./com.hypixel.hytale.server.core.universe.world.worldgen.md) (12)
 
 - `GeneratedBlockChunk` — class GeneratedBlockChunk
 - `GeneratedChunk` — class GeneratedChunk
 - `GeneratedChunkSection` — class GeneratedChunkSection
+- `GeneratedColumn` — class GeneratedColumn
 - `GeneratedEntityChunk` — class GeneratedEntityChunk
+- `GeneratedEnvironment` — class GeneratedEnvironment
 - `IBenchmarkableWorldGen` — interface IBenchmarkableWorldGen extends IWorldGen
 - `IWorldGen` — interface IWorldGen
 - `IWorldGenBenchmark` — interface IWorldGenBenchmark
@@ -7685,9 +7977,10 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `WorldMapSettings` — class WorldMapSettings
 
 ## com/hypixel/hytale/server/core/universe/world/worldmap/markers
-[`com.hypixel.hytale.server.core.universe.world.worldmap.markers.md`](./com.hypixel.hytale.server.core.universe.world.worldmap.markers.md) (5)
+[`com.hypixel.hytale.server.core.universe.world.worldmap.markers.md`](./com.hypixel.hytale.server.core.universe.world.worldmap.markers.md) (6)
 
 - `DiscoverableMapMarkers` — final class DiscoverableMapMarkers
+- `MapMarkerAlert` — final class MapMarkerAlert
 - `MapMarkerBuilder` — class MapMarkerBuilder
 - `MapMarkerOverride` — final class MapMarkerOverride extends Record
 - `MapMarkerTracker` — class MapMarkerTracker
@@ -7753,14 +8046,16 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `UpdateStatusCommand` — class UpdateStatusCommand extends CommandBase
 
 ## com/hypixel/hytale/server/core/util
-[`com.hypixel.hytale.server.core.util.md`](./com.hypixel.hytale.server.core.util.md) (20)
+[`com.hypixel.hytale.server.core.util.md`](./com.hypixel.hytale.server.core.util.md) (22)
 
 - `AssetUtil` — class AssetUtil
 - `BsonUtil` — class BsonUtil
+- `ComparisonOperators` — final class ComparisonOperators
 - `Config` — class Config<T>
 - `ConsoleColorUtil` — class ConsoleColorUtil
 - `DepthLimitedJsonReader` — final class DepthLimitedJsonReader extends org.bson.json.JsonReader
 - `DumpUtil` — class DumpUtil
+- `EventTitleConfig` — class EventTitleConfig
 - `EventTitleUtil` — class EventTitleUtil
 - `FillerBlockUtil` — class FillerBlockUtil
 - `HashUtil` — class HashUtil
@@ -8037,7 +8332,7 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `ValidatorTypeRegistry` — class ValidatorTypeRegistry
 
 ## com/hypixel/hytale/server/npc/asset/builder/validators/asset
-[`com.hypixel.hytale.server.npc.asset.builder.validators.asset.md`](./com.hypixel.hytale.server.npc.asset.builder.validators.asset.md) (20)
+[`com.hypixel.hytale.server.npc.asset.builder.validators.asset.md`](./com.hypixel.hytale.server.npc.asset.builder.validators.asset.md) (22)
 
 - `AttitudeGroupExistsValidator` — class AttitudeGroupExistsValidator extends AssetValidator
 - `AudioStateExistsValidator` — class AudioStateExistsValidator extends AssetValidator
@@ -8046,6 +8341,7 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `CombatInteractionValidator` — class CombatInteractionValidator extends AssetValidator
 - `EntityEffectExistsValidator` — class EntityEffectExistsValidator extends AssetValidator
 - `EntityStatExistsValidator` — class EntityStatExistsValidator extends AssetValidator
+- `EntityUIComponentExistsValidator` — class EntityUIComponentExistsValidator extends AssetValidator
 - `EnvironmentExistsValidator` — class EnvironmentExistsValidator extends AssetValidator
 - `FlockAssetExistsValidator` — class FlockAssetExistsValidator extends AssetValidator
 - `ItemAttitudeGroupExistsValidator` — class ItemAttitudeGroupExistsValidator extends AssetValidator
@@ -8055,6 +8351,7 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `ModelExistsValidator` — class ModelExistsValidator extends AssetValidator
 - `MusicContainerExistsValidator` — class MusicContainerExistsValidator extends AssetValidator
 - `ParticleSystemExistsValidator` — class ParticleSystemExistsValidator extends AssetValidator
+- `RewardExistsValidator` — class RewardExistsValidator extends AssetValidator
 - `RoleExistsValidator` — class RoleExistsValidator extends AssetValidator
 - `RootInteractionValidator` — class RootInteractionValidator extends AssetValidator
 - `SoundEventExistsValidator` — class SoundEventExistsValidator extends AssetValidator
@@ -8975,22 +9272,28 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `TimerSystem` — class TimerSystem extends SteppableTickingSystem
 
 ## com/hypixel/hytale/server/npc/util
-[`com.hypixel.hytale.server.npc.util.md`](./com.hypixel.hytale.server.npc.util.md) (23)
+[`com.hypixel.hytale.server.npc.util.md`](./com.hypixel.hytale.server.npc.util.md) (31)
 
 - `AimingData` — class AimingData implements ExtraInfoProvider
 - `AimingHelper` — class AimingHelper
 - `Alarm` — class Alarm extends PersistentParameter<java.time.Instant>
 - `AttitudeMemoryEntry` — class AttitudeMemoryEntry implements Tickable
+- `BiasedEasing` — final class BiasedEasing
 - `BlockPlacementHelper` — class BlockPlacementHelper
+- `ChargeDistanceMath` — final class ChargeDistanceMath
 - `ComponentInfo` — class ComponentInfo
 - `DamageData` — class DamageData
+- `EasingCurveMode` — final class EasingCurveMode extends Enum<EasingCurveMode> implements function.Supplier<String>
+- `EasingRamp` — final class EasingRamp
 - `EntityDetectionUtil` — final class EntityDetectionUtil
+- `HorizontalLinePositionSearch` — final class HorizontalLinePositionSearch implements BlockIterator$BlockIteratorProcedure
 - `IAnnotatedComponent` — interface IAnnotatedComponent
 - `IAnnotatedComponentCollection` — interface IAnnotatedComponentCollection extends IAnnotatedComponent
 - `IComponentExecutionControl` — interface IComponentExecutionControl
 - `IEntityByPriorityFilter` — interface IEntityByPriorityFilter extends TriPredicate<Ref<EntityStore>, Ref<EntityStore>, ComponentAccessor<EntityStore>>
 - `InventoryHelper` — class InventoryHelper
 - `NPCPhysicsMath` — class NPCPhysicsMath
+- `PathRetryThrottle` — final class PathRetryThrottle
 - `PositionProbeAir` — class PositionProbeAir extends PositionProbeBase
 - `PositionProbeBase` — class PositionProbeBase
 - `PositionProbeWater` — class PositionProbeWater extends PositionProbeBase
@@ -9000,6 +9303,8 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `Timer` — class Timer implements Tickable
 - `ViewTest` — final class ViewTest extends Enum<ViewTest> implements function.Supplier<String>
 - `VisHelper` — class VisHelper
+- `WalkBreathingRules` — final class WalkBreathingRules
+- `WalkFluidDepth` — final class WalkFluidDepth
 
 ## com/hypixel/hytale/server/npc/util/expression
 [`com.hypixel.hytale.server.npc.util.expression.md`](./com.hypixel.hytale.server.npc.util.expression.md) (7)
@@ -9068,9 +9373,11 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `SpawningPlugin` — class SpawningPlugin extends JavaPlugin
 
 ## com/hypixel/hytale/server/spawning/assets/spawnmarker/config
-[`com.hypixel.hytale.server.spawning.assets.spawnmarker.config.md`](./com.hypixel.hytale.server.spawning.assets.spawnmarker.config.md) (1)
+[`com.hypixel.hytale.server.spawning.assets.spawnmarker.config.md`](./com.hypixel.hytale.server.spawning.assets.spawnmarker.config.md) (3)
 
 - `SpawnMarker` — class SpawnMarker implements JsonAssetWithMap<String, DefaultAssetMap<String, SpawnMarker>>
+- `SpawnPositionSearch` — final class SpawnPositionSearch extends Enum<SpawnPositionSearch>
+- `SpawnPositionSearchDebug` — final class SpawnPositionSearchDebug extends Enum<SpawnPositionSearchDebug>
 
 ## com/hypixel/hytale/server/spawning/assets/spawns
 [`com.hypixel.hytale.server.spawning.assets.spawns.md`](./com.hypixel.hytale.server.spawning.assets.spawns.md) (1)
@@ -9162,10 +9469,12 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `SpawnManager` — abstract class SpawnManager<T extends SpawnWrapper<U>, U extends NPCSpawn>
 
 ## com/hypixel/hytale/server/spawning/spawnmarkers
-[`com.hypixel.hytale.server.spawning.spawnmarkers.md`](./com.hypixel.hytale.server.spawning.spawnmarkers.md) (2)
+[`com.hypixel.hytale.server.spawning.spawnmarkers.md`](./com.hypixel.hytale.server.spawning.spawnmarkers.md) (4)
 
+- `SpawnMarkerDebug` — class SpawnMarkerDebug implements Component<EntityStore>
 - `SpawnMarkerEntity` — class SpawnMarkerEntity implements Component<EntityStore>
 - `SpawnMarkerSystems` — class SpawnMarkerSystems
+- `SpawnMarkerValidation` — class SpawnMarkerValidation implements Component<EntityStore>
 
 ## com/hypixel/hytale/server/spawning/suppression
 [`com.hypixel.hytale.server.spawning.suppression.md`](./com.hypixel.hytale.server.spawning.suppression.md) (2)
@@ -9196,7 +9505,7 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `SpawnMarkerSpatialSystem` — class SpawnMarkerSpatialSystem extends SpatialSystem<EntityStore>
 
 ## com/hypixel/hytale/server/spawning/util
-[`com.hypixel.hytale.server.spawning.util.md`](./com.hypixel.hytale.server.spawning.util.md) (6)
+[`com.hypixel.hytale.server.spawning.util.md`](./com.hypixel.hytale.server.spawning.util.md) (31)
 
 - `ChunkColumnMask` — class ChunkColumnMask
 - `FloodFillEntryPoolProviderSimple` — class FloodFillEntryPoolProviderSimple implements Resource<EntityStore>
@@ -9204,6 +9513,31 @@ Search:                                   `node tools/refs/sdk/sdk-search.js --m
 - `FloodFillPositionSelector` — class FloodFillPositionSelector implements Component<EntityStore>
 - `LightRangePredicate` — class LightRangePredicate
 - `RandomChunkColumnIterator` — class RandomChunkColumnIterator
+- `SpawnPositionBlockColumnReader` — interface SpawnPositionBlockColumnReader
+- `SpawnPositionCandidateBuffer` — final class SpawnPositionCandidateBuffer
+- `SpawnPositionCandidateGenerator` — final class SpawnPositionCandidateGenerator
+- `SpawnPositionCandidateKind` — final class SpawnPositionCandidateKind extends Enum<SpawnPositionCandidateKind>
+- `SpawnPositionCandidateRejection` — final class SpawnPositionCandidateRejection extends Enum<SpawnPositionCandidateRejection>
+- `SpawnPositionCandidateSurroundingsProbe` — final class SpawnPositionCandidateSurroundingsProbe
+- `SpawnPositionChunkCache` — final class SpawnPositionChunkCache
+- `SpawnPositionColumnProfile` — final class SpawnPositionColumnProfile extends SpawnPositionVerticalSpanSet
+- `SpawnPositionColumnProfileProvider` — interface SpawnPositionColumnProfileProvider
+- `SpawnPositionPlacement` — final class SpawnPositionPlacement extends Enum<SpawnPositionPlacement>
+- `SpawnPositionProfileCache` — final class SpawnPositionProfileCache
+- `SpawnPositionRangeSearch` — final class SpawnPositionRangeSearch
+- `SpawnPositionSearchCapacityException` — final class SpawnPositionSearchCapacityException extends IllegalArgumentException
+- `SpawnPositionSearchDiagnostics` — final class SpawnPositionSearchDiagnostics
+- `SpawnPositionSearchFailureSummary` — final class SpawnPositionSearchFailureSummary
+- `SpawnPositionSearchGeometry` — final class SpawnPositionSearchGeometry
+- `SpawnPositionSearchLimits` — final class SpawnPositionSearchLimits
+- `SpawnPositionSearchTermination` — final class SpawnPositionSearchTermination extends Enum<SpawnPositionSearchTermination>
+- `SpawnPositionSearchWorkspace` — final class SpawnPositionSearchWorkspace implements Resource<EntityStore>
+- `SpawnPositionSpanIntersection` — final class SpawnPositionSpanIntersection
+- `SpawnPositionSurroundings` — final class SpawnPositionSurroundings
+- `SpawnPositionValidationCache` — final class SpawnPositionValidationCache
+- `SpawnPositionVerticalSpanSet` — class SpawnPositionVerticalSpanSet
+- `SpawnPositionWindowIterator` — final class SpawnPositionWindowIterator
+- `SpawnPositionWorldColumnProfileProvider` — final class SpawnPositionWorldColumnProfileProvider implements SpawnPositionColumnProfileProvider,SpawnPositionBlockColumnReader
 
 ## com/hypixel/hytale/server/spawning/world
 [`com.hypixel.hytale.server.spawning.world.md`](./com.hypixel.hytale.server.spawning.world.md) (3)

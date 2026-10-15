@@ -19,7 +19,7 @@ public class com.hypixel.hytale.builtin.hytalegenerator.positionproviders.cached
 ```java
 public class com.hypixel.hytale.builtin.hytalegenerator.positionproviders.cached.CachedPositionProvider extends com.hypixel.hytale.builtin.hytalegenerator.positionproviders.PositionProvider {
   public com.hypixel.hytale.builtin.hytalegenerator.positionproviders.cached.CachedPositionProvider(com.hypixel.hytale.builtin.hytalegenerator.positionproviders.PositionProvider, int, int);
-  public void generate(com.hypixel.hytale.builtin.hytalegenerator.positionproviders.PositionProvider$Context);
+  public void run(com.hypixel.hytale.builtin.hytalegenerator.positionproviders.PositionProvider$Context);
   public void get(com.hypixel.hytale.builtin.hytalegenerator.positionproviders.PositionProvider$Context);
   public int sectionFloor(int);
 }

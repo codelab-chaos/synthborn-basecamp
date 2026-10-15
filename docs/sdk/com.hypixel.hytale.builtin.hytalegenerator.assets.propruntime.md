@@ -13,12 +13,11 @@ public class com.hypixel.hytale.builtin.hytalegenerator.assets.propruntime.PropR
   public static final com.hypixel.hytale.assetstore.codec.AssetBuilderCodec<java.lang.String, com.hypixel.hytale.builtin.hytalegenerator.assets.propruntime.PropRuntimeAsset> CODEC;
   protected com.hypixel.hytale.builtin.hytalegenerator.assets.propruntime.PropRuntimeAsset();
   public boolean isSkip();
-  public void cleanUp();
   public com.hypixel.hytale.builtin.hytalegenerator.positionproviders.PositionProvider buildPositionProvider_deprecated(com.hypixel.hytale.builtin.hytalegenerator.rng.SeedBox, com.hypixel.hytale.builtin.hytalegenerator.referencebundle.ReferenceBundle, com.hypixel.hytale.builtin.hytalegenerator.workerindexer.WorkerIndexer$Id, com.hypixel.hytale.builtin.hytalegenerator.assets.ThreadBridge);
   public com.hypixel.hytale.builtin.hytalegenerator.assignments.Assignments buildAssignments_deprecated(com.hypixel.hytale.builtin.hytalegenerator.rng.SeedBox, com.hypixel.hytale.builtin.hytalegenerator.material.MaterialCache, com.hypixel.hytale.builtin.hytalegenerator.referencebundle.ReferenceBundle, com.hypixel.hytale.builtin.hytalegenerator.workerindexer.WorkerIndexer$Id, com.hypixel.hytale.builtin.hytalegenerator.assets.ThreadBridge);
-  public com.hypixel.hytale.builtin.hytalegenerator.propdistributions.PropDistribution buildPropDistribution(com.hypixel.hytale.builtin.hytalegenerator.rng.SeedBox, com.hypixel.hytale.builtin.hytalegenerator.material.MaterialCache, int, com.hypixel.hytale.builtin.hytalegenerator.referencebundle.ReferenceBundle, com.hypixel.hytale.builtin.hytalegenerator.workerindexer.WorkerIndexer$Id, com.hypixel.hytale.builtin.hytalegenerator.assets.ThreadBridge);
-  public int getRuntime();
+  public com.hypixel.hytale.builtin.hytalegenerator.PropRuntime build(com.hypixel.hytale.builtin.hytalegenerator.rng.SeedBox, com.hypixel.hytale.builtin.hytalegenerator.material.MaterialCache, com.hypixel.hytale.builtin.hytalegenerator.referencebundle.ReferenceBundle, com.hypixel.hytale.builtin.hytalegenerator.workerindexer.WorkerIndexer$Id, com.hypixel.hytale.builtin.hytalegenerator.assets.ThreadBridge);
   public java.lang.String getId();
+  public void cleanUp();
   public java.lang.Object getId();
 }
 ```

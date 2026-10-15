@@ -21,6 +21,7 @@ public abstract class com.hypixel.hytale.server.core.util.thread.TickingThread i
   protected abstract void tick(float);
   protected void onStart();
   protected abstract void onShutdown();
+  protected long getAbandonTimeoutMillis();
   public java.util.concurrent.CompletableFuture<java.lang.Void> start();
   public boolean interrupt();
   public void stop();

@@ -50,6 +50,8 @@ public class com.hypixel.hytale.server.core.modules.entity.item.ItemComponent im
   public void setItemStack(com.hypixel.hytale.server.core.inventory.ItemStack);
   public void setPickupDelay(float);
   public float getPickupRadius(com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public float getMergeRadius(com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public void setMergeRadius(float);
   public float computeLifetimeSeconds(com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public com.hypixel.hytale.protocol.ColorLight computeDynamicLight();
   public boolean pollPickupDelay(float);
@@ -74,7 +76,6 @@ public class com.hypixel.hytale.server.core.modules.entity.item.ItemComponent im
 
 ```java
 public class com.hypixel.hytale.server.core.modules.entity.item.ItemMergeSystem extends com.hypixel.hytale.component.system.tick.EntityTickingSystem<com.hypixel.hytale.server.core.universe.world.storage.EntityStore> {
-  public static final float RADIUS;
   public com.hypixel.hytale.server.core.modules.entity.item.ItemMergeSystem(com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.core.modules.entity.item.ItemComponent>, com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.core.modules.entity.component.Interactable>, com.hypixel.hytale.component.ResourceType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.component.spatial.SpatialResource<com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.universe.world.storage.EntityStore>>);
   public com.hypixel.hytale.component.query.Query<com.hypixel.hytale.server.core.universe.world.storage.EntityStore> getQuery();
   public boolean isParallel(int, int);

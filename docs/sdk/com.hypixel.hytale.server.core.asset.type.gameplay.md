@@ -34,7 +34,7 @@ public class com.hypixel.hytale.server.core.asset.type.gameplay.CameraEffectsCon
 ## CombatConfig
 
 ```java
-public class com.hypixel.hytale.server.core.asset.type.gameplay.CombatConfig {
+public class com.hypixel.hytale.server.core.asset.type.gameplay.CombatConfig implements com.hypixel.hytale.server.core.io.NetworkSerializable<com.hypixel.hytale.protocol.packets.world.CombatConfig> {
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.server.core.asset.type.gameplay.CombatConfig> CODEC;
   protected java.time.Duration outOfCombatDelay;
   protected java.lang.String staminaBrokenEffectId;
@@ -49,6 +49,8 @@ public class com.hypixel.hytale.server.core.asset.type.gameplay.CombatConfig {
   public boolean isDisplayCombatText();
   public boolean isNpcIncomingDamageDisabled();
   public boolean isPlayerIncomingDamageDisabled();
+  public com.hypixel.hytale.protocol.packets.world.CombatConfig toPacket();
+  public java.lang.Object toPacket();
 }
 ```
 
@@ -90,7 +92,7 @@ public class com.hypixel.hytale.server.core.asset.type.gameplay.DeathConfig {
 ## GameplayConfig
 
 ```java
-public class com.hypixel.hytale.server.core.asset.type.gameplay.GameplayConfig implements com.hypixel.hytale.assetstore.map.JsonAssetWithMap<java.lang.String, com.hypixel.hytale.assetstore.map.DefaultAssetMap<java.lang.String, com.hypixel.hytale.server.core.asset.type.gameplay.GameplayConfig>> {
+public class com.hypixel.hytale.server.core.asset.type.gameplay.GameplayConfig implements com.hypixel.hytale.assetstore.map.JsonAssetWithMap<java.lang.String, com.hypixel.hytale.assetstore.map.DefaultAssetMap<java.lang.String, com.hypixel.hytale.server.core.asset.type.gameplay.GameplayConfig>>, com.hypixel.hytale.server.core.io.NetworkSerializable<com.hypixel.hytale.protocol.packets.world.WorldGameplayConfig> {
   public static final java.lang.String DEFAULT_ID;
   public static final com.hypixel.hytale.server.core.asset.type.gameplay.GameplayConfig DEFAULT;
   public static final com.hypixel.hytale.codec.lookup.MapKeyMapCodec<java.lang.Object> PLUGIN_CODEC;
@@ -139,7 +141,9 @@ public class com.hypixel.hytale.server.core.asset.type.gameplay.GameplayConfig i
   public com.hypixel.hytale.server.core.asset.type.gameplay.SpawnConfig getSpawnConfig();
   protected void processConfig();
   public java.lang.String getId();
+  public com.hypixel.hytale.protocol.packets.world.WorldGameplayConfig toPacket();
   public java.lang.Object getId();
+  public java.lang.Object toPacket();
 }
 ```
 
@@ -201,7 +205,7 @@ public class com.hypixel.hytale.server.core.asset.type.gameplay.MutableDeathConf
 ## PlayerConfig
 
 ```java
-public class com.hypixel.hytale.server.core.asset.type.gameplay.PlayerConfig {
+public class com.hypixel.hytale.server.core.asset.type.gameplay.PlayerConfig implements com.hypixel.hytale.server.core.io.NetworkSerializable<com.hypixel.hytale.protocol.packets.world.PlayerConfig> {
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.server.core.asset.type.gameplay.PlayerConfig> CODEC;
   protected java.lang.String hitboxCollisionConfigId;
   protected java.lang.String repulsionConfigId;
@@ -218,6 +222,8 @@ public class com.hypixel.hytale.server.core.asset.type.gameplay.PlayerConfig {
   public java.lang.String getMovementConfigId();
   public int getMaxDeployableEntities();
   public com.hypixel.hytale.server.core.asset.type.gameplay.PlayerConfig$ArmorVisibilityOption getArmorVisibilityOption();
+  public com.hypixel.hytale.protocol.packets.world.PlayerConfig toPacket();
+  public java.lang.Object toPacket();
 }
 ```
 
@@ -252,26 +258,33 @@ public class com.hypixel.hytale.server.core.asset.type.gameplay.SpawnConfig {
 ## WorldConfig
 
 ```java
-public class com.hypixel.hytale.server.core.asset.type.gameplay.WorldConfig {
+public class com.hypixel.hytale.server.core.asset.type.gameplay.WorldConfig implements com.hypixel.hytale.server.core.io.NetworkSerializable<com.hypixel.hytale.protocol.packets.world.WorldConfig> {
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.server.core.asset.type.gameplay.WorldConfig> CODEC;
   public static final int DEFAULT_TOTAL_DAY_DURATION_SECONDS;
   public static final int DEFAULT_DAYTIME_DURATION_SECONDS;
   public static final int DEFAULT_NIGHTTIME_DURATION_SECONDS;
   protected boolean allowBlockBreaking;
+  protected java.lang.String blockBreakingBypassTag;
+  protected int blockBreakingBypassTagIndex;
   protected boolean allowBlockGathering;
   protected boolean allowBlockPlacement;
+  protected java.lang.String[] blockedRootInteractionTags;
+  protected it.unimi.dsi.fastutil.ints.IntSet blockedRootInteractionTagIndexes;
   protected int daytimeDurationSeconds;
   protected int nighttimeDurationSeconds;
   protected float blockPlacementFragilityTimer;
   public com.hypixel.hytale.server.core.asset.type.gameplay.WorldConfig();
-  public boolean isBlockBreakingAllowed();
+  public boolean isBlockBreakingAllowed(com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType);
   public boolean isBlockGatheringAllowed();
   public boolean isBlockPlacementAllowed();
+  public boolean isRootInteractionAllowed(com.hypixel.hytale.server.core.modules.interaction.interaction.config.RootInteraction);
   public int getDaytimeDurationSeconds();
   public int getNighttimeDurationSeconds();
   public int getTotalMoonPhases();
   public float getBlockPlacementFragilityTimer();
   public com.hypixel.hytale.server.core.asset.type.gameplay.sleep.SleepConfig getSleepConfig();
+  public com.hypixel.hytale.protocol.packets.world.WorldConfig toPacket();
+  public java.lang.Object toPacket();
 }
 ```
 

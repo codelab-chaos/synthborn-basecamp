@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-07T17:13:42.568Z",
-  "hytaleVersion": "0.6.4",
+  "generatedAt": "2026-10-14T19:43:52.974Z",
+  "hytaleVersion": "0.7.2",
   "counts": {
-    "recipes": 1984,
-    "standalone": 403,
-    "embedded": 1581,
-    "scannedFiles": 4075
+    "recipes": 2047,
+    "standalone": 410,
+    "embedded": 1637,
+    "scannedFiles": 4370
   },
   "recipes": [
     {
@@ -8175,6 +8175,34 @@
       "knowledgeRequired": false
     },
     {
+      "id": "Deco_SpiderWeb_Diagonal",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Deco/Deco_SpiderWeb_Diagonal.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Fibre",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Deco_SpiderWeb_Diagonal",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "StructuralCrafting",
+          "id": "Builders",
+          "categories": []
+        }
+      ],
+      "timeSeconds": null,
+      "knowledgeRequired": false
+    },
+    {
       "id": "Deco_Tankard",
       "source": "embedded",
       "sourceFile": "_Assets/Server/Item/Items/Deco/Deco_Tankard.json",
@@ -11560,6 +11588,116 @@
       "knowledgeRequired": false
     },
     {
+      "id": "Furniture_Goblin_Bed",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Furniture/Goblin/Furniture_Goblin_Bed.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Scraps",
+          "quantity": 30
+        },
+        {
+          "kind": "resource",
+          "id": "Wood_Planks",
+          "quantity": 10
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Spider_Silk",
+          "quantity": 5
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Furniture_Goblin_Bed",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Decoration"
+          ]
+        }
+      ],
+      "timeSeconds": null,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Furniture_Goblin_Brazier",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Furniture/Goblin/Furniture_Goblin_Brazier.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Scraps",
+          "quantity": 20
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Charcoal",
+          "quantity": 5
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Furniture_Goblin_Brazier",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Decoration"
+          ]
+        }
+      ],
+      "timeSeconds": null,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Furniture_Goblin_Candle",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Furniture/Goblin/Furniture_Goblin_Candle.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Scraps",
+          "quantity": 5
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Charcoal",
+          "quantity": 2
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Furniture_Goblin_Candle",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Decoration"
+          ]
+        }
+      ],
+      "timeSeconds": null,
+      "knowledgeRequired": false
+    },
+    {
       "id": "Furniture_Goblin_Chest_Small",
       "source": "embedded",
       "sourceFile": "_Assets/Server/Item/Items/Furniture/Goblin/Furniture_Goblin_Chest_Small.json",
@@ -11588,6 +11726,321 @@
           "id": "Furniture_Bench",
           "categories": [
             "Furniture_Storage"
+          ]
+        }
+      ],
+      "timeSeconds": null,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Furniture_Goblin_ChestStolen_Small",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Furniture/Goblin/Furniture_Goblin_ChestStolen_Small.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Wood_Deadwood_Planks",
+          "quantity": 3
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Bar_Gold",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Furniture_Goblin_ChestStolen_Small",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "Furniture_Bench",
+          "categories": [
+            "Furniture_Storage"
+          ]
+        }
+      ],
+      "timeSeconds": null,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Furniture_Goblin_Door",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Furniture/Goblin/Furniture_Goblin_Door.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Scraps",
+          "quantity": 25
+        },
+        {
+          "kind": "resource",
+          "id": "Wood_Planks",
+          "quantity": 10
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Furniture_Goblin_Door",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Decoration"
+          ]
+        }
+      ],
+      "timeSeconds": null,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Furniture_Goblin_Door_Medium",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Furniture/Goblin/Furniture_Goblin_Door_Medium.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Scraps",
+          "quantity": 50
+        },
+        {
+          "kind": "resource",
+          "id": "Wood_Planks",
+          "quantity": 20
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Bar_Iron",
+          "quantity": 5
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Furniture_Goblin_Door_Medium",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Decoration"
+          ]
+        }
+      ],
+      "timeSeconds": null,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Furniture_Goblin_Ladder",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Furniture/Goblin/Furniture_Goblin_Ladder.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Scraps",
+          "quantity": 5
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Bar_Iron",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Furniture_Goblin_Ladder",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Decoration"
+          ]
+        }
+      ],
+      "timeSeconds": null,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Furniture_Goblin_Sign",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Furniture/Goblin/Furniture_Goblin_Sign.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Scraps",
+          "quantity": 15
+        },
+        {
+          "kind": "resource",
+          "id": "Wood_Planks",
+          "quantity": 5
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Furniture_Goblin_Sign",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Decoration"
+          ]
+        }
+      ],
+      "timeSeconds": null,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Furniture_Goblin_Statue_Graffiti",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Furniture/Goblin/Furniture_Goblin_Statue_Graffiti.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Scraps",
+          "quantity": 50
+        },
+        {
+          "kind": "item",
+          "id": "Rock_Stone_Cobble_Mossy",
+          "quantity": 20
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Furniture_Goblin_Statue_Graffiti",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Decoration"
+          ]
+        }
+      ],
+      "timeSeconds": null,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Furniture_Goblin_Stool",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Furniture/Goblin/Furniture_Goblin_Stool.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Furniture_Goblin_Brazier",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Furniture_Goblin_Stool",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Decoration"
+          ]
+        }
+      ],
+      "timeSeconds": null,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Furniture_Goblin_Table",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Furniture/Goblin/Furniture_Goblin_Table.json",
+      "inputs": [
+        {
+          "kind": "resource",
+          "id": "Wood_Planks",
+          "quantity": 30
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Scraps",
+          "quantity": 10
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Furniture_Goblin_Table",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Decoration"
+          ]
+        }
+      ],
+      "timeSeconds": null,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Furniture_Goblin_Window",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Furniture/Goblin/Furniture_Goblin_Window.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Scraps",
+          "quantity": 15
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Bar_Iron",
+          "quantity": 3
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Furniture_Goblin_Window",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Decoration"
           ]
         }
       ],
@@ -14017,6 +14470,41 @@
       "knowledgeRequired": false
     },
     {
+      "id": "Furniture_Temple_Emerald_Statue_Head",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Furniture/Temple_Emerald/Furniture_Temple_Emerald_Statue_Head.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Rock_Quartzite_Cobble",
+          "quantity": 20
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Enkindled_Resource",
+          "quantity": 3
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Furniture_Temple_Emerald_Statue_Head",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Decoration"
+          ]
+        }
+      ],
+      "timeSeconds": null,
+      "knowledgeRequired": false
+    },
+    {
       "id": "Furniture_Temple_Emerald_Stool",
       "source": "embedded",
       "sourceFile": "_Assets/Server/Item/Items/Furniture/Temple_Emerald/Furniture_Temple_Emerald_Stool.json",
@@ -15417,6 +15905,291 @@
       "knowledgeRequired": false
     },
     {
+      "id": "Glider_Scrap",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Glider/Glider_Scrap.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Scraps",
+          "quantity": 150
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Gadget_Assembly",
+          "quantity": 6
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Spider_Silk",
+          "quantity": 6
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Voidtaken_Grizzly_Hide",
+          "quantity": 2
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Glider_Scrap",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Gadgets"
+          ]
+        }
+      ],
+      "timeSeconds": 1,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Goblin_Painting_Breach_Replica",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Deco/Goblin_Painting_Breach_Replica.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Scraps",
+          "quantity": 20
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Bar_Iron",
+          "quantity": 10
+        },
+        {
+          "kind": "resource",
+          "id": "Mushrooms",
+          "quantity": 2
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Goblin_Painting_Breach_Replica",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Decoration"
+          ]
+        }
+      ],
+      "timeSeconds": 1,
+      "knowledgeRequired": true
+    },
+    {
+      "id": "Goblin_Painting_Fail_Replica",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Deco/Goblin_Painting_Fail_Replica.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Scraps",
+          "quantity": 20
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Bar_Iron",
+          "quantity": 10
+        },
+        {
+          "kind": "resource",
+          "id": "Mushrooms",
+          "quantity": 2
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Goblin_Painting_Fail_Replica",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Decoration"
+          ]
+        }
+      ],
+      "timeSeconds": 1,
+      "knowledgeRequired": true
+    },
+    {
+      "id": "Goblin_Painting_ForgottenTemple_Replica",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Deco/Goblin_Painting_ForgottenTemple_Replica.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Scraps",
+          "quantity": 20
+        },
+        {
+          "kind": "resource",
+          "id": "Wood_Planks",
+          "quantity": 10
+        },
+        {
+          "kind": "resource",
+          "id": "Mushrooms",
+          "quantity": 2
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Goblin_Painting_ForgottenTemple_Replica",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Decoration"
+          ]
+        }
+      ],
+      "timeSeconds": 1,
+      "knowledgeRequired": true
+    },
+    {
+      "id": "Goblin_Painting_Orbis_Replica",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Deco/Goblin_Painting_Orbis_Replica.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Scraps",
+          "quantity": 20
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Bar_Iron",
+          "quantity": 10
+        },
+        {
+          "kind": "resource",
+          "id": "Mushrooms",
+          "quantity": 2
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Goblin_Painting_Orbis_Replica",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Decoration"
+          ]
+        }
+      ],
+      "timeSeconds": 1,
+      "knowledgeRequired": true
+    },
+    {
+      "id": "Goblin_Painting_Portal_Replica",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Deco/Goblin_Painting_Portal_Replica.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Scraps",
+          "quantity": 20
+        },
+        {
+          "kind": "resource",
+          "id": "Wood_Planks",
+          "quantity": 10
+        },
+        {
+          "kind": "resource",
+          "id": "Mushrooms",
+          "quantity": 2
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Goblin_Painting_Portal_Replica",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Decoration"
+          ]
+        }
+      ],
+      "timeSeconds": 1,
+      "knowledgeRequired": true
+    },
+    {
+      "id": "Goblin_Painting_Repair_Replica",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Deco/Goblin_Painting_Repair_Replica.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Scraps",
+          "quantity": 20
+        },
+        {
+          "kind": "resource",
+          "id": "Wood_Planks",
+          "quantity": 10
+        },
+        {
+          "kind": "resource",
+          "id": "Mushrooms",
+          "quantity": 2
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Goblin_Painting_Repair_Replica",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Decoration"
+          ]
+        }
+      ],
+      "timeSeconds": 1,
+      "knowledgeRequired": true
+    },
+    {
       "id": "Halloween_Wagon",
       "source": "embedded",
       "sourceFile": "_Assets/Server/Item/Items/Deco/Halloween_Wagon.json",
@@ -16059,6 +16832,41 @@
           "id": "Cookingbench",
           "categories": [
             "Ingredients"
+          ]
+        }
+      ],
+      "timeSeconds": 1,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Ingredient_Gadget_Assembly",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Ingredient/Goblin/Ingredient_Gadget_Assembly.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Scraps",
+          "quantity": 25
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Crystal_Void",
+          "quantity": 2
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Gadget_Assembly",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Gadgets"
           ]
         }
       ],
@@ -16805,6 +17613,41 @@
       "knowledgeRequired": false
     },
     {
+      "id": "Ingredient_Powder_Boom",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Ingredient/Ingredient_Powder_Boom.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Plant_Crop_Mushroom_Boomshroom_Small",
+          "quantity": 2
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Charcoal",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Powder_Boom",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Gadgets"
+          ]
+        }
+      ],
+      "timeSeconds": 1,
+      "knowledgeRequired": false
+    },
+    {
       "id": "Ingredient_Salt",
       "source": "embedded",
       "sourceFile": "_Assets/Server/Item/Items/Ingredient/Ingredient_Salt.json",
@@ -16943,6 +17786,36 @@
           "id": "Architects",
           "categories": [
             "Housing"
+          ]
+        }
+      ],
+      "timeSeconds": null,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Metal_Orbis_Copper_Fence",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Metal/Orbis_Copper/Metal_Orbis_Copper_Fence.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Bar_Copper",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Metal_Orbis_Copper_Fence",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "StructuralCrafting",
+          "id": "Builders",
+          "categories": [
+            "Wall"
           ]
         }
       ],
@@ -19005,6 +19878,36 @@
       "knowledgeRequired": false
     },
     {
+      "id": "Plant_Sapling_Sadwillow",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Plant/Plant_Sapling_Sadwillow.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Life_Essence",
+          "quantity": 15
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Plant_Sapling_Sadwillow",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "Farmingbench",
+          "categories": [
+            "Saplings"
+          ]
+        }
+      ],
+      "timeSeconds": 0,
+      "knowledgeRequired": false
+    },
+    {
       "id": "Plant_Sapling_Sallow",
       "source": "embedded",
       "sourceFile": "_Assets/Server/Item/Items/Plant/Plant_Sapling_Sallow.json",
@@ -20790,6 +21693,46 @@
       "knowledgeRequired": false
     },
     {
+      "id": "PortalKey_Goblin_Breach",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Portal/PortalKey_Goblin_Breach.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Scraps",
+          "quantity": 15
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Void_Essence",
+          "quantity": 10
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Bar_Iron",
+          "quantity": 5
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "PortalKey_Goblin_Breach",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Fragments"
+          ]
+        }
+      ],
+      "timeSeconds": 1,
+      "knowledgeRequired": false
+    },
+    {
       "id": "PortalKey_Hederas_Lair",
       "source": "embedded",
       "sourceFile": "_Assets/Server/Item/Items/Portal/PortalKey_Hederas_Lair.json",
@@ -20853,6 +21796,46 @@
           "id": "Arcanebench",
           "categories": [
             "Arcane_Portals"
+          ]
+        }
+      ],
+      "timeSeconds": 1,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "PortalKey_The_Deepworks",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Portal/PortalKey_The_Deepworks.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Scraps",
+          "quantity": 30
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Crystal_Void",
+          "quantity": 5
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Voidheart",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "PortalKey_The_Deepworks",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Fragments"
           ]
         }
       ],
@@ -25794,6 +26777,126 @@
       "knowledgeRequired": false
     },
     {
+      "id": "Rock_Crystal_Void_Block",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Rock/Crystal/Rock_Crystal_Void_Block.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Crystal_Void",
+          "quantity": 5
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Rock_Crystal_Void_Block",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Decoration"
+          ]
+        }
+      ],
+      "timeSeconds": null,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Rock_Crystal_Void_Large",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Rock/Crystal/Rock_Crystal_Void_Large.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Crystal_Void",
+          "quantity": 3
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Rock_Crystal_Void_Large",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Decoration"
+          ]
+        }
+      ],
+      "timeSeconds": null,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Rock_Crystal_Void_Medium",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Rock/Crystal/Rock_Crystal_Void_Medium.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Crystal_Void",
+          "quantity": 2
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Rock_Crystal_Void_Medium",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Decoration"
+          ]
+        }
+      ],
+      "timeSeconds": null,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Rock_Crystal_Void_Small",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Rock/Crystal/Rock_Crystal_Void_Small.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Crystal_Void",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Rock_Crystal_Void_Small",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Decoration"
+          ]
+        }
+      ],
+      "timeSeconds": null,
+      "knowledgeRequired": false
+    },
+    {
       "id": "Rock_Crystal_White_Block",
       "source": "embedded",
       "sourceFile": "_Assets/Server/Item/Items/Rock/Crystal/Rock_Crystal_White_Block.json",
@@ -26562,6 +27665,34 @@
           "categories": [
             "Wall"
           ]
+        }
+      ],
+      "timeSeconds": 0,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Rock_Kenolite",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Rock/Kenolite/Rock_Kenolite.json",
+      "inputs": [
+        {
+          "kind": "resource",
+          "id": "Rock_Aqua",
+          "quantity": 2
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Rock_Kenolite",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Processing",
+          "id": "Furnace",
+          "categories": []
         }
       ],
       "timeSeconds": 0,
@@ -36330,6 +37461,501 @@
       "knowledgeRequired": false
     },
     {
+      "id": "Rocket_Boots",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Gadget/Rocket_Boots.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Scraps",
+          "quantity": 30
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Gadget_Assembly",
+          "quantity": 4
+        },
+        {
+          "kind": "item",
+          "id": "Weapon_Bangstick",
+          "quantity": 2
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Voidtaken_Grizzly_Hide",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Rocket_Boots",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Gadgets"
+          ]
+        }
+      ],
+      "timeSeconds": 1,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Rune_Aoe_Up",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Rune/Modifier/Rune_Aoe_Up.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Rune_Shard",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Rune_Aoe_Up",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Runes"
+          ]
+        }
+      ],
+      "timeSeconds": 1,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Rune_ChainHook",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Rune/Ability/Rune_ChainHook.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Rune_Shard",
+          "quantity": 2
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Rune_ChainHook",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Runes"
+          ]
+        }
+      ],
+      "timeSeconds": 1,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Rune_ChargedShot",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Rune/Ability/Rune_ChargedShot.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Rune_Shard",
+          "quantity": 2
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Rune_ChargedShot",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Runes"
+          ]
+        }
+      ],
+      "timeSeconds": 1,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Rune_Duration_Up",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Rune/Modifier/Rune_Duration_Up.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Rune_Shard",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Rune_Duration_Up",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Runes"
+          ]
+        }
+      ],
+      "timeSeconds": 1,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Rune_Enrage",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Rune/Ability/Rune_Enrage.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Rune_Shard",
+          "quantity": 2
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Rune_Enrage",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Runes"
+          ]
+        }
+      ],
+      "timeSeconds": 1,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Rune_Fireball",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Rune/Ability/Rune_Fireball.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Rune_Shard",
+          "quantity": 2
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Rune_Fireball",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Runes"
+          ]
+        }
+      ],
+      "timeSeconds": 1,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Rune_Fork",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Rune/Modifier/Rune_Fork.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Rune_Shard",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Rune_Fork",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Runes"
+          ]
+        }
+      ],
+      "timeSeconds": 1,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Rune_GroundSlam",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Rune/Ability/Rune_GroundSlam.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Rune_Shard",
+          "quantity": 2
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Rune_GroundSlam",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Runes"
+          ]
+        }
+      ],
+      "timeSeconds": 1,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Rune_PoisonImbue",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Rune/Ability/Rune_PoisonImbue.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Rune_Shard",
+          "quantity": 2
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Rune_PoisonImbue",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Runes"
+          ]
+        }
+      ],
+      "timeSeconds": 1,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Rune_Quickening",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Rune/Modifier/Rune_Quickening.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Rune_Shard",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Rune_Quickening",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Runes"
+          ]
+        }
+      ],
+      "timeSeconds": 1,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Rune_Rend",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Rune/Modifier/Rune_Rend.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Rune_Shard",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Rune_Rend",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Runes"
+          ]
+        }
+      ],
+      "timeSeconds": 1,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Rune_Ricochet",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Rune/Modifier/Rune_Ricochet.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Rune_Shard",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Rune_Ricochet",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Runes"
+          ]
+        }
+      ],
+      "timeSeconds": 1,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Rune_Thrift",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Rune/Modifier/Rune_Thrift.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Rune_Shard",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Rune_Thrift",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Runes"
+          ]
+        }
+      ],
+      "timeSeconds": 1,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Rune_WindStrike",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Rune/Ability/Rune_WindStrike.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Rune_Shard",
+          "quantity": 2
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Rune_WindStrike",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Runes"
+          ]
+        }
+      ],
+      "timeSeconds": 1,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Rune_Wither",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Rune/Modifier/Rune_Wither.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Rune_Shard",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Rune_Wither",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Runes"
+          ]
+        }
+      ],
+      "timeSeconds": 1,
+      "knowledgeRequired": false
+    },
+    {
       "id": "Salvage_Armor_Adamantite_Chest",
       "source": "standalone",
       "sourceFile": "_Assets/Server/Item/Recipes/Salvage/Salvage_Armor_Adamantite_Chest.json",
@@ -39170,6 +40796,44 @@
         {
           "kind": "item",
           "id": "Ingredient_Fibre",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Processing",
+          "id": "Salvagebench",
+          "categories": []
+        }
+      ],
+      "timeSeconds": 4,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Salvage_Ingredient_Gobliterator_Core",
+      "source": "standalone",
+      "sourceFile": "_Assets/Server/Item/Recipes/Salvage/Salvage_Ingredient_Gobliterator_Core.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Gobliterator_Core",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Scraps",
+          "quantity": 40
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Gadget_Assembly",
+          "quantity": 2
+        },
+        {
+          "kind": "item",
+          "id": "Food_Cheese",
           "quantity": 1
         }
       ],
@@ -44476,6 +46140,44 @@
       "knowledgeRequired": false
     },
     {
+      "id": "Salvage_Tool_Drill_Scrap",
+      "source": "standalone",
+      "sourceFile": "_Assets/Server/Item/Recipes/Salvage/Salvage_Tool_Drill_Scrap.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Tool_Drill_Scrap",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Scraps",
+          "quantity": 25
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Bar_Iron",
+          "quantity": 5
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Gadget_Assembly",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Processing",
+          "id": "Salvagebench",
+          "categories": []
+        }
+      ],
+      "timeSeconds": 4,
+      "knowledgeRequired": false
+    },
+    {
       "id": "Salvage_Tool_Hammer_Crude",
       "source": "standalone",
       "sourceFile": "_Assets/Server/Item/Recipes/Salvage/Salvage_Tool_Hammer_Crude.json",
@@ -45110,6 +46812,39 @@
           "kind": "item",
           "id": "Ore_Mithril",
           "quantity": 2
+        }
+      ],
+      "bench": [
+        {
+          "type": "Processing",
+          "id": "Salvagebench",
+          "categories": []
+        }
+      ],
+      "timeSeconds": 4,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Salvage_Tool_Pickaxe_Scrap",
+      "source": "standalone",
+      "sourceFile": "_Assets/Server/Item/Recipes/Salvage/Salvage_Tool_Pickaxe_Scrap.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Tool_Pickaxe_Scrap",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Scraps",
+          "quantity": 3
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Stick",
+          "quantity": 1
         }
       ],
       "bench": [
@@ -46540,6 +48275,77 @@
       "knowledgeRequired": false
     },
     {
+      "id": "Salvage_Weapon_Club_Scrap",
+      "source": "standalone",
+      "sourceFile": "_Assets/Server/Item/Recipes/Salvage/Salvage_Weapon_Club_Scrap.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Weapon_Club_Scrap",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Scraps",
+          "quantity": 3
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Stick",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Processing",
+          "id": "Salvagebench",
+          "categories": []
+        }
+      ],
+      "timeSeconds": 4,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Salvage_Weapon_Club_Scrap_Washboard",
+      "source": "standalone",
+      "sourceFile": "_Assets/Server/Item/Recipes/Salvage/Salvage_Weapon_Club_Scrap_Washboard.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Weapon_Club_Scrap_Washboard",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Scraps",
+          "quantity": 4
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Stick",
+          "quantity": 1
+        },
+        {
+          "kind": "item",
+          "id": "Wood_Softwood_Planks",
+          "quantity": 2
+        }
+      ],
+      "bench": [
+        {
+          "type": "Processing",
+          "id": "Salvagebench",
+          "categories": []
+        }
+      ],
+      "timeSeconds": 4,
+      "knowledgeRequired": false
+    },
+    {
       "id": "Salvage_Weapon_Club_Steel_Flail_Rusty",
       "source": "standalone",
       "sourceFile": "_Assets/Server/Item/Recipes/Salvage/Salvage_Weapon_Club_Steel_Flail_Rusty.json",
@@ -47901,6 +49707,11 @@
           "kind": "item",
           "id": "Ingredient_Fibre",
           "quantity": 3
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Scraps",
+          "quantity": 2
         }
       ],
       "bench": [
@@ -48271,6 +50082,44 @@
           "kind": "item",
           "id": "Ore_Iron",
           "quantity": 1
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Scraps",
+          "quantity": 2
+        }
+      ],
+      "bench": [
+        {
+          "type": "Processing",
+          "id": "Salvagebench",
+          "categories": []
+        }
+      ],
+      "timeSeconds": 4,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Salvage_Weapon_Shield_Scrap_Spiked",
+      "source": "standalone",
+      "sourceFile": "_Assets/Server/Item/Recipes/Salvage/Salvage_Weapon_Shield_Scrap_Spiked.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Weapon_Shield_Scrap_Spiked",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Scraps",
+          "quantity": 4
+        },
+        {
+          "kind": "item",
+          "id": "Wood_Softwood_Planks",
+          "quantity": 2
         }
       ],
       "bench": [
@@ -48852,6 +50701,39 @@
       "knowledgeRequired": false
     },
     {
+      "id": "Salvage_Weapon_Spear_Scrap",
+      "source": "standalone",
+      "sourceFile": "_Assets/Server/Item/Recipes/Salvage/Salvage_Weapon_Spear_Scrap.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Weapon_Spear_Scrap",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Scraps",
+          "quantity": 2
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Stick",
+          "quantity": 2
+        }
+      ],
+      "bench": [
+        {
+          "type": "Processing",
+          "id": "Salvagebench",
+          "categories": []
+        }
+      ],
+      "timeSeconds": 4,
+      "knowledgeRequired": false
+    },
+    {
       "id": "Salvage_Weapon_Spear_Stone_Trork",
       "source": "standalone",
       "sourceFile": "_Assets/Server/Item/Recipes/Salvage/Salvage_Weapon_Spear_Stone_Trork.json",
@@ -49232,6 +51114,11 @@
           "kind": "item",
           "id": "Ingredient_Fibre",
           "quantity": 2
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Scraps",
+          "quantity": 2
         }
       ],
       "bench": [
@@ -49356,6 +51243,41 @@
         }
       ],
       "timeSeconds": 4,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Scrap_Hook",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Gadget/Scrap_Hook.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Scraps",
+          "quantity": 10
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Bar_Iron",
+          "quantity": 3
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Scrap_Hook",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Gadgets"
+          ]
+        }
+      ],
+      "timeSeconds": 1,
       "knowledgeRequired": false
     },
     {
@@ -52930,6 +54852,51 @@
       "knowledgeRequired": false
     },
     {
+      "id": "Tool_Drill_Scrap",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Tool/Drill/Tool_Drill_Scrap.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Scraps",
+          "quantity": 100
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Bar_Iron",
+          "quantity": 15
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Gadget_Assembly",
+          "quantity": 8
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Enkindled_Resource",
+          "quantity": 2
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Tool_Drill_Scrap",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Gadgets"
+          ]
+        }
+      ],
+      "timeSeconds": 1,
+      "knowledgeRequired": false
+    },
+    {
       "id": "Tool_Feedbag",
       "source": "embedded",
       "sourceFile": "_Assets/Server/Item/Items/Tool/Feedbag/Tool_Feedbag.json",
@@ -53597,6 +55564,51 @@
       "knowledgeRequired": false
     },
     {
+      "id": "Tool_Hookshot",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Tool/Hookshot/Tool_Hookshot.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Scraps",
+          "quantity": 30
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Spider_Silk",
+          "quantity": 4
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Gadget_Assembly",
+          "quantity": 1
+        },
+        {
+          "kind": "item",
+          "id": "Scrap_Hook",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Tool_Hookshot",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Gadgets"
+          ]
+        }
+      ],
+      "timeSeconds": 1,
+      "knowledgeRequired": false
+    },
+    {
       "id": "Tool_Pickaxe_Adamantite",
       "source": "embedded",
       "sourceFile": "_Assets/Server/Item/Items/Tool/Pickaxe/Tool_Pickaxe_Adamantite.json",
@@ -53879,6 +55891,51 @@
       "knowledgeRequired": false
     },
     {
+      "id": "Tool_Repair_Kit_Goblin",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Tool/Repair_Kit/Tool_Repair_Kit_Goblin.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Scraps",
+          "quantity": 30
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Gadget_Assembly",
+          "quantity": 3
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Spider_Silk",
+          "quantity": 2
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Deep_Resource",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Tool_Repair_Kit_Goblin",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Gadgets"
+          ]
+        }
+      ],
+      "timeSeconds": 1,
+      "knowledgeRequired": false
+    },
+    {
       "id": "Tool_Repair_Kit_Iron",
       "source": "embedded",
       "sourceFile": "_Assets/Server/Item/Items/Tool/Repair_Kit/Tool_Repair_Kit_Iron.json",
@@ -54094,6 +56151,46 @@
       "knowledgeRequired": false
     },
     {
+      "id": "Tool_Spyglass",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Tool/Tool_Spyglass.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Scraps",
+          "quantity": 25
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Bar_Copper",
+          "quantity": 10
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Crystal_Void",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Tool_Spyglass",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "Crafting",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Gadgets"
+          ]
+        }
+      ],
+      "timeSeconds": 1,
+      "knowledgeRequired": false
+    },
+    {
       "id": "Tool_Trap_Bait",
       "source": "embedded",
       "sourceFile": "_Assets/Server/Item/Items/Tool/Tool_Trap_Bait.json",
@@ -54240,18 +56337,18 @@
       "inputs": [
         {
           "kind": "item",
-          "id": "Ingredient_Voidheart",
+          "id": "Ingredient_Scraps",
+          "quantity": 150
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Spider_Silk",
+          "quantity": 10
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Voidtaken_Grizzly_Hide",
           "quantity": 1
-        },
-        {
-          "kind": "item",
-          "id": "Ingredient_Bar_Adamantite",
-          "quantity": 8
-        },
-        {
-          "kind": "item",
-          "id": "Ingredient_Leather_Storm",
-          "quantity": 16
         }
       ],
       "outputs": [
@@ -54263,14 +56360,14 @@
       ],
       "bench": [
         {
-          "type": "Crafting",
-          "id": "Workbench",
+          "type": "",
+          "id": "GoblinLab_Workbench",
           "categories": [
-            "Workbench_Tinkering"
+            "GoblinLab_Gadgets"
           ]
         }
       ],
-      "timeSeconds": 2,
+      "timeSeconds": 1,
       "knowledgeRequired": false
     },
     {
@@ -54761,6 +56858,46 @@
       ],
       "bench": [],
       "timeSeconds": null,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Weapon_Bangstick",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Weapon/Bomb/Weapon_Bangstick.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Ingredient_Scraps",
+          "quantity": 10
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Powder_Boom",
+          "quantity": 8
+        },
+        {
+          "kind": "item",
+          "id": "Ingredient_Spider_Silk",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Weapon_Bangstick",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "",
+          "id": "GoblinLab_Workbench",
+          "categories": [
+            "GoblinLab_Gadgets"
+          ]
+        }
+      ],
+      "timeSeconds": 1,
       "knowledgeRequired": false
     },
     {
@@ -62880,6 +65017,66 @@
       "knowledgeRequired": false
     },
     {
+      "id": "Wood_Sadwillow_Trunk_Half",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Wood/Sadwillow/Wood_Sadwillow_Trunk_Half.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Wood_Sadwillow_Trunk",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Wood_Sadwillow_Trunk_Half",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "StructuralCrafting",
+          "id": "Builders",
+          "categories": [
+            "HalfSlab"
+          ]
+        }
+      ],
+      "timeSeconds": 0,
+      "knowledgeRequired": false
+    },
+    {
+      "id": "Wood_Sadwillow_Trunk_Stairs",
+      "source": "embedded",
+      "sourceFile": "_Assets/Server/Item/Items/Wood/Sadwillow/Wood_Sadwillow_Trunk_Stairs.json",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "Wood_Sadwillow_Trunk",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "Wood_Sadwillow_Trunk_Stairs",
+          "quantity": 1
+        }
+      ],
+      "bench": [
+        {
+          "type": "StructuralCrafting",
+          "id": "Builders",
+          "categories": [
+            "Stairs"
+          ]
+        }
+      ],
+      "timeSeconds": 0,
+      "knowledgeRequired": false
+    },
+    {
       "id": "Wood_Sallow_Trunk_Half",
       "source": "embedded",
       "sourceFile": "_Assets/Server/Item/Items/Wood/Sallow/Wood_Sallow_Trunk_Half.json",
@@ -64963,6 +67160,9 @@
     "Furniture_Feran_Torch": [
       "Furniture_Feran_Torch_Tall"
     ],
+    "Furniture_Goblin_Brazier": [
+      "Furniture_Goblin_Stool"
+    ],
     "Furniture_Jungle_Candle": [
       "Furniture_Jungle_Torch"
     ],
@@ -64980,7 +67180,6 @@
       "PortalKey_Hederas_Lair",
       "Tool_Hatchet_Adamantite",
       "Tool_Pickaxe_Adamantite",
-      "Upgrade_Backpack_3",
       "Weapon_Axe_Adamantite",
       "Weapon_Battleaxe_Adamantite",
       "Weapon_Club_Adamantite",
@@ -65044,10 +67243,12 @@
       "Furniture_Ancient_Chest_Small",
       "Furniture_Crude_Candle",
       "Furniture_Temple_Wind_Chandelier",
+      "Metal_Orbis_Copper_Fence",
       "Tool_Hatchet_Copper",
       "Tool_Hoe_Copper",
       "Tool_Pickaxe_Copper",
       "Tool_Sickle_Copper",
+      "Tool_Spyglass",
       "Weapon_Axe_Copper",
       "Weapon_Battleaxe_Copper",
       "Weapon_Club_Copper",
@@ -65061,6 +67262,7 @@
     "Ingredient_Bar_Gold": [
       "Bench_Alchemy",
       "Furniture_Dungeon_Chest_Epic",
+      "Furniture_Goblin_ChestStolen_Small",
       "Furniture_Goblin_Chest_Small",
       "Furniture_Royal_Magic_Chest_Small",
       "Rock_Gold_Brick",
@@ -65091,6 +67293,9 @@
       "Furniture_Cybercity_Sign_Fruit",
       "Furniture_Cybercity_Sign_Tea",
       "Furniture_Feran_Chandelier",
+      "Furniture_Goblin_Door_Medium",
+      "Furniture_Goblin_Ladder",
+      "Furniture_Goblin_Window",
       "Furniture_Kweebec_Lantern",
       "Furniture_Lumberjack_Chest_Small",
       "Furniture_Lumberjack_Lamp",
@@ -65103,13 +67308,19 @@
       "Furniture_Temple_Earth_Door",
       "Furniture_Village_Chest_Small",
       "Furniture_Village_Counter",
+      "Goblin_Painting_Breach_Replica",
+      "Goblin_Painting_Fail_Replica",
+      "Goblin_Painting_Orbis_Replica",
       "Halloween_Wagon",
       "Lobby_Wall_Poster01",
       "Lobby_Wall_Poster_Small01",
+      "PortalKey_Goblin_Breach",
       "Rail",
       "Rail_Kart",
+      "Scrap_Hook",
       "Survival_Trap_Snapjaw",
       "Survival_Trap_Spike_Iron",
+      "Tool_Drill_Scrap",
       "Tool_Fishing_Trap",
       "Tool_Hammer_Iron",
       "Tool_Hatchet_Iron",
@@ -65264,8 +67475,11 @@
       "Deco_Inkwell",
       "Furniture_Desert_Torch",
       "Furniture_Feran_Torch_Tall",
+      "Furniture_Goblin_Brazier",
+      "Furniture_Goblin_Candle",
       "Furniture_Temple_Dark_Brazier",
       "Furniture_Temple_Light_Brazier",
+      "Ingredient_Powder_Boom",
       "Plant_Petals_Black",
       "WinterHoliday_Snowman"
     ],
@@ -65314,6 +67528,15 @@
       "WinterHoliday_Lights",
       "WinterHoliday_Ornament_Bauble"
     ],
+    "Ingredient_Crystal_Void": [
+      "Ingredient_Gadget_Assembly",
+      "PortalKey_The_Deepworks",
+      "Rock_Crystal_Void_Block",
+      "Rock_Crystal_Void_Large",
+      "Rock_Crystal_Void_Medium",
+      "Rock_Crystal_Void_Small",
+      "Tool_Spyglass"
+    ],
     "Ingredient_Crystal_White": [
       "Rock_Crystal_White_Block",
       "Rock_Crystal_White_Large",
@@ -65329,11 +67552,18 @@
       "WinterHoliday_Ornament_Bauble",
       "WinterHoliday_Single_Light"
     ],
+    "Ingredient_Deep_Resource": [
+      "Tool_Repair_Kit_Goblin"
+    ],
     "Ingredient_Dough": [
       "Food_Bread",
       "Food_Pie_Apple",
       "Food_Pie_Meat",
       "Food_Pie_Pumpkin"
+    ],
+    "Ingredient_Enkindled_Resource": [
+      "Furniture_Temple_Emerald_Statue_Head",
+      "Tool_Drill_Scrap"
     ],
     "Ingredient_Fabric_Scrap_Cindercloth": [
       "Armor_Adamantite_Chest",
@@ -65452,6 +67682,7 @@
       "Deco_Rope",
       "Deco_Rope_Diagonal",
       "Deco_Scroll",
+      "Deco_SpiderWeb_Diagonal",
       "Deco_Target",
       "Deco_Trophy_Harvest",
       "Furniture_Ancient_Candle",
@@ -65559,6 +67790,16 @@
     ],
     "Ingredient_Flour": [
       "Ingredient_Dough"
+    ],
+    "Ingredient_Gadget_Assembly": [
+      "Glider_Scrap",
+      "Rocket_Boots",
+      "Tool_Drill_Scrap",
+      "Tool_Hookshot",
+      "Tool_Repair_Kit_Goblin"
+    ],
+    "Ingredient_Gobliterator_Core": [
+      "Salvage_Ingredient_Gobliterator_Core"
     ],
     "Ingredient_Hide_Dark": [
       "Ingredient_Leather_Dark"
@@ -65726,7 +67967,6 @@
       "Armor_Mithril_Legs",
       "Tool_Hatchet_Mithril",
       "Tool_Pickaxe_Mithril",
-      "Upgrade_Backpack_3",
       "Weapon_Battleaxe_Mithril",
       "Weapon_Daggers_Mithril",
       "Weapon_Mace_Mithril",
@@ -65767,6 +68007,7 @@
       "Plant_Sapling_Palo",
       "Plant_Sapling_Petrified",
       "Plant_Sapling_Redwood",
+      "Plant_Sapling_Sadwillow",
       "Plant_Sapling_Sallow",
       "Plant_Sapling_Spiral",
       "Plant_Sapling_Spruce",
@@ -65834,8 +68075,26 @@
       "Tool_Fertilizer"
     ],
     "Ingredient_Powder_Boom": [
+      "Weapon_Bangstick",
       "Weapon_Bomb_Fire",
       "Weapon_Bomb_Popberry"
+    ],
+    "Ingredient_Rune_Shard": [
+      "Rune_Aoe_Up",
+      "Rune_ChainHook",
+      "Rune_ChargedShot",
+      "Rune_Duration_Up",
+      "Rune_Enrage",
+      "Rune_Fireball",
+      "Rune_Fork",
+      "Rune_GroundSlam",
+      "Rune_PoisonImbue",
+      "Rune_Quickening",
+      "Rune_Rend",
+      "Rune_Ricochet",
+      "Rune_Thrift",
+      "Rune_WindStrike",
+      "Rune_Wither"
     ],
     "Ingredient_Sac_Venom": [
       "Armor_Thorium_Chest",
@@ -65850,11 +68109,49 @@
       "Food_Popcorn",
       "Food_Salad_Caesar"
     ],
+    "Ingredient_Scraps": [
+      "Furniture_Goblin_Bed",
+      "Furniture_Goblin_Brazier",
+      "Furniture_Goblin_Candle",
+      "Furniture_Goblin_Door",
+      "Furniture_Goblin_Door_Medium",
+      "Furniture_Goblin_Ladder",
+      "Furniture_Goblin_Sign",
+      "Furniture_Goblin_Statue_Graffiti",
+      "Furniture_Goblin_Table",
+      "Furniture_Goblin_Window",
+      "Glider_Scrap",
+      "Goblin_Painting_Breach_Replica",
+      "Goblin_Painting_Fail_Replica",
+      "Goblin_Painting_ForgottenTemple_Replica",
+      "Goblin_Painting_Orbis_Replica",
+      "Goblin_Painting_Portal_Replica",
+      "Goblin_Painting_Repair_Replica",
+      "Ingredient_Gadget_Assembly",
+      "PortalKey_Goblin_Breach",
+      "PortalKey_The_Deepworks",
+      "Rocket_Boots",
+      "Scrap_Hook",
+      "Tool_Drill_Scrap",
+      "Tool_Hookshot",
+      "Tool_Repair_Kit_Goblin",
+      "Tool_Spyglass",
+      "Upgrade_Backpack_3",
+      "Weapon_Bangstick"
+    ],
     "Ingredient_Spices": [
       "Food_Pie_Apple",
       "Food_Pie_Meat",
       "Food_Pie_Pumpkin",
       "Food_Salad_Caesar"
+    ],
+    "Ingredient_Spider_Silk": [
+      "Furniture_Goblin_Bed",
+      "Glider_Scrap",
+      "Tool_Hookshot",
+      "Tool_Repair_Kit_Goblin",
+      "Upgrade_Backpack_3",
+      "Weapon_Bangstick"
     ],
     "Ingredient_Stick": [
       "Bench_Campfire",
@@ -65931,16 +68228,22 @@
       "Plant_Seeds_Stamina1",
       "Plant_Seeds_Stamina2",
       "Plant_Seeds_Stamina3",
+      "PortalKey_Goblin_Breach",
       "Portal_Device",
       "Tool_Fertilizer_Crystal"
     ],
     "Ingredient_Voidheart": [
-      "Upgrade_Backpack_3",
+      "PortalKey_The_Deepworks",
       "Weapon_Battleaxe_Mithril",
       "Weapon_Daggers_Mithril",
       "Weapon_Mace_Mithril",
       "Weapon_Shortbow_Mithril",
       "Weapon_Sword_Mithril"
+    ],
+    "Ingredient_Voidtaken_Grizzly_Hide": [
+      "Glider_Scrap",
+      "Rocket_Boots",
+      "Upgrade_Backpack_3"
     ],
     "Meats(type)": [
       "Food_Kebab_Meat",
@@ -65960,7 +68263,13 @@
     ],
     "Mushrooms(type)": [
       "Food_Kebab_Mushroom",
-      "Food_Salad_Mushroom"
+      "Food_Salad_Mushroom",
+      "Goblin_Painting_Breach_Replica",
+      "Goblin_Painting_Fail_Replica",
+      "Goblin_Painting_ForgottenTemple_Replica",
+      "Goblin_Painting_Orbis_Replica",
+      "Goblin_Painting_Portal_Replica",
+      "Goblin_Painting_Repair_Replica"
     ],
     "Ore_Adamantite": [
       "Ingredient_Bar_Adamantite"
@@ -66066,6 +68375,9 @@
       "Potion_Signature_Greater",
       "Salvage_Plant_Crop_Mana3",
       "Teleporter"
+    ],
+    "Plant_Crop_Mushroom_Boomshroom_Small": [
+      "Ingredient_Powder_Boom"
     ],
     "Plant_Crop_Mushroom_Common_Blue": [
       "Plant_Petals_Cyan"
@@ -66572,6 +68884,7 @@
       "Rock_Aqua_Cobble_Wall",
       "Rock_Aqua_Half",
       "Rock_Aqua_Stairs",
+      "Rock_Kenolite",
       "Rock_Stone_Aqua"
     ],
     "Rock_Aqua_Brick(type)": [
@@ -67031,6 +69344,7 @@
       "Rock_Quartzite_Brick_Wall"
     ],
     "Rock_Quartzite_Cobble": [
+      "Furniture_Temple_Emerald_Statue_Head",
       "Salvage_Rock_Quartzite_Cobble"
     ],
     "Rock_Quartzite_Cobble_Beam": [
@@ -67448,6 +69762,9 @@
     "Rock_Stone_Cobble_Half": [
       "Salvage_Rock_Stone_Cobble_Half"
     ],
+    "Rock_Stone_Cobble_Mossy": [
+      "Furniture_Goblin_Statue_Graffiti"
+    ],
     "Rock_Stone_Cobble_Roof": [
       "Salvage_Rock_Stone_Cobble_Roof"
     ],
@@ -67645,6 +69962,9 @@
     "Sands(type)": [
       "Potion_Empty"
     ],
+    "Scrap_Hook": [
+      "Tool_Hookshot"
+    ],
     "Soil_Clay": [
       "Soil_Clay_Cobble_Orange",
       "Soil_Clay_Smooth_Black",
@@ -67800,6 +70120,9 @@
       "Soil_Needles",
       "Soil_Pathway"
     ],
+    "Tool_Drill_Scrap": [
+      "Salvage_Tool_Drill_Scrap"
+    ],
     "Tool_Hammer_Crude": [
       "Salvage_Tool_Hammer_Crude"
     ],
@@ -67856,6 +70179,9 @@
     ],
     "Tool_Pickaxe_Mithril": [
       "Salvage_Tool_Pickaxe_Mithril"
+    ],
+    "Tool_Pickaxe_Scrap": [
+      "Salvage_Tool_Pickaxe_Scrap"
     ],
     "Tool_Pickaxe_Thorium": [
       "Salvage_Tool_Pickaxe_Thorium"
@@ -67921,6 +70247,9 @@
     "Weapon_Axe_Tribal": [
       "Salvage_Weapon_Axe_Tribal"
     ],
+    "Weapon_Bangstick": [
+      "Rocket_Boots"
+    ],
     "Weapon_Battleaxe_Adamantite": [
       "Salvage_Weapon_Battleaxe_Adamantite"
     ],
@@ -67980,6 +70309,12 @@
     ],
     "Weapon_Club_Iron_Rusty": [
       "Salvage_Weapon_Club_Iron_Rusty"
+    ],
+    "Weapon_Club_Scrap": [
+      "Salvage_Weapon_Club_Scrap"
+    ],
+    "Weapon_Club_Scrap_Washboard": [
+      "Salvage_Weapon_Club_Scrap_Washboard"
     ],
     "Weapon_Club_Steel_Flail_Rusty": [
       "Salvage_Weapon_Club_Steel_Flail_Rusty"
@@ -68126,6 +70461,9 @@
     "Weapon_Shield_Scrap": [
       "Salvage_Weapon_Shield_Scrap"
     ],
+    "Weapon_Shield_Scrap_Spiked": [
+      "Salvage_Weapon_Shield_Scrap_Spiked"
+    ],
     "Weapon_Shield_Thorium": [
       "Salvage_Weapon_Shield_Thorium"
     ],
@@ -68173,6 +70511,9 @@
     ],
     "Weapon_Spear_Leaf": [
       "Salvage_Weapon_Spear_Leaf"
+    ],
+    "Weapon_Spear_Scrap": [
+      "Salvage_Weapon_Spear_Scrap"
     ],
     "Weapon_Spear_Stone_Trork": [
       "Salvage_Weapon_Spear_Stone_Trork"
@@ -68380,6 +70721,7 @@
     ],
     "Wood_Deadwood_Planks": [
       "Furniture_Ancient_Chest_Small",
+      "Furniture_Goblin_ChestStolen_Small",
       "Furniture_Goblin_Chest_Small"
     ],
     "Wood_Deadwood_Trunk(type)": [
@@ -68597,6 +70939,14 @@
     ],
     "Wood_Planks(type)": [
       "Deco_Mug",
+      "Furniture_Goblin_Bed",
+      "Furniture_Goblin_Door",
+      "Furniture_Goblin_Door_Medium",
+      "Furniture_Goblin_Sign",
+      "Furniture_Goblin_Table",
+      "Goblin_Painting_ForgottenTemple_Replica",
+      "Goblin_Painting_Portal_Replica",
+      "Goblin_Painting_Repair_Replica",
       "Rail"
     ],
     "Wood_Poisoned(type)": [
@@ -68635,6 +70985,10 @@
       "Wood_Redwood_Decorative",
       "Wood_Redwood_Ornate",
       "Wood_Redwood_Planks"
+    ],
+    "Wood_Sadwillow_Trunk": [
+      "Wood_Sadwillow_Trunk_Half",
+      "Wood_Sadwillow_Trunk_Stairs"
     ],
     "Wood_Sallow_Trunk": [
       "Wood_Sallow_Trunk_Half",
@@ -69519,6 +71873,9 @@
     "Deco_Shutter": [
       "Deco_Shutter"
     ],
+    "Deco_SpiderWeb_Diagonal": [
+      "Deco_SpiderWeb_Diagonal"
+    ],
     "Deco_Tankard": [
       "Deco_Tankard",
       "Ingredient_Dough"
@@ -69536,7 +71893,8 @@
       "Food_Bread"
     ],
     "Food_Cheese": [
-      "Food_Cheese"
+      "Food_Cheese",
+      "Salvage_Ingredient_Gobliterator_Core"
     ],
     "Food_Fish_Grilled": [
       "Food_Fish_Grilled"
@@ -69797,8 +72155,44 @@
     "Furniture_Frozen_Castle_Window": [
       "Furniture_Frozen_Castle_Window"
     ],
+    "Furniture_Goblin_Bed": [
+      "Furniture_Goblin_Bed"
+    ],
+    "Furniture_Goblin_Brazier": [
+      "Furniture_Goblin_Brazier"
+    ],
+    "Furniture_Goblin_Candle": [
+      "Furniture_Goblin_Candle"
+    ],
+    "Furniture_Goblin_ChestStolen_Small": [
+      "Furniture_Goblin_ChestStolen_Small"
+    ],
     "Furniture_Goblin_Chest_Small": [
       "Furniture_Goblin_Chest_Small"
+    ],
+    "Furniture_Goblin_Door": [
+      "Furniture_Goblin_Door"
+    ],
+    "Furniture_Goblin_Door_Medium": [
+      "Furniture_Goblin_Door_Medium"
+    ],
+    "Furniture_Goblin_Ladder": [
+      "Furniture_Goblin_Ladder"
+    ],
+    "Furniture_Goblin_Sign": [
+      "Furniture_Goblin_Sign"
+    ],
+    "Furniture_Goblin_Statue_Graffiti": [
+      "Furniture_Goblin_Statue_Graffiti"
+    ],
+    "Furniture_Goblin_Stool": [
+      "Furniture_Goblin_Stool"
+    ],
+    "Furniture_Goblin_Table": [
+      "Furniture_Goblin_Table"
+    ],
+    "Furniture_Goblin_Window": [
+      "Furniture_Goblin_Window"
     ],
     "Furniture_Jungle_Bed": [
       "Furniture_Jungle_Bed"
@@ -70019,6 +72413,9 @@
     "Furniture_Temple_Emerald_Sign": [
       "Furniture_Temple_Emerald_Sign"
     ],
+    "Furniture_Temple_Emerald_Statue_Head": [
+      "Furniture_Temple_Emerald_Statue_Head"
+    ],
     "Furniture_Temple_Emerald_Stool": [
       "Furniture_Temple_Emerald_Stool"
     ],
@@ -70151,6 +72548,27 @@
     "Furniture_Village_Window": [
       "Furniture_Village_Window"
     ],
+    "Glider_Scrap": [
+      "Glider_Scrap"
+    ],
+    "Goblin_Painting_Breach_Replica": [
+      "Goblin_Painting_Breach_Replica"
+    ],
+    "Goblin_Painting_Fail_Replica": [
+      "Goblin_Painting_Fail_Replica"
+    ],
+    "Goblin_Painting_ForgottenTemple_Replica": [
+      "Goblin_Painting_ForgottenTemple_Replica"
+    ],
+    "Goblin_Painting_Orbis_Replica": [
+      "Goblin_Painting_Orbis_Replica"
+    ],
+    "Goblin_Painting_Portal_Replica": [
+      "Goblin_Painting_Portal_Replica"
+    ],
+    "Goblin_Painting_Repair_Replica": [
+      "Goblin_Painting_Repair_Replica"
+    ],
     "Halloween_Wagon": [
       "Halloween_Wagon"
     ],
@@ -70167,7 +72585,8 @@
       "Ingredient_Bar_Gold"
     ],
     "Ingredient_Bar_Iron": [
-      "Ingredient_Bar_Iron"
+      "Ingredient_Bar_Iron",
+      "Salvage_Tool_Drill_Scrap"
     ],
     "Ingredient_Bar_Mithril": [
       "Ingredient_Bar_Mithril"
@@ -70416,6 +72835,11 @@
     "Ingredient_Flour": [
       "Ingredient_Flour"
     ],
+    "Ingredient_Gadget_Assembly": [
+      "Ingredient_Gadget_Assembly",
+      "Salvage_Ingredient_Gobliterator_Core",
+      "Salvage_Tool_Drill_Scrap"
+    ],
     "Ingredient_Hay": [
       "Ingredient_Hay"
     ],
@@ -70592,6 +73016,7 @@
       "Ingredient_Life_Essence_Concentrated"
     ],
     "Ingredient_Powder_Boom": [
+      "Ingredient_Powder_Boom",
       "Salvage_Weapon_Bomb_Fire",
       "Salvage_Weapon_Bomb_Popberry"
     ],
@@ -70602,6 +73027,18 @@
     ],
     "Ingredient_Salt": [
       "Ingredient_Salt"
+    ],
+    "Ingredient_Scraps": [
+      "Salvage_Ingredient_Gobliterator_Core",
+      "Salvage_Tool_Drill_Scrap",
+      "Salvage_Tool_Pickaxe_Scrap",
+      "Salvage_Weapon_Club_Scrap",
+      "Salvage_Weapon_Club_Scrap_Washboard",
+      "Salvage_Weapon_Mace_Scrap",
+      "Salvage_Weapon_Shield_Scrap",
+      "Salvage_Weapon_Shield_Scrap_Spiked",
+      "Salvage_Weapon_Spear_Scrap",
+      "Salvage_Weapon_Sword_Scrap"
     ],
     "Ingredient_Spices": [
       "Ingredient_Spices"
@@ -70648,6 +73085,7 @@
       "Salvage_Tool_Hoe_Thorium",
       "Salvage_Tool_Pickaxe_Copper",
       "Salvage_Tool_Pickaxe_Crude",
+      "Salvage_Tool_Pickaxe_Scrap",
       "Salvage_Tool_Shovel_Crude",
       "Salvage_Weapon_Arrow_Crude",
       "Salvage_Weapon_Axe_Copper",
@@ -70658,6 +73096,8 @@
       "Salvage_Weapon_Battleaxe_Tribal",
       "Salvage_Weapon_Blowgun_Tribal",
       "Salvage_Weapon_Club_Copper",
+      "Salvage_Weapon_Club_Scrap",
+      "Salvage_Weapon_Club_Scrap_Washboard",
       "Salvage_Weapon_Club_Tribal",
       "Salvage_Weapon_Daggers_Crude",
       "Salvage_Weapon_Longsword_Copper",
@@ -70672,6 +73112,7 @@
       "Salvage_Weapon_Shortbow_Crude",
       "Salvage_Weapon_Spear_Crude",
       "Salvage_Weapon_Spear_Leaf",
+      "Salvage_Weapon_Spear_Scrap",
       "Salvage_Weapon_Sword_Crude"
     ],
     "Ingredient_Tree_Sap": [
@@ -70690,6 +73131,9 @@
     ],
     "Lobby_Wall_Poster_Small01": [
       "Lobby_Wall_Poster_Small01"
+    ],
+    "Metal_Orbis_Copper_Fence": [
+      "Metal_Orbis_Copper_Fence"
     ],
     "Ore_Adamantite": [
       "Ore_Adamantite",
@@ -71099,6 +73543,9 @@
     "Plant_Sapling_Redwood": [
       "Plant_Sapling_Redwood"
     ],
+    "Plant_Sapling_Sadwillow": [
+      "Plant_Sapling_Sadwillow"
+    ],
     "Plant_Sapling_Sallow": [
       "Plant_Sapling_Sallow"
     ],
@@ -71255,11 +73702,17 @@
     "Plant_Vine_Wall_Winter": [
       "Plant_Vine_Wall_Winter"
     ],
+    "PortalKey_Goblin_Breach": [
+      "PortalKey_Goblin_Breach"
+    ],
     "PortalKey_Hederas_Lair": [
       "PortalKey_Hederas_Lair"
     ],
     "PortalKey_Taiga": [
       "PortalKey_Taiga"
+    ],
+    "PortalKey_The_Deepworks": [
+      "PortalKey_The_Deepworks"
     ],
     "PortalKey_Windsurf_Valley": [
       "PortalKey_Windsurf_Valley"
@@ -71742,6 +74195,18 @@
     "Rock_Crystal_Red_Small": [
       "Rock_Crystal_Red_Small"
     ],
+    "Rock_Crystal_Void_Block": [
+      "Rock_Crystal_Void_Block"
+    ],
+    "Rock_Crystal_Void_Large": [
+      "Rock_Crystal_Void_Large"
+    ],
+    "Rock_Crystal_Void_Medium": [
+      "Rock_Crystal_Void_Medium"
+    ],
+    "Rock_Crystal_Void_Small": [
+      "Rock_Crystal_Void_Small"
+    ],
     "Rock_Crystal_White_Block": [
       "Rock_Crystal_White_Block"
     ],
@@ -71822,6 +74287,9 @@
     ],
     "Rock_Ice": [
       "Salvage_Weapon_Deployable_Slowness_Totem"
+    ],
+    "Rock_Kenolite": [
+      "Rock_Kenolite"
     ],
     "Rock_Ledge_Brick": [
       "Rock_Ledge_Brick"
@@ -72812,6 +75280,9 @@
     "Rock_Volcanic_Stairs": [
       "Rock_Volcanic_Stairs"
     ],
+    "Rocket_Boots": [
+      "Rocket_Boots"
+    ],
     "Rubble_Aqua": [
       "Salvage_Rock_Aqua_Cobble",
       "Salvage_Rock_Aqua_Cobble_Beam",
@@ -72979,6 +75450,54 @@
       "Salvage_Rock_Volcanic_Cobble_Roof_Steep",
       "Salvage_Rock_Volcanic_Cobble_Stairs",
       "Salvage_Rock_Volcanic_Cobble_Wall"
+    ],
+    "Rune_Aoe_Up": [
+      "Rune_Aoe_Up"
+    ],
+    "Rune_ChainHook": [
+      "Rune_ChainHook"
+    ],
+    "Rune_ChargedShot": [
+      "Rune_ChargedShot"
+    ],
+    "Rune_Duration_Up": [
+      "Rune_Duration_Up"
+    ],
+    "Rune_Enrage": [
+      "Rune_Enrage"
+    ],
+    "Rune_Fireball": [
+      "Rune_Fireball"
+    ],
+    "Rune_Fork": [
+      "Rune_Fork"
+    ],
+    "Rune_GroundSlam": [
+      "Rune_GroundSlam"
+    ],
+    "Rune_PoisonImbue": [
+      "Rune_PoisonImbue"
+    ],
+    "Rune_Quickening": [
+      "Rune_Quickening"
+    ],
+    "Rune_Rend": [
+      "Rune_Rend"
+    ],
+    "Rune_Ricochet": [
+      "Rune_Ricochet"
+    ],
+    "Rune_Thrift": [
+      "Rune_Thrift"
+    ],
+    "Rune_WindStrike": [
+      "Rune_WindStrike"
+    ],
+    "Rune_Wither": [
+      "Rune_Wither"
+    ],
+    "Scrap_Hook": [
+      "Scrap_Hook"
     ],
     "Soil_Aqua_Gravel": [
       "Soil_Aqua_Gravel"
@@ -73316,6 +75835,9 @@
     "Tool_Capture_Crate": [
       "Tool_Capture_Crate"
     ],
+    "Tool_Drill_Scrap": [
+      "Tool_Drill_Scrap"
+    ],
     "Tool_Feedbag": [
       "Tool_Feedbag"
     ],
@@ -73367,6 +75889,9 @@
     "Tool_Hoe_Thorium": [
       "Tool_Hoe_Thorium"
     ],
+    "Tool_Hookshot": [
+      "Tool_Hookshot"
+    ],
     "Tool_Pickaxe_Adamantite": [
       "Tool_Pickaxe_Adamantite"
     ],
@@ -73388,6 +75913,9 @@
     "Tool_Pickaxe_Thorium": [
       "Tool_Pickaxe_Thorium"
     ],
+    "Tool_Repair_Kit_Goblin": [
+      "Tool_Repair_Kit_Goblin"
+    ],
     "Tool_Repair_Kit_Iron": [
       "Tool_Repair_Kit_Iron"
     ],
@@ -73405,6 +75933,9 @@
     ],
     "Tool_Sickle_Iron": [
       "Tool_Sickle_Iron"
+    ],
+    "Tool_Spyglass": [
+      "Tool_Spyglass"
     ],
     "Tool_Trap_Bait": [
       "Tool_Trap_Bait"
@@ -73459,6 +75990,9 @@
     ],
     "Weapon_Axe_Tribal": [
       "Weapon_Axe_Tribal"
+    ],
+    "Weapon_Bangstick": [
+      "Weapon_Bangstick"
     ],
     "Weapon_Battleaxe_Adamantite": [
       "Weapon_Battleaxe_Adamantite"
@@ -74198,6 +76732,12 @@
     "Wood_Redwood_Trunk_Stairs": [
       "Wood_Redwood_Trunk_Stairs"
     ],
+    "Wood_Sadwillow_Trunk_Half": [
+      "Wood_Sadwillow_Trunk_Half"
+    ],
+    "Wood_Sadwillow_Trunk_Stairs": [
+      "Wood_Sadwillow_Trunk_Stairs"
+    ],
     "Wood_Sallow_Trunk_Half": [
       "Wood_Sallow_Trunk_Half"
     ],
@@ -74220,6 +76760,8 @@
       "Wood_Softwood_Ornate"
     ],
     "Wood_Softwood_Planks": [
+      "Salvage_Weapon_Club_Scrap_Washboard",
+      "Salvage_Weapon_Shield_Scrap_Spiked",
       "Wood_Softwood_Planks"
     ],
     "Wood_Softwood_Planks_Half": [

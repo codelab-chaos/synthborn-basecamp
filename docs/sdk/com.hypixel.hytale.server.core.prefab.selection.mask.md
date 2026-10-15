@@ -22,8 +22,8 @@ public class com.hypixel.hytale.server.core.prefab.selection.mask.BlockFilter {
   public boolean isInverted();
   public it.unimi.dsi.fastutil.ints.IntSet getResolvedBlocks();
   public it.unimi.dsi.fastutil.ints.IntSet getResolvedFluids();
-  public boolean isExcluded(com.hypixel.hytale.server.core.universe.world.accessor.ChunkAccessor, int, int, int, org.joml.Vector3i, org.joml.Vector3i, int);
-  public boolean isExcluded(com.hypixel.hytale.server.core.universe.world.accessor.ChunkAccessor, int, int, int, org.joml.Vector3i, org.joml.Vector3i, int, int);
+  public boolean isExcluded(com.hypixel.hytale.server.core.universe.world.accessor.BlockReader, int, int, int, org.joml.Vector3i, org.joml.Vector3i, int);
+  public boolean isExcluded(com.hypixel.hytale.server.core.universe.world.accessor.BlockReader, int, int, int, org.joml.Vector3i, org.joml.Vector3i, int, int);
   public java.lang.String toString();
   public java.lang.String toString0();
   public java.lang.String informativeToString();
@@ -50,8 +50,8 @@ public class com.hypixel.hytale.server.core.prefab.selection.mask.BlockMask {
   public void setInverted(boolean);
   public boolean isInverted();
   public boolean hasInvalidBlocks();
-  public boolean isExcluded(com.hypixel.hytale.server.core.universe.world.accessor.ChunkAccessor, int, int, int, org.joml.Vector3i, org.joml.Vector3i, int);
-  public boolean isExcluded(com.hypixel.hytale.server.core.universe.world.accessor.ChunkAccessor, int, int, int, org.joml.Vector3i, org.joml.Vector3i, int, int);
+  public boolean isExcluded(com.hypixel.hytale.server.core.universe.world.accessor.BlockReader, int, int, int, org.joml.Vector3i, org.joml.Vector3i, int);
+  public boolean isExcluded(com.hypixel.hytale.server.core.universe.world.accessor.BlockReader, int, int, int, org.joml.Vector3i, org.joml.Vector3i, int, int);
   public java.lang.String toString();
   public java.lang.String informativeToString();
   protected static java.lang.String joinElements(java.lang.String, java.lang.Object[]);
@@ -90,8 +90,8 @@ public class com.hypixel.hytale.server.core.prefab.selection.mask.BlockPattern {
 ```java
 public class com.hypixel.hytale.server.core.prefab.selection.mask.MultiBlockMask extends com.hypixel.hytale.server.core.prefab.selection.mask.BlockMask {
   public com.hypixel.hytale.server.core.prefab.selection.mask.MultiBlockMask(com.hypixel.hytale.server.core.prefab.selection.mask.BlockMask[]);
-  public boolean isExcluded(com.hypixel.hytale.server.core.universe.world.accessor.ChunkAccessor, int, int, int, org.joml.Vector3i, org.joml.Vector3i, int);
-  public boolean isExcluded(com.hypixel.hytale.server.core.universe.world.accessor.ChunkAccessor, int, int, int, org.joml.Vector3i, org.joml.Vector3i, int, int);
+  public boolean isExcluded(com.hypixel.hytale.server.core.universe.world.accessor.BlockReader, int, int, int, org.joml.Vector3i, org.joml.Vector3i, int);
+  public boolean isExcluded(com.hypixel.hytale.server.core.universe.world.accessor.BlockReader, int, int, int, org.joml.Vector3i, org.joml.Vector3i, int, int);
   public java.lang.String toString();
   public java.lang.String informativeToString();
 }

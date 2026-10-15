@@ -58,6 +58,7 @@ public class com.hypixel.hytale.builtin.hytalegenerator.assets.propdistribution.
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.builtin.hytalegenerator.assets.propdistribution.ImportedPropDistributionAsset> CODEC;
   public com.hypixel.hytale.builtin.hytalegenerator.assets.propdistribution.ImportedPropDistributionAsset();
   public com.hypixel.hytale.builtin.hytalegenerator.propdistributions.PropDistribution build(com.hypixel.hytale.builtin.hytalegenerator.assets.propdistribution.PropDistributionAsset$Argument);
+  public void cleanUp();
 }
 ```
 

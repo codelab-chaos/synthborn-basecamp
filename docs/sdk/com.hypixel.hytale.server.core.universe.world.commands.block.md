@@ -19,7 +19,7 @@ public class com.hypixel.hytale.server.core.universe.world.commands.block.BlockC
 ```java
 public class com.hypixel.hytale.server.core.universe.world.commands.block.BlockGetCommand extends com.hypixel.hytale.server.core.universe.world.commands.block.SimpleBlockCommand {
   public com.hypixel.hytale.server.core.universe.world.commands.block.BlockGetCommand();
-  protected void executeWithBlock(com.hypixel.hytale.server.core.command.system.CommandContext, com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk, int, int, int);
+  protected void executeWithBlock(com.hypixel.hytale.server.core.command.system.CommandContext, com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, int, int, int);
 }
 ```
 
@@ -28,7 +28,7 @@ public class com.hypixel.hytale.server.core.universe.world.commands.block.BlockG
 ```java
 public class com.hypixel.hytale.server.core.universe.world.commands.block.BlockGetStateCommand extends com.hypixel.hytale.server.core.universe.world.commands.block.SimpleBlockCommand {
   public com.hypixel.hytale.server.core.universe.world.commands.block.BlockGetStateCommand();
-  protected void executeWithBlock(com.hypixel.hytale.server.core.command.system.CommandContext, com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk, int, int, int);
+  protected void executeWithBlock(com.hypixel.hytale.server.core.command.system.CommandContext, com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, int, int, int);
 }
 ```
 
@@ -82,7 +82,7 @@ public class com.hypixel.hytale.server.core.universe.world.commands.block.BlockS
 ```java
 public class com.hypixel.hytale.server.core.universe.world.commands.block.BlockSetCommand extends com.hypixel.hytale.server.core.universe.world.commands.block.SimpleBlockCommand {
   public com.hypixel.hytale.server.core.universe.world.commands.block.BlockSetCommand();
-  protected void executeWithBlock(com.hypixel.hytale.server.core.command.system.CommandContext, com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk, int, int, int);
+  protected void executeWithBlock(com.hypixel.hytale.server.core.command.system.CommandContext, com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, int, int, int);
 }
 ```
 
@@ -91,7 +91,7 @@ public class com.hypixel.hytale.server.core.universe.world.commands.block.BlockS
 ```java
 public class com.hypixel.hytale.server.core.universe.world.commands.block.BlockSetStateCommand extends com.hypixel.hytale.server.core.universe.world.commands.block.SimpleBlockCommand {
   public com.hypixel.hytale.server.core.universe.world.commands.block.BlockSetStateCommand();
-  protected void executeWithBlock(com.hypixel.hytale.server.core.command.system.CommandContext, com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk, int, int, int);
+  protected void executeWithBlock(com.hypixel.hytale.server.core.command.system.CommandContext, com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, int, int, int);
 }
 ```
 
@@ -100,7 +100,7 @@ public class com.hypixel.hytale.server.core.universe.world.commands.block.BlockS
 ```java
 public class com.hypixel.hytale.server.core.universe.world.commands.block.BlockSetTickingCommand extends com.hypixel.hytale.server.core.universe.world.commands.block.SimpleBlockCommand {
   public com.hypixel.hytale.server.core.universe.world.commands.block.BlockSetTickingCommand();
-  protected void executeWithBlock(com.hypixel.hytale.server.core.command.system.CommandContext, com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk, int, int, int);
+  protected void executeWithBlock(com.hypixel.hytale.server.core.command.system.CommandContext, com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, int, int, int);
 }
 ```
 
@@ -110,6 +110,6 @@ public class com.hypixel.hytale.server.core.universe.world.commands.block.BlockS
 public abstract class com.hypixel.hytale.server.core.universe.world.commands.block.SimpleBlockCommand extends com.hypixel.hytale.server.core.command.system.basecommands.AbstractWorldCommand {
   public com.hypixel.hytale.server.core.universe.world.commands.block.SimpleBlockCommand(java.lang.String, java.lang.String);
   protected void execute(com.hypixel.hytale.server.core.command.system.CommandContext, com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
-  protected abstract void executeWithBlock(com.hypixel.hytale.server.core.command.system.CommandContext, com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk, int, int, int);
+  protected abstract void executeWithBlock(com.hypixel.hytale.server.core.command.system.CommandContext, com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, int, int, int);
 }
 ```

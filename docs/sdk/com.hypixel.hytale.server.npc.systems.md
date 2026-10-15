@@ -218,6 +218,7 @@ public final class com.hypixel.hytale.server.npc.systems.SpawnNPCInteractionFail
 ```java
 public class com.hypixel.hytale.server.npc.systems.SpawnReferenceSystems {
   public com.hypixel.hytale.server.npc.systems.SpawnReferenceSystems();
+  public static void removeNPCsForMarker(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
 }
 ```
 

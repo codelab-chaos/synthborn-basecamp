@@ -16,6 +16,8 @@ public class com.hypixel.hytale.builtin.crafting.component.BenchBlock implements
   protected final transient java.util.Map<java.util.UUID, com.hypixel.hytale.builtin.crafting.window.BenchWindow> windows;
   public static void setGrantedAugmentTagsRefresher(com.hypixel.hytale.builtin.crafting.component.BenchBlock$GrantedAugmentTagsRefresher);
   public static void refreshGrantedAugmentTags(com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, org.joml.Vector3i);
+  public static void setTierUpgradedListener(com.hypixel.hytale.builtin.crafting.component.BenchBlock$TierUpgradedListener);
+  public static void notifyTierUpgraded(com.hypixel.hytale.server.core.universe.world.World, org.joml.Vector3i, int);
   public static void setOpenGate(com.hypixel.hytale.builtin.crafting.component.BenchBlock$OpenGate);
   public static boolean tryOpen(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.CommandBuffer<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, org.joml.Vector3i);
   public static com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, com.hypixel.hytale.builtin.crafting.component.BenchBlock> getComponentType();
@@ -107,7 +109,7 @@ public class com.hypixel.hytale.builtin.crafting.component.ProcessingBenchBlock 
   public void sendProgress(float, java.util.Map<java.util.UUID, com.hypixel.hytale.builtin.crafting.window.BenchWindow>);
   public void sendProcessingSlots(java.util.Map<java.util.UUID, com.hypixel.hytale.builtin.crafting.window.BenchWindow>);
   public void sendProcessingFuelSlots(java.util.Map<java.util.UUID, com.hypixel.hytale.builtin.crafting.window.BenchWindow>);
-  public void setBlockInteractionState(java.lang.String, com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType, com.hypixel.hytale.server.core.universe.world.World, int, int, int);
+  public void setBlockInteractionState(java.lang.String, com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType, com.hypixel.hytale.server.core.universe.world.storage.ChunkStore, com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>, int, int, int);
   public void playSound(int, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType, int, int, int, int);
   public void checkForRecipeUpdate(com.hypixel.hytale.builtin.crafting.component.BenchBlock);
   public com.hypixel.hytale.component.Component<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore> clone();

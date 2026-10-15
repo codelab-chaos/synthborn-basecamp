@@ -37,6 +37,7 @@ public class com.hypixel.hytale.server.core.modules.interaction.BlockHarvestUtil
 ```java
 public class com.hypixel.hytale.server.core.modules.interaction.BlockInteractionUtils {
   public com.hypixel.hytale.server.core.modules.interaction.BlockInteractionUtils();
+  public static void runRootInteractionOnBlock(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.Store<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, java.lang.String, com.hypixel.hytale.protocol.BlockPosition, com.hypixel.hytale.protocol.BlockPosition);
   public static boolean isNaturalAction(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public static boolean isNoPhysics(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
 }
@@ -91,6 +92,8 @@ public class com.hypixel.hytale.server.core.modules.interaction.InteractionModul
   protected void setup();
   public void doMouseInteraction(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, com.hypixel.hytale.protocol.packets.player.MouseInteraction, com.hypixel.hytale.server.core.entity.entities.Player, com.hypixel.hytale.server.core.universe.PlayerRef);
   public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.core.modules.interaction.interaction.config.client.ChainingInteraction$Data> getChainingDataComponent();
+  public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.core.modules.interaction.interaction.config.server.OpenChapterRewardsInteraction$ChapterRewardsPrompt> getChapterRewardsPromptComponent();
+  public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.core.modules.interaction.interaction.config.server.OpenChapterRewardsInteraction$ChapterRewardsSoundPlayed> getChapterRewardsSoundPlayedComponent();
   public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.core.modules.interaction.Interactions> getInteractionsComponentType();
   public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.core.entity.InteractionManager> getInteractionManagerComponent();
   public com.hypixel.hytale.component.ComponentType<com.hypixel.hytale.server.core.universe.world.storage.EntityStore, com.hypixel.hytale.server.core.modules.interaction.host.InteractionHost> getInteractionHostComponentType();

@@ -65,21 +65,6 @@ public class com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfig
 }
 ```
 
-## BrushConfigChunkAccessor
-
-```java
-public class com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfigChunkAccessor extends com.hypixel.hytale.server.core.universe.world.accessor.LocalCachedChunkAccessor {
-  public static com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfigChunkAccessor atWorldCoords(com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfigEditStore, com.hypixel.hytale.server.core.universe.world.accessor.ChunkAccessor, int, int, int);
-  public static com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfigChunkAccessor atChunkCoords(com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfigEditStore, com.hypixel.hytale.server.core.universe.world.accessor.ChunkAccessor, int, int, int);
-  protected com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfigChunkAccessor(com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfigEditStore, com.hypixel.hytale.server.core.universe.world.accessor.ChunkAccessor, int, int, int);
-  public int getBlock(org.joml.Vector3i);
-  public int getBlock(int, int, int);
-  public int getBlockIgnoringHistory(org.joml.Vector3i);
-  public int getBlockIgnoringHistory(int, int, int);
-  public int getFluidId(int, int, int);
-}
-```
-
 ## BrushConfigCommandExecutor
 
 ```java
@@ -123,11 +108,13 @@ public class com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfig
 
 ```java
 public class com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfigEditStore {
-  public com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfigEditStore(it.unimi.dsi.fastutil.longs.LongOpenHashSet, com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfig, com.hypixel.hytale.server.core.universe.world.World, org.joml.Vector3i, org.joml.Vector3i);
-  public com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfigChunkAccessor getAccessor();
+  public com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfigEditStore(com.hypixel.hytale.math.data.Int3OpenHashSet, com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfig, com.hypixel.hytale.server.core.universe.world.World, org.joml.Vector3i, org.joml.Vector3i);
+  public com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfigSectionAccessor getAccessor();
+  public com.hypixel.hytale.builtin.buildertools.world.ColumnAccessor getColumns();
   public com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfig getBrushConfig();
   public org.joml.Vector3i getSelectionMin();
   public org.joml.Vector3i getSelectionMax();
+  public long getSkippedUnloaded();
   public int getOriginalBlock(int, int, int);
   public int getBlock(int, int, int);
   public int getBlockIncludingCurrent(int, int, int);
@@ -140,6 +127,18 @@ public class com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfig
   public void flushCurrentEditsToPrevious();
   public com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection getAfter();
   public com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection getBefore();
+}
+```
+
+## BrushConfigSectionAccessor
+
+```java
+public class com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfigSectionAccessor extends com.hypixel.hytale.builtin.buildertools.world.SectionAccessor {
+  public static com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfigSectionAccessor forWorld(com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfigEditStore, com.hypixel.hytale.server.core.universe.world.World);
+  protected com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfigSectionAccessor(com.hypixel.hytale.builtin.buildertools.scriptedbrushes.BrushConfigEditStore, com.hypixel.hytale.server.core.universe.world.World);
+  public int getBlock(int, int, int);
+  public int getBlockIgnoringHistory(int, int, int);
+  public int getFluidId(int, int, int);
 }
 ```
 

@@ -21,10 +21,13 @@ public class com.hypixel.hytale.server.core.modules.i18n.I18nModule extends com.
   public com.hypixel.hytale.server.core.modules.i18n.I18nModule(com.hypixel.hytale.server.core.plugin.JavaPluginInit);
   protected void setup();
   protected void start();
+  protected void shutdown();
   public com.hypixel.hytale.protocol.packets.assets.UpdateTranslations[] getUpdatePacketsForChanges(java.lang.String, java.util.Map<java.lang.String, java.util.Map<java.lang.String, java.lang.String>>, java.util.Map<java.lang.String, java.util.Map<java.lang.String, java.lang.String>>);
   public java.util.Map<java.lang.String, java.lang.String> getMessages(java.lang.String);
+  public java.lang.String resolveLanguage(java.lang.String);
   public java.util.Map<java.lang.String, java.lang.String> getMessages(java.util.Map<java.lang.String, java.util.Map<java.lang.String, java.lang.String>>, java.lang.String);
   public void sendTranslations(com.hypixel.hytale.server.core.io.PacketHandler, java.lang.String);
+  public void queueTranslations(com.hypixel.hytale.server.core.io.PacketHandler, java.lang.String);
   public java.lang.String getMessage(java.lang.String, java.lang.String);
 }
 ```

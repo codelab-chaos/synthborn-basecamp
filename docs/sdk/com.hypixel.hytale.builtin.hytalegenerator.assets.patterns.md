@@ -89,6 +89,7 @@ public class com.hypixel.hytale.builtin.hytalegenerator.assets.patterns.Imported
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.builtin.hytalegenerator.assets.patterns.ImportedPatternAsset> CODEC;
   public com.hypixel.hytale.builtin.hytalegenerator.assets.patterns.ImportedPatternAsset();
   public com.hypixel.hytale.builtin.hytalegenerator.patterns.Pattern build(com.hypixel.hytale.builtin.hytalegenerator.assets.patterns.PatternAsset$Argument);
+  public void cleanUp();
 }
 ```
 

@@ -63,6 +63,8 @@ public final class com.hypixel.hytale.server.core.codec.ProtocolCodecs {
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.protocol.IntersectionHighlight> INTERSECTION_HIGHLIGHT;
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.protocol.SavedMovementStates> SAVED_MOVEMENT_STATES;
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.protocol.ItemAnimation> ITEM_ANIMATION_CODEC;
+  public static final com.hypixel.hytale.codec.codecs.EnumCodec<com.hypixel.hytale.protocol.packets.interface_.EventTitleStyle> EVENT_TITLE_STYLE_CODEC;
+  public static final com.hypixel.hytale.codec.codecs.EnumCodec<com.hypixel.hytale.protocol.packets.worldmap.MapMarkerIconSize> MAP_MARKER_ICON_SIZE_CODEC;
   public static final com.hypixel.hytale.codec.codecs.EnumCodec<com.hypixel.hytale.protocol.ChangeStatBehaviour> CHANGE_STAT_BEHAVIOUR_CODEC;
   public static final com.hypixel.hytale.codec.codecs.EnumCodec<com.hypixel.hytale.protocol.AccumulationMode> ACCUMULATION_MODE_CODEC;
   public static final com.hypixel.hytale.codec.codecs.EnumCodec<com.hypixel.hytale.protocol.EasingType> EASING_TYPE_CODEC;

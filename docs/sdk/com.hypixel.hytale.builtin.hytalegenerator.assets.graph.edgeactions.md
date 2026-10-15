@@ -52,6 +52,7 @@ public class com.hypixel.hytale.builtin.hytalegenerator.assets.graph.edgeactions
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.builtin.hytalegenerator.assets.graph.edgeactions.ImportedEdgeActionAsset> CODEC;
   public com.hypixel.hytale.builtin.hytalegenerator.assets.graph.edgeactions.ImportedEdgeActionAsset();
   public com.hypixel.hytale.builtin.hytalegenerator.graph.edgeactions.EdgeAction build(com.hypixel.hytale.builtin.hytalegenerator.assets.graph.GraphGeneratorAsset$Argument);
+  public void cleanUp();
 }
 ```
 

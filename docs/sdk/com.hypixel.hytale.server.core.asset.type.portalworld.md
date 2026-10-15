@@ -33,7 +33,6 @@ public class com.hypixel.hytale.server.core.asset.type.portalworld.PortalDescrip
   public com.hypixel.hytale.protocol.Color getThemeColor();
   public java.util.List<com.hypixel.hytale.server.core.asset.type.portalworld.PillTag> getPillTags();
   public java.lang.String[] getObjectivesKeys();
-  public java.lang.String[] getWisdomKeys();
   public java.lang.String getSplashImageFilename();
 }
 ```
@@ -64,12 +63,15 @@ public class com.hypixel.hytale.server.core.asset.type.portalworld.PortalType im
   public java.lang.String getInstanceId();
   public com.hypixel.hytale.server.core.Message getDisplayName();
   public com.hypixel.hytale.server.core.asset.type.portalworld.PortalDescription getDescription();
-  public java.util.Set<java.lang.String> getCursedItems();
+  public java.util.Set<java.lang.String> getEphemeralItems();
   public java.lang.String getGameplayConfigId();
   public boolean isVoidInvasionEnabled();
   public com.hypixel.hytale.server.core.asset.type.portalworld.PortalSpawnConfig getSpawn();
   public com.hypixel.hytale.server.core.asset.type.gameplay.GameplayConfig getGameplayConfig();
   public boolean isCloseWhenEmpty();
+  public int getTimeLimitSeconds();
+  public int getAllowedEntryCount();
+  public boolean isAllowPlayersToLeaveViaMap();
   public java.lang.Object getId();
 }
 ```

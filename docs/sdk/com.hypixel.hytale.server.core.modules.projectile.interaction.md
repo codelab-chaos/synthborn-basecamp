@@ -15,6 +15,7 @@ public class com.hypixel.hytale.server.core.modules.projectile.interaction.Proje
   protected boolean ignorePitch;
   protected boolean ignoreYaw;
   protected boolean ignoreRoll;
+  protected float lifetime;
   public com.hypixel.hytale.server.core.modules.projectile.interaction.ProjectileInteraction();
   public com.hypixel.hytale.server.core.modules.projectile.config.ProjectileConfig getConfig();
   public com.hypixel.hytale.server.core.modules.projectile.config.BallisticData getBallisticData();

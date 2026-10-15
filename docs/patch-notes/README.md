@@ -21,6 +21,10 @@ needs `pandoc` on PATH; see
 
 | Version | Released | Notes | Basecamp trail |
 |---|---|---|---|
+| 0.7.2 | Oct 12, 2026 | [Chapter I: Out of the Breach](hytale-chapter-i-out-of-the-breach.md) | [`assets-toc-0.7.2.json`](../refs/assets/toc/assets-toc-0.7.2.json), [worklog](../hytale-update-0.7.2-worklog.md) |
+| 0.7.1 | | no published notes found | not processed; skipped by the launcher (0.6.8 to 0.7.2) |
+| 0.7.0 | | no published notes found | not processed; skipped by the launcher (0.6.8 to 0.7.2) |
+| 0.6.9 | | no published notes found | not processed; skipped by the launcher (0.6.8 to 0.7.2) |
 | 0.6.8 | installed Oct 5, 2026 | no published notes yet (hotfix post ends at 0.6.6) | [`assets-toc-0.6.8.json`](../refs/assets/toc/assets-toc-0.6.8.json), [worklog](../hytale-update-0.6.8-worklog.md) |
 | 0.6.7 | | no published notes found | not processed; skipped by the launcher (0.6.5 to 0.6.8) |
 | 0.6.6 | Sep 14, 2026 | [Hotfixes: Update 6](hytale-hotfixes-update-6.md#066) | not processed; skipped by the launcher (0.6.5 to 0.6.8) |

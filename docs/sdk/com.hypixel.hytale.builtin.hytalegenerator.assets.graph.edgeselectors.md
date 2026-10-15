@@ -64,6 +64,7 @@ public class com.hypixel.hytale.builtin.hytalegenerator.assets.graph.edgeselecto
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.builtin.hytalegenerator.assets.graph.edgeselectors.ImportedEdgeSelectorAsset> CODEC;
   public com.hypixel.hytale.builtin.hytalegenerator.assets.graph.edgeselectors.ImportedEdgeSelectorAsset();
   public com.hypixel.hytale.builtin.hytalegenerator.graph.edgeselectors.EdgeSelector build(com.hypixel.hytale.builtin.hytalegenerator.assets.graph.GraphGeneratorAsset$Argument);
+  public void cleanUp();
 }
 ```
 

@@ -36,8 +36,6 @@ public class com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelec
   public void setPrefabId(int);
   public int getPrefabId();
   public void copyPropertiesFrom(com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection);
-  public boolean canPlace(com.hypixel.hytale.server.core.universe.world.World, org.joml.Vector3i, it.unimi.dsi.fastutil.ints.IntList);
-  public boolean matches(com.hypixel.hytale.server.core.universe.world.World, org.joml.Vector3i);
   public boolean compare(com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection$BlockComparingIterator);
   public boolean hasBlockAtWorldPos(int, int, int);
   public boolean hasBlockAtLocalPos(int, int, int);
@@ -55,7 +53,6 @@ public class com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelec
   public void forEachTint(com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection$TintIterator);
   public void forEachFluid(com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection$FluidIterator);
   public void forEachEntity(java.util.function.Consumer<com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>>);
-  public void copyFromAtWorld(int, int, int, com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk, com.hypixel.hytale.server.core.blocktype.component.BlockPhysics);
   public void addEmptyAtWorldPos(int, int, int);
   public void addBlockAtWorldPos(int, int, int, int, int, int, int);
   public void addBlockAtWorldPos(int, int, int, int, int, int, int, com.hypixel.hytale.component.Holder<com.hypixel.hytale.server.core.universe.world.storage.ChunkStore>);
@@ -77,6 +74,7 @@ public class com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelec
   public void placeNoReturn(java.lang.String, com.hypixel.hytale.server.core.command.system.CommandSender, com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public void placeNoReturn(java.lang.String, com.hypixel.hytale.server.core.command.system.CommandSender, com.hypixel.hytale.server.core.prefab.selection.standard.FeedbackConsumer, com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public void placeNoReturn(java.lang.String, com.hypixel.hytale.server.core.command.system.CommandSender, com.hypixel.hytale.server.core.prefab.selection.standard.FeedbackConsumer, com.hypixel.hytale.server.core.universe.world.World, org.joml.Vector3ic, com.hypixel.hytale.server.core.prefab.selection.mask.BlockMask, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public boolean computePlacementBounds(org.joml.Vector3ic, org.joml.Vector3i, org.joml.Vector3i);
   public com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection place(com.hypixel.hytale.server.core.command.system.CommandSender, com.hypixel.hytale.server.core.universe.world.World);
   public com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection place(com.hypixel.hytale.server.core.command.system.CommandSender, com.hypixel.hytale.server.core.universe.world.World, com.hypixel.hytale.server.core.prefab.selection.mask.BlockMask);
   public com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection place(com.hypixel.hytale.server.core.command.system.CommandSender, com.hypixel.hytale.server.core.universe.world.World, org.joml.Vector3ic, com.hypixel.hytale.server.core.prefab.selection.mask.BlockMask);

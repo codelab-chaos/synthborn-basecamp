@@ -18,6 +18,9 @@ public class com.hypixel.hytale.builtin.weather.components.WeatherTracker implem
   public void clear();
   public void setOverrideWeatherIndex(int);
   public void clearOverrideWeatherIndex();
+  public boolean tryClaimOverride(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>, int);
+  public boolean releaseOverride(com.hypixel.hytale.component.Ref<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
+  public int resolveUnoverriddenWeatherIndex(com.hypixel.hytale.builtin.weather.resources.WeatherResource, com.hypixel.hytale.server.core.modules.entity.component.TransformComponent, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public void updateEnvironment(com.hypixel.hytale.server.core.modules.entity.component.TransformComponent, com.hypixel.hytale.component.ComponentAccessor<com.hypixel.hytale.server.core.universe.world.storage.EntityStore>);
   public int getEnvironmentId();
   public int getWeatherIndex();

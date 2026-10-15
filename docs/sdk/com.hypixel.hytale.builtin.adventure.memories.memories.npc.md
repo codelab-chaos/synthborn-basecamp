@@ -15,6 +15,7 @@ public class com.hypixel.hytale.builtin.adventure.memories.memories.npc.NPCMemor
   public static final java.lang.String DESCRIPTION_KEY_PREFIX;
   public static final com.hypixel.hytale.codec.builder.BuilderCodec<com.hypixel.hytale.builtin.adventure.memories.memories.npc.NPCMemory> CODEC;
   public com.hypixel.hytale.builtin.adventure.memories.memories.npc.NPCMemory(java.lang.String, java.lang.String);
+  public com.hypixel.hytale.builtin.adventure.memories.memories.npc.NPCMemory(java.lang.String, java.lang.String, com.hypixel.hytale.server.npc.role.Role$MemoriesUnlockMethod);
   public java.lang.String getId();
   public java.lang.String getTitle();
   public com.hypixel.hytale.server.core.Message getTooltipText();
@@ -24,6 +25,7 @@ public class com.hypixel.hytale.builtin.adventure.memories.memories.npc.NPCMemor
   public java.lang.String getNpcRole();
   public long getCapturedTimestamp();
   public java.lang.String getFoundLocationZoneNameKey();
+  public com.hypixel.hytale.server.npc.role.Role$MemoriesUnlockMethod getUnlockedBy();
   public com.hypixel.hytale.server.core.Message getLocationMessage();
   public boolean equals(java.lang.Object);
   public int hashCode();
@@ -36,6 +38,7 @@ public class com.hypixel.hytale.builtin.adventure.memories.memories.npc.NPCMemor
 ```java
 public class com.hypixel.hytale.builtin.adventure.memories.memories.npc.NPCMemoryProvider extends com.hypixel.hytale.builtin.adventure.memories.memories.MemoryProvider<com.hypixel.hytale.builtin.adventure.memories.memories.npc.NPCMemory> {
   public static final double DEFAULT_RADIUS;
+  public static final double DEFAULT_KILL_RANGE;
   public com.hypixel.hytale.builtin.adventure.memories.memories.npc.NPCMemoryProvider();
   public java.util.Map<java.lang.String, java.util.Set<com.hypixel.hytale.builtin.adventure.memories.memories.Memory>> getAllMemories();
 }
